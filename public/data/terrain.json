@@ -1,0 +1,236 @@
+{
+  "version": 1,
+  "id": "seoul-official-contours-interpolated-terrain",
+  "title": "서울 공식 등고선·표고점 보간 지형",
+  "tiles": [
+    "/data/terrain/{z}/{x}/{y}.png"
+  ],
+  "coverage_tiles": [
+    "/data/terrain/coverage/{z}/{x}/{y}.png"
+  ],
+  "source_hull_url": "/data/terrain/source-hull.geojson",
+  "bounds": [
+    126.69831060967286,
+    37.37446418802841,
+    127.25171111047216,
+    37.75521192737183
+  ],
+  "minzoom": 10,
+  "maxzoom": 14,
+  "encoding": "mapbox",
+  "tileSize": 256,
+  "scheme": "xyz",
+  "estimated": true,
+  "method": "EPSG:5174 contour arc-length sampling + original spot heights; scipy LinearNDInterpolator (piecewise-linear Delaunay TIN), sampled at global Web Mercator pixel centers",
+  "source_point_count": 726207,
+  "source": {
+    "url": "https://data.seoul.go.kr/dataList/OA-22241/F/1/datasetView.do",
+    "zip_sha256": "4fbe3c7e061b5974e7403ec116855304ed8ae321eebcc0d12c31ca8fb7be30bf",
+    "contour_feature_count": 8570,
+    "contour_original_vertex_count": 4413952,
+    "contour_sample_count_before_deduplication": 687925,
+    "spot_height_count": 45870,
+    "source_crs": "EPSG:5174",
+    "source_contour_interval_m": 5,
+    "contour_sample_spacing_m": 30.0,
+    "spot_height_range_m": [
+      -0.54,
+      740.2
+    ],
+    "coordinate_merge_tolerance_m": 0.01,
+    "duplicates_removed": 7588,
+    "groups_with_height_disagreement_over_0_5m": 0,
+    "policy": "1 cm coordinate bins; original spot height wins over contour sample; same-priority duplicates are averaged"
+  },
+  "height_unit": "metres",
+  "vertical_datum": "Not explicitly declared in source PRJ/field metadata; not independently verified",
+  "quantization_m": 0.1,
+  "source_height_range_m": [
+    -0.54,
+    770.0
+  ],
+  "source_bounds": [
+    126.76627901295053,
+    37.42845822415683,
+    127.18374270719451,
+    37.701454292012144
+  ],
+  "validity": {
+    "mask_tiles": [
+      "/data/terrain/mask/{z}/{x}/{y}.png"
+    ],
+    "mask_format": "8-bit grayscale PNG; 255 = supported estimated interpolation, 0 = sparse/unsupported interpolation or visual-only hull padding",
+    "noDataValue": null,
+    "source_hull": "/data/terrain/source-hull.geojson",
+    "max_nearest_constraint_distance_m": 300.0,
+    "max_triangle_edge_m": 1500.0,
+    "padding_ground_m": 6000.0,
+    "padding_method": "Closest convex-hull segment height, linearly interpolated at the projection; continuous at the source boundary, visual use only",
+    "warning": "The DEM has no numeric NoData sentinel. Read the mask and source extent before interpreting it. Even mask=255 is inferred terrain, never an original point measurement."
+  },
+  "limitations": [
+    "모든 지면 높이는 원본 등고선·표고점에서 보간한 추정 지형이며 현장 검증하지 않았습니다.",
+    "5 m 등고 간격은 수평 해상도 또는 수직 정확도를 뜻하지 않습니다.",
+    "30 m 선 샘플링은 작은 계단·담장·도로 단차·급경사와 수직면을 보존하지 못합니다.",
+    "데이터 공백·하천·source hull 가장자리에는 보간 또는 시각적 외삽이 포함됩니다. 별도 유효 마스크를 확인하세요.",
+    "원본 근접 표고점 조회와 3D 지형값은 서로 다릅니다. 클릭 지점의 실측 고도나 안전·설계 판단에 사용하지 마세요.",
+    "낮은 줌 타일은 동일한 보간 표면을 성긴 격자에서 표본화하며 새 지형 정보를 추가하지 않습니다."
+  ],
+  "tile_counts": {
+    "10": 6,
+    "11": 16,
+    "12": 42,
+    "13": 156,
+    "14": 598
+  },
+  "raster_validity_counts": {
+    "10": {
+      "supported_pixels": 42248,
+      "total_pixels": 393216,
+      "x_range": [
+        872,
+        873
+      ],
+      "y_range": [
+        395,
+        397
+      ]
+    },
+    "11": {
+      "supported_pixels": 169029,
+      "total_pixels": 1048576,
+      "x_range": [
+        1744,
+        1747
+      ],
+      "y_range": [
+        791,
+        794
+      ]
+    },
+    "12": {
+      "supported_pixels": 676058,
+      "total_pixels": 2752512,
+      "x_range": [
+        3489,
+        3495
+      ],
+      "y_range": [
+        1583,
+        1588
+      ]
+    },
+    "13": {
+      "supported_pixels": 2704280,
+      "total_pixels": 10223616,
+      "x_range": [
+        6979,
+        6991
+      ],
+      "y_range": [
+        3166,
+        3177
+      ]
+    },
+    "14": {
+      "supported_pixels": 10817199,
+      "total_pixels": 39190528,
+      "x_range": [
+        13958,
+        13983
+      ],
+      "y_range": [
+        6333,
+        6355
+      ]
+    }
+  },
+  "seam_audit": {
+    "10": {
+      "boundary_sample_pairs": 1792,
+      "boundary_jump_m": {
+        "max": 110.10000000000036,
+        "p99": 42.899999999999636
+      },
+      "interior_jump_m": {
+        "max": 197.90000000000146,
+        "p99": 31.700000000000728
+      },
+      "decoded_height_range_m": [
+        1.3000000000010914,
+        755.9000000000015
+      ],
+      "pixel_alignment": "global XYZ Web Mercator pixel centers; neighboring tile pixels are one grid step apart"
+    },
+    "11": {
+      "boundary_sample_pairs": 6144,
+      "boundary_jump_m": {
+        "max": 55.79999999999927,
+        "p99": 26.814000000000046
+      },
+      "interior_jump_m": {
+        "max": 128.0,
+        "p99": 20.899999999999636
+      },
+      "decoded_height_range_m": [
+        0.5,
+        762.6000000000004
+      ],
+      "pixel_alignment": "global XYZ Web Mercator pixel centers; neighboring tile pixels are one grid step apart"
+    },
+    "12": {
+      "boundary_sample_pairs": 18176,
+      "boundary_jump_m": {
+        "max": 55.5,
+        "p99": 14.799999999999272
+      },
+      "interior_jump_m": {
+        "max": 94.60000000000036,
+        "p99": 13.699999999998909
+      },
+      "decoded_height_range_m": [
+        0.6000000000003638,
+        764.5
+      ],
+      "pixel_alignment": "global XYZ Web Mercator pixel centers; neighboring tile pixels are one grid step apart"
+    },
+    "13": {
+      "boundary_sample_pairs": 73472,
+      "boundary_jump_m": {
+        "max": 29.899999999999636,
+        "p99": 7.800000000001091
+      },
+      "interior_jump_m": {
+        "max": 53.69999999999891,
+        "p99": 7.300000000001091
+      },
+      "decoded_height_range_m": [
+        0.4000000000014552,
+        766.6000000000004
+      ],
+      "pixel_alignment": "global XYZ Web Mercator pixel centers; neighboring tile pixels are one grid step apart"
+    },
+    "14": {
+      "boundary_sample_pairs": 293632,
+      "boundary_jump_m": {
+        "max": 32.900000000001455,
+        "p99": 3.899999999999636
+      },
+      "interior_jump_m": {
+        "max": 31.400000000001455,
+        "p99": 3.8000000000010914
+      },
+      "decoded_height_range_m": [
+        0.0,
+        770.0
+      ],
+      "pixel_alignment": "global XYZ Web Mercator pixel centers; neighboring tile pixels are one grid step apart"
+    }
+  },
+  "builder": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "created_at": "2026-09-08T01:51:12.230356+00:00",
+    "elapsed_seconds": 133.31
+  }
+}

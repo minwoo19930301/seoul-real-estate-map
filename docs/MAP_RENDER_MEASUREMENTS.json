@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "measured_at": "2026-09-09T00:53:28.894Z",
+  "reproduction": "node scripts/measure-map-data.mjs",
+  "runtime": {
+    "node": "v26.4.0",
+    "python": "3.12.13"
+  },
+  "metric": "UTF-8 JSON bytes submitted to GeoJSONSource.setData; not HTTP bytes, heap use, GPU cost, timing or browser FPS",
+  "method": "Fresh read-only local Python API queries; real Buildings.renderData and Roads.update output captured without a map, server or network",
+  "baseline": "Full building API collection with normalized _building_label added; full road API collection",
+  "sample_hash_format": "SHA-256 of UTF-8 JSON.stringify({buildings: rawBuildings, roads: rawRoads, bounds}); property and feature order retained",
+  "source_databases": [
+    {
+      "path": "data/buildings.sqlite",
+      "bytes": 327188480,
+      "sha256": "5a49fe4ff4b2bebf56ea7a2532bdf08cadf9e05ee131cd921846ac51379cfb5b"
+    },
+    {
+      "path": "data/roads.sqlite",
+      "bytes": 53907456,
+      "sha256": "b538e5544b936d59903740b810bfdd7352cf938460c27f2972849f2d81ff8aa3"
+    }
+  ],
+  "source_files": [
+    {
+      "path": "scripts/measure-map-data.mjs",
+      "sha256": "43bc3e77770d14502ac918b5ea038d0a97881b631701d20e0cfab73e08a9fc52"
+    },
+    {
+      "path": "src/buildings.ts",
+      "sha256": "c21d1c554d62de96c8667f704b5f7f8534b9d0bcacb203a38abce9aba13d8400"
+    },
+    {
+      "path": "src/roads.ts",
+      "sha256": "80ab094964bf16f0e87c4e269e164fc656a687be9617ad28edadb568b4562559"
+    },
+    {
+      "path": "server/buildings.py",
+      "sha256": "9962f3d7c5b67da55936656b43effbae62dd9bf720b30b7b37c84cad6005fddb"
+    },
+    {
+      "path": "server/roads.py",
+      "sha256": "c8fc4abf55baaa9d8bfd1de35ca9e93946c6a9d5c1e4349085e98d058d5f315f"
+    }
+  ],
+  "results": [
+    {
+      "area": "sangdo",
+      "bounds": [
+        126.939,
+        37.4938,
+        126.957,
+        37.508199999999995
+      ],
+      "query_zoom": 16,
+      "sample_sha256": "c6b56b0994ae7cb212c5720f9cb1120ed5a5af9a1369ee8b791b04a86d00b337",
+      "buildings": {
+        "features": 3019,
+        "source_truncated": false,
+        "before_bytes": 2484661,
+        "after_bytes": 1414465,
+        "reduction_percent": 43.07,
+        "same_geometry_references": true,
+        "full_raw_collection_retained": true
+      },
+      "roads": {
+        "features": 589,
+        "source_truncated": false,
+        "before_bytes": 390783,
+        "after_bytes": 213106,
+        "reduction_percent": 45.47,
+        "same_geometry_references": true,
+        "full_raw_collection_retained": true
+      }
+    },
+    {
+      "area": "namsan",
+      "bounds": [
+        126.981,
+        37.543800000000005,
+        126.999,
+        37.5582
+      ],
+      "query_zoom": 16,
+      "sample_sha256": "8a04a87c287c9c40cb856bbfa1b793c6b7960595ec6ed1c430b58e4cfbb597c2",
+      "buildings": {
+        "features": 1605,
+        "source_truncated": false,
+        "before_bytes": 1326887,
+        "after_bytes": 757760,
+        "reduction_percent": 42.89,
+        "same_geometry_references": true,
+        "full_raw_collection_retained": true
+      },
+      "roads": {
+        "features": 428,
+        "source_truncated": false,
+        "before_bytes": 301869,
+        "after_bytes": 171475,
+        "reduction_percent": 43.2,
+        "same_geometry_references": true,
+        "full_raw_collection_retained": true
+      }
+    },
+    {
+      "area": "seoul_forest",
+      "bounds": [
+        127.032,
+        37.5368,
+        127.05,
+        37.551199999999994
+      ],
+      "query_zoom": 16,
+      "sample_sha256": "ae127297a70a3682b92f58eb8093655e034abdd955fd2a26822e9e447aae67ed",
+      "buildings": {
+        "features": 1596,
+        "source_truncated": false,
+        "before_bytes": 1288625,
+        "after_bytes": 713385,
+        "reduction_percent": 44.64,
+        "same_geometry_references": true,
+        "full_raw_collection_retained": true
+      },
+      "roads": {
+        "features": 595,
+        "source_truncated": false,
+        "before_bytes": 398374,
+        "after_bytes": 218717,
+        "reduction_percent": 45.1,
+        "same_geometry_references": true,
+        "full_raw_collection_retained": true
+      }
+    }
+  ]
+}

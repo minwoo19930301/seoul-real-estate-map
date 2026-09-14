@@ -1,0 +1,131 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
+import * as THREE from 'three';
+import { MercatorCoordinate } from 'maplibre-gl';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { CityModels, modelMercatorMatrix } from '../src/city-models.ts';
+
+const manifest = JSON.parse(readFileSync(new URL('../public/models/manifest.json', import.meta.url)));
+const assetBytes = asset => readFileSync(new URL(`../public/models/${asset.model}`, import.meta.url));
+for (const asset of manifest.assets) test(`${asset.id}: actual GLB SHA, physical bounds, metre axes and published height envelope`, async () => {
+  const bytes = assetBytes(asset);
+  assert.equal(createHash('sha256').update(bytes).digest('hex'), asset.sha256);
+  const { scene } = await new GLTFLoader().parseAsync(bytes.buffer.slice(bytes.byteOffset, bytes.byteOffset + bytes.byteLength), '');
+  const box = new THREE.Box3().setFromObject(scene);
+  const dimensions = box.getSize(new THREE.Vector3()).toArray();
+  dimensions.forEach((n, i) => assert.ok(Math.abs(n - asset.dimensions[i]) < 0.0001));
+  assert.ok(Math.abs(box.min.y) < 0.0001);
+  const coordinate = [asset.coordinate.lon, asset.coordinate.lat];
+  const scale = MercatorCoordinate.fromLngLat(coordinate).meterInMercatorCoordinateUnits();
+  for (const exaggeration of [1, 2, 4]) {
+    const ground = 57 * exaggeration;
+    const matrix = modelMercatorMatrix(coordinate, ground);
+    const base = new THREE.Vector3(0, 0, 0).applyMatrix4(matrix);
+    const roof = new THREE.Vector3(0, asset.dimensions[1], 0).applyMatrix4(matrix);
+    assert.ok(Math.abs((roof.z - base.z) / scale - asset.dimensions[1]) < 1e-7);
+    assert.ok(Math.abs(base.z / scale - ground) < 1e-7);
+    const east = new THREE.Vector3(1, 0, 0).applyMatrix4(matrix).sub(base);
+    const south = new THREE.Vector3(0, 0, 1).applyMatrix4(matrix).sub(base);
+    assert.ok(east.x > 0 && south.y > 0);
+    const oriented = matrix.clone().multiply(new THREE.Matrix4().makeRotationY(asset.yawDegFromEast * Math.PI / 180));
+    const widthAxis = new THREE.Vector3(1, 0, 0).applyMatrix4(oriented).sub(base);
+    const heading = Math.atan2(-widthAxis.y, widthAxis.x) * 180 / Math.PI;
+    assert.ok(Math.abs(heading - asset.yawDegFromEast) < 0.000001);
+  }
+});
+
+function harness() {
+  const footprints = [], stateEvents = [];
+  let ground = 80, ready = true, center = [127.102679, 37.5125537];
+  const map = {
+    getZoom: () => 16,
+    getBounds: () => ({ getWest: () => center[0] - 0.002, getEast: () => center[0] + 0.002, getSouth: () => center[1] - 0.002, getNorth: () => center[1] + 0.002 }),
+    getTerrain: () => ({ source: 'local-terrain', exaggeration: 4 }),
+    getSource: () => ({}), isSourceLoaded: () => ready,
+    queryTerrainElevation: () => ground, triggerRepaint() {}, off() {}, getLayer: () => null,
+  };
+  const models = new CityModels(map, { onActiveFootprints: ids => footprints.push(ids), onState: state => stateEvents.push(state) });
+  models.entries = manifest.assets.map(asset => ({ asset, scene: new THREE.Scene(), error: null, ground: null, draws: 0, active: false }));
+  models.renderer = { resetState() {}, render() {}, dispose() {}, info: { render: { calls: 3 } } };
+  models.setFootprintMatches(Object.fromEntries(manifest.assets.map(asset => [asset.id, [`real-id:${asset.id}`]])));
+  const args = { defaultProjectionData: { mainMatrix: new THREE.Matrix4().elements }, shaderData: { variantName: 'mercator' } };
+  return { models, args, footprints, stateEvents, setGround: value => { ground = value; }, setReady: value => { ready = value; }, setCenter: value => { center = value; } };
+}
+
+test('only rendered nearby models replace matching solids; repeat frames do not churn UI; toggles restore originals', () => {
+  const h = harness(); h.models.setMode(true); h.models.render(h.args);
+  assert.deepEqual(h.models.getState().activeFootprintIds, ['real-id:lotte']);
+  const callbacks = h.footprints.length, states = h.stateEvents.length;
+  for (let i = 0; i < 10; i++) h.models.render(h.args);
+  assert.equal(h.footprints.length, callbacks); assert.equal(h.stateEvents.length, states);
+  assert.equal(h.models.getState().models.find(m => m.id === 'sixtythree').drawCount, 0);
+  h.models.renderer.info.render.calls = 0;
+  h.models.render(h.args);
+  assert.deepEqual(h.models.getState().activeFootprintIds, []);
+  h.models.renderer.info.render.calls = 3;
+  h.models.render(h.args);
+  h.models.setVisible(false); assert.deepEqual(h.models.getState().activeFootprintIds, []);
+  h.models.setVisible(true); h.models.render(h.args);
+  h.models.setMode(false); assert.deepEqual(h.models.getState().activeFootprintIds, []);
+  h.models.destroy();
+});
+
+test('missing DEM and rendering failure keep generic solids; terrain changes only alter model base', () => {
+  const h = harness(); h.models.setMode(true); h.setReady(false); h.models.render(h.args);
+  assert.deepEqual(h.models.getState().activeFootprintIds, []);
+  h.setReady(true); h.models.render(h.args);
+  h.setGround(320); h.models.updateTerrain(); h.models.render(h.args);
+  const lotte = h.models.getState().models.find(m => m.id === 'lotte');
+  assert.equal(lotte.ground_m, 320); assert.equal(lotte.height_m, 555);
+  h.models.renderer.render = () => { throw new Error('GPU failure'); };
+  h.models.render(h.args);
+  assert.deepEqual(h.models.getState().activeFootprintIds, []);
+  assert.equal(h.models.getState().models.find(m => m.id === 'lotte').error, 'GPU failure');
+  h.models.destroy();
+});
+
+test('nearby GLB is lazy loaded once; far models stay unfetched', async () => {
+  const h = harness(); h.models.entries.forEach(e => { e.scene = undefined; });
+  const originalFetch = globalThis.fetch, requests = [];
+  globalThis.fetch = async url => {
+    requests.push(url);
+    const asset = manifest.assets.find(a => `/models/${a.model}` === url);
+    assert.ok(asset); return new Response(assetBytes(asset));
+  };
+  try {
+    await h.models.loadNearby(); assert.deepEqual(requests, []);
+    h.models.setMode(true); await h.models.loadNearby();
+    assert.deepEqual(requests, ['/models/lotte.glb']);
+    await h.models.loadNearby(); assert.equal(requests.length, 1);
+    assert.equal(h.models.getState().models.filter(m => m.loaded).length, 1);
+  } finally { globalThis.fetch = originalFetch; h.models.destroy(); }
+});
+
+test('trees reuse GPU geometry, survive model toggle, and clear without allocations', () => {
+  const h = harness(); const trees = [{ coordinate: [127.1026, 37.5125], height_m: 8, crown_radius_m: 3 }];
+  h.models.setTrees(trees); const trunk = h.models.trunks, crown = h.models.crowns;
+  h.models.setTrees(structuredClone(trees)); assert.equal(h.models.trunks, trunk);
+  h.models.setMode(true); h.models.setTreesVisible(true); h.models.setVisible(false); h.models.render(h.args);
+  assert.equal(h.models.getState().trees.activeCount, 1);
+  assert.deepEqual(h.models.getState().activeFootprintIds, []);
+  h.models.setTrees([]); h.models.setTrees([]);
+  assert.equal(h.models.trunks, trunk); assert.equal(h.models.crowns, crown);
+  assert.equal(trunk.count, 0); assert.equal(crown.count, 0);
+  h.models.setTrees(trees); assert.equal(h.models.trunks, trunk);
+  h.models.destroy();
+});
+
+test('invalid manifest fails before fetch and exits loading state with originals retained', async () => {
+  const h = harness();
+  const entry = h.models.entries.find(e => e.asset.id === 'lotte');
+  entry.scene = undefined; entry.asset = { ...entry.asset, model: '../unexpected.glb' };
+  h.models.setMode(true); await h.models.loadNearby();
+  const state = h.models.getState();
+  assert.equal(state.loading, false);
+  assert.equal(state.models.find(m => m.id === 'lotte').error, 'Invalid model manifest');
+  assert.ok(state.message.includes('불러오지 못했습니다'));
+  assert.deepEqual(state.activeFootprintIds, []);
+  h.models.destroy();
+});
