@@ -12,7 +12,7 @@ python3 -m venv .venv
 npm ci
 npm run build
 export SEOUL_TURSO_CONFIG="$HOME/.config/seoul-map-turso/runtime.json"
-npm start
+npm run start:turso
 ```
 
 `runtime.json`은 서버 전용 파일이다. DB 읽기 토큰이 들어 있으므로 Git이나 프런트엔드에 넣지 않는다. `SEOUL_TURSO_CONFIG`가 없으면 기존 로컬 SQLite를 사용한다. 북마크 쓰기는 로컬 DB에 유지한다. 지형 PNG와 모션용 지형 파일은 `public/data/terrain`에서 제공한다.
@@ -59,3 +59,11 @@ python3 scripts/upload_turso.py --export data/turso-export-new --verify-only
 - 여러 무료 계정의 허용 여부는 확인되지 않았다. 코드 자체는 단일 계정의 여러 DB에서도 사용할 수 있다.
 
 공식 문서: [업로드 API](https://docs.turso.tech/api-reference/databases/upload), [SQL over HTTP](https://docs.turso.tech/sdk/http/reference).
+
+## 구별 원본 조회
+
+```sh
+python3 scripts/query_turso.py --district gangnam --sql 'SELECT COUNT(*) AS rows FROM molit_apartment_price_2025'
+```
+
+`shared`를 지정하면 서울 외 지역 및 지역 미확정 원본을 조회한다. SQL과 결과만 터미널에 표시하고 토큰은 출력하지 않는다.

@@ -77,6 +77,13 @@ def run(export, verify_only=False):
   if not item.get('read_token'):
    item['read_token']=request(base+'/databases/'+item['name']+'/auth/tokens?authorization=read-only&expiration=never',token,method='POST')['jwt'];save(state_path,state,True)
   if not item.get('uploaded'):
+   # A lost HTTP response may follow a successful atomic import. Reconcile first.
+   try:
+    imported=sql(item['hostname'],item['read_token'],["SELECT COUNT(*) FROM sqlite_master WHERE type='table'"])
+    if int(imported[0][0][0]['value'])>0:
+     item['uploaded']=True;save(state_path,state,True)
+   except (RuntimeError,urllib.error.URLError):pass
+  if not item.get('uploaded'):
    if verify_only:raise RuntimeError('Not uploaded')
    write=request(base+'/databases/'+item['name']+'/auth/tokens?authorization=full-access&expiration=1d',token,method='POST')['jwt']
    print('uploading',e['file'],e['bytes'],flush=True)
