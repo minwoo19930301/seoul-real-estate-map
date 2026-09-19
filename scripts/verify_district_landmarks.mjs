@@ -28,6 +28,6 @@ for(const asset of manifest.assets){
  assert.equal(triangles,asset.triangles,asset.id+' triangles');assert.ok(matches[asset.id]?.length,asset.id+' footprint membership');
  rows.push({id:asset.id,bytes:bytes.length,triangles,drawCalls,vertices,bounds:{min:box.min.toArray(),max:box.max.toArray()},sha256:asset.sha256});
 }
-const result={validator:'Three.js GLTFLoader; all255binaryfilesparsed',assetCount:rows.length,totalBytes:rows.reduce((s,a)=>s+a.bytes,0),totalTriangles:rows.reduce((s,a)=>s+a.triangles,0),maxAssetBytes:Math.max(...rows.map(r=>r.bytes)),checks:['SHA256','float32metreBounds','floorOrigin','finitePositions','unitNormals','indicesInRange','triangleCount','nonemptyFootprintMembership','noExternalResources'],assets:rows};
+const result={validator:`Three.js GLTFLoader; all ${rows.length} binary files parsed`,assetCount:rows.length,totalBytes:rows.reduce((s,a)=>s+a.bytes,0),totalTriangles:rows.reduce((s,a)=>s+a.triangles,0),maxAssetBytes:Math.max(...rows.map(r=>r.bytes)),checks:['SHA256','float32metreBounds','floorOrigin','finitePositions','unitNormals','indicesInRange','triangleCount','nonemptyFootprintMembership','noExternalResources'],assets:rows};
 await fs.writeFile(path.join(root,'docs/LANDMARK_ASSET_VALIDATION.json'),JSON.stringify(result,null,2)+'\n');
 console.log(JSON.stringify({...result,assets:undefined},null,2));

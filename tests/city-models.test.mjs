@@ -195,5 +195,5 @@ test('elevation originals retain their complete manifest records and all 250 sel
   assert.equal(counts.size, 25);
   assert.ok([...counts.values()].every(n => n === 10));
   assert.ok(manifest.assets.some(a => a.id === 'gyeongbokgung'));
-  assert.equal(manifest.assets.length, 255);
+  assert.equal(manifest.assets.length, 555);
 });

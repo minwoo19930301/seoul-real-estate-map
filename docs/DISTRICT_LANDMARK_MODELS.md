@@ -1,6 +1,6 @@
 # District landmark assets
 
-The catalogue contains the original four elevation models, the flight project's unique Geunjeongjeon model, and 250 additional sites (10 per Seoul district). Existing elevation asset records and GLB files are retained; their hashes are recorded in `DISTRICT_LANDMARK_PROVENANCE.json`. The original four footprint-replacement lists are retained too.
+The catalogue now contains **555 models**: the original four elevation models, the flight project's unique Geunjeongjeon model, the first 250 sites (10 per district), and a further **300 apartment complexes (12 per district)**. All 255 previously published model files, full asset records, and footprint-replacement lists are preserved unchanged. Existing elevation asset records and GLB files are retained; their hashes are recorded in `DISTRICT_LANDMARK_PROVENANCE.json`. The original four footprint-replacement lists are retained too.
 
 ## Geometry and evidence
 
@@ -22,7 +22,7 @@ The meshes use metres, Y-up, X-east/Z-south, identity roots, and a shared floor 
 
 Each new asset has at most three material batches. Geometry is indexed and vertex colours use packed normalized RGBA bytes. There are no textures or external resource dependencies. New models request display from zoom 14.5; runtime limits govern nearby loading and resident models.
 
-Rebuild with:
+To reproduce the first batch on the original 255-model baseline:
 
 ```sh
 .venv/bin/python scripts/match_district_landmarks.py
@@ -30,6 +30,27 @@ Rebuild with:
 node scripts/verify_district_landmarks.mjs
 ```
 
-The generator refuses an incomplete or duplicated 250-site selection and overlapping assigned footprint IDs. It checks original model hashes and exact original asset-record text after writing the expanded manifest. `LANDMARK_ASSET_VALIDATION.json` records the independent Three.js GLTFLoader pass over all 255 files, including hashes, dimensions, floor origins, finite positions, unit normals, indices, triangle counts, and replacement-list presence. Browser scene screenshots are separate evidence; this asset validation alone does not certify application performance.
+The generator refuses incomplete or duplicated selections and overlapping assigned footprint IDs. It checks original model hashes and exact original asset-record text after writing the expanded manifest. `LANDMARK_ASSET_VALIDATION.json` records the independent Three.js GLTFLoader pass over all 555 files, including hashes, dimensions, floor origins, finite positions, unit normals, indices, triangle counts, and replacement-list presence. Browser scene screenshots are separate evidence; this asset validation alone does not certify application performance.
 
 The linked OSM source records retain their ODbL attribution in the provenance JSON. Existing source data and SQLite databases are not changed.
+
+## Additional 300 sites
+
+The second selection was drafted by GPT-5.6 Luna at low reasoning effort and checked against retained apartment records, Seoul district polygons, OSM site identifiers, and existing source-footprint ownership. These are representative apartment complexes ranked by source household counts, **not a verified price-based ranking**. The earlier Astra-authored mesh generator was extended with an additive mode. No fresh Astra sub-agent ran for this batch because the session agent limit was reached.
+
+Candidates remain at least 100 m from existing candidate/model anchors and other new candidates. Shared-address/unresolved coordinates are excluded. Eleven initial candidates with no available matching footprint were replaced from the reserve pool. All 300 final sites have nonempty source geometry, and no footprint is reassigned from an existing model. The same estimates and complex-membership limitations described above apply.
+
+The final selection is in `landmark-candidates-expansion-matched.json`; its per-building evidence is in `LANDMARK_EXPANSION_PROVENANCE.json`. `landmark-expansion-unmatched.json` records rejected draft candidates, not missing final models. `tests/fixtures/preserved-255-landmarks.json` freezes previous geometry hashes, canonical full-record hashes, and exact replacement memberships.
+
+Reproduce the expansion starting with the 255-model catalogue at commit `1ad7d15` and the retained read-only databases:
+
+```sh
+.venv/bin/python scripts/select_landmark_expansion.py --boundaries /path/to/seoul-flight-game/assets/full-seoul/source/districts.geojson
+.venv/bin/python scripts/match_district_landmarks.py --additional-pool docs/landmark-candidates-expansion-pool.json
+.venv/bin/python scripts/build_district_landmarks.py --append-candidates docs/landmark-candidates-expansion-matched.json --expected-count 300
+node scripts/verify_district_landmarks.mjs
+```
+
+The pool is the draft followed by reserves, in that order. Append mode refuses existing asset IDs or filenames. The default original-batch mode refuses to overwrite an already expanded catalogue. Runtime limits remain four concurrent requests, 32 nearby rendered assets, and 48 resident assets; the full catalogue is not eagerly downloaded.
+
+Browser automation uses a temporary Vite development server (`PLAYWRIGHT_BASE_URL=http://127.0.0.1:4174`), because its inspection API is intentionally absent from production. The production build at port 4173 is separately checked for the 555-entry catalogue and visible rendering.

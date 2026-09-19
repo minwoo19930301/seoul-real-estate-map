@@ -5,7 +5,7 @@ when available; otherwise nearby apartment-classified footprints within competin
 complex-centroid Voronoi cells. The latter is an approximation, not parcel proof.
 """
 from pathlib import Path
-import json, math, sqlite3, re, zlib
+import argparse, json, math, sqlite3, re, zlib
 from shapely.geometry import shape, Polygon, Point
 from shapely.ops import unary_union
 from scipy.spatial import cKDTree
@@ -13,6 +13,7 @@ ROOT=Path(__file__).resolve().parents[1]
 
 def key(s):return re.sub(r'[^가-힣a-z0-9]','',s.lower()).replace('아파트','').replace('분양','').replace('임대','')
 def main():
+    parser=argparse.ArgumentParser();parser.add_argument("--additional-pool",type=Path);parser.add_argument("--per-district",type=int,default=12);args=parser.parse_args()
     apt=sqlite3.connect(f'file:{ROOT}/data/apartments.sqlite?mode=ro',uri=True);apt.row_factory=sqlite3.Row
     db=sqlite3.connect(f'file:{ROOT}/data/buildings.sqlite?mode=ro',uri=True);db.row_factory=sqlite3.Row
     records={r['code']:dict(r) for r in apt.execute('select * from apartments where lon is not null and lat is not null')}
@@ -35,15 +36,20 @@ def main():
                         if m.get('role')=='outer' and m.get('geometry') and len(m['geometry'])>=4:polygons.append(Polygon([(p['lon'],p['lat']) for p in m['geometry']]))
                 if polygons:boundaries[f"osm:{e['type']}/{e['id']}"]=unary_union(polygons).buffer(0)
         except (ValueError,KeyError):pass
-    candidates=sum([json.loads((ROOT/f'docs/landmark-candidates-{k}.json').read_text()) for k in 'ab'],[])
+    candidates=json.loads(args.additional_pool.read_text()) if args.additional_pool else sum([json.loads((ROOT/f'docs/landmark-candidates-{k}.json').read_text()) for k in 'ab'],[])
     claimed=set();result=[];missing=[]
+    if args.additional_pool:claimed.update(sum(json.loads((ROOT/"public/models/footprint-matches.json").read_text()).values(),[]))
+    existing_claimed=set(claimed);district_counts={}
     # Exact civic IDs reserved before neighborhood matching.
     for c in candidates:
         if c.get('buildingIds'):claimed.update(c['buildingIds'])
     for c in candidates:
         c=dict(c)
+        if args.additional_pool and district_counts.get(c['district'],0)>=args.per_district:continue
+        if c.get('buildingIds') and existing_claimed.intersection(c['buildingIds']):
+            missing.append({'id':c['id'],'reason':'Existing model footprint'});continue
         if c.get('buildingIds'):
-            c['membership']={'method':'exact retained building identifier','confidence':'named-source-footprint'};result.append(c);continue
+            c['membership']={'method':'exact retained building identifier','confidence':'named-source-footprint'};result.append(c);district_counts[c['district']]=district_counts.get(c['district'],0)+1;continue
         code=c.get('apartmentCode');r=records.get(code)
         if not r:missing.append({'id':c['id'],'name':c['nameKo'],'reason':'apartment code absent from DB'});continue
         coord=c['coordinate'];anchor=(coord['lon'],coord['lat']);osm=json.loads(r['matched_osm'] or 'null')
@@ -77,8 +83,10 @@ def main():
             missing.append({'id':c['id'],'name':c['nameKo'],'district':c['district'],'reason':'no unclaimed semantically matching apartment footprint in bounded source neighborhood','coordinate':c['coordinate']});continue
         ids=[b['id'] for _,b in selected];claimed.update(ids);c['buildingIds']=ids
         c['membership']={'method':'inside exact-name retained OSM residential polygon' if boundary is not None else 'apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition','confidence':'source-polygon' if boundary is not None else 'approximate-membership-not-parcel-proof','anchor':anchor,'radiusM':radius,'expectedBuildingsFromApartmentRecord':count,'modeledBuildings':len(ids),'maximumCentreDistanceM':round(max(d for d,_ in selected),1),'osmBoundary':osm['id'] if boundary is not None else None,'scope':'Only selected source footprints are replaced; completeness of complex membership is not asserted.'}
-        result.append(c)
-    (ROOT/'docs/landmark-candidates-matched.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
-    (ROOT/'docs/landmark-unmatched.json').write_text(json.dumps(missing,ensure_ascii=False,indent=2)+'\n')
+        result.append(c);district_counts[c['district']]=district_counts.get(c['district'],0)+1
+    if args.additional_pool:
+        assert len(district_counts)==25 and set(district_counts.values())=={args.per_district},district_counts
+    (ROOT/('docs/landmark-candidates-expansion-matched.json' if args.additional_pool else 'docs/landmark-candidates-matched.json')).write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
+    (ROOT/('docs/landmark-expansion-unmatched.json' if args.additional_pool else 'docs/landmark-unmatched.json')).write_text(json.dumps(missing,ensure_ascii=False,indent=2)+'\n')
     print(json.dumps({'matched':len(result),'unmatched':missing},ensure_ascii=False,indent=2))
 if __name__=='__main__':main()

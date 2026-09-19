@@ -180,24 +180,28 @@ def load_candidates(paths):
     return result
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--flight-root',type=Path,default=ROOT.parents[1]/'2026-09-05/new-chat/work/repos/seoul-flight-game');args=ap.parse_args()
+    ap=argparse.ArgumentParser();ap.add_argument('--flight-root',type=Path,default=ROOT.parents[1]/'2026-09-05/new-chat/work/repos/seoul-flight-game');ap.add_argument('--append-candidates',type=Path);ap.add_argument('--expected-count',type=int,default=250);args=ap.parse_args()
     manifestfile=OUT/'manifest.json';original=manifestfile.read_text();old=json.loads(original);raw=raw_asset_records(original)
-    kept=[a for a in old['assets'] if a['id'] in PRESERVED]
+    assert args.append_candidates or len(old['assets'])<=255, 'Use append mode to preserve the expanded catalogue'
+    preserved_ids=tuple(a['id'] for a in old['assets']) if args.append_candidates else PRESERVED
+    kept=[a for a in old['assets'] if a['id'] in preserved_ids]
     baseline={a['id']:hashlib.sha256((OUT/a['model']).read_bytes()).hexdigest() for a in kept}
-    candidates=load_candidates([ROOT/'docs/landmark-candidates-matched.json'])
-    assert len(candidates)==250, len(candidates)
-    assert len({c['id'] for c in candidates})==250
+    candidates=load_candidates([args.append_candidates or ROOT/'docs/landmark-candidates-matched.json'])
+    assert len(candidates)==args.expected_count, len(candidates)
+    assert len({c['id'] for c in candidates})==args.expected_count
+    assert not set(preserved_ids).intersection(c['id'] for c in candidates), 'Refusing to overwrite existing assets'
     db=sqlite3.connect(f'file:{ROOT}/data/buildings.sqlite?mode=ro',uri=True);db.row_factory=sqlite3.Row
-    matches=json.loads((OUT/'footprint-matches.json').read_text());matches={k:v for k,v in matches.items() if k in PRESERVED}
+    matches=json.loads((OUT/'footprint-matches.json').read_text());matches={k:v for k,v in matches.items() if k in preserved_ids}
+    baseline_matches=json.loads(json.dumps(matches))
     imported=[]
-    source=args.flight_root/'assets/landmarks'; flight=json.loads((source/'manifest.json').read_text())
+    source=args.flight_root/'assets/landmarks'; flight={'assets':[]} if args.append_candidates else json.loads((source/'manifest.json').read_text())
     for a in flight['assets']:
         if a['id'] in PRESERVED:continue
         for key in ['model','thumbnail']:
             if a.get(key) and (source/a[key]).exists():shutil.copy2(source/a[key],OUT/a[key])
         assert hashlib.sha256((OUT/a['model']).read_bytes()).hexdigest()==a['sha256']
         imported.append(a)
-    matches['gyeongbokgung']=['339d93ed-e613-49b1-810f-a8b7694ecc35']
+    if not args.append_candidates:matches['gyeongbokgung']=['339d93ed-e613-49b1-810f-a8b7694ecc35']
     assets=[];evidence=[];claimed=set(sum(matches.values(),[]))
     for index,c in enumerate(candidates):
         ids=c.get('buildingIds',c.get('footprintIds',[]));assert ids, c['id']
@@ -228,29 +232,37 @@ def main():
                     mesh.solid(poly,0,bodytop,body,roof);mesh.detail(poly,bodytop,floors,seed,roof_ceiling=height if measured else None)
             props=json.loads(zlib.decompress(r['source_properties'])) if isinstance(r['source_properties'],bytes) else json.loads(r['source_properties'])
             parts.append({'buildingId':r['id'],'name':r['name'],'geometrySource':r['geometry_source'],'heightSource':r['height_source'],'sourceHeightM':r['height_m'],'sourceFloors':r['num_floors'],'sourceHeightEnvelopeM':height if measured else None,'modeledBodyHeightM':height if c.get('nameKo') not in ('독립문','봉은사 진여문','현충관','국회의사당','올림픽체조경기장') else None,'heightBasis':heightbasis,'specialHeightNote':'Special silhouette dimensions override storey extrusion; published or estimated dimensions documented in DISTRICT_LANDMARK_MODELS.md' if c.get('nameKo') in ('독립문','봉은사 진여문','현충관','국회의사당','올림픽체조경기장') else None,'sources':props.get('sources',[])})
-        filename=c['id']+'.glb';stats,offset=mesh.save(OUT/filename);lon,lat=unprojected(offset[0],offset[2],anchor)
+        assert '/' not in c['id'] and '\\' not in c['id'] and c['id'] not in ('.','..')
+        filename=c['id']+'.glb'
+        assert not args.append_candidates or not (OUT/filename).exists(), 'Refusing to overwrite '+filename
+        stats,offset=mesh.save(OUT/filename);lon,lat=unprojected(offset[0],offset[2],anchor)
         name=c.get('nameKo',c.get('name'));sources=c.get('sources',[]) or [{'url':u,'supports':['identity and source provenance; no texture rights asserted']} for u in c.get('sourceUrls',[])]
         if name=='독립문':sources.append({'url':'https://archives.seoul.go.kr/post/1678','supports':['published overall width 11.48m and height 14.28m; arch proportions estimated']})
         if name=='국회의사당':sources.append({'url':'https://theme.archives.go.kr/next/koreaOfRecord/parliamentBldg.do','supports':['64m dome base diameter; dome height 20m from historical design narrative; roof datum estimated']})
         reference=c.get('referenceUrl') or next((s.get('url') for s in sources if isinstance(s,dict) and s.get('url')),'https://www.openstreetmap.org/')
         asset={'id':c['id'],'model':filename,'name':name,'nameKo':name,'district':c.get('district',c.get('districtName')),'category':c.get('kind','apartment-complex'),'minZoom':14.5,'units':'metres',**stats,'rootTransform':'identity','coordinate':{'lon':lon,'lat':lat,'basis':'centre of retained source footprint bounds, Mercator metres; candidate matching documented separately','confidence':'source_footprint_unsurveyed'},'yawDegFromEast':0,'heightDatum':'Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.','referenceUrl':reference,'sources':sources,'geometryProvenance':'Retained real building footprint polygons from data/buildings.sqlite; no modification to database','heightEstimated':True,'sourceHeightAvailableForEveryBuilding':all(p['sourceHeightM'] is not None for p in parts),'modelingEstimates':{'facade':'Procedural window ribbons, piers and mineral colours; not photo-measured','roof':'Setback rooftop plant from inset footprint; estimated','storeyHeightM':3.05,'specialSilhouette':name if name in ('독립문','봉은사 진여문','현충관','국회의사당','올림픽체조경기장','파크원 타워1') else None,'specialSilhouetteProportions':'Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available','storeyFallback':15 if c.get('apartmentCode') else 3,'groundDatum':'shared floor plane, local terrain queried at model anchor'},'buildingCount':len(rows),'footprintIds':ids,'estimatedDetails':['Footprint shape and placement follow the retained source geometry.','Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.','Source building records and matching evidence are in docs/DISTRICT_LANDMARK_PROVENANCE.json.'],'validation':{'finitePositions':True,'unitNormals':True,'noExternalResources':True}}
+        if args.append_candidates:asset['estimatedDetails'][-1]='Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json.'
         assets.append(asset);matches[c['id']]=ids;evidence.append({'id':c['id'],'nameKo':name,'district':asset['district'],'selection':c,'buildings':parts})
-        print(f"{index+1}/250 {name}: {len(rows)} footprints, {stats['triangles']} triangles",flush=True)
+        print(f"{index+1}/{len(candidates)} {name}: {len(rows)} footprints, {stats['triangles']} triangles",flush=True)
     meta={k:v for k,v in old.items() if k!='assets'}
     meta['createdWith']='Original four and imported Geunjeongjeon: retained Blender GLBs; district expansion: Python/NumPy/Shapely source-footprint generator'
     meta['verificationScope']='Original four records and GLB hashes preserved; generated GLBs checked for float32 metre bounds, floor origin, finite geometry and self-contained buffers. Runtime/browser validation is recorded separately.'
-    meta['notice']='Independent source-informed reconstructions. Original four Blender assets retained unchanged; imported Geunjeongjeon and 250 footprint-driven district reconstructions. Facades, roofs and missing heights are estimated; not survey/CAD.'
-    meta['districtExpansion']={'generator':'scripts/build_district_landmarks.py','count':250,'districtCount':25,'importedFlightIds':[a['id'] for a in imported],'preservedElevationIds':list(PRESERVED),'provenance':'../../docs/DISTRICT_LANDMARK_PROVENANCE.json'}
+    meta['notice']='Independent source-informed reconstructions. Original four Blender assets retained unchanged; imported Geunjeongjeon and source-footprint district reconstructions. Facades, roofs and missing heights are estimated; not survey/CAD.'
+    meta['districtExpansion']={'generator':'scripts/build_district_landmarks.py','count':len([a for a in kept+assets if a.get('district')]),'districtCount':25,'importedFlightIds':old.get('districtExpansion',{}).get('importedFlightIds',[]) if args.append_candidates else [a['id'] for a in imported],'preservedElevationIds':list(PRESERVED),'provenance':'../../docs/DISTRICT_LANDMARK_PROVENANCE.json'}
+    if args.append_candidates:
+        meta['districtExpansion']['additionalProvenance']='../../docs/LANDMARK_EXPANSION_PROVENANCE.json'
+        meta['verificationScope']='All previously published assets and footprint lists preserved; appended source-footprint models validated separately.'
     prefix=json.dumps(meta,ensure_ascii=False,indent=2)[:-2]+',\n  "assets": [\n'
     records=['    '+raw[a['id']] for a in kept]
     records += ['\n'.join('    '+line for line in json.dumps(a,ensure_ascii=False,indent=2).splitlines()) for a in imported+assets]
     manifestfile.write_text(prefix+',\n'.join(records)+'\n  ]\n}\n')
     (OUT/'footprint-matches.json').write_text(json.dumps(matches,ensure_ascii=False,indent=2)+'\n')
     proof={'schemaVersion':1,'generator':'scripts/build_district_landmarks.py','sourceDatabase':'data/buildings.sqlite (read-only)','preservedHashes':baseline,'districtCounts':dict(Counter(a['district'] for a in assets)),'assets':evidence}
-    (ROOT/'docs/DISTRICT_LANDMARK_PROVENANCE.json').write_text(json.dumps(proof,ensure_ascii=False,indent=2)+'\n')
+    (ROOT/('docs/LANDMARK_EXPANSION_PROVENANCE.json' if args.append_candidates else 'docs/DISTRICT_LANDMARK_PROVENANCE.json')).write_text(json.dumps(proof,ensure_ascii=False,indent=2)+'\n')
     reread=raw_asset_records(manifestfile.read_text())
-    assert all(raw[k]==reread[k] for k in PRESERVED)
-    assert all(hashlib.sha256((OUT/(k+'.glb')).read_bytes()).hexdigest()==baseline[k] for k in PRESERVED)
-    assert len(json.loads(manifestfile.read_text())['assets'])==255
-    print(json.dumps({'assets':255,'newBytes':sum(a['bytes'] for a in assets),'newTriangles':sum(a['triangles'] for a in assets),'districtCounts':proof['districtCounts'],'preservedRecordsExact':True},ensure_ascii=False))
+    assert all(raw[k]==reread[k] for k in preserved_ids)
+    assert all(hashlib.sha256((OUT/(k+'.glb')).read_bytes()).hexdigest()==baseline[k] for k in preserved_ids)
+    assert all(matches[k]==v for k,v in baseline_matches.items())
+    assert len(json.loads(manifestfile.read_text())['assets'])==len(kept)+len(imported)+len(assets)
+    print(json.dumps({'assets':len(kept)+len(imported)+len(assets),'newBytes':sum(a['bytes'] for a in assets),'newTriangles':sum(a['triangles'] for a in assets),'districtCounts':proof['districtCounts'],'preservedRecordsExact':True},ensure_ascii=False))
 if __name__=='__main__':main()
