@@ -19,7 +19,7 @@ test('bridges, schools, offices, avenues and real transit points render and togg
     await page.waitForFunction(id => (window as any).__SEOUL_MAP__.cityModels.getState().models.some((m: any) => m.id === id && m.active && m.drawCount > 0), asset.id, { timeout: 35_000 });
     await page.waitForLoadState('networkidle');
     const state = await page.evaluate(() => (window as any).__SEOUL_MAP__.cityModels.getState());
-    expect(state.models.length).toBe(1550);
+    expect(state.models.length).toBe(3088);
     expect(state.models.filter((m: any) => m.loaded).length).toBeLessThanOrEqual(48);
     expect(state.models.filter((m: any) => m.active).length).toBeLessThanOrEqual(32);
     expect(state.models.filter((m: any) => m.error)).toEqual([]);
@@ -41,7 +41,11 @@ test('bridges, schools, offices, avenues and real transit points render and togg
   await page.screenshot({ path: 'tests/screenshots/infrastructure-olympic-detail.png' });
   await page.locator('#toggle-bridge-models').uncheck();
   await expect.poll(() => page.evaluate(() => (window as any).__SEOUL_MAP__.cityModels.getState().models.filter((m: any) => m.id.startsWith('bridge-') && m.active).length)).toBe(0);
-  const bus = JSON.parse(readFileSync('public/transit.json', 'utf8')).features.find((f: any) => f.properties.kind === 'bus_stop');
+  const transit = JSON.parse(readFileSync('public/transit.json', 'utf8')).features;
+  const rail = transit.find((f: any) => f.properties.kind === 'rail_station');
+  const distance = (f: any) => f.geometry.coordinates.reduce((sum: number, n: number, i: number) => sum + (n - rail.geometry.coordinates[i]) ** 2, 0);
+  const bus = transit.filter((f: any) => f.properties.kind === 'bus_stop').sort((a: any, b: any) => distance(a) - distance(b))[0];
+  expect(Math.sqrt(distance(bus))).toBeLessThan(0.002);
   await page.evaluate((coordinate: [number, number]) => (window as any).__SEOUL_MAP__.map.jumpTo({ center: coordinate, zoom: 17, pitch: 40, bearing: 0 }), bus.geometry.coordinates);
   await page.waitForFunction(() => { const map = (window as any).__SEOUL_MAP__.map; return map.queryRenderedFeatures({ layers: ['transit-bus-points'] }).length > 0 && map.queryRenderedFeatures({ layers: ['transit-rail-points'] }).length > 0; });
   await page.waitForLoadState('networkidle');

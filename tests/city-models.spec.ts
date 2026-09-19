@@ -11,9 +11,11 @@ test('four original Blender models render, stay at 1x height, restore solids and
   page.on('request', request => { if (request.url().endsWith('.glb')) requests.push(request.url()); });
   await page.goto('/');
   await page.waitForFunction(() => (window as any).__SEOUL_MAP__?.cityModels && (window as any).__SEOUL_MAP__.getState().terrainReady);
-  await page.locator('#mode-25d').click();
+  await page.waitForFunction(() => { const api = (window as any).__SEOUL_MAP__; return !api.cityModels.getState().loading && !api.map.isMoving(); });
   const results: any[] = [];
+  const requestsPerViewport: number[] = [];
   for (const asset of assets) {
+    const requestStart = requests.length;
     const zoom = asset.id === 'lotte' ? 15.0 : asset.id === 'nseoul' ? 15.6 : 16.0;
     const matchesViewport = (url: string, route: string) => {
       const query = new URL(url);
@@ -36,7 +38,12 @@ test('four original Blender models render, stay at 1x height, restore solids and
       return api.map.loaded() && !api.map.isMoving() && api.roads.getData().features.length > 0
         && !document.querySelector('#building-status')?.textContent?.includes('불러오는');
     });
+    await page.waitForFunction(() => !(window as any).__SEOUL_MAP__.cityModels.getState().loading);
+    requestsPerViewport.push(requests.length - requestStart);
+    expect(requestsPerViewport.at(-1)).toBeLessThanOrEqual(32);
     const state = await page.evaluate(() => (window as any).__SEOUL_MAP__.cityModels.getState());
+    expect(state.models.filter((m: any) => m.loaded).length).toBeLessThanOrEqual(48);
+    expect(state.models.filter((m: any) => m.active).length).toBeLessThanOrEqual(32);
     const model = state.models.find((m: any) => m.id === asset.id);
     expect(model.height_m).toBe(asset.dimensions[1]);
     expect(model.ground_m).not.toBeNull();
@@ -80,9 +87,8 @@ test('four original Blender models render, stay at 1x height, restore solids and
   const frameEnd = await page.evaluate(() => (window as any).__SEOUL_MAP__.cityModels.getState().frameCount);
   expect(frameEnd - frameStart).toBeLessThanOrEqual(3);
   for (const asset of assets) expect(requests.filter(url => url.endsWith('/' + asset.model)).length).toBe(1);
-  // The initial viewport can request models before the four explicit jumps.
-  expect(requests.length).toBeLessThanOrEqual(32 * (assets.length + 1));
+  // Bound each settled camera jump separately; startup and mode changes also select nearby models.
   expect(errors).toEqual([]);
   mkdirSync('tests/screenshots', { recursive: true });
-  writeFileSync('tests/screenshots/city-model-render-proof.json', JSON.stringify({ results, before, after, idle_frames_in_one_second: frameEnd - frameStart, glb_requests: requests, page_errors: errors }, null, 2));
+  writeFileSync('tests/screenshots/city-model-render-proof.json', JSON.stringify({ results, before, after, idle_frames_in_one_second: frameEnd - frameStart, glb_requests: requests, requests_per_viewport: requestsPerViewport, page_errors: errors }, null, 2));
 });

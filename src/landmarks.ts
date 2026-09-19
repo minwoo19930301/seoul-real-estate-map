@@ -19,7 +19,9 @@ export const landmarkControls = `
     <div class="section-heading"><h2>주요 장소</h2><span class="small-label">이름이 있는 기준점</span></div>
     <label class="layer-row"><span class="pin-key"></span><span>장소 핀</span><input id="toggle-landmarks" type="checkbox" checked aria-label="장소 핀 표시"/></label>
     <div class="pin-filters">${Object.entries(kinds).map(([kind, item]) => `<label class="pin-filter ${kind}"><input id="pin-${kind}" type="checkbox" checked/><span>${item.label}</span></label>`).join('')}</div>
-    <label class="layer-row"><span>아파트 핀은 400세대 이상</span><input id="pin-large-apartments" type="checkbox" checked aria-label="400세대 이상 아파트 핀만 표시"/></label>
+    <label class="layer-row"><span>아파트 핀은 100세대 이상</span><input id="pin-large-apartments" type="checkbox" checked aria-label="100세대 이상 아파트 핀만 표시"/></label>
+    <label class="layer-row"><span>버스 정류장</span><input id="toggle-bus-stops" type="checkbox" checked aria-label="버스 정류장 표시"/></label>
+    <label class="layer-row"><span>따릉이 대여소</span><input id="toggle-bike-stations" type="checkbox" checked aria-label="따릉이 대여소 표시"/></label>
     <p id="apartment-coverage" class="muted"></p>${renewalZoneControls}
     <p id="landmark-status" class="muted" role="status">주요 장소를 불러오는 중…</p>
     <p class="muted">가까운 이름은 겹치지 않게 표시합니다. 단지 핀은 단지 위치이며 개별 동의 높이를 뜻하지 않습니다.</p>
@@ -72,7 +74,7 @@ export class Landmarks {
     }
     this.controller = new AbortController();
     const params = new URLSearchParams({ bbox: queryBounds(this.map).join(','), zoom: this.map.getZoom().toFixed(2), kinds: selected.join(',') });
-    if (input('pin-large-apartments').checked) params.set('min_households', '400');
+    if (input('pin-large-apartments').checked) params.set('min_households', '100');
     const key = params.toString();
     if (key === this.cachedKey && this.cachedData) { this.data = this.cachedData; this.render(); return; }
     try {

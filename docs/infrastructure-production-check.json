@@ -3,23 +3,31 @@
     {
       "path": "/models/manifest.json",
       "status": 200,
-      "count": 1550
+      "count": 3088
     },
     {
       "path": "/transit.json",
       "status": 200,
-      "count": 362
+      "count": 14315
     },
     {
       "path": "/avenue-surfaces.geojson",
       "status": 200,
       "count": 6894
+    },
+    {
+      "path": "/models/landmark-c1e08f26-ebe0-4a95-827d-c617ca8b3d5f-civic.glb",
+      "status": 200,
+      "sha256": "4a44187ad56ec7feba7e5b115170f44f9696a2d88280a36a1f118edde0762c51"
     }
   ],
   "developmentApiAbsent": true,
-  "modelStatus": "화면 근처의 주요 건물 모델을 불러오는 중…",
-  "busControl": true,
-  "publicControl": true,
-  "bridgeControl": true,
+  "controls": {
+    "toggle-bike-stations": true,
+    "toggle-bus-stops": true,
+    "toggle-cultural-models": true,
+    "toggle-company-models": true
+  },
+  "modelStatus": "주요 건물 모델 32개 · 모형 높이 1배 · 외관은 참고 재현",
   "pageErrors": []
 }
