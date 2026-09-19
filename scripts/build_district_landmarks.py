@@ -7,6 +7,7 @@ window layouts, roof plant and all materials are explicitly artistic estimates.
 from pathlib import Path
 import argparse, hashlib, json, math, shutil, sqlite3, struct, zlib
 from collections import Counter
+from public_facade import public_facade
 import numpy as np
 from shapely.geometry import shape, Polygon
 from shapely.ops import transform, triangulate
@@ -230,7 +231,9 @@ def main():
             for poly in polys:
                 if poly.area<2:continue
                 poly=poly.simplify(.18,preserve_topology=True)
-                if not special_geometry(mesh,poly,c.get('nameKo',''),height,floors,seed,body,roof):
+                if c.get('kind') in ('k12-school','district-public-office'):
+                    public_facade(mesh,poly,height,floors,c['kind'])
+                elif not special_geometry(mesh,poly,c.get('nameKo',''),height,floors,seed,body,roof):
                     bodytop=height-min(2.4,height*.045) if measured else height
                     mesh.solid(poly,0,bodytop,body,roof);mesh.detail(poly,bodytop,floors,seed,roof_ceiling=height if measured else None)
             props=json.loads(zlib.decompress(r['source_properties'])) if isinstance(r['source_properties'],bytes) else json.loads(r['source_properties'])
@@ -248,6 +251,9 @@ def main():
             asset['estimatedDetails'][-1]=f'Source building records and matching evidence are in {provenance_ref}.'
             asset['householdCount']=c.get('householdCount')
             asset['apartmentCode']=c.get('apartmentCode')
+        if c.get('kind') in ('k12-school','district-public-office'):
+            asset['modelingEstimates']['facade']='Individual window panes, mullions, slab bands, brick plinth, parapet and entrance canopy; material and entrance placement are illustrative, not photo-surveyed.'
+            asset['modelingEstimates']['roof']='Inset source-footprint parapet inside source height envelope'
         assets.append(asset);matches[c['id']]=ids;evidence.append({'id':c['id'],'nameKo':name,'district':asset['district'],'selection':c,'buildings':parts})
         print(f"{index+1}/{len(candidates)} {name}: {len(rows)} footprints, {stats['triangles']} triangles",flush=True)
     meta={k:v for k,v in old.items() if k!='assets'}

@@ -41,6 +41,7 @@ function harness() {
   let ground = 80, ready = true, center = [127.102679, 37.5125537];
   const map = {
     getZoom: () => 16,
+    getCenter: () => ({ lng: center[0], lat: center[1] }),
     getBounds: () => ({ getWest: () => center[0] - 0.002, getEast: () => center[0] + 0.002, getSouth: () => center[1] - 0.002, getNorth: () => center[1] + 0.002 }),
     getTerrain: () => ({ source: 'local-terrain', exaggeration: 4 }),
     getSource: () => ({}), isSourceLoaded: () => ready,
@@ -177,6 +178,17 @@ test('moving away cancels queued model work while originals stay visible', async
   } finally { globalThis.fetch = originalFetch; h.models.destroy(); }
 });
 
+test('pitched bounds do not let distant buildings evict the bridge at the camera target', () => {
+  const h = harness();
+  const template = manifest.assets.find(a => a.id === 'lotte');
+  h.models.map.getBounds = () => ({ getWest: () => 127.08, getEast: () => 127.12, getSouth: () => 37.50, getNorth: () => 37.60 });
+  h.models.entries = Array.from({ length: 40 }, (_, i) => ({ asset: { ...template, id: `far-${i}`, coordinate: { lon: 127.10, lat: 37.55 + i * 0.00001 } } }));
+  h.models.entries.push({ asset: { ...template, id: 'target-bridge', category: 'bridge', coordinate: { lon: 127.102679, lat: 37.5125537 }, geoBounds: [127.102, 37.51, 127.104, 37.52] } });
+  assert.equal(h.models.nearbyEntries()[0].asset.id, 'target-bridge');
+  assert.equal(h.models.nearbyEntries().length, 32);
+  h.models.destroy();
+});
+
 test('elevation originals retain their complete manifest records and all 250 selected sites are modeled', () => {
   const originals = JSON.parse(readFileSync(new URL('./fixtures/preserved-landmarks.json', import.meta.url)));
   for (const original of originals) assert.deepEqual(manifest.assets.find(a => a.id === original.id), original);
@@ -195,5 +207,5 @@ test('elevation originals retain their complete manifest records and all 250 sel
   assert.equal(counts.size, 25);
   assert.ok([...counts.values()].every(n => n === 10));
   assert.ok(manifest.assets.some(a => a.id === 'gyeongbokgung'));
-  assert.equal(manifest.assets.length, 555 + JSON.parse(readFileSync(new URL("../docs/apartment-400-matched.json", import.meta.url))).length);
+  assert.equal(manifest.assets.length, 1550);
 });

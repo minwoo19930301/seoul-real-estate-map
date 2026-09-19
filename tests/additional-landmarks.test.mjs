@@ -29,7 +29,7 @@ test('300 additional sites cover all districts with unique physical footprint ow
   const oldIds = new Set(baseline.map(x => x.id));
   assert.equal(added.length, 300);
   assert.equal(new Set(added.map(x => x.id)).size, 300);
-  assert.equal(manifest.assets.length, 555 + read("docs/apartment-400-matched.json").length);
+  assert.equal(manifest.assets.length, 1550);
   const counts = new Map();
   for (const candidate of added) {
     assert.ok(!oldIds.has(candidate.id));
@@ -69,7 +69,7 @@ test('400-household priority batch accounts for verified counts, unknown counts 
   const audit = read('docs/apartment-400-selection-audit.json');
   const oldIds = new Set(read('tests/fixtures/preserved-555-landmarks.json').map(a => a.id));
   assert.equal(added.length, 605);
-  assert.equal(manifest.assets.length, 1160);
+  assert.equal(manifest.assets.length, 1550);
   assert.equal(new Set(added.map(a => a.id)).size, added.length);
   const counts = new Map();
   for (const candidate of added) {
@@ -91,4 +91,31 @@ test('400-household priority batch accounts for verified counts, unknown counts 
   assert.equal(audit.below400, 127);
   assert.equal(audit.unknownHouseholds, 33);
   assert.deepEqual(audit.shortfalls, { '강북구': 6, '금천구': 1, '종로구': 13 });
+});
+
+test('infrastructure expansion preserves every original 1160 model record and footprint assignment', () => {
+  const original = read('tests/fixtures/preserved-1160-landmarks.json');
+  assert.equal(original.length, 1160);
+  for (const baseline of original) {
+    const asset = manifest.assets.find(a => a.id === baseline.id);
+    assert.equal(sha(canonical(asset)), baseline.recordSha256, baseline.id);
+    assert.equal(asset.sha256, baseline.glbSha256, baseline.id);
+    assert.deepEqual(matches[baseline.id], baseline.footprints, baseline.id);
+  }
+  const facilities = read('docs/public-facility-candidates.json');
+  assert.equal(facilities.length, 364);
+  for (const c of facilities) {
+    const a = manifest.assets.find(a => a.id === c.id);
+    assert.equal(a.nameKo, c.nameKo);
+    assert.equal(a.category, c.kind);
+    assert.deepEqual(a.footprintIds, c.buildingIds);
+    assert.ok(a.drawCalls <= 3);
+  }
+  const bridges = manifest.assets.filter(a => a.category === 'bridge');
+  assert.equal(bridges.length, 26);
+  for (const a of bridges) {
+    assert.ok(a.geoBounds.length === 4 && a.geoBounds.every(Number.isFinite));
+    assert.deepEqual(matches[a.id], []);
+    assert.equal(a.heightEstimated, true);
+  }
 });

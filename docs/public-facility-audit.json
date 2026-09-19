@@ -1,0 +1,57 @@
+{
+  "accepted": 364,
+  "kinds": {
+    "k12-school": 224,
+    "district-public-office": 140
+  },
+  "districts": {
+    "강남구": 21,
+    "강동구": 21,
+    "강북구": 8,
+    "강서구": 32,
+    "관악구": 15,
+    "광진구": 5,
+    "구로구": 6,
+    "금천구": 8,
+    "노원구": 21,
+    "도봉구": 12,
+    "동대문구": 11,
+    "동작구": 9,
+    "마포구": 19,
+    "서대문구": 15,
+    "서초구": 25,
+    "성동구": 9,
+    "성북구": 8,
+    "송파구": 19,
+    "양천구": 16,
+    "영등포구": 14,
+    "용산구": 6,
+    "은평구": 23,
+    "종로구": 16,
+    "중구": 9,
+    "중랑구": 16
+  },
+  "rejected": [
+    {
+      "nameKo": "관악구청",
+      "district": "관악구",
+      "reason": "footprint already modeled"
+    },
+    {
+      "nameKo": "금천구청",
+      "district": "금천구",
+      "reason": "footprint already modeled"
+    },
+    {
+      "nameKo": "천주교 군종교구청",
+      "district": "용산구",
+      "reason": "not a district administrative office"
+    },
+    {
+      "nameKo": "천주교서울대교구청",
+      "district": "중구",
+      "reason": "not a district administrative office"
+    }
+  ],
+  "scope": "Retained named footprints, not a complete education/public-facility census"
+}

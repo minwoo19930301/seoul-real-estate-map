@@ -7,7 +7,7 @@ async function precompress(directory: string) {
   for (const entry of await readdir(directory, { withFileTypes: true })) {
     const path = join(directory, entry.name);
     if (entry.isDirectory()) await precompress(path);
-    else if (/\.(js|css|json|glb)$/.test(entry.name)) {
+    else if (/\.(js|css|json|geojson|glb)$/.test(entry.name)) {
       const bytes = await readFile(path);
       if (bytes.length > 1024) await writeFile(`${path}.gz`, gzipSync(bytes, { level: 6 }));
     }

@@ -25,7 +25,7 @@ for(const asset of manifest.assets){
    if(g.index)for(let i=0;i<g.index.count;i++)assert.ok(g.index.getX(i)<p.count,asset.id+' index');
    g.dispose();for(const material of Array.isArray(node.material)?node.material:[node.material])material.dispose();
  });
- assert.equal(triangles,asset.triangles,asset.id+' triangles');assert.ok(matches[asset.id]?.length,asset.id+' footprint membership');
+ assert.equal(triangles,asset.triangles,asset.id+' triangles');if(asset.category==='bridge')assert.deepEqual(matches[asset.id],[],asset.id+' must not replace building footprints');else assert.ok(matches[asset.id]?.length,asset.id+' footprint membership');
  rows.push({id:asset.id,bytes:bytes.length,triangles,drawCalls,vertices,bounds:{min:box.min.toArray(),max:box.max.toArray()},sha256:asset.sha256});
 }
 const result={validator:`Three.js GLTFLoader; all ${rows.length} binary files parsed`,assetCount:rows.length,totalBytes:rows.reduce((s,a)=>s+a.bytes,0),totalTriangles:rows.reduce((s,a)=>s+a.triangles,0),maxAssetBytes:Math.max(...rows.map(r=>r.bytes)),checks:['SHA256','float32metreBounds','floorOrigin','finitePositions','unitNormals','indicesInRange','triangleCount','nonemptyFootprintMembership','noExternalResources'],assets:rows};

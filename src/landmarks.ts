@@ -28,6 +28,7 @@ export const landmarkControls = `
 
 export class Landmarks {
   private data: PinData = empty();
+  private externalStations = false;
   private markers: Marker[] = [];
   private controller?: AbortController;
   private requestId = 0;
@@ -56,6 +57,7 @@ export class Landmarks {
     void this.load();
   }
 
+  useExternalStations(enabled: boolean) { this.externalStations = enabled; this.cachedKey = ''; this.clear(); void this.load(); }
   schedule() { clearTimeout(this.timer); this.timer = setTimeout(() => void this.load(), 180); }
   getData() { return this.data; }
   private clear() { this.renderKey = ''; this.markers.splice(0).forEach(marker => marker.remove()); }
@@ -64,7 +66,7 @@ export class Landmarks {
     if (!this.initialized) return;
     this.controller?.abort(); const id = ++this.requestId;
     const status = document.getElementById('landmark-status')!;
-    const selected = Object.keys(kinds).filter(kind => input(`pin-${kind}`).checked);
+    const selected = Object.keys(kinds).filter(kind => input(`pin-${kind}`).checked && !(kind === 'station' && this.externalStations));
     if (!input('toggle-landmarks').checked || !selected.length) {
       this.data = empty(); this.clear(); status.textContent = '장소 핀을 숨겼습니다.'; return;
     }

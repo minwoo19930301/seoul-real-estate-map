@@ -6,7 +6,7 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 export interface CityModelAsset {
   id: string; nameKo: string; model: string; dimensions: [number, number, number];
   coordinate: { lon: number; lat: number }; yawDegFromEast: number;
-  heightDatum: string; sha256: string; referenceUrl: string; minZoom?: number; district?: string;
+  heightDatum: string; sha256: string; referenceUrl: string; minZoom?: number; district?: string; category?: string; geoBounds?: [number, number, number, number];
 }
 export interface DecorativeTree { coordinate: [number, number]; height_m: number; crown_radius_m: number }
 export interface CityModelState {
@@ -48,6 +48,8 @@ function illuminate(scene: THREE.Scene) {
 export class CityModels {
   readonly layerId = 'city-landmark-models';
   private enabled = true;
+  private publicVisible = true;
+  private bridgesVisible = true;
   private treesEnabled = false;
   private is25d = false;
   private loading = false;
@@ -127,17 +129,17 @@ export class CityModels {
     } finally { this.loading = false; if (!this.disposed) { this.emit(); this.map.triggerRepaint(); } }
   }
   private inView(asset: CityModelAsset) {
+    if (asset.category === 'bridge' && !this.bridgesVisible || ['k12-school', 'district-public-office'].includes(asset.category ?? '') && !this.publicVisible) return false;
     if (this.map.getZoom() < (asset.minZoom ?? 13)) return false;
     const bounds = this.map.getBounds();
     const dx = (bounds.getEast() - bounds.getWest()) * 0.2;
     const dy = (bounds.getNorth() - bounds.getSouth()) * 0.2;
+    if (asset.geoBounds) return asset.geoBounds[2] >= bounds.getWest() - dx && asset.geoBounds[0] <= bounds.getEast() + dx && asset.geoBounds[3] >= bounds.getSouth() - dy && asset.geoBounds[1] <= bounds.getNorth() + dy;
     return asset.coordinate.lon >= bounds.getWest() - dx && asset.coordinate.lon <= bounds.getEast() + dx
       && asset.coordinate.lat >= bounds.getSouth() - dy && asset.coordinate.lat <= bounds.getNorth() + dy;
   }
   private nearbyEntries() {
-    const bounds = this.map.getBounds();
-    const lon = (bounds.getWest() + bounds.getEast()) / 2;
-    const lat = (bounds.getSouth() + bounds.getNorth()) / 2;
+    const { lng: lon, lat } = this.map.getCenter();
     const distance = (entry: Entry) => ((entry.asset.coordinate.lon - lon) * Math.cos(lat * Math.PI / 180)) ** 2 + (entry.asset.coordinate.lat - lat) ** 2;
     return this.entries.filter(entry => this.inView(entry.asset))
       .sort((a, b) => distance(a) - distance(b) || a.asset.id.localeCompare(b.asset.id))
@@ -204,6 +206,10 @@ export class CityModels {
 
   setFootprintMatches(matches: Record<string, string[]>) {
     this.matches = Object.fromEntries(Object.entries(matches).map(([id, ids]) => [id, [...new Set(ids)]])); this.emit();
+  }
+  setCategories(publicFacilities: boolean, bridges: boolean) {
+    if (this.publicVisible === publicFacilities && this.bridgesVisible === bridges) return;
+    this.publicVisible = publicFacilities; this.bridgesVisible = bridges; void this.loadNearby(); this.updateTerrain();
   }
   setMode(is25d: boolean) { this.is25d = is25d; void this.loadNearby(); this.updateTerrain(); }
   setVisible(visible: boolean) { this.enabled = visible; void this.loadNearby(); this.updateTerrain(); }
