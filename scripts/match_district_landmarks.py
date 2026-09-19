@@ -13,7 +13,7 @@ ROOT=Path(__file__).resolve().parents[1]
 
 def key(s):return re.sub(r'[^가-힣a-z0-9]','',s.lower()).replace('아파트','').replace('분양','').replace('임대','')
 def main():
-    parser=argparse.ArgumentParser();parser.add_argument("--additional-pool",type=Path);parser.add_argument("--per-district",type=int,default=12);parser.add_argument("--output",type=Path);parser.add_argument("--rejections-output",type=Path);parser.add_argument("--allow-shortfall",action="store_true");args=parser.parse_args()
+    parser=argparse.ArgumentParser();parser.add_argument("--additional-pool",type=Path);parser.add_argument("--per-district",type=int,default=12);parser.add_argument("--output",type=Path);parser.add_argument("--rejections-output",type=Path);parser.add_argument("--baseline-matches",type=Path,help="read-only footprint matches JSON override");parser.add_argument("--allow-shortfall",action="store_true");args=parser.parse_args()
     apt=sqlite3.connect(f'file:{ROOT}/data/apartments.sqlite?mode=ro',uri=True);apt.row_factory=sqlite3.Row
     db=sqlite3.connect(f'file:{ROOT}/data/buildings.sqlite?mode=ro',uri=True);db.row_factory=sqlite3.Row
     records={r['code']:dict(r) for r in apt.execute('select * from apartments where lon is not null and lat is not null')}
@@ -38,7 +38,9 @@ def main():
         except (ValueError,KeyError):pass
     candidates=json.loads(args.additional_pool.read_text()) if args.additional_pool else sum([json.loads((ROOT/f'docs/landmark-candidates-{k}.json').read_text()) for k in 'ab'],[])
     claimed=set();result=[];missing=[]
-    if args.additional_pool:claimed.update(sum(json.loads((ROOT/"public/models/footprint-matches.json").read_text()).values(),[]))
+    if args.additional_pool:
+        matches_path=args.baseline_matches or (ROOT/"public/models/footprint-matches.json")
+        claimed.update(sum(json.loads(matches_path.read_text()).values(),[]))
     existing_claimed=set(claimed);district_counts={}
     # Exact civic IDs reserved before neighborhood matching.
     for c in candidates:

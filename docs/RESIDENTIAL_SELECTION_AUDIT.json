@@ -1,0 +1,171 @@
+{
+  "baselineModels": 3088,
+  "baselineManifestSha256": "75ed1fe29ee2ea24ec49293b2d56f10ba041bc527cc6c9f44dc8c8db389a064b",
+  "counts": {
+    "sourceBuildings": 365456,
+    "notSpecificallyIdentified": 336119,
+    "identifiedSourceBuildings": 29337,
+    "alreadyModeledFootprints": 18817
+  },
+  "newModels": 10519,
+  "newOwnedFootprints": 10691,
+  "categories": {
+    "apartment": 7963,
+    "officetel": 241,
+    "mixed-use": 61,
+    "villa": 2254
+  },
+  "districts": {
+    "강남구": {
+      "villa": 62,
+      "apartment": 475,
+      "mixed-use": 5,
+      "officetel": 18
+    },
+    "강동구": {
+      "apartment": 328,
+      "villa": 4,
+      "officetel": 4,
+      "mixed-use": 3
+    },
+    "강북구": {
+      "apartment": 92,
+      "villa": 28
+    },
+    "강서구": {
+      "apartment": 450,
+      "villa": 369,
+      "officetel": 20,
+      "mixed-use": 2
+    },
+    "관악구": {
+      "apartment": 278,
+      "officetel": 33,
+      "villa": 37
+    },
+    "광진구": {
+      "apartment": 314,
+      "officetel": 1,
+      "villa": 18
+    },
+    "구로구": {
+      "apartment": 297,
+      "villa": 15,
+      "mixed-use": 1,
+      "officetel": 6
+    },
+    "금천구": {
+      "apartment": 177,
+      "officetel": 13,
+      "villa": 28
+    },
+    "노원구": {
+      "apartment": 130,
+      "villa": 16,
+      "officetel": 1
+    },
+    "도봉구": {
+      "apartment": 85,
+      "villa": 8
+    },
+    "동대문구": {
+      "apartment": 368,
+      "villa": 47,
+      "officetel": 16,
+      "mixed-use": 5
+    },
+    "동작구": {
+      "apartment": 137,
+      "mixed-use": 7,
+      "villa": 14,
+      "officetel": 1
+    },
+    "마포구": {
+      "apartment": 855,
+      "villa": 168,
+      "officetel": 23,
+      "mixed-use": 3
+    },
+    "서대문구": {
+      "apartment": 214,
+      "villa": 57,
+      "officetel": 3
+    },
+    "서초구": {
+      "apartment": 399,
+      "officetel": 19,
+      "villa": 15,
+      "mixed-use": 3
+    },
+    "성동구": {
+      "apartment": 191,
+      "officetel": 8,
+      "villa": 6,
+      "mixed-use": 4
+    },
+    "성북구": {
+      "apartment": 133,
+      "villa": 23,
+      "officetel": 2,
+      "mixed-use": 3
+    },
+    "송파구": {
+      "apartment": 1163,
+      "officetel": 19,
+      "villa": 31,
+      "mixed-use": 1
+    },
+    "양천구": {
+      "apartment": 296,
+      "villa": 5,
+      "mixed-use": 1,
+      "officetel": 1
+    },
+    "영등포구": {
+      "apartment": 336,
+      "officetel": 18,
+      "mixed-use": 3,
+      "villa": 2
+    },
+    "용산구": {
+      "apartment": 156,
+      "villa": 15,
+      "mixed-use": 3,
+      "officetel": 6
+    },
+    "은평구": {
+      "villa": 1134,
+      "apartment": 546,
+      "officetel": 9,
+      "mixed-use": 6
+    },
+    "종로구": {
+      "apartment": 134,
+      "mixed-use": 4,
+      "villa": 19,
+      "officetel": 6
+    },
+    "중구": {
+      "apartment": 127,
+      "officetel": 4,
+      "mixed-use": 3,
+      "villa": 1
+    },
+    "중랑구": {
+      "apartment": 282,
+      "villa": 132,
+      "officetel": 10,
+      "mixed-use": 4
+    }
+  },
+  "complexesLinked": 79,
+  "complexCandidatesWithoutCompatibleBuilding": [],
+  "rejected": [
+    {
+      "buildingId": "777ad3f0-3715-47b8-a367-d1e062d36426",
+      "nameKo": null,
+      "reason": "source footprint representative point outside retained district"
+    }
+  ],
+  "scope": "Every identifiable requested residential building in the retained source snapshot after preservation and geometry checks. Not proof of complete coverage of all real Seoul villas, officetels, or <=100-household apartments. Unknown-use footprints remain unclassified. Zero household counts treated as unavailable."
+}

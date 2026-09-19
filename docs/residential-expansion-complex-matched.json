@@ -1,0 +1,4070 @@
+[
+  {
+    "id": "apt-a13528105",
+    "nameKo": "개포1차2차우성",
+    "district": "강남구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A13528105",
+    "householdCount": 0,
+    "coordinate": {
+      "lon": 127.0598978,
+      "lat": 37.4911216,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "e472eaf3-9cdc-415e-8dea-e7c442495c05",
+      "fd49cb3e-f735-4867-b024-f66f7b33bd69",
+      "e65af1d0-1d6c-4099-ac10-633bd28640ee",
+      "2030ca11-1cee-4f14-b3db-9cd77c51450f",
+      "6bbd822a-aef8-46c5-859d-22ae22f90d4f",
+      "c95e3822-f467-498a-a450-f46119688e89",
+      "5f6dec2a-ec6d-4af2-aca0-324c71aa3231",
+      "23634874-6a4a-44d5-8d39-24ebe0ae07b0",
+      "131fd55f-72c2-41f7-991b-68b369426a7d",
+      "37f625d8-18e9-45f6-abdc-1c14d5a030ed",
+      "228c1b56-d0cd-4a95-bedb-b48a836b0305",
+      "d7129b5e-baac-4158-8b5b-669416d6f39f"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 강남구 선릉로 120",
+      "coordinateIssues": [
+        "kapt_poi_points_disagree"
+      ],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        127.0598978,
+        37.4911216
+      ],
+      "radiusM": 243.20773014030618,
+      "expectedBuildingsFromApartmentRecord": 14,
+      "modeledBuildings": 12,
+      "maximumCentreDistanceM": 213.5,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10022476",
+    "nameKo": "논현 e편한세상",
+    "district": "강남구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A10022476",
+    "householdCount": 64,
+    "coordinate": {
+      "lon": 127.0287625,
+      "lat": 37.5068651,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "f1c11e28-43a4-4ca2-be64-078fb42b9dd8"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 강남구 봉은사로11길 12",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        127.0287625,
+        37.5068651
+      ],
+      "radiusM": 105,
+      "expectedBuildingsFromApartmentRecord": 1,
+      "modeledBuildings": 1,
+      "maximumCentreDistanceM": 36.8,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10024102",
+    "nameKo": "대치르엘",
+    "district": "강남구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A10024102",
+    "householdCount": 0,
+    "coordinate": {
+      "lon": 127.0624654,
+      "lat": 37.5016593,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "b19170ee-5058-442c-ac2d-9989eed1c5ad",
+      "4f5fb4c6-6f4d-4469-b625-87514493915d",
+      "177ea449-b95b-4576-a81f-475d4b667cf4",
+      "5fa02b61-7841-4682-bac6-c760a571057b",
+      "a3eb5328-fa38-463c-be39-f36fcf540f26",
+      "cc3c8c1f-1789-41e1-a63e-f87d86b618bb",
+      "62853744-385a-42f1-8f4f-cd2ec5a512e6"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 강남구 도곡로93길 23",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        127.064044,
+        37.501564
+      ],
+      "radiusM": 159.21683328090657,
+      "expectedBuildingsFromApartmentRecord": 6,
+      "modeledBuildings": 7,
+      "maximumCentreDistanceM": 137.0,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a13528008",
+    "nameKo": "대치효성",
+    "district": "강남구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A13528008",
+    "householdCount": 83,
+    "coordinate": {
+      "lon": 127.061209114,
+      "lat": 37.499905774,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "0b39fa33-b094-4fbb-bd30-33079fd06673"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 강남구 삼성로64길 12",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        127.061209114,
+        37.499905774
+      ],
+      "radiusM": 105,
+      "expectedBuildingsFromApartmentRecord": 1,
+      "modeledBuildings": 1,
+      "maximumCentreDistanceM": 2.4,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a13550404",
+    "nameKo": "도곡동 포스코트 아파트",
+    "district": "강남구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A13550404",
+    "householdCount": 64,
+    "coordinate": {
+      "lon": 127.047802853,
+      "lat": 37.487968928,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "f2b1aeb8-3a3b-4bd9-bd9c-1e8d74cfd3a6"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 강남구 남부순환로381길 15",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        127.047802853,
+        37.487968928
+      ],
+      "radiusM": 105,
+      "expectedBuildingsFromApartmentRecord": 1,
+      "modeledBuildings": 1,
+      "maximumCentreDistanceM": 0.2,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a13527001",
+    "nameKo": "도곡동양재디오빌",
+    "district": "강남구",
+    "kind": "major-apartment-complex",
+    "classification": "주상복합",
+    "apartmentCode": "A13527001",
+    "householdCount": 155,
+    "coordinate": {
+      "lon": 127.0335386,
+      "lat": 37.4864782,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "3bcd2c77-cd39-4a4c-82c0-3f25f6715324"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 강남구 강남대로 256",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        127.0335386,
+        37.4864782
+      ],
+      "radiusM": 105,
+      "expectedBuildingsFromApartmentRecord": 1,
+      "modeledBuildings": 4,
+      "maximumCentreDistanceM": 102.8,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10022859",
+    "nameKo": "디에이치퍼스티어아이파크",
+    "district": "강남구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A10022859",
+    "householdCount": 0,
+    "coordinate": {
+      "lon": 127.057848,
+      "lat": 37.4802872,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "3d53c097-a3d2-4ce9-8c54-2b968d518317",
+      "7756239d-659c-4e20-8f9f-08a27d26bb2f",
+      "bd5189c6-5d76-4dee-8940-7b690da3f5ad",
+      "a079d57a-9fa7-48cd-a0f5-e979e141307d",
+      "d9178686-e998-40e2-9525-105969a59e8e",
+      "dcc56132-7bb5-40d6-aaf2-ac549c25a1a6",
+      "c9fb21fa-b1b1-4f43-9bd1-0ac70c3156ca",
+      "4b1f8685-fdff-4209-bd53-2da2430b31d7",
+      "dab3699e-066d-4674-a91b-05b50e64dc4d",
+      "f1bd9529-b6a0-447b-8819-9a71760d8b05",
+      "fa7bea5e-b8f6-49fa-907d-0f93d6f369b3",
+      "3cefe2e8-3b0d-4051-af03-940748d061c8",
+      "b347a865-7efe-4056-90b1-7be1ede06273",
+      "e4c5842e-13d8-4520-9bd3-70424714cf6d"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 강남구 개포로 310",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        127.0591718,
+        37.4805465
+      ],
+      "radiusM": 500,
+      "expectedBuildingsFromApartmentRecord": 74,
+      "modeledBuildings": 14,
+      "maximumCentreDistanceM": 359.0,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a13570502",
+    "nameKo": "래미안삼성1차104단지",
+    "district": "강남구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A13570502",
+    "householdCount": 77,
+    "coordinate": {
+      "lon": 127.064068216,
+      "lat": 37.516934223,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "979ab052-df00-4641-a6b4-85f33cf063f7",
+      "f75aa785-65f6-4750-9daf-a2405cb3e376",
+      "42a4b2c2-fe6d-4bdb-8882-61d4771ac51f",
+      "6e1beb91-40c6-4dde-934a-b76c8109cd9b"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 강남구 영동대로114길 56",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        127.064068216,
+        37.516934223
+      ],
+      "radiusM": 105,
+      "expectedBuildingsFromApartmentRecord": 1,
+      "modeledBuildings": 4,
+      "maximumCentreDistanceM": 102.4,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10024435",
+    "nameKo": "삼성동대성유니드",
+    "district": "강남구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A10024435",
+    "householdCount": 59,
+    "coordinate": {
+      "lon": 127.05402,
+      "lat": 37.50865,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "5b370a32-b2ea-4796-9191-168ab43c220a",
+      "3770d359-eff4-428e-8798-b71f0a746e37",
+      "4204fc83-8056-4a7e-b07e-8869db99e7f2",
+      "db9e6fcb-5295-4dad-8e6c-dbc89dfb1502"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 강남구 테헤란로77길 26",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        127.05402,
+        37.50865
+      ],
+      "radiusM": 105,
+      "expectedBuildingsFromApartmentRecord": 1,
+      "modeledBuildings": 4,
+      "maximumCentreDistanceM": 51.0,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10025204",
+    "nameKo": "수서하니움",
+    "district": "강남구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A10025204",
+    "householdCount": 73,
+    "coordinate": {
+      "lon": 127.1047706,
+      "lat": 37.4869866,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "a280e801-bbca-408f-b46a-9e75c240dc7a"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 강남구 광평로60길 32",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        127.1047706,
+        37.4869866
+      ],
+      "radiusM": 105,
+      "expectedBuildingsFromApartmentRecord": 1,
+      "modeledBuildings": 1,
+      "maximumCentreDistanceM": 14.9,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10028094",
+    "nameKo": "압구정하이츠파크",
+    "district": "강남구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A10028094",
+    "householdCount": 86,
+    "coordinate": {
+      "lon": 127.033620937,
+      "lat": 37.524050617,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "e4803849-3cb9-4411-a073-0b228fa8bd39",
+      "dde0e830-9b4b-4b26-a230-83f65413a038"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 강남구 압구정로42길 78",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        127.033620937,
+        37.524050617
+      ],
+      "radiusM": 105,
+      "expectedBuildingsFromApartmentRecord": 2,
+      "modeledBuildings": 2,
+      "maximumCentreDistanceM": 50.8,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a13527017",
+    "nameKo": "타워팰리스1차",
+    "district": "강남구",
+    "kind": "major-apartment-complex",
+    "classification": "주상복합",
+    "apartmentCode": "A13527017",
+    "householdCount": 0,
+    "coordinate": {
+      "lon": 127.0544454,
+      "lat": 37.4882233,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "995d5ddd-41d8-44aa-89d0-78b5b8207de6",
+      "2d2c76d4-7f8d-48f7-895a-eb2cd30da173",
+      "9197849d-bf83-4832-9abe-0e78bd90981c"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 강남구 언주로30길 56",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        127.0544454,
+        37.4882233
+      ],
+      "radiusM": 130.0,
+      "expectedBuildingsFromApartmentRecord": 4,
+      "modeledBuildings": 3,
+      "maximumCentreDistanceM": 95.5,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a13402004",
+    "nameKo": "강동이루미",
+    "district": "강동구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A13402004",
+    "householdCount": 75,
+    "coordinate": {
+      "lon": 127.14014389,
+      "lat": 37.543771586,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "0843d3ca-26f6-4914-95ef-cd6d918d3a9d",
+      "b376a00d-e7e1-4a61-91eb-8d0924d81bbf",
+      "a5d356b6-dee9-49ad-8f4d-e73e36350ef7"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 강동구 양재대로123길 30",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        127.14014389,
+        37.543771586
+      ],
+      "radiusM": 105,
+      "expectedBuildingsFromApartmentRecord": 1,
+      "modeledBuildings": 3,
+      "maximumCentreDistanceM": 55.0,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10020628",
+    "nameKo": "고덕 온빛채",
+    "district": "강동구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A10020628",
+    "householdCount": 0,
+    "coordinate": {
+      "lon": 127.1708365,
+      "lat": 37.5627622,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "d392d3ab-631f-4f7d-b6b5-8d73dd3da443",
+      "c32af5ef-f2e1-4deb-bfc4-50ee834e9b5f",
+      "6207e465-b3bc-4f60-a012-ba926596cd95",
+      "4819474c-db44-44a4-98fb-2588de3942c2",
+      "f9306a77-4fe0-4cd3-96ab-d2a171ca053d",
+      "5f959a0b-c475-4e4f-94fb-5ace8f4ac400",
+      "233f5bc0-b4da-4ae2-a4a6-2eb1d573caf8",
+      "98dc06a2-6b0b-49f6-b2a9-2e7ff874256c",
+      "948a4031-f4cf-4a7d-b86e-71517804290e"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 강동구 아리수로 385",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        127.1710023,
+        37.5633955
+      ],
+      "radiusM": 159.21683328090657,
+      "expectedBuildingsFromApartmentRecord": 6,
+      "modeledBuildings": 9,
+      "maximumCentreDistanceM": 133.0,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10020681",
+    "nameKo": "그란츠 리버파크",
+    "district": "강동구",
+    "kind": "major-apartment-complex",
+    "classification": "주상복합",
+    "apartmentCode": "A10020681",
+    "householdCount": 0,
+    "coordinate": {
+      "lon": 127.1283258,
+      "lat": 37.5367124,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "61e1e159-c689-4df8-96b9-0a714f23a08b",
+      "2fdeea90-0b2d-46e8-986e-5f3fe6403ce1"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 강동구 천호대로 1050",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        127.1283258,
+        37.5367124
+      ],
+      "radiusM": 105,
+      "expectedBuildingsFromApartmentRecord": 2,
+      "modeledBuildings": 2,
+      "maximumCentreDistanceM": 86.3,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10020684",
+    "nameKo": "길동생활B",
+    "district": "강동구",
+    "kind": "major-apartment-complex",
+    "classification": "도시형 생활주택(주상복합)",
+    "apartmentCode": "A10020684",
+    "householdCount": 0,
+    "coordinate": {
+      "lon": 127.1403547,
+      "lat": 37.5399439,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "3c88d05e-9a31-4acb-aeb0-9050570973da"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 강동구 양재대로 1501",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        127.1403547,
+        37.5399439
+      ],
+      "radiusM": 105,
+      "expectedBuildingsFromApartmentRecord": 1,
+      "modeledBuildings": 1,
+      "maximumCentreDistanceM": 4.1,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10022851",
+    "nameKo": "힐스테이트리슈빌강일",
+    "district": "강동구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A10022851",
+    "householdCount": 0,
+    "coordinate": {
+      "lon": 127.1748062,
+      "lat": 37.5737161,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "064c913f-61e0-42f0-8b31-169349baab49",
+      "197a45d6-daa2-4667-9dbe-27a3e2833714",
+      "9e40e307-8fc6-4c55-a86f-52de7ca61020",
+      "863ff850-4c26-468a-a698-6fa57fb98d16"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 강동구 아리수로93다길 80",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        127.1752941,
+        37.5735651
+      ],
+      "radiusM": 183.84776310850236,
+      "expectedBuildingsFromApartmentRecord": 8,
+      "modeledBuildings": 4,
+      "maximumCentreDistanceM": 139.0,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a15783703",
+    "nameKo": "등촌대림e편한세상",
+    "district": "강서구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A15783703",
+    "householdCount": 222,
+    "coordinate": {
+      "lon": 126.8626523,
+      "lat": 37.5421283,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "b3eb40a2-037a-49c6-96a6-c6de25550ecc",
+      "a8db4f5c-26c0-4ec8-b2da-ab9f218ac16a",
+      "c6ff7e2d-9d50-4b1c-ba2d-a0a04a3adaef",
+      "6682db7e-c008-457d-90b8-9234515eb973",
+      "cc9c6605-6322-40e5-9bee-df5ebd3fa64d",
+      "6247f5c4-3e31-40e5-ac0a-d6d1c67186c8"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 강서구 등촌로 137",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        126.8626523,
+        37.5421283
+      ],
+      "radiusM": 130.0,
+      "expectedBuildingsFromApartmentRecord": 4,
+      "modeledBuildings": 7,
+      "maximumCentreDistanceM": 108.5,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a15783701",
+    "nameKo": "등촌임광",
+    "district": "강서구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A15783701",
+    "householdCount": 168,
+    "coordinate": {
+      "lon": 126.8633551,
+      "lat": 37.5404837,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "3ec77337-cf47-4603-9e07-8cd760088a3f",
+      "f501e809-77db-46cf-9caa-c11859856397",
+      "22279b02-66d9-4474-a2e2-d75c4facd0ac"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 강서구 등촌로 113",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        126.8633551,
+        37.5404837
+      ],
+      "radiusM": 112.58330249197702,
+      "expectedBuildingsFromApartmentRecord": 3,
+      "modeledBuildings": 4,
+      "maximumCentreDistanceM": 96.1,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10020964",
+    "nameKo": "힐스테이트관악센트씨엘",
+    "district": "관악구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A10020964",
+    "householdCount": 0,
+    "coordinate": {
+      "lon": 126.9459834,
+      "lat": 37.4919618,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "c765b427-6376-4848-9bbf-d222757a539b",
+      "d4da5c76-9e0a-45e9-8f01-d4496d4824bc",
+      "9a10433e-ec76-4e71-ba06-a97105e28d97",
+      "7fd1ad84-a756-49da-a9d8-9945b11dfedc",
+      "7d384fa5-86e3-4a17-9cf6-ce3b551d0460",
+      "12f1df2e-6d09-42e0-baf7-9365a1028caa",
+      "e8b385fa-47fb-4f81-a91f-bd6f389d2116",
+      "a03f16bc-0ed3-4691-a1d2-4813ed0ef65f",
+      "0526ac23-4cbd-41ab-b6e6-32881fae391d",
+      "6eca89fc-a123-458e-afa1-c64971e1cd6e",
+      "5895bdca-0481-4f56-a602-62215603586c",
+      "e701b766-c176-482e-ba30-033997dff6be"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 관악구 구암5길 28",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        126.9462351,
+        37.4911093
+      ],
+      "radiusM": 195.0,
+      "expectedBuildingsFromApartmentRecord": 9,
+      "modeledBuildings": 12,
+      "maximumCentreDistanceM": 189.9,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10020506",
+    "nameKo": "롯데캐슬이스트폴 아파트",
+    "district": "광진구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A10020506",
+    "householdCount": 0,
+    "coordinate": {
+      "lon": 127.0884381,
+      "lat": 37.536033,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "274ee019-d198-4187-9ab7-9d4129bee919",
+      "ad347dc4-234c-4308-a7e0-7cfe1b48b06c"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 광진구 아차산로 420",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        127.0884381,
+        37.536033
+      ],
+      "radiusM": 159.21683328090657,
+      "expectedBuildingsFromApartmentRecord": 6,
+      "modeledBuildings": 2,
+      "maximumCentreDistanceM": 106.8,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a15279402",
+    "nameKo": "고척LIG리가아파트",
+    "district": "구로구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A15279402",
+    "householdCount": 421,
+    "coordinate": {
+      "lon": 126.8620712,
+      "lat": 37.5060999,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "823d056d-b11f-4263-a53a-20de6ddeec27",
+      "a217b7c4-b8b9-4020-9215-df0eb948509e",
+      "4de5ce59-c3a5-4733-9b51-289b64078d92",
+      "a4eed8e1-e672-41d0-b245-3bb20a04c904",
+      "e235401e-644f-4ba5-913d-77c25d0272c1",
+      "b361a93d-f1b7-4be9-9ad8-c24413d8b154",
+      "d613c298-1046-4308-a45d-4d9e9d039e4d",
+      "51058881-908d-4be8-ba00-267eefe85dbb",
+      "618a3ea6-8c72-49bc-bc7f-453e474ccf15"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 구로구 중앙로12길 7",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        126.8620712,
+        37.5060999
+      ],
+      "radiusM": 183.84776310850236,
+      "expectedBuildingsFromApartmentRecord": 8,
+      "modeledBuildings": 10,
+      "maximumCentreDistanceM": 110.8,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a15283701",
+    "nameKo": "고척경남1차",
+    "district": "구로구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A15283701",
+    "householdCount": 163,
+    "coordinate": {
+      "lon": 126.8627712,
+      "lat": 37.5052906,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "989902d8-8f8b-40c8-902c-db2708d7985a",
+      "95d8791a-4522-4e5f-91c9-21810dbf604b"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 구로구 경인로47길 150",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        126.8627712,
+        37.5052906
+      ],
+      "radiusM": 105,
+      "expectedBuildingsFromApartmentRecord": 1,
+      "modeledBuildings": 3,
+      "maximumCentreDistanceM": 72.7,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10020672",
+    "nameKo": "세이지움 개봉",
+    "district": "구로구",
+    "kind": "major-apartment-complex",
+    "classification": "도시형 생활주택(주상복합)",
+    "apartmentCode": "A10020672",
+    "householdCount": 0,
+    "coordinate": {
+      "lon": 126.8556413,
+      "lat": 37.4926455,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "4b745701-3872-4b3b-babd-05291e2c0758"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 구로구 개봉로19길 11",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        126.8556413,
+        37.4926455
+      ],
+      "radiusM": 105,
+      "expectedBuildingsFromApartmentRecord": 1,
+      "modeledBuildings": 1,
+      "maximumCentreDistanceM": 96.1,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10020305",
+    "nameKo": "광운대역 현대프라힐스",
+    "district": "노원구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A10020305",
+    "householdCount": 0,
+    "coordinate": {
+      "lon": 127.0607929,
+      "lat": 37.6223828,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "7ce6291e-f7f2-4238-b34e-24d126228ccb",
+      "5ac86998-7049-485c-a322-1d3e6f82240e",
+      "4e902691-4815-4f8b-8678-5b58d14f8b14"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 노원구 석계로15길 14",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        127.0607929,
+        37.6223828
+      ],
+      "radiusM": 105,
+      "expectedBuildingsFromApartmentRecord": 1,
+      "modeledBuildings": 3,
+      "maximumCentreDistanceM": 60.2,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a13079401",
+    "nameKo": "대림아파트201동",
+    "district": "동대문구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A13079401",
+    "householdCount": 181,
+    "coordinate": {
+      "lon": 127.0630015,
+      "lat": 37.6047975,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "4acc22d8-2300-43d8-b6fa-aafefae8bf03",
+      "c867e6c9-313f-4ea6-bea8-ace03df5ad37"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 동대문구 이문로54길 16",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        127.0630015,
+        37.6047975
+      ],
+      "radiusM": 105,
+      "expectedBuildingsFromApartmentRecord": 1,
+      "modeledBuildings": 4,
+      "maximumCentreDistanceM": 85.3,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10020919",
+    "nameKo": "래미안라그란데",
+    "district": "동대문구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A10020919",
+    "householdCount": 0,
+    "coordinate": {
+      "lon": 127.0602571,
+      "lat": 37.600078,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "23cb8d6e-6ec0-4419-bed8-698d54525aee",
+      "f3911bf3-17f6-4f98-a032-d769c1dd0923",
+      "fe7e1634-ec43-46ff-a9db-21eeadd988c4",
+      "c8580622-6947-469d-805a-c289975ce5ad",
+      "f7d755f4-5e9f-451d-a79d-778937ac7d80",
+      "892c3832-0bb6-44c4-a5d6-c77d3ffa0697",
+      "60572253-9e6c-466f-a9dc-a0ee767682f2",
+      "8ef9274f-9bdb-4ac6-9cb9-66162a1cf776",
+      "13258ddc-dcd9-41c4-a9e6-c336404e4c7f",
+      "3a661833-c33d-4059-967b-fc49c4692da6",
+      "431d0d3e-8dae-4730-af7c-858ea5468f73",
+      "c649df24-ec6c-412e-abf7-d9aad1ac6386",
+      "1f44bb93-1466-4f33-b474-be1a115f9e2c",
+      "ef5c0d82-b80f-4019-b408-34518ed4d922",
+      "80035fa0-517c-4666-99a5-280f25f944b5",
+      "ebe67530-e01b-48a4-9ff6-df5996305506",
+      "f5e0b620-20bc-425e-9d38-e18a3522e7e1",
+      "8ab2ea8e-beb9-487a-8e3d-63110a9a9420",
+      "393ff029-f34b-469e-ab26-e0227e8d3d9f",
+      "38666993-0631-4f2e-82e4-ad4d8695ab46",
+      "bae7d848-1482-48f1-8fa3-a7af99f08277",
+      "2c77d225-e141-487b-aea8-af2585b6604a",
+      "2631d9ae-de4a-459d-bf56-d93819679164",
+      "78d236e4-3f86-4518-abb9-7013786be481",
+      "533c275d-5279-4b1c-8879-4c9be1a8b7e3",
+      "8ef34fe6-1c1f-4557-bd3a-71ceed8ef125",
+      "f5b42d2e-9456-4e09-880c-889478027ae4",
+      "3d953bd1-dc7d-4153-8ba1-d01aa84aaa8c",
+      "0ce01a25-f265-47b1-9810-3c68e7120b34",
+      "ad676dbb-014d-4d17-b6a9-2d51329a0839",
+      "b19b1e4a-9719-4e33-a44b-b59fabedc703",
+      "21cfbc51-afc3-48fc-925e-2d72c531dac7",
+      "27d399fc-02f0-49e3-a320-fd26fa93b1cc",
+      "25ae60dd-7910-4387-a29a-8bfd601ab2f0",
+      "57992b0f-da02-4041-b332-f2c60d9ffd37",
+      "3e83ca72-1ee1-44c0-a759-1421d72fb01e",
+      "4b71e367-9182-46e7-834a-dd5670f73682",
+      "ed36e5d8-d74b-499f-8338-6336f39db891"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 동대문구 이문로35길 12",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        127.0600926,
+        37.6005619
+      ],
+      "radiusM": 405.9248698958959,
+      "expectedBuildingsFromApartmentRecord": 39,
+      "modeledBuildings": 38,
+      "maximumCentreDistanceM": 259.6,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10020768",
+    "nameKo": "장안동  청년주택 하트리움",
+    "district": "동대문구",
+    "kind": "major-apartment-complex",
+    "classification": "주상복합",
+    "apartmentCode": "A10020768",
+    "householdCount": 0,
+    "coordinate": {
+      "lon": 127.0676315,
+      "lat": 37.5616948,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "d6420520-5b2d-4c84-8ed0-1b2fc1227f2b",
+      "588918a4-9b7e-460d-aa97-f82ede2b4a16"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 동대문구 장한로2길 44",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        127.0676315,
+        37.5616948
+      ],
+      "radiusM": 105,
+      "expectedBuildingsFromApartmentRecord": 1,
+      "modeledBuildings": 2,
+      "maximumCentreDistanceM": 35.6,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10020570",
+    "nameKo": "휘경자이디센시아",
+    "district": "동대문구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A10020570",
+    "householdCount": 0,
+    "coordinate": {
+      "lon": 127.0612564,
+      "lat": 37.5917875,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "f4277a70-2677-41f6-bb57-35a28edeb8af",
+      "78c0a719-ab4f-4ba5-a76b-d2e4b7e5e84c",
+      "3b566584-c363-4e37-a7a1-a4016280467c",
+      "ad6718bf-5160-444b-b516-bc8340ea1c1f",
+      "005f4fa3-5c17-4b48-a74b-079af82c36b4",
+      "d9a002b0-db34-47bf-b9ca-1e36d04c0c50",
+      "e4448bee-bc44-41c4-9664-48f6a3b936f6",
+      "6bd6da87-9dcb-471d-8764-9db26eebe82f",
+      "1e4f885d-58cf-446e-bc94-031788b2d4e9",
+      "9f302578-403f-4152-bb90-99e9624c2ca6",
+      "d540148f-0f99-45a9-b4cb-fd7581f5de3f"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 동대문구 외대역동로 63-27",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        127.0629373,
+        37.5929266
+      ],
+      "radiusM": 243.20773014030618,
+      "expectedBuildingsFromApartmentRecord": 14,
+      "modeledBuildings": 11,
+      "maximumCentreDistanceM": 135.4,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10020343",
+    "nameKo": "힐스테이트청량리메트로블",
+    "district": "동대문구",
+    "kind": "major-apartment-complex",
+    "classification": "도시형 생활주택(주상복합)",
+    "apartmentCode": "A10020343",
+    "householdCount": 0,
+    "coordinate": {
+      "lon": 127.0387062,
+      "lat": 37.5771451,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "a6fdda7c-34b0-4097-a048-7773ae6fdf86",
+      "3220c637-8edc-4523-87a5-8bdfe2aa1af4"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 동대문구 고산자로 420",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        127.0387037,
+        37.5771256
+      ],
+      "radiusM": 105,
+      "expectedBuildingsFromApartmentRecord": 2,
+      "modeledBuildings": 2,
+      "maximumCentreDistanceM": 26.0,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10024098",
+    "nameKo": "보라매자이 더 포레스트",
+    "district": "동작구",
+    "kind": "major-apartment-complex",
+    "classification": "주상복합",
+    "apartmentCode": "A10024098",
+    "householdCount": 0,
+    "coordinate": {
+      "lon": 126.9253834,
+      "lat": 37.4985576,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "0623c641-8759-4f8f-aaae-ada8d4cea9f4",
+      "ba39f331-4340-426c-8724-c748c4d60b47",
+      "c52f3fb1-fdba-44df-8b3d-9dde6fe4aa35",
+      "5630dd1e-bcbf-4926-92b1-323b1c627d29",
+      "9ce8944f-9526-4740-81c9-10734ee5c2a5",
+      "70358789-c60e-48ab-9fa0-1cbd0fdcf38b"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 동작구 여의대방로22길 121",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        126.9253834,
+        37.4985576
+      ],
+      "radiusM": 183.84776310850236,
+      "expectedBuildingsFromApartmentRecord": 8,
+      "modeledBuildings": 6,
+      "maximumCentreDistanceM": 136.1,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10022720",
+    "nameKo": "상도 푸르지오 클라베뉴",
+    "district": "동작구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A10022720",
+    "householdCount": 0,
+    "coordinate": {
+      "lon": 126.9394804,
+      "lat": 37.4981623,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "315e1cbf-ea1f-4a01-a7d9-6874185d4b49",
+      "4c70561f-d955-4959-8a7f-1ebd2d951074",
+      "5506b3d7-492b-4ee5-8af9-6d7f210cb8b8",
+      "8aafe0fc-4360-4481-a6c5-41550f2e9b3e",
+      "7f3e8383-486b-4f15-b309-2b58b3caf88a",
+      "b7a49afa-c0a8-4fce-9564-eee44cbdedc2",
+      "46abb190-30c6-4336-9213-d13bea84e5b4",
+      "2c6b3291-2030-4f77-bb47-58058722b8b6",
+      "7454ad71-8c57-4ebd-ab0a-26e2b82cac74",
+      "d324f272-d78a-4b2c-a7fa-66adfa349d12",
+      "bd0d89b5-0c00-43a0-84ae-d69a02db9766",
+      "ea316a65-afe8-4b53-a9ff-3d71ce244cbf"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 동작구 성대로 164",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        126.9389399,
+        37.4974408
+      ],
+      "radiusM": 205.54804791094466,
+      "expectedBuildingsFromApartmentRecord": 10,
+      "modeledBuildings": 12,
+      "maximumCentreDistanceM": 170.0,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a15678101",
+    "nameKo": "상도현대",
+    "district": "동작구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A15678101",
+    "householdCount": 194,
+    "coordinate": {
+      "lon": 126.95937102902892,
+      "lat": 37.49393838054553,
+      "basis": "kapt_poi",
+      "confidence": "kapt_official_code_poi"
+    },
+    "coordinateStatus": "kapt_official_code_poi",
+    "sourceUrls": [
+      "https://www.k-apt.go.kr/kaptinfo/openKaptLocation.do"
+    ],
+    "buildingIds": [
+      "0f7bafad-6d77-4e36-88f5-a213bd3ee85a",
+      "49b591c1-c89d-428a-90ab-43cae2d854aa"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 동작구 사당로2길 2-32",
+      "coordinateIssues": [
+        "official_osm_name_location_disagreement_over_750m"
+      ],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        126.9593477,
+        37.4941254
+      ],
+      "radiusM": 105,
+      "expectedBuildingsFromApartmentRecord": 2,
+      "modeledBuildings": 3,
+      "maximumCentreDistanceM": 69.7,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10023966",
+    "nameKo": "어바니엘한강",
+    "district": "동작구",
+    "kind": "major-apartment-complex",
+    "classification": "도시형 생활주택(주상복합)",
+    "apartmentCode": "A10023966",
+    "householdCount": 0,
+    "coordinate": {
+      "lon": 126.9467626,
+      "lat": 37.512953,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+      "https://www.openstreetmap.org/way/1491238018"
+    ],
+    "buildingIds": [
+      "04c1b4a0-24f0-4d70-a7ff-84622c525bfa"
+    ],
+    "matchingStatus": "exact_named_footprint",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": [
+        {
+          "buildingId": "04c1b4a0-24f0-4d70-a7ff-84622c525bfa",
+          "name": "어바니엘한강",
+          "sourceUrl": "https://www.openstreetmap.org/way/1491238018"
+        }
+      ]
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "exact retained building identifier",
+      "confidence": "named-source-footprint"
+    }
+  },
+  {
+    "id": "apt-a10023350",
+    "nameKo": "흑석자이",
+    "district": "동작구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A10023350",
+    "householdCount": 0,
+    "coordinate": {
+      "lon": 126.9622336,
+      "lat": 37.5013981,
+      "basis": "osm_bounds_center",
+      "confidence": "osm_exact_name_and_district"
+    },
+    "coordinateStatus": "osm_exact_name_and_district",
+    "sourceUrls": [
+      "https://www.openstreetmap.org/way/876638788"
+    ],
+    "buildingIds": [
+      "3073508c-095f-4781-8bc7-13de9fda970a",
+      "b2c4fb08-8f70-40c4-b62e-ab6957f765d3",
+      "5f2d08fa-6ddd-47f6-963a-a8826d1a0fa1",
+      "611f8ba8-7e72-4fc0-8507-d35bdf8f2ecc",
+      "8fe2085f-673a-44dd-8dfe-6cadbfaf731e",
+      "3ee38403-46d1-45f8-8a7c-53f954d8e824",
+      "2448fd21-0a1a-4aeb-bf87-3e9a3a503932",
+      "a9d8a838-63bf-42c1-8351-51d5609312e1",
+      "760f3610-4c4e-4e36-82fb-8be1c2e0fe53",
+      "ee27e73f-0a8d-4f25-a6c7-15503964dc24",
+      "3195bc95-a1fe-42cb-8292-0ff3e7188556",
+      "670cae08-0006-4af7-90ea-2986c40d58ba",
+      "363cb0b8-912e-4f08-a62f-8a2e073def01",
+      "dfbc812e-1011-4b64-b2a2-28dbab0827e4",
+      "3c4cb8d8-08dc-4e84-9ebb-36e933b843d2",
+      "a307d4a5-8e93-4868-afca-7ed13539353b",
+      "f6963016-ff18-4821-92b0-dc7b0746c3e2",
+      "1286b491-9572-4bdb-8bee-f6c721b051d6"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 동작구 서달로 90",
+      "coordinateIssues": [
+        "duplicate_coordinate_different_addresses",
+        "kapt_poi_points_disagree"
+      ],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        126.9622336,
+        37.5013981
+      ],
+      "radiusM": 331.436268383531,
+      "expectedBuildingsFromApartmentRecord": 26,
+      "modeledBuildings": 18,
+      "maximumCentreDistanceM": 174.3,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10020222",
+    "nameKo": "힐스테이트장승배기역",
+    "district": "동작구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A10020222",
+    "householdCount": 0,
+    "coordinate": {
+      "lon": 126.9407803,
+      "lat": 37.5056157,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "526ceffb-0a12-4b99-a5db-84123b345991",
+      "abd1fcf2-2ad0-41ef-90fe-46188f728b40",
+      "e224a141-1382-4edf-afe2-04476ed69956",
+      "855126de-7e9a-4212-a840-1bedfe299eed"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 동작구 상도로 195",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        126.9405315,
+        37.5055737
+      ],
+      "radiusM": 112.58330249197702,
+      "expectedBuildingsFromApartmentRecord": 3,
+      "modeledBuildings": 4,
+      "maximumCentreDistanceM": 102.2,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10020279",
+    "nameKo": "빌리브 디에이블",
+    "district": "마포구",
+    "kind": "major-apartment-complex",
+    "classification": "도시형 생활주택(주상복합)",
+    "apartmentCode": "A10020279",
+    "householdCount": 0,
+    "coordinate": {
+      "lon": 126.9368301,
+      "lat": 37.5526569,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "afc28a4f-e760-4678-b8e7-c922f9414c9f"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 마포구 백범로 24",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        126.9368301,
+        37.5526569
+      ],
+      "radiusM": 105,
+      "expectedBuildingsFromApartmentRecord": 1,
+      "modeledBuildings": 1,
+      "maximumCentreDistanceM": 6.9,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a12172402",
+    "nameKo": "서희스타힐스",
+    "district": "마포구",
+    "kind": "major-apartment-complex",
+    "classification": "주상복합",
+    "apartmentCode": "A12172402",
+    "householdCount": 203,
+    "coordinate": {
+      "lon": 126.943257632,
+      "lat": 37.556299913,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "df635e42-c035-484e-b733-e8fea25a57ce"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 마포구 신촌로 160",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        126.943257632,
+        37.556299913
+      ],
+      "radiusM": 105,
+      "expectedBuildingsFromApartmentRecord": 1,
+      "modeledBuildings": 2,
+      "maximumCentreDistanceM": 102.8,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10023560",
+    "nameKo": "서대문푸르지오센트럴파크",
+    "district": "서대문구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A10023560",
+    "householdCount": 0,
+    "coordinate": {
+      "lon": 126.9503248,
+      "lat": 37.5815054,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "05865d9c-36de-4be9-a280-1016ce9ef38f",
+      "bbd9e020-3dae-4d01-bc86-b3d7fe7f9c7a",
+      "ef417019-00b5-4242-8656-ec1856d8c039",
+      "89ae3f12-61b7-4ef9-8129-cd3ee2d75bdf",
+      "cec439fa-fee5-4da5-bce9-0856c70290d0",
+      "f5b93416-78e3-4eac-9a68-547ddfd9a742",
+      "131c9fe9-8456-4a3f-a489-b3280b18b02d",
+      "04eabd08-3a79-4b16-9bcb-d1c5075e00b2",
+      "82cdfcb6-bab4-4ece-964b-1d1fba8f7885",
+      "6915aecf-1bc0-47d2-9edb-5f0ec09b8b22",
+      "818c79d2-eb19-4964-b423-b1b6540c7e7d",
+      "67afb993-de82-41d0-993b-2105eff489b6"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 서대문구 통일로 339",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        126.9495321,
+        37.5807933
+      ],
+      "radiusM": 215.580611373101,
+      "expectedBuildingsFromApartmentRecord": 11,
+      "modeledBuildings": 12,
+      "maximumCentreDistanceM": 163.8,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a12071104",
+    "nameKo": "연희자이엘라",
+    "district": "서대문구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A12071104",
+    "householdCount": 186,
+    "coordinate": {
+      "lon": 126.9281324,
+      "lat": 37.56397,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "037482c7-c890-4759-adab-d8d33a9fe518",
+      "20e29a8e-cfb6-4a9a-b1a4-b8a1e3995ba8",
+      "9f70a077-0f00-4fbc-96ef-19c8581a27e7"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 서대문구 연희로5길 14",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        126.9281324,
+        37.56397
+      ],
+      "radiusM": 105,
+      "expectedBuildingsFromApartmentRecord": 1,
+      "modeledBuildings": 4,
+      "maximumCentreDistanceM": 77.5,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10025767",
+    "nameKo": "홍제센트럴아이파크",
+    "district": "서대문구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A10025767",
+    "householdCount": 0,
+    "coordinate": {
+      "lon": 126.944466153,
+      "lat": 37.584634483,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "3e0eb234-a376-4e39-a118-e76f977bdb87",
+      "fb2708ce-9031-4833-9ea0-06ba32af5a3d",
+      "98f3b552-8593-4231-b22a-732af2b56f2e",
+      "6a0b368b-b32b-495a-80e9-6294f02788a6",
+      "d6a5ca02-9ac7-4db7-8b77-7764f19e0d02",
+      "61f615f6-c6a3-4d4b-9c0e-b31f8e8b9dba",
+      "999d2731-3816-4763-a653-df130d2bc7df",
+      "814a26fe-3860-44dc-8646-04999998fbe3",
+      "b9462974-dece-4c45-87af-dacb95256c68",
+      "dd8610f5-614f-43b1-9918-9ff2622d50e1",
+      "99d5f780-706e-49bc-9f9e-9a33cbf52690",
+      "d7eb231e-a8fe-4c82-abfa-fc4fcda5910e",
+      "dedff6ae-45b7-46a8-9af7-bbf1e881555c",
+      "29692e4b-aef4-4cb9-bb49-8024d12eef69",
+      "8d259a00-0c5c-4feb-a19a-9053ca7b392b",
+      "4790df81-251c-4cda-a1ea-71eecc7b8110"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 서대문구 통일로 395",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        126.9463403,
+        37.5845118
+      ],
+      "radiusM": 243.20773014030618,
+      "expectedBuildingsFromApartmentRecord": 14,
+      "modeledBuildings": 16,
+      "maximumCentreDistanceM": 234.5,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10025550",
+    "nameKo": "두산힐스빌아파트",
+    "district": "서초구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A10025550",
+    "householdCount": 76,
+    "coordinate": {
+      "lon": 127.009973992,
+      "lat": 37.501352178,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "ad6d3774-f2c8-445d-8db0-4c36ce090ea9"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 서초구 고무래로10길 16",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        127.009973992,
+        37.501352178
+      ],
+      "radiusM": 105,
+      "expectedBuildingsFromApartmentRecord": 1,
+      "modeledBuildings": 1,
+      "maximumCentreDistanceM": 5.3,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10027439",
+    "nameKo": "래미안 신반포팰리스",
+    "district": "서초구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A10027439",
+    "householdCount": 0,
+    "coordinate": {
+      "lon": 127.013632374325,
+      "lat": 37.5151866765696,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "8c41e3a9-70d3-4d10-a36a-8640147a87b5",
+      "2d68d1a3-1421-402e-bfd2-ce1c63286afe",
+      "821a4b5b-afe9-4343-a24e-b324ec856b68",
+      "72b60c6f-cda0-4763-864c-55b0197814b9",
+      "89fa51e3-924b-42f2-8cf8-626a150f4fb1",
+      "166ca38c-ca98-47ee-942c-65c0c517938c",
+      "20e6b065-176d-4df4-911a-7e2cb4096442"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 서초구 잠원로8길 35",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        127.0121451,
+        37.5148214
+      ],
+      "radiusM": 171.9738352191984,
+      "expectedBuildingsFromApartmentRecord": 7,
+      "modeledBuildings": 7,
+      "maximumCentreDistanceM": 108.3,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10026337",
+    "nameKo": "래미안서초7차아파트",
+    "district": "서초구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A10026337",
+    "householdCount": 79,
+    "coordinate": {
+      "lon": 127.0177846,
+      "lat": 37.4922133,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "cda5574b-367d-4272-9382-1bc5ec4fdb7a",
+      "8fdd5277-4cff-4212-9dcc-ceef42384026",
+      "a0e6b03d-6a73-4d93-9202-977affc82346",
+      "96746dc1-8bbd-4f17-9fbe-c3cf8dba4631"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 서초구 사임당로17길 80",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        127.0177846,
+        37.4922133
+      ],
+      "radiusM": 105,
+      "expectedBuildingsFromApartmentRecord": 2,
+      "modeledBuildings": 4,
+      "maximumCentreDistanceM": 82.4,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10026411",
+    "nameKo": "래미안서초에스티지에스아파트",
+    "district": "서초구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A10026411",
+    "householdCount": 0,
+    "coordinate": {
+      "lon": 127.027121,
+      "lat": 37.492859,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "424a0895-52e9-4e54-bb13-46c0814ee51d",
+      "8ed4d0f7-4b3e-40a3-8ff4-25bafbad1903",
+      "bffe3485-53f0-4cdd-84fd-bed58cf0c9b9",
+      "d7600dc8-d536-44d9-8bb8-e9a5e2dbcef1",
+      "3a55182f-be5c-46d6-b936-2f83113d78fc",
+      "04ac7d31-0632-4f51-8353-c1c061f42b1c"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 서초구 서운로 104",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        127.027121,
+        37.492859
+      ],
+      "radiusM": 145.34441853748635,
+      "expectedBuildingsFromApartmentRecord": 5,
+      "modeledBuildings": 6,
+      "maximumCentreDistanceM": 120.2,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10020557",
+    "nameKo": "메이플자이",
+    "district": "서초구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A10020557",
+    "householdCount": 0,
+    "coordinate": {
+      "lon": 127.0128066,
+      "lat": 37.5128761,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "0bbab665-f14b-4825-bfa8-3f6404d0df6c"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 서초구 신반포로 251 메이플자이",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        127.0128066,
+        37.5128761
+      ],
+      "radiusM": 350.03571246374275,
+      "expectedBuildingsFromApartmentRecord": 29,
+      "modeledBuildings": 1,
+      "maximumCentreDistanceM": 278.4,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a13706002",
+    "nameKo": "방배SH-VILLE",
+    "district": "서초구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A13706002",
+    "householdCount": 81,
+    "coordinate": {
+      "lon": 126.9836476,
+      "lat": 37.4720641,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "0b0a789c-8205-46b1-834a-ed88bcb791e7",
+      "4c1c13f5-d01e-4fcd-9d59-bfe758af5a38"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 서초구 과천대로 908",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        126.9836476,
+        37.4720641
+      ],
+      "radiusM": 105,
+      "expectedBuildingsFromApartmentRecord": 1,
+      "modeledBuildings": 2,
+      "maximumCentreDistanceM": 61.0,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a13785302",
+    "nameKo": "방배우성",
+    "district": "서초구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A13785302",
+    "householdCount": 468,
+    "coordinate": {
+      "lon": 126.9825806,
+      "lat": 37.4744136,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "0a1524c4-6474-4921-8450-5b6172fae4ac",
+      "c23a0917-0de9-4d5e-9bf9-21ff5398889f",
+      "adc74e0e-01ef-4469-90c1-a114771150fe",
+      "b7760ded-03da-4f9a-8a7f-02a62141ee56",
+      "bb542220-c9ad-4102-ac23-54bfc6e838fd",
+      "a12561be-f242-48c0-a0aa-4d3a4f9b4242",
+      "a6f4baf9-d91a-480d-8f76-f5492d8b24bb",
+      "aa59814c-b4f4-4033-a468-f9ebcbdb49f9",
+      "9d79c3aa-0543-46f7-928b-a0637f0c98d0"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 서초구 방배선행길 1",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        126.9829539,
+        37.4740523
+      ],
+      "radiusM": 195.0,
+      "expectedBuildingsFromApartmentRecord": 9,
+      "modeledBuildings": 12,
+      "maximumCentreDistanceM": 185.7,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a13786803",
+    "nameKo": "서초3차e편한세상",
+    "district": "서초구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A13786803",
+    "householdCount": 77,
+    "coordinate": {
+      "lon": 127.00770657481432,
+      "lat": 37.4786377170549,
+      "basis": "kapt_poi",
+      "confidence": "kapt_official_code_poi"
+    },
+    "coordinateStatus": "kapt_official_code_poi",
+    "sourceUrls": [
+      "https://www.k-apt.go.kr/kaptinfo/openKaptLocation.do"
+    ],
+    "buildingIds": [
+      "6e22ef20-cbde-4d2c-8e43-41bb70c06046",
+      "594aa739-95d3-45be-8e0b-286e44b97745",
+      "d6953f5c-511c-4730-a300-9627e96fcd21",
+      "e37b8ba1-a53f-4203-aa19-17ed88f0c412",
+      "0132e4e2-f25d-4c15-9eb0-4d2f9a1ddf25"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 서초구 남부순환로 2343-10",
+      "coordinateIssues": [
+        "duplicate_coordinate_different_addresses"
+      ],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        127.00770657481432,
+        37.4786377170549
+      ],
+      "radiusM": 105,
+      "expectedBuildingsFromApartmentRecord": 2,
+      "modeledBuildings": 5,
+      "maximumCentreDistanceM": 85.8,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10024156",
+    "nameKo": "서초꽃마을주얼리",
+    "district": "서초구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A10024156",
+    "householdCount": 0,
+    "coordinate": {
+      "lon": 127.00761046364784,
+      "lat": 37.489655088798685,
+      "basis": "kapt_poi_cluster_mean",
+      "confidence": "kapt_official_code_poi"
+    },
+    "coordinateStatus": "kapt_official_code_poi",
+    "sourceUrls": [
+      "https://www.k-apt.go.kr/kaptinfo/openKaptLocation.do"
+    ],
+    "buildingIds": [
+      "20b1f3d3-378c-4688-831c-2b5394b2811d"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 서초구 반포대로27길 13",
+      "coordinateIssues": [
+        "missing_or_invalid_official_coordinate"
+      ],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        127.00761046364784,
+        37.489655088798685
+      ],
+      "radiusM": 105,
+      "expectedBuildingsFromApartmentRecord": 1,
+      "modeledBuildings": 1,
+      "maximumCentreDistanceM": 7.0,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10022656",
+    "nameKo": "서초벽산블루밍아파트",
+    "district": "서초구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A10022656",
+    "householdCount": 60,
+    "coordinate": {
+      "lon": 127.0258351,
+      "lat": 37.4858718,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "d306ad96-ce10-41ee-936f-bb8a9d9fb602",
+      "6aac5507-99fa-4a6e-a1d7-d79471a62a6b",
+      "fdc0e71b-9d65-4b3f-b389-d81736287ab9",
+      "fbc8bea3-7caa-4aa8-876d-1e2ecdfae2d8",
+      "1a316afd-d213-48db-8a40-cf5d266dbc1c"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 서초구 효령로74길 56",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        127.0258351,
+        37.4858718
+      ],
+      "radiusM": 105,
+      "expectedBuildingsFromApartmentRecord": 2,
+      "modeledBuildings": 5,
+      "maximumCentreDistanceM": 87.5,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10020365",
+    "nameKo": "라봄성동청년안심주택",
+    "district": "성동구",
+    "kind": "major-apartment-complex",
+    "classification": "도시형 생활주택(주상복합)",
+    "apartmentCode": "A10020365",
+    "householdCount": 0,
+    "coordinate": {
+      "lon": 127.0422379,
+      "lat": 37.5635437,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "7050fb3f-d826-4ecf-b341-68b30e8e4cb1"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 성동구 마조로 66",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        127.0422379,
+        37.5635437
+      ],
+      "radiusM": 105,
+      "expectedBuildingsFromApartmentRecord": 1,
+      "modeledBuildings": 1,
+      "maximumCentreDistanceM": 6.2,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10027289",
+    "nameKo": "센트라스",
+    "district": "성동구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A10027289",
+    "householdCount": 0,
+    "coordinate": {
+      "lon": 127.028445899926,
+      "lat": 37.5663379455023,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "0d1e17cb-2e90-4005-9846-7d3f9b879b51",
+      "d03620fc-ff18-482e-8ebe-23b5825643ea",
+      "c5795b88-cd1a-4de1-a73e-7bbe8e7a7dd0",
+      "a6eaf52e-f52e-4d50-9364-0f9ced241286",
+      "dbdf3896-eaf4-48a2-9842-4716ad839452",
+      "07bb15f6-c743-4df3-a951-297ceb1f74ca",
+      "d1af6ec5-feae-4e5a-afce-101c146a6198",
+      "3f16ef06-3d2d-4c3d-afc3-87206c0f6c84",
+      "9faa195c-c0a6-49d6-b072-9839409987cd",
+      "2f93052c-010f-4027-b881-991aebef83a9",
+      "4b027460-9833-43b4-954b-42ed16223f5b",
+      "85280d2d-12fb-4d51-850e-77980804b97f",
+      "6eb48340-8a66-4502-bdda-a2ae5895754a",
+      "71092a94-a1d6-4b4d-bc52-71860a031e2a",
+      "11c6ff14-9cbf-43d7-a265-47c4c99ec87c",
+      "14bb3452-e50a-4654-81c9-9847dc762147",
+      "daac40b4-a6eb-4c39-b386-873ae43ff907",
+      "b6ff6e85-4801-4bde-967c-2bbb819bc168",
+      "d5645c3e-ce87-488a-80de-af121fd93a67",
+      "f4a3775d-dca7-4e31-98bb-a28333110223",
+      "0426e278-8425-44e0-b5c2-0bbbd75579bb",
+      "c5845108-2f28-40de-8ae9-208ec7378f9b",
+      "689d18b8-d81c-48f0-92e9-390b05c128d8",
+      "1e3e8408-948c-4c83-afea-929b69ad4b8f",
+      "3c74ec71-5049-418d-aabf-f180310342c9",
+      "4eedef70-0fbe-457f-bf14-4c9c15965b36"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 성동구 왕십리로 410",
+      "coordinateIssues": [
+        "kapt_poi_points_disagree"
+      ],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        127.028445899926,
+        37.5663379455023
+      ],
+      "radiusM": 356.01966237835796,
+      "expectedBuildingsFromApartmentRecord": 30,
+      "modeledBuildings": 26,
+      "maximumCentreDistanceM": 263.4,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10020466",
+    "nameKo": "청계 sk view 아파트",
+    "district": "성동구",
+    "kind": "major-apartment-complex",
+    "classification": "주상복합",
+    "apartmentCode": "A10020466",
+    "householdCount": 0,
+    "coordinate": {
+      "lon": 127.0488134,
+      "lat": 37.5690522,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "f371ecec-4d8d-42a9-a85f-fe09bc3cf2db",
+      "af1c1037-02c1-4da7-9061-2c895147899c",
+      "aa5e17c6-59f4-46f5-b2bb-9d15d7ce6d49"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 성동구 천호대로 244",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        127.0488134,
+        37.5690522
+      ],
+      "radiusM": 112.58330249197702,
+      "expectedBuildingsFromApartmentRecord": 3,
+      "modeledBuildings": 3,
+      "maximumCentreDistanceM": 51.9,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a13302201",
+    "nameKo": "한진해모로",
+    "district": "성동구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A13302201",
+    "householdCount": 246,
+    "coordinate": {
+      "lon": 127.0267431,
+      "lat": 37.5631656,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "ea21b8b0-3485-4e58-9144-12ede4878f34"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 성동구 왕십리로31길 20",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        127.0267431,
+        37.5631656
+      ],
+      "radiusM": 112.58330249197702,
+      "expectedBuildingsFromApartmentRecord": 3,
+      "modeledBuildings": 2,
+      "maximumCentreDistanceM": 55.9,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a13611009",
+    "nameKo": "길음SHVILLE",
+    "district": "성북구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A13611009",
+    "householdCount": 90,
+    "coordinate": {
+      "lon": 127.0206567,
+      "lat": 37.610759,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "1135ca8f-a854-4516-bc77-9b61715d6d2f",
+      "008971cf-4bd6-44a6-9e68-9c40ea3ff893",
+      "2be75444-d6f5-4167-ae97-bd467a1fcfeb",
+      "b889827c-54dd-4576-878b-ee89182bbe29"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 성북구 길음로 74",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        127.0206567,
+        37.610759
+      ],
+      "radiusM": 105,
+      "expectedBuildingsFromApartmentRecord": 1,
+      "modeledBuildings": 4,
+      "maximumCentreDistanceM": 67.8,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10020602",
+    "nameKo": "장위아트포레아파트",
+    "district": "성북구",
+    "kind": "major-apartment-complex",
+    "classification": "도시형 생활주택(주상복합)",
+    "apartmentCode": "A10020602",
+    "householdCount": 0,
+    "coordinate": {
+      "lon": 127.0526511,
+      "lat": 37.6082041,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "d7ed4c17-da37-4b37-9524-c43b72fd0df8"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 성북구 화랑로 202",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        127.0526511,
+        37.6082041
+      ],
+      "radiusM": 105,
+      "expectedBuildingsFromApartmentRecord": 1,
+      "modeledBuildings": 1,
+      "maximumCentreDistanceM": 1.3,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10020716",
+    "nameKo": "장위자이레디언트",
+    "district": "성북구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A10020716",
+    "householdCount": 0,
+    "coordinate": {
+      "lon": 127.0566091,
+      "lat": 37.613619,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "9ddedb98-6bb9-4f40-aa2a-a3199132a6a5",
+      "5a8a5136-3e35-493c-b880-4fb2ab0b6e78"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 성북구 돌곶이로30길 23",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        127.0566556,
+        37.6141684
+      ],
+      "radiusM": 361.9046835839514,
+      "expectedBuildingsFromApartmentRecord": 31,
+      "modeledBuildings": 2,
+      "maximumCentreDistanceM": 294.6,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a13614302",
+    "nameKo": "장위참누리",
+    "district": "성북구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A13614302",
+    "householdCount": 373,
+    "coordinate": {
+      "lon": 127.0494663,
+      "lat": 37.6231937,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "5c921efa-1b69-476f-afb9-473c1659e695",
+      "b1f20eaf-d531-464d-b75c-5f4a7062740b",
+      "d77b5dbf-868c-4806-a096-dccb700f5fa8",
+      "678347c8-06e0-42e5-b777-a854473db3af",
+      "bee2b1c9-1c39-478b-aa11-f5a3b9c17952",
+      "f0da1ea2-8db3-419d-b438-3902e23bac35",
+      "1dfd7208-259e-4be7-8adf-2cad462b63c8"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 성북구 한천로101길 18",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        127.0494663,
+        37.6231937
+      ],
+      "radiusM": 171.9738352191984,
+      "expectedBuildingsFromApartmentRecord": 7,
+      "modeledBuildings": 8,
+      "maximumCentreDistanceM": 111.4,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10024379",
+    "nameKo": "(풍납)대동아파트",
+    "district": "송파구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A10024379",
+    "householdCount": 93,
+    "coordinate": {
+      "lon": 127.1170144,
+      "lat": 37.5355317,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "cfb34998-ec56-4fd2-86ad-930d73857ae6"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 송파구 풍성로15길 10",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        127.1170144,
+        37.5355317
+      ],
+      "radiusM": 105,
+      "expectedBuildingsFromApartmentRecord": 1,
+      "modeledBuildings": 1,
+      "maximumCentreDistanceM": 28.2,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10023887",
+    "nameKo": "송파 시그니처 롯데캐슬아파트",
+    "district": "송파구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A10023887",
+    "householdCount": 0,
+    "coordinate": {
+      "lon": 127.146583,
+      "lat": 37.4958575,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "1a11d94c-c883-4b79-a42f-a2d3c84a4f5a",
+      "d6753457-4528-4be6-8f86-056d37d40c31",
+      "b8d1489c-16aa-4884-b4c5-b32613a32e44",
+      "31f3f07f-d9a4-47c5-8ff6-054f816a3b29",
+      "24fd8080-cf83-4b09-bd8e-3a831193dd90",
+      "5e2b1477-3060-4bd1-b7fe-099a60aec581",
+      "85696e73-5651-46d2-a0a3-bb309af32265",
+      "36abb648-f572-43fc-b308-95e69b97e896",
+      "141a59da-726b-4321-8c5f-f043fb7ec7b7",
+      "32b04535-78cc-41e2-8a80-a894c9acf1c9",
+      "33ebf0ba-024e-4e52-a431-29bafb2ae59c",
+      "acdeb5aa-e5d8-4313-bbc9-b77dd7430dd0",
+      "1970c69f-f9e7-44c6-9b1d-e380e0ce7b0a",
+      "58132fa2-34a7-474c-9f87-7ad9a148be82",
+      "b99856e1-c089-4ec7-894f-705937d00016"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 송파구 거마로 56",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        127.1478498,
+        37.4959582
+      ],
+      "radiusM": 268.00186566514793,
+      "expectedBuildingsFromApartmentRecord": 17,
+      "modeledBuildings": 15,
+      "maximumCentreDistanceM": 163.8,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10028083",
+    "nameKo": "송파SK아파트",
+    "district": "송파구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A10028083",
+    "householdCount": 71,
+    "coordinate": {
+      "lon": 127.11819331,
+      "lat": 37.500610534,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "ff05f6b8-d68c-4b3c-9060-a26bce7ecea6"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 송파구 송이로 50",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        127.11819331,
+        37.500610534
+      ],
+      "radiusM": 105,
+      "expectedBuildingsFromApartmentRecord": 1,
+      "modeledBuildings": 1,
+      "maximumCentreDistanceM": 5.8,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10022403",
+    "nameKo": "힐스테이트 e편한세상 문정아파트",
+    "district": "송파구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A10022403",
+    "householdCount": 0,
+    "coordinate": {
+      "lon": 127.1332848,
+      "lat": 37.4894236,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "22b0eb9c-cde6-4c76-9a98-857c5958bdb6",
+      "273ace5f-b4b0-40cc-9124-afbb62103fdf",
+      "28834018-d996-4aa4-aff1-e6a207f546eb",
+      "04d878cf-deea-4421-aff8-22078709109f",
+      "f1fb0305-d1eb-40c6-bbd8-22a1fef0dcb3",
+      "454a548c-ed71-46f0-9d27-e9302c70a102",
+      "0725fac0-86c5-45c1-a8ca-92636bbc112c",
+      "9f7b4698-cea8-458f-a4b1-39645af330a0",
+      "1df63e79-6a10-4760-9a35-39e29456c8e8",
+      "8654758a-0cd0-42f0-916a-5d98b33c621d",
+      "194ce1ef-8aa0-4f58-87ea-62dc6136b82b",
+      "6125419a-8154-4fd4-80d0-c4512f24e2e4",
+      "54ebf650-e64d-4d4a-a87c-b35faa1a4a20",
+      "edd67d0d-5865-4969-a650-17f41909bdbe",
+      "123813ca-b015-4ac5-b3c3-44cc13ade312",
+      "554e85ab-8d82-414d-9dfe-5180dc8e8a9e",
+      "c5a0cd04-4773-423c-9c1a-297d30b8c2b9"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 송파구 송이로31길 20",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        127.1340504,
+        37.4890349
+      ],
+      "radiusM": 243.20773014030618,
+      "expectedBuildingsFromApartmentRecord": 14,
+      "modeledBuildings": 17,
+      "maximumCentreDistanceM": 105.6,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a15882201",
+    "nameKo": "신월수명산SK-VIEW",
+    "district": "양천구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A15882201",
+    "householdCount": 171,
+    "coordinate": {
+      "lon": 126.8293478,
+      "lat": 37.5440478,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "6500fa36-adfa-4b34-94c6-1da6c70f7f81",
+      "f923217d-fe1e-4609-beeb-c0be1f8f1a8f",
+      "9735911c-5507-4c53-8028-4c364efc8597",
+      "41f8a022-2f13-4c75-8317-5131f728346a"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 양천구 월정로 306",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        126.8293478,
+        37.5440478
+      ],
+      "radiusM": 112.58330249197702,
+      "expectedBuildingsFromApartmentRecord": 3,
+      "modeledBuildings": 5,
+      "maximumCentreDistanceM": 86.7,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10024567",
+    "nameKo": "포레나영등포센트럴아파트",
+    "district": "영등포구",
+    "kind": "major-apartment-complex",
+    "classification": "주상복합",
+    "apartmentCode": "A10024567",
+    "householdCount": 0,
+    "coordinate": {
+      "lon": 126.905671,
+      "lat": 37.523206,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "879ad446-6dd4-4fab-92e1-ec0e7fd11116",
+      "38a4cd86-c9b6-4a33-810b-b25e8b92d0a5",
+      "fa84ef8a-cf90-4845-adc3-d584aea7eeef"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 영등포구 국회대로50길 20",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        126.9056113,
+        37.5233951
+      ],
+      "radiusM": 105,
+      "expectedBuildingsFromApartmentRecord": 2,
+      "modeledBuildings": 3,
+      "maximumCentreDistanceM": 45.4,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10020656",
+    "nameKo": "어반허브 서울스테이션",
+    "district": "용산구",
+    "kind": "major-apartment-complex",
+    "classification": "도시형 생활주택(아파트)",
+    "apartmentCode": "A10020656",
+    "householdCount": 0,
+    "coordinate": {
+      "lon": 126.9682054,
+      "lat": 37.5510709,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "16ce7328-bc3e-4ba2-bd7b-9d951d1affa5"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 용산구 청파로73길 36-7",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        126.9682054,
+        37.5510709
+      ],
+      "radiusM": 105,
+      "expectedBuildingsFromApartmentRecord": 1,
+      "modeledBuildings": 1,
+      "maximumCentreDistanceM": 13.1,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10020608",
+    "nameKo": "용산 남영역 롯데캐슬 헤리티지",
+    "district": "용산구",
+    "kind": "major-apartment-complex",
+    "classification": "주상복합",
+    "apartmentCode": "A10020608",
+    "householdCount": 0,
+    "coordinate": {
+      "lon": 126.9716636,
+      "lat": 37.5413494,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "57e98d45-53b0-448a-a305-99db416fadda"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 용산구 한강대로71길 47",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        126.9716636,
+        37.5413494
+      ],
+      "radiusM": 105,
+      "expectedBuildingsFromApartmentRecord": 1,
+      "modeledBuildings": 1,
+      "maximumCentreDistanceM": 1.3,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10026759",
+    "nameKo": "용산푸르지오써밋",
+    "district": "용산구",
+    "kind": "major-apartment-complex",
+    "classification": "주상복합",
+    "apartmentCode": "A10026759",
+    "householdCount": 0,
+    "coordinate": {
+      "lon": 126.964891822,
+      "lat": 37.527041168,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "d53b2afb-9cb5-40ba-a15d-fb41ace01b89",
+      "ca37c55a-1fe1-4102-969b-747f5a62e2b5"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 용산구 한강대로 69",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        126.965131,
+        37.5271885
+      ],
+      "radiusM": 105,
+      "expectedBuildingsFromApartmentRecord": 1,
+      "modeledBuildings": 2,
+      "maximumCentreDistanceM": 35.0,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a14004001",
+    "nameKo": "한강타운",
+    "district": "용산구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A14004001",
+    "householdCount": 289,
+    "coordinate": {
+      "lon": 126.9496998,
+      "lat": 37.5356703,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "fba230fc-ddfd-4b4e-a57a-2c648accb983",
+      "7335e8bb-bb01-406d-b2ef-9da12f6eb7b8"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 용산구 새창로8길 157",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        126.9502505,
+        37.5357528
+      ],
+      "radiusM": 112.58330249197702,
+      "expectedBuildingsFromApartmentRecord": 3,
+      "modeledBuildings": 3,
+      "maximumCentreDistanceM": 97.9,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10025846",
+    "nameKo": "래미안베라힐즈",
+    "district": "은평구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A10025846",
+    "householdCount": 0,
+    "coordinate": {
+      "lon": 126.935970375,
+      "lat": 37.602836004,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "fc52e78a-9242-4024-9468-f0d1a2baac74",
+      "a024cd24-eee2-4e4c-913a-840a4c17125c",
+      "dec01f17-9cb5-43ba-84cf-c278732b717c",
+      "42cbdf94-5304-4962-8de3-37d190dfbae7",
+      "286454be-33af-4d01-899d-44431861419d",
+      "078b90de-b1d6-408b-a4bc-a8d1fb1ea7b9",
+      "d1e4a37e-1816-44e5-91e1-0558405b7de1",
+      "410faf71-f43a-4274-9e80-e10b53454422",
+      "4da9b218-b6a0-461c-9d46-9e89e3ce0298",
+      "a26ec54b-1526-4fde-a2a8-042ffe7b7cbb",
+      "0db60394-910a-40a6-8f8e-61407aa3592c",
+      "290fdd99-d064-4d7c-b427-8d1038681279",
+      "2a9ae1c3-81db-40a5-a346-dba79d93c2b8",
+      "bd407c44-2ec3-48a1-9796-a6fb5cbeed0f",
+      "798e4ff4-e62d-4164-962f-31d1310e0ae2",
+      "2bff1556-42ac-4b1d-bf2b-f67034ecbda4",
+      "4aab39b9-a91a-4237-a488-984630b33ddb",
+      "b9b15950-394d-4321-bff1-3ba3dd798561",
+      "37c9bfd5-39f1-416a-bf76-647e01d28bb3",
+      "9faf95c9-69a3-46df-b974-89121259f432"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 은평구 통일로 630",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        126.935970375,
+        37.602836004
+      ],
+      "radiusM": 290.6888370749727,
+      "expectedBuildingsFromApartmentRecord": 20,
+      "modeledBuildings": 20,
+      "maximumCentreDistanceM": 248.6,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10020307",
+    "nameKo": "새절역 두산위브트레지움",
+    "district": "은평구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A10020307",
+    "householdCount": 0,
+    "coordinate": {
+      "lon": 126.9066581,
+      "lat": 37.5913319,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "2e38f85d-767a-405e-9964-b3b2e795fed3",
+      "1027962a-6d51-453e-96ed-0d984f1b1ff2",
+      "d993016f-80b1-4193-9bb4-3670a07b693d",
+      "1115bdf8-4316-4d65-981d-821bd6cf3ca7",
+      "2067fde5-58ee-42f8-9abe-8215536df2a5",
+      "8a9f6463-fed5-426c-a4f1-1c102673815a"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 은평구 증산로17길 53",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        126.9069388,
+        37.5913141
+      ],
+      "radiusM": 159.21683328090657,
+      "expectedBuildingsFromApartmentRecord": 6,
+      "modeledBuildings": 6,
+      "maximumCentreDistanceM": 79.3,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10023728",
+    "nameKo": "아그네스풍림아이원",
+    "district": "은평구",
+    "kind": "major-apartment-complex",
+    "classification": "주상복합",
+    "apartmentCode": "A10023728",
+    "householdCount": 68,
+    "coordinate": {
+      "lon": 126.918964,
+      "lat": 37.6029861,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "df5721ed-8151-490e-b187-01f770263088"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 은평구 진흥로1길 28",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        126.918964,
+        37.6029861
+      ],
+      "radiusM": 105,
+      "expectedBuildingsFromApartmentRecord": 1,
+      "modeledBuildings": 1,
+      "maximumCentreDistanceM": 18.2,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10020045",
+    "nameKo": "은평자이더스타",
+    "district": "은평구",
+    "kind": "major-apartment-complex",
+    "classification": "도시형 생활주택(주상복합)",
+    "apartmentCode": "A10020045",
+    "householdCount": 0,
+    "coordinate": {
+      "lon": 126.9096964,
+      "lat": 37.5982061,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "4f8dee08-cbce-4551-9094-52592d5b2fd9",
+      "d51c7402-4028-41c3-b401-f6830ac11994",
+      "25af75fd-696a-448f-ad08-fb30b6739018",
+      "dd30a78c-d30f-4011-b8d1-d9d12b4ee14e",
+      "8f119921-7941-457b-9d89-8dd00eaa6e19"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 은평구 갈현로 3",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        126.9096964,
+        37.5982061
+      ],
+      "radiusM": 105,
+      "expectedBuildingsFromApartmentRecord": 2,
+      "modeledBuildings": 5,
+      "maximumCentreDistanceM": 91.7,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10025659",
+    "nameKo": "응암역효성해링턴플레이스",
+    "district": "은평구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A10025659",
+    "householdCount": 0,
+    "coordinate": {
+      "lon": 126.909238193,
+      "lat": 37.59835762,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "cd1202a2-a2df-45c3-b953-5b56c07fde5c",
+      "fcb42cff-8d23-43c2-965f-76bc9737952f",
+      "ca5796a4-666d-4754-8615-63a79d8496da",
+      "84d1c1ce-7b61-4b9f-ad77-7525868f0cd8",
+      "b430f440-9e38-4730-9fdb-80933c312d47",
+      "41fb0c31-526f-494b-ba0a-c4ef51eb7cff",
+      "c15bc82b-9c2c-47a9-9a71-4c74ecf49ec2"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 은평구 가좌로 334",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        126.909238193,
+        37.59835762
+      ],
+      "radiusM": 159.21683328090657,
+      "expectedBuildingsFromApartmentRecord": 6,
+      "modeledBuildings": 7,
+      "maximumCentreDistanceM": 145.9,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10025836",
+    "nameKo": "힐스테이트녹번",
+    "district": "은평구",
+    "kind": "major-apartment-complex",
+    "classification": "아파트",
+    "apartmentCode": "A10025836",
+    "householdCount": 0,
+    "coordinate": {
+      "lon": 126.935863683,
+      "lat": 37.601971055,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "fd361784-173f-4002-a3da-07226a053bf2",
+      "a51337fa-9016-4373-af86-1d46bf0efb22",
+      "cb614c07-d2d0-42c9-875b-58727fa99cd3",
+      "8084ef62-ef7f-41e4-84d6-8b1b58b6d6dc",
+      "a9e05b27-c3d1-41fb-b2b8-c617af98d63d"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 은평구 통일로 610",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        126.935863683,
+        37.601971055
+      ],
+      "radiusM": 234.3608329051593,
+      "expectedBuildingsFromApartmentRecord": 13,
+      "modeledBuildings": 5,
+      "maximumCentreDistanceM": 122.5,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10023586",
+    "nameKo": "힐스테이트 창경궁",
+    "district": "종로구",
+    "kind": "major-apartment-complex",
+    "classification": "주상복합",
+    "apartmentCode": "A10023586",
+    "householdCount": 0,
+    "coordinate": {
+      "lon": 127.0048983,
+      "lat": 37.5753028,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "10c2b273-e2ca-46b4-88c6-8f9aaf6b5565",
+      "f98286bb-6501-472c-8cab-19ac888e5776"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 종로구 율곡로 236",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        127.0048983,
+        37.5753028
+      ],
+      "radiusM": 105,
+      "expectedBuildingsFromApartmentRecord": 1,
+      "modeledBuildings": 2,
+      "maximumCentreDistanceM": 78.8,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10020414",
+    "nameKo": "남대문(양동) 단지",
+    "district": "중구",
+    "kind": "major-apartment-complex",
+    "classification": "도시형 생활주택(아파트)",
+    "apartmentCode": "A10020414",
+    "householdCount": 0,
+    "coordinate": {
+      "lon": 126.9744596,
+      "lat": 37.5549297,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "72b79255-c1a2-4c07-8ff0-3c58da9b07eb"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 중구 후암로60길 21",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        126.9744596,
+        37.5549297
+      ],
+      "radiusM": 105,
+      "expectedBuildingsFromApartmentRecord": 1,
+      "modeledBuildings": 1,
+      "maximumCentreDistanceM": 3.1,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a10095502",
+    "nameKo": "청계천두산위브더제니스",
+    "district": "중구",
+    "kind": "major-apartment-complex",
+    "classification": "주상복합",
+    "apartmentCode": "A10095502",
+    "householdCount": 0,
+    "coordinate": {
+      "lon": 127.017090685,
+      "lat": 37.566864484,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "147b8490-c216-4695-9dd6-9334323b1592",
+      "ceba6478-003f-47c2-89f9-6d8779a9218d",
+      "299dba17-ae2e-46fd-9ec2-61ae74d2cd92"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 중구 다산로46길 17",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        127.0170909,
+        37.5668547
+      ],
+      "radiusM": 105,
+      "expectedBuildingsFromApartmentRecord": 1,
+      "modeledBuildings": 3,
+      "maximumCentreDistanceM": 82.6,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  },
+  {
+    "id": "apt-a13120003",
+    "nameKo": "면목두산6차",
+    "district": "중랑구",
+    "kind": "major-apartment-complex",
+    "classification": "주상복합",
+    "apartmentCode": "A13120003",
+    "householdCount": 84,
+    "coordinate": {
+      "lon": 127.080675138,
+      "lat": 37.577601274,
+      "basis": "official_reported_coordinate",
+      "confidence": "official_reported"
+    },
+    "coordinateStatus": "official_reported",
+    "sourceUrls": [
+      "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do"
+    ],
+    "buildingIds": [
+      "fd13fd8b-faa0-4a07-9912-3e92256449c7",
+      "2bd573ce-a468-4722-ac68-e8386badc7fd"
+    ],
+    "matchingStatus": "approximate_neighborhood_matching_required",
+    "evidence": {
+      "source": "data/apartments.sqlite",
+      "address": "서울특별시 중랑구 답십리로77길 139",
+      "coordinateIssues": [],
+      "matchedNamedBuildings": []
+    },
+    "modelingNotes": {
+      "selection": "Source apartment/complex record; no price-ranking inference.",
+      "morphology": "Exact footprint candidates are named local buildings; approximate candidates require bounded apartment-classified footprint matching and must not invent geometry, height, or membership."
+    },
+    "membership": {
+      "method": "apartment-classified footprints in bounded source-coordinate neighborhood and nearest-complex partition",
+      "confidence": "approximate-membership-not-parcel-proof",
+      "anchor": [
+        127.080675138,
+        37.577601274
+      ],
+      "radiusM": 105,
+      "expectedBuildingsFromApartmentRecord": 1,
+      "modeledBuildings": 2,
+      "maximumCentreDistanceM": 73.2,
+      "osmBoundary": null,
+      "scope": "Only selected source footprints are replaced; completeness of complex membership is not asserted."
+    }
+  }
+]

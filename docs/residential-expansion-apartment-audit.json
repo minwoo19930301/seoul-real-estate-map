@@ -1,0 +1,374 @@
+{
+  "allowedClassifications": [
+    "도시형 생활주택(아파트)",
+    "도시형 생활주택(주상복합)",
+    "아파트",
+    "주상복합"
+  ],
+  "sourceCountsByClassification": {
+    "아파트": 2533,
+    "unknown": 42,
+    "연립주택": 11,
+    "주상복합": 277,
+    "도시형 생활주택(아파트)": 8,
+    "도시형 생활주택(주상복합)": 15,
+    "다세대": 1
+  },
+  "householdBucketsAllSource": {
+    "over_100": 2785,
+    "unknown": 66,
+    "100_or_less": 36
+  },
+  "sourceCountsByClassificationAndHousehold": {
+    "도시형 생활주택(아파트)": {
+      "100_or_less": 0,
+      "over_100": 6,
+      "unknown": 2
+    },
+    "도시형 생활주택(주상복합)": {
+      "100_or_less": 0,
+      "over_100": 7,
+      "unknown": 8
+    },
+    "아파트": {
+      "100_or_less": 19,
+      "over_100": 2471,
+      "unknown": 43
+    },
+    "주상복합": {
+      "100_or_less": 2,
+      "over_100": 263,
+      "unknown": 12
+    }
+  },
+  "eligibleSourceCount": 2833,
+  "alreadyModelledCount": 2609,
+  "remainingCandidateCount": 179,
+  "remainingHouseholdBuckets": {
+    "unknown": 62,
+    "100_or_less": 20,
+    "over_100": 97
+  },
+  "matchingStatusCounts": {
+    "exact_named_footprint": 1,
+    "approximate_neighborhood_matching_required": 178
+  },
+  "rejectedCount": 45,
+  "rejected": [
+    {
+      "id": "apt-a77777777",
+      "nameKo": "S-아파트",
+      "district": "강남구",
+      "reason": "missing coordinate or district boundary"
+    },
+    {
+      "id": "apt-a13593908",
+      "nameKo": "SH공사대치1단지",
+      "district": "강남구",
+      "reason": "missing coordinate or district boundary"
+    },
+    {
+      "id": "apt-a13594007",
+      "nameKo": "대청",
+      "district": "강남구",
+      "reason": "missing coordinate or district boundary"
+    },
+    {
+      "id": "apt-a13402002",
+      "nameKo": "천호태영",
+      "district": "강동구",
+      "reason": "ambiguous or unresolved source coordinate",
+      "coordinateStatus": "official_shared_address"
+    },
+    {
+      "id": "apt-a13402304",
+      "nameKo": "천호태영임대",
+      "district": "강동구",
+      "reason": "ambiguous or unresolved source coordinate",
+      "coordinateStatus": "official_shared_address"
+    },
+    {
+      "id": "apt-a14207202",
+      "nameKo": "래미안수유",
+      "district": "강북구",
+      "reason": "ambiguous or unresolved source coordinate",
+      "coordinateStatus": "official_shared_address"
+    },
+    {
+      "id": "apt-a14207201",
+      "nameKo": "래미안수유임대",
+      "district": "강북구",
+      "reason": "ambiguous or unresolved source coordinate",
+      "coordinateStatus": "official_shared_address"
+    },
+    {
+      "id": "apt-a15703313",
+      "nameKo": "등촌주공1단지",
+      "district": "강서구",
+      "reason": "ambiguous or unresolved source coordinate",
+      "coordinateStatus": "official_shared_address"
+    },
+    {
+      "id": "apt-a15703304",
+      "nameKo": "등촌주공2단지",
+      "district": "강서구",
+      "reason": "ambiguous or unresolved source coordinate",
+      "coordinateStatus": "official_shared_address"
+    },
+    {
+      "id": "apt-a15785711",
+      "nameKo": "방화2-2 그린",
+      "district": "강서구",
+      "reason": "ambiguous or unresolved source coordinate",
+      "coordinateStatus": "official_shared_address"
+    },
+    {
+      "id": "apt-a15722314",
+      "nameKo": "방화2단지",
+      "district": "강서구",
+      "reason": "ambiguous or unresolved source coordinate",
+      "coordinateStatus": "official_shared_address"
+    },
+    {
+      "id": "apt-a15210107",
+      "nameKo": "오류동부골든",
+      "district": "구로구",
+      "reason": "ambiguous or unresolved source coordinate",
+      "coordinateStatus": "official_shared_address"
+    },
+    {
+      "id": "apt-a15278301",
+      "nameKo": "오류동부골든SH임대",
+      "district": "구로구",
+      "reason": "ambiguous or unresolved source coordinate",
+      "coordinateStatus": "official_shared_address"
+    },
+    {
+      "id": "apt-a15303202",
+      "nameKo": "관악벽산2단지",
+      "district": "금천구",
+      "reason": "ambiguous or unresolved source coordinate",
+      "coordinateStatus": "official_shared_address"
+    },
+    {
+      "id": "apt-a15303002",
+      "nameKo": "관악산벽산타운1단지",
+      "district": "금천구",
+      "reason": "ambiguous or unresolved source coordinate",
+      "coordinateStatus": "official_shared_address"
+    },
+    {
+      "id": "apt-a10023024",
+      "nameKo": "노원롯데캐슬시그니처1단지",
+      "district": "노원구",
+      "reason": "ambiguous or unresolved source coordinate",
+      "coordinateStatus": "official_shared_address"
+    },
+    {
+      "id": "apt-a10023060",
+      "nameKo": "노원롯데캐슬시그니처2단지",
+      "district": "노원구",
+      "reason": "ambiguous or unresolved source coordinate",
+      "coordinateStatus": "official_shared_address"
+    },
+    {
+      "id": "apt-a13984813",
+      "nameKo": "월계주공1단지",
+      "district": "노원구",
+      "reason": "missing coordinate or district boundary"
+    },
+    {
+      "id": "apt-a13923103",
+      "nameKo": "하계청구",
+      "district": "노원구",
+      "reason": "ambiguous or unresolved source coordinate",
+      "coordinateStatus": "official_shared_address"
+    },
+    {
+      "id": "apt-a13993503",
+      "nameKo": "하계한신",
+      "district": "노원구",
+      "reason": "ambiguous or unresolved source coordinate",
+      "coordinateStatus": "official_shared_address"
+    },
+    {
+      "id": "apt-a13009002",
+      "nameKo": "휘경리오포레1단지",
+      "district": "동대문구",
+      "reason": "ambiguous or unresolved source coordinate",
+      "coordinateStatus": "official_shared_address"
+    },
+    {
+      "id": "apt-a13087407",
+      "nameKo": "휘경리오포레2단지 아파트",
+      "district": "동대문구",
+      "reason": "ambiguous or unresolved source coordinate",
+      "coordinateStatus": "official_shared_address"
+    },
+    {
+      "id": "apt-a15681501",
+      "nameKo": "사당우성(4-3)아파트",
+      "district": "동작구",
+      "reason": "missing coordinate or district boundary"
+    },
+    {
+      "id": "apt-a15183001",
+      "nameKo": "해태보라매타워",
+      "district": "동작구",
+      "reason": "missing coordinate or district boundary"
+    },
+    {
+      "id": "apt-a12170602",
+      "nameKo": "공덕2삼성임대",
+      "district": "마포구",
+      "reason": "ambiguous or unresolved source coordinate",
+      "coordinateStatus": "official_shared_address"
+    },
+    {
+      "id": "apt-a12181103",
+      "nameKo": "마포태영아파트",
+      "district": "마포구",
+      "reason": "ambiguous or unresolved source coordinate",
+      "coordinateStatus": "official_shared_address"
+    },
+    {
+      "id": "apt-a12181102",
+      "nameKo": "마포태영제2",
+      "district": "마포구",
+      "reason": "ambiguous or unresolved source coordinate",
+      "coordinateStatus": "official_shared_address"
+    },
+    {
+      "id": "apt-a12102008",
+      "nameKo": "삼성래미안공덕2차",
+      "district": "마포구",
+      "reason": "ambiguous or unresolved source coordinate",
+      "coordinateStatus": "official_shared_address"
+    },
+    {
+      "id": "apt-a12009304",
+      "nameKo": "홍제유원하나",
+      "district": "서대문구",
+      "reason": "ambiguous or unresolved source coordinate",
+      "coordinateStatus": "official_shared_address"
+    },
+    {
+      "id": "apt-a12009001",
+      "nameKo": "홍제유원하나제2",
+      "district": "서대문구",
+      "reason": "ambiguous or unresolved source coordinate",
+      "coordinateStatus": "official_shared_address"
+    },
+    {
+      "id": "apt-a13383801",
+      "nameKo": "옥수중앙하이츠",
+      "district": "성동구",
+      "reason": "ambiguous or unresolved source coordinate",
+      "coordinateStatus": "official_shared_address"
+    },
+    {
+      "id": "apt-a13375904",
+      "nameKo": "옥수하이츠제2",
+      "district": "성동구",
+      "reason": "ambiguous or unresolved source coordinate",
+      "coordinateStatus": "official_shared_address"
+    },
+    {
+      "id": "apt-a10027969",
+      "nameKo": "왕십리텐즈힐1단지(임대)",
+      "district": "성동구",
+      "reason": "ambiguous or unresolved source coordinate",
+      "coordinateStatus": "official_shared_address"
+    },
+    {
+      "id": "apt-a10027920",
+      "nameKo": "텐즈힐1단지",
+      "district": "성동구",
+      "reason": "ambiguous or unresolved source coordinate",
+      "coordinateStatus": "official_shared_address"
+    },
+    {
+      "id": "apt-a13307204",
+      "nameKo": "행당대림",
+      "district": "성동구",
+      "reason": "ambiguous or unresolved source coordinate",
+      "coordinateStatus": "official_shared_address"
+    },
+    {
+      "id": "apt-a13377902",
+      "nameKo": "행당대림제2",
+      "district": "성동구",
+      "reason": "ambiguous or unresolved source coordinate",
+      "coordinateStatus": "official_shared_address"
+    },
+    {
+      "id": "apt-a13377901",
+      "nameKo": "행당두산위브아파트",
+      "district": "성동구",
+      "reason": "ambiguous or unresolved source coordinate",
+      "coordinateStatus": "official_shared_address"
+    },
+    {
+      "id": "apt-a13606004",
+      "nameKo": "돈암한신한진아파트",
+      "district": "성북구",
+      "reason": "ambiguous or unresolved source coordinate",
+      "coordinateStatus": "official_shared_address"
+    },
+    {
+      "id": "apt-a13606005",
+      "nameKo": "동소문한진임대",
+      "district": "성북구",
+      "reason": "ambiguous or unresolved source coordinate",
+      "coordinateStatus": "official_shared_address"
+    },
+    {
+      "id": "apt-a10044001",
+      "nameKo": "SH황학롯데캐슬베네치아",
+      "district": "중구",
+      "reason": "ambiguous or unresolved source coordinate",
+      "coordinateStatus": "official_shared_address"
+    },
+    {
+      "id": "apt-a10044002",
+      "nameKo": "롯데캐슬베네치아",
+      "district": "중구",
+      "reason": "ambiguous or unresolved source coordinate",
+      "coordinateStatus": "official_shared_address"
+    },
+    {
+      "id": "apt-a10045302",
+      "nameKo": "신당남산타운(분양)",
+      "district": "중구",
+      "reason": "ambiguous or unresolved source coordinate",
+      "coordinateStatus": "official_shared_address"
+    },
+    {
+      "id": "apt-a10045301",
+      "nameKo": "신당남산타운임대",
+      "district": "중구",
+      "reason": "ambiguous or unresolved source coordinate",
+      "coordinateStatus": "official_shared_address"
+    },
+    {
+      "id": "apt-a10045403",
+      "nameKo": "신당삼성(분양)",
+      "district": "중구",
+      "reason": "ambiguous or unresolved source coordinate",
+      "coordinateStatus": "official_shared_address"
+    },
+    {
+      "id": "apt-a10045401",
+      "nameKo": "신당삼성임대",
+      "district": "중구",
+      "reason": "ambiguous or unresolved source coordinate",
+      "coordinateStatus": "official_shared_address"
+    }
+  ],
+  "ownedFootprintCount": 19384,
+  "notes": [
+    "Unknown classification and multi-family/row-house records are excluded from this apartment/complex pool.",
+    "Existing model IDs and all footprint IDs in footprint-matches.json are excluded.",
+    "Approximate candidates are retained as research pool entries only; they require the bounded matching pipeline before modeling."
+  ]
+}

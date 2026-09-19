@@ -18,6 +18,7 @@ export interface CityModelState {
 }
 type Options = { assets?: CityModelAsset[]; onState?: (state: CityModelState) => void; onActiveFootprints?: (ids: string[]) => void };
 type Entry = { asset: CityModelAsset; scene?: THREE.Scene; error: string | null; ground: number | null; draws: number; active: boolean; pending?: Promise<void>; lastUsed?: number };
+type View = { zoom: number; lon: number; lat: number; west: number; east: number; south: number; north: number };
 
 /** GLB metres: +X east, +Y up, +Z south at yaw=0. Ground is already exaggerated. */
 export function modelMercatorMatrix(coordinate: [number, number], groundM: number) {
@@ -59,6 +60,12 @@ export class CityModels {
   private contextLost = false;
   private error: string | null = null;
   private entries: Entry[] = [];
+  private indexedEntries?: Entry[];
+  private indexedLength = -1;
+  private catalogRevision = 0;
+  private entryOrder = new Map<Entry, number>();
+  private trackedEntries = new Set<Entry>();
+  private nearbyCache?: { key: string; entries: Entry[] };
   private loadCycle?: Promise<void>;
   private loadAgain = false;
   private useCounter = 0;
@@ -83,7 +90,7 @@ export class CityModels {
   private abort = new AbortController();
   private onViewChanged = () => { void this.loadNearby(); this.updateTerrain(); };
   private onTerrainData = (event: { sourceId?: string; sourceDataType?: string }) => { if (event.sourceId === 'local-terrain' && event.sourceDataType === 'content') this.updateTerrain(); };
-  private onLost = () => { this.contextLost = true; this.entries.forEach(e => { e.active = false; }); this.activeTrees = 0; this.emit(); };
+  private onLost = () => { this.contextLost = true; this.clearActiveEntries(); this.activeTrees = 0; this.emit(); };
   private onRestored = () => { this.contextLost = false; this.updateTerrain(); };
 
   private map: MapInstance;
@@ -104,7 +111,7 @@ export class CityModels {
         if (!response.ok) throw new Error('랜드마크 목록을 불러오지 못했습니다.');
         manifest = await response.json() as { assets: CityModelAsset[] };
       }
-      if (!Array.isArray(manifest.assets) || manifest.assets.length > 5000) throw new Error('잘못된 모델 목록입니다.');
+      if (!Array.isArray(manifest.assets) || manifest.assets.length > 25000) throw new Error('잘못된 모델 목록입니다.');
       if (new Set(manifest.assets.map(a => a.id)).size !== manifest.assets.length || manifest.assets.some(a => !a.coordinate || !Number.isFinite(a.coordinate.lon) || !Number.isFinite(a.coordinate.lat) || Math.abs(a.coordinate.lon) > 180 || Math.abs(a.coordinate.lat) > 90)) throw new Error('잘못된 모델 위치입니다.');
       this.entries = manifest.assets.map(asset => ({ asset, error: null, ground: null, draws: 0, active: false }));
       const layer: CustomLayerInterface = {
@@ -130,32 +137,64 @@ export class CityModels {
       if (!this.disposed) this.error = error instanceof Error ? error.message : String(error);
     } finally { this.loading = false; if (!this.disposed) { this.emit(); this.map.triggerRepaint(); } }
   }
-  private inView(asset: CityModelAsset) {
+  private syncCatalog() {
+    if (this.indexedEntries === this.entries && this.indexedLength === this.entries.length) return;
+    this.indexedEntries = this.entries; this.indexedLength = this.entries.length;
+    this.catalogRevision++; this.nearbyCache = undefined;
+    this.entryOrder.clear(); this.trackedEntries.clear();
+    this.entries.forEach((entry, index) => {
+      this.entryOrder.set(entry, index);
+      if (entry.scene || entry.error || entry.pending || entry.active) this.trackedEntries.add(entry);
+    });
+  }
+  private trackEntry(entry: Entry) {
+    this.syncCatalog();
+    if (!this.entryOrder.has(entry)) return;
+    if (entry.scene || entry.error || entry.pending || entry.active) this.trackedEntries.add(entry);
+    else this.trackedEntries.delete(entry);
+  }
+  private clearActiveEntries() {
+    this.syncCatalog();
+    for (const entry of this.trackedEntries) entry.active = false;
+  }
+  private viewSnapshot(): View {
+    const bounds = this.map.getBounds();
+    const { lng: lon, lat } = this.map.getCenter();
+    return { zoom: this.map.getZoom(), lon, lat, west: bounds.getWest(), east: bounds.getEast(), south: bounds.getSouth(), north: bounds.getNorth() };
+  }
+  private inView(asset: CityModelAsset, view: View) {
     if (asset.category === 'bridge' && !this.bridgesVisible || ['k12-school', 'district-public-office'].includes(asset.category ?? '') && !this.publicVisible) return false;
     if (['city-hall', 'cultural-site'].includes(asset.category ?? '') && !this.culturalVisible || asset.category === 'company-office' && !this.officesVisible) return false;
-    if (this.map.getZoom() < (asset.minZoom ?? 13)) return false;
-    const bounds = this.map.getBounds();
-    const dx = (bounds.getEast() - bounds.getWest()) * 0.2;
-    const dy = (bounds.getNorth() - bounds.getSouth()) * 0.2;
-    if (asset.geoBounds) return asset.geoBounds[2] >= bounds.getWest() - dx && asset.geoBounds[0] <= bounds.getEast() + dx && asset.geoBounds[3] >= bounds.getSouth() - dy && asset.geoBounds[1] <= bounds.getNorth() + dy;
-    return asset.coordinate.lon >= bounds.getWest() - dx && asset.coordinate.lon <= bounds.getEast() + dx
-      && asset.coordinate.lat >= bounds.getSouth() - dy && asset.coordinate.lat <= bounds.getNorth() + dy;
+    if (view.zoom < (asset.minZoom ?? 13)) return false;
+    const dx = (view.east - view.west) * 0.2;
+    const dy = (view.north - view.south) * 0.2;
+    if (asset.geoBounds) return asset.geoBounds[2] >= view.west - dx && asset.geoBounds[0] <= view.east + dx && asset.geoBounds[3] >= view.south - dy && asset.geoBounds[1] <= view.north + dy;
+    return asset.coordinate.lon >= view.west - dx && asset.coordinate.lon <= view.east + dx
+      && asset.coordinate.lat >= view.south - dy && asset.coordinate.lat <= view.north + dy;
   }
   private nearbyEntries() {
-    const { lng: lon, lat } = this.map.getCenter();
-    const distance = (entry: Entry) => ((entry.asset.coordinate.lon - lon) * Math.cos(lat * Math.PI / 180)) ** 2 + (entry.asset.coordinate.lat - lat) ** 2;
-    return this.entries.filter(entry => this.inView(entry.asset))
+    this.syncCatalog();
+    const view = this.viewSnapshot();
+    const key = [view.zoom, view.lon, view.lat, view.west, view.east, view.south, view.north,
+      this.publicVisible, this.bridgesVisible, this.culturalVisible, this.officesVisible].join(':');
+    if (this.nearbyCache?.key === key) return this.nearbyCache.entries;
+    const scale = Math.cos(view.lat * Math.PI / 180);
+    const distance = (entry: Entry) => ((entry.asset.coordinate.lon - view.lon) * scale) ** 2 + (entry.asset.coordinate.lat - view.lat) ** 2;
+    const entries = this.entries.filter(entry => this.inView(entry.asset, view))
       .sort((a, b) => distance(a) - distance(b) || a.asset.id.localeCompare(b.asset.id))
       .slice(0, this.maxNearby);
+    this.nearbyCache = { key, entries };
+    return entries;
   }
   private trimCache() {
     const protectedEntries = new Set(this.nearbyEntries());
-    const resident = this.entries.filter(entry => !!entry.scene);
+    const resident = [...this.trackedEntries].filter(entry => !!entry.scene);
     let excess = resident.length - this.maxResident;
     for (const entry of resident.sort((a, b) => (a.lastUsed ?? 0) - (b.lastUsed ?? 0))) {
       if (excess <= 0) break;
       if (protectedEntries.has(entry) || entry.pending) continue;
       disposeScene(entry.scene!); entry.scene = undefined; entry.active = false; entry.ground = null; excess--;
+      this.trackEntry(entry);
     }
   }
   private loadNearby(): Promise<void> {
@@ -172,6 +211,7 @@ export class CityModels {
             const entry = queue.shift()!;
             if (this.disposed || !this.enabled || !this.is25d || !this.nearbyEntries().includes(entry)) continue;
             entry.pending = Promise.resolve().then(() => this.loadEntry(entry));
+            this.trackEntry(entry);
             await entry.pending;
             this.trimCache();
           }
@@ -204,6 +244,7 @@ export class CityModels {
           if (!this.disposed) entry.error = error instanceof Error ? error.message : String(error);
         }
         entry.pending = undefined;
+        this.trackEntry(entry);
         if (!this.disposed) { this.emit(); this.map.triggerRepaint(); }
   }
 
@@ -220,7 +261,7 @@ export class CityModels {
   updateTerrain() {
     if (this.disposed) return;
     this.treesDirty = true;
-    if (!this.enabled || !this.is25d) this.entries.forEach(entry => { entry.active = false; });
+    if (!this.enabled || !this.is25d) this.clearActiveEntries();
     if (!this.treesEnabled || !this.is25d) this.activeTrees = 0;
     this.emit(); this.map.triggerRepaint();
   }
@@ -252,10 +293,10 @@ export class CityModels {
     this.drawCalls = 0;
     const supported = args.shaderData.variantName === 'mercator';
     const ready = supported && this.terrainReady();
-    const visible = new Set(this.nearbyEntries());
-    for (const entry of this.entries) {
-      entry.active = false;
-      if (!this.enabled || !entry.scene || entry.error || !ready || !visible.has(entry)) continue;
+    const visible = this.nearbyEntries();
+    this.clearActiveEntries();
+    for (const entry of visible) {
+      if (!this.enabled || !entry.scene || entry.error || !ready) continue;
       const coordinate: [number, number] = [entry.asset.coordinate.lon, entry.asset.coordinate.lat];
       const ground = this.map.queryTerrainElevation(coordinate);
       if (ground === null || !Number.isFinite(ground)) continue;
@@ -270,6 +311,7 @@ export class CityModels {
         entry.active = calls > 0;
         if (entry.active) entry.draws++;
       } catch (error) { entry.error = error instanceof Error ? error.message : String(error); }
+      this.trackEntry(entry);
     }
     this.activeTrees = 0;
     if (this.treesEnabled && ready && this.treeScene && this.trunks && this.crowns && this.trees.length) {
@@ -306,6 +348,7 @@ export class CityModels {
     this.treesDirty = false;
   }
   getState(): CityModelState {
+    this.syncCatalog();
     const pending = this.loading || !!this.loadCycle || this.entries.some(e => !!e.pending);
     const active = this.entries.filter(e => e.active).length;
     const errors = this.entries.filter(e => e.error).length;
@@ -318,19 +361,27 @@ export class CityModels {
       frameCount: this.frameCount, lastDrawCalls: this.drawCalls, error: this.error };
   }
   private emit() {
-    const state = this.getState();
-    const footprints = JSON.stringify(state.activeFootprintIds);
-    if (footprints !== this.lastFootprints) { this.lastFootprints = footprints; this.options.onActiveFootprints?.(state.activeFootprintIds); }
-    // Frame counters remain available to QA through getState without DOM churn.
-    const signature = JSON.stringify({ ...state, frameCount: 0, lastDrawCalls: 0, models: state.models.map(m => ({ ...m, drawCount: 0 })) });
-    if (signature !== this.lastState) { this.lastState = signature; this.options.onState?.(state); }
+    this.syncCatalog();
+    // Only resident/error/pending/active entries change between frames. Keep the
+    // complete catalog available through getState(), but build it for callbacks
+    // only when this compact state changes (not for draw/frame counters).
+    const tracked = [...this.trackedEntries].sort((a, b) => this.entryOrder.get(a)! - this.entryOrder.get(b)!);
+    const activeFootprints = [...new Set(tracked.filter(entry => entry.active).flatMap(entry => this.matches[entry.asset.id] ?? []))];
+    const footprints = JSON.stringify(activeFootprints);
+    if (footprints !== this.lastFootprints) { this.lastFootprints = footprints; this.options.onActiveFootprints?.(activeFootprints); }
+    const signature = JSON.stringify([this.catalogRevision, this.enabled, this.is25d, this.loading, !!this.loadCycle,
+      this.contextLost, this.error, this.trees.length, this.activeTrees, this.treesEnabled, footprints,
+      tracked.map(entry => [entry.asset.id, entry.asset.nameKo, entry.asset.dimensions[1], !!entry.scene, entry.error,
+        entry.ground, entry.active, !!entry.pending])]);
+    if (signature !== this.lastState) { this.lastState = signature; this.options.onState?.(this.getState()); }
   }
   private disposeResources() {
     if (this.disposed) return;
     this.disposed = true; this.abort.abort();
     this.map.off('sourcedata', this.onTerrainData); this.map.off('webglcontextlost', this.onLost); this.map.off('webglcontextrestored', this.onRestored);
     this.map.off('moveend', this.onViewChanged);
-    for (const entry of this.entries) { if (entry.scene) disposeScene(entry.scene); entry.active = false; }
+    this.syncCatalog();
+    for (const entry of this.trackedEntries) { if (entry.scene) disposeScene(entry.scene); entry.active = false; }
     if (this.treeScene) disposeScene(this.treeScene);
     this.renderer?.dispose(); this.activeTrees = 0; this.emit();
   }
