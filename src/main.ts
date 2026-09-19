@@ -27,6 +27,18 @@ type ElevationResult = {
 type MapData = FeatureCollection & { metadata?: { contours?: number; spots?: number; contour_interval_m?: number; simplified_m?: number; truncated?: boolean; spots_sampled?: boolean; points_hidden_at_zoom?: boolean } };
 type TerrainMetadata = { tiles: string[]; coverage_tiles?: string[]; source_hull_url?: string; bounds: [number, number, number, number]; minzoom: number; maxzoom: number; encoding: 'mapbox' | 'terrarium'; tileSize: number; method?: string };
 
+// A Vercel function is ephemeral, so hosted bookmarks belong to this browser
+// instead of being written into whichever function instance handled the request.
+const hosted = !['localhost', '127.0.0.1', '[::1]'].includes(window.location.hostname);
+const bookmarksKey = 'seoul-elevation-local.bookmarks.v1';
+const localBookmarks = (): Bookmark[] => {
+  try {
+    const value = JSON.parse(localStorage.getItem(bookmarksKey) || '[]');
+    return Array.isArray(value) ? value : [];
+  } catch { return []; }
+};
+const saveLocalBookmarks = (bookmarks: Bookmark[]) => localStorage.setItem(bookmarksKey, JSON.stringify(bookmarks));
+
 const icons = {
   contour: '<svg viewBox="0 0 38 38" fill="none" aria-hidden="true"><path d="M2 30C3 18 8 7 21 8s16 14 15 23M8 30c1-12 6-17 14-16s10 7 9 16M14 29c1-6 3-10 9-9s4 7 3 10" stroke="currentColor" stroke-width="1.8"/></svg>',
   search: '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>',
@@ -529,7 +541,7 @@ async function inspect(coordinate: [number, number], featureHeight?: number, kin
 
 async function loadBookmarks() {
   try {
-    const { bookmarks } = await request<{ bookmarks: Bookmark[] }>('/api/bookmarks');
+    const bookmarks = hosted ? localBookmarks() : (await request<{ bookmarks: Bookmark[] }>('/api/bookmarks')).bookmarks;
     $('#bookmark-count').textContent = String(bookmarks.length);
     $('#bookmarks').replaceChildren();
     if (!bookmarks.length) $('#bookmarks').innerHTML = '<p class="muted">저장한 위치는 이 컴퓨터에 남습니다.</p>';
@@ -539,7 +551,11 @@ async function loadBookmarks() {
       go.addEventListener('click', () => { moveTo({ name: bookmark.name, subtitle: '이 컴퓨터에 저장한 위치', center: [bookmark.lon, bookmark.lat], zoom: 15 }); void inspect([bookmark.lon, bookmark.lat]); });
       const remove = document.createElement('button'); remove.className = 'bookmark-remove'; remove.setAttribute('aria-label', `${bookmark.name} 삭제`); remove.innerHTML = icons.close;
       remove.addEventListener('click', async () => {
-        try { await request(`/api/bookmarks/${bookmark.id}`, { method: 'DELETE' }); await loadBookmarks(); }
+        try {
+          if (hosted) saveLocalBookmarks(localBookmarks().filter(item => item.id !== bookmark.id));
+          else await request(`/api/bookmarks/${bookmark.id}`, { method: 'DELETE' });
+          await loadBookmarks();
+        }
         catch { $('#save-status').textContent = '삭제에 실패했습니다.'; }
       });
       row.append(go, remove); $('#bookmarks').append(row);
@@ -617,7 +633,9 @@ $('#save-form').addEventListener('submit', async event => {
   const name = ($('#bookmark-name') as HTMLInputElement).value.trim();
   try {
     if (!name) { $('#save-status').textContent = '위치 이름을 입력해 주세요.'; return; }
-    await request('/api/bookmarks', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name, lon: selectedCoordinate[0], lat: selectedCoordinate[1] }) });
+    const bookmark: Bookmark = { id: crypto.randomUUID(), name, lon: selectedCoordinate[0], lat: selectedCoordinate[1] };
+    if (hosted) saveLocalBookmarks([...localBookmarks(), bookmark]);
+    else await request('/api/bookmarks', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name, lon: selectedCoordinate[0], lat: selectedCoordinate[1] }) });
     $('#save-status').textContent = '이 컴퓨터에 저장했습니다.'; await loadBookmarks();
   } catch { $('#save-status').textContent = '저장에 실패했습니다. 다시 시도해 주세요.'; }
   finally { button.disabled = false; }

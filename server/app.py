@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import argparse
 import gzip
+import os
 from functools import partial
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 import json
@@ -257,6 +258,35 @@ def local_origin(value: str) -> bool:
         return False
 
 
+def hosted_origin(value: str, host: str) -> bool:
+    """Allow same-site requests in a hosted function when explicitly enabled."""
+    if os.environ.get("SEOUL_ALLOW_HOSTED") != "1":
+        return False
+    try:
+        origin, request_host = urlsplit(value), urlsplit("http://" + host)
+        allowed = set()
+        for item in os.environ.get("SEOUL_ALLOWED_ORIGINS", os.environ.get("SEOUL_ALLOWED_HOSTS", "")).split(","):
+            item = item.strip()
+            if item:
+                parsed = urlsplit(item if "://" in item else "//" + item)
+                if parsed.hostname:
+                    allowed.add(parsed.hostname.lower())
+        vercel_url = os.environ.get("VERCEL_URL", "").strip()
+        vercel_url = urlsplit(vercel_url if "://" in vercel_url else "//" + vercel_url).hostname or ""
+        if vercel_url:
+            allowed.add(vercel_url)
+        return (
+            origin.scheme in ("http", "https")
+            and origin.hostname is not None
+            and request_host.hostname in allowed
+            and origin.hostname == request_host.hostname
+            and origin.username is None
+            and origin.password is None
+        )
+    except ValueError:
+        return False
+
+
 class Handler(SimpleHTTPRequestHandler):
     def __init__(self, *args, api: TerrainAPI, directory=None, **kwargs):
         self.api = api
@@ -314,10 +344,13 @@ class Handler(SimpleHTTPRequestHandler):
         super().end_headers()
 
     def check_local(self):
-        if not local_origin("http://" + self.headers.get("Host", "")):
+        host = self.headers.get("Host", "")
+        request_host = "http://" + host
+        local_host = local_origin(request_host)
+        if not local_host and not hosted_origin(request_host, host):
             raise APIError("Only localhost requests are allowed", 403)
         origin = self.headers.get("Origin")
-        if origin and not local_origin(origin):
+        if origin and (local_host and not local_origin(origin) or not local_host and not hosted_origin(origin, host)):
             raise APIError("Only localhost origins are allowed", 403)
 
     def route(self, method):
@@ -335,7 +368,10 @@ class Handler(SimpleHTTPRequestHandler):
                 raise APIError("Repeated query parameters are not allowed")
             args = {key: value[0] for key, value in args.items()}
             if method == "GET" and parsed.path == "/api/health":
-                return self.send_json({"status": "ok", "source_year": self.api.metadata["source_year"], "database": "ready"})
+                result = {"status": "ok", "source_year": self.api.metadata["source_year"], "database": "ready"}
+                if os.environ.get("SEOUL_RELEASE_SHA"):
+                    result["release_sha"] = os.environ["SEOUL_RELEASE_SHA"]
+                return self.send_json(result)
             if method == "GET" and parsed.path == "/api/meta":
                 return self.send_json(self.api.meta())
             if method == "GET" and parsed.path == "/api/places/meta":

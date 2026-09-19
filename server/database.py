@@ -7,10 +7,17 @@ from pathlib import Path
 
 @lru_cache(maxsize=4)
 def _config(path):
+ # Hosted functions cannot rely on a file outside the deployment bundle.  Keep
+ # the file form for local operation and accept the same object as a secret
+ # environment variable for managed runtimes.
+ if path.startswith('json:'):
+  return json.loads(path[5:])['databases']
  return json.loads(Path(path).expanduser().read_text())['databases']
 
 def route(path):
  config=os.environ.get('SEOUL_TURSO_CONFIG')
+ if os.environ.get('SEOUL_TURSO_CONFIG_JSON'):
+  config='json:'+os.environ['SEOUL_TURSO_CONFIG_JSON']
  return _config(config).get(Path(path).name) if config else None
 
 def available(path):return route(path) is not None or Path(path).is_file()
