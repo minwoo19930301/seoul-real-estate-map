@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 
-const assets = JSON.parse(readFileSync('public/models/manifest.json', 'utf8')).assets;
+const assets = JSON.parse(readFileSync('public/models/manifest.json', 'utf8')).assets.filter((a: any) => ['sixtythree', 'lotte', 'nseoul', 'coex'].includes(a.id));
 
 test('four original Blender models render, stay at 1x height, restore solids and remain idle', async ({ page }) => {
   test.setTimeout(180_000);
@@ -79,8 +79,8 @@ test('four original Blender models render, stay at 1x height, restore solids and
   await page.waitForTimeout(1000);
   const frameEnd = await page.evaluate(() => (window as any).__SEOUL_MAP__.cityModels.getState().frameCount);
   expect(frameEnd - frameStart).toBeLessThanOrEqual(3);
-  expect(new Set(requests).size).toBe(4);
-  expect(requests.length).toBe(4);
+  for (const asset of assets) expect(requests.filter(url => url.endsWith('/' + asset.model)).length).toBe(1);
+  expect(requests.length).toBeLessThanOrEqual(128);
   expect(errors).toEqual([]);
   mkdirSync('tests/screenshots', { recursive: true });
   writeFileSync('tests/screenshots/city-model-render-proof.json', JSON.stringify({ results, before, after, idle_frames_in_one_second: frameEnd - frameStart, glb_requests: requests, page_errors: errors }, null, 2));

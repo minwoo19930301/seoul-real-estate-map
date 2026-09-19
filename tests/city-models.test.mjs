@@ -47,7 +47,7 @@ function harness() {
     queryTerrainElevation: () => ground, triggerRepaint() {}, off() {}, getLayer: () => null,
   };
   const models = new CityModels(map, { onActiveFootprints: ids => footprints.push(ids), onState: state => stateEvents.push(state) });
-  models.entries = manifest.assets.map(asset => ({ asset, scene: new THREE.Scene(), error: null, ground: null, draws: 0, active: false }));
+  models.entries = manifest.assets.filter(a => ['sixtythree', 'lotte', 'nseoul', 'coex'].includes(a.id)).map(asset => ({ asset, scene: new THREE.Scene(), error: null, ground: null, draws: 0, active: false }));
   models.renderer = { resetState() {}, render() {}, dispose() {}, info: { render: { calls: 3 } } };
   models.setFootprintMatches(Object.fromEntries(manifest.assets.map(asset => [asset.id, [`real-id:${asset.id}`]])));
   const args = { defaultProjectionData: { mainMatrix: new THREE.Matrix4().elements }, shaderData: { variantName: 'mercator' } };
@@ -128,4 +128,72 @@ test('invalid manifest fails before fetch and exits loading state with originals
   assert.ok(state.message.includes('불러오지 못했습니다'));
   assert.deepEqual(state.activeFootprintIds, []);
   h.models.destroy();
+});
+
+test('dense district catalog limits concurrent loads and evicts old GPU scenes across navigation', async () => {
+  const h = harness();
+  const template = manifest.assets.find(a => a.id === 'lotte');
+  h.models.entries = Array.from({ length: 80 }, (_, i) => ({
+    asset: { ...template, id: `district-${i}`, coordinate: { lon: 127.102679 + (i >= 40 ? 0.05 : 0), lat: 37.5125537 + (i % 40) * 0.000001 } },
+    error: null, ground: null, draws: 0, active: false,
+  }));
+  const originalFetch = globalThis.fetch;
+  let active = 0, maxActive = 0, requests = 0;
+  globalThis.fetch = async () => {
+    active++; requests++; maxActive = Math.max(maxActive, active);
+    await new Promise(resolve => setTimeout(resolve, 3));
+    active--; return new Response(assetBytes(template));
+  };
+  try {
+    h.models.setMode(true); await h.models.loadNearby();
+    assert.equal(requests, 32); assert.ok(maxActive <= 4);
+    h.models.render(h.args);
+    assert.equal(h.models.getState().models.filter(m => m.active).length, 32);
+    h.setCenter([127.152679, 37.5125537]); await h.models.loadNearby();
+    assert.equal(requests, 64);
+    assert.equal(h.models.getState().models.filter(m => m.loaded).length, 48);
+    assert.ok(h.models.entries.slice(0, 40).some(e => !e.scene));
+    h.models.render(h.args);
+    assert.ok(h.models.getState().models.filter(m => m.active).every(m => Number(m.id.split('-')[1]) >= 40));
+  } finally { globalThis.fetch = originalFetch; h.models.destroy(); }
+});
+
+test('moving away cancels queued model work while originals stay visible', async () => {
+  const h = harness();
+  const template = manifest.assets.find(a => a.id === 'lotte');
+  h.models.entries = Array.from({ length: 40 }, (_, i) => ({ asset: { ...template, id: `queued-${i}` }, error: null, ground: null, draws: 0, active: false }));
+  const originalFetch = globalThis.fetch;
+  let requests = 0;
+  globalThis.fetch = async () => {
+    requests++;
+    h.setCenter([126.8, 37.7]);
+    await new Promise(resolve => setTimeout(resolve, 3));
+    return new Response(assetBytes(template));
+  };
+  try {
+    h.models.setMode(true); await h.models.loadNearby();
+    assert.ok(requests <= 4);
+    h.models.render(h.args); assert.deepEqual(h.models.getState().activeFootprintIds, []);
+  } finally { globalThis.fetch = originalFetch; h.models.destroy(); }
+});
+
+test('elevation originals retain their complete manifest records and all 250 selected sites are modeled', () => {
+  const originals = JSON.parse(readFileSync(new URL('./fixtures/preserved-landmarks.json', import.meta.url)));
+  for (const original of originals) assert.deepEqual(manifest.assets.find(a => a.id === original.id), original);
+  const candidates = ['a', 'b'].flatMap(part => JSON.parse(readFileSync(new URL(`../docs/landmark-candidates-${part}.json`, import.meta.url))));
+  assert.equal(candidates.length, 250);
+  assert.equal(new Set(candidates.map(a => a.id)).size, 250);
+  const counts = new Map();
+  const matches = JSON.parse(readFileSync(new URL('../public/models/footprint-matches.json', import.meta.url)));
+  for (const candidate of candidates) {
+    counts.set(candidate.district, (counts.get(candidate.district) ?? 0) + 1);
+    const asset = manifest.assets.find(a => a.id === candidate.id);
+    assert.ok(asset, `Missing selected model ${candidate.nameKo}`);
+    assert.ok(matches[candidate.id]?.length, `No matched source footprint for ${candidate.nameKo}`);
+    assert.ok(candidate.sourceUrls.length && candidate.sourceUrls.every(url => typeof url === 'string' && url.startsWith('https://')));
+  }
+  assert.equal(counts.size, 25);
+  assert.ok([...counts.values()].every(n => n === 10));
+  assert.ok(manifest.assets.some(a => a.id === 'gyeongbokgung'));
+  assert.equal(manifest.assets.length, 255);
 });

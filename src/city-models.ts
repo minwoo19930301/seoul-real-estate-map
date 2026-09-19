@@ -6,7 +6,7 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 export interface CityModelAsset {
   id: string; nameKo: string; model: string; dimensions: [number, number, number];
   coordinate: { lon: number; lat: number }; yawDegFromEast: number;
-  heightDatum: string; sha256: string; referenceUrl: string;
+  heightDatum: string; sha256: string; referenceUrl: string; minZoom?: number; district?: string;
 }
 export interface DecorativeTree { coordinate: [number, number]; height_m: number; crown_radius_m: number }
 export interface CityModelState {
@@ -16,8 +16,8 @@ export interface CityModelState {
   activeFootprintIds: string[]; trees: { count: number; activeCount: number; enabled: boolean; decorative: true };
   frameCount: number; lastDrawCalls: number; error: string | null;
 }
-type Options = { onState?: (state: CityModelState) => void; onActiveFootprints?: (ids: string[]) => void };
-type Entry = { asset: CityModelAsset; scene?: THREE.Scene; error: string | null; ground: number | null; draws: number; active: boolean; pending?: Promise<void> };
+type Options = { assets?: CityModelAsset[]; onState?: (state: CityModelState) => void; onActiveFootprints?: (ids: string[]) => void };
+type Entry = { asset: CityModelAsset; scene?: THREE.Scene; error: string | null; ground: number | null; draws: number; active: boolean; pending?: Promise<void>; lastUsed?: number };
 
 /** GLB metres: +X east, +Y up, +Z south at yaw=0. Ground is already exaggerated. */
 export function modelMercatorMatrix(coordinate: [number, number], groundM: number) {
@@ -55,6 +55,11 @@ export class CityModels {
   private contextLost = false;
   private error: string | null = null;
   private entries: Entry[] = [];
+  private loadCycle?: Promise<void>;
+  private loadAgain = false;
+  private useCounter = 0;
+  private readonly maxNearby = 32;
+  private readonly maxResident = 48;
   private matches: Record<string, string[]> = {};
   private renderer?: THREE.WebGLRenderer;
   private camera = new THREE.Camera();
@@ -88,10 +93,15 @@ export class CityModels {
   private async initialize() {
     this.loading = true; this.emit();
     try {
-      const response = await fetch('/models/manifest.json', { signal: this.abort.signal });
-      if (!response.ok) throw new Error('랜드마크 목록을 불러오지 못했습니다.');
-      const manifest = await response.json() as { assets: CityModelAsset[] };
-      if (!Array.isArray(manifest.assets) || manifest.assets.length > 20) throw new Error('잘못된 모델 목록입니다.');
+      let manifest: { assets: CityModelAsset[] };
+      if (this.options.assets) manifest = { assets: this.options.assets };
+      else {
+        const response = await fetch('/models/manifest.json', { signal: this.abort.signal });
+        if (!response.ok) throw new Error('랜드마크 목록을 불러오지 못했습니다.');
+        manifest = await response.json() as { assets: CityModelAsset[] };
+      }
+      if (!Array.isArray(manifest.assets) || manifest.assets.length > 600) throw new Error('잘못된 모델 목록입니다.');
+      if (new Set(manifest.assets.map(a => a.id)).size !== manifest.assets.length || manifest.assets.some(a => !a.coordinate || !Number.isFinite(a.coordinate.lon) || !Number.isFinite(a.coordinate.lat) || Math.abs(a.coordinate.lon) > 180 || Math.abs(a.coordinate.lat) > 90)) throw new Error('잘못된 모델 위치입니다.');
       this.entries = manifest.assets.map(asset => ({ asset, error: null, ground: null, draws: 0, active: false }));
       const layer: CustomLayerInterface = {
         id: this.layerId, type: 'custom', renderingMode: '3d',
@@ -117,22 +127,55 @@ export class CityModels {
     } finally { this.loading = false; if (!this.disposed) { this.emit(); this.map.triggerRepaint(); } }
   }
   private inView(asset: CityModelAsset) {
-    if (this.map.getZoom() < 13) return false;
+    if (this.map.getZoom() < (asset.minZoom ?? 13)) return false;
     const bounds = this.map.getBounds();
     const dx = (bounds.getEast() - bounds.getWest()) * 0.2;
     const dy = (bounds.getNorth() - bounds.getSouth()) * 0.2;
     return asset.coordinate.lon >= bounds.getWest() - dx && asset.coordinate.lon <= bounds.getEast() + dx
       && asset.coordinate.lat >= bounds.getSouth() - dy && asset.coordinate.lat <= bounds.getNorth() + dy;
   }
-  private async loadNearby() {
-    if (this.disposed || !this.enabled || !this.is25d) return;
-    const nearby = this.entries.filter(entry => this.inView(entry.asset) && !entry.scene && !entry.error);
-    await Promise.all(nearby.map(entry => {
-      if (entry.pending) return entry.pending;
-      // Assign pending before validation can fail synchronously in loadEntry.
-      entry.pending = Promise.resolve().then(() => this.loadEntry(entry));
-      return entry.pending;
-    }));
+  private nearbyEntries() {
+    const bounds = this.map.getBounds();
+    const lon = (bounds.getWest() + bounds.getEast()) / 2;
+    const lat = (bounds.getSouth() + bounds.getNorth()) / 2;
+    const distance = (entry: Entry) => ((entry.asset.coordinate.lon - lon) * Math.cos(lat * Math.PI / 180)) ** 2 + (entry.asset.coordinate.lat - lat) ** 2;
+    return this.entries.filter(entry => this.inView(entry.asset))
+      .sort((a, b) => distance(a) - distance(b) || a.asset.id.localeCompare(b.asset.id))
+      .slice(0, this.maxNearby);
+  }
+  private trimCache() {
+    const protectedEntries = new Set(this.nearbyEntries());
+    const resident = this.entries.filter(entry => !!entry.scene);
+    let excess = resident.length - this.maxResident;
+    for (const entry of resident.sort((a, b) => (a.lastUsed ?? 0) - (b.lastUsed ?? 0))) {
+      if (excess <= 0) break;
+      if (protectedEntries.has(entry) || entry.pending) continue;
+      disposeScene(entry.scene!); entry.scene = undefined; entry.active = false; entry.ground = null; excess--;
+    }
+  }
+  private loadNearby(): Promise<void> {
+    if (this.disposed || !this.enabled || !this.is25d) return Promise.resolve();
+    if (this.loadCycle) { this.loadAgain = true; return this.loadCycle; }
+    this.loadCycle = Promise.resolve().then(async () => {
+      do {
+        this.loadAgain = false;
+        const nearby = this.nearbyEntries();
+        for (const entry of nearby) entry.lastUsed = ++this.useCounter;
+        const queue = nearby.filter(entry => !entry.scene && !entry.error);
+        const worker = async () => {
+          while (queue.length) {
+            const entry = queue.shift()!;
+            if (this.disposed || !this.enabled || !this.is25d || !this.nearbyEntries().includes(entry)) continue;
+            entry.pending = Promise.resolve().then(() => this.loadEntry(entry));
+            await entry.pending;
+            this.trimCache();
+          }
+        };
+        await Promise.all(Array.from({ length: Math.min(4, queue.length) }, worker));
+        this.trimCache();
+      } while (this.loadAgain && !this.disposed && this.enabled && this.is25d);
+    }).finally(() => { this.loadCycle = undefined; if (!this.disposed) this.emit(); });
+    return this.loadCycle;
   }
   private async loadEntry(entry: Entry) {
         try {
@@ -200,9 +243,10 @@ export class CityModels {
     this.drawCalls = 0;
     const supported = args.shaderData.variantName === 'mercator';
     const ready = supported && this.terrainReady();
+    const visible = new Set(this.nearbyEntries());
     for (const entry of this.entries) {
       entry.active = false;
-      if (!this.enabled || !entry.scene || entry.error || !ready || !this.inView(entry.asset)) continue;
+      if (!this.enabled || !entry.scene || entry.error || !ready || !visible.has(entry)) continue;
       const coordinate: [number, number] = [entry.asset.coordinate.lon, entry.asset.coordinate.lat];
       const ground = this.map.queryTerrainElevation(coordinate);
       if (ground === null || !Number.isFinite(ground)) continue;
@@ -253,10 +297,10 @@ export class CityModels {
     this.treesDirty = false;
   }
   getState(): CityModelState {
-    const pending = this.loading || this.entries.some(e => !!e.pending);
+    const pending = this.loading || !!this.loadCycle || this.entries.some(e => !!e.pending);
     const active = this.entries.filter(e => e.active).length;
     const errors = this.entries.filter(e => e.error).length;
-    const message = this.error ?? (this.contextLost ? '그래픽 연결을 복구하는 중입니다.' : !this.is25d ? '주요 건물 모델은 2.5D에서 표시합니다.' : !this.enabled ? '주요 건물 모델 표시 꺼짐' : pending ? '화면 근처의 주요 건물 모델을 불러오는 중…' : errors ? `모델 ${errors}개를 불러오지 못했습니다. 원본 건물 표시를 유지합니다.` : active ? `주요 건물 모델 ${active}개 · 실제 높이 1배 · 외관은 참고 재현` : '주요 건물 위치로 확대하면 모델이 표시됩니다.');
+    const message = this.error ?? (this.contextLost ? '그래픽 연결을 복구하는 중입니다.' : !this.is25d ? '주요 건물 모델은 2.5D에서 표시합니다.' : !this.enabled ? '주요 건물 모델 표시 꺼짐' : pending ? '화면 근처의 주요 건물 모델을 불러오는 중…' : errors ? `모델 ${errors}개를 불러오지 못했습니다. 원본 건물 표시를 유지합니다.` : active ? `주요 건물 모델 ${active}개 · 모형 높이 1배 · 외관은 참고 재현` : '주요 건물 위치로 확대하면 모델이 표시됩니다.');
     return { message, enabled: this.enabled, is25d: this.is25d, loading: pending, contextLost: this.contextLost,
       models: this.entries.map(e => ({ id: e.asset.id, name: e.asset.nameKo, loaded: !!e.scene, active: e.active,
         error: e.error, height_m: e.asset.dimensions[1], ground_m: e.ground, drawCount: e.draws })),

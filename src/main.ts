@@ -13,7 +13,7 @@ import { ScaleReferences } from './scale-references';
 import { StreetView } from './street-view';
 import { isCloseView, queryBounds } from './view-window';
 import { basemapSource, basemapLayers, basemapIds, basemapRoadIds } from './basemap';
-import type { CityModels } from './city-models';
+import type { CityModels, CityModelAsset } from './city-models';
 import { GREENERY_DECORATION_NOTICE, type DecorativeTree, type GreeneryInput } from './greenery';
 
 type Bookmark = { id: string; name: string; lon: number; lat: number };
@@ -314,12 +314,14 @@ async function loadGreenery() {
 
 async function loadCityModels() {
   const { CityModels } = await import('./city-models');
+  const manifest = await request<{ assets: CityModelAsset[] }>('/models/manifest.json');
   cityModels = new CityModels(map, {
+    assets: manifest.assets,
     onState: state => { $('#city-model-status').textContent = state.message; },
     onActiveFootprints: ids => buildings.setModelFootprints(ids),
   });
-  const manifest = await request<{ assets: { id: string; nameKo: string; coordinate: { lon: number; lat: number }; dimensions: number[]; referenceUrl: string }[] }>('/models/manifest.json');
-  modelPlaces = manifest.assets.map(asset => ({ id: `model:${asset.id}`, name: asset.nameKo, subtitle: `주요 빌딩 모형 · 공개 높이 ${asset.dimensions[1]} m`, center: [asset.coordinate.lon, asset.coordinate.lat], zoom: asset.dimensions[1] > 400 ? 15.3 : 16, kind: 'building', source_url: asset.referenceUrl }));
+
+  modelPlaces = manifest.assets.map(asset => ({ id: `model:${asset.id}`, name: asset.nameKo, subtitle: `건물 모형 · 모형 높이 ${Math.round(asset.dimensions[1] * 10) / 10} m`, center: [asset.coordinate.lon, asset.coordinate.lat], zoom: asset.dimensions[1] > 400 ? 15.3 : 16, kind: 'building', source_url: asset.referenceUrl }));
   const matches = await request<Record<string, string[]>>('/models/footprint-matches.json');
   cityModels.setFootprintMatches(matches);
   await cityModels.init();
