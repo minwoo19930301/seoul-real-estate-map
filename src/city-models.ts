@@ -50,6 +50,8 @@ export class CityModels {
   private enabled = true;
   private publicVisible = true;
   private bridgesVisible = true;
+  private culturalVisible = true;
+  private officesVisible = true;
   private treesEnabled = false;
   private is25d = false;
   private loading = false;
@@ -102,7 +104,7 @@ export class CityModels {
         if (!response.ok) throw new Error('랜드마크 목록을 불러오지 못했습니다.');
         manifest = await response.json() as { assets: CityModelAsset[] };
       }
-      if (!Array.isArray(manifest.assets) || manifest.assets.length > 2000) throw new Error('잘못된 모델 목록입니다.');
+      if (!Array.isArray(manifest.assets) || manifest.assets.length > 5000) throw new Error('잘못된 모델 목록입니다.');
       if (new Set(manifest.assets.map(a => a.id)).size !== manifest.assets.length || manifest.assets.some(a => !a.coordinate || !Number.isFinite(a.coordinate.lon) || !Number.isFinite(a.coordinate.lat) || Math.abs(a.coordinate.lon) > 180 || Math.abs(a.coordinate.lat) > 90)) throw new Error('잘못된 모델 위치입니다.');
       this.entries = manifest.assets.map(asset => ({ asset, error: null, ground: null, draws: 0, active: false }));
       const layer: CustomLayerInterface = {
@@ -130,6 +132,7 @@ export class CityModels {
   }
   private inView(asset: CityModelAsset) {
     if (asset.category === 'bridge' && !this.bridgesVisible || ['k12-school', 'district-public-office'].includes(asset.category ?? '') && !this.publicVisible) return false;
+    if (['city-hall', 'cultural-site'].includes(asset.category ?? '') && !this.culturalVisible || asset.category === 'company-office' && !this.officesVisible) return false;
     if (this.map.getZoom() < (asset.minZoom ?? 13)) return false;
     const bounds = this.map.getBounds();
     const dx = (bounds.getEast() - bounds.getWest()) * 0.2;
@@ -207,9 +210,9 @@ export class CityModels {
   setFootprintMatches(matches: Record<string, string[]>) {
     this.matches = Object.fromEntries(Object.entries(matches).map(([id, ids]) => [id, [...new Set(ids)]])); this.emit();
   }
-  setCategories(publicFacilities: boolean, bridges: boolean) {
-    if (this.publicVisible === publicFacilities && this.bridgesVisible === bridges) return;
-    this.publicVisible = publicFacilities; this.bridgesVisible = bridges; void this.loadNearby(); this.updateTerrain();
+  setCategories(publicFacilities: boolean, bridges: boolean, cultural = this.culturalVisible, offices = this.officesVisible) {
+    if (this.publicVisible === publicFacilities && this.bridgesVisible === bridges && this.culturalVisible === cultural && this.officesVisible === offices) return;
+    this.publicVisible = publicFacilities; this.bridgesVisible = bridges; this.culturalVisible = cultural; this.officesVisible = offices; void this.loadNearby(); this.updateTerrain();
   }
   setMode(is25d: boolean) { this.is25d = is25d; void this.loadNearby(); this.updateTerrain(); }
   setVisible(visible: boolean) { this.enabled = visible; void this.loadNearby(); this.updateTerrain(); }

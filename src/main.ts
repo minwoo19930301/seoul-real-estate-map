@@ -60,7 +60,6 @@ $('#app').innerHTML = `
         <p class="muted">지형만 강조합니다. 건물 높이와 고도 숫자는 원본 값입니다.</p>
       </section>
       ${landmarkControls}
-      <label class="layer-row"><span>주요 버스 정류장</span><input id="toggle-bus-stops" type="checkbox" checked aria-label="주요 버스 정류장 표시"/></label>
       <section class="roads-section">
         <div class="section-heading"><h2>차도와 보행로</h2><span class="small-label">종류별 표시</span></div>
         <label class="layer-row"><span class="legend-road"></span><span>차도</span><input id="toggle-roads" type="checkbox" checked aria-label="차도 표시"/></label>
@@ -78,10 +77,12 @@ $('#app').innerHTML = `
         <details class="source-details"><summary>눈높이와 모형 크기</summary><p>사람 키 1.7m, 승용차 길이 4.3m·너비 1.8m·높이 1.5m를 기준으로 고정된 비교 모형을 놓습니다. 실제 사람이나 주차된 차량의 위치를 나타내지는 않습니다.</p><p>이 모드의 지형 배율은 1×입니다. 지면은 등고선·표고점에서 보간했으므로 계단·옹벽·교량 같은 세부 높이와는 차이가 있을 수 있습니다.</p></details>
       </section>
       <section class="city-models-section">
-        <div class="section-heading"><h2>주요 빌딩 · 나무</h2><span class="small-label">2.5D</span></div>
+        <div class="section-heading"><h2>건물 모형 · 나무</h2><span class="small-label">2.5D</span></div>
         <label class="layer-row"><span>건물·교량 모형</span><input id="toggle-city-models" type="checkbox" checked aria-label="주요 빌딩 모형 표시"/></label>
         <label class="layer-row"><span>학교·공공기관</span><input id="toggle-public-models" type="checkbox" checked aria-label="학교 공공기관 모형 표시"/></label>
         <label class="layer-row"><span>대교 구조</span><input id="toggle-bridge-models" type="checkbox" checked aria-label="대교 모형 표시"/></label>
+        <label class="layer-row"><span>시청·문화유산·문화시설</span><input id="toggle-cultural-models" type="checkbox" checked aria-label="시청 문화유산 모형 표시"/></label>
+        <label class="layer-row"><span>주요 회사 건물</span><input id="toggle-company-models" type="checkbox" checked aria-label="주요 회사 모형 표시"/></label>
         <p id="city-model-status" class="muted" role="status">빌딩 모형 준비 중…</p>
         <label class="layer-row"><span>숲에 나무 표현</span><input id="toggle-trees" type="checkbox" checked aria-label="숲 나무 표시"/></label>
         <p id="tree-status" class="muted" role="status"></p>
@@ -224,7 +225,7 @@ async function loadContextMetadata() {
     const timestamp = placeResult.value.sources?.find(source => source.kind === 'osm_overpass')?.osm_timestamp;
     if (timestamp) $('#landmark-source-date').textContent = `장소 핀: OpenStreetMap · ${timestamp.slice(0, 10)} 기준`;
     const apartments = placeResult.value.official_apartments;
-    if (apartments) $('#apartment-coverage').textContent = `400세대 이상 아파트·주상복합 ${apartments.official_complex_count_ge400.toLocaleString()}개 등록 · ${apartments.mapped_complex_count_ge400.toLocaleString()}개 위치 연결 · 서울시 ${apartments.source_date}. 세대수는 관리 단지 코드별 기록입니다.`;
+    if (apartments) $('#apartment-coverage').textContent = `서울시 공동주택 ${apartments.source_date} 기준. 세대수는 관리 단지 코드별 원본 기록이며, 100세대 이상부터 표시합니다.`;
   }
   if (roadResult.status === 'fulfilled' && roadResult.value.source_osm_timestamp) $('#road-source-date').textContent = `OpenStreetMap · ${roadResult.value.source_osm_timestamp.slice(0, 10)} 기준`;
 }
@@ -253,7 +254,9 @@ function applyVisibility() {
 function updateModelVisibility() {
   const enabled = ($('#toggle-buildings') as HTMLInputElement).checked;
   const apartmentsOnly = ($('#apartments-only') as HTMLInputElement).checked;
-  cityModels?.setCategories(($('#toggle-public-models') as HTMLInputElement).checked, ($('#toggle-bridge-models') as HTMLInputElement).checked);
+  cityModels?.setCategories(($('#toggle-public-models') as HTMLInputElement).checked, ($('#toggle-bridge-models') as HTMLInputElement).checked, ($('#toggle-cultural-models') as HTMLInputElement).checked, ($('#toggle-company-models') as HTMLInputElement).checked);
+  setLayerVisible('cultural-site-labels', enabled && ($('#toggle-cultural-models') as HTMLInputElement).checked);
+  setLayerVisible('company-office-labels', enabled && ($('#toggle-company-models') as HTMLInputElement).checked);
   setLayerVisible('public-facility-labels', enabled && ($('#toggle-public-models') as HTMLInputElement).checked);
   cityModels?.setVisible(enabled && !apartmentsOnly && ($('#toggle-city-models') as HTMLInputElement).checked);
   ($('#toggle-city-models') as HTMLInputElement).disabled = !enabled || apartmentsOnly;
@@ -330,10 +333,14 @@ async function loadCityModels() {
     onActiveFootprints: ids => buildings.setModelFootprints(ids),
   });
 
-  modelPlaces = manifest.assets.map(asset => ({ id: `model:${asset.id}`, name: asset.nameKo, subtitle: `${asset.category === 'bridge' ? '대교 모형' : ['k12-school', 'district-public-office'].includes(asset.category ?? '') ? '학교·공공기관 모형' : '건물 모형'} · 모형 높이 ${Math.round(asset.dimensions[1] * 10) / 10} m`, center: [asset.coordinate.lon, asset.coordinate.lat], zoom: asset.dimensions[1] > 400 ? 15.3 : 16, kind: 'building', source_url: asset.referenceUrl }));
+  modelPlaces = manifest.assets.map(asset => ({ id: `model:${asset.id}`, name: asset.nameKo, subtitle: `${asset.category === 'bridge' ? '대교 모형' : asset.category === 'company-office' ? '회사 건물 모형' : ['city-hall', 'cultural-site'].includes(asset.category ?? '') ? '시청·문화시설 모형' : ['k12-school', 'district-public-office'].includes(asset.category ?? '') ? '학교·공공기관 모형' : '건물 모형'} · 모형 높이 ${Math.round(asset.dimensions[1] * 10) / 10} m`, center: [asset.coordinate.lon, asset.coordinate.lat], zoom: asset.dimensions[1] > 400 ? 15.3 : 16, kind: 'building', source_url: asset.referenceUrl }));
   const publicAssets = manifest.assets.filter(a => ['k12-school', 'district-public-office'].includes(a.category ?? ''));
   map.addSource('public-facility-points', { type: 'geojson', data: { type: 'FeatureCollection', features: publicAssets.map(a => ({ type: 'Feature', geometry: { type: 'Point', coordinates: [a.coordinate.lon, a.coordinate.lat] }, properties: { name: a.nameKo } })) } });
   map.addLayer({ id: 'public-facility-labels', type: 'symbol', source: 'public-facility-points', minzoom: 15, layout: { 'text-field': ['get', 'name'], 'text-font': ['Noto Sans Regular'], 'text-size': 11, 'text-offset': [0, 1.1], 'text-allow-overlap': false }, paint: { 'text-color': '#304d45', 'text-halo-color': '#fff', 'text-halo-width': 1.5 } });
+  for (const [id, categories, color] of [['cultural-site', ['city-hall', 'cultural-site'], '#795137'], ['company-office', ['company-office'], '#36556f']] as [string, string[], string][]) {
+    map.addSource(id + '-points', { type: 'geojson', data: { type: 'FeatureCollection', features: manifest.assets.filter(a => categories.includes(a.category ?? '')).map(a => ({ type: 'Feature', geometry: { type: 'Point', coordinates: [a.coordinate.lon, a.coordinate.lat] }, properties: { name: a.nameKo } })) } });
+    map.addLayer({ id: id + '-labels', type: 'symbol', source: id + '-points', minzoom: 14.5, layout: { 'text-field': ['get', 'name'], 'text-font': ['Noto Sans Regular'], 'text-size': 12, 'text-offset': [0, 1], 'text-allow-overlap': false }, paint: { 'text-color': color, 'text-halo-color': '#fff', 'text-halo-width': 1.5 } });
+  }
   const matches = await request<Record<string, string[]>>('/models/footprint-matches.json');
   cityModels.setFootprintMatches(matches);
   await cityModels.init();
@@ -570,8 +577,8 @@ for (const id of ['toggle-roads', 'toggle-walkways', 'toggle-steps']) $(`#${id}`
   applyVisibility();
 });
 for (const id of ['toggle-contours', 'toggle-spots', 'toggle-shade', 'toggle-base']) $(`#${id}`).addEventListener('change', () => { applyVisibility(); if (id === 'toggle-spots') loadFeaturesSoon(); if (id === 'toggle-base' && !($('#toggle-base') as HTMLInputElement).checked) notice(''); });
-for (const id of ['toggle-city-models', 'toggle-buildings', 'apartments-only', 'toggle-public-models', 'toggle-bridge-models']) $(`#${id}`).addEventListener('change', updateModelVisibility);
-for (const id of ['pin-station', 'toggle-landmarks', 'toggle-bus-stops']) $(`#${id}`).addEventListener('change', () => transit?.setKinds(($('#toggle-landmarks') as HTMLInputElement).checked && ($('#pin-station') as HTMLInputElement).checked, ($('#toggle-bus-stops') as HTMLInputElement).checked));
+for (const id of ['toggle-city-models', 'toggle-buildings', 'apartments-only', 'toggle-public-models', 'toggle-bridge-models', 'toggle-cultural-models', 'toggle-company-models']) $(`#${id}`).addEventListener('change', updateModelVisibility);
+for (const id of ['pin-station', 'toggle-landmarks', 'toggle-bus-stops', 'toggle-bike-stations']) $(`#${id}`).addEventListener('change', () => transit?.setKinds(($('#toggle-landmarks') as HTMLInputElement).checked && ($('#pin-station') as HTMLInputElement).checked, ($('#toggle-bus-stops') as HTMLInputElement).checked, ($('#toggle-bike-stations') as HTMLInputElement).checked));
 for (const id of ['toggle-trees', 'toggle-base']) $(`#${id}`).addEventListener('change', () => { applyVisibility(); scheduleGreenery(); });
 $('#render-quality').addEventListener('change', () => {
   const value = Number(($('#render-quality') as HTMLSelectElement).value);
@@ -702,7 +709,7 @@ try {
   // Local data must start even when the optional online basemap has pending tiles.
   map.once('style.load', () => { mapLoaded = true; buildings.init(); landmarks.init();
   avenues = new Avenues(map); void avenues.init().catch(console.error);
-  transit = new TransitLayer(map); void transit.init().then(() => { landmarks.useExternalStations(true); }).catch(console.error);
+  transit = new TransitLayer(map); void transit.init().then(() => { transit.setKinds(($('#toggle-landmarks') as HTMLInputElement).checked && ($('#pin-station') as HTMLInputElement).checked, ($('#toggle-bus-stops') as HTMLInputElement).checked, ($('#toggle-bike-stations') as HTMLInputElement).checked); landmarks.useExternalStations(true); }).catch(console.error);
   renewalZones = new RenewalZones(map); renewalZones.init(); void roads.init(); void loadFeatures(); void loadTerrain(); void loadBookmarks(); void loadContextMetadata(); void loadCityModels().catch(error => { $('#city-model-status').textContent = '주요 빌딩 모형을 불러오지 못했습니다.'; console.error(error); }); });
   map.on('sourcedata', event => { if (event.sourceId === 'osm' && event.sourceDataType === 'content') { greeneryRevision++; scheduleGreenery(); } });
   map.on('idle', scheduleGreenery);
@@ -717,6 +724,8 @@ try {
   map.on('pitch', () => { if (is25d) { const value = Math.round(map.getPitch()); ($('#pitch') as HTMLInputElement).value = String(value); $('#pitch-value').textContent = `${value}°`; } });
   map.on('pitchend', () => { if (is25d) targetPitch = Math.round(map.getPitch()); });
   map.on('click', event => {
+    const transitPoints = ['transit-rail-points', 'transit-bus-points', 'transit-bike-points'].filter(id => map.getLayer(id));
+    if (transitPoints.length && map.queryRenderedFeatures(event.point, { layers: transitPoints }).length) return;
     if (buildings.click(event.point, [event.lngLat.lng, event.lngLat.lat])) return;
     const layers = [...(($('#toggle-spots') as HTMLInputElement).checked ? ['spots'] : []), ...(($('#toggle-contours') as HTMLInputElement).checked ? ['contours'] : [])];
     const features = layers.length ? map.queryRenderedFeatures([[event.point.x - 5, event.point.y - 5], [event.point.x + 5, event.point.y + 5]], { layers }) : [];

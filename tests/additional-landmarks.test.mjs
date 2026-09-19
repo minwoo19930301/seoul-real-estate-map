@@ -12,14 +12,17 @@ function sort(value) {
 const sha = value => createHash('sha256').update(value).digest('hex');
 const manifest = read('public/models/manifest.json');
 const matches = read('public/models/footprint-matches.json');
-test('all 255 previously published models retain exact metadata, geometry and footprint membership', () => {
+const cityUpgrade = read('docs/CIVIC_COMPANY_PROVENANCE.json').upgrades[0];
+function preservedRecord(asset) { return asset.id === cityUpgrade.id ? cityUpgrade.before : asset; }
+function preservedGeometryHash(asset) { return asset.id === cityUpgrade.id ? cityUpgrade.before.sha256 : sha(readFileSync(new URL(`../public/models/${asset.model}`, import.meta.url))); }
+test('all 255 earlier model records remain preserved, with the City Hall upgrade recorded separately', () => {
   const baseline = read('tests/fixtures/preserved-255-landmarks.json');
   assert.equal(baseline.length, 255);
   for (const original of baseline) {
     const asset = manifest.assets.find(a => a.id === original.id);
     assert.ok(asset, original.id);
-    assert.equal(sha(canonical(asset)), original.recordSha256, original.id + ' metadata');
-    assert.equal(sha(readFileSync(new URL(`../public/models/${asset.model}`, import.meta.url))), original.glbSha256, original.id + ' geometry');
+    assert.equal(sha(canonical(preservedRecord(asset))), original.recordSha256, original.id + ' metadata');
+    assert.equal(preservedGeometryHash(asset), original.glbSha256, original.id + ' geometry');
     assert.deepEqual(matches[original.id], original.footprints, original.id + ' replacements');
   }
 });
@@ -29,7 +32,7 @@ test('300 additional sites cover all districts with unique physical footprint ow
   const oldIds = new Set(baseline.map(x => x.id));
   assert.equal(added.length, 300);
   assert.equal(new Set(added.map(x => x.id)).size, 300);
-  assert.equal(manifest.assets.length, 1550);
+  assert.equal(manifest.assets.length, 3088);
   const counts = new Map();
   for (const candidate of added) {
     assert.ok(!oldIds.has(candidate.id));
@@ -52,14 +55,14 @@ test('300 additional sites cover all districts with unique physical footprint ow
   }
 });
 
-test('all 555 earlier model records, files and replacement lists remain unchanged', () => {
+test('all 555 earlier models are preserved except the documented City Hall geometry upgrade', () => {
   const baseline = read('tests/fixtures/preserved-555-landmarks.json');
   assert.equal(baseline.length, 555);
   for (const original of baseline) {
     const asset = manifest.assets.find(a => a.id === original.id);
     assert.ok(asset, original.id);
-    assert.equal(sha(canonical(asset)), original.recordSha256, original.id + ' metadata');
-    assert.equal(sha(readFileSync(new URL(`../public/models/${asset.model}`, import.meta.url))), original.glbSha256, original.id + ' geometry');
+    assert.equal(sha(canonical(preservedRecord(asset))), original.recordSha256, original.id + ' metadata');
+    assert.equal(preservedGeometryHash(asset), original.glbSha256, original.id + ' geometry');
     assert.deepEqual(matches[original.id], original.footprints, original.id + ' replacements');
   }
 });
@@ -69,7 +72,7 @@ test('400-household priority batch accounts for verified counts, unknown counts 
   const audit = read('docs/apartment-400-selection-audit.json');
   const oldIds = new Set(read('tests/fixtures/preserved-555-landmarks.json').map(a => a.id));
   assert.equal(added.length, 605);
-  assert.equal(manifest.assets.length, 1550);
+  assert.equal(manifest.assets.length, 3088);
   assert.equal(new Set(added.map(a => a.id)).size, added.length);
   const counts = new Map();
   for (const candidate of added) {
@@ -93,13 +96,13 @@ test('400-household priority batch accounts for verified counts, unknown counts 
   assert.deepEqual(audit.shortfalls, { '강북구': 6, '금천구': 1, '종로구': 13 });
 });
 
-test('infrastructure expansion preserves every original 1160 model record and footprint assignment', () => {
+test('infrastructure expansion preserves the 1160 baseline and records the later City Hall upgrade', () => {
   const original = read('tests/fixtures/preserved-1160-landmarks.json');
   assert.equal(original.length, 1160);
   for (const baseline of original) {
     const asset = manifest.assets.find(a => a.id === baseline.id);
-    assert.equal(sha(canonical(asset)), baseline.recordSha256, baseline.id);
-    assert.equal(asset.sha256, baseline.glbSha256, baseline.id);
+    assert.equal(sha(canonical(preservedRecord(asset))), baseline.recordSha256, baseline.id);
+    assert.equal(preservedRecord(asset).sha256, baseline.glbSha256, baseline.id);
     assert.deepEqual(matches[baseline.id], baseline.footprints, baseline.id);
   }
   const facilities = read('docs/public-facility-candidates.json');
@@ -117,5 +120,47 @@ test('infrastructure expansion preserves every original 1160 model record and fo
     assert.ok(a.geoBounds.length === 4 && a.geoBounds.every(Number.isFinite));
     assert.deepEqual(matches[a.id], []);
     assert.equal(a.heightEstimated, true);
+  }
+});
+
+test('100+ apartment expansion preserves 1549 prior models and explicitly upgrades only City Hall', () => {
+  const baseline = read('tests/fixtures/preserved-1550-landmarks.json');
+  assert.equal(baseline.length, 1550);
+  assert.equal(read('docs/CIVIC_COMPANY_PROVENANCE.json').upgrades.length, 1);
+  assert.equal(cityUpgrade.before.nameKo, '서울특별시청');
+  for (const original of baseline) {
+    const asset = manifest.assets.find(a => a.id === original.id);
+    assert.equal(sha(canonical(preservedRecord(asset))), original.recordSha256, original.id);
+    assert.deepEqual(matches[original.id], original.footprints);
+    if (asset.id !== cityUpgrade.id) assert.equal(asset.sha256, original.glbSha256);
+  }
+  const updated = manifest.assets.find(a => a.id === cityUpgrade.id);
+  assert.equal(updated.sha256, cityUpgrade.afterSha256);
+  assert.notEqual(updated.sha256, cityUpgrade.before.sha256);
+  assert.notEqual(updated.model, cityUpgrade.before.model);
+  assert.equal(sha(readFileSync(new URL(`../public/models/${cityUpgrade.before.model}`, import.meta.url))), cityUpgrade.before.sha256);
+  assert.equal(updated.category, 'city-hall');
+  assert.equal(updated.nameKo, cityUpgrade.before.nameKo);
+  assert.equal(updated.district, cityUpgrade.before.district);
+  assert.ok(Math.abs(updated.coordinate.lon - cityUpgrade.before.coordinate.lon) < .0001);
+  assert.ok(Math.abs(updated.coordinate.lat - cityUpgrade.before.coordinate.lat) < .0001);
+  const candidates = read('docs/apartment-100-candidates.json');
+  assert.equal(candidates.length, 1514);
+  assert.equal(new Set(candidates.map(c => c.district)).size, 25);
+  for (const candidate of candidates) {
+    const asset = manifest.assets.find(a => a.id === candidate.id);
+    assert.equal(asset.householdCount, candidate.householdCount);
+    assert.ok(asset.householdCount >= 100);
+    assert.equal(asset.apartmentCode, candidate.apartmentCode);
+    assert.deepEqual(asset.footprintIds, candidate.buildingIds);
+    assert.ok(asset.drawCalls <= 3);
+  }
+  const civic = read('docs/civic-company-candidates.json');
+  assert.equal(civic.length, 24);
+  for (const candidate of civic) {
+    const asset = manifest.assets.find(a => a.id === candidate.id);
+    assert.equal(asset.category, candidate.kind);
+    assert.deepEqual(matches[asset.id], candidate.buildingIds);
+    assert.ok(asset.drawCalls <= 3);
   }
 });

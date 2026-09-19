@@ -1,9 +1,22 @@
-# Transit coverage
+# 역·버스 정류장·따릉이 위치
 
-`public/transit.json` contains 311 rail-location records and 51 named bus-stop nodes. `scripts/build_transit.py` reads `data/places.sqlite` for rail points and the retained `data/sources/osm-roads-2026-09-08/overpass.json` snapshot for bus nodes. These files are opened read-only; no live database import is required.
+철도 위치 기록 311개를 유지하고 서울시 공식 원본에서 버스 정류장 11,218곳, 따릉이 대여소 2,786곳을 추가했습니다. 같은 이름이어도 도로 맞은편 정류장은 원본 NODE_ID가 다르면 별도로 유지합니다.
 
-Rail records preserve source points, URLs and location methods. Bus stops preserve the exact longitude, latitude and name of actual OSM `highway=bus_stop` nodes within approximately 222 metres of one of those rail points. This is a straight-line selection rule, not walking distance. The set is partial: it is neither every Seoul stop nor a ranking by ridership. Rail records may represent multiple source locations at one physical interchange; station entrances and platforms are not modeled.
+- 버스: [서울시 버스정류소 위치정보](https://data.seoul.go.kr/dataList/OA-15067/S/1/datasetView.do), `서울시버스정류소위치정보(20260902).xlsx`, 2026-09-02 기준.
+- 따릉이: [서울시 공공자전거 따릉이 대여소 정보](https://data.seoul.go.kr/dataList/OA-13252/F/1/datasetView.do), `공공자전거 대여소 정보(26.6월 기준).xlsx`, 2026년 6월 말 기준, 7월 15일 공개.
+- 철도: 기존 `places.sqlite`의 원본 OSM 위치 311개. 하나의 환승역에 복수 원본 위치 기록이 있을 수 있습니다.
 
-Blue points mark rail locations; amber points mark bus stops. Labels appear with zoom and avoid overlapping. Rail and bus visibility can be controlled separately. Transit source coordinates were checked against the retained raw snapshot: see [TRANSIT_VALIDATION.json](TRANSIT_VALIDATION.json).
+버스·따릉이는 원본 XLSX의 위·경도 숫자를 그대로 사용합니다. 빈 셀을 건너뛰어 열이 밀리지 않도록 셀의 실제 열 문자를 읽습니다. 버스는 NODE_ID, 따릉이는 대여소 번호로 식별하며 버스 ARS-ID의 선행 0도 유지합니다. 서울 구 경계 밖의 좌표와 버스 목록에 들어 있는 한강 선착장은 제외합니다. 제외 행과 사유, 원본 SHA-256, 좌표 검증 기록은 [TRANSIT_VALIDATION.json](TRANSIT_VALIDATION.json)에 있습니다. 기존 OSM 버스·자전거 점을 덧붙여 중복시키지 않습니다.
 
-Regenerate from the repository root with `.venv/bin/python scripts/build_transit.py`. The source snapshot itself stays local and is excluded from Git. Attribution is © OpenStreetMap contributors, ODbL. Source context: [PLACE_SOURCES.md](PLACE_SOURCES.md).
+현재 영업·운영 상태, 버스 도착시간, 따릉이 잔여 대수는 제공하지 않습니다. 기준일 이후 신설·폐쇄·이동은 반영되지 않을 수 있습니다. 지도에서 버스는 갈색, 따릉이는 초록색 점이며 확대하면 이름을 표시하고 점을 누르면 번호·출처를 볼 수 있습니다. 둘은 독립적으로 켜고 끌 수 있습니다.
+
+원본은 로컬 `data/sources/`에 보존하고 Git에 포함하지 않습니다. 버스·따릉이 출처는 서울특별시이며 공공누리 제1유형, 철도 위치는 © OpenStreetMap contributors 및 ODbL입니다.
+
+```sh
+# 고정된 기준일 파일을 공식 공개 다운로드에서 받으며 로그인이나 API 키는 사용하지 않음
+.venv/bin/python scripts/build_transit.py --download
+# 이미 보존된 원본으로 반복 생성
+.venv/bin/python scripts/build_transit.py
+```
+
+공식 다운로드 파일이 없거나 열 구조가 바뀌면 오류로 중단합니다. 일부 OSM 점으로 조용히 대체하지 않습니다.

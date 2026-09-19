@@ -1,7 +1,165 @@
 {
-  "railLocationRecords": 311,
-  "busStopNodes": 51,
-  "busCoordinateCheck": "Exact equality with retained OSM highway=bus_stop node longitude/latitude",
-  "busSelection": "Named actual bus stops within approximately 222m of a retained rail station point; not a ridership ranking or all Seoul stops",
-  "sourceSnapshotSha256": "25f8506f75becdb6b99b1497d24f8b17123a88fdeb7b60210fd191e4b0821978"
+  "counts": {
+    "rail_station": 311,
+    "bus_stop": 11218,
+    "bike_station": 2786
+  },
+  "sources": {
+    "bus_stop": {
+      "file": "data/sources/seoul-bus-stops-20260902/stops.xlsx",
+      "sourceUrl": "https://data.seoul.go.kr/dataList/OA-15067/S/1/datasetView.do",
+      "sourceDate": "2026-09-02",
+      "sourceTitle": "서울시버스정류소위치정보(20260902).xlsx",
+      "sha256": "73eb0a5f4fd0f6128237b5e23fa361fd1c6d8a31a83bcee2884e6a48481852bb",
+      "sourceRows": 11236,
+      "accepted": 11218,
+      "rejected": [
+        {
+          "row": 2,
+          "id": "123000689",
+          "name": "한강버스.잠실선착장",
+          "reason": "ferry landing, not road bus stop"
+        },
+        {
+          "row": 3,
+          "id": "104000315",
+          "name": "한강버스.뚝섬선착장",
+          "reason": "ferry landing, not road bus stop"
+        },
+        {
+          "row": 4,
+          "id": "103000517",
+          "name": "한강버스.옥수선착장",
+          "reason": "ferry landing, not road bus stop"
+        },
+        {
+          "row": 5,
+          "id": "122000752",
+          "name": "한강버스.압구정선착장",
+          "reason": "ferry landing, not road bus stop"
+        },
+        {
+          "row": 6,
+          "id": "118000622",
+          "name": "한강버스.여의도선착장",
+          "reason": "ferry landing, not road bus stop"
+        },
+        {
+          "row": 7,
+          "id": "113000513",
+          "name": "한강버스.망원선착장",
+          "reason": "ferry landing, not road bus stop"
+        },
+        {
+          "row": 8,
+          "id": "115000952",
+          "name": "한강버스.마곡선착장",
+          "reason": "ferry landing, not road bus stop"
+        },
+        {
+          "row": 9,
+          "id": "103000519",
+          "name": "한강버스.서울숲선착장",
+          "reason": "ferry landing, not road bus stop"
+        },
+        {
+          "row": 3901,
+          "id": "110000102",
+          "name": "수락리버시티아파트",
+          "reason": "outside retained Seoul boundary"
+        },
+        {
+          "row": 6954,
+          "id": "116000147",
+          "name": "구일우성아파트",
+          "reason": "outside retained Seoul boundary"
+        },
+        {
+          "row": 7354,
+          "id": "117000907",
+          "name": "독산주공14단지",
+          "reason": "outside retained Seoul boundary"
+        },
+        {
+          "row": 7355,
+          "id": "117000906",
+          "name": "독산주공14단지",
+          "reason": "outside retained Seoul boundary"
+        },
+        {
+          "row": 7661,
+          "id": "117900165",
+          "name": "안양천로입구",
+          "reason": "outside retained Seoul boundary"
+        },
+        {
+          "row": 10570,
+          "id": "123000665",
+          "name": "위례호반써밋",
+          "reason": "outside retained Seoul boundary"
+        },
+        {
+          "row": 10622,
+          "id": "123000644",
+          "name": "위례31단지정문",
+          "reason": "outside retained Seoul boundary"
+        },
+        {
+          "row": 10752,
+          "id": "123000704",
+          "name": "효죽동입구",
+          "reason": "outside retained Seoul boundary"
+        },
+        {
+          "row": 10797,
+          "id": "124000369",
+          "name": "초이동",
+          "reason": "outside retained Seoul boundary"
+        },
+        {
+          "row": 10798,
+          "id": "124000370",
+          "name": "초이동",
+          "reason": "outside retained Seoul boundary"
+        }
+      ]
+    },
+    "bike_station": {
+      "file": "data/sources/transit-2026-09-19/bikes-202606.xlsx",
+      "sourceUrl": "https://data.seoul.go.kr/dataList/OA-13252/F/1/datasetView.do",
+      "sourceDate": "2026-06-30",
+      "sourceTitle": "공공자전거 대여소 정보(26.6월 기준).xlsx",
+      "sha256": "a2dcee10a341ac9d6beaf14f83c1e46b38bc96ffc8289340508b01cac0d464f1",
+      "sourceRows": 2789,
+      "accepted": 2786,
+      "rejected": [
+        {
+          "row": 1108,
+          "id": "1672",
+          "name": "상계동수락리버시티",
+          "reason": "outside retained Seoul boundary"
+        },
+        {
+          "row": 2712,
+          "id": "5766",
+          "name": "북위례1",
+          "reason": "outside retained Seoul boundary"
+        },
+        {
+          "row": 2713,
+          "id": "5767",
+          "name": "북위례2",
+          "reason": "outside retained Seoul boundary"
+        }
+      ]
+    }
+  },
+  "checks": [
+    "unique source identifiers",
+    "original XLSX numeric coordinates without geocoding",
+    "Seoul polygon inclusion for bus and bike",
+    "road bus stops exclude ferry landings",
+    "no OSM bus/bike duplicates appended"
+  ],
+  "scope": "Published location snapshots; neither live service status nor available bicycle counts."
 }

@@ -134,7 +134,7 @@ test('invalid manifest fails before fetch and exits loading state with originals
 test('dense district catalog limits concurrent loads and evicts old GPU scenes across navigation', async () => {
   const h = harness();
   const template = manifest.assets.find(a => a.id === 'lotte');
-  h.models.entries = Array.from({ length: 1200 }, (_, i) => ({
+  h.models.entries = Array.from({ length: 3500 }, (_, i) => ({
     asset: { ...template, id: `district-${i}`, coordinate: { lon: 127.102679 + (i >= 40 ? 0.05 : 0), lat: 37.5125537 + (i % 40) * 0.000001 } },
     error: null, ground: null, draws: 0, active: false,
   }));
@@ -207,5 +207,5 @@ test('elevation originals retain their complete manifest records and all 250 sel
   assert.equal(counts.size, 25);
   assert.ok([...counts.values()].every(n => n === 10));
   assert.ok(manifest.assets.some(a => a.id === 'gyeongbokgung'));
-  assert.equal(manifest.assets.length, 1550);
+  assert.equal(manifest.assets.length, 3088);
 });
