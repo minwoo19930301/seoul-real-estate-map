@@ -2,7 +2,9 @@ import { test, expect } from '@playwright/test';
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 const assets = JSON.parse(readFileSync('public/models/manifest.json', 'utf8')).assets;
 const added = JSON.parse(readFileSync('docs/landmark-candidates-expansion-matched.json', 'utf8'));
+const latest = JSON.parse(readFileSync('docs/apartment-400-matched.json', 'utf8'));
 const samples = [
+  ...['강남구', '노원구', '구로구', '중구'].map(d => assets.find((a: any) => a.id === latest.find((c: any) => c.district === d)?.id)).filter(Boolean),
   ...['강남구', '종로구', '노원구', '강서구'].map(d => assets.find((a: any) => a.id === added.find((c: any) => c.district === d)?.id)),
   assets.find((a: any) => a.id === 'gyeongbokgung'),
   assets.find((a: any) => a.nameKo === '국회의사당'),
@@ -26,7 +28,7 @@ test('imported palace and district models render at their actual map locations',
     await page.waitForFunction(id => (window as any).__SEOUL_MAP__.cityModels.getState().models.some((m: any) => m.id === id && m.active && m.drawCount > 0), asset.id, { timeout: 35_000 });
     await page.waitForLoadState('networkidle');
     const state = await page.evaluate(() => (window as any).__SEOUL_MAP__.cityModels.getState());
-    expect(state.models.length).toBe(555);
+    expect(state.models.length).toBe(assets.length);
     expect(state.models.filter((m: any) => m.loaded).length).toBeLessThanOrEqual(48);
     expect(state.models.filter((m: any) => m.active).length).toBeLessThanOrEqual(32);
     expect(state.models.filter((m: any) => m.error)).toEqual([]);

@@ -1,6 +1,10 @@
+# Current catalogue
+
+A further 605 apartment sites bring the current catalogue to **1,160 models**. See [400-household priority expansion](APARTMENT_400_EXPANSION.md) for confirmed household counts, smaller/unknown-count sites and district shortfalls. The first two batches below remain preserved unchanged.
+
 # District landmark assets
 
-The catalogue now contains **555 models**: the original four elevation models, the flight project's unique Geunjeongjeon model, the first 250 sites (10 per district), and a further **300 apartment complexes (12 per district)**. All 255 previously published model files, full asset records, and footprint-replacement lists are preserved unchanged. Existing elevation asset records and GLB files are retained; their hashes are recorded in `DISTRICT_LANDMARK_PROVENANCE.json`. The original four footprint-replacement lists are retained too.
+The first two expansions produced **555 models**: the original four elevation models, the flight project's unique Geunjeongjeon model, the first 250 sites (10 per district), and a further **300 apartment complexes (12 per district)**. All 255 previously published model files, full asset records, and footprint-replacement lists are preserved unchanged. Existing elevation asset records and GLB files are retained; their hashes are recorded in `DISTRICT_LANDMARK_PROVENANCE.json`. The original four footprint-replacement lists are retained too.
 
 ## Geometry and evidence
 

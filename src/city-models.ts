@@ -100,7 +100,7 @@ export class CityModels {
         if (!response.ok) throw new Error('랜드마크 목록을 불러오지 못했습니다.');
         manifest = await response.json() as { assets: CityModelAsset[] };
       }
-      if (!Array.isArray(manifest.assets) || manifest.assets.length > 600) throw new Error('잘못된 모델 목록입니다.');
+      if (!Array.isArray(manifest.assets) || manifest.assets.length > 2000) throw new Error('잘못된 모델 목록입니다.');
       if (new Set(manifest.assets.map(a => a.id)).size !== manifest.assets.length || manifest.assets.some(a => !a.coordinate || !Number.isFinite(a.coordinate.lon) || !Number.isFinite(a.coordinate.lat) || Math.abs(a.coordinate.lon) > 180 || Math.abs(a.coordinate.lat) > 90)) throw new Error('잘못된 모델 위치입니다.');
       this.entries = manifest.assets.map(asset => ({ asset, error: null, ground: null, draws: 0, active: false }));
       const layer: CustomLayerInterface = {

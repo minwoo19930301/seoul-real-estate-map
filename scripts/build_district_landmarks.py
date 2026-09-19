@@ -180,7 +180,10 @@ def load_candidates(paths):
     return result
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--flight-root',type=Path,default=ROOT.parents[1]/'2026-09-05/new-chat/work/repos/seoul-flight-game');ap.add_argument('--append-candidates',type=Path);ap.add_argument('--expected-count',type=int,default=250);args=ap.parse_args()
+    ap=argparse.ArgumentParser();ap.add_argument('--flight-root',type=Path,default=ROOT.parents[1]/'2026-09-05/new-chat/work/repos/seoul-flight-game');ap.add_argument('--append-candidates',type=Path);ap.add_argument('--expected-count',type=int,default=250);ap.add_argument('--provenance',type=Path);args=ap.parse_args()
+    provenance_path=args.provenance or ROOT/('docs/LANDMARK_EXPANSION_PROVENANCE.json' if args.append_candidates else 'docs/DISTRICT_LANDMARK_PROVENANCE.json')
+    provenance_ref=str(provenance_path.resolve().relative_to(ROOT))
+    if args.provenance:assert not provenance_path.exists(), 'Refusing to overwrite prior provenance'
     manifestfile=OUT/'manifest.json';original=manifestfile.read_text();old=json.loads(original);raw=raw_asset_records(original)
     assert args.append_candidates or len(old['assets'])<=255, 'Use append mode to preserve the expanded catalogue'
     preserved_ids=tuple(a['id'] for a in old['assets']) if args.append_candidates else PRESERVED
@@ -241,7 +244,10 @@ def main():
         if name=='국회의사당':sources.append({'url':'https://theme.archives.go.kr/next/koreaOfRecord/parliamentBldg.do','supports':['64m dome base diameter; dome height 20m from historical design narrative; roof datum estimated']})
         reference=c.get('referenceUrl') or next((s.get('url') for s in sources if isinstance(s,dict) and s.get('url')),'https://www.openstreetmap.org/')
         asset={'id':c['id'],'model':filename,'name':name,'nameKo':name,'district':c.get('district',c.get('districtName')),'category':c.get('kind','apartment-complex'),'minZoom':14.5,'units':'metres',**stats,'rootTransform':'identity','coordinate':{'lon':lon,'lat':lat,'basis':'centre of retained source footprint bounds, Mercator metres; candidate matching documented separately','confidence':'source_footprint_unsurveyed'},'yawDegFromEast':0,'heightDatum':'Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.','referenceUrl':reference,'sources':sources,'geometryProvenance':'Retained real building footprint polygons from data/buildings.sqlite; no modification to database','heightEstimated':True,'sourceHeightAvailableForEveryBuilding':all(p['sourceHeightM'] is not None for p in parts),'modelingEstimates':{'facade':'Procedural window ribbons, piers and mineral colours; not photo-measured','roof':'Setback rooftop plant from inset footprint; estimated','storeyHeightM':3.05,'specialSilhouette':name if name in ('독립문','봉은사 진여문','현충관','국회의사당','올림픽체조경기장','파크원 타워1') else None,'specialSilhouetteProportions':'Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available','storeyFallback':15 if c.get('apartmentCode') else 3,'groundDatum':'shared floor plane, local terrain queried at model anchor'},'buildingCount':len(rows),'footprintIds':ids,'estimatedDetails':['Footprint shape and placement follow the retained source geometry.','Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.','Source building records and matching evidence are in docs/DISTRICT_LANDMARK_PROVENANCE.json.'],'validation':{'finitePositions':True,'unitNormals':True,'noExternalResources':True}}
-        if args.append_candidates:asset['estimatedDetails'][-1]='Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json.'
+        if args.append_candidates:
+            asset['estimatedDetails'][-1]=f'Source building records and matching evidence are in {provenance_ref}.'
+            asset['householdCount']=c.get('householdCount')
+            asset['apartmentCode']=c.get('apartmentCode')
         assets.append(asset);matches[c['id']]=ids;evidence.append({'id':c['id'],'nameKo':name,'district':asset['district'],'selection':c,'buildings':parts})
         print(f"{index+1}/{len(candidates)} {name}: {len(rows)} footprints, {stats['triangles']} triangles",flush=True)
     meta={k:v for k,v in old.items() if k!='assets'}
@@ -250,7 +256,8 @@ def main():
     meta['notice']='Independent source-informed reconstructions. Original four Blender assets retained unchanged; imported Geunjeongjeon and source-footprint district reconstructions. Facades, roofs and missing heights are estimated; not survey/CAD.'
     meta['districtExpansion']={'generator':'scripts/build_district_landmarks.py','count':len([a for a in kept+assets if a.get('district')]),'districtCount':25,'importedFlightIds':old.get('districtExpansion',{}).get('importedFlightIds',[]) if args.append_candidates else [a['id'] for a in imported],'preservedElevationIds':list(PRESERVED),'provenance':'../../docs/DISTRICT_LANDMARK_PROVENANCE.json'}
     if args.append_candidates:
-        meta['districtExpansion']['additionalProvenance']='../../docs/LANDMARK_EXPANSION_PROVENANCE.json'
+        meta['districtExpansion']['additionalProvenance']=old.get('districtExpansion',{}).get('additionalProvenance','../../docs/LANDMARK_EXPANSION_PROVENANCE.json')
+        meta['districtExpansion']['provenanceBatches']=list(dict.fromkeys(old.get('districtExpansion',{}).get('provenanceBatches',['../../docs/DISTRICT_LANDMARK_PROVENANCE.json','../../docs/LANDMARK_EXPANSION_PROVENANCE.json'])+['../../'+provenance_ref]))
         meta['verificationScope']='All previously published assets and footprint lists preserved; appended source-footprint models validated separately.'
     prefix=json.dumps(meta,ensure_ascii=False,indent=2)[:-2]+',\n  "assets": [\n'
     records=['    '+raw[a['id']] for a in kept]
@@ -258,7 +265,7 @@ def main():
     manifestfile.write_text(prefix+',\n'.join(records)+'\n  ]\n}\n')
     (OUT/'footprint-matches.json').write_text(json.dumps(matches,ensure_ascii=False,indent=2)+'\n')
     proof={'schemaVersion':1,'generator':'scripts/build_district_landmarks.py','sourceDatabase':'data/buildings.sqlite (read-only)','preservedHashes':baseline,'districtCounts':dict(Counter(a['district'] for a in assets)),'assets':evidence}
-    (ROOT/('docs/LANDMARK_EXPANSION_PROVENANCE.json' if args.append_candidates else 'docs/DISTRICT_LANDMARK_PROVENANCE.json')).write_text(json.dumps(proof,ensure_ascii=False,indent=2)+'\n')
+    provenance_path.write_text(json.dumps(proof,ensure_ascii=False,indent=2)+'\n')
     reread=raw_asset_records(manifestfile.read_text())
     assert all(raw[k]==reread[k] for k in preserved_ids)
     assert all(hashlib.sha256((OUT/(k+'.glb')).read_bytes()).hexdigest()==baseline[k] for k in preserved_ids)

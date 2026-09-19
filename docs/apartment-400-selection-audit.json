@@ -1,0 +1,2382 @@
+{
+  "minimumHouseholds": 1,
+  "existingModels": 555,
+  "requestedAdditionalPerDistrict": 25,
+  "sourceRemainingAtThreshold": {
+    "성북구": 113,
+    "서초구": 139,
+    "중구": 23,
+    "성동구": 90,
+    "노원구": 193,
+    "관악구": 53,
+    "금천구": 20,
+    "강남구": 202,
+    "강서구": 147,
+    "강북구": 26,
+    "마포구": 100,
+    "중랑구": 78,
+    "양천구": 97,
+    "송파구": 123,
+    "강동구": 100,
+    "동대문구": 90,
+    "용산구": 43,
+    "구로구": 122,
+    "동작구": 95,
+    "영등포구": 141,
+    "서대문구": 61,
+    "도봉구": 84,
+    "은평구": 104,
+    "종로구": 4,
+    "광진구": 47
+  },
+  "eligiblePoolCounts": {
+    "서초구": 125,
+    "노원구": 169,
+    "강남구": 165,
+    "강서구": 127,
+    "양천구": 87,
+    "송파구": 112,
+    "강동구": 84,
+    "성동구": 75,
+    "용산구": 37,
+    "성북구": 97,
+    "구로구": 106,
+    "동작구": 78,
+    "마포구": 86,
+    "강북구": 20,
+    "영등포구": 130,
+    "서대문구": 50,
+    "동대문구": 76,
+    "도봉구": 78,
+    "은평구": 87,
+    "중랑구": 65,
+    "관악구": 46,
+    "광진구": 38,
+    "금천구": 17,
+    "중구": 13,
+    "종로구": 1
+  },
+  "rejected": [
+    {
+      "id": "apt-a13606004",
+      "nameKo": "돈암한신한진아파트",
+      "district": "성북구",
+      "householdCount": 3929,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-a10045302",
+      "nameKo": "신당남산타운(분양)",
+      "district": "중구",
+      "householdCount": 3118,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-a13307204",
+      "nameKo": "행당대림",
+      "district": "성동구",
+      "householdCount": 2399,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-a13984813",
+      "nameKo": "월계주공1단지",
+      "district": "노원구",
+      "householdCount": 2298,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-a13920802",
+      "nameKo": "상계주공15단지",
+      "district": "노원구",
+      "householdCount": 2100,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a10045301",
+      "nameKo": "신당남산타운임대",
+      "district": "중구",
+      "householdCount": 2034,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-a15105503",
+      "nameKo": "관악드림타운제2",
+      "district": "관악구",
+      "householdCount": 1843,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15303002",
+      "nameKo": "관악산벽산타운1단지",
+      "district": "금천구",
+      "householdCount": 1772,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-a15703313",
+      "nameKo": "등촌주공1단지",
+      "district": "강서구",
+      "householdCount": 1670,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-a13593908",
+      "nameKo": "SH공사대치1단지",
+      "district": "강남구",
+      "householdCount": 1623,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-a15722314",
+      "nameKo": "방화2단지",
+      "district": "강서구",
+      "householdCount": 1563,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-a10044002",
+      "nameKo": "롯데캐슬베네치아",
+      "district": "중구",
+      "householdCount": 1534,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-a14272311",
+      "nameKo": "SK북한산시티임대",
+      "district": "강북구",
+      "householdCount": 1497,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a12181103",
+      "nameKo": "마포태영아파트",
+      "district": "마포구",
+      "householdCount": 1424,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-a10027920",
+      "nameKo": "텐즈힐1단지",
+      "district": "성동구",
+      "householdCount": 1369,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-a13175103",
+      "nameKo": "면목한신",
+      "district": "중랑구",
+      "householdCount": 1362,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a10025092",
+      "nameKo": "e편한세상서울대입구아파트",
+      "district": "관악구",
+      "householdCount": 1276,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13009002",
+      "nameKo": "휘경리오포레1단지",
+      "district": "동대문구",
+      "householdCount": 1224,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-a13993503",
+      "nameKo": "하계한신",
+      "district": "노원구",
+      "householdCount": 1200,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-a13377902",
+      "nameKo": "행당대림제2",
+      "district": "성동구",
+      "householdCount": 1005,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-a10045403",
+      "nameKo": "신당삼성(분양)",
+      "district": "중구",
+      "householdCount": 994,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-a15785711",
+      "nameKo": "방화2-2 그린",
+      "district": "강서구",
+      "householdCount": 984,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-a15209007",
+      "nameKo": "개봉 푸르지오",
+      "district": "구로구",
+      "householdCount": 978,
+      "reason": "existing or duplicate OSM site"
+    },
+    {
+      "id": "apt-a13528003",
+      "nameKo": "대치삼성",
+      "district": "강남구",
+      "householdCount": 960,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15210107",
+      "nameKo": "오류동부골든",
+      "district": "구로구",
+      "householdCount": 932,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-a13599301",
+      "nameKo": "개포주공7단지",
+      "district": "강남구",
+      "householdCount": 900,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15681501",
+      "nameKo": "사당우성(4-3)아파트",
+      "district": "동작구",
+      "householdCount": 855,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-a13924004",
+      "nameKo": "삼익포레스트아파트",
+      "district": "노원구",
+      "householdCount": 845,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13921003",
+      "nameKo": "상계주공8단지",
+      "district": "노원구",
+      "householdCount": 830,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13594007",
+      "nameKo": "대청",
+      "district": "강남구",
+      "householdCount": 822,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-a13087407",
+      "nameKo": "휘경리오포레2단지 아파트",
+      "district": "동대문구",
+      "householdCount": 800,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-a15178204",
+      "nameKo": "관악벽산블루밍임대",
+      "district": "관악구",
+      "householdCount": 799,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13972601",
+      "nameKo": "중계건영2차",
+      "district": "노원구",
+      "householdCount": 742,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15601104",
+      "nameKo": "보라매롯데낙천대",
+      "district": "동작구",
+      "householdCount": 734,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13593801",
+      "nameKo": "일원동 수서아파트",
+      "district": "강남구",
+      "householdCount": 720,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a10045402",
+      "nameKo": "약수하이츠아파트(임대)",
+      "district": "중구",
+      "householdCount": 684,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a12102008",
+      "nameKo": "삼성래미안공덕2차",
+      "district": "마포구",
+      "householdCount": 683,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-a10023855",
+      "nameKo": "강동리엔파크13단지아파트",
+      "district": "강동구",
+      "householdCount": 675,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13923103",
+      "nameKo": "하계청구",
+      "district": "노원구",
+      "householdCount": 660,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-a10022556",
+      "nameKo": "래미안 원펜타스",
+      "district": "서초구",
+      "householdCount": 641,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a10023060",
+      "nameKo": "노원롯데캐슬시그니처2단지",
+      "district": "노원구",
+      "householdCount": 610,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-a12170601",
+      "nameKo": "삼성래미안공덕4차",
+      "district": "마포구",
+      "householdCount": 597,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a10027105",
+      "nameKo": "경희궁자이3단지",
+      "district": "종로구",
+      "householdCount": 589,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a10026180",
+      "nameKo": "롯데캐슬노블레스",
+      "district": "동대문구",
+      "householdCount": 584,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13606005",
+      "nameKo": "동소문한진임대",
+      "district": "성북구",
+      "householdCount": 580,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-a12181102",
+      "nameKo": "마포태영제2",
+      "district": "마포구",
+      "householdCount": 566,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-a15303202",
+      "nameKo": "관악벽산2단지",
+      "district": "금천구",
+      "householdCount": 564,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-a12009304",
+      "nameKo": "홍제유원하나",
+      "district": "서대문구",
+      "householdCount": 554,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-a10023024",
+      "nameKo": "노원롯데캐슬시그니처1단지",
+      "district": "노원구",
+      "householdCount": 553,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-a15603003",
+      "nameKo": "상도건영제2 관리사무소",
+      "district": "동작구",
+      "householdCount": 552,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a12220004",
+      "nameKo": "은평뉴타운상림마을12단지",
+      "district": "은평구",
+      "householdCount": 551,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13383801",
+      "nameKo": "옥수중앙하이츠",
+      "district": "성동구",
+      "householdCount": 536,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-a15213003",
+      "nameKo": "천왕이펜하우스2단지",
+      "district": "구로구",
+      "householdCount": 526,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13388001",
+      "nameKo": "청계벽산아파트제2관리사무소",
+      "district": "성동구",
+      "householdCount": 510,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a14207202",
+      "nameKo": "래미안수유",
+      "district": "강북구",
+      "householdCount": 510,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-a15703304",
+      "nameKo": "등촌주공2단지",
+      "district": "강서구",
+      "householdCount": 505,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-a13606102",
+      "nameKo": "돈암범양",
+      "district": "성북구",
+      "householdCount": 499,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a14003006",
+      "nameKo": "이촌동아그린아파트",
+      "district": "용산구",
+      "householdCount": 499,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13406206",
+      "nameKo": "둔촌현대1차",
+      "district": "강동구",
+      "householdCount": 498,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a10027090",
+      "nameKo": "마포센트럴아이파크",
+      "district": "마포구",
+      "householdCount": 497,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a10027553",
+      "nameKo": "위례2차아이파크아파트",
+      "district": "송파구",
+      "householdCount": 495,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13980012",
+      "nameKo": "공릉우방4단지",
+      "district": "노원구",
+      "householdCount": 494,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13824003",
+      "nameKo": "한신코아",
+      "district": "송파구",
+      "householdCount": 493,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a12078707",
+      "nameKo": "홍제원현대임대",
+      "district": "서대문구",
+      "householdCount": 482,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a10025418",
+      "nameKo": "래미안 신반포 리오센트",
+      "district": "서초구",
+      "householdCount": 475,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a12072801",
+      "nameKo": "DMC센트레빌",
+      "district": "서대문구",
+      "householdCount": 473,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13986207",
+      "nameKo": "중계양지대림1-2임대",
+      "district": "노원구",
+      "householdCount": 468,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a10027908",
+      "nameKo": "래미안첼리투스",
+      "district": "용산구",
+      "householdCount": 460,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13302204",
+      "nameKo": "하왕금호베스트빌",
+      "district": "성동구",
+      "householdCount": 458,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15704025",
+      "nameKo": "염창강변한솔솔파크",
+      "district": "강서구",
+      "householdCount": 455,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13480401",
+      "nameKo": "고덕현대",
+      "district": "강동구",
+      "householdCount": 448,
+      "reason": "existing or duplicate OSM site"
+    },
+    {
+      "id": "apt-a14380409",
+      "nameKo": "광장극동1차",
+      "district": "광진구",
+      "householdCount": 448,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15703301",
+      "nameKo": "등촌8단지주공아파트",
+      "district": "강서구",
+      "householdCount": 445,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15205002",
+      "nameKo": "구로두산제2",
+      "district": "구로구",
+      "householdCount": 442,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a10045401",
+      "nameKo": "신당삼성임대",
+      "district": "중구",
+      "householdCount": 440,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-a13592601",
+      "nameKo": "역삼개나리래미안",
+      "district": "강남구",
+      "householdCount": 438,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13980010",
+      "nameKo": "공릉화랑타운",
+      "district": "노원구",
+      "householdCount": 436,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a41279914",
+      "nameKo": "은평뉴타운마고정2단지",
+      "district": "은평구",
+      "householdCount": 434,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15603502",
+      "nameKo": "래미안상도2차",
+      "district": "동작구",
+      "householdCount": 431,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a10025115",
+      "nameKo": "항동중흥S클래스베르데카운티",
+      "district": "구로구",
+      "householdCount": 419,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15603002",
+      "nameKo": "브라운스톤상도",
+      "district": "동작구",
+      "householdCount": 415,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a10023356",
+      "nameKo": "힐스테이트세운센트럴1단지",
+      "district": "중구",
+      "householdCount": 414,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13185603",
+      "nameKo": "신내건영1차",
+      "district": "중랑구",
+      "householdCount": 408,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15004504",
+      "nameKo": "당산상아",
+      "district": "영등포구",
+      "householdCount": 400,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a10024197",
+      "nameKo": "송파레이크힐아파트",
+      "district": "송파구",
+      "householdCount": 394,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13671213",
+      "nameKo": "종암2차SK뷰",
+      "district": "성북구",
+      "householdCount": 393,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15183001",
+      "nameKo": "해태보라매타워",
+      "district": "동작구",
+      "householdCount": 387,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-a13402002",
+      "nameKo": "천호태영",
+      "district": "강동구",
+      "householdCount": 385,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-a14272303",
+      "nameKo": "한일유앤아이",
+      "district": "강북구",
+      "householdCount": 384,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13376405",
+      "nameKo": "성수한진타운",
+      "district": "성동구",
+      "householdCount": 378,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a10025765",
+      "nameKo": "은평 스카이뷰 자이",
+      "district": "은평구",
+      "householdCount": 361,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a12012201",
+      "nameKo": "DMC래미안클라시스",
+      "district": "서대문구",
+      "householdCount": 358,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a10025927",
+      "nameKo": "방배아트자이",
+      "district": "서초구",
+      "householdCount": 353,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13377901",
+      "nameKo": "행당두산위브아파트",
+      "district": "성동구",
+      "householdCount": 351,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-a15703318",
+      "nameKo": "등촌주공11단지",
+      "district": "강서구",
+      "householdCount": 350,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a77777777",
+      "nameKo": "S-아파트",
+      "district": "강남구",
+      "householdCount": 350,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-a13403002",
+      "nameKo": "성내성안청구",
+      "district": "강동구",
+      "householdCount": 349,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13527008",
+      "nameKo": "도곡경남",
+      "district": "강남구",
+      "householdCount": 348,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a12283602",
+      "nameKo": "녹번JR아파트",
+      "district": "은평구",
+      "householdCount": 341,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13509007",
+      "nameKo": "삼성롯데",
+      "district": "강남구",
+      "householdCount": 339,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a10044001",
+      "nameKo": "SH황학롯데캐슬베네치아",
+      "district": "중구",
+      "householdCount": 336,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-a13176902",
+      "nameKo": "신내9단지임대",
+      "district": "중랑구",
+      "householdCount": 335,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a10027969",
+      "nameKo": "왕십리텐즈힐1단지(임대)",
+      "district": "성동구",
+      "householdCount": 333,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-a13579501",
+      "nameKo": "역삼개나리푸르지오",
+      "district": "강남구",
+      "householdCount": 332,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a12072802",
+      "nameKo": "남가좌현대제2",
+      "district": "서대문구",
+      "householdCount": 330,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13375905",
+      "nameKo": "옥수삼성임대",
+      "district": "성동구",
+      "householdCount": 330,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13785001",
+      "nameKo": "방배임광3차",
+      "district": "서초구",
+      "householdCount": 316,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13203102",
+      "nameKo": "쌍문극동",
+      "district": "도봉구",
+      "householdCount": 315,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15213006",
+      "nameKo": "천왕이펜하우스1단지",
+      "district": "구로구",
+      "householdCount": 314,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13985904",
+      "nameKo": "중계현대2차(4동)",
+      "district": "노원구",
+      "householdCount": 313,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a10023897",
+      "nameKo": "위례중앙푸르지오아파트",
+      "district": "송파구",
+      "householdCount": 311,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13380303",
+      "nameKo": "래미안하이리버제2임대",
+      "district": "성동구",
+      "householdCount": 306,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15278301",
+      "nameKo": "오류동부골든SH임대",
+      "district": "구로구",
+      "householdCount": 304,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-a13611002",
+      "nameKo": "길음동부제2",
+      "district": "성북구",
+      "householdCount": 300,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a10020195",
+      "nameKo": "도봉아테라",
+      "district": "도봉구",
+      "householdCount": 299,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13772801",
+      "nameKo": "서초현대아파트",
+      "district": "서초구",
+      "householdCount": 299,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13813007",
+      "nameKo": "오금아남",
+      "district": "송파구",
+      "householdCount": 299,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a12208104",
+      "nameKo": "라이프 씨티아파트",
+      "district": "은평구",
+      "householdCount": 298,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13920105",
+      "nameKo": "상계수락한신",
+      "district": "노원구",
+      "householdCount": 290,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a14004001",
+      "nameKo": "한강타운",
+      "district": "용산구",
+      "householdCount": 289,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a10020486",
+      "nameKo": "디에이치 대치 에델루이아파트",
+      "district": "강남구",
+      "householdCount": 282,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15178202",
+      "nameKo": "봉천벽산블루밍3차",
+      "district": "관악구",
+      "householdCount": 281,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15683601",
+      "nameKo": "상도1동대림",
+      "district": "동작구",
+      "householdCount": 279,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13470502",
+      "nameKo": "신성둔촌미소지움2차",
+      "district": "강동구",
+      "householdCount": 278,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13186905",
+      "nameKo": "라이프미성",
+      "district": "중랑구",
+      "householdCount": 277,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a10025633",
+      "nameKo": "마포 웨스트리버 태영데시앙아파트",
+      "district": "마포구",
+      "householdCount": 276,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13177501",
+      "nameKo": "묵동자이",
+      "district": "중랑구",
+      "householdCount": 274,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15885306",
+      "nameKo": "신정쌍용",
+      "district": "양천구",
+      "householdCount": 270,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a12076601",
+      "nameKo": "북가좌삼호제2",
+      "district": "서대문구",
+      "householdCount": 267,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13077703",
+      "nameKo": "휘경롯데1차",
+      "district": "동대문구",
+      "householdCount": 265,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a10027670",
+      "nameKo": "상봉듀오트리스",
+      "district": "중랑구",
+      "householdCount": 264,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13591903",
+      "nameKo": "역삼개나리",
+      "district": "강남구",
+      "householdCount": 264,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a12185504",
+      "nameKo": "신수성원",
+      "district": "마포구",
+      "householdCount": 260,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13922103",
+      "nameKo": "중계3벽산",
+      "district": "노원구",
+      "householdCount": 259,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13484102",
+      "nameKo": "성내코오롱",
+      "district": "강동구",
+      "householdCount": 257,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a41279908",
+      "nameKo": "은평뉴타운 상림마을3단지",
+      "district": "은평구",
+      "householdCount": 255,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13982103",
+      "nameKo": "상계양우아파트",
+      "district": "노원구",
+      "householdCount": 251,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13922102",
+      "nameKo": "중계신안",
+      "district": "노원구",
+      "householdCount": 250,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13114106",
+      "nameKo": "묵동신안3차",
+      "district": "중랑구",
+      "householdCount": 248,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15605102",
+      "nameKo": "본동한신휴플러스",
+      "district": "동작구",
+      "householdCount": 247,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a10028042",
+      "nameKo": "센시티일육",
+      "district": "동대문구",
+      "householdCount": 245,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a14319303",
+      "nameKo": "자양현대홈타운10차",
+      "district": "광진구",
+      "householdCount": 245,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15280303",
+      "nameKo": "개봉거성푸르뫼2차아피트",
+      "district": "구로구",
+      "householdCount": 245,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a14003001",
+      "nameKo": "동부이촌동우성",
+      "district": "용산구",
+      "householdCount": 243,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13186503",
+      "nameKo": "신내석탑",
+      "district": "중랑구",
+      "householdCount": 242,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a41279905",
+      "nameKo": "은평뉴타운상림마을4단지",
+      "district": "은평구",
+      "householdCount": 241,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13401002",
+      "nameKo": "길동신동아3차",
+      "district": "강동구",
+      "householdCount": 240,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13576201",
+      "nameKo": "청담건영아파트",
+      "district": "강남구",
+      "householdCount": 240,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13009101",
+      "nameKo": "휘경롯데낙천대",
+      "district": "동대문구",
+      "householdCount": 239,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13671203",
+      "nameKo": "종암선경아파트",
+      "district": "성북구",
+      "householdCount": 238,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13790707",
+      "nameKo": "잠원현대",
+      "district": "서초구",
+      "householdCount": 238,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13375904",
+      "nameKo": "옥수하이츠제2",
+      "district": "성동구",
+      "householdCount": 237,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-a13980403",
+      "nameKo": "공릉삼익2차",
+      "district": "노원구",
+      "householdCount": 237,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15722009",
+      "nameKo": "마곡엠밸리1단지",
+      "district": "강서구",
+      "householdCount": 237,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a12009302",
+      "nameKo": "인왕산벽산아파트",
+      "district": "서대문구",
+      "householdCount": 236,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13981402",
+      "nameKo": "상계청암1단지",
+      "district": "노원구",
+      "householdCount": 234,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13406003",
+      "nameKo": "둔촌하이츠",
+      "district": "강동구",
+      "householdCount": 232,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13527005",
+      "nameKo": "현대비전21",
+      "district": "강남구",
+      "householdCount": 232,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13580601",
+      "nameKo": "개포우성9차",
+      "district": "강남구",
+      "householdCount": 232,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a14386802",
+      "nameKo": "자양경남",
+      "district": "광진구",
+      "householdCount": 232,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a41279906",
+      "nameKo": "은평뉴타운상림마을10단지",
+      "district": "은평구",
+      "householdCount": 230,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13006001",
+      "nameKo": "제기경동미주",
+      "district": "동대문구",
+      "householdCount": 228,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13080801",
+      "nameKo": "답십리대림",
+      "district": "동대문구",
+      "householdCount": 228,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15788901",
+      "nameKo": "화곡미성",
+      "district": "강서구",
+      "householdCount": 228,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15601002",
+      "nameKo": "보라매아카데미타워아파트",
+      "district": "동작구",
+      "householdCount": 225,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a10026197",
+      "nameKo": "문래동모아미래도아파트",
+      "district": "영등포구",
+      "householdCount": 222,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13071301",
+      "nameKo": "전농동아임대",
+      "district": "동대문구",
+      "householdCount": 220,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a14320002",
+      "nameKo": "구의대림아크로리버",
+      "district": "광진구",
+      "householdCount": 220,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15009603",
+      "nameKo": "문래대원",
+      "district": "영등포구",
+      "householdCount": 218,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15210104",
+      "nameKo": "오류라인",
+      "district": "구로구",
+      "householdCount": 218,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13009202",
+      "nameKo": "휘경동일하이빌",
+      "district": "동대문구",
+      "householdCount": 216,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13183502",
+      "nameKo": "면목삼익",
+      "district": "중랑구",
+      "householdCount": 216,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15883803",
+      "nameKo": "신월대림",
+      "district": "양천구",
+      "householdCount": 215,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15009401",
+      "nameKo": "리버뷰신안인스빌",
+      "district": "영등포구",
+      "householdCount": 212,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13528001",
+      "nameKo": "대치대우아이빌4차",
+      "district": "강남구",
+      "householdCount": 210,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15885303",
+      "nameKo": "신정대림",
+      "district": "양천구",
+      "householdCount": 210,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a14010001",
+      "nameKo": "용산아크로타워",
+      "district": "용산구",
+      "householdCount": 208,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15209303",
+      "nameKo": "개봉대상아파트",
+      "district": "구로구",
+      "householdCount": 208,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13470104",
+      "nameKo": "청광플러스원큐브3차",
+      "district": "강동구",
+      "householdCount": 207,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15679103",
+      "nameKo": "우리유앤미",
+      "district": "동작구",
+      "householdCount": 206,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15881601",
+      "nameKo": "목동극동늘푸른",
+      "district": "양천구",
+      "householdCount": 206,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13201203",
+      "nameKo": "도봉극동아파트",
+      "district": "도봉구",
+      "householdCount": 205,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15210103",
+      "nameKo": "동부2차아파트",
+      "district": "구로구",
+      "householdCount": 205,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15807202",
+      "nameKo": "신정명지해드는터",
+      "district": "양천구",
+      "householdCount": 205,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a10023829",
+      "nameKo": "꿈의숲한신더휴아파트",
+      "district": "강북구",
+      "householdCount": 203,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a12172402",
+      "nameKo": "서희스타힐스",
+      "district": "마포구",
+      "householdCount": 203,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a12276901",
+      "nameKo": "구산그린빌",
+      "district": "은평구",
+      "householdCount": 203,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a10027472",
+      "nameKo": "상도효성해링턴플레이스",
+      "district": "동작구",
+      "householdCount": 202,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a14206302",
+      "nameKo": "번동한진",
+      "district": "강북구",
+      "householdCount": 202,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a10026162",
+      "nameKo": "상록타워 아파트",
+      "district": "광진구",
+      "householdCount": 200,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13780002",
+      "nameKo": "신반포한신23차",
+      "district": "서초구",
+      "householdCount": 200,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a14380202",
+      "nameKo": "광장일신워커힐",
+      "district": "광진구",
+      "householdCount": 200,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-a12170602",
+      "nameKo": "공덕2삼성임대",
+      "district": "마포구",
+      "householdCount": 199,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-a13487103",
+      "nameKo": "천호코오롱",
+      "district": "강동구",
+      "householdCount": 198,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13580001",
+      "nameKo": "개포현대3차",
+      "district": "강남구",
+      "householdCount": 198,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13876112",
+      "nameKo": "송파파인타운13단지",
+      "district": "송파구",
+      "householdCount": 197,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13610001",
+      "nameKo": "정릉우방아파트",
+      "district": "성북구",
+      "householdCount": 196,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15703005",
+      "nameKo": "등촌대동황토방2차아파트",
+      "district": "강서구",
+      "householdCount": 196,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a10023059",
+      "nameKo": "더샵파크솔레이유아파트",
+      "district": "강동구",
+      "householdCount": 195,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15072002",
+      "nameKo": "당산SHVILLE",
+      "district": "영등포구",
+      "householdCount": 195,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13114103",
+      "nameKo": "묵동금호어울림",
+      "district": "중랑구",
+      "householdCount": 193,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13676501",
+      "nameKo": "정릉쌍용",
+      "district": "성북구",
+      "householdCount": 193,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13679903",
+      "nameKo": "돈암신일해피트리",
+      "district": "성북구",
+      "householdCount": 192,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13922002",
+      "nameKo": "중계진로유통조합아파트(중계진로대림아파트)",
+      "district": "노원구",
+      "householdCount": 192,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13905101",
+      "nameKo": "월계한일1차",
+      "district": "노원구",
+      "householdCount": 190,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13824001",
+      "nameKo": "포스코더샵스타리버",
+      "district": "송파구",
+      "householdCount": 189,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a41279925",
+      "nameKo": "은평뉴타운제각말5단지제3",
+      "district": "은평구",
+      "householdCount": 189,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a10023695",
+      "nameKo": "힐데스하임천호아파트",
+      "district": "강동구",
+      "householdCount": 188,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a10028056",
+      "nameKo": "북한산힐스테이트7차제2 (임대)",
+      "district": "은평구",
+      "householdCount": 188,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13079402",
+      "nameKo": "이문현대임대",
+      "district": "동대문구",
+      "householdCount": 188,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15009602",
+      "nameKo": "문래한신",
+      "district": "영등포구",
+      "householdCount": 186,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15783902",
+      "nameKo": "등촌태영",
+      "district": "강서구",
+      "householdCount": 186,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15786405",
+      "nameKo": "염창우성2차",
+      "district": "강서구",
+      "householdCount": 186,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13487102",
+      "nameKo": "천호현대타워",
+      "district": "강동구",
+      "householdCount": 185,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a14376501",
+      "nameKo": "한솔리베르",
+      "district": "광진구",
+      "householdCount": 185,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a10024258",
+      "nameKo": "디에이치포레센트아파트",
+      "district": "강남구",
+      "householdCount": 184,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15176602",
+      "nameKo": "봉천건영6차아파트",
+      "district": "관악구",
+      "householdCount": 184,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a12180401",
+      "nameKo": "공덕현대",
+      "district": "마포구",
+      "householdCount": 183,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13591402",
+      "nameKo": "역삼금호어울림",
+      "district": "강남구",
+      "householdCount": 183,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a12010101",
+      "nameKo": "홍은풍림1차",
+      "district": "서대문구",
+      "householdCount": 181,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a14207201",
+      "nameKo": "래미안수유임대",
+      "district": "강북구",
+      "householdCount": 180,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-a15882103",
+      "nameKo": "목동진도2차",
+      "district": "양천구",
+      "householdCount": 179,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13790905",
+      "nameKo": "신반포한신14차",
+      "district": "서초구",
+      "householdCount": 178,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a14319301",
+      "nameKo": "자양현대6차",
+      "district": "광진구",
+      "householdCount": 178,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15676702",
+      "nameKo": "본동SH-ville",
+      "district": "동작구",
+      "householdCount": 176,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a41279922",
+      "nameKo": "은평뉴타운제각말5단지제2",
+      "district": "은평구",
+      "householdCount": 175,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13183202",
+      "nameKo": "용마한신2차아파트",
+      "district": "중랑구",
+      "householdCount": 174,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15685201",
+      "nameKo": "신대방우성2차",
+      "district": "동작구",
+      "householdCount": 174,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15280602",
+      "nameKo": "신개봉삼환",
+      "district": "구로구",
+      "householdCount": 173,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a12185001",
+      "nameKo": "성사1차 풍림아파트",
+      "district": "마포구",
+      "householdCount": 172,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13527002",
+      "nameKo": "도곡현대그린",
+      "district": "강남구",
+      "householdCount": 171,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15882201",
+      "nameKo": "신월수명산SK-VIEW",
+      "district": "양천구",
+      "householdCount": 171,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15009601",
+      "nameKo": "문래미원아파트",
+      "district": "영등포구",
+      "householdCount": 170,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15010301",
+      "nameKo": "양평우림루미아트",
+      "district": "영등포구",
+      "householdCount": 170,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15722001",
+      "nameKo": "마곡삼성",
+      "district": "강서구",
+      "householdCount": 170,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15784201",
+      "nameKo": "등촌현대1차(한마음)",
+      "district": "강서구",
+      "householdCount": 170,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13184502",
+      "nameKo": "면목성원",
+      "district": "중랑구",
+      "householdCount": 168,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a10027708",
+      "nameKo": "인왕산2차아이파크아파트",
+      "district": "종로구",
+      "householdCount": 167,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a12289401",
+      "nameKo": "뉴신사신성아파트",
+      "district": "은평구",
+      "householdCount": 167,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13008001",
+      "nameKo": "신이문금호어울림",
+      "district": "동대문구",
+      "householdCount": 166,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13707002",
+      "nameKo": "아남",
+      "district": "서초구",
+      "householdCount": 166,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15704002",
+      "nameKo": "염창 일신건영휴먼빌아파트",
+      "district": "강서구",
+      "householdCount": 166,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13882401",
+      "nameKo": "문정푸르지오2차",
+      "district": "송파구",
+      "householdCount": 165,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15208201",
+      "nameKo": "고척양우",
+      "district": "구로구",
+      "householdCount": 165,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15603007",
+      "nameKo": "상도래미안1차제2",
+      "district": "동작구",
+      "householdCount": 164,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15776001",
+      "nameKo": "염창강변월드메르디앙",
+      "district": "강서구",
+      "householdCount": 164,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15704001",
+      "nameKo": "염창2차한화꿈에그린",
+      "district": "강서구",
+      "householdCount": 163,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a10022974",
+      "nameKo": "준타워",
+      "district": "영등포구",
+      "householdCount": 162,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a10027684",
+      "nameKo": "당산브라운스톤아파트",
+      "district": "영등포구",
+      "householdCount": 162,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13608401",
+      "nameKo": "보문하우스토리주상복합",
+      "district": "성북구",
+      "householdCount": 162,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a10078902",
+      "nameKo": "래미안신당하이베르임대",
+      "district": "중구",
+      "householdCount": 161,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a12111001",
+      "nameKo": "마포경남아너스빌",
+      "district": "마포구",
+      "householdCount": 160,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13790902",
+      "nameKo": "잠원킴스빌리지",
+      "district": "서초구",
+      "householdCount": 160,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13880201",
+      "nameKo": "가락현대6차",
+      "district": "송파구",
+      "householdCount": 160,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a14001101",
+      "nameKo": "대우월드마크용산",
+      "district": "용산구",
+      "householdCount": 160,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15009501",
+      "nameKo": "문래진주",
+      "district": "영등포구",
+      "householdCount": 160,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15284302",
+      "nameKo": "구로대성스카이렉스",
+      "district": "구로구",
+      "householdCount": 160,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13373101",
+      "nameKo": "행당한신임대",
+      "district": "성동구",
+      "householdCount": 159,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a14321001",
+      "nameKo": "광장11현대홈타운",
+      "district": "광진구",
+      "householdCount": 159,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15209003",
+      "nameKo": "청실아파트",
+      "district": "구로구",
+      "householdCount": 156,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15881702",
+      "nameKo": "목동성원",
+      "district": "양천구",
+      "householdCount": 155,
+      "reason": "existing or duplicate OSM site"
+    },
+    {
+      "id": "apt-a13991015",
+      "nameKo": "월계유원",
+      "district": "노원구",
+      "householdCount": 154,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15288801",
+      "nameKo": "신도림우성5차",
+      "district": "구로구",
+      "householdCount": 154,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15805101",
+      "nameKo": "목동대원칸타빌",
+      "district": "양천구",
+      "householdCount": 154,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13285601",
+      "nameKo": "방학신동아5단지",
+      "district": "도봉구",
+      "householdCount": 153,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13873701",
+      "nameKo": "오금현대백조(임대)",
+      "district": "송파구",
+      "householdCount": 153,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13186801",
+      "nameKo": "신내다우훼밀리",
+      "district": "중랑구",
+      "householdCount": 152,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13403001",
+      "nameKo": "성내2차e-편한세상",
+      "district": "강동구",
+      "householdCount": 151,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a12009001",
+      "nameKo": "홍제유원하나제2",
+      "district": "서대문구",
+      "householdCount": 150,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-a13486701",
+      "nameKo": "천호삼익",
+      "district": "강동구",
+      "householdCount": 150,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13993002",
+      "nameKo": "중계현대2차",
+      "district": "노원구",
+      "householdCount": 140,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a10023939",
+      "nameKo": "삼성석탑아파트",
+      "district": "강남구",
+      "householdCount": 139,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-b13077001",
+      "nameKo": "전농삼성임대",
+      "district": "동대문구",
+      "householdCount": 139,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15603009",
+      "nameKo": "상도더샵2차",
+      "district": "동작구",
+      "householdCount": 138,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a10024820",
+      "nameKo": "현대까르띠에710아파트",
+      "district": "강남구",
+      "householdCount": 137,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a10023075",
+      "nameKo": "지와인 아파트",
+      "district": "강서구",
+      "householdCount": 136,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a10025018",
+      "nameKo": "응암SH빌아파트",
+      "district": "은평구",
+      "householdCount": 136,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a11076701",
+      "nameKo": "주상복합아남아파트",
+      "district": "종로구",
+      "householdCount": 136,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a12204005",
+      "nameKo": "북한산래미안아파트(임대)",
+      "district": "은평구",
+      "householdCount": 135,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13204003",
+      "nameKo": "창동한승미메이드",
+      "district": "도봉구",
+      "householdCount": 135,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a10022412",
+      "nameKo": "신림한양아파트",
+      "district": "관악구",
+      "householdCount": 132,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13779431",
+      "nameKo": "신반포22",
+      "district": "서초구",
+      "householdCount": 132,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-b11680014",
+      "nameKo": "대원칸타빌(신사동)",
+      "district": "강남구",
+      "householdCount": 130,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a12179006",
+      "nameKo": "신공덕e-편한세상",
+      "district": "마포구",
+      "householdCount": 128,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15776004",
+      "nameKo": "현대3",
+      "district": "강서구",
+      "householdCount": 127,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-b12273701",
+      "nameKo": "은평뉴타운상림마을9단지",
+      "district": "은평구",
+      "householdCount": 127,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-b20161229",
+      "nameKo": "신월신도브래뉴2차",
+      "district": "양천구",
+      "householdCount": 126,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-a10021288",
+      "nameKo": "라이프시티아파트",
+      "district": "은평구",
+      "householdCount": 123,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a10024620",
+      "nameKo": "인왕산어울림 아파트",
+      "district": "서대문구",
+      "householdCount": 123,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a10024692",
+      "nameKo": "세한숲속마을아파트",
+      "district": "서대문구",
+      "householdCount": 121,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13611010",
+      "nameKo": "길음뉴타운8단지제2",
+      "district": "성북구",
+      "householdCount": 120,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13872504",
+      "nameKo": "장미3차",
+      "district": "송파구",
+      "householdCount": 120,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15609008",
+      "nameKo": "사당대아2차",
+      "district": "동작구",
+      "householdCount": 120,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-b11680020",
+      "nameKo": "삼성동롯데캐슬킹덤",
+      "district": "강남구",
+      "householdCount": 118,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-a10024770",
+      "nameKo": "상계 대창센시티",
+      "district": "노원구",
+      "householdCount": 117,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-b13307001",
+      "nameKo": "행당두산위브임대",
+      "district": "성동구",
+      "householdCount": 114,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-b20161027",
+      "nameKo": "삼성파크아파트",
+      "district": "강남구",
+      "householdCount": 114,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-b11680022",
+      "nameKo": "거평프리젠",
+      "district": "강남구",
+      "householdCount": 113,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a10024801",
+      "nameKo": "황학코아루",
+      "district": "중구",
+      "householdCount": 112,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a15772902",
+      "nameKo": "등촌우성102동",
+      "district": "강서구",
+      "householdCount": 110,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-b11680001",
+      "nameKo": "일원대우",
+      "district": "강남구",
+      "householdCount": 110,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-a10024634",
+      "nameKo": "신림서초아파트",
+      "district": "관악구",
+      "householdCount": 109,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a10026024",
+      "nameKo": "독산라이프아파트",
+      "district": "금천구",
+      "householdCount": 109,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a10025280",
+      "nameKo": "청담아이파크아파트",
+      "district": "강남구",
+      "householdCount": 108,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a10026279",
+      "nameKo": "방학금광포란재아파트",
+      "district": "도봉구",
+      "householdCount": 105,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a10024603",
+      "nameKo": "종암sh빌아파트",
+      "district": "성북구",
+      "householdCount": 104,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a12179003",
+      "nameKo": "신공덕2삼성래미안제2",
+      "district": "마포구",
+      "householdCount": 103,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a77777778",
+      "nameKo": "오픈아파트2",
+      "district": "성북구",
+      "householdCount": 100,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-a13611012",
+      "nameKo": "길음뉴타운7단지제2",
+      "district": "성북구",
+      "householdCount": 99,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-b13679401",
+      "nameKo": "길음뉴타운7단지 제2",
+      "district": "성북구",
+      "householdCount": 99,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-b13072601",
+      "nameKo": "용두두산위브임대",
+      "district": "동대문구",
+      "householdCount": 95,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-b13307002",
+      "nameKo": "행당푸르지오임대",
+      "district": "성동구",
+      "householdCount": 94,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-b20160929",
+      "nameKo": "청담4차e편한세상",
+      "district": "강남구",
+      "householdCount": 94,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-a13706002",
+      "nameKo": "방배SH-VILLE",
+      "district": "서초구",
+      "householdCount": 81,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-b20161019",
+      "nameKo": "돈암대성유니드",
+      "district": "성북구",
+      "householdCount": 81,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-a10026337",
+      "nameKo": "래미안서초7차아파트",
+      "district": "서초구",
+      "householdCount": 79,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a13570502",
+      "nameKo": "래미안삼성1차104단지",
+      "district": "강남구",
+      "householdCount": 77,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a10025550",
+      "nameKo": "두산힐스빌아파트",
+      "district": "서초구",
+      "householdCount": 76,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-a10025204",
+      "nameKo": "수서하니움",
+      "district": "강남구",
+      "householdCount": 73,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-b11680041",
+      "nameKo": "도곡3차아이파크",
+      "district": "강남구",
+      "householdCount": 72,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-b11680046",
+      "nameKo": "금호어울림(삼성동)",
+      "district": "강남구",
+      "householdCount": 68,
+      "reason": "within 100m of an existing or preferred candidate anchor"
+    },
+    {
+      "id": "apt-b20161103",
+      "nameKo": "세방하이빌",
+      "district": "강남구",
+      "householdCount": 67,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-b11680050",
+      "nameKo": "논현베르빌",
+      "district": "강남구",
+      "householdCount": 65,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-b15672601",
+      "nameKo": "쌍용스위트닷홈임대",
+      "district": "동작구",
+      "householdCount": 65,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-b11680060",
+      "nameKo": "도곡2차 I-Park",
+      "district": "강남구",
+      "householdCount": 58,
+      "reason": "unresolved or ambiguous source coordinate"
+    },
+    {
+      "id": "apt-b11680063",
+      "nameKo": "선경301(대치동)",
+      "district": "강남구",
+      "householdCount": 54,
+      "reason": "unresolved or ambiguous source coordinate"
+    }
+  ],
+  "priorityHouseholds": 400,
+  "selectionPolicy": "Prefer source-confirmed 400+ households, then smaller official complexes; named apartment footprints with unknown household count supplement deficient districts.",
+  "matchedTotal": 605,
+  "atLeast400": 445,
+  "below400": 127,
+  "unknownHouseholds": 33,
+  "finalCounts": {
+    "강남구": 25,
+    "강동구": 25,
+    "강북구": 19,
+    "강서구": 25,
+    "관악구": 25,
+    "광진구": 25,
+    "구로구": 25,
+    "금천구": 24,
+    "노원구": 25,
+    "도봉구": 25,
+    "동대문구": 25,
+    "동작구": 25,
+    "마포구": 25,
+    "서대문구": 25,
+    "서초구": 25,
+    "성동구": 25,
+    "성북구": 25,
+    "송파구": 25,
+    "양천구": 25,
+    "영등포구": 25,
+    "용산구": 25,
+    "은평구": 25,
+    "종로구": 12,
+    "중구": 25,
+    "중랑구": 25
+  },
+  "shortfalls": {
+    "강북구": 6,
+    "금천구": 1,
+    "종로구": 13
+  },
+  "scope": "Remaining source records and conservative footprint matches; not proof that no other apartment sites exist in these districts."
+}

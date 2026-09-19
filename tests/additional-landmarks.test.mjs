@@ -29,7 +29,7 @@ test('300 additional sites cover all districts with unique physical footprint ow
   const oldIds = new Set(baseline.map(x => x.id));
   assert.equal(added.length, 300);
   assert.equal(new Set(added.map(x => x.id)).size, 300);
-  assert.equal(manifest.assets.length, 555);
+  assert.equal(manifest.assets.length, 555 + read("docs/apartment-400-matched.json").length);
   const counts = new Map();
   for (const candidate of added) {
     assert.ok(!oldIds.has(candidate.id));
@@ -50,4 +50,45 @@ test('300 additional sites cover all districts with unique physical footprint ow
       owners.set(footprint, id);
     }
   }
+});
+
+test('all 555 earlier model records, files and replacement lists remain unchanged', () => {
+  const baseline = read('tests/fixtures/preserved-555-landmarks.json');
+  assert.equal(baseline.length, 555);
+  for (const original of baseline) {
+    const asset = manifest.assets.find(a => a.id === original.id);
+    assert.ok(asset, original.id);
+    assert.equal(sha(canonical(asset)), original.recordSha256, original.id + ' metadata');
+    assert.equal(sha(readFileSync(new URL(`../public/models/${asset.model}`, import.meta.url))), original.glbSha256, original.id + ' geometry');
+    assert.deepEqual(matches[original.id], original.footprints, original.id + ' replacements');
+  }
+});
+
+test('400-household priority batch accounts for verified counts, unknown counts and district shortfalls', () => {
+  const added = read('docs/apartment-400-matched.json');
+  const audit = read('docs/apartment-400-selection-audit.json');
+  const oldIds = new Set(read('tests/fixtures/preserved-555-landmarks.json').map(a => a.id));
+  assert.equal(added.length, 605);
+  assert.equal(manifest.assets.length, 1160);
+  assert.equal(new Set(added.map(a => a.id)).size, added.length);
+  const counts = new Map();
+  for (const candidate of added) {
+    assert.ok(!oldIds.has(candidate.id));
+    const asset = manifest.assets.find(a => a.id === candidate.id);
+    assert.equal(asset.nameKo, candidate.nameKo);
+    assert.equal(asset.householdCount, candidate.householdCount);
+    assert.deepEqual(matches[candidate.id], candidate.buildingIds);
+    assert.ok(candidate.buildingIds.length > 0);
+    assert.ok(asset.drawCalls <= 3);
+    if (candidate.householdCount == null) assert.equal(candidate.householdCountStatus, 'unverified; not counted as 400+');
+    counts.set(candidate.district, (counts.get(candidate.district) ?? 0) + 1);
+  }
+  assert.equal(counts.size, 25);
+  assert.ok([...counts.values()].every(n => n <= 25));
+  assert.deepEqual(Object.fromEntries([...counts].sort()), audit.finalCounts);
+  assert.equal(added.filter(a => a.householdCount >= 400).length, 445);
+  assert.equal(audit.atLeast400, 445);
+  assert.equal(audit.below400, 127);
+  assert.equal(audit.unknownHouseholds, 33);
+  assert.deepEqual(audit.shortfalls, { '강북구': 6, '금천구': 1, '종로구': 13 });
 });
