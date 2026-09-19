@@ -1,0 +1,71 @@
+name: Validate and deploy Seoul map
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: seoul-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 24
+          cache: npm
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: npm ci
+      - run: pip install -r api/requirements.txt
+      - run: python -m unittest discover -s tests -p 'test_hosted*.py' -v
+      - run: python -m unittest discover -s tests -p 'test_database.py' -v
+      - run: node --test tests/*.test.mjs
+      - run: python scripts/prepare_hosted_assets.py
+      - run: npm run build
+
+  deploy:
+    needs: validate
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment:
+      name: production
+      url: https://seoul-elevation.vercel.app
+    env:
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+      VERCEL_ORG_ID: ${{ vars.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ vars.VERCEL_PROJECT_ID }}
+      SEOUL_ASSET_TOKEN: ${{ github.token }}
+      SEOUL_ASSET_REF: ${{ github.sha }}
+      SEOUL_RELEASE_SHA: ${{ github.sha }}
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 24
+      - name: Prepare deployment source
+        run: |
+          test -n "$VERCEL_TOKEN" && test -n "$VERCEL_PROJECT_ID" && test -n "$VERCEL_ORG_ID"
+          mkdir -p "$RUNNER_TEMP/seoul-deploy"
+          rsync -a --exclude='.git' --exclude='node_modules' --exclude='.venv' ./ "$RUNNER_TEMP/seoul-deploy/"
+      - name: Deploy to the existing Vercel account
+        run: >-
+          npx --yes vercel@59.23.2 deploy "$RUNNER_TEMP/seoul-deploy"
+          --prod --yes --archive=tgz --scope flam-ing-ai-ing
+          --build-env SEOUL_ASSET_TOKEN --build-env SEOUL_ASSET_REF
+          --env SEOUL_RELEASE_SHA --meta "sourceCommit=$GITHUB_SHA"
+      - name: Verify live release and map data
+        run: python scripts/verify_deployment.py https://seoul-elevation.vercel.app "$GITHUB_SHA"

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "vite",
+  "buildCommand": "python3 scripts/prepare_hosted_assets.py && npm run build",
+  "outputDirectory": "dist",
+  "installCommand": "npm ci",
+  "regions": ["hnd1"],
+  "functions": {
+    "api/index.py": {
+      "maxDuration": 60,
+      "excludeFiles": "{node_modules/**,dist/**,public/models/**,public/data/terrain/constraints.npz,docs/**,tests/**,scripts/**,src/**,.venv/**,.git/**}"
+    }
+  },
+  "rewrites": [{"source": "/api/:path*", "destination": "/api/index.py"}],
+  "headers": [{"source": "/(.*)", "headers": [{"key": "X-Content-Type-Options", "value": "nosniff"}]}]
+}
