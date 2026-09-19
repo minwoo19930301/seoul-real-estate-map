@@ -8,7 +8,9 @@
 
 `.github/workflows/deploy.yml`은 PR에서 Node 검사, Python 호스팅/API 검사, 자산 체크섬, production build를 검증합니다. `main`에 병합하거나 push하면 같은 검증 후 Vercel에 자동 배포합니다. `workflow_dispatch`로 `main`을 다시 배포할 수도 있습니다. 다른 브랜치를 수동 실행해도 운영 배포는 하지 않습니다.
 
-배포가 끝나면 운영 `/api/health`의 `release_sha`가 해당 Git 커밋과 같은지 확인하고, 원본 등고선 8,570개·표고점 45,870개, 실제 지형 PNG, GLB 모형과 홈페이지를 확인합니다. 실패하면 Actions 실행이 실패로 표시되며 다음 커밋에서 수정해 다시 배포할 수 있습니다. Vercel 빌드가 실패하면 기존 운영 배포가 유지됩니다.
+배포가 끝나면 운영 `/api/health`의 `release_sha`가 해당 Git 커밋과 같은지 확인하고, 원본 등고선 8,570개·표고점 45,870개, 실제 지형 PNG, GLB 모형과 홈페이지를 확인합니다. 서울시청 검색과 실제 지도 범위의 등고선·건물·도로·장소 조회도 gzip 요청으로 검사합니다. 실패하면 Actions 실행이 실패로 표시되며 다음 커밋에서 수정해 다시 배포할 수 있습니다. Vercel 빌드가 실패하면 기존 운영 배포가 유지됩니다.
+
+API는 `vercel.json`의 `routes`로 전달합니다. 이름 있는 `rewrites` 매개변수는 Vercel이 쿼리에 추가하므로, 쿼리 키를 엄격히 검사하는 기존 API에서는 사용하지 않습니다.
 
 ## 인증과 계정
 

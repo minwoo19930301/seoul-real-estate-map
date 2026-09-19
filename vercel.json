@@ -11,6 +11,9 @@
       "excludeFiles": "{node_modules/**,dist/**,public/models/**,public/data/terrain/constraints.npz,docs/**,tests/**,scripts/**,src/**,.venv/**,.git/**}"
     }
   },
-  "rewrites": [{"source": "/api/:path*", "destination": "/api/index.py"}],
-  "headers": [{"source": "/(.*)", "headers": [{"key": "X-Content-Type-Options", "value": "nosniff"}]}]
+  "routes": [
+    {"src": "/.*", "headers": {"X-Content-Type-Options": "nosniff"}, "continue": true},
+    {"src": "/api/.*", "dest": "/api/index.py"},
+    {"handle": "filesystem"}
+  ]
 }
