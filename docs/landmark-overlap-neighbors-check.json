@@ -1,0 +1,1022 @@
+[
+  {
+    "id": "reference-flight-amorepacific-hq",
+    "neighbor": "e33a76b0-dca2-453b-bb0e-94adab1680c4",
+    "label": "LS용산타워",
+    "represented": {
+      "sourceLoaded": true,
+      "raw": true,
+      "generic": false,
+      "correctReference": false,
+      "wrongOwners": []
+    },
+    "active": [
+      "apt-a10024691",
+      "apt-a14001303",
+      "apt-a14001201",
+      "apt-a10026922",
+      "public-3f915bd0-9b1e-44dd-adcd-f3031899eaad",
+      "apt-a10026719",
+      "residential-ca37c55a-1fe1-4102-969b-747f5a62e2b5",
+      "residential-d731800d-8510-4939-a918-170f6d65e04c",
+      "reference-flight-amorepacific-hq",
+      "survey-upis-32486618",
+      "survey-upis-32490580",
+      "survey-upis-32496286",
+      "survey-upis-32500720",
+      "survey-upis-32987368",
+      "survey-upis-33032306",
+      "survey-upis-33034904",
+      "survey-upis-32489048",
+      "survey-upis-32493292",
+      "survey-upis-32496168",
+      "survey-upis-32496308",
+      "survey-upis-32504587",
+      "survey-upis-32504589",
+      "survey-upis-33037060",
+      "survey-upis-33040385"
+    ],
+    "activeFootprintIds": [
+      "ea3c1e84-31e9-4af5-8b8d-ee5cc7aa6b56",
+      "101a1e03-ca95-468f-a480-3cc0fbb7fb5b",
+      "77d89d8b-1e4b-4084-973f-42a07db654c9",
+      "97c06a99-d300-4ff5-bb05-a9f667de0308",
+      "3f2231d3-0c52-4880-88bf-ac6bd4eb07c8",
+      "32f8cd3d-53d2-4eb5-b69a-4f1b8fa93787",
+      "9e76a141-032e-4984-8542-e098e30dd955",
+      "6a02ecce-ad20-40b7-8f56-7ffd0937fb66",
+      "6bf4fdcf-6091-4ed8-9f93-ab1368ff952c",
+      "571a72d3-0dd1-4a7b-bc74-568fc59798a5",
+      "2b5d8dec-8d84-4c13-b8b9-c55399d47069",
+      "a9f1d5e9-2887-4352-87ef-9d9479dff62f",
+      "7e5abf42-ae63-439a-ae62-5fd4e2e58e14",
+      "58197a01-5cec-4d41-8405-3c34a489cc04",
+      "18c10394-977d-4442-98d7-6fbcf2610f39",
+      "3f915bd0-9b1e-44dd-adcd-f3031899eaad",
+      "ecc581a4-ac7c-4a74-ad55-fc78cff8c300",
+      "ba3144d5-b804-4fff-b140-47c74b5addce",
+      "ca37c55a-1fe1-4102-969b-747f5a62e2b5",
+      "d731800d-8510-4939-a918-170f6d65e04c",
+      "17789974-1223-44f7-9bc0-4d302d8cb742",
+      "30376466-6134-3636-B639-363431656130",
+      "30636138-6630-3135-A562-303531306134",
+      "32316665-3136-3436-A434-336430353138",
+      "33396331-3637-3136-B639-656364396530",
+      "34333866-6261-3163-A231-663663333366",
+      "34346232-3833-3232-B632-663733383938",
+      "37333234-6137-3832-A438-363562633736",
+      "65383438-6164-3530-A634-346230326165",
+      "5f9a435c-e797-480f-83a5-76f66bcab3d3",
+      "c97f7a26-d0d0-42b2-aadf-a5488cd5d733",
+      "ad27164e-60c5-470f-8ba4-2b257e1309b1",
+      "cbd7b919-6ffe-4396-83a6-06336ed2b280"
+    ],
+    "genericCollisions": [],
+    "sourceProperties": [
+      {
+        "id": "e33a76b0-dca2-453b-bb0e-94adab1680c4",
+        "height_status": "reported",
+        "height_m": 122,
+        "is_apartment": false,
+        "extrude": false,
+        "kind": "building",
+        "_building_label": "LS용산타워"
+      }
+    ],
+    "renderedSolidIds": [],
+    "solidFilter": [
+      "all",
+      [
+        "literal",
+        true
+      ],
+      [
+        "==",
+        [
+          "get",
+          "height_status"
+        ],
+        "reported"
+      ],
+      [
+        "!=",
+        [
+          "get",
+          "extrude"
+        ],
+        false
+      ],
+      [
+        "!",
+        [
+          "in",
+          [
+            "get",
+            "id"
+          ],
+          [
+            "literal",
+            [
+              "101a1e03-ca95-468f-a480-3cc0fbb7fb5b",
+              "17789974-1223-44f7-9bc0-4d302d8cb742",
+              "18c10394-977d-4442-98d7-6fbcf2610f39",
+              "2b5d8dec-8d84-4c13-b8b9-c55399d47069",
+              "30376466-6134-3636-B639-363431656130",
+              "30636138-6630-3135-A562-303531306134",
+              "32316665-3136-3436-A434-336430353138",
+              "32f8cd3d-53d2-4eb5-b69a-4f1b8fa93787",
+              "33396331-3637-3136-B639-656364396530",
+              "34333866-6261-3163-A231-663663333366",
+              "34346232-3833-3232-B632-663733383938",
+              "37333234-6137-3832-A438-363562633736",
+              "3f2231d3-0c52-4880-88bf-ac6bd4eb07c8",
+              "3f915bd0-9b1e-44dd-adcd-f3031899eaad",
+              "571a72d3-0dd1-4a7b-bc74-568fc59798a5",
+              "58197a01-5cec-4d41-8405-3c34a489cc04",
+              "5f9a435c-e797-480f-83a5-76f66bcab3d3",
+              "65383438-6164-3530-A634-346230326165",
+              "6a02ecce-ad20-40b7-8f56-7ffd0937fb66",
+              "6bf4fdcf-6091-4ed8-9f93-ab1368ff952c",
+              "77d89d8b-1e4b-4084-973f-42a07db654c9",
+              "7e5abf42-ae63-439a-ae62-5fd4e2e58e14",
+              "97c06a99-d300-4ff5-bb05-a9f667de0308",
+              "9e76a141-032e-4984-8542-e098e30dd955",
+              "a9f1d5e9-2887-4352-87ef-9d9479dff62f",
+              "ad27164e-60c5-470f-8ba4-2b257e1309b1",
+              "ba3144d5-b804-4fff-b140-47c74b5addce",
+              "c97f7a26-d0d0-42b2-aadf-a5488cd5d733",
+              "ca37c55a-1fe1-4102-969b-747f5a62e2b5",
+              "cbd7b919-6ffe-4396-83a6-06336ed2b280",
+              "d731800d-8510-4939-a918-170f6d65e04c",
+              "ea3c1e84-31e9-4af5-8b8d-ee5cc7aa6b56",
+              "ecc581a4-ac7c-4a74-ad55-fc78cff8c300"
+            ]
+          ]
+        ]
+      ],
+      [
+        "!",
+        [
+          "in",
+          [
+            "coalesce",
+            [
+              "get",
+              "parent_id"
+            ],
+            ""
+          ],
+          [
+            "literal",
+            [
+              "101a1e03-ca95-468f-a480-3cc0fbb7fb5b",
+              "17789974-1223-44f7-9bc0-4d302d8cb742",
+              "18c10394-977d-4442-98d7-6fbcf2610f39",
+              "2b5d8dec-8d84-4c13-b8b9-c55399d47069",
+              "30376466-6134-3636-B639-363431656130",
+              "30636138-6630-3135-A562-303531306134",
+              "32316665-3136-3436-A434-336430353138",
+              "32f8cd3d-53d2-4eb5-b69a-4f1b8fa93787",
+              "33396331-3637-3136-B639-656364396530",
+              "34333866-6261-3163-A231-663663333366",
+              "34346232-3833-3232-B632-663733383938",
+              "37333234-6137-3832-A438-363562633736",
+              "3f2231d3-0c52-4880-88bf-ac6bd4eb07c8",
+              "3f915bd0-9b1e-44dd-adcd-f3031899eaad",
+              "571a72d3-0dd1-4a7b-bc74-568fc59798a5",
+              "58197a01-5cec-4d41-8405-3c34a489cc04",
+              "5f9a435c-e797-480f-83a5-76f66bcab3d3",
+              "65383438-6164-3530-A634-346230326165",
+              "6a02ecce-ad20-40b7-8f56-7ffd0937fb66",
+              "6bf4fdcf-6091-4ed8-9f93-ab1368ff952c",
+              "77d89d8b-1e4b-4084-973f-42a07db654c9",
+              "7e5abf42-ae63-439a-ae62-5fd4e2e58e14",
+              "97c06a99-d300-4ff5-bb05-a9f667de0308",
+              "9e76a141-032e-4984-8542-e098e30dd955",
+              "a9f1d5e9-2887-4352-87ef-9d9479dff62f",
+              "ad27164e-60c5-470f-8ba4-2b257e1309b1",
+              "ba3144d5-b804-4fff-b140-47c74b5addce",
+              "c97f7a26-d0d0-42b2-aadf-a5488cd5d733",
+              "ca37c55a-1fe1-4102-969b-747f5a62e2b5",
+              "cbd7b919-6ffe-4396-83a6-06336ed2b280",
+              "d731800d-8510-4939-a918-170f6d65e04c",
+              "ea3c1e84-31e9-4af5-8b8d-ee5cc7aa6b56",
+              "ecc581a4-ac7c-4a74-ad55-fc78cff8c300"
+            ]
+          ]
+        ]
+      ]
+    ],
+    "models": [
+      {
+        "id": "apt-a10024691",
+        "name": "용산센트럴파크",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 149,
+        "ground_m": 11.899999999999636,
+        "drawCount": 15
+      },
+      {
+        "id": "apt-a14001303",
+        "name": "용산시티파크1단지",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 148,
+        "ground_m": 12.864662676767853,
+        "drawCount": 15
+      },
+      {
+        "id": "apt-a14001201",
+        "name": "한강로벽산메가트리움",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 99.69999694824219,
+        "ground_m": 11.336074659201216,
+        "drawCount": 15
+      },
+      {
+        "id": "apt-a10026922",
+        "name": "래미안용산아파트",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 150,
+        "ground_m": 9.777827549796047,
+        "drawCount": 17
+      },
+      {
+        "id": "public-3f915bd0-9b1e-44dd-adcd-f3031899eaad",
+        "name": "한강로동 주민센터",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 9.149999618530273,
+        "ground_m": 13.69967458776678,
+        "drawCount": 17
+      },
+      {
+        "id": "apt-a10026719",
+        "name": "아스테리움용산",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 120,
+        "ground_m": 13.204646146933936,
+        "drawCount": 17
+      },
+      {
+        "id": "residential-ca37c55a-1fe1-4102-969b-747f5a62e2b5",
+        "name": "용산푸르지오써밋 · 용산푸르지오써밋 업무동",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 155,
+        "ground_m": 11.113723146577541,
+        "drawCount": 15
+      },
+      {
+        "id": "residential-d731800d-8510-4939-a918-170f6d65e04c",
+        "name": "대우디오빌한강로오피스텔",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 67.19999694824219,
+        "ground_m": 10.953731857960715,
+        "drawCount": 17
+      },
+      {
+        "id": "reference-flight-amorepacific-hq",
+        "name": "아모레퍼시픽 본사",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 110,
+        "ground_m": 12.26677555972807,
+        "drawCount": 17
+      },
+      {
+        "id": "survey-upis-32486618",
+        "name": "한강현대하이엘",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 59.400001525878906,
+        "ground_m": 10.32890827972456,
+        "drawCount": 17
+      },
+      {
+        "id": "survey-upis-32490580",
+        "name": "한강로파크빌",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 19.200000762939453,
+        "ground_m": 22.51895596076452,
+        "drawCount": 15
+      },
+      {
+        "id": "survey-upis-32496286",
+        "name": "한강로에비뉴",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 17.479999542236328,
+        "ground_m": 19.149076574138206,
+        "drawCount": 15
+      },
+      {
+        "id": "survey-upis-32500720",
+        "name": "용산구 공동주택 · 32500720",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 14.579999923706055,
+        "ground_m": 26.510247384903305,
+        "drawCount": 14
+      },
+      {
+        "id": "survey-upis-32987368",
+        "name": "용산구 빌라·연립형 주택 · 32987368",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 11.800000190734863,
+        "ground_m": 21.427503446987583,
+        "drawCount": 15
+      },
+      {
+        "id": "survey-upis-33032306",
+        "name": "용산구 빌라·연립형 주택 · 33032306",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 11.699999809265137,
+        "ground_m": 13.50113914282993,
+        "drawCount": 17
+      },
+      {
+        "id": "survey-upis-33034904",
+        "name": "용산구 빌라·연립형 주택 · 33034904",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 11.699999809265137,
+        "ground_m": 13.72646123021887,
+        "drawCount": 15
+      },
+      {
+        "id": "survey-upis-32489048",
+        "name": "용산구 빌라·연립형 주택 · 32489048",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 13.199999809265137,
+        "ground_m": 14.423734728386446,
+        "drawCount": 15
+      },
+      {
+        "id": "survey-upis-32493292",
+        "name": "용산구 공동주택 · 32493292",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 11.600000381469727,
+        "ground_m": 14.04355368465201,
+        "drawCount": 15
+      },
+      {
+        "id": "survey-upis-32496168",
+        "name": "용산구 빌라·연립형 주택 · 32496168",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 14.800000190734863,
+        "ground_m": 17.042850361506922,
+        "drawCount": 14
+      },
+      {
+        "id": "survey-upis-32496308",
+        "name": "용산구 빌라·연립형 주택 · 32496308",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 13.149999618530273,
+        "ground_m": 15.835619012173087,
+        "drawCount": 14
+      },
+      {
+        "id": "survey-upis-32504587",
+        "name": "아인하우스1차",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 14,
+        "ground_m": 19.750933530530922,
+        "drawCount": 14
+      },
+      {
+        "id": "survey-upis-32504589",
+        "name": "용산구 빌라·연립형 주택 · 32504589",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 10.5,
+        "ground_m": 23.76826964626126,
+        "drawCount": 14
+      },
+      {
+        "id": "survey-upis-33037060",
+        "name": "아인하우스2차",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 17.299999237060547,
+        "ground_m": 18.878839692380723,
+        "drawCount": 14
+      },
+      {
+        "id": "survey-upis-33040385",
+        "name": "한강빌리지1",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 13.5,
+        "ground_m": 14.31816628940879,
+        "drawCount": 15
+      }
+    ],
+    "loading": false,
+    "error": null,
+    "sourceCount": 375,
+    "renderedSolidCount": 42
+  },
+  {
+    "id": "reference-flight-garden-five",
+    "neighbor": "ff6bff59-b677-475e-ad56-f54e43db2a5a",
+    "label": "파크하비오 102동",
+    "represented": {
+      "sourceLoaded": true,
+      "raw": false,
+      "generic": true,
+      "correctReference": false,
+      "wrongOwners": []
+    },
+    "active": [
+      "apt-a10027346",
+      "apt-a13821007",
+      "apt-a13821006",
+      "apt-a13820005",
+      "apt-a13876112",
+      "residential-00f42d58-2647-456e-9126-9bc9b0ec6e65",
+      "residential-16d0809c-02f0-498c-9378-cfd5c301f033",
+      "residential-8521840d-5bd2-462d-9285-b0d05d0fa7e8",
+      "residential-e9b0da2c-c063-4c7f-8b73-d82a1fb99b7e",
+      "reference-flight-garden-five",
+      "survey-upis-32854392",
+      "survey-upis-32854393",
+      "survey-upis-32854394",
+      "survey-upis-32854395",
+      "survey-upis-32885110",
+      "survey-upis-32885111",
+      "survey-upis-32885112",
+      "survey-upis-32885113",
+      "survey-upis-32885115",
+      "survey-upis-32885116",
+      "survey-upis-32885117",
+      "survey-upis-32885118",
+      "survey-upis-32887748",
+      "survey-upis-32889364",
+      "survey-upis-32891851",
+      "survey-upis-32894108",
+      "survey-upis-32894110",
+      "survey-upis-32951760",
+      "survey-upis-32967381",
+      "survey-upis-33016200",
+      "survey-upis-33037587"
+    ],
+    "activeFootprintIds": [
+      "bff36d4b-622a-4ced-970f-070c78a45808",
+      "3c2ff62a-1013-46b8-ac42-dbd5082fd478",
+      "df26fd81-5f53-4a93-bc03-2c2fbe8a0299",
+      "c223ba9a-ea44-437c-8e9c-e1b226c6ca6b",
+      "32ebdd15-a6b8-4de2-867e-66753091091f",
+      "ba5ed7b0-1e23-4f5b-a0a7-660d68801262",
+      "905cfb25-4ac1-4d83-9900-3b2e205846c5",
+      "27a5e076-744b-4ff1-aa17-b165364ad73e",
+      "cd6a79e0-d9bc-4976-966d-b8917a233c2e",
+      "010966c2-dfa1-4256-8d81-2e47b2825419",
+      "ff6bff59-b677-475e-ad56-f54e43db2a5a",
+      "c01571fd-d09c-46d7-884f-9bcd4c20e57d",
+      "cd3315da-a15a-4626-bb31-9cebc80fa06a",
+      "19b8698d-f197-4bc8-ba46-10ee8b59e45d",
+      "67f6b8eb-0963-467b-aaa9-febbb214a78e",
+      "c0abbd9d-2924-453d-ab63-8a079613f780",
+      "9f09af72-00db-4716-b362-540131084eda",
+      "e710af34-9e47-4bd9-9436-e9b96be40a6a",
+      "2acb1fc3-d4ec-4251-a112-e03ccd984147",
+      "0a804472-c89a-410c-aee1-ddf2b9c8db7f",
+      "d53adb68-60c7-4a8d-b499-052f601174c6",
+      "18180530-09e9-4aef-a6ef-17a09ad734bf",
+      "c020a7e3-ca5d-4261-91b1-5428f3b86772",
+      "7eb2ea64-9769-49d5-bad6-f075a1b8e56e",
+      "ca9ab3e6-1e6b-4343-b1f0-1108396adfd4",
+      "8acea18a-3e8b-4de3-b1e9-85967c539e3a",
+      "96b746e9-3070-4360-bcd1-e76928b1814b",
+      "3497b288-38f6-4e56-84df-14c1e1bd3860",
+      "0395d604-7cdc-4fc6-a98e-c02448111b1a",
+      "3eb2e27a-e664-4a2c-aa47-ebfad0dd09d9",
+      "d51baaaa-836a-4a35-b01f-8e73f6e0def2",
+      "9e8780dd-ab5a-481a-9620-90f5bb0c7fbf",
+      "5784ccd2-7e4d-4fc4-bb50-8e86767283f1",
+      "c862f87c-b741-47b9-a31f-9025621c3356",
+      "00f42d58-2647-456e-9126-9bc9b0ec6e65",
+      "16d0809c-02f0-498c-9378-cfd5c301f033",
+      "8521840d-5bd2-462d-9285-b0d05d0fa7e8",
+      "e9b0da2c-c063-4c7f-8b73-d82a1fb99b7e",
+      "13961bdb-eb7e-4782-8495-e58a971de792",
+      "15fba1d0-22ca-4df8-85fd-ba0d4af00b1e",
+      "1fac0f51-8968-4b51-a005-4a800a6ba524",
+      "aef70571-a0cb-4d00-b265-663e5c7155f7",
+      "59db4102-602e-4aa1-ab07-e334c7422857",
+      "3f9a3f81-eff7-4ec4-b73c-ffe0a4dce581"
+    ],
+    "genericCollisions": [],
+    "sourceProperties": [
+      {
+        "id": "ff6bff59-b677-475e-ad56-f54e43db2a5a",
+        "height_status": "reported",
+        "height_m": 53,
+        "is_apartment": true,
+        "extrude": true,
+        "kind": "building",
+        "_building_label": "송파파크하비오푸르지오아파트 102동"
+      }
+    ],
+    "renderedSolidIds": [],
+    "solidFilter": [
+      "all",
+      [
+        "literal",
+        true
+      ],
+      [
+        "==",
+        [
+          "get",
+          "height_status"
+        ],
+        "reported"
+      ],
+      [
+        "!=",
+        [
+          "get",
+          "extrude"
+        ],
+        false
+      ],
+      [
+        "!",
+        [
+          "in",
+          [
+            "get",
+            "id"
+          ],
+          [
+            "literal",
+            [
+              "00f42d58-2647-456e-9126-9bc9b0ec6e65",
+              "010966c2-dfa1-4256-8d81-2e47b2825419",
+              "0395d604-7cdc-4fc6-a98e-c02448111b1a",
+              "0a804472-c89a-410c-aee1-ddf2b9c8db7f",
+              "13961bdb-eb7e-4782-8495-e58a971de792",
+              "15fba1d0-22ca-4df8-85fd-ba0d4af00b1e",
+              "16d0809c-02f0-498c-9378-cfd5c301f033",
+              "18180530-09e9-4aef-a6ef-17a09ad734bf",
+              "19b8698d-f197-4bc8-ba46-10ee8b59e45d",
+              "1fac0f51-8968-4b51-a005-4a800a6ba524",
+              "27a5e076-744b-4ff1-aa17-b165364ad73e",
+              "2acb1fc3-d4ec-4251-a112-e03ccd984147",
+              "32ebdd15-a6b8-4de2-867e-66753091091f",
+              "3497b288-38f6-4e56-84df-14c1e1bd3860",
+              "3c2ff62a-1013-46b8-ac42-dbd5082fd478",
+              "3eb2e27a-e664-4a2c-aa47-ebfad0dd09d9",
+              "3f9a3f81-eff7-4ec4-b73c-ffe0a4dce581",
+              "5784ccd2-7e4d-4fc4-bb50-8e86767283f1",
+              "59db4102-602e-4aa1-ab07-e334c7422857",
+              "67f6b8eb-0963-467b-aaa9-febbb214a78e",
+              "7eb2ea64-9769-49d5-bad6-f075a1b8e56e",
+              "8521840d-5bd2-462d-9285-b0d05d0fa7e8",
+              "8acea18a-3e8b-4de3-b1e9-85967c539e3a",
+              "905cfb25-4ac1-4d83-9900-3b2e205846c5",
+              "96b746e9-3070-4360-bcd1-e76928b1814b",
+              "9e8780dd-ab5a-481a-9620-90f5bb0c7fbf",
+              "9f09af72-00db-4716-b362-540131084eda",
+              "aef70571-a0cb-4d00-b265-663e5c7155f7",
+              "ba5ed7b0-1e23-4f5b-a0a7-660d68801262",
+              "bff36d4b-622a-4ced-970f-070c78a45808",
+              "c01571fd-d09c-46d7-884f-9bcd4c20e57d",
+              "c020a7e3-ca5d-4261-91b1-5428f3b86772",
+              "c0abbd9d-2924-453d-ab63-8a079613f780",
+              "c223ba9a-ea44-437c-8e9c-e1b226c6ca6b",
+              "c862f87c-b741-47b9-a31f-9025621c3356",
+              "ca9ab3e6-1e6b-4343-b1f0-1108396adfd4",
+              "cd3315da-a15a-4626-bb31-9cebc80fa06a",
+              "cd6a79e0-d9bc-4976-966d-b8917a233c2e",
+              "d51baaaa-836a-4a35-b01f-8e73f6e0def2",
+              "d53adb68-60c7-4a8d-b499-052f601174c6",
+              "df26fd81-5f53-4a93-bc03-2c2fbe8a0299",
+              "e710af34-9e47-4bd9-9436-e9b96be40a6a",
+              "e9b0da2c-c063-4c7f-8b73-d82a1fb99b7e",
+              "ff6bff59-b677-475e-ad56-f54e43db2a5a"
+            ]
+          ]
+        ]
+      ],
+      [
+        "!",
+        [
+          "in",
+          [
+            "coalesce",
+            [
+              "get",
+              "parent_id"
+            ],
+            ""
+          ],
+          [
+            "literal",
+            [
+              "00f42d58-2647-456e-9126-9bc9b0ec6e65",
+              "010966c2-dfa1-4256-8d81-2e47b2825419",
+              "0395d604-7cdc-4fc6-a98e-c02448111b1a",
+              "0a804472-c89a-410c-aee1-ddf2b9c8db7f",
+              "13961bdb-eb7e-4782-8495-e58a971de792",
+              "15fba1d0-22ca-4df8-85fd-ba0d4af00b1e",
+              "16d0809c-02f0-498c-9378-cfd5c301f033",
+              "18180530-09e9-4aef-a6ef-17a09ad734bf",
+              "19b8698d-f197-4bc8-ba46-10ee8b59e45d",
+              "1fac0f51-8968-4b51-a005-4a800a6ba524",
+              "27a5e076-744b-4ff1-aa17-b165364ad73e",
+              "2acb1fc3-d4ec-4251-a112-e03ccd984147",
+              "32ebdd15-a6b8-4de2-867e-66753091091f",
+              "3497b288-38f6-4e56-84df-14c1e1bd3860",
+              "3c2ff62a-1013-46b8-ac42-dbd5082fd478",
+              "3eb2e27a-e664-4a2c-aa47-ebfad0dd09d9",
+              "3f9a3f81-eff7-4ec4-b73c-ffe0a4dce581",
+              "5784ccd2-7e4d-4fc4-bb50-8e86767283f1",
+              "59db4102-602e-4aa1-ab07-e334c7422857",
+              "67f6b8eb-0963-467b-aaa9-febbb214a78e",
+              "7eb2ea64-9769-49d5-bad6-f075a1b8e56e",
+              "8521840d-5bd2-462d-9285-b0d05d0fa7e8",
+              "8acea18a-3e8b-4de3-b1e9-85967c539e3a",
+              "905cfb25-4ac1-4d83-9900-3b2e205846c5",
+              "96b746e9-3070-4360-bcd1-e76928b1814b",
+              "9e8780dd-ab5a-481a-9620-90f5bb0c7fbf",
+              "9f09af72-00db-4716-b362-540131084eda",
+              "aef70571-a0cb-4d00-b265-663e5c7155f7",
+              "ba5ed7b0-1e23-4f5b-a0a7-660d68801262",
+              "bff36d4b-622a-4ced-970f-070c78a45808",
+              "c01571fd-d09c-46d7-884f-9bcd4c20e57d",
+              "c020a7e3-ca5d-4261-91b1-5428f3b86772",
+              "c0abbd9d-2924-453d-ab63-8a079613f780",
+              "c223ba9a-ea44-437c-8e9c-e1b226c6ca6b",
+              "c862f87c-b741-47b9-a31f-9025621c3356",
+              "ca9ab3e6-1e6b-4343-b1f0-1108396adfd4",
+              "cd3315da-a15a-4626-bb31-9cebc80fa06a",
+              "cd6a79e0-d9bc-4976-966d-b8917a233c2e",
+              "d51baaaa-836a-4a35-b01f-8e73f6e0def2",
+              "d53adb68-60c7-4a8d-b499-052f601174c6",
+              "df26fd81-5f53-4a93-bc03-2c2fbe8a0299",
+              "e710af34-9e47-4bd9-9436-e9b96be40a6a",
+              "e9b0da2c-c063-4c7f-8b73-d82a1fb99b7e",
+              "ff6bff59-b677-475e-ad56-f54e43db2a5a"
+            ]
+          ]
+        ]
+      ]
+    ],
+    "models": [
+      {
+        "id": "apt-a10027346",
+        "name": "파크하비오푸르지오아파트",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 58,
+        "ground_m": 19.600000000000364,
+        "drawCount": 14
+      },
+      {
+        "id": "apt-a13821007",
+        "name": "송파파인타운9단지",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 42,
+        "ground_m": 20.576502194084878,
+        "drawCount": 14
+      },
+      {
+        "id": "apt-a13821006",
+        "name": "송파파인타운8단지",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 56,
+        "ground_m": 21.38658034663532,
+        "drawCount": 14
+      },
+      {
+        "id": "apt-a13820005",
+        "name": "문정건영",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 41,
+        "ground_m": 27.052372886678803,
+        "drawCount": 13
+      },
+      {
+        "id": "apt-a13876112",
+        "name": "송파파인타운13단지",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 54.183250427246094,
+        "ground_m": 19.751413788414546,
+        "drawCount": 14
+      },
+      {
+        "id": "residential-00f42d58-2647-456e-9126-9bc9b0ec6e65",
+        "name": "205",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 57,
+        "ground_m": 19.99266647399297,
+        "drawCount": 13
+      },
+      {
+        "id": "residential-16d0809c-02f0-498c-9378-cfd5c301f033",
+        "name": "동부주택브리앙뜨아파트",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 32,
+        "ground_m": 20.721012573573557,
+        "drawCount": 14
+      },
+      {
+        "id": "residential-8521840d-5bd2-462d-9285-b0d05d0fa7e8",
+        "name": "송파구 아파트 · 8521840d",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 55,
+        "ground_m": 19.800000000001088,
+        "drawCount": 14
+      },
+      {
+        "id": "residential-e9b0da2c-c063-4c7f-8b73-d82a1fb99b7e",
+        "name": "송파아이파크",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 51,
+        "ground_m": 20,
+        "drawCount": 13
+      },
+      {
+        "id": "reference-flight-garden-five",
+        "name": "가든파이브",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 60.40000152587889,
+        "ground_m": 20.000000762939454,
+        "drawCount": 14
+      },
+      {
+        "id": "survey-upis-32854392",
+        "name": "송파구 공동주택 · 32854392",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 13.899999618530273,
+        "ground_m": 25.916220420179926,
+        "drawCount": 13
+      },
+      {
+        "id": "survey-upis-32854393",
+        "name": "행복리버빌B",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 13.800000190734863,
+        "ground_m": 25.620848928858035,
+        "drawCount": 12
+      },
+      {
+        "id": "survey-upis-32854394",
+        "name": "행복리버빌A",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 13.800000190734863,
+        "ground_m": 25.39078996269751,
+        "drawCount": 12
+      },
+      {
+        "id": "survey-upis-32854395",
+        "name": "송파구 빌라·연립형 주택 · 32854395",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 12.199999809265137,
+        "ground_m": 25.005399769035225,
+        "drawCount": 13
+      },
+      {
+        "id": "survey-upis-32885110",
+        "name": "하우징허브",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 13.399999618530273,
+        "ground_m": 26.840520212287146,
+        "drawCount": 12
+      },
+      {
+        "id": "survey-upis-32885111",
+        "name": "준하우스",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 15,
+        "ground_m": 26.815206280165043,
+        "drawCount": 13
+      },
+      {
+        "id": "survey-upis-32885112",
+        "name": "송파구 공동주택 · 32885112",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 13.199999809265137,
+        "ground_m": 26.28894688626852,
+        "drawCount": 13
+      },
+      {
+        "id": "survey-upis-32885113",
+        "name": "아트팰리스",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 19.850000381469727,
+        "ground_m": 26.330473610386854,
+        "drawCount": 13
+      },
+      {
+        "id": "survey-upis-32885115",
+        "name": "황금빌라",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 13.199999809265137,
+        "ground_m": 25.846105812536564,
+        "drawCount": 13
+      },
+      {
+        "id": "survey-upis-32885116",
+        "name": "두현빌리지",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 11.619999885559082,
+        "ground_m": 25.083737564733624,
+        "drawCount": 13
+      },
+      {
+        "id": "survey-upis-32885117",
+        "name": "송파구 빌라·연립형 주택 · 32885117",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 13.199999809265137,
+        "ground_m": 25.310459049512552,
+        "drawCount": 13
+      },
+      {
+        "id": "survey-upis-32885118",
+        "name": "송파구 빌라·연립형 주택 · 32885118",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 14,
+        "ground_m": 24.828087852151143,
+        "drawCount": 13
+      },
+      {
+        "id": "survey-upis-32887748",
+        "name": "송파구 빌라·연립형 주택 · 32887748",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 15.899999618530273,
+        "ground_m": 21.89947389177944,
+        "drawCount": 14
+      },
+      {
+        "id": "survey-upis-32889364",
+        "name": "송파구 빌라·연립형 주택 · 32889364",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 6.099999904632568,
+        "ground_m": 25.21251425463783,
+        "drawCount": 12
+      },
+      {
+        "id": "survey-upis-32891851",
+        "name": "유진빌리지",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 13.899999618530273,
+        "ground_m": 24.208113365574366,
+        "drawCount": 13
+      },
+      {
+        "id": "survey-upis-32894108",
+        "name": "송파구 공동주택 · 32894108",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 13.199999809265137,
+        "ground_m": 24.069373961167624,
+        "drawCount": 13
+      },
+      {
+        "id": "survey-upis-32894110",
+        "name": "동부하우스",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 11.949999809265137,
+        "ground_m": 24.667120674485542,
+        "drawCount": 13
+      },
+      {
+        "id": "survey-upis-32951760",
+        "name": "라온빌리지",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 13.449999809265137,
+        "ground_m": 27.220408246527008,
+        "drawCount": 12
+      },
+      {
+        "id": "survey-upis-32967381",
+        "name": "송파구 빌라·연립형 주택 · 32967381",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 15.899999618530273,
+        "ground_m": 25.000000000000004,
+        "drawCount": 12
+      },
+      {
+        "id": "survey-upis-33016200",
+        "name": "송파구 빌라·연립형 주택 · 33016200",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 9.5,
+        "ground_m": 21.35837917365178,
+        "drawCount": 14
+      },
+      {
+        "id": "survey-upis-33037587",
+        "name": "송파구 빌라·연립형 주택 · 33037587",
+        "loaded": true,
+        "active": true,
+        "error": null,
+        "height_m": 12.300000190734863,
+        "ground_m": 25.01776518900527,
+        "drawCount": 13
+      }
+    ],
+    "loading": false,
+    "error": null,
+    "sourceCount": 457,
+    "renderedSolidCount": 18
+  }
+]

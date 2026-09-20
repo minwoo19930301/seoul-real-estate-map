@@ -97,10 +97,12 @@ def main():
     claims={}; survey_claims={}
     for asset,ev in zip(assets,evidence):
         model_id=asset['id']; coverage=coverage_by_id[model_id]
+        excluded=set(asset.get('placementReview',{}).get('excludedFootprintIds',[]))
         scope=maple_site if asset['model'].startswith('maple-xi/') else coverage
         if scope.is_empty:continue
         w,s,e,n=scope.bounds
         for id,name,geom in building.execute('SELECT b.id,b.name,b.geometry FROM building_index i JOIN buildings b ON b.rowid=i.rowid WHERE i.maxx>=? AND i.minx<=? AND i.maxy>=? AND i.miny<=?',(w,e,s,n)):
+            if id in excluded:continue
             polygon=shape(json.loads(geom));shapes_by_id[id]=polygon
             fraction=scope.intersection(polygon).area/polygon.area if polygon.area else 0
             if fraction<.65:continue
@@ -109,6 +111,7 @@ def main():
             else:score=fraction
             if id not in claims or score>claims[id][0]:claims[id]=(score,model_id,fraction,name)
         for id,geom,footprints in survey.execute('SELECT c.id,c.geometry,c.footprints FROM selected_index i JOIN candidates c ON c.rowid=i.rowid WHERE i.maxx>=? AND i.minx<=? AND i.maxy>=? AND i.miny<=?',(w,e,s,n)):
+            if excluded.intersection(json.loads(footprints)):continue
             polygon=shape(json.loads(geom));survey_shapes[id]=polygon
             fraction=scope.intersection(polygon).area/polygon.area if polygon.area else 0
             if fraction<.65:continue
@@ -131,6 +134,25 @@ def main():
             identity={'id':fid,'name':row[0],'basis':placement['identityMatchBasis']}
             if expected_parent and fid!=expected_parent:identity['parentId']=row[2]
             ev_id[owner].setdefault('explicitIdentityMatches',[]).append(identity)
+    # Source-linked parts are the same building, even where the illustrative
+    # model covers less than 65% of a particular wing. Keep unrelated neighbours.
+    queue=list(claims)
+    visited=set()
+    while queue:
+        parent=queue.pop()
+        if parent in visited:continue
+        visited.add(parent)
+        owner=claims[parent][1]
+        excluded=set(by_id[owner].get('placementReview',{}).get('excludedFootprintIds',[]))
+        for fid,name in building.execute('SELECT id,name FROM buildings WHERE parent_id=?',(parent,)):
+            if fid in excluded:continue
+            if fid in claims and claims[fid][1]!=owner:
+                ev_id[owner].setdefault('descendantOwnershipConflicts',[]).append({'id':fid,'parentId':parent,'owner':claims[fid][1]})
+                continue
+            if fid not in claims:
+                claims[fid]=(1,owner,None,name)
+                ev_id[owner].setdefault('descendantIdentityMatches',[]).append({'id':fid,'parentId':parent,'basis':'Exact source parent_id relation; descendant of a claimed building, not inferred by proximity.'})
+            queue.append(fid)
     for fid,(_,owner,fraction,name) in claims.items():
         by_id[owner]['footprintIds'].append(fid);ev_id[owner]['matchedFootprints'].append({'id':fid,'name':name,'coveredFraction':round(fraction,4) if fraction is not None else None})
     for generic in legacy:
@@ -145,7 +167,16 @@ def main():
             if fid in claims and claims[fid][1]==owner and fid not in by_id[owner]['footprintIds']:by_id[owner]['footprintIds'].append(fid)
     for asset in assets:
         asset['footprintIds'].sort();asset['supersedes'].sort();ev_id[asset['id']]['supersedes']=asset['supersedes']
+    preserved_footprints={}
+    for model_id in ['sixtythree','lotte','nseoul','coex','gyeongbokgung']:
+        ids=set(matches[model_id]);pending=list(ids)
+        while pending:
+            parent=pending.pop()
+            for (fid,) in building.execute('SELECT id FROM buildings WHERE parent_id=?',(parent,)):
+                if fid not in ids:ids.add(fid);pending.append(fid)
+        preserved_footprints[model_id]=sorted(ids)
     manifest={'version':1,'sourceRevision':original['sourceRevision'],'assets':assets,
+        'preservedLandmarkFootprints':preserved_footprints,
         'places':[{'id':'reference:maple-xi','name':'메이플자이','subtitle':'2025년 입주 · 공식 배치도와 실제 외관을 참고한 29개 동',
                    'center':list(maple_site.centroid.coords[0]),'zoom':16.4,'household_count':3307,
                    'supersedesPlaceIds':['seoul-apartment:A13790730','seoul-apartment:A13790708','seoul-apartment:A10020557','osm:way/998065952','osm:way/998065953'],'source_url':maple.get('referenceUrl',assets[-1]['referenceUrl'])}]}
@@ -153,6 +184,8 @@ def main():
     proof={'sourceRevision':original['sourceRevision'],'models':len(assets),'flightModels':len(report['assets']),
         'mapleModels':len(maple['assets']),'triangles':sum(e['triangles'] for e in evidence),'bytes':sum(e['bytes'] for e in evidence),
         'preservedCatalogModels':113123,'sourceCatalogUnchanged':True,'assets':evidence}
+    proof['preservedLandmarkFootprints']={'basis':'Original five immutable footprint matches plus exact recursive source parent_id descendants.',
+        'models':{key:{'originalCount':len(matches[key]),'expandedCount':len(ids),'footprintIds':ids} for key,ids in preserved_footprints.items()}}
     (ROOT/'docs/REFERENCE_MODEL_INTEGRATION.json').write_text(json.dumps(proof,ensure_ascii=False,indent=2)+'\n')
     print(json.dumps({k:v for k,v in proof.items() if k!='assets'}))
 

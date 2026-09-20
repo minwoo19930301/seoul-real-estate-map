@@ -159,7 +159,9 @@ export class Buildings {
     const filter: any = this.onlyApartments() ? ['==', ['get', 'is_apartment'], true] : ['literal', true];
     for (const id of ['building-footprints', 'building-outlines', 'building-solids']) {
       this.layout(id, this.enabled() && (id !== 'building-solids' || this.is25d) && (id !== 'building-outlines' || !closeView));
-      this.filter(id, id === 'building-solids' ? ['all', filter, ['==', ['get', 'height_status'], 'reported'], ['!=', ['get', 'extrude'], false], ['!', ['in', ['get', 'id'], ['literal', this.modelFootprints]]]] : filter);
+      this.filter(id, id === 'building-solids' ? ['all', filter, ['==', ['get', 'height_status'], 'reported'], ['!=', ['get', 'extrude'], false],
+        ['!', ['in', ['get', 'id'], ['literal', this.modelFootprints]]],
+        ['!', ['in', ['coalesce', ['get', 'parent_id'], ''], ['literal', this.modelFootprints]]]] : filter);
     }
     this.layout('building-labels', this.enabled() && this.labelsEnabled());
     this.filter('building-labels', ['all', filter, ['==', ['get', 'kind'], 'building'], ['!=', ['coalesce', ['get', '_building_label'], ''], '']]);
@@ -177,7 +179,7 @@ export class Buildings {
       const p = feature.properties ?? {};
       this.rawFeatures.set(String(p.id ?? feature.id), feature);
       return { type: 'Feature', id: feature.id, geometry: feature.geometry, properties: {
-        id: p.id ?? feature.id, height_status: p.height_status, height_m: p.height_m, min_height_m: p.min_height_m,
+        id: p.id ?? feature.id, parent_id: p.parent_id, height_status: p.height_status, height_m: p.height_m, min_height_m: p.min_height_m,
         is_apartment: p.is_apartment, extrude: p.extrude, kind: p.kind, _building_label: recordedName(p.name),
       } };
     }) };

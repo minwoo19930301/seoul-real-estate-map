@@ -19,6 +19,17 @@ const towerPalaceTargets = [
   ['F', [28, -30], 'c6873a11-88e5-4129-bc93-19bc68cd7bd5', [127.05496656226549, 37.489885778640605], '19797209224f0f4c6bbdf59235552832fc4534336094d170723cdc89cf9805af'],
   ['G', [-25, 36], '0279553d-08e7-48de-bd31-6016d2b5445c', [127.05284687789084, 37.4870854797417], '23343bfa429560710d7cf1c79c240040fb491188f486f63d9396adf06dea1c62'],
 ].map(([name, sourceCentre, footprintId, coordinate, geometrySha256]) => ({ name, sourceCentre, footprintId, coordinate, geometrySha256 }));
+const gardenFiveOrigin = [127.12517003108557, 37.477628311214865];
+// Largest uniformly scaled source-hall rectangle contained in its named
+// footprint at the centroid, preserving the authored -8 degree orientation.
+// A 0.8m total source trim allowance includes facade fins and roof cornices.
+const gardenFiveTargets = [
+  ['패션관', [0, -32], '1fac0f51-8968-4b51-a005-4a800a6ba524', [127.12586154107622, 37.477919076074436], '37454d690e7b5f615d72560ddceccbd4cc601ae24bac08949d96c6e98386e0ae', .9840227765064391],
+  ['영관', [32, 0], '13961bdb-eb7e-4782-8495-e58a971de792', [127.12594607874742, 37.47713825821242], 'cd7e2607830ca91299e1c16e25bb5cc6e6cf9e7e15468476bbc5c67518a50f55', 1.2366282557819819],
+  ['리빙관', [0, 32], '15fba1d0-22ca-4df8-85fd-ba0d4af00b1e', [127.12447662506496, 37.47728357161256], '2286be49fcee5e7c8607bab0c6a712a8354b6cb11463e3e657dd0d2a2f15f5d3', 1.0548562016749852],
+  ['테크노관', [-32, 0], 'aef70571-a0cb-4d00-b265-663e5c7155f7', [127.12439587945371, 37.478172338960036], '938eb8e03d95f8d27a21717b79e1ef4f73d8d8c797c88f36c099909fcc7bc812', 1.5296906075679395],
+].map(([name, sourceCentre, footprintId, coordinate, geometrySha256, widthScale]) => ({ name, sourceCentre, footprintId, coordinate, geometrySha256, widthScale,
+  placementBasis: 'Named retained footprint centroid; conservative inscribed source-hall rectangle fit, uniform horizontal scale only. Height, aspect ratio and orientation retained; not an exact facade survey.' }));
 const captureHelper = `
 function __captureFlightParts(g, start, component) {
   for (const object of g.children.slice(start)) {
@@ -40,6 +51,22 @@ function capture(source, key, start, end, centre, parent = 'g') {
 
 /** Instrument only temporary archived source, without changing source dimensions. */
 export function instrumentSource(id, source) {
+  if (id === 'garden-five') {
+    source = replaceOnce(source, 'function retailWing(g, { w, d, x, z, mat, h = H }) {',
+      'function retailWing(g, { w, d, x, z, mat, h = H }) {\n  const __lifeStart = g.children.length;');
+    source = replaceOnce(source, '\n}\n\nexport default {',
+      "\n  __captureFlightParts(g, __lifeStart, { id: 'life-' + x + '-' + z, centre: [x, z] });\n}\n\nexport default {");
+    const extraDetails = [
+      ['box(site, { w: 30, h: 5.2, d: 0.4, x: 0, y: 0.3, z: -18.8, mat: M.glass });', [0, -32]],
+      ['box(site, { w: 0.4, h: 5.2, d: 30, x: 18.8, y: 0.3, z: 0, mat: M.glass });', [32, 0]],
+      ['box(site, { w: 30, h: 5.2, d: 0.4, x: 0, y: 0.3, z: 18.8, mat: M.glass });', [0, 32]],
+      ['box(site, { w: 0.4, h: 5.2, d: 30, x: -18.8, y: 0.3, z: 0, mat: M.glass });', [-32, 0]],
+      ['box(site, { w: 10, h: 2.2, d: 7, x: -8, y: H + 1.6, z: -32, mat: M.concreteDark });', [0, -32]],
+    ];
+    for (const [marker, centre] of extraDetails) source = replaceOnce(source, marker,
+      marker + '\n    site.children.at(-1).userData.flightComponent = ' + JSON.stringify({ id: 'life-' + centre.join('-'), centre }) + ';');
+    return source + captureHelper;
+  }
   if (id === 'tower-palace') {
     const marker = 'const g = subgroup(parent, { x, z, ry });';
     if (source.split(marker).length !== 4) throw Error('Tower Palace component structure changed');
@@ -110,7 +137,7 @@ function meshCounts(group) {
   return { meshes, triangles };
 }
 
-function adaptComponents(group, { width, spacing, expected, targets = null, removeDecoration = false }) {
+function adaptComponents(group, { width, spacing, expected, targets = null, origin = towerPalaceOrigin, removeDecoration = false }) {
   const parts = new Map();
   let landscapeObjects = 0, removedDecorativeMeshes = 0, removedDecorativeTriangles = 0;
   const containers = [];
@@ -123,23 +150,25 @@ function adaptComponents(group, { width, spacing, expected, targets = null, remo
       const [x, z] = component.centre;
       const target = targets?.find(row => row.sourceCentre[0] === x && row.sourceCentre[1] === z);
       if (targets && !target) throw Error('Missing named footprint target for ' + component.id);
+      const componentWidth = target?.widthScale ?? width;
       let targetX = x * spacing, targetZ = z * spacing;
       if (target) {
-        const east = (target.coordinate[0] - towerPalaceOrigin[0]) * 111319.49079327358 * Math.cos(towerPalaceOrigin[1] * Math.PI / 180);
-        const south = -(target.coordinate[1] - towerPalaceOrigin[1]) * 111319.49079327358;
+        const east = (target.coordinate[0] - origin[0]) * 111319.49079327358 * Math.cos(origin[1] * Math.PI / 180);
+        const south = -(target.coordinate[1] - origin[1]) * 111319.49079327358;
         const local = new THREE.Vector3(east, 0, south).applyMatrix4(container.matrixWorld.clone().invert());
         targetX = local.x; targetZ = local.z;
       }
       // Source coordinates may be stored in geometry (flat components) or in
       // a subgroup translation (Tower Palace). T(c*s) S(w) T(-c) handles both.
       const transform = new THREE.Matrix4().makeTranslation(targetX, 0, targetZ)
-        .multiply(new THREE.Matrix4().makeScale(width, 1, width))
+        .multiply(new THREE.Matrix4().makeScale(componentWidth, 1, componentWidth))
         .multiply(new THREE.Matrix4().makeTranslation(-x, 0, -z));
       child.applyMatrix4(transform);
-      const record = parts.get(component.id) ?? { id: component.id, sourceCentre: [x, z], adaptedCentre: [targetX, targetZ], widthScale: width, objects: 0,
+      const record = parts.get(component.id) ?? { id: component.id, sourceCentre: [x, z], adaptedCentre: [targetX, targetZ], widthScale: componentWidth, objects: 0,
         ...(target ? { name: target.name, footprintId: target.footprintId, coordinate: target.coordinate,
-          geometrySha256: target.geometrySha256, sourceComponentGeometry: meshCounts(child),
-          placementBasis: 'Retained named OSM footprint centroid; author tower width/roof retained with prior 2x width correction.' } : {}) };
+          geometrySha256: target.geometrySha256, sourceComponentGeometry: { meshes: 0, triangles: 0 },
+          placementBasis: target.placementBasis ?? 'Retained named OSM footprint centroid; author tower width/roof retained with prior 2x width correction.' } : {}) };
+      if (target) { const count = meshCounts(child); record.sourceComponentGeometry.meshes += count.meshes; record.sourceComponentGeometry.triangles += count.triangles; }
       record.objects++;
       parts.set(component.id, record);
     } else {
@@ -175,6 +204,7 @@ export function adaptGeometry(id, group, audit) {
   };
   const complex = {
     'tower-palace': { width: 2, spacing: 1 / .35, expected: 7, targets: towerPalaceTargets, removeDecoration: true },
+    'garden-five': { width: 1, spacing: 1, expected: 4, targets: gardenFiveTargets, origin: gardenFiveOrigin, removeDecoration: true },
     'parc1-ifc': { width: 1, spacing: 1 / .35, expected: 12 },
     'samsung-town': { width: 1, spacing: 2, expected: 5 },
     'walkerhill': { width: 1, spacing: 1 / .45, expected: 9 },
@@ -184,15 +214,20 @@ export function adaptGeometry(id, group, audit) {
     recipe.changed = true;
     recipe.componentRecipe = adaptComponents(group, complex);
     if (complex.targets) {
-      recipe.namedFootprintPlacement = { sourceOrigin: towerPalaceOrigin, provider: 'Retained OpenStreetMap building polygons',
-        independentlySurveyed: false, footprintIds: towerPalaceTargets.map(row => row.footprintId),
-        centreSpacingRule: 'Actual named footprint centroids replace the former 1/0.35 game-spacing estimate.' };
+      recipe.namedFootprintPlacement = { sourceOrigin: complex.origin ?? towerPalaceOrigin, provider: 'Retained OpenStreetMap building polygons',
+        independentlySurveyed: false, footprintIds: complex.targets.map(row => row.footprintId),
+        centreSpacingRule: 'Actual named footprint centroids replace the former game-spacing estimate.' };
       recipe.removedDecorativeMeshes = recipe.componentRecipe.removedDecorativeMeshes;
       recipe.removedDecorativeTriangles = recipe.componentRecipe.removedDecorativeTriangles;
       recipe.removalReason = 'Shared game-only plaza, podiums and landscape do not follow the actual seven-building block and would cover real roads/neighbours. All seven complete tower subgroups, including their own lower details, facades and roofs, are retained; pristine GLB stays unchanged.';
+      if (id === 'garden-five') {
+        recipe.evidenceAuthority = 'Retained named Life-hall source footprints for centre and conservative width fitting; original authored heights, materials and facade shapes.';
+        recipe.removalReason = 'Retain all four named Life retail halls with their facade panels, floor bands, roof gardens, shopfront glazing and penthouse. Remove the unverified fifth Tool/Works bar, game-only links, central canopy, plaza and scenery because their positions cannot be linked to actual buildings and cover roads/neighbours; pristine GLB stays unchanged.';
+        recipe.omittedSourceComponents = ['unverified fifth Tool/Works bar', 'game-position corner links', 'central canopy', 'shared plaza and scenery'];
+      }
     }
     recipe.unresolved.push(complex.targets ? 'Building centres follow named retained footprints. Roof/width/height and rotation remain authored estimates; footprint outline matching is not asserted.' : 'Shared site/podium fitting and absolute georeferencing require independent footprint checks.');
-    if (complex.width === 1) recipe.unresolved.push('Individual building footprint sizes have no explicit inverse-scale ratio; original widths retained.');
+    if (complex.width === 1 && !complex.targets) recipe.unresolved.push('Individual building footprint sizes have no explicit inverse-scale ratio; original widths retained.');
   } else {
     let planar = audit.sourcePlanarFraction;
     const vertical = audit.sourceVerticalFraction;

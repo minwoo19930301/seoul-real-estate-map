@@ -366,6 +366,9 @@ async function loadCityModels() {
     map.addLayer({ id: id + '-labels', type: 'symbol', source: id + '-points', minzoom: 14.5, layout: { 'text-field': ['get', 'name'], 'text-font': ['Noto Sans Regular'], 'text-size': 12, 'text-offset': [0, 1], 'text-allow-overlap': false }, paint: { 'text-color': color, 'text-halo-color': '#fff', 'text-halo-width': 1.5 } });
   }
   const matches = await request<Record<string, string[]>>('/models/footprint-matches.json');
+  for (const [id, footprints] of Object.entries(references.preservedLandmarkFootprints ?? {})) {
+    matches[id] = [...new Set([...(matches[id] ?? []), ...footprints])];
+  }
   cityModels.setFootprintMatches(matches);
   await cityModels.init();
   cityModels.setMode(is25d); updateModelVisibility(); applyVisibility(); scheduleGreenery();

@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { Buildings } from '../src/buildings.ts';
+import { featureFilter } from '@maplibre/maplibre-gl-style-spec';
 
 const settle = () => new Promise(resolve => setImmediate(resolve));
 function harness(t, initialZoom = 17, initialPitch = 58) {
@@ -35,6 +36,23 @@ function harness(t, initialZoom = 17, initialPitch = 58) {
   return { buildings, nodes, layers, sources, calls, timers, setView: (z, p) => { zoom = z; pitch = p; },
     visible: id => layers.get(id).layout.visibility, paint: () => layers.get('building-footprints').paint };
 }
+
+test('landmark parent replacement hides its high-rise parts but preserves adjacent buildings and restores on disable', async t => {
+  const h = harness(t); await settle();
+  const base = h.buildings.getData().features[1];
+  const part = { ...base, id: 'tower-part', properties: { ...base.properties, id: 'tower-part', kind: 'building_part', parent_id: 'landmark-parent', height_m: 204 } };
+  const neighbour = { ...base, id: 'neighbour-part', properties: { ...base.properties, id: 'neighbour-part', kind: 'building_part', parent_id: 'neighbour-parent' } };
+  h.buildings.data = { type: 'FeatureCollection', features: [part, neighbour] };
+  h.buildings.renderData();
+  h.buildings.setModelFootprints(['landmark-parent']);
+  const displayed = h.sources.get('building-data').data.features;
+  assert.equal(displayed[0].properties.parent_id, 'landmark-parent');
+  const matches = () => featureFilter(h.layers.get('building-solids').filter, 'layers.building-solids.filter').filter;
+  assert.equal(matches()({ zoom: 17 }, { type: 3, properties: displayed[0].properties }), false);
+  assert.equal(matches()({ zoom: 17 }, { type: 3, properties: displayed[1].properties }), true);
+  h.buildings.setModelFootprints([]);
+  assert.equal(matches()({ zoom: 17 }, { type: 3, properties: displayed[0].properties }), true);
+});
 
 test('moveend scheduling removes close-view boundaries while preserving missing footprints and original heights', async t => {
   const h = harness(t); await settle();

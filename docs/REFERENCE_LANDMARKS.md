@@ -14,7 +14,9 @@ Maple Xi's 2024 illustrative plan predates completion. Individual floor counts o
 
 ## Runtime and retained data
 
-`public/models/reference-manifest.json` adds explicitly identified replacements and current search places. Actual model triangles are projected onto source polygons to find covered footprints. Named identity exceptions are separately recorded, rather than masquerading as measured geometric overlap. No circular landmark exclusion zones are used. Existing multi-building assets are suppressed only when all their source footprints are accounted for.
+`public/models/reference-manifest.json` adds explicitly identified replacements and current search places. Actual model triangles are projected onto source polygons to find covered footprints. Reviewed building identities and their source-linked child parts are separately recorded, rather than masquerading as measured geometric overlap. No circular landmark exclusion zones are used.
+
+The five original Flight landmarks and the reference models render before procedural models. Once a landmark draws, any procedural GLB sharing one of its source building identities is omitted, including partially overlapping multi-building GLBs and models arriving from catalog tiles. Source solids belonging to the other buildings in that compound stay available. A pending, failed, disabled, or camera-culled landmark does not claim a replacement. Source building parts also inherit their parent's replacement through `parent_id`, preventing roofs and upper floors from enclosing the authored model.
 
 References take precedence within the existing 32-visible / 48-resident GLB limits. Old source solids remain until a replacement draws successfully; failed reference loads can reload the retained generic model. Each Maple Xi building samples the terrain separately. The bridge is part of tower 210, preserving its height above ground. Legacy manifest, catalog shards, and original GLBs are immutable.
 

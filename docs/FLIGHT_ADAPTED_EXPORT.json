@@ -9005,8 +9005,8 @@
       "nameEn": "Garden Five",
       "district": "송파구",
       "model": "garden-five.glb",
-      "bytes": 175680,
-      "sha256": "647b063eab4a570351c4ccec60e838801e545f00f8bc3ab91acf1e40c022d38b",
+      "bytes": 62704,
+      "sha256": "919b075b61a39f6395ee134aaffb13d55eded3f3a195a042d33631a036972ec2",
       "sourceFile": "landmarks/garden-five.mjs",
       "sourceFileSha256": "d409198e9170973d4ff52e4739e1788968a13efc1270f046a0a1feee7ba1192c",
       "sourceUrl": "https://github.com/minwoo19930301/seoul-flight-game/blob/e007f5bcce37575904beec7edb8cc4036add7635/landmarks/garden-five.mjs",
@@ -9047,26 +9047,26 @@
         ]
       },
       "exportedStats": {
-        "meshes": 16,
-        "triangles": 2264,
-        "materialCount": 16,
+        "meshes": 8,
+        "triangles": 780,
+        "materialCount": 8,
         "nonUnitNormals": 0,
         "bounds": {
           "min": [
-            -285.5962829589844,
-            -5.9604645663569045e-9,
-            -282.7413024902344
+            -90.70248413085938,
+            1.0658141036401503e-14,
+            -90.37998962402344
           ],
           "max": [
-            285.5962829589844,
-            60.60000228881836,
-            282.7413024902344
+            90.70247650146484,
+            60.400001525878906,
+            90.37998962402344
           ]
         },
         "dimensions": [
-          571.1925659179688,
-          60.600002294778825,
-          565.4826049804688
+          181.40496063232422,
+          60.40000152587889,
+          180.75997924804688
         ]
       },
       "pristineSource": {
@@ -9101,182 +9101,478 @@
           1.9251858704620517
         ]
       },
-      "instrumentedSourceSha256": "d409198e9170973d4ff52e4739e1788968a13efc1270f046a0a1feee7ba1192c",
+      "instrumentedSourceSha256": "307a96532f57a046fa056cbdf8112fbe4503496c9526a687101cf35382a0baa4",
       "adaptationRecipe": {
-        "kind": "inverse-author-scale-estimate",
+        "kind": "component-width-and-centre-spacing",
         "changed": true,
         "scaleVerified": false,
-        "evidenceAuthority": "Source author comments only; actual footprint/coordinate fitting remains separate.",
+        "evidenceAuthority": "Retained named Life-hall source footprints for centre and conservative width fitting; original authored heights, materials and facade shapes.",
         "sourcePlanarFraction": 0.22,
         "sourceVerticalFraction": 1,
         "sourceCentreSpacingFraction": null,
         "sourceFileSha256": "d409198e9170973d4ff52e4739e1788968a13efc1270f046a0a1feee7ba1192c",
         "appliedScaleXYZ": [
-          4.545454545454546,
           1,
-          4.545454545454546
+          1,
+          1
         ],
-        "unresolved": []
+        "unresolved": [
+          "Building centres follow named retained footprints. Roof/width/height and rotation remain authored estimates; footprint outline matching is not asserted."
+        ],
+        "componentRecipe": {
+          "components": [
+            {
+              "id": "life-0--32",
+              "sourceCentre": [
+                0,
+                -32
+              ],
+              "adaptedCentre": [
+                55.99022963833352,
+                -40.55480658008106
+              ],
+              "widthScale": 0.9840227765064391,
+              "objects": 6,
+              "name": "패션관",
+              "footprintId": "1fac0f51-8968-4b51-a005-4a800a6ba524",
+              "coordinate": [
+                127.12586154107622,
+                37.477919076074436
+              ],
+              "geometrySha256": "37454d690e7b5f615d72560ddceccbd4cc601ae24bac08949d96c6e98386e0ae",
+              "sourceComponentGeometry": {
+                "meshes": 17,
+                "triangles": 204
+              },
+              "placementBasis": "Named retained footprint centroid; conservative inscribed source-hall rectangle fit, uniform horizontal scale only. Height, aspect ratio and orientation retained; not an exact facade survey."
+            },
+            {
+              "id": "life-32-0",
+              "sourceCentre": [
+                32,
+                0
+              ],
+              "adaptedCentre": [
+                75.48274860530951,
+                44.48016036445659
+              ],
+              "widthScale": 1.2366282557819819,
+              "objects": 5,
+              "name": "영관",
+              "footprintId": "13961bdb-eb7e-4782-8495-e58a971de792",
+              "coordinate": [
+                127.12594607874742,
+                37.47713825821242
+              ],
+              "geometrySha256": "cd7e2607830ca91299e1c16e25bb5cc6e6cf9e7e15468476bbc5c67518a50f55",
+              "sourceComponentGeometry": {
+                "meshes": 16,
+                "triangles": 192
+              },
+              "placementBasis": "Named retained footprint centroid; conservative inscribed source-hall rectangle fit, uniform horizontal scale only. Height, aspect ratio and orientation retained; not an exact facade survey."
+            },
+            {
+              "id": "life-0-32",
+              "sourceCentre": [
+                0,
+                32
+              ],
+              "adaptedCentre": [
+                -55.319885549022054,
+                46.528085127512774
+              ],
+              "widthScale": 1.0548562016749852,
+              "objects": 5,
+              "name": "리빙관",
+              "footprintId": "15fba1d0-22ca-4df8-85fd-ba0d4af00b1e",
+              "coordinate": [
+                127.12447662506496,
+                37.47728357161256
+              ],
+              "geometrySha256": "2286be49fcee5e7c8607bab0c6a712a8354b6cb11463e3e657dd0d2a2f15f5d3",
+              "sourceComponentGeometry": {
+                "meshes": 16,
+                "triangles": 192
+              },
+              "placementBasis": "Named retained footprint centroid; conservative inscribed source-hall rectangle fit, uniform horizontal scale only. Height, aspect ratio and orientation retained; not an exact facade survey."
+            },
+            {
+              "id": "life--32-0",
+              "sourceCentre": [
+                -32,
+                0
+              ],
+              "adaptedCentre": [
+                -76.1530926932677,
+                -50.45343891127975
+              ],
+              "widthScale": 1.5296906075679395,
+              "objects": 5,
+              "name": "테크노관",
+              "footprintId": "aef70571-a0cb-4d00-b265-663e5c7155f7",
+              "coordinate": [
+                127.12439587945371,
+                37.478172338960036
+              ],
+              "geometrySha256": "938eb8e03d95f8d27a21717b79e1ef4f73d8d8c797c88f36c099909fcc7bc812",
+              "sourceComponentGeometry": {
+                "meshes": 16,
+                "triangles": 192
+              },
+              "placementBasis": "Named retained footprint centroid; conservative inscribed source-hall rectangle fit, uniform horizontal scale only. Height, aspect ratio and orientation retained; not an exact facade survey."
+            }
+          ],
+          "landscapeObjects": 0,
+          "landscapePlanScale": null,
+          "removedDecorativeMeshes": 43,
+          "removedDecorativeTriangles": 1484,
+          "landscapeBasis": "Unmatched shared decoration removed; original remains in pristine export."
+        },
+        "namedFootprintPlacement": {
+          "sourceOrigin": [
+            127.12517003108557,
+            37.477628311214865
+          ],
+          "provider": "Retained OpenStreetMap building polygons",
+          "independentlySurveyed": false,
+          "footprintIds": [
+            "1fac0f51-8968-4b51-a005-4a800a6ba524",
+            "13961bdb-eb7e-4782-8495-e58a971de792",
+            "15fba1d0-22ca-4df8-85fd-ba0d4af00b1e",
+            "aef70571-a0cb-4d00-b265-663e5c7155f7"
+          ],
+          "centreSpacingRule": "Actual named footprint centroids replace the former game-spacing estimate."
+        },
+        "removedDecorativeMeshes": 43,
+        "removedDecorativeTriangles": 1484,
+        "removalReason": "Retain all four named Life retail halls with their facade panels, floor bands, roof gardens, shopfront glazing and penthouse. Remove the unverified fifth Tool/Works bar, game-only links, central canopy, plaza and scenery because their positions cannot be linked to actual buildings and cover roads/neighbours; pristine GLB stays unchanged.",
+        "omittedSourceComponents": [
+          "unverified fifth Tool/Works bar",
+          "game-position corner links",
+          "central canopy",
+          "shared plaza and scenery"
+        ]
       },
       "adaptedSourceStats": {
-        "meshes": 108,
-        "triangles": 2264,
-        "materialCount": 16,
+        "meshes": 65,
+        "triangles": 780,
+        "materialCount": 8,
         "nonUnitNormals": 0,
         "bounds": {
           "min": [
-            -285.59630091096096,
-            -0.19999999701976778,
-            -273.99046044121314
+            -92.97360616037277,
+            7.629394538355427e-7,
+            -96.86149229443333
           ],
           "max": [
-            285.59630091096096,
+            88.43135143338205,
             60.40000002384186,
-            291.49215017268637
+            83.89848206497794
           ]
         },
         "dimensions": [
-          571.1926018219219,
-          60.60000002086163,
-          565.4826106138995
+          181.40495759375483,
+          60.399999260902405,
+          180.75997435941127
         ]
       },
       "adaptationIntegrity": {
         "preservedPbrMaterials": true,
-        "preservedTriangleCount": true,
-        "preservationMode": "complete-source-model",
-        "removedTriangles": 0,
+        "preservedTriangleCount": false,
+        "preservationMode": "complete-four-life-halls-with-documented-unverified-site-removal",
+        "removedTriangles": 1484,
         "retainedMaterialMap": [
           {
             "adaptedIndex": 0,
-            "pristineIndex": 0,
-            "sha256": "b790aee3e408daa6848c73a052abc156301ad9cce1d7089fc14390544d18ee31"
-          },
-          {
-            "adaptedIndex": 1,
-            "pristineIndex": 1,
-            "sha256": "c608c293a155b9d38118ea790eaad91a4da81631a1d809e74836965679f994c1"
-          },
-          {
-            "adaptedIndex": 2,
-            "pristineIndex": 2,
-            "sha256": "16450955b63dff6004d77c0a3b5b86519ae96b61dca515a1304304e4ce513317"
-          },
-          {
-            "adaptedIndex": 3,
             "pristineIndex": 3,
             "sha256": "b27dbee26fd145cad8f5ad6fc1a2107b7e7513962ceced4ec0eb1386c0ae4609"
           },
           {
-            "adaptedIndex": 4,
+            "adaptedIndex": 1,
             "pristineIndex": 4,
             "sha256": "d5588bbb1fcaa3c447e960347f7724dea606da53b63953f98315dd30e51f4a7e"
           },
           {
-            "adaptedIndex": 5,
+            "adaptedIndex": 2,
             "pristineIndex": 5,
             "sha256": "6d84781b4c1bc4a24e77c5d7cabbf43ad07b0db1d1b39493e16df9e9172c1b35"
           },
           {
-            "adaptedIndex": 6,
+            "adaptedIndex": 3,
+            "pristineIndex": 2,
+            "sha256": "16450955b63dff6004d77c0a3b5b86519ae96b61dca515a1304304e4ce513317"
+          },
+          {
+            "adaptedIndex": 4,
             "pristineIndex": 6,
             "sha256": "99c087d07bcf54291ffb13755a104f26649aa5e4eab18186081e14b2435f56de"
           },
           {
-            "adaptedIndex": 7,
+            "adaptedIndex": 5,
             "pristineIndex": 7,
             "sha256": "6b226e0264ac84e555baf22cf81ebabadabf5fdc75c76c62bbaf5277a58a2112"
           },
           {
-            "adaptedIndex": 8,
+            "adaptedIndex": 6,
             "pristineIndex": 8,
             "sha256": "e59cea245d7bbfbd6e90e51a8caceacb97d84c7916746b4701819be1f1a1555a"
           },
           {
-            "adaptedIndex": 9,
-            "pristineIndex": 9,
-            "sha256": "0b8e123f44132ab9974069fc7c5626622549c607188db4d124318465bc406cb1"
-          },
-          {
-            "adaptedIndex": 10,
-            "pristineIndex": 10,
-            "sha256": "c318c9f9665b034191b70812c060d23d92cd68944a6eeb29b378634022b6a63c"
-          },
-          {
-            "adaptedIndex": 11,
-            "pristineIndex": 11,
-            "sha256": "057f219b3850caf7763d2e322ed513bf7e69c49a6edf381ab58b00f25d89a26a"
-          },
-          {
-            "adaptedIndex": 12,
-            "pristineIndex": 12,
-            "sha256": "b7d35c58add9759df3acbdee0b3abc5eb585aeccf80fe5a3c0e65414f350a1d5"
-          },
-          {
-            "adaptedIndex": 13,
+            "adaptedIndex": 7,
             "pristineIndex": 13,
             "sha256": "defa56339df36b172731eb744127b2086f448d91353e126ccea634fb8e97508c"
-          },
-          {
-            "adaptedIndex": 14,
-            "pristineIndex": 14,
-            "sha256": "e8f9ff7ce99f8f88fd87899653bf73f5038007e971f27a52bccfda8449f63a37"
-          },
-          {
-            "adaptedIndex": 15,
-            "pristineIndex": 15,
-            "sha256": "a8b4678da6387d98240b7c3dbc1fd696ab7371d2c7283e967716f1e7a5d8a797"
           }
         ],
-        "materialsSha256": "890831ec038c0e4287407b32af50c5325ce87e7710433d3c66afbde0a5114c86",
-        "pristineMaterialsSha256": "890831ec038c0e4287407b32af50c5325ce87e7710433d3c66afbde0a5114c86"
+        "materialsSha256": "112b7bcbe8fae5f25d15eb81c1b756839788cafd6e87e630b028ed79c5f120d6",
+        "pristineMaterialsSha256": "890831ec038c0e4287407b32af50c5325ce87e7710433d3c66afbde0a5114c86",
+        "pristineMaterialDefinitions": [
+          {
+            "pbrMetallicRoughness": {
+              "baseColorFactor": [
+                0.07036009568874305,
+                0.07818742179702069,
+                0.09084171117479915,
+                1
+              ],
+              "metallicFactor": 0.05,
+              "roughnessFactor": 1
+            }
+          },
+          {
+            "pbrMetallicRoughness": {
+              "baseColorFactor": [
+                0.623960391667596,
+                0.5775804404214573,
+                0.4969329950515914,
+                1
+              ],
+              "metallicFactor": 0.05,
+              "roughnessFactor": 0.85
+            }
+          },
+          {
+            "pbrMetallicRoughness": {
+              "baseColorFactor": [
+                0.10702310296918527,
+                0.2541520943200296,
+                0.06847816983662762,
+                1
+              ],
+              "metallicFactor": 0.05,
+              "roughnessFactor": 1
+            }
+          },
+          {
+            "pbrMetallicRoughness": {
+              "baseColorFactor": [
+                0.775822218312646,
+                0.7230551289161951,
+                0.6307571363387763,
+                1
+              ],
+              "metallicFactor": 0.05,
+              "roughnessFactor": 0.78
+            }
+          },
+          {
+            "pbrMetallicRoughness": {
+              "baseColorFactor": [
+                0.5840784178830671,
+                0.6104955708001716,
+                0.6375968739867731,
+                1
+              ],
+              "metallicFactor": 0.85,
+              "roughnessFactor": 0.3
+            }
+          },
+          {
+            "pbrMetallicRoughness": {
+              "baseColorFactor": [
+                0.2541520943200296,
+                0.2746773120495699,
+                0.29613827078752575,
+                1
+              ],
+              "metallicFactor": 0.05,
+              "roughnessFactor": 0.9
+            }
+          },
+          {
+            "pbrMetallicRoughness": {
+              "baseColorFactor": [
+                0.6866853124288864,
+                0.6444796819634361,
+                0.5647115056965487,
+                1
+              ],
+              "metallicFactor": 0.05,
+              "roughnessFactor": 0.8
+            }
+          },
+          {
+            "pbrMetallicRoughness": {
+              "baseColorFactor": [
+                0.8387990117372213,
+                0.8069522576650873,
+                0.7304607400847158,
+                1
+              ],
+              "metallicFactor": 0.05,
+              "roughnessFactor": 0.74
+            }
+          },
+          {
+            "pbrMetallicRoughness": {
+              "baseColorFactor": [
+                0.623960391667596,
+                0.5840784178830671,
+                0.5028864580233624,
+                1
+              ],
+              "metallicFactor": 0.05,
+              "roughnessFactor": 0.82
+            }
+          },
+          {
+            "pbrMetallicRoughness": {
+              "baseColorFactor": [
+                0.775822218312646,
+                0.7529422167708612,
+                0.6866853124288864,
+                1
+              ],
+              "metallicFactor": 0.05,
+              "roughnessFactor": 0.75
+            }
+          },
+          {
+            "pbrMetallicRoughness": {
+              "baseColorFactor": [
+                0.7681511472425809,
+                0.7156935005005721,
+                0.5972017883558645,
+                1
+              ],
+              "metallicFactor": 0.05,
+              "roughnessFactor": 0.82
+            }
+          },
+          {
+            "pbrMetallicRoughness": {
+              "baseColorFactor": [
+                0.9046611743890203,
+                0.8879231178794776,
+                0.8387990117372213,
+                1
+              ],
+              "metallicFactor": 0.05,
+              "roughnessFactor": 0.7
+            },
+            "doubleSided": true
+          },
+          {
+            "pbrMetallicRoughness": {
+              "baseColorFactor": [
+                0.6795424696265424,
+                0.7230551289161951,
+                0.7681511472425809,
+                1
+              ],
+              "metallicFactor": 0.7,
+              "roughnessFactor": 0.35
+            }
+          },
+          {
+            "pbrMetallicRoughness": {
+              "baseColorFactor": [
+                0.34191442489801843,
+                0.5840784178830671,
+                0.8069522576650873,
+                1
+              ],
+              "metallicFactor": 0.7,
+              "roughnessFactor": 0.18
+            },
+            "emissiveFactor": [
+              0.005605391621829108,
+              0.02955683443236377,
+              0.06847816983662762
+            ],
+            "extensions": {
+              "KHR_materials_emissive_strength": {
+                "emissiveStrength": 0.22
+              }
+            }
+          },
+          {
+            "pbrMetallicRoughness": {
+              "baseColorFactor": [
+                0.10224173307914941,
+                0.05126945836711539,
+                0.02955683443236377,
+                1
+              ],
+              "metallicFactor": 0.05,
+              "roughnessFactor": 1
+            }
+          },
+          {
+            "pbrMetallicRoughness": {
+              "baseColorFactor": [
+                0.04817182422013895,
+                0.19461783043107173,
+                0.04231141061442144,
+                1
+              ],
+              "metallicFactor": 0.05,
+              "roughnessFactor": 1
+            }
+          }
+        ]
       },
       "originalCenterOffsetM": [
         0,
         -0.19999999701976778,
         1.9251858704620517
       ],
-      "originalCenterOffsetScaledM": [
-        0,
-        -0.19999999701976778,
-        8.7508448657366
-      ],
+      "originalCenterOffsetScaledM": null,
       "adaptedCenterOffsetM": [
-        0,
-        -0.19999999701976778,
-        8.75084486573661
+        -2.27112736349536,
+        7.629394538355427e-7,
+        -6.481505114727696
       ],
       "exportOffsetFromAdaptedSource": [
-        0,
-        -0.19999999701976778,
-        8.75084486573661
+        -2.27112736349536,
+        7.629394538355427e-7,
+        -6.481505114727696
       ],
-      "sourceGroundOffsetM": -0.19999999701976778,
+      "sourceGroundOffsetM": 7.629394538355427e-7,
       "sourceGroundContract": "Place centred GLB at independently verified source origin plus adaptedCenterOffsetM.xz; terrainY + sourceGroundOffsetM restores authored nominal y=0 grade. Coordinates are not verified by export.",
       "geometryReady": true,
       "footprintFitVerified": false,
       "exportedGlb": {
-        "meshes": 16,
-        "primitives": 16,
-        "materials": 16,
+        "meshes": 8,
+        "primitives": 8,
+        "materials": 8,
         "images": 0
       },
       "byteValidation": {
         "finitePositions": true,
         "unitNormals": true,
-        "vertices": 6792,
-        "triangles": 2264,
+        "vertices": 2340,
+        "triangles": 780,
         "degenerateTriangles": 0,
         "bounds": {
           "min": [
-            -285.5962829589844,
-            -5.9604645663569045e-9,
-            -282.7413024902344
+            -90.70248413085938,
+            1.0658141036401503e-14,
+            -90.37998962402344
           ],
           "max": [
-            285.5962829589844,
-            60.60000228881836,
-            282.7413024902344
+            90.70247650146484,
+            60.400001525878906,
+            90.37998962402344
           ]
         }
       },
@@ -9294,9 +9590,9 @@
       "yawDegFromEast": 0,
       "sourceOrigin": "module origin placed at flightRuntimeCoordinate and one terrain sample",
       "exportOffsetFromSource": [
-        0,
-        -0.19999999701976778,
-        8.75084486573661
+        -2.27112736349536,
+        7.629394538355427e-7,
+        -6.481505114727696
       ],
       "offsetContract": "exportedVertex = adaptedSourceWorldVertex - exportOffsetFromSource; source ground y=0 becomes exported y=-offset[1]. Horizontal placement must account for offset.",
       "sourceAuthorScaleNotes": [
@@ -32095,7 +32391,7 @@
             "c6873a11-88e5-4129-bc93-19bc68cd7bd5",
             "0279553d-08e7-48de-bd31-6016d2b5445c"
           ],
-          "centreSpacingRule": "Actual named footprint centroids replace the former 1/0.35 game-spacing estimate."
+          "centreSpacingRule": "Actual named footprint centroids replace the former game-spacing estimate."
         },
         "removedDecorativeMeshes": 105,
         "removedDecorativeTriangles": 5804,
@@ -35865,14 +36161,14 @@
   "adaptation": {
     "placementAuditSha256": "f9bbfabf500f0bbec144db9cef48707f54b39a84137632b38fff8b1c71f65717",
     "pristineExportReportSha256": "464c941bed1fecec2984325e04bdcb410cd2d19062964299c2bd24d485ed2275",
-    "adapterScriptSha256": "bc5764bf689e9be849c27a62277333a1444f61154c37088004d98a773f032937",
+    "adapterScriptSha256": "8f5fa99019239935cf007c09d10c8ba9802345609927a705a1e61aff25e8c4f6",
     "notice": "Source-author scale estimates applied before material merge; no claim of independent survey or final geographic fit."
   },
   "total": {
     "modules": 94,
     "exported": 94,
     "failed": 0,
-    "triangles": 730264,
-    "bytes": 53682508
+    "triangles": 728780,
+    "bytes": 53569532
   }
 }
