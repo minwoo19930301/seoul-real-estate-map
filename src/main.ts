@@ -345,8 +345,12 @@ async function loadCityModels() {
   let references: import('./reference-models').ReferenceManifest = { version: 1, assets: [], places: [] };
   try { references = referenceManifest(await request<unknown>('/models/reference-manifest.json'), manifest.assets); }
   catch (error) { console.warn('개별 건물 모델을 불러오지 못해 기존 건물을 표시합니다.', error); }
-  const assets = [...manifest.assets, ...references.assets];
-  const replaced = new Set(references.assets.flatMap(asset => asset.supersedes ?? []));
+  let bespoke: import('./reference-models').ReferenceManifest = { version: 1, assets: [], places: [] };
+  try { bespoke = referenceManifest(await request<unknown>('/models/bespoke-manifest.json'), [...manifest.assets, ...references.assets]); }
+  catch (error) { console.warn('재제작 모델을 불러오지 못해 이전 모델을 표시합니다.', error); }
+  const assets = [...manifest.assets, ...references.assets, ...bespoke.assets];
+  const places = [...bespoke.places, ...references.places];
+  const replaced = new Set([...references.assets, ...bespoke.assets].flatMap(asset => asset.supersedes ?? []));
   cityModels = new CityModels(map, {
     assets,
     catalogIndex: manifest.catalogIndex,
@@ -355,9 +359,9 @@ async function loadCityModels() {
   });
 
   modelPlaces = assets.filter(asset => asset.searchable !== false && !replaced.has(asset.id)).map(asset => ({ id: `model:${asset.id}`, name: asset.nameKo, subtitle: `${asset.category === 'bridge' ? '대교 모형' : asset.category === 'company-office' ? '회사 건물 모형' : ['city-hall', 'cultural-site'].includes(asset.category ?? '') ? '시청·문화시설 모형' : ['k12-school', 'district-public-office'].includes(asset.category ?? '') ? '학교·공공기관 모형' : '건물 모형'} · 모형 높이 ${Math.round(asset.dimensions[1] * 10) / 10} m`, center: [asset.coordinate.lon, asset.coordinate.lat], zoom: asset.dimensions[1] > 400 ? 15.3 : 16.8, kind: 'building', source_url: asset.referenceUrl }));
-  modelPlaces.unshift(...references.places.map(place => ({ ...place, kind: 'building' as const })));
+  modelPlaces.unshift(...places.map(place => ({ ...place, kind: 'building' as const })));
   resolveModelPlaces();
-  landmarks?.setReferencePlaces(references.places);
+  landmarks?.setReferencePlaces(places.filter(place => place.household_count !== undefined));
   const publicAssets = assets.filter(a => ['k12-school', 'district-public-office'].includes(a.category ?? ''));
   map.addSource('public-facility-points', { type: 'geojson', data: { type: 'FeatureCollection', features: publicAssets.map(a => ({ type: 'Feature', geometry: { type: 'Point', coordinates: [a.coordinate.lon, a.coordinate.lat] }, properties: { name: a.nameKo } })) } });
   map.addLayer({ id: 'public-facility-labels', type: 'symbol', source: 'public-facility-points', minzoom: 15, layout: { 'text-field': ['get', 'name'], 'text-font': ['Noto Sans Regular'], 'text-size': 11, 'text-offset': [0, 1.1], 'text-allow-overlap': false }, paint: { 'text-color': '#304d45', 'text-halo-color': '#fff', 'text-halo-width': 1.5 } });
@@ -495,10 +499,11 @@ async function updateSearch(submit = false) {
   }
   if (id !== searchRequest) return;
   const seen = new Set<string>();
+  const exactName = (place: SearchPlace) => place.name.replace(/\s+/g, '').toLowerCase() === normalized;
   const results = [...local, ...remote].filter(place => {
     const key = `${place.name}:${place.center.map(v => v.toFixed(3)).join(',')}`;
     if (seen.has(key)) return false; seen.add(key); return true;
-  }).slice(0, 12);
+  }).sort((a, b) => Number(exactName(b)) - Number(exactName(a))).slice(0, 12);
   if (submit && results.length) { moveTo(results[0]); return; }
   container.replaceChildren();
   if (!results.length) {

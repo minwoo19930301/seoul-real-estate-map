@@ -3,7 +3,8 @@ import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 
 const manifest = JSON.parse(readFileSync('public/models/manifest.json', 'utf8'));
 const references = JSON.parse(readFileSync('public/models/reference-manifest.json', 'utf8'));
-const assets = [...references.assets, ...manifest.assets];
+const bespoke = JSON.parse(readFileSync('public/models/bespoke-manifest.json', 'utf8'));
+const assets = [...bespoke.assets, ...references.assets, ...manifest.assets];
 const originals = ['sixtythree', 'lotte', 'nseoul', 'coex', 'gyeongbokgung'];
 // Observed source identities, independent of the publisher's supersedes/coverage list.
 const cases = [
@@ -14,8 +15,8 @@ const cases = [
   { id: 'reference-flight-gfc', sourceIds: ['8c853160-e816-4fa5-9bc8-37d2a4902c39'] },
   { id: 'reference-flight-myeongdong-cathedral', sourceIds: ['2723fab9-38dc-4308-830a-748355caca48'] },
   { id: 'reference-flight-samsung-town', sourceIds: ['11ce39b4-914d-469e-b321-645439192b79', '1e2fbefc-05ec-4d57-9c2a-0698e4fea262', 'acb69099-3808-4569-9eeb-acabb692f3bf'] },
-  { id: 'reference-flight-cheongnyangni-skyl65', sourceIds: ['2b68ae2e-2c06-48b5-885e-149a84aea147', '64b81053-77b5-474e-9511-4613763e9659', '9da9e8a3-a799-43a6-9aed-552bc7577042'], genericIds: ['apt-a10023083'] },
-  { id: 'reference-flight-hyperion', sourceIds: ['d17a295c-c15f-459a-99f0-78bd56c3155b'], genericIds: ['apt-a15805114', 'survey-upis-32702773'] },
+  { id: 'bespoke-skyl65-b', sourceIds: ['2b68ae2e-2c06-48b5-885e-149a84aea147', '64b81053-77b5-474e-9511-4613763e9659', '9da9e8a3-a799-43a6-9aed-552bc7577042'], genericIds: ['apt-a10023083', 'reference-flight-cheongnyangni-skyl65'] },
+  { id: 'bespoke-hyperion-a', sourceIds: ['d17a295c-c15f-459a-99f0-78bd56c3155b'], genericIds: ['reference-flight-hyperion', 'apt-a15805114', 'survey-upis-32702773'] },
   { id: 'coex', sourceIds: ['61626436-3139-3031-B836-373735653536'] },
   { id: 'lotte', sourceIds: ['63646261-6332-3535-A430-633337356430'] },
 ];

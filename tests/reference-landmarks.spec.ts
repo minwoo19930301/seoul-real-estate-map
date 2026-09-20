@@ -1,6 +1,10 @@
 import { test, expect } from '@playwright/test';
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 const references = JSON.parse(readFileSync('public/models/reference-manifest.json', 'utf8'));
+const bespoke = JSON.parse(readFileSync('public/models/bespoke-manifest.json', 'utf8'));
+const maplePlace = references.places.find((p: any) => p.name === '메이플자이');
+const mapleBuildings = references.assets.filter((a: any) => /^maple-xi-\d+$/.test(a.id))
+  .map((a: any) => ['maple-xi-210', 'maple-xi-211'].includes(a.id) ? `bespoke-${a.id}` : a.id).sort();
 
 test('latest authored landmarks and Maple Xi replace generic shapes on the map', async ({ page }) => {
   test.setTimeout(300_000);
@@ -17,16 +21,16 @@ test('latest authored landmarks and Maple Xi replace generic shapes on the map',
   await expect.poll(() => page.evaluate(() => {
     const map = (window as any).__SEOUL_MAP__.map;
     return { center: map.getCenter().toArray(), zoom: map.getZoom() };
-  })).toEqual({ center: references.places[0].center, zoom: references.places[0].zoom });
-  await expect(page.locator('#place-subtitle')).toHaveText(references.places[0].subtitle);
+  })).toEqual({ center: maplePlace.center, zoom: maplePlace.zoom });
+  await expect(page.locator('#place-subtitle')).toHaveText(maplePlace.subtitle);
   await page.locator('#place-search').fill('');
   mkdirSync('tests/screenshots', { recursive: true });
-  const samples = ['reference-flight-seoul-city-hall', 'reference-flight-amorepacific-hq', 'reference-flight-ddp', 'reference-flight-tower-palace', 'maple-xi-210'];
+  const samples = ['reference-flight-seoul-city-hall', 'reference-flight-amorepacific-hq', 'reference-flight-ddp', 'reference-flight-tower-palace', 'bespoke-maple-xi-210'];
   const results: any[] = [];
   for (const id of samples) {
-    const asset = references.assets.find((a: any) => a.id === id);
-    const isMaple = id.startsWith('maple');
-    const center = isMaple ? references.places[0].center : [asset.coordinate.lon, asset.coordinate.lat];
+    const asset = [...bespoke.assets, ...references.assets].find((a: any) => a.id === id);
+    const isMaple = /^(?:bespoke-)?maple-xi-/.test(id);
+    const center = isMaple ? maplePlace.center : [asset.coordinate.lon, asset.coordinate.lat];
     await page.evaluate(({ center, zoom }) => (window as any).__SEOUL_MAP__.map.jumpTo({ center, zoom, pitch: 52, bearing: 25 }), { center, zoom: isMaple ? 16.4 : 17.4 });
     await page.waitForFunction(id => {
       const state = (window as any).__SEOUL_MAP__.cityModels.getState();
@@ -40,12 +44,17 @@ test('latest authored landmarks and Maple Xi replace generic shapes on the map',
     expect(state.models.filter((m: any) => m.active).length).toBeLessThanOrEqual(32);
     for (const old of asset.supersedes) expect(state.models.find((m: any) => m.id === old)?.active ?? false).toBe(false);
     for (const fid of asset.footprintIds) expect(state.activeFootprintIds).toContain(fid);
-    const activeMaple = state.models.filter((m: any) => m.id.startsWith('maple-xi-') && m.active);
-    if (isMaple) expect(activeMaple.filter((m: any) => /maple-xi-\d+$/.test(m.id)).length).toBe(29);
+    const activeMaple = state.models.filter((m: any) => /^(?:bespoke-)?maple-xi-/.test(m.id) && m.active);
+    if (isMaple) {
+      const buildings = activeMaple.filter((m: any) => /^(?:bespoke-)?maple-xi-\d+$/.test(m.id)).map((m: any) => m.id).sort();
+      expect(buildings).toHaveLength(29);
+      expect(buildings).toEqual(mapleBuildings);
+      for (const old of ['maple-xi-210', 'maple-xi-211']) expect(state.models.find((m: any) => m.id === old)?.active).toBe(false);
+    }
     await page.screenshot({ path: `tests/screenshots/reference-${isMaple ? 'maple-xi' : id.replace('reference-flight-', '')}.png` });
     results.push({ id, model: state.models.find((m: any) => m.id === id), activeMaple: activeMaple.map((m: any) => m.id), active: state.models.filter((m: any) => m.active).length, drawCalls: state.lastDrawCalls });
   }
-  const bridge = references.assets.find((a: any) => a.id === 'maple-xi-210');
+  const bridge = bespoke.assets.find((a: any) => a.id === 'bespoke-maple-xi-210');
   await page.evaluate((a: any) => (window as any).__SEOUL_MAP__.map.jumpTo({center:[a.coordinate.lon,a.coordinate.lat],zoom:17.8,pitch:60,bearing:205}), bridge);
   await page.waitForFunction(() => !(window as any).__SEOUL_MAP__.cityModels.getState().loading);
   await page.waitForLoadState('networkidle');
@@ -56,7 +65,7 @@ test('latest authored landmarks and Maple Xi replace generic shapes on the map',
   await page.locator('#toggle-city-models').uncheck();
   await expect.poll(() => page.evaluate(() => (window as any).__SEOUL_MAP__.cityModels.getState().activeFootprintIds.length)).toBe(0);
   await page.locator('#toggle-city-models').check();
-  await page.waitForFunction(() => (window as any).__SEOUL_MAP__.cityModels.getState().models.some((m: any) => m.id === 'maple-xi-210' && m.active));
+  await page.waitForFunction(() => (window as any).__SEOUL_MAP__.cityModels.getState().models.some((m: any) => m.id === 'bespoke-maple-xi-210' && m.active));
   expect(errors).toEqual([]); expect(failures).toEqual([]);
   writeFileSync('docs/reference-browser-check.json', JSON.stringify({ sourceRevision: references.sourceRevision, results, pageErrors: errors, modelFailures: failures }, null, 2) + '\n');
 });

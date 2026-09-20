@@ -1,0 +1,1467 @@
+{
+  "version": 1,
+  "assets": [
+    {
+      "id": "bespoke-seoul-express-terminal",
+      "nameKo": "서울고속버스터미널 경부선·영동선",
+      "model": "bespoke/seoul-express-terminal-gyeongbu-yeongdong/bespoke-seoul-express-terminal.glb",
+      "coordinate": {
+        "lon": 127.0055703,
+        "lat": 37.5042468
+      },
+      "dimensions": [
+        306.84539794921875,
+        51,
+        260.90093994140625
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "metres; independent terrain anchor",
+      "quality": "reference",
+      "sha256": "509b2771b80e4717792e303ce1faad19057a256eed84e652c281163823a1a795",
+      "referenceUrl": "http://www.exterminal.co.kr/greeting.asp",
+      "category": "landmark",
+      "district": null,
+      "minZoom": 15,
+      "geoBounds": [
+        127.00494820053159,
+        37.5042468,
+        127.00842281361598,
+        37.5065905130199
+      ],
+      "footprintIds": [
+        "c313b964-022c-4f5a-9599-d69d0155d010"
+      ],
+      "supersedes": [],
+      "searchable": false,
+      "groundOffsetM": 0,
+      "sourceRecord": {
+        "provider": "Individual Blender MCP reconstruction",
+        "siteId": "seoul-express-terminal-gyeongbu-yeongdong",
+        "sources": [
+          {
+            "url": "http://www.exterminal.co.kr/greeting.asp",
+            "observations": [
+              "Operator exterior photograph: high inclined main building and low adjoining wing; capture date unknown"
+            ]
+          },
+          {
+            "url": "http://www.exterminal.co.kr/floor.asp",
+            "observations": [
+              "Main building10F and separate annex2F, individual roof terrace photograph"
+            ]
+          },
+          {
+            "url": "http://www.exterminal.co.kr/take.asp",
+            "observations": [
+              "Orthogonal two-wing gate arrangement, main gates1–16 and annex17–36"
+            ]
+          },
+          {
+            "url": "http://www.exterminal.co.kr/parking.asp",
+            "observations": [
+              "Gyeongbu western main block and long Yeongdong northern wing, separate southern annex"
+            ]
+          },
+          {
+            "url": "https://www.openstreetmap.org/way/309352819",
+            "observations": [
+              "Geographic L outline and source-reported51m height, supplied via existing local dataset"
+            ]
+          }
+        ],
+        "blendSource": "modeling/bespoke/seoul-express-terminal-gyeongbu-yeongdong/express-terminal.blend",
+        "blendSha256": "eb2c8e07575dad6632ebefec265d88c86e980565c0d763383e8dc3746b3709e4",
+        "sourceGlbSha256": "8705ebd9b771306866aa1efdc4e5b3f35715e8794ed31777ad54c15ab6151bf6",
+        "components": [
+          "High main terminal with interpreted inclined section",
+          "Recessed window bands and projecting concrete slabs",
+          "Rooftop sign wall and terrace",
+          "Low Yeongdong annex",
+          "Open bus-gate colonnade",
+          "Curved glazed entry canopy"
+        ],
+        "buildingFacts": {},
+        "uncertainties": [
+          "Photo capture dates not published; current facade colors have not been independently surveyed",
+          "Main section setbacks, facade module widths and floor heights are photo interpretations",
+          "Low-wing 9.1m roof and entrance barrel vault position/size are unmeasured interpretations",
+          "OSM9floor versus operator10floor discrepancy unresolved; operator main/annex floor distinction used",
+          "Only main L footprint modeled; separate parking decks, southern annex and Honam terminal are not claimed"
+        ],
+        "accuracy": "Compared to cited photographs and site plans; unmeasured dimensions remain estimates"
+      }
+    },
+    {
+      "id": "bespoke-skyl65-a",
+      "nameKo": "청량리역 롯데캐슬 SKY-L65 A동",
+      "model": "bespoke/skyl65/bespoke-skyl65-a.glb",
+      "coordinate": {
+        "lon": 127.04581432208747,
+        "lat": 37.57909020295267
+      },
+      "dimensions": [
+        35.467323303222656,
+        196,
+        53.038564682006836
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "metres; independent terrain anchor",
+      "quality": "reference",
+      "sha256": "5b5b2fbbdffd1bdcc53dc389ede163a9919e374d989f4a86f911ba482dec0438",
+      "referenceUrl": "https://www.lottecastle.co.kr/files/etc/2022/6/202206170824559250.jpg",
+      "category": "apartment",
+      "district": null,
+      "minZoom": 15,
+      "geoBounds": [
+        127.04560182551869,
+        37.57884493487286,
+        127.0460038488087,
+        37.57932138840588
+      ],
+      "footprintIds": [
+        "2b68ae2e-2c06-48b5-885e-149a84aea147"
+      ],
+      "supersedes": [
+        "apt-a10023083",
+        "reference-flight-cheongnyangni-skyl65"
+      ],
+      "searchable": false,
+      "groundOffsetM": 0,
+      "sourceRecord": {
+        "provider": "Individual Blender MCP reconstruction",
+        "siteId": "skyl65",
+        "sources": [
+          {
+            "url": "https://www.lottecastle.co.kr/files/etc/2022/6/202206170824559250.jpg",
+            "observations": "2022-uploaded official diagram; separately traced six dwelling wings in each A/B/C/D plan. Not measured as-built CAD."
+          },
+          {
+            "url": "https://www.lottecastle.co.kr/files/etc/2022/6/202206170824566590.jpg",
+            "observations": "A64F B65F C63F D65F; A refuge23/44, B/C/D24/45."
+          },
+          {
+            "url": "https://www.lottecastle.co.kr/files/etc/2023/7/202307270158028590.jpg",
+            "observations": "Official construction progress page labels these completed aerial photographs 2023.07; long white end piers, dark green side glazing, open projecting crown canopies and low storefront stone observed."
+          },
+          {
+            "url": "https://www.lottecastle.co.kr/files/etc/2023/7/202307270158028592.jpg",
+            "observations": "Official construction progress page labels these completed aerial photographs 2023.07; long white end piers, dark green side glazing, open projecting crown canopies and low storefront stone observed."
+          },
+          {
+            "url": "https://www.lottecastle.co.kr/files/etc/2023/7/202307270158028591.jpg",
+            "observations": "Official construction progress page labels these completed aerial photographs 2023.07; long white end piers, dark green side glazing, open projecting crown canopies and low storefront stone observed."
+          }
+        ],
+        "blendSource": "modeling/bespoke/skyl65/skyl65-authored.blend",
+        "blendSha256": "69cf9d09d3915acfc3d25ffac1e5741126caf0cae0cc77c324391cbeb4d4843e",
+        "sourceGlbSha256": "deabbccd18df98c2a7033b9b81ef399a289274aacf22b6537a20424257193116",
+        "components": [
+          "A_01_six-wing_concave_structure",
+          "A_02_large_white_end_piers",
+          "A_03_glass_bays_and_recessed_windows",
+          "A_04_fine_mullions_and_refuge_reveals",
+          "A_05_asymmetric_penthouse_and_crown",
+          "A_06_three-storey_retail_and_entries"
+        ],
+        "buildingFacts": {
+          "floors": 64,
+          "floorsBasis": "official dated 2022-06-17 dong/unit chart, source OSM all65 superseded",
+          "heightM": 196,
+          "heightBasis": "B/D use OSM 199m recorded height; A/C reduced by estimated 3m per differing official storey. Height includes illustrative crown. No measured as-built heights."
+        },
+        "uncertainties": [
+          "B/D use OSM 199m recorded height; A/C reduced by estimated 3m per differing official storey. Height includes illustrative crown. No measured as-built heights.",
+          "Manual diagram trace; OSM-centroid anchored, not cadastral or architectural measurement.",
+          "Facade subdivisions and crown dimensions manually estimated from low-resolution completed photos, not measured CAD.",
+          "OSM source centroids may differ from surveyed building centres.",
+          "Business tower and shared landscape not modelled or claimed."
+        ],
+        "accuracy": "Compared to cited photographs and site plans; unmeasured dimensions remain estimates"
+      }
+    },
+    {
+      "id": "bespoke-skyl65-b",
+      "nameKo": "청량리역 롯데캐슬 SKY-L65 B동",
+      "model": "bespoke/skyl65/bespoke-skyl65-b.glb",
+      "coordinate": {
+        "lon": 127.04525970389179,
+        "lat": 37.57905620786467
+      },
+      "dimensions": [
+        33.711618423461914,
+        199,
+        52.94446563720703
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "metres; independent terrain anchor",
+      "quality": "reference",
+      "sha256": "9809415799cb3b498ff7c48f272166f96765f1a5ede30a85572f271a5bdb3941",
+      "referenceUrl": "https://www.lottecastle.co.kr/files/etc/2022/6/202206170824559250.jpg",
+      "category": "apartment",
+      "district": null,
+      "minZoom": 15,
+      "geoBounds": [
+        127.04506235932462,
+        37.578812318763795,
+        127.04544448146692,
+        37.57928792699071
+      ],
+      "footprintIds": [
+        "64b81053-77b5-474e-9511-4613763e9659"
+      ],
+      "supersedes": [
+        "apt-a10023083",
+        "reference-flight-cheongnyangni-skyl65"
+      ],
+      "searchable": false,
+      "groundOffsetM": 0,
+      "sourceRecord": {
+        "provider": "Individual Blender MCP reconstruction",
+        "siteId": "skyl65",
+        "sources": [
+          {
+            "url": "https://www.lottecastle.co.kr/files/etc/2022/6/202206170824559250.jpg",
+            "observations": "2022-uploaded official diagram; separately traced six dwelling wings in each A/B/C/D plan. Not measured as-built CAD."
+          },
+          {
+            "url": "https://www.lottecastle.co.kr/files/etc/2022/6/202206170824566590.jpg",
+            "observations": "A64F B65F C63F D65F; A refuge23/44, B/C/D24/45."
+          },
+          {
+            "url": "https://www.lottecastle.co.kr/files/etc/2023/7/202307270158028590.jpg",
+            "observations": "Official construction progress page labels these completed aerial photographs 2023.07; long white end piers, dark green side glazing, open projecting crown canopies and low storefront stone observed."
+          },
+          {
+            "url": "https://www.lottecastle.co.kr/files/etc/2023/7/202307270158028592.jpg",
+            "observations": "Official construction progress page labels these completed aerial photographs 2023.07; long white end piers, dark green side glazing, open projecting crown canopies and low storefront stone observed."
+          },
+          {
+            "url": "https://www.lottecastle.co.kr/files/etc/2023/7/202307270158028591.jpg",
+            "observations": "Official construction progress page labels these completed aerial photographs 2023.07; long white end piers, dark green side glazing, open projecting crown canopies and low storefront stone observed."
+          }
+        ],
+        "blendSource": "modeling/bespoke/skyl65/skyl65-authored.blend",
+        "blendSha256": "69cf9d09d3915acfc3d25ffac1e5741126caf0cae0cc77c324391cbeb4d4843e",
+        "sourceGlbSha256": "4f6185c6299e4a91ea728ec9049c42621f11904f61856994b78dd87199c698db",
+        "components": [
+          "B_01_six-wing_concave_structure",
+          "B_02_large_white_end_piers",
+          "B_03_glass_bays_and_recessed_windows",
+          "B_04_fine_mullions_and_refuge_reveals",
+          "B_05_asymmetric_penthouse_and_crown",
+          "B_06_three-storey_retail_and_entries"
+        ],
+        "buildingFacts": {
+          "floors": 65,
+          "floorsBasis": "official dated 2022-06-17 dong/unit chart, source OSM all65 superseded",
+          "heightM": 199,
+          "heightBasis": "B/D use OSM 199m recorded height; A/C reduced by estimated 3m per differing official storey. Height includes illustrative crown. No measured as-built heights."
+        },
+        "uncertainties": [
+          "B/D use OSM 199m recorded height; A/C reduced by estimated 3m per differing official storey. Height includes illustrative crown. No measured as-built heights.",
+          "Manual diagram trace; OSM-centroid anchored, not cadastral or architectural measurement.",
+          "Facade subdivisions and crown dimensions manually estimated from low-resolution completed photos, not measured CAD.",
+          "OSM source centroids may differ from surveyed building centres.",
+          "Business tower and shared landscape not modelled or claimed."
+        ],
+        "accuracy": "Compared to cited photographs and site plans; unmeasured dimensions remain estimates"
+      }
+    },
+    {
+      "id": "bespoke-skyl65-c",
+      "nameKo": "청량리역 롯데캐슬 SKY-L65 C동",
+      "model": "bespoke/skyl65/bespoke-skyl65-c.glb",
+      "coordinate": {
+        "lon": 127.04477880406523,
+        "lat": 37.57861900747223
+      },
+      "dimensions": [
+        35.513301849365234,
+        193,
+        52.57951354980469
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "metres; independent terrain anchor",
+      "quality": "reference",
+      "sha256": "8753fb146d2b89057cfdfa3523be307f48fd6d50297fcb26cdde64ff744862b1",
+      "referenceUrl": "https://www.lottecastle.co.kr/files/etc/2022/6/202206170824559250.jpg",
+      "category": "apartment",
+      "district": null,
+      "minZoom": 15,
+      "geoBounds": [
+        127.04456371053962,
+        37.57837461655063,
+        127.04496625245052,
+        37.57884694635717
+      ],
+      "footprintIds": [
+        "9da9e8a3-a799-43a6-9aed-552bc7577042"
+      ],
+      "supersedes": [
+        "apt-a10023083",
+        "reference-flight-cheongnyangni-skyl65"
+      ],
+      "searchable": false,
+      "groundOffsetM": 0,
+      "sourceRecord": {
+        "provider": "Individual Blender MCP reconstruction",
+        "siteId": "skyl65",
+        "sources": [
+          {
+            "url": "https://www.lottecastle.co.kr/files/etc/2022/6/202206170824559250.jpg",
+            "observations": "2022-uploaded official diagram; separately traced six dwelling wings in each A/B/C/D plan. Not measured as-built CAD."
+          },
+          {
+            "url": "https://www.lottecastle.co.kr/files/etc/2022/6/202206170824566590.jpg",
+            "observations": "A64F B65F C63F D65F; A refuge23/44, B/C/D24/45."
+          },
+          {
+            "url": "https://www.lottecastle.co.kr/files/etc/2023/7/202307270158028590.jpg",
+            "observations": "Official construction progress page labels these completed aerial photographs 2023.07; long white end piers, dark green side glazing, open projecting crown canopies and low storefront stone observed."
+          },
+          {
+            "url": "https://www.lottecastle.co.kr/files/etc/2023/7/202307270158028592.jpg",
+            "observations": "Official construction progress page labels these completed aerial photographs 2023.07; long white end piers, dark green side glazing, open projecting crown canopies and low storefront stone observed."
+          },
+          {
+            "url": "https://www.lottecastle.co.kr/files/etc/2023/7/202307270158028591.jpg",
+            "observations": "Official construction progress page labels these completed aerial photographs 2023.07; long white end piers, dark green side glazing, open projecting crown canopies and low storefront stone observed."
+          }
+        ],
+        "blendSource": "modeling/bespoke/skyl65/skyl65-authored.blend",
+        "blendSha256": "69cf9d09d3915acfc3d25ffac1e5741126caf0cae0cc77c324391cbeb4d4843e",
+        "sourceGlbSha256": "f49c355f42d324096805ba81e9298e03c0e88f4dff83f5a99fd3470f54c88192",
+        "components": [
+          "C_01_six-wing_concave_structure",
+          "C_02_large_white_end_piers",
+          "C_03_glass_bays_and_recessed_windows",
+          "C_04_fine_mullions_and_refuge_reveals",
+          "C_05_asymmetric_penthouse_and_crown",
+          "C_06_three-storey_retail_and_entries"
+        ],
+        "buildingFacts": {
+          "floors": 63,
+          "floorsBasis": "official dated 2022-06-17 dong/unit chart, source OSM all65 superseded",
+          "heightM": 193,
+          "heightBasis": "B/D use OSM 199m recorded height; A/C reduced by estimated 3m per differing official storey. Height includes illustrative crown. No measured as-built heights."
+        },
+        "uncertainties": [
+          "B/D use OSM 199m recorded height; A/C reduced by estimated 3m per differing official storey. Height includes illustrative crown. No measured as-built heights.",
+          "Manual diagram trace; OSM-centroid anchored, not cadastral or architectural measurement.",
+          "Facade subdivisions and crown dimensions manually estimated from low-resolution completed photos, not measured CAD.",
+          "OSM source centroids may differ from surveyed building centres.",
+          "Business tower and shared landscape not modelled or claimed."
+        ],
+        "accuracy": "Compared to cited photographs and site plans; unmeasured dimensions remain estimates"
+      }
+    },
+    {
+      "id": "bespoke-skyl65-d",
+      "nameKo": "청량리역 롯데캐슬 SKY-L65 D동",
+      "model": "bespoke/skyl65/bespoke-skyl65-d.glb",
+      "coordinate": {
+        "lon": 127.04478084402989,
+        "lat": 37.57810591717051
+      },
+      "dimensions": [
+        36.07165050506592,
+        199,
+        55.292442321777344
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "metres; independent terrain anchor",
+      "quality": "reference",
+      "sha256": "fcfa371e362df66dba079e5a76adc337fcf3f7e501058486d729608c65105b96",
+      "referenceUrl": "https://www.lottecastle.co.kr/files/etc/2022/6/202206170824559250.jpg",
+      "category": "apartment",
+      "district": null,
+      "minZoom": 15,
+      "geoBounds": [
+        127.04455189007746,
+        37.5778510990422,
+        127.0449607580314,
+        37.57834779950254
+      ],
+      "footprintIds": [
+        "de59be43-3b37-45f7-bc6c-894a5680db1f"
+      ],
+      "supersedes": [
+        "apt-a10023083",
+        "reference-flight-cheongnyangni-skyl65",
+        "residential-de59be43-3b37-45f7-bc6c-894a5680db1f"
+      ],
+      "searchable": false,
+      "groundOffsetM": 0,
+      "sourceRecord": {
+        "provider": "Individual Blender MCP reconstruction",
+        "siteId": "skyl65",
+        "sources": [
+          {
+            "url": "https://www.lottecastle.co.kr/files/etc/2022/6/202206170824559250.jpg",
+            "observations": "2022-uploaded official diagram; separately traced six dwelling wings in each A/B/C/D plan. Not measured as-built CAD."
+          },
+          {
+            "url": "https://www.lottecastle.co.kr/files/etc/2022/6/202206170824566590.jpg",
+            "observations": "A64F B65F C63F D65F; A refuge23/44, B/C/D24/45."
+          },
+          {
+            "url": "https://www.lottecastle.co.kr/files/etc/2023/7/202307270158028590.jpg",
+            "observations": "Official construction progress page labels these completed aerial photographs 2023.07; long white end piers, dark green side glazing, open projecting crown canopies and low storefront stone observed."
+          },
+          {
+            "url": "https://www.lottecastle.co.kr/files/etc/2023/7/202307270158028592.jpg",
+            "observations": "Official construction progress page labels these completed aerial photographs 2023.07; long white end piers, dark green side glazing, open projecting crown canopies and low storefront stone observed."
+          },
+          {
+            "url": "https://www.lottecastle.co.kr/files/etc/2023/7/202307270158028591.jpg",
+            "observations": "Official construction progress page labels these completed aerial photographs 2023.07; long white end piers, dark green side glazing, open projecting crown canopies and low storefront stone observed."
+          }
+        ],
+        "blendSource": "modeling/bespoke/skyl65/skyl65-authored.blend",
+        "blendSha256": "69cf9d09d3915acfc3d25ffac1e5741126caf0cae0cc77c324391cbeb4d4843e",
+        "sourceGlbSha256": "60c776aa0f42cd2bbb6398cbf40f30116c7f2242e20a7edbf8ee9630851375ca",
+        "components": [
+          "D_01_six-wing_concave_structure",
+          "D_02_large_white_end_piers",
+          "D_03_glass_bays_and_recessed_windows",
+          "D_04_fine_mullions_and_refuge_reveals",
+          "D_05_asymmetric_penthouse_and_crown",
+          "D_06_three-storey_retail_and_entries"
+        ],
+        "buildingFacts": {
+          "floors": 65,
+          "floorsBasis": "official dated 2022-06-17 dong/unit chart, source OSM all65 superseded",
+          "heightM": 199,
+          "heightBasis": "B/D use OSM 199m recorded height; A/C reduced by estimated 3m per differing official storey. Height includes illustrative crown. No measured as-built heights."
+        },
+        "uncertainties": [
+          "B/D use OSM 199m recorded height; A/C reduced by estimated 3m per differing official storey. Height includes illustrative crown. No measured as-built heights.",
+          "Manual diagram trace; OSM-centroid anchored, not cadastral or architectural measurement.",
+          "Facade subdivisions and crown dimensions manually estimated from low-resolution completed photos, not measured CAD.",
+          "OSM source centroids may differ from surveyed building centres.",
+          "Business tower and shared landscape not modelled or claimed."
+        ],
+        "accuracy": "Compared to cited photographs and site plans; unmeasured dimensions remain estimates"
+      }
+    },
+    {
+      "id": "bespoke-banpo-jamsu",
+      "nameKo": "반포대교·잠수교",
+      "model": "bespoke/banpo-jamsu/bespoke-banpo-jamsu.glb",
+      "coordinate": {
+        "lon": 126.996466,
+        "lat": 37.514546
+      },
+      "dimensions": [
+        572.90966796875,
+        27.770000457763672,
+        1505.9480590820312
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "metres; independent terrain anchor",
+      "quality": "reference",
+      "sha256": "722afc93800b68424a8f0cfb5be225e668df2192793b40fd61aab3063de27954",
+      "referenceUrl": "https://storage.googleapis.com/scorer-web-image/file/20230707_%EC%84%9C%EC%9A%B8_%EC%9E%A0%EC%88%98%EA%B5%90%EC%A0%84%EB%A9%B4%EB%B3%B4%ED%96%89%ED%99%94%20%EA%B8%B0%ED%9A%8D_%EA%B3%B5%EB%AA%A8%EC%A7%80%EC%B9%A8%EC%84%9C.pdf",
+      "category": "bridge",
+      "district": null,
+      "minZoom": 12.5,
+      "geoBounds": [
+        126.99278408320647,
+        37.50924837586789,
+        126.99927241291434,
+        37.522776537453524
+      ],
+      "footprintIds": [],
+      "supersedes": [
+        "bridge-way-1085504592",
+        "bridge-way-1091571021"
+      ],
+      "searchable": false,
+      "groundOffsetM": 0,
+      "sourceRecord": {
+        "provider": "Individual Blender MCP reconstruction",
+        "siteId": "banpo-jamsu",
+        "sources": [
+          {
+            "url": "https://storage.googleapis.com/scorer-web-image/file/20230707_%EC%84%9C%EC%9A%B8_%EC%9E%A0%EC%88%98%EA%B5%90%EC%A0%84%EB%A9%B4%EB%B3%B4%ED%96%89%ED%99%94%20%EA%B8%B0%ED%9A%8D_%EA%B3%B5%EB%AA%A8%EC%A7%80%EC%B9%A8%EC%84%9C.pdf",
+            "observations": "Printedpp15–16 existing diagram30m/15m pier rhythm,795m crossing, navigationcrest and photographs ofhaunched twinleg portals."
+          },
+          {
+            "url": "https://mediahub.seoul.go.kr/archives/2018064",
+            "observations": "2026 realunderdeck photograph shows concrete portal capitals/recessed legs, fourboxgirder silhouette and one-sided redcycleway/greenwalk."
+          },
+          {
+            "url": "https://mediahub.seoul.go.kr/archives/2002038",
+            "observations": "Official795m length,18m width,570m fountain per side."
+          }
+        ],
+        "blendSource": "modeling/bespoke/banpo-jamsu/banpo-jamsu.blend",
+        "blendSha256": "f77e858a8dfc90d77e791dcdf7319b901ec01770cecdba02e482bf154ebb4b44",
+        "sourceGlbSha256": "dd74aec7ee241763d36cd34d6d1099e180ffb9e9ea58cb398b472e97a5471703",
+        "components": [
+          "Banpo_entire_OSM_deck_and_approach_branches",
+          "Banpo_asphalt_on_source_envelope",
+          "Banpo_30m_twin_leg_haunched_portal_frames",
+          "Banpo_I_profile_leg_recesses",
+          "Banpo_bearing_pads",
+          "Banpo_four_longitudinal_steel_box_girders",
+          "Banpo_cross_diaphragms",
+          "Jamsu_18m_low_deck_with_navigation_crest",
+          "Jamsu_two_lane_road",
+          "Jamsu_one_sided_red_cycleway",
+          "Jamsu_green_walk_and_west_walk",
+          "Jamsu_cycleway_curbs",
+          "Jamsu_visible_plate_girders_follow_crest",
+          "Jamsu_15m_pier_rhythm_and_open_navigation_bays",
+          "Banpo_and_Jamsu_edge_rails",
+          "Jamsu_safety_rail_posts",
+          "Deck_lane_lines",
+          "Jamsu_centre_and_cycle_markings",
+          "Banpo_570m_each_side_fountain_manifold",
+          "Banpo_curved_street_lamp_arms"
+        ],
+        "buildingFacts": {},
+        "uncertainties": [
+          "Absolute elevations, crest dimensions and cross sections are photo-derived estimates, not survey measurements.",
+          "Typical30m/15m spacing is documented; exact current pier count and endspan placement are unverified.",
+          "Upper OSM approach branches retained; northern approach substructure incomplete.",
+          "Lower18m officialwidth corrects narrow OSM polygon; lowroute approaches extend beyond795m river crossing."
+        ],
+        "accuracy": "Compared to cited photographs and site plans; unmeasured dimensions remain estimates"
+      }
+    },
+    {
+      "id": "bespoke-culture-station-seoul284",
+      "nameKo": "문화역서울284(구 서울역사)",
+      "model": "bespoke/culture-station-seoul284/bespoke-culture-station-seoul284.glb",
+      "coordinate": {
+        "lon": 126.97158,
+        "lat": 37.555877
+      },
+      "dimensions": [
+        29.635001182556152,
+        32.28799819946289,
+        138.87000274658203
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "metres; independent terrain anchor",
+      "quality": "reference",
+      "sha256": "7a22f235bbc6cb69fbbc8771b81ac23a9d7fa083498bbc4d359bb43ad0229675",
+      "referenceUrl": "https://seoul284.org/cms/content/view/253",
+      "category": "cultural-site",
+      "district": null,
+      "minZoom": 15,
+      "geoBounds": [
+        126.97144617496379,
+        37.55536621792397,
+        126.97178198402098,
+        37.5566137083837
+      ],
+      "footprintIds": [
+        "36356163-6139-3732-A335-333337356337",
+        "d8469ff5-7c6b-4514-8e0d-da239407bbda"
+      ],
+      "supersedes": [
+        "reference-flight-seoul-station"
+      ],
+      "searchable": false,
+      "groundOffsetM": 0,
+      "sourceRecord": {
+        "provider": "Individual Blender MCP reconstruction",
+        "siteId": "culture-station-seoul284",
+        "sources": [
+          {
+            "url": "https://seoul284.org/cms/content/view/253",
+            "observations": [
+              "Official exterior photos: central dome, thermal window, great arched entrance and clock, red brick and stone belts, curved end gables, low annexes."
+            ]
+          },
+          {
+            "url": "https://seoul284.org/space/menu/256",
+            "observations": [
+              "Official floor plan: central hall, asymmetrical north/south rooms, north RTO, projecting east entrance."
+            ]
+          },
+          {
+            "url": "https://www.openstreetmap.org/way/759569673",
+            "observations": [
+              "Geographic old-station outline from existing local source record w759569673@5."
+            ]
+          },
+          {
+            "url": "https://www.openstreetmap.org/way/1103628080",
+            "observations": [
+              "Northern RTO child footprint within the old-station parent."
+            ]
+          }
+        ],
+        "blendSource": "modeling/bespoke/culture-station-seoul284/culture-station-seoul284.blend",
+        "blendSha256": "39d36339d6c60712c9f11ae2918520aa556831b189833ef4f6134e77bc7bcac8",
+        "sourceGlbSha256": "c61d693b4c01a21fa2653053f44bca36ee8fdf11576e5a5203a85e631a157126",
+        "components": [
+          "01_Source_Footprint",
+          "02_Central_Arched_Entrance",
+          "03_Copper_Dome_Lantern",
+          "04_South_Main_Wing",
+          "05_North_Main_Wing",
+          "06_South_VIP_Annex",
+          "07_North_RTO_Annex",
+          "08_Rear_Elevation"
+        ],
+        "buildingFacts": {},
+        "uncertainties": [
+          "No measured building height supplied by the geospatial source; 32.29m finial height is an explicit photo-derived estimate.",
+          "Facade dimensions, dome profile, windows and roof pitches are manual interpretations of official photographs, not measured CAD or photogrammetry.",
+          "Official photographs were published in 2021 but their capture dates are not specified; current facade condition is not independently surveyed.",
+          "Rear elevation and low RTO roof are less well photographed; these use conservative simplified geometry. RTO floor count2 in source is not treated as evidence of equal two-storey facade height.",
+          "Clock hands are illustrative; no real time is claimed. Sculpture, temporary installations, advertisements and the modern Seoul Station are omitted."
+        ],
+        "accuracy": "Compared to cited photographs and site plans; unmeasured dimensions remain estimates"
+      }
+    },
+    {
+      "id": "bespoke-hyperion-a",
+      "nameKo": "목동 현대하이페리온 A동",
+      "model": "bespoke/hyperion/bespoke-hyperion-a.glb",
+      "coordinate": {
+        "lon": 126.87545148373547,
+        "lat": 37.527128592512206
+      },
+      "dimensions": [
+        48.938846588134766,
+        256,
+        49.72500991821289
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "metres; independent terrain anchor",
+      "quality": "reference",
+      "sha256": "ee8e49ba75d7982712a69114705dc05d8b02d47e4081befef1d6c60449de68e9",
+      "referenceUrl": "https://www.sfacade.net/dongtan-hyperion",
+      "category": "apartment",
+      "district": null,
+      "minZoom": 15,
+      "geoBounds": [
+        126.8751743153246,
+        37.52690524883014,
+        126.87572865214635,
+        37.52735193619427
+      ],
+      "footprintIds": [
+        "d17a295c-c15f-459a-99f0-78bd56c3155b"
+      ],
+      "supersedes": [
+        "apt-a15805114",
+        "reference-flight-hyperion"
+      ],
+      "searchable": false,
+      "groundOffsetM": 0,
+      "sourceRecord": {
+        "provider": "Individual Blender MCP reconstruction",
+        "siteId": "hyperion",
+        "sources": [
+          {
+            "url": "https://www.sfacade.net/dongtan-hyperion",
+            "observations": "Participating curtain-wall consultant:69,59,54-storey project; actual low-angle daylight photo shows ivory horizontal floor frames, blue-grey glazing, central stone walls, open parking slots and planted L podium."
+          },
+          {
+            "url": "https://static.wixstatic.com/media/90ddf2_d316ae4e030a46f1b011424d70f6c182~mv2.jpg",
+            "observations": "Actual daylight photograph, publication/capture date not specified; reviewed locally, never embedded or redistributed."
+          },
+          {
+            "url": "https://newsroom.hdec.kr/kr/newsroom/news_view.aspx?NewsListType=inter_list&NewsSeq=1120&NewsType=JOURNAL",
+            "observations": "2024-08-27 contractor article and completed photograph:256m69F and2003completion; flared white colonnade crown, central piers and white diagonal transfer belts visible. Sunset colour grading not used as exact albedo."
+          },
+          {
+            "url": "https://global.ctbuh.org/resources/papers/1651-Chung_2004_StructuralDesign.pdf",
+            "observations": "2004 structural project authors: Table7 A254m69F, B216m59F, C200m54F; outrigger A9/32/50, B/C9/32F; L-shaped9-level podium. Cached text inspected; direct PDF download404 and figures not traced."
+          },
+          {
+            "url": "https://www.si.re.kr/sites/default/files/2010-PR-01_0%20(s).pdf",
+            "observations": "2010 Seoul Development Institute table2-7: A69,B59,C54 floors."
+          },
+          {
+            "url": "https://www.skyscrapercenter.com/building/mokdong-hyperion-tower-b/1008",
+            "observations": "Current database239.3m63F conflicts with project participant sources. Retained as a conflict, not copied."
+          },
+          {
+            "url": "https://www.skyscrapercenter.com/building/mokdong-hyperion-tower-c/1633",
+            "observations": "Architectural height201.2m54F."
+          },
+          {
+            "url": "https://www.ehyundai.com/newPortal/DP/FG/FG000000_V.do?branchCd=B00142000",
+            "observations": "Official department store floor guide lists above-ground floors1F through7F; does not provide measured building height."
+          },
+          {
+            "url": "https://ehyundai.com/newPortal/DP/DP000000_V.do?branchCd=B00142000",
+            "observations": "Official branch homepage exterior photo: classical stone facades and southeast clock-pediment entrance; capture date unspecified."
+          },
+          {
+            "url": "https://ehyundai.com/attachfiles/branch/8b29c131d8cc4e8787576fcc65c00ae2.png",
+            "observations": "Direct official exterior photo visually reviewed; used only as reference, never embedded."
+          }
+        ],
+        "blendSource": "modeling/bespoke/hyperion/hyperion-authored.blend",
+        "blendSha256": "c2d1a9eed0e70925ba7437054c4106e183356426e13ab1b6e65b59e29ef18359",
+        "sourceGlbSha256": "8407e116ec108baaf0dcd27b293df20c0688275d8eab755012eab0efb2016cff",
+        "components": [
+          "A_01_chamfered_corner_wings",
+          "A_02_ivory_floor_and_column_frames",
+          "A_03_blue_grey_window_divisions",
+          "A_04_warm_stone_central_axis",
+          "A_05_engineer_documented_white_diagonal_belts",
+          "A_06_flared_colonnade_and_stepped_penthouse"
+        ],
+        "buildingFacts": {
+          "floors": 69,
+          "floorsBasis": "Summit Facade project listing69/59/54F; Seoul Development Institute2010 table2-7 agrees. B current CTBUH63F conflicts.",
+          "heightM": 256,
+          "heightBasis": "Hyundai E&C official 2024 article 256m"
+        },
+        "uncertainties": [
+          "OSM named rectangular footprint supplies centre and orientation, not surveyed architectural perimeter.",
+          "Corner recesses, central stone width A10.4/B11.4/C9.3m, crown curves and window spacings are manual photographic estimates. Broad transfer triangles occupy each side wing rather than individual window bays.",
+          "Crown split heights and podium30m are estimates; floor levels interpolate between those landmarks."
+        ],
+        "accuracy": "Compared to cited photographs and site plans; unmeasured dimensions remain estimates"
+      }
+    },
+    {
+      "id": "bespoke-hyperion-b",
+      "nameKo": "목동 현대하이페리온 B동",
+      "model": "bespoke/hyperion/bespoke-hyperion-b.glb",
+      "coordinate": {
+        "lon": 126.87464809063884,
+        "lat": 37.52727713855758
+      },
+      "dimensions": [
+        47.19988250732422,
+        216,
+        45.72277069091797
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "metres; independent terrain anchor",
+      "quality": "reference",
+      "sha256": "41307cc1eae4abdec62768cbcfa70df172280aaa0be635ab60d2215198fbd640",
+      "referenceUrl": "https://www.sfacade.net/dongtan-hyperion",
+      "category": "apartment",
+      "district": null,
+      "minZoom": 15,
+      "geoBounds": [
+        126.8743807704343,
+        37.52707177123886,
+        126.87491541084339,
+        37.5274825058763
+      ],
+      "footprintIds": [
+        "070fa936-533e-4489-8ed1-2b391e7cd6b4"
+      ],
+      "supersedes": [
+        "apt-a15805114",
+        "reference-flight-hyperion"
+      ],
+      "searchable": false,
+      "groundOffsetM": 0,
+      "sourceRecord": {
+        "provider": "Individual Blender MCP reconstruction",
+        "siteId": "hyperion",
+        "sources": [
+          {
+            "url": "https://www.sfacade.net/dongtan-hyperion",
+            "observations": "Participating curtain-wall consultant:69,59,54-storey project; actual low-angle daylight photo shows ivory horizontal floor frames, blue-grey glazing, central stone walls, open parking slots and planted L podium."
+          },
+          {
+            "url": "https://static.wixstatic.com/media/90ddf2_d316ae4e030a46f1b011424d70f6c182~mv2.jpg",
+            "observations": "Actual daylight photograph, publication/capture date not specified; reviewed locally, never embedded or redistributed."
+          },
+          {
+            "url": "https://newsroom.hdec.kr/kr/newsroom/news_view.aspx?NewsListType=inter_list&NewsSeq=1120&NewsType=JOURNAL",
+            "observations": "2024-08-27 contractor article and completed photograph:256m69F and2003completion; flared white colonnade crown, central piers and white diagonal transfer belts visible. Sunset colour grading not used as exact albedo."
+          },
+          {
+            "url": "https://global.ctbuh.org/resources/papers/1651-Chung_2004_StructuralDesign.pdf",
+            "observations": "2004 structural project authors: Table7 A254m69F, B216m59F, C200m54F; outrigger A9/32/50, B/C9/32F; L-shaped9-level podium. Cached text inspected; direct PDF download404 and figures not traced."
+          },
+          {
+            "url": "https://www.si.re.kr/sites/default/files/2010-PR-01_0%20(s).pdf",
+            "observations": "2010 Seoul Development Institute table2-7: A69,B59,C54 floors."
+          },
+          {
+            "url": "https://www.skyscrapercenter.com/building/mokdong-hyperion-tower-b/1008",
+            "observations": "Current database239.3m63F conflicts with project participant sources. Retained as a conflict, not copied."
+          },
+          {
+            "url": "https://www.skyscrapercenter.com/building/mokdong-hyperion-tower-c/1633",
+            "observations": "Architectural height201.2m54F."
+          },
+          {
+            "url": "https://www.ehyundai.com/newPortal/DP/FG/FG000000_V.do?branchCd=B00142000",
+            "observations": "Official department store floor guide lists above-ground floors1F through7F; does not provide measured building height."
+          },
+          {
+            "url": "https://ehyundai.com/newPortal/DP/DP000000_V.do?branchCd=B00142000",
+            "observations": "Official branch homepage exterior photo: classical stone facades and southeast clock-pediment entrance; capture date unspecified."
+          },
+          {
+            "url": "https://ehyundai.com/attachfiles/branch/8b29c131d8cc4e8787576fcc65c00ae2.png",
+            "observations": "Direct official exterior photo visually reviewed; used only as reference, never embedded."
+          }
+        ],
+        "blendSource": "modeling/bespoke/hyperion/hyperion-authored.blend",
+        "blendSha256": "c2d1a9eed0e70925ba7437054c4106e183356426e13ab1b6e65b59e29ef18359",
+        "sourceGlbSha256": "9b4b8d779305ccb74e7ccf608d2668ecc15003bcbf599c6555728ae0d432f30e",
+        "components": [
+          "B_01_chamfered_corner_wings",
+          "B_02_ivory_floor_and_column_frames",
+          "B_03_blue_grey_window_divisions",
+          "B_04_warm_stone_central_axis",
+          "B_05_engineer_documented_white_diagonal_belts",
+          "B_06_flared_colonnade_and_stepped_penthouse"
+        ],
+        "buildingFacts": {
+          "floors": 59,
+          "floorsBasis": "Summit Facade project listing69/59/54F; Seoul Development Institute2010 table2-7 agrees. B current CTBUH63F conflicts.",
+          "heightM": 216,
+          "heightBasis": "CTBUH project structural authors Table7 B216m/59F, prioritised over conflicting current database239.3m/63F; decorative top datum unresolved"
+        },
+        "uncertainties": [
+          "OSM named rectangular footprint supplies centre and orientation, not surveyed architectural perimeter.",
+          "Corner recesses, central stone width A10.4/B11.4/C9.3m, crown curves and window spacings are manual photographic estimates. Broad transfer triangles occupy each side wing rather than individual window bays.",
+          "Crown split heights and podium30m are estimates; floor levels interpolate between those landmarks.",
+          "B216m is the project engineer stated structural height; decorative total height remains unresolved."
+        ],
+        "accuracy": "Compared to cited photographs and site plans; unmeasured dimensions remain estimates"
+      }
+    },
+    {
+      "id": "bespoke-hyperion-c",
+      "nameKo": "목동 현대하이페리온 C동",
+      "model": "bespoke/hyperion/bespoke-hyperion-c.glb",
+      "coordinate": {
+        "lon": 126.87445787138337,
+        "lat": 37.52654683472358
+      },
+      "dimensions": [
+        44.03445816040039,
+        201.1999969482422,
+        50.02362823486328
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "metres; independent terrain anchor",
+      "quality": "reference",
+      "sha256": "52a26c9a0df9dab6a667d44ede5041834a7c707a4ea88ceb482d7cb7c208e124",
+      "referenceUrl": "https://www.sfacade.net/dongtan-hyperion",
+      "category": "apartment",
+      "district": null,
+      "minZoom": 15,
+      "geoBounds": [
+        126.8742084812473,
+        37.52632214977453,
+        126.87470726151945,
+        37.526771519672636
+      ],
+      "footprintIds": [
+        "7b59ea22-2e4d-41cb-a79b-c2893081c113"
+      ],
+      "supersedes": [
+        "apt-a15805114",
+        "reference-flight-hyperion"
+      ],
+      "searchable": false,
+      "groundOffsetM": 0,
+      "sourceRecord": {
+        "provider": "Individual Blender MCP reconstruction",
+        "siteId": "hyperion",
+        "sources": [
+          {
+            "url": "https://www.sfacade.net/dongtan-hyperion",
+            "observations": "Participating curtain-wall consultant:69,59,54-storey project; actual low-angle daylight photo shows ivory horizontal floor frames, blue-grey glazing, central stone walls, open parking slots and planted L podium."
+          },
+          {
+            "url": "https://static.wixstatic.com/media/90ddf2_d316ae4e030a46f1b011424d70f6c182~mv2.jpg",
+            "observations": "Actual daylight photograph, publication/capture date not specified; reviewed locally, never embedded or redistributed."
+          },
+          {
+            "url": "https://newsroom.hdec.kr/kr/newsroom/news_view.aspx?NewsListType=inter_list&NewsSeq=1120&NewsType=JOURNAL",
+            "observations": "2024-08-27 contractor article and completed photograph:256m69F and2003completion; flared white colonnade crown, central piers and white diagonal transfer belts visible. Sunset colour grading not used as exact albedo."
+          },
+          {
+            "url": "https://global.ctbuh.org/resources/papers/1651-Chung_2004_StructuralDesign.pdf",
+            "observations": "2004 structural project authors: Table7 A254m69F, B216m59F, C200m54F; outrigger A9/32/50, B/C9/32F; L-shaped9-level podium. Cached text inspected; direct PDF download404 and figures not traced."
+          },
+          {
+            "url": "https://www.si.re.kr/sites/default/files/2010-PR-01_0%20(s).pdf",
+            "observations": "2010 Seoul Development Institute table2-7: A69,B59,C54 floors."
+          },
+          {
+            "url": "https://www.skyscrapercenter.com/building/mokdong-hyperion-tower-b/1008",
+            "observations": "Current database239.3m63F conflicts with project participant sources. Retained as a conflict, not copied."
+          },
+          {
+            "url": "https://www.skyscrapercenter.com/building/mokdong-hyperion-tower-c/1633",
+            "observations": "Architectural height201.2m54F."
+          },
+          {
+            "url": "https://www.ehyundai.com/newPortal/DP/FG/FG000000_V.do?branchCd=B00142000",
+            "observations": "Official department store floor guide lists above-ground floors1F through7F; does not provide measured building height."
+          },
+          {
+            "url": "https://ehyundai.com/newPortal/DP/DP000000_V.do?branchCd=B00142000",
+            "observations": "Official branch homepage exterior photo: classical stone facades and southeast clock-pediment entrance; capture date unspecified."
+          },
+          {
+            "url": "https://ehyundai.com/attachfiles/branch/8b29c131d8cc4e8787576fcc65c00ae2.png",
+            "observations": "Direct official exterior photo visually reviewed; used only as reference, never embedded."
+          }
+        ],
+        "blendSource": "modeling/bespoke/hyperion/hyperion-authored.blend",
+        "blendSha256": "c2d1a9eed0e70925ba7437054c4106e183356426e13ab1b6e65b59e29ef18359",
+        "sourceGlbSha256": "971864668dc390f13e1140cb437ec594f411a28aa2b31762aa006218908c5ff8",
+        "components": [
+          "C_01_chamfered_corner_wings",
+          "C_02_ivory_floor_and_column_frames",
+          "C_03_blue_grey_window_divisions",
+          "C_04_warm_stone_central_axis",
+          "C_05_engineer_documented_white_diagonal_belts",
+          "C_06_flared_colonnade_and_stepped_penthouse"
+        ],
+        "buildingFacts": {
+          "floors": 54,
+          "floorsBasis": "Summit Facade project listing69/59/54F; Seoul Development Institute2010 table2-7 agrees. B current CTBUH63F conflicts.",
+          "heightM": 201.2,
+          "heightBasis": "CTBUH C architectural height201.2m/54F; structural paper200m"
+        },
+        "uncertainties": [
+          "OSM named rectangular footprint supplies centre and orientation, not surveyed architectural perimeter.",
+          "Corner recesses, central stone width A10.4/B11.4/C9.3m, crown curves and window spacings are manual photographic estimates. Broad transfer triangles occupy each side wing rather than individual window bays.",
+          "Crown split heights and podium30m are estimates; floor levels interpolate between those landmarks."
+        ],
+        "accuracy": "Compared to cited photographs and site plans; unmeasured dimensions remain estimates"
+      }
+    },
+    {
+      "id": "bespoke-hyperion-parking-podium",
+      "nameKo": "목동 현대하이페리온 L자 주차 포디움",
+      "model": "bespoke/hyperion/bespoke-hyperion-parking-podium.glb",
+      "coordinate": {
+        "lon": 126.87483905650407,
+        "lat": 37.52700573823092
+      },
+      "dimensions": [
+        136.2684555053711,
+        31.75,
+        131.65403747558594
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "metres; independent terrain anchor",
+      "quality": "reference",
+      "sha256": "89421f82a6ecbebd17d660f3c816bc8b45675c7d78ad6a04628d89de8bb331c4",
+      "referenceUrl": "https://www.sfacade.net/dongtan-hyperion",
+      "category": "apartment",
+      "district": null,
+      "minZoom": 15,
+      "geoBounds": [
+        126.87419602594245,
+        37.52630995887131,
+        126.87573955431289,
+        37.52749262721211
+      ],
+      "footprintIds": [],
+      "supersedes": [
+        "apt-a15805114",
+        "reference-flight-hyperion",
+        "survey-upis-32702773"
+      ],
+      "searchable": false,
+      "groundOffsetM": 0,
+      "sourceRecord": {
+        "provider": "Individual Blender MCP reconstruction",
+        "siteId": "hyperion",
+        "sources": [
+          {
+            "url": "https://www.sfacade.net/dongtan-hyperion",
+            "observations": "Participating curtain-wall consultant:69,59,54-storey project; actual low-angle daylight photo shows ivory horizontal floor frames, blue-grey glazing, central stone walls, open parking slots and planted L podium."
+          },
+          {
+            "url": "https://static.wixstatic.com/media/90ddf2_d316ae4e030a46f1b011424d70f6c182~mv2.jpg",
+            "observations": "Actual daylight photograph, publication/capture date not specified; reviewed locally, never embedded or redistributed."
+          },
+          {
+            "url": "https://newsroom.hdec.kr/kr/newsroom/news_view.aspx?NewsListType=inter_list&NewsSeq=1120&NewsType=JOURNAL",
+            "observations": "2024-08-27 contractor article and completed photograph:256m69F and2003completion; flared white colonnade crown, central piers and white diagonal transfer belts visible. Sunset colour grading not used as exact albedo."
+          },
+          {
+            "url": "https://global.ctbuh.org/resources/papers/1651-Chung_2004_StructuralDesign.pdf",
+            "observations": "2004 structural project authors: Table7 A254m69F, B216m59F, C200m54F; outrigger A9/32/50, B/C9/32F; L-shaped9-level podium. Cached text inspected; direct PDF download404 and figures not traced."
+          },
+          {
+            "url": "https://www.si.re.kr/sites/default/files/2010-PR-01_0%20(s).pdf",
+            "observations": "2010 Seoul Development Institute table2-7: A69,B59,C54 floors."
+          },
+          {
+            "url": "https://www.skyscrapercenter.com/building/mokdong-hyperion-tower-b/1008",
+            "observations": "Current database239.3m63F conflicts with project participant sources. Retained as a conflict, not copied."
+          },
+          {
+            "url": "https://www.skyscrapercenter.com/building/mokdong-hyperion-tower-c/1633",
+            "observations": "Architectural height201.2m54F."
+          },
+          {
+            "url": "https://www.ehyundai.com/newPortal/DP/FG/FG000000_V.do?branchCd=B00142000",
+            "observations": "Official department store floor guide lists above-ground floors1F through7F; does not provide measured building height."
+          },
+          {
+            "url": "https://ehyundai.com/newPortal/DP/DP000000_V.do?branchCd=B00142000",
+            "observations": "Official branch homepage exterior photo: classical stone facades and southeast clock-pediment entrance; capture date unspecified."
+          },
+          {
+            "url": "https://ehyundai.com/attachfiles/branch/8b29c131d8cc4e8787576fcc65c00ae2.png",
+            "observations": "Direct official exterior photo visually reviewed; used only as reference, never embedded."
+          }
+        ],
+        "blendSource": "modeling/bespoke/hyperion/hyperion-authored.blend",
+        "blendSha256": "c2d1a9eed0e70925ba7437054c4106e183356426e13ab1b6e65b59e29ef18359",
+        "sourceGlbSha256": "4adc0b61db6c5de98bd376759a4608638dd6662d6f3e63987acf7037f7e0349c",
+        "components": [
+          "P_01_light_stone_slabs_and_piers",
+          "P_02_recessed_open_parking_slots",
+          "P_03_rooftop_planters",
+          "P_04_solid_end_recess_and_vertical_stair_glazing"
+        ],
+        "buildingFacts": {
+          "floors": null,
+          "floorsBasis": null,
+          "heightM": 30.0,
+          "heightBasis": "L outline between named tower rectangles reconstructed from photo and source positions; shared podium dimensions not surveyed."
+        },
+        "uncertainties": [
+          "L outline between named tower rectangles reconstructed from photo and source positions; shared podium dimensions not surveyed.",
+          "Removing invalid generic preserves underlying department-store footprint, but cannot restore a raw3D solid because source height is missing."
+        ],
+        "accuracy": "Compared to cited photographs and site plans; unmeasured dimensions remain estimates"
+      }
+    },
+    {
+      "id": "bespoke-hyperion-department-store",
+      "nameKo": "현대백화점 목동점 본관",
+      "model": "bespoke/hyperion/bespoke-hyperion-department-store.glb",
+      "coordinate": {
+        "lon": 126.87524759969328,
+        "lat": 37.52652000185615
+      },
+      "dimensions": [
+        90.14014053344727,
+        38.69499969482422,
+        77.85569763183594
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "metres; independent terrain anchor",
+      "quality": "reference",
+      "sha256": "901a332b10af320a3cbf543511bf0fac56616da71140a9fe54560808c7c4ffb0",
+      "referenceUrl": "https://ehyundai.com/newPortal/DP/DP000000_V.do?branchCd=B00142000",
+      "category": "commercial",
+      "district": null,
+      "minZoom": 15,
+      "geoBounds": [
+        126.87468500034474,
+        37.52621544667756,
+        126.87570602137086,
+        37.52691483630895
+      ],
+      "footprintIds": [
+        "c7f66902-54ea-4bac-ae09-73a57bdf98b7"
+      ],
+      "supersedes": [
+        "reference-flight-hyperion",
+        "survey-upis-32702773"
+      ],
+      "searchable": false,
+      "groundOffsetM": 0,
+      "sourceRecord": {
+        "provider": "Individual Blender MCP reconstruction",
+        "siteId": "hyperion",
+        "sources": [
+          {
+            "url": "https://www.sfacade.net/dongtan-hyperion",
+            "observations": "Participating curtain-wall consultant:69,59,54-storey project; actual low-angle daylight photo shows ivory horizontal floor frames, blue-grey glazing, central stone walls, open parking slots and planted L podium."
+          },
+          {
+            "url": "https://static.wixstatic.com/media/90ddf2_d316ae4e030a46f1b011424d70f6c182~mv2.jpg",
+            "observations": "Actual daylight photograph, publication/capture date not specified; reviewed locally, never embedded or redistributed."
+          },
+          {
+            "url": "https://newsroom.hdec.kr/kr/newsroom/news_view.aspx?NewsListType=inter_list&NewsSeq=1120&NewsType=JOURNAL",
+            "observations": "2024-08-27 contractor article and completed photograph:256m69F and2003completion; flared white colonnade crown, central piers and white diagonal transfer belts visible. Sunset colour grading not used as exact albedo."
+          },
+          {
+            "url": "https://global.ctbuh.org/resources/papers/1651-Chung_2004_StructuralDesign.pdf",
+            "observations": "2004 structural project authors: Table7 A254m69F, B216m59F, C200m54F; outrigger A9/32/50, B/C9/32F; L-shaped9-level podium. Cached text inspected; direct PDF download404 and figures not traced."
+          },
+          {
+            "url": "https://www.si.re.kr/sites/default/files/2010-PR-01_0%20(s).pdf",
+            "observations": "2010 Seoul Development Institute table2-7: A69,B59,C54 floors."
+          },
+          {
+            "url": "https://www.skyscrapercenter.com/building/mokdong-hyperion-tower-b/1008",
+            "observations": "Current database239.3m63F conflicts with project participant sources. Retained as a conflict, not copied."
+          },
+          {
+            "url": "https://www.skyscrapercenter.com/building/mokdong-hyperion-tower-c/1633",
+            "observations": "Architectural height201.2m54F."
+          },
+          {
+            "url": "https://www.ehyundai.com/newPortal/DP/FG/FG000000_V.do?branchCd=B00142000",
+            "observations": "Official department store floor guide lists above-ground floors1F through7F; does not provide measured building height."
+          },
+          {
+            "url": "https://ehyundai.com/newPortal/DP/DP000000_V.do?branchCd=B00142000",
+            "observations": "Official branch homepage exterior photo: classical stone facades and southeast clock-pediment entrance; capture date unspecified."
+          },
+          {
+            "url": "https://ehyundai.com/attachfiles/branch/8b29c131d8cc4e8787576fcc65c00ae2.png",
+            "observations": "Direct official exterior photo visually reviewed; used only as reference, never embedded."
+          }
+        ],
+        "blendSource": "modeling/bespoke/hyperion/hyperion-authored.blend",
+        "blendSha256": "c2d1a9eed0e70925ba7437054c4106e183356426e13ab1b6e65b59e29ef18359",
+        "sourceGlbSha256": "ab02898335903d69c036c3ff2127132563231d20dd70e37670cae0448e52f6dd",
+        "components": [
+          "D_01_UPIS_traced_chamfered_stone_mass",
+          "D_02_arch_bays_and_classical_cornices",
+          "D_03_round_windows_upper_ribbon_entrance",
+          "D_04_raised_corner_clock_pediment",
+          "D_05_recessed_roof_and_service_faces"
+        ],
+        "buildingFacts": {
+          "floors": 7,
+          "floorsBasis": "Current official Hyundai Mokdong floor guide lists1F–7F; not an architectural roof-level survey.",
+          "heightM": 38.69499969482422,
+          "heightBasis": "Manual photo proportion estimate: main cornice34.5m and raised southeast corner38.5m. No measured height available."
+        },
+        "uncertainties": [
+          "Height and all facade feature dimensions inferred from one official exterior photo; source image capture date unknown.",
+          "Service-side elevations and roof equipment unseen and simplified.",
+          "UPIS and OSM footprint boundaries differ; UPIS chamfer used for visible mass, OSM polygon only identity and geographic anchor."
+        ],
+        "accuracy": "Compared to cited photographs and site plans; unmeasured dimensions remain estimates"
+      }
+    },
+    {
+      "id": "bespoke-maple-xi-210",
+      "nameKo": "메이플자이 210동 · 클럽클라우드",
+      "model": "bespoke/maple-club-cloud/bespoke-maple-xi-210.glb",
+      "coordinate": {
+        "lon": 127.01394021769015,
+        "lat": 37.51264316090632
+      },
+      "dimensions": [
+        62.561729431152344,
+        93.87999725341797,
+        39.35130310058594
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "metres; independent terrain anchor",
+      "quality": "reference",
+      "sha256": "69855337af1cde02162865414dc92b6381576750cf5476c7d7266dcfbb11fb8c",
+      "referenceUrl": "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+      "category": "residential-apartment",
+      "district": null,
+      "minZoom": 15,
+      "geoBounds": [
+        127.01358506239028,
+        37.512465443141544,
+        127.01429356985852,
+        37.512818941911796
+      ],
+      "footprintIds": [],
+      "supersedes": [
+        "maple-xi-210"
+      ],
+      "searchable": false,
+      "groundOffsetM": 0,
+      "sourceRecord": {
+        "provider": "Individual Blender MCP reconstruction",
+        "siteId": "maple-club-cloud",
+        "sources": [
+          {
+            "url": "https://www.xi.co.kr/Files/cmsPage/20240205_132346_189001.jpg",
+            "observations": "Retain existing numbered 210bar/211L plan trace and anchor relationship."
+          },
+          {
+            "url": "https://beyondapartment.kr/media/pages/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja/800715b5a5-1773801981/pokeoseu-3.webp",
+            "observations": "Completed lounge+connector, differentiated wall colors/openings, multiple rooftop enclosures and perimeter rail."
+          },
+          {
+            "url": "https://beyondapartment.kr/media/pages/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja/f5d9b99e4f-1773801981/pokeoseu-12.webp",
+            "observations": "Rounded glazed lounge corner returns, deep projecting canopy and horizontal mullion at connector."
+          }
+        ],
+        "blendSource": "modeling/bespoke/maple-club-cloud/maple-club-cloud.blend",
+        "blendSha256": "6e6d247cd3b332c655f69aa8995c86c50ba7c55dccd1358f88fac61e4a69c72b",
+        "sourceGlbSha256": "760c7e041009c12bb28ce3d10ecf9d0cd46af4fc3232789144b7a037a9205b8d",
+        "components": [
+          "210_retained_numbered_plan_body",
+          "210_recessed_stone_pilotis_lobby",
+          "210_lower_stone_face_0",
+          "210_end_wall_recess_strips",
+          "210_end_wall_slit_windows",
+          "210_fine_blank_wall_joints",
+          "210_ground_stone_portal_piers",
+          "210_lower_stone_face_1",
+          "210_e1_large_grid_window_reveals",
+          "210_e1_large_grid_windows",
+          "210_e1_fine_window_mullions",
+          "210_entrance_canopy_1",
+          "210_lower_stone_face_2",
+          "210_e2_large_grid_window_reveals",
+          "210_e2_large_grid_windows",
+          "210_e2_fine_window_mullions",
+          "210_lower_stone_face_3",
+          "210_individual_face_3_white",
+          "210_projecting_ivory_vertical_frames",
+          "210_dark_inset_window_reveals",
+          "210_face_3_unequal_windows",
+          "210_window_mullions_and_sills",
+          "210_thin_floor_joints",
+          "210_individual_face_3_graphite",
+          "210_window_mullions_and_sills.001",
+          "210_thin_floor_joints.001",
+          "210_individual_face_3_warm",
+          "210_thin_floor_joints.002",
+          "210_entrance_canopy_3",
+          "210_Club_Cloud_glazed_roof_lounge",
+          "210_Club_Cloud_deep_projecting_canopy",
+          "210_Club_Cloud_canopy_shadow_band",
+          "210_inset_service_roof",
+          "210_lounge_fine_vertical_mullions",
+          "210_lounge_horizontal_transoms",
+          "210_roof_perimeter_rail",
+          "210_distinct_roof_plant_1",
+          "210_plant_cap_1",
+          "210_210_stepped_plant_annex",
+          "210_plant_vent_1",
+          "210_plant_louvers_1",
+          "210_210_211_skybridge_lower_box",
+          "210_210_211_skybridge_continuous_glazing",
+          "210_210_211_skybridge_canopy",
+          "210_skybridge_mullions",
+          "210_skybridge_horizontal_transom"
+        ],
+        "buildingFacts": {},
+        "uncertainties": [
+          "Per-face window dimensions and obscured rear faces are photo-derived interpretations, not measured shop drawings.",
+          "Existing illustrative-plan trace and anchors retained; no new survey placement claim.",
+          "Absolute roof height90.16m and plant enclosure dimensions remain estimates.",
+          "Identity of distant roof equipment in aerial photos cannot be fully resolved; enclosure count/form approximates visible pair rather than exact equipment specification."
+        ],
+        "accuracy": "Compared to cited photographs and site plans; unmeasured dimensions remain estimates"
+      }
+    },
+    {
+      "id": "bespoke-maple-xi-211",
+      "nameKo": "메이플자이 211동 · 클럽클라우드",
+      "model": "bespoke/maple-club-cloud/bespoke-maple-xi-211.glb",
+      "coordinate": {
+        "lon": 127.01441646018621,
+        "lat": 37.51283454045865
+      },
+      "dimensions": [
+        48.55356788635254,
+        93.87999725341797,
+        35.90180206298828
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "metres; independent terrain anchor",
+      "quality": "reference",
+      "sha256": "a41d3d1e42868425adaff41dc2d104672013fd026a8350bee3c210e947ef7a28",
+      "referenceUrl": "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+      "category": "residential-apartment",
+      "district": null,
+      "minZoom": 15,
+      "geoBounds": [
+        127.01414208771824,
+        37.51267239594457,
+        127.01469195508892,
+        37.51299490731978
+      ],
+      "footprintIds": [],
+      "supersedes": [
+        "maple-xi-211"
+      ],
+      "searchable": false,
+      "groundOffsetM": 0,
+      "sourceRecord": {
+        "provider": "Individual Blender MCP reconstruction",
+        "siteId": "maple-club-cloud",
+        "sources": [
+          {
+            "url": "https://www.xi.co.kr/Files/cmsPage/20240205_132346_189001.jpg",
+            "observations": "Retain existing numbered 210bar/211L plan trace and anchor relationship."
+          },
+          {
+            "url": "https://beyondapartment.kr/media/pages/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja/800715b5a5-1773801981/pokeoseu-3.webp",
+            "observations": "Completed lounge+connector, differentiated wall colors/openings, multiple rooftop enclosures and perimeter rail."
+          },
+          {
+            "url": "https://beyondapartment.kr/media/pages/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja/f5d9b99e4f-1773801981/pokeoseu-12.webp",
+            "observations": "Rounded glazed lounge corner returns, deep projecting canopy and horizontal mullion at connector."
+          }
+        ],
+        "blendSource": "modeling/bespoke/maple-club-cloud/maple-club-cloud.blend",
+        "blendSha256": "6e6d247cd3b332c655f69aa8995c86c50ba7c55dccd1358f88fac61e4a69c72b",
+        "sourceGlbSha256": "a3de33499f9e7bd17f493b86a8ada948d2ae3ab0e74b271dd12222f7e8f5e610",
+        "components": [
+          "211_retained_numbered_plan_body",
+          "211_recessed_stone_pilotis_lobby",
+          "211_lower_stone_face_0",
+          "211_end_wall_recess_strips",
+          "211_end_wall_slit_windows",
+          "211_fine_blank_wall_joints",
+          "211_ground_stone_portal_piers",
+          "211_lower_stone_face_1",
+          "211_individual_face_1_white",
+          "211_projecting_ivory_vertical_frames",
+          "211_dark_inset_window_reveals",
+          "211_face_1_unequal_windows",
+          "211_window_mullions_and_sills",
+          "211_thin_floor_joints",
+          "211_individual_face_1_warm",
+          "211_thin_floor_joints.001",
+          "211_individual_face_1_graphite",
+          "211_window_mullions_and_sills.001",
+          "211_thin_floor_joints.002",
+          "211_lower_stone_face_2",
+          "211_individual_face_2_white",
+          "211_face_2_unequal_windows",
+          "211_individual_face_2_graphite",
+          "211_individual_face_2_warm",
+          "211_lower_stone_face_3",
+          "211_lower_stone_face_4",
+          "211_observed_e4_white_zone",
+          "211_observed_e4_warm_zone",
+          "211_observed_e4_graphite_zone",
+          "211_e4_specific_zone_dividers",
+          "211_e4_source_mapped_reveals",
+          "211_e4_source_mapped_window_sizes",
+          "211_e4_window_mullions",
+          "211_e4_recessed_service_slot",
+          "211_e4_slot_louvers",
+          "211_e4_darkgroup_header",
+          "211_entrance_canopy_4",
+          "211_lower_stone_face_5",
+          "211_individual_face_5_white",
+          "211_face_5_unequal_windows",
+          "211_individual_face_5_graphite",
+          "211_individual_face_5_warm",
+          "211_entrance_canopy_5",
+          "211_Club_Cloud_glazed_roof_lounge",
+          "211_Club_Cloud_deep_projecting_canopy",
+          "211_Club_Cloud_canopy_shadow_band",
+          "211_inset_service_roof",
+          "211_lounge_fine_vertical_mullions",
+          "211_lounge_horizontal_transoms",
+          "211_roof_perimeter_rail",
+          "211_distinct_roof_plant_1",
+          "211_plant_cap_1",
+          "211_plant_vent_1",
+          "211_plant_louvers_1",
+          "211_distinct_roof_plant_2",
+          "211_plant_cap_2",
+          "211_plant_vent_2",
+          "211_plant_louvers_2"
+        ],
+        "buildingFacts": {},
+        "uncertainties": [
+          "Per-face window dimensions and obscured rear faces are photo-derived interpretations, not measured shop drawings.",
+          "Existing illustrative-plan trace and anchors retained; no new survey placement claim.",
+          "Absolute roof height90.16m and plant enclosure dimensions remain estimates.",
+          "Identity of distant roof equipment in aerial photos cannot be fully resolved; enclosure count/form approximates visible pair rather than exact equipment specification."
+        ],
+        "accuracy": "Compared to cited photographs and site plans; unmeasured dimensions remain estimates"
+      }
+    }
+  ],
+  "places": [
+    {
+      "id": "seoul-express-terminal-gyeongbu-yeongdong",
+      "name": "서울고속버스터미널 경부선·영동선",
+      "subtitle": "경부·영동선 터미널 · 센트럴시티 호남선과 별개",
+      "center": [
+        127.00620195,
+        37.5054155
+      ],
+      "zoom": 17.0,
+      "source_url": "http://www.exterminal.co.kr/location.asp",
+      "siteId": "seoul-express-terminal-gyeongbu-yeongdong"
+    },
+    {
+      "id": "bespoke-skyl65",
+      "name": "청량리역 롯데캐슬 SKY-L65",
+      "subtitle": "주거동 A~D · 1,425세대",
+      "center": [
+        127.04525970389179,
+        37.5789
+      ],
+      "zoom": 16.4,
+      "household_count": 1425,
+      "source_url": "https://www.lottecastle.co.kr/APT/AT00174/1449/summary/view.do",
+      "supersedesPlaceIds": [
+        "reference-flight-cheongnyangni-skyl65",
+        "apt-a10023083"
+      ],
+      "siteId": "skyl65"
+    },
+    {
+      "id": "bespoke-banpo-jamsu",
+      "name": "반포대교·잠수교",
+      "subtitle": "실제 복층 구조 · 잠수교 항로 솟음부",
+      "center": [
+        126.996466,
+        37.514546
+      ],
+      "zoom": 15.5,
+      "source_url": "https://storage.googleapis.com/scorer-web-image/file/20230707_%EC%84%9C%EC%9A%B8_%EC%9E%A0%EC%88%98%EA%B5%90%EC%A0%84%EB%A9%B4%EB%B3%B4%ED%96%89%ED%99%94%20%EA%B8%B0%ED%9A%8D_%EA%B3%B5%EB%AA%A8%EC%A7%80%EC%B9%A8%EC%84%9C.pdf",
+      "siteId": "banpo-jamsu"
+    },
+    {
+      "id": "culture-station-seoul284",
+      "name": "문화역서울284 · 구 서울역사",
+      "subtitle": "중앙 돔과 시계가 있는 붉은 벽돌 구역사",
+      "center": [
+        126.97158,
+        37.555877
+      ],
+      "zoom": 17.8,
+      "source_url": "https://seoul284.org/cms/content/view/253",
+      "siteId": "culture-station-seoul284"
+    },
+    {
+      "id": "bespoke-hyperion",
+      "name": "목동 현대하이페리온",
+      "subtitle": "A·B·C동 · 주거·업무 복합단지",
+      "center": [
+        126.87497,
+        37.52697
+      ],
+      "zoom": 16.6,
+      "household_count": 466,
+      "source_url": "https://www.sfacade.net/dongtan-hyperion",
+      "supersedesPlaceIds": [
+        "reference-flight-hyperion",
+        "apt-a15805114"
+      ],
+      "siteId": "hyperion"
+    },
+    {
+      "id": "bespoke-maple-club-cloud",
+      "name": "메이플자이 클럽클라우드",
+      "subtitle": "210·211동 · 29층 스카이브리지",
+      "center": [
+        127.01415,
+        37.51274
+      ],
+      "zoom": 17,
+      "source_url": "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+      "siteId": "maple-club-cloud"
+    }
+  ]
+}
