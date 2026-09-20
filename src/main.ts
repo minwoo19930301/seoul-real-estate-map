@@ -30,6 +30,7 @@ type TerrainMetadata = { tiles: string[]; coverage_tiles?: string[]; source_hull
 // A Vercel function is ephemeral, so hosted bookmarks belong to this browser
 // instead of being written into whichever function instance handled the request.
 const hosted = !['localhost', '127.0.0.1', '[::1]'].includes(window.location.hostname);
+// Keep existing saved places across the project rename.
 const bookmarksKey = 'seoul-elevation-local.bookmarks.v1';
 const localBookmarks = (): Bookmark[] => {
   try {
@@ -52,7 +53,7 @@ maplibregl.setWorkerUrl(workerUrl);
 
 $('#app').innerHTML = `
   <header class="topbar">
-    <div class="identity"><span class="brandmark">${icons.contour}</span><h1>서울 높낮이</h1></div>
+    <div class="identity"><span class="brandmark">${icons.contour}</span><h1>Seoul <span>Real Estate Map</span></h1></div>
     <div class="top-actions"><div class="mode-switch" role="group" aria-label="지도 보기 모드"><button id="mode-2d" class="active" aria-pressed="true">2D 지도</button><button id="mode-25d" aria-pressed="false" disabled>2.5D 지형</button><button id="mode-eye" aria-pressed="false" disabled>사람 1인칭</button></div><button id="mobile-panel" class="mobile-only" aria-expanded="false" aria-controls="sidebar">지도 설정</button></div>
   </header>
   <div class="workspace">

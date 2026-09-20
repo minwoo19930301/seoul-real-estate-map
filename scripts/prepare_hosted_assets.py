@@ -50,8 +50,8 @@ def restore_assets(root=ROOT):
     if not re.fullmatch(r'[0-9a-f]{40}', ref) or not token:
         raise ValueError('A full immutable SEOUL_ASSET_REF and build-only SEOUL_ASSET_TOKEN are required')
     request = urllib.request.Request(
-        f'https://api.github.com/repos/minwoo19930301/seoul-elevation-local/tarball/{ref}',
-        headers={'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json', 'User-Agent': 'seoul-elevation-deploy'},
+        f'https://api.github.com/repos/minwoo19930301/seoul-real-estate-map/tarball/{ref}',
+        headers={'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json', 'User-Agent': 'seoul-real-estate-map-deploy'},
     )
     try:
         with urllib.request.urlopen(request, timeout=120) as response:

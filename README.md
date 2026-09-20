@@ -1,16 +1,20 @@
-# 서울 지도 · Turso 배포
+# Seoul Real Estate Map
 
-운영 사이트는 [서울 높낮이](https://seoul-elevation.vercel.app)입니다. `main`에 병합하면 검증 후 기존 Vercel 계정으로 자동 배포됩니다. 계정·환경변수·실패 확인 방법은 [자동 배포 문서](docs/DEPLOYMENT.md)를 참고하세요.
+운영 사이트는 [Seoul Real Estate Map](https://seoul-elevation.vercel.app)입니다. `main`에 병합하면 검증 후 기존 Vercel 계정으로 자동 배포됩니다. 계정·환경변수·실패 확인 방법은 [자동 배포 문서](docs/DEPLOYMENT.md)를 참고하세요.
+
+단지·실거래·관리비·정비사업 자료와 지형·건물을 함께 탐색하는 서울 부동산 지도입니다. 구축 과정에서 정리한 [부동산 데이터 지식 노트](docs/knowledge/README.md)에는 식별자와 연결 기준, 지도 숫자 해석, 출처·검증·갱신 방법을 담았습니다.
 
 랜드마크·인프라·주거 모델 총 **113,123개**입니다. 기존 13,607개를 보존하고 서울도시공간포털의 대상 도형 131,618건을 전수 대조해 빌라·연립 74,203동, 아파트 5,143동, 주상복합 489동, 오피스텔 1,596동, 세부 유형 미상 공동주택 18,085동을 추가했습니다. 서울의 모든 실제 주거 건물이 확인됐다는 의미는 아니며, 중복·불명확한 도형의 제외 사유도 기록했습니다. 지역별로 필요한 모형만 불러옵니다. [이번 전수 조사·높이 근거·한계](docs/RESIDENTIAL_SURVEY.md), [이전 주거 모델](docs/RESIDENTIAL_MODELS.md), [공공시설·교량](docs/INFRASTRUCTURE_MODELS.md). 이 수치는 PR 브랜치 기준이며 운영 사이트 반영은 병합·배포 후 확인합니다.
 
 지역별 원본 분할, 서비스 DB, 재업로드와 원격 실행 방법은 [Turso 운영 문서](docs/TURSO.md)를 참고하세요. 토큰과 원본 SQLite는 이 저장소에 포함하지 않습니다.
 
-# 서울 높낮이
+## 지도와 데이터
 
-서울의 주택가·택지 주변에서 **원본 5m 등고선·표고점·건물 외곽선**을 살펴보는 로컬 웹 지도입니다. 처음 열면 **지형 4배 강조의 2.5D**로 시작합니다. 건물의 원본 높이와 외곽선 크기는 배율과 별도로 유지합니다.
+서울의 주택가·택지 주변에서 **원본 5m 등고선·표고점·건물 외곽선**을 아파트·정비사업·생활 인프라와 함께 살펴보는 웹 지도입니다. 처음 열면 **지형 4배 강조의 2.5D**로 시작합니다. 건물의 원본 높이와 외곽선 크기는 배율과 별도로 유지합니다.
 
-![헬리오시티의 실제 건물·동 이름과 주요 장소 핀](tests/screenshots/helio-landmarks.png)
+## 부동산 데이터 지식
+
+프로젝트를 만들며 정리한 [자료별 역할](docs/knowledge/data-sources.md), [단지·동·필지 연결 기준](docs/knowledge/identifiers-and-joins.md), [지형·높이·면적 읽기](docs/knowledge/reading-map-data.md)를 함께 공개합니다. 공개 자료를 조사하고 코드로 검증한 범위와 미확인 부분을 구분했습니다.
 
 ## 현재 가능한 기능
 
@@ -96,7 +100,7 @@
 Node.js와 프로젝트 Python 환경이 준비되어 있습니다.
 
 ```sh
-cd /Users/hyemini/Documents/Codex/2026-09-08/seoul-elevation-local
+cd seoul-real-estate-map
 npm run build
 npm start
 ```
@@ -116,6 +120,8 @@ npm start
 Node.js 22.12+ 또는 최근 LTS, Python 3.12+, `uv`가 필요합니다. Python 3.12로 검증했습니다.
 
 ```sh
+git clone https://github.com/minwoo19930301/seoul-real-estate-map.git
+cd seoul-real-estate-map
 npm ci
 uv venv .venv --python 3.12
 uv pip install --python .venv/bin/python -r requirements.txt
@@ -195,4 +201,4 @@ npm run build
 - [Overture Maps 건물](https://docs.overturemaps.org/guides/buildings/): 2026-08-19.0, 서울 행정경계와 교차하는 원본 도형. © OpenStreetMap contributors, Overture Maps Foundation. 건물 데이터베이스는 [ODbL 1.0](https://opendatacommons.org/licenses/odbl/1-0/), [원천별 출처 표기](https://docs.overturemaps.org/attribution/)를 따릅니다. 코드의 라이선스와 별개입니다.
 - Qian Shi et al., [East Asian Buildings](https://doi.org/10.5281/zenodo.8174931), CC BY 4.0: Overture를 통해 포함된 영상 추출 외곽선. 이 프로젝트에서는 서울 범위 선택, 공간 인덱스, 미터 면적 계산, 조회용 속성 정규화 및 원문 압축 저장을 했으며 기존 도형·높이는 보존했습니다.
 
-데이터 조사와 이전 계획은 같은 상위 폴더의 `seoul-contours-feasibility/PLAN.md`에 있습니다.
+데이터를 모으며 정리한 개념·출처·연결 원칙은 [부동산 데이터 지식](docs/knowledge/README.md)에 있습니다.

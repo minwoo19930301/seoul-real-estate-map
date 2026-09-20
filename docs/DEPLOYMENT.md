@@ -1,8 +1,8 @@
-# 서울 높낮이 자동 배포
+# Seoul Real Estate Map 자동 배포
 
 운영 주소: https://seoul-elevation.vercel.app
 
-기존 Vercel `flam-ing` 계정의 `flam-ing-ai-ing` 팀에서 프런트엔드와 Python API를 함께 운영합니다. DB는 기존 Turso `seoul-service`를 읽기 전용으로 사용합니다. `hye-macmini`의 실행 프로세스나 파일 시스템에 의존하지 않습니다.
+기존 Vercel 프로젝트에서 프런트엔드와 Python API를 함께 운영합니다. DB는 기존 Turso `seoul-service`를 읽기 전용으로 사용합니다. 개인 컴퓨터의 실행 프로세스나 파일 시스템에 의존하지 않습니다.
 
 ## main 병합부터 배포까지
 
@@ -33,6 +33,6 @@ Turso 토큰은 Vercel 서버 환경변수에만 둡니다. Git, 브라우저 �
 
 운영 사이트의 저장한 위치는 브라우저 localStorage에 보관합니다. 방문자끼리 공유되지 않으며 함수 재시작에 영향받지 않습니다. 브라우저 데이터를 지우면 함께 지워집니다. localhost 실행은 기존 로컬 SQLite 북마크를 유지합니다.
 
-## 기존 호스팅 조사
+## 저장소 이름과 운영 주소
 
-2026-09-19에 Cursor 기록과 실제 연결 계정을 대조했습니다. Cloudflare 계정에는 `ai-ing`, `bookvideotoexam`, `sonnote`, `slides-ai-ing`, `test-server`, `chaeun-portfolio`, `flamingallery`가 있고 직접 업로드 방식을 사용합니다. Vercel `flam-ing`에는 `flaming-games`, `payment-backend`가 있으며 이번 서울 높낮이도 이 기존 계정을 사용합니다. 다른 Vercel 작업 계정과 Netlify Drop 사이트는 이번 배포에 사용하지 않습니다. `seoul-flight-game`의 GitHub Pages는 별도 프로젝트입니다.
+GitHub 저장소는 `minwoo19930301/seoul-real-estate-map`입니다. 이름 변경 뒤에도 기존 Vercel 프로젝트와 운영 주소를 유지합니다. `scripts/prepare_hosted_assets.py`는 새 저장소의 동일한 커밋에서 자산을 가져옵니다. 브라우저 저장 위치의 기존 키도 유지하므로 이름 변경으로 저장한 위치가 사라지지 않습니다.
