@@ -16,7 +16,8 @@ K-apt 서울 자료의 123코드에는 복수 주소 등에 따른 추가 147행
 
 | 관리코드 | 단지 | 상태 | 검증된 bespoke / 확인된 주거동 |
 |---|---|---|---:|
-| A10020557 | 메이플자이 | partial | 10 / 29 |
+| A10020557 | 메이플자이 | partial | 11 / 29 |
+| A10022556 | 래미안 원펜타스 | partial | 2 / 6 |
 | A10023043 | 래미안원베일리 | not_started | 0 / 미확정 |
 | A10023083 | 청량리역 롯데캐슬 SKY-L65 | complete_residential_buildings | 4 / 4 |
 | A10023188 | 청량리역 한양수자인 그라시엘 | complete_residential_buildings | 4 / 4 |

@@ -145,7 +145,7 @@
       "expectedResidentialBuildingCount": 29,
       "coverageApproved": false,
       "buildingIdentitySource": "https://www.xi.co.kr/Files/cmsPage/20240205_132346_189001.jpg",
-      "photoCoverageBasis": "Seven towers207/208/209/210/211/212/213 have scoped photo-comparison improvements.207 is newly authored;213 has a fresh23-floor correction supported by literal-number ground photos and its exact register row. Remaining22 reference towers are not bespoke completion.",
+      "photoCoverageBasis": "Eleven named towers 203/204/207/208/209/210/211/212/213/214/215 have independent Blender MCP and scoped photo-comparison records. Tower 213 uses its corrected 23-floor reconstruction, and 203 uses its official 19-floor record. The remaining eighteen reference towers are not bespoke completion; hidden facade, footprint scale and rooftop datum limitations remain in each review.",
       "buildings": [
         {
           "label": "101",
@@ -229,8 +229,13 @@
         },
         {
           "label": "203",
-          "assetId": null,
-          "photoReviewSiteId": null
+          "assetId": "bespoke-maple-xi-203",
+          "photoReviewSiteId": "maple-xi-203",
+          "buildingIdentity": {
+            "sourceUrl": "https://www.xi.co.kr/Files/cmsPage/20240205_132346_189001.jpg",
+            "retainedAssetId": "maple-xi-203",
+            "basis": "Official numbered six-line L at the highway corner, crossmatched with aerial A/B and street W41/W43. No readable 203 numeral. Trace area differs from the legal building area; concealed surfaces and core projections remain uncertain."
+          }
         },
         {
           "label": "204",
@@ -620,6 +625,43 @@
           "use": "shared lower wings; not an extra apartment building"
         }
       ]
+    },
+    {
+      "code": "A10022556",
+      "physicalSiteId": "raemian-onepentas",
+      "expectedResidentialBuildingCount": 6,
+      "coverageApproved": false,
+      "buildingIdentitySource": "https://www.raemian.co.kr/sales/sub/s/onepentas?menuSeq=10051",
+      "photoCoverageBasis": "105 and 106 independently reviewed against numbered completed photographs and official unit-floor charts. Four other residential buildings remain unfinished.",
+      "buildings": [
+        {
+          "label": "101",
+          "assetId": null
+        },
+        {
+          "label": "102",
+          "assetId": null
+        },
+        {
+          "label": "103",
+          "assetId": null
+        },
+        {
+          "label": "104",
+          "assetId": null
+        },
+        {
+          "label": "105",
+          "assetId": "bespoke-raemian-onepentas-105",
+          "photoReviewSiteId": "raemian-onepentas"
+        },
+        {
+          "label": "106",
+          "assetId": "bespoke-raemian-onepentas-106",
+          "photoReviewSiteId": "raemian-onepentas"
+        }
+      ],
+      "limits": "Official112.85m register height has not been tied to a roof/eaves/mechanical reference drawing. Model uses it as highest residential roof datum and adds photo-estimated servicehead to118.75m; do not label118.75mofficial. Lowarm floors confirmed byofficial unit chart; armcut and setback distances estimated within retained footprint, not measuredCAD. 105/106 north-west and concealed faces are not independently photo-identified; nominal smallservice-window patterns are illustrative inference, explicitly mapped in face-evidence-map.json. Unconfirmedserviceboxesonthe26F/29Flowroofsareomitted. Colors and metal/member thicknesses visuallyestimated from2024Junephotos. Firstphase only105/106of6;101–104andtheirbridge notmodeledhere;neighborPrestige 126unclaimed."
     }
   ]
 }

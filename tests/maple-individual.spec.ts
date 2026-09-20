@@ -3,6 +3,8 @@ import { readFileSync, mkdirSync, writeFileSync } from 'node:fs';
 const manifest=JSON.parse(readFileSync('public/models/bespoke-manifest.json','utf8'));
 const numbers=[...Array.from({length:14},(_,i)=>101+i),...Array.from({length:15},(_,i)=>201+i)];
 for(const scenario of [
+  {number:203,failed:[],wanted:'bespoke-maple-xi-203'},
+  {number:203,failed:['bespoke-maple-xi-203'],wanted:'maple-xi-203'},
   {number:214,failed:[],wanted:'bespoke-maple-xi-214'},
   {number:214,failed:['bespoke-maple-xi-214'],wanted:'maple-xi-214'},
   {number:215,failed:[],wanted:'bespoke-maple-xi-215'},

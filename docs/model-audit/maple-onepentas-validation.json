@@ -1,0 +1,85 @@
+{
+  "date": "2026-09-21",
+  "scope": "Maple Xi 203 and Raemian OnePentas 105/106; partial complexes",
+  "baseCommit": "a89732cf8bf4ac8ec18501917250f162f6ea6cc9",
+  "newBespokeAssets": [
+    "bespoke-maple-xi-203",
+    "bespoke-raemian-onepentas-105",
+    "bespoke-raemian-onepentas-106"
+  ],
+  "preservedBespokeAssets": 69,
+  "preservedReferenceRecords": 125,
+  "nodeTests": {
+    "passed": 13751,
+    "failed": 0,
+    "command": "node --test tests/*.test.mjs"
+  },
+  "pythonTests": {
+    "passed": 21,
+    "failed": 0,
+    "command": "python3 -m unittest discover -s tests -p 'test_*bespoke*.py'"
+  },
+  "build": "npm run build exited 0, including closeBundle gzip assets",
+  "localBrowser": {
+    "maple203Cases": 2,
+    "onepentasCases": 2,
+    "passed": 4,
+    "observed": "Root opened normal and intentional404 screenshots for Maple203 and OnePentas105. Missing203 restores only original203 and preserves29logicaltowers. Missing105 restores only fallback105;106 remains drawn. OnePentas101–104 compound and neighboring Prestige126 remain active/drawn in both cases. Exact source footprints stay owned and corresponding solid extrusions stay hidden. No unexpected model/page errors.",
+    "existingSitesRegression": {
+      "testCases": 1,
+      "sites": 8,
+      "result": "passed",
+      "evidence": "docs/model-audit/browser-check.json",
+      "log": "docs/model-audit/maple-onepentas-sites-browser.txt"
+    }
+  },
+  "genericPartition": "Node tests verify exact triangle attributes/material multisets, original anchor/bounds, all source footprint ownership and zero added completion credit. OneBailey still contains only its original19sourcebuildings; no new photo model is published there.",
+  "completion": {
+    "eligibleManagementCodes": 1417,
+    "completedManagementCodes": 13,
+    "mapleReviewedBuildings": 11,
+    "mapleExpectedBuildings": 29,
+    "onepentasReviewedBuildings": 2,
+    "onepentasExpectedBuildings": 6
+  },
+  "limitations": [
+    "Photo matching covers explicitly reviewed visible faces; hidden faces and dimensions remain estimates as documented.",
+    "Maple203 retained footprint trace conflicts with registered area.",
+    "OnePentas register112.85m datum is unknown; model118.75m includes estimated roof plant and is not an official height.",
+    "This is local candidate validation; Candidate publication is separate from the previously verified PR15 public deployment."
+  ],
+  "evidence": [
+    {
+      "path": "docs/model-audit/renders/maple-onepentas-local/203-0-failures.json",
+      "sha256": "65474392550cd4132ae2e1726bef8ec1b8a2e6f2ec6209ec8b4b20979c38bb02"
+    },
+    {
+      "path": "docs/model-audit/renders/maple-onepentas-local/203-0-failures.png",
+      "sha256": "7e109958cd0aa3b041dd4082a444b63d3b6e566aea9b597750469f7eb484d3b4"
+    },
+    {
+      "path": "docs/model-audit/renders/maple-onepentas-local/203-1-failures.json",
+      "sha256": "16328a373de6df242344d4edfcc608fcbd751dfcae72ce18d89e6da0820bb951"
+    },
+    {
+      "path": "docs/model-audit/renders/maple-onepentas-local/203-1-failures.png",
+      "sha256": "49e61515071c49e7350404881db1a4bdb4c12320e868bae27fc56230c0cf4694"
+    },
+    {
+      "path": "docs/model-audit/renders/maple-onepentas-local/onepentas-fallback.json",
+      "sha256": "75c3a765ae778c4a1cb28e5463dab15b0e453eb9a0e7d37e9ee480344b79437f"
+    },
+    {
+      "path": "docs/model-audit/renders/maple-onepentas-local/onepentas-fallback.png",
+      "sha256": "a833372409bd0c6a00fa6332572570826b0e5d36435423c772f939fbbf6be1d8"
+    },
+    {
+      "path": "docs/model-audit/renders/maple-onepentas-local/onepentas-normal.json",
+      "sha256": "7071eb5fbe719e94debd4bfcb37b16244363c27821446351cec389c11664d06d"
+    },
+    {
+      "path": "docs/model-audit/renders/maple-onepentas-local/onepentas-normal.png",
+      "sha256": "ea8d4e9dee141d4fb621fcce52e2b1509125b5a6ad01da1e8124afc21f86efbe"
+    }
+  ]
+}
