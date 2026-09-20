@@ -37,6 +37,27 @@ def safe_id(s):
     if not isinstance(s,str) or not re.fullmatch('[a-z0-9][a-z0-9-]*',s):raise ValueError('Unsafe model identifier')
     return s
 
+def validate_mcp_evidence(records, root=ROOT):
+    """Require recorded MCP execution in addition to the independent visual review."""
+    if not isinstance(records,list) or not records:
+        raise ValueError('Recorded Blender MCP execution is required')
+    audit=(root/'docs/model-audit/mcp').resolve()
+    for record in records:
+        if not isinstance(record,dict) or not isinstance(record.get('path'),str):
+            raise ValueError('Invalid Blender MCP evidence record')
+        path=(root/record['path']).resolve()
+        if not path.is_relative_to(audit) or not path.is_file() or path.suffix!='.json':
+            raise ValueError('MCP evidence must be a local audit JSON file')
+        if record.get('sha256')!=sha(path):
+            raise ValueError('Blender MCP evidence hash mismatch')
+        calls=read(path)
+        if not isinstance(calls,list) or not any(
+            isinstance(call,dict) and call.get('tool')=='execute_blender_code'
+            and call.get('isError') is False and any(
+                isinstance(c,dict) and 'Code executed successfully' in str(c.get('text',''))
+                for c in call.get('content',[])) for call in calls):
+            raise ValueError('MCP evidence has no successful Blender code execution')
+
 def publish(bundle_path, review_path):
     bundle_path=bundle_path.resolve(); review_path=review_path.resolve()
     if not bundle_path.is_relative_to(STAGE):raise ValueError('Bundle must be in the bespoke staging directory')
@@ -44,6 +65,7 @@ def publish(bundle_path, review_path):
     if review.get('siteId')!=site or review.get('status')!='visually-reviewed' or not review.get('comparisons'):
         raise ValueError('A completed, site-specific visual comparison record is required')
     if not b.get('sources') or not b.get('assets'):raise ValueError('Missing source evidence or models')
+    validate_mcp_evidence(b.get('mcpEvidence'))
     current=read(PUB/'bespoke-manifest.json')
     evidence_path=ROOT/'docs/model-audit/published-bespoke.json'
     evidence=read(evidence_path) if evidence_path.exists() else {'version':1,'sites':{}}
@@ -91,7 +113,7 @@ def publish(bundle_path, review_path):
         if any(x in ids for x in a['supersedes']):raise ValueError('Sibling site assets cannot replace each other')
     current['assets']=[a for a in current['assets'] if a.get('sourceRecord',{}).get('siteId')!=site]+new
     current['places']=[p for p in current['places'] if p.get('siteId')!=site]+[{**p,'siteId':site} for p in b.get('places',[])]
-    evidence['sites'][site]={'sources':b['sources'],'review':review,'assets':records,'mcpEvidence':b.get('mcpEvidence',[]),
+    evidence['sites'][site]={'sources':b['sources'],'review':review,'assets':records,'mcpEvidence':b['mcpEvidence'],
       'recipeInputs':[{'path':str(dest.relative_to(ROOT)),'sha256':sha(source)} for source,dest in recipe_copies]}
     deployment_path=ROOT/'public/data/deployment-assets.json';deployment=read(deployment_path)
     manifest_bytes=encoded(current)
