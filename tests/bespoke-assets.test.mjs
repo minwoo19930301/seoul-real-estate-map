@@ -135,3 +135,21 @@ test('four more Maple replacements retain each original tower anchor and only re
   assert.deepEqual(a.footprintIds,[],'no inferred ownership of source buildings inside approximate illustration bounds');
  }
 });
+
+test('cultural reconstructions retain their exact source anchors and exclude adjacent palace and park models',()=>{
+ const fixtures=[
+  ['bespoke-lg-art-center-seoul-discovery-lab','landmark-2623bbf0-348f-4cec-94c6-dc8ca4977552','2623bbf0-348f-4cec-94c6-dc8ca4977552'],
+  ['bespoke-jungmyeongjeon','civic-4c53ad91-93b0-4472-b7a4-0086e45cbdd2','4c53ad91-93b0-4472-b7a4-0086e45cbdd2'],
+  ['bespoke-mmca-deoksugung','civic-a1d78a03-a0b3-4ef2-ab28-b3a5021cfbcc','a1d78a03-a0b3-4ef2-ab28-b3a5021cfbcc'],
+ ];
+ for(const [id,previous,source] of fixtures){
+  const a=manifest.assets.find(a=>a.id===id);assert.ok(a,id);
+  const anchor=legacy.find(a=>a.id===previous).coordinate;
+  assert.deepEqual(a.coordinate,{lon:anchor.lon,lat:anchor.lat});
+  assert.deepEqual(a.footprintIds,[source]);assert.deepEqual(a.supersedes,[previous]);
+ }
+ for(const id of ['reference-flight-deoksugung','reference-flight-lg-science-park','reference-flight-seoul-botanic-park']){
+  assert.ok(legacy.some(a=>a.id===id));assert.ok(!manifest.assets.some(a=>a.supersedes.includes(id)));
+ }
+ assert.ok(!manifest.assets.some(a=>a.footprintIds.includes('5a79ee99-0908-4cf3-812f-16dee899ab41')),'east Seokjojeon remains independent');
+});
