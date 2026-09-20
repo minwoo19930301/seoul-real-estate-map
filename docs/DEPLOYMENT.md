@@ -23,7 +23,9 @@ Turso 토큰은 Vercel 서버 환경변수에만 둡니다. Git, 브라우저 �
 
 ## 대형 지도 자산
 
-약 641MB의 GLB 모형을 CLI 소스 업로드에 포함하지 않습니다. Vercel 빌드가 동일한 Git 커밋에서 `public/models`를 가져오고 `public/data/deployment-assets.json`의 SHA-256을 검사합니다. GitHub Actions의 `contents: read` 토큰은 이 빌드에만 전달되며 장기 GitHub 토큰은 저장하지 않습니다. 지형 타일은 함수 패키지에도 포함하여 사람 시점/도로 지면 계산을 유지합니다.
+약 2.776GB의 활성 GLB 모형과 보존된 이전 GLB을 CLI 소스 업로드에 포함하지 않습니다. Vercel 빌드가 동일한 Git 커밋에서 `public/models`를 가져오고 `public/data/deployment-assets.json`의 SHA-256을 검사합니다. GitHub Actions의 `contents: read` 토큰은 이 빌드에만 전달되며 장기 GitHub 토큰은 저장하지 않습니다. 지형 타일은 함수 패키지에도 포함하여 사람 시점/도로 지면 계산을 유지합니다.
+
+신규 주거 모형은 지역별 하위 폴더에 보관합니다. 자산 manifest 갱신 시 `public/models`를 재귀 순회하여 index·타일 JSON·GLB 모두 포함합니다.
 
 모형이나 지형을 변경할 때는 배포 자산 manifest도 갱신해야 합니다. 누락·변조되면 빌드는 중단됩니다. 서비스 DB 내용 갱신은 기존 `docs/TURSO.md` 절차를 따릅니다. 코드 병합이 원본 DB를 덮어쓰지는 않습니다.
 

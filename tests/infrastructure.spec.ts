@@ -19,7 +19,7 @@ test('bridges, schools, offices, avenues and real transit points render and togg
     await page.waitForFunction(id => (window as any).__SEOUL_MAP__.cityModels.getState().models.some((m: any) => m.id === id && m.active && m.drawCount > 0), asset.id, { timeout: 35_000 });
     await page.waitForLoadState('networkidle');
     const state = await page.evaluate(() => (window as any).__SEOUL_MAP__.cityModels.getState());
-    expect(state.models.length).toBe(3088);
+    expect(state.models.length).toBeGreaterThanOrEqual(assets.length);
     expect(state.models.filter((m: any) => m.loaded).length).toBeLessThanOrEqual(48);
     expect(state.models.filter((m: any) => m.active).length).toBeLessThanOrEqual(32);
     expect(state.models.filter((m: any) => m.error)).toEqual([]);

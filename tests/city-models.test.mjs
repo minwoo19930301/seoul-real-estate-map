@@ -131,10 +131,27 @@ test('invalid manifest fails before fetch and exits loading state with originals
   h.models.destroy();
 });
 
+test('namespaced GLB path loads the verified per-building mesh without changing its ground placement', async () => {
+  const h = harness();
+  const entry = h.models.entries.find(e => e.asset.id === 'lotte');
+  const originalAsset = entry.asset;
+  entry.scene = undefined;
+  entry.asset = { ...originalAsset, model: 'residential-survey/glb/16-55909-25393/survey-upis-42.glb' };
+  const originalFetch = globalThis.fetch, requests = [];
+  globalThis.fetch = async url => { requests.push(url); return new Response(assetBytes(originalAsset)); };
+  try {
+    h.models.setMode(true); await h.models.loadNearby(); h.models.render(h.args);
+    assert.deepEqual(requests, ['/models/residential-survey/glb/16-55909-25393/survey-upis-42.glb']);
+    const state = h.models.getState().models.find(m => m.id === 'lotte');
+    assert.equal(state.loaded, true); assert.equal(state.active, true);
+    assert.equal(state.ground_m, 80); assert.equal(state.height_m, 555);
+  } finally { globalThis.fetch = originalFetch; h.models.destroy(); }
+});
+
 test('dense district catalog limits concurrent loads and evicts old GPU scenes across navigation', async () => {
   const h = harness();
   const template = manifest.assets.find(a => a.id === 'lotte');
-  h.models.entries = Array.from({ length: 3500 }, (_, i) => ({
+  h.models.entries = Array.from({ length: 20000 }, (_, i) => ({
     asset: { ...template, id: `district-${i}`, coordinate: { lon: 127.102679 + (i >= 40 ? 0.05 : 0), lat: 37.5125537 + (i % 40) * 0.000001 } },
     error: null, ground: null, draws: 0, active: false,
   }));
@@ -178,6 +195,91 @@ test('moving away cancels queued model work while originals stay visible', async
   } finally { globalThis.fetch = originalFetch; h.models.destroy(); }
 });
 
+test('20000-entry catalog reuses nearby selection and avoids full QA state construction on repeat frames', () => {
+  const h = harness();
+  const template = manifest.assets.find(a => a.id === 'lotte');
+  h.models.entries = Array.from({ length: 20000 }, (_, i) => ({
+    asset: { ...template, id: `cached-${i}`, coordinate: { lon: 127.102679 + (i >= 32 ? .05 : 0), lat: 37.5125537 + (i % 32) * .000001 } },
+    scene: i < 32 ? new THREE.Scene() : undefined, error: null, ground: null, draws: 0, active: false,
+  }));
+  let boundsReads = 0, visibilityChecks = 0, fullStates = 0;
+  const bounds = h.models.map.getBounds;
+  h.models.map.getBounds = () => { boundsReads++; return bounds(); };
+  const inView = h.models.inView.bind(h.models);
+  h.models.inView = (...args) => { visibilityChecks++; return inView(...args); };
+  const getState = h.models.getState.bind(h.models);
+  h.models.getState = () => { fullStates++; return getState(); };
+  const first = h.models.nearbyEntries();
+  assert.equal(first.length, 32); assert.equal(boundsReads, 1); assert.equal(visibilityChecks, 20000);
+  assert.equal(h.models.nearbyEntries(), first);
+  assert.equal(boundsReads, 2); assert.equal(visibilityChecks, 20000);
+  // Skip asynchronous loading so only the repeated render path is measured.
+  h.models.is25d = true; h.models.render(h.args);
+  const events = h.stateEvents.length;
+  boundsReads = 0; visibilityChecks = 0; fullStates = 0;
+  for (let i = 0; i < 50; i++) h.models.render(h.args);
+  assert.equal(boundsReads, 50, 'one view snapshot per frame, not one per catalog entry');
+  assert.equal(visibilityChecks, 0, 'unchanged view does not filter/sort the catalog again');
+  assert.equal(fullStates, 0, 'unchanged frames do not materialize the complete catalog');
+  assert.equal(h.stateEvents.length, events);
+  const state = h.models.getState();
+  assert.equal(state.models.length, 20000, 'explicit QA API still returns every model');
+  assert.equal(state.models.filter(m => m.active).length, 32);
+  assert.ok(state.models.filter(m => m.active).every(m => m.drawCount === 51));
+  h.setGround(321); h.models.render(h.args);
+  assert.equal(h.stateEvents.length, events+1, 'changed resident terrain state still emits');
+  assert.ok(h.stateEvents.at(-1).models.filter(m => m.active).every(m => m.ground_m === 321));
+  h.models.destroy();
+});
+
+test('nearby cache invalidates for bounds, zoom, center, categories and replaced catalog references', () => {
+  const h = harness();
+  const template = manifest.assets.find(a => a.id === 'lotte');
+  const entry = (id, category, lon = 127.102679) => ({
+    asset: { ...template, id, category, coordinate: { lon, lat: 37.5125537 } },
+    error: null, ground: null, draws: 0, active: false,
+  });
+  h.models.entries = [entry('school', 'k12-school'), entry('bridge', 'bridge'),
+    entry('culture', 'cultural-site'), entry('company', 'company-office'), entry('plain', 'apartment-complex'),
+    entry('east', 'apartment-complex', 127.109)];
+  const ids = () => h.models.nearbyEntries().map(e => e.asset.id).sort();
+  assert.deepEqual(ids(), ['bridge', 'company', 'culture', 'plain', 'school']);
+  h.models.setCategories(false, false, false, false);
+  assert.deepEqual(ids(), ['plain']);
+  h.models.setCategories(true, true, true, true);
+  assert.equal(ids().length, 5);
+  h.models.map.getZoom = () => 10;
+  assert.deepEqual(ids(), []);
+  h.models.map.getZoom = () => 16;
+  h.models.map.getBounds = () => ({ getWest: () => 127.09, getEast: () => 127.12, getSouth: () => 37.50, getNorth: () => 37.53 });
+  assert.equal(ids().length, 6, 'bounds-only change expands eligibility');
+  h.setCenter([127.109, 37.5125537]);
+  assert.equal(h.models.nearbyEntries()[0].asset.id, 'east', 'center-only change updates distance order');
+  const old = h.models.nearbyEntries();
+  h.models.entries = h.models.entries.map(e => entry('new-'+e.asset.id, e.asset.category, e.asset.coordinate.lon));
+  assert.notEqual(h.models.nearbyEntries(), old);
+  assert.ok(ids().every(id => id.startsWith('new-')));
+  h.models.entries.push(entry('appended', 'apartment-complex'));
+  assert.ok(ids().includes('appended'), 'catalog length changes are detected as well');
+  h.models.destroy();
+});
+
+test('catalog admission accepts 20000 models and rejects more than 25000 before adding a layer', async () => {
+  const template = manifest.assets.find(a => a.id === 'lotte');
+  for (const count of [20000, 25001]) {
+    const h = harness(); let layers = 0;
+    h.models.map.addLayer = () => { layers++; };
+    h.models.map.on = () => {};
+    const assets = Array.from({ length: count }, (_, i) => ({ ...template, id: `admitted-${i}` }));
+    const models = new CityModels(h.models.map, { assets });
+    await models.init();
+    assert.equal(layers, count <= 25000 ? 1 : 0);
+    assert.equal(models.getState().models.length, count <= 25000 ? count : 0);
+    assert.equal(models.getState().error, count <= 25000 ? null : '잘못된 모델 목록입니다.');
+    models.destroy(); h.models.destroy();
+  }
+});
+
 test('pitched bounds do not let distant buildings evict the bridge at the camera target', () => {
   const h = harness();
   const template = manifest.assets.find(a => a.id === 'lotte');
@@ -207,5 +309,12 @@ test('elevation originals retain their complete manifest records and all 250 sel
   assert.equal(counts.size, 25);
   assert.ok([...counts.values()].every(n => n === 10));
   assert.ok(manifest.assets.some(a => a.id === 'gyeongbokgung'));
-  assert.equal(manifest.assets.length, 3088);
+  const priorIds = [
+    ...JSON.parse(readFileSync(new URL('./fixtures/preserved-1550-landmarks.json', import.meta.url))).map(a => a.id),
+    ...JSON.parse(readFileSync(new URL('../docs/apartment-100-candidates.json', import.meta.url))).map(a => a.id),
+    ...JSON.parse(readFileSync(new URL('../docs/civic-company-candidates.json', import.meta.url))).map(a => a.id),
+  ];
+  assert.equal(new Set(priorIds).size, 3088, 'the previous completed batch remains the fixed baseline');
+  const currentIds = new Set(manifest.assets.map(a => a.id));
+  for (const id of priorIds) assert.ok(currentIds.has(id), `Missing baseline model ${id}`);
 });

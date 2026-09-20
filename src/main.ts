@@ -338,9 +338,10 @@ async function loadGreenery() {
 
 async function loadCityModels() {
   const { CityModels } = await import('./city-models');
-  const manifest = await request<{ assets: CityModelAsset[] }>('/models/manifest.json');
+  const manifest = await request<{ assets: CityModelAsset[]; catalogIndex?: string }>('/models/manifest.json');
   cityModels = new CityModels(map, {
     assets: manifest.assets,
+    catalogIndex: manifest.catalogIndex,
     onState: state => { $('#city-model-status').textContent = state.message; },
     onActiveFootprints: ids => buildings.setModelFootprints(ids),
   });
@@ -670,7 +671,9 @@ try {
   });
   map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), 'top-right');
   map.addControl(new maplibregl.ScaleControl({ maxWidth: 110, unit: 'metric' }), 'bottom-left');
-  map.addControl(new maplibregl.AttributionControl({ compact: true }), 'bottom-right');
+  map.addControl(new maplibregl.AttributionControl({ compact: true,
+    customAttribution: '주거 모형 도형·층수: <a href="https://urban.seoul.go.kr/view/map/main.html" target="_blank" rel="noopener">서울도시공간포털</a> · 높이 일부: 서울시 건축물대장 · 외관·누락 높이 추정',
+  }), 'bottom-right');
   buildings = new Buildings(map, coordinate => {
     elevationController?.abort(); ++elevationRequest;
     selectedCoordinate = coordinate;

@@ -1,0 +1,1274 @@
+{
+  "baselineModels": 13607,
+  "baselineManifestSha256": "004a1e0e0c9627cde1c682de8b1c76b43ec226c06bd13a5bca521d8d5704186f",
+  "retrievedDate": "2026-09-20",
+  "counts": {
+    "sourceFeatures": 131618,
+    "selected": 99516,
+    "not_requested_or_ancillary": 20052,
+    "preserved_model_overlap": 11070,
+    "ambiguous_overlap_with_visible_original": 192,
+    "unusable_footprint_area": 767,
+    "incomplete_coverage_of_source_parts": 5,
+    "invalid_geometry": 11,
+    "outside_or_ambiguous_district": 2,
+    "other_official_footprint_overlap": 3
+  },
+  "categories": {
+    "multifamily": 18085,
+    "villa": 74203,
+    "officetel": 1596,
+    "apartment": 5143,
+    "mixed-use": 489
+  },
+  "districts": {
+    "강남구": {
+      "apartment": 181,
+      "villa": 2461,
+      "multifamily": 1052,
+      "mixed-use": 20,
+      "officetel": 31
+    },
+    "강동구": {
+      "villa": 3684,
+      "multifamily": 491,
+      "officetel": 52,
+      "apartment": 293,
+      "mixed-use": 23
+    },
+    "강북구": {
+      "multifamily": 1882,
+      "villa": 3199,
+      "apartment": 113,
+      "officetel": 24,
+      "mixed-use": 10
+    },
+    "강서구": {
+      "multifamily": 370,
+      "villa": 5942,
+      "apartment": 404,
+      "mixed-use": 68,
+      "officetel": 193
+    },
+    "관악구": {
+      "villa": 2915,
+      "multifamily": 2146,
+      "officetel": 158,
+      "apartment": 204,
+      "mixed-use": 11
+    },
+    "광진구": {
+      "multifamily": 790,
+      "villa": 3628,
+      "officetel": 73,
+      "apartment": 189,
+      "mixed-use": 11
+    },
+    "구로구": {
+      "villa": 3496,
+      "apartment": 462,
+      "officetel": 59,
+      "multifamily": 157,
+      "mixed-use": 64
+    },
+    "금천구": {
+      "officetel": 103,
+      "villa": 1884,
+      "multifamily": 523,
+      "apartment": 173,
+      "mixed-use": 22
+    },
+    "노원구": {
+      "villa": 1579,
+      "apartment": 301,
+      "multifamily": 149,
+      "mixed-use": 17,
+      "officetel": 14
+    },
+    "도봉구": {
+      "villa": 2393,
+      "multifamily": 1068,
+      "officetel": 63,
+      "apartment": 247,
+      "mixed-use": 23
+    },
+    "동대문구": {
+      "villa": 1421,
+      "multifamily": 364,
+      "apartment": 174,
+      "officetel": 30,
+      "mixed-use": 3
+    },
+    "동작구": {
+      "villa": 3510,
+      "multifamily": 321,
+      "officetel": 18,
+      "apartment": 250,
+      "mixed-use": 30
+    },
+    "마포구": {
+      "villa": 3521,
+      "apartment": 121,
+      "multifamily": 338,
+      "officetel": 92,
+      "mixed-use": 15
+    },
+    "서대문구": {
+      "villa": 2732,
+      "multifamily": 839,
+      "apartment": 159,
+      "mixed-use": 10,
+      "officetel": 51
+    },
+    "서초구": {
+      "apartment": 367,
+      "villa": 2086,
+      "multifamily": 1525,
+      "officetel": 23,
+      "mixed-use": 14
+    },
+    "성동구": {
+      "villa": 1149,
+      "multifamily": 121,
+      "apartment": 97,
+      "officetel": 34,
+      "mixed-use": 17
+    },
+    "성북구": {
+      "apartment": 126,
+      "villa": 3385,
+      "multifamily": 331,
+      "officetel": 30,
+      "mixed-use": 4
+    },
+    "송파구": {
+      "mixed-use": 8,
+      "multifamily": 2418,
+      "villa": 5220,
+      "apartment": 168,
+      "officetel": 37
+    },
+    "양천구": {
+      "villa": 4305,
+      "multifamily": 553,
+      "apartment": 330,
+      "officetel": 42,
+      "mixed-use": 50
+    },
+    "영등포구": {
+      "multifamily": 412,
+      "villa": 1093,
+      "officetel": 137,
+      "apartment": 113,
+      "mixed-use": 10
+    },
+    "용산구": {
+      "villa": 2417,
+      "multifamily": 410,
+      "apartment": 158,
+      "officetel": 9,
+      "mixed-use": 10
+    },
+    "은평구": {
+      "villa": 7293,
+      "officetel": 190,
+      "apartment": 183,
+      "multifamily": 121,
+      "mixed-use": 38
+    },
+    "종로구": {
+      "multifamily": 391,
+      "villa": 1913,
+      "officetel": 29,
+      "apartment": 76,
+      "mixed-use": 6
+    },
+    "중구": {
+      "villa": 690,
+      "multifamily": 241,
+      "apartment": 60,
+      "mixed-use": 1,
+      "officetel": 23
+    },
+    "중랑구": {
+      "multifamily": 1072,
+      "villa": 2287,
+      "apartment": 194,
+      "officetel": 81,
+      "mixed-use": 4
+    }
+  },
+  "heightBasis": {
+    "official source floors multiplied by estimated 3.05m": 26643,
+    "register height corroborated by unique parcel+road, floors and approval year; cross-system identity is not an official key join": 71452,
+    "Overture recorded height transferred through >=80% mutual footprint overlap; not independently measured": 71,
+    "illustrative 10-storey fallback; usable source height/floors unavailable": 35,
+    "illustrative 5-storey fallback; usable source height/floors unavailable": 666,
+    "illustrative 4-storey fallback; usable source height/floors unavailable": 648,
+    "illustrative 8-storey fallback; usable source height/floors unavailable": 1
+  },
+  "ownedOvertureFootprints": 30857,
+  "sourceBatches": [
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00000.json",
+      "sha256": "4ca697f342f2a0db187b3928d04bfc9101628061876a8950dbef29f979c9d6e9"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00001.json",
+      "sha256": "8c27245e70fdb4052c844243e825efd6970d5f9556fa26920907cebcbe3f7095"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00002.json",
+      "sha256": "6d1725777ad9afcf1adc573919631b9752364728aa50a1e43da5e06c8982725c"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00003.json",
+      "sha256": "45fafa84b7ae42d02882b2e680a49304d020699f52033aa8c63efedaefb2da4b"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00004.json",
+      "sha256": "df2d9f537551757e3c705a190d1fbf7de8e1317edf8a638eced8f47cd1242d46"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00005.json",
+      "sha256": "6fe90e4e4226e80650923f5c94457ef21a3c019d08cb65f9d4e23cd33672b45b"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00006.json",
+      "sha256": "2fb7b609e674b9d145a2608ba7afd63fb804dee049ceef0a68b0a487c0f850c0"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00007.json",
+      "sha256": "bb70168f7f0c5fc74a845ca17b1039e23ad1430d1a60e78d57d36a0bbc460d8b"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00008.json",
+      "sha256": "6fd217f057dc22fb8b9a0e0aac3c38297c197af11f8bf40c95751bc63c1e7f9e"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00009.json",
+      "sha256": "879a7b814e3236155509f7207dc260b3a2bee20bd62d608566176cf0f3548d45"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00010.json",
+      "sha256": "1a6c4bb2a8e893d31fb8cd2466cef1bca6c4ed32ade59cbc8c8f9304e913bd63"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00011.json",
+      "sha256": "5627647bbc01491ce2e6252c4916a2f76e095bc39ab8823df873a201c8f55138"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00012.json",
+      "sha256": "fa02bbf7458d2ff7b2a04369e75165f77bf1100633893bd90eba54a41e626b30"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00013.json",
+      "sha256": "d04628d57e14c0bf476d91d64a58ae115f8497ff67061ae6c3025702c9cb776f"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00014.json",
+      "sha256": "0f65fc291d88ae05a496a66ee87c0edf687b69f7474e968f7922671ab3dd5d5e"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00015.json",
+      "sha256": "83c10cf70cf081420ee74a3f9f832b4e58e085c7839465816df7c87a90d8c010"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00016.json",
+      "sha256": "34079b873741f4c5ebef2d71045681980de563fcf4a3759a3ce45d549399efe5"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00017.json",
+      "sha256": "0734d86c24129964635f47b5012f5234ac4871c82293f51e0b4ff4f74009601f"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00018.json",
+      "sha256": "81120db6267336b30f75089fa32681923285f884cf71c82216133b806e2d07d7"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00019.json",
+      "sha256": "c5b30da35c19a13fe2f2910aa29a6c8529fc141c98722cb9bd1642a85ec06403"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00020.json",
+      "sha256": "ee1054dc52657c24750f16c221855a2c3bdb674efaab4670e7b6ec57b9ea71da"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00021.json",
+      "sha256": "494288631f699d5ae30a2882aaa7a5e397eb339e4f98cb1e8bb1bc90f942f496"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00022.json",
+      "sha256": "9f6532b5889007a7aa26d26f6e4bc8b7007795fbd5b76c268a914968fde1d750"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00023.json",
+      "sha256": "a4f4e88e4bced6b0fb45633d37f3503c71fe581a78eadb55803824f59482acb9"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00024.json",
+      "sha256": "54b37488c2c331639136416ed29e469be0173ee0d4e7fa7e15deed80cdbeb75c"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00025.json",
+      "sha256": "f60690121d59c9687476a616dbc4af6dea423a5fc2ff2fbc528bb334cecb4168"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00026.json",
+      "sha256": "5b87a8bd4c74115b00ce0418f7367edd924af3178c01f88c9452dd6f144d32b8"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00027.json",
+      "sha256": "972413875be3d32b3b736c6b5c729c9c71ebabe08e90e263b43bed0bc5ef2fe5"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00028.json",
+      "sha256": "4c04735d10773983de2254e8d666e6569bd5dfe9df69cda3c9e0fc0f68afb527"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00029.json",
+      "sha256": "229469484f5e3f412b3b05844ce8c3d3500a4dd6a37d66fd4e025b91a9ef0f1a"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00030.json",
+      "sha256": "9dca27214894c5d9fef46f45a084a2e2e5ec232cca1820775c258453e6cdbc05"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00031.json",
+      "sha256": "cbf50ab0519ad9925414e40f62c3d4adce1efc465504254abcec67e1300161aa"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00032.json",
+      "sha256": "fb64cfa00edf5f540a8687f6479fbd7005aac80113538b4a595705b43cd92c94"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00033.json",
+      "sha256": "cc1f97313e39e94f880e65e068815f3764e079f1d452865985ebd3d670762a72"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00034.json",
+      "sha256": "61f433541900b4e9ec84c9cfc66503ab0dc36c79590e1b7e677fe92ac7ce0c34"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00035.json",
+      "sha256": "13e998097a2e341b7f034728c96d6d26f72f19eb9b8f126aa7761eb5d5d489c4"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00036.json",
+      "sha256": "578731cd8f4f283cc00b35c8596b02c0fa529948b89c4c02a1eb8f1bd4eb6ec5"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00037.json",
+      "sha256": "cd1741e063015eb6eec28fa0a947127783c54aced0b8c8ebd94aa2dea9a22439"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00038.json",
+      "sha256": "31b644cbabeee5c0054dda79f5c68ea35787a3c3159e6018d0b26016e6e47606"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00039.json",
+      "sha256": "ded4cce229ab3e918999b9f6f5462ae7bce2af5e09a5266f4919c6795afdfc0c"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00040.json",
+      "sha256": "690ea861e829fe70d514b47f73d8797c115f40165ddc3f09440fd0d1ec5643de"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00041.json",
+      "sha256": "7b788e3962becbb6d23ee9f0483fda052371231587cdb627cd11d8bb24e7d600"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00042.json",
+      "sha256": "84203cf5790bf5b21a5bbe2fd3a6aa746f940274d945b4c5ca277f29b005f25b"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00043.json",
+      "sha256": "c7ca4f343e8f63e9a9f23ccc4616510a13d6f11cb7441cab657013d72910ed05"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00044.json",
+      "sha256": "42ed21f42f4aac7f0415ce61976969c0639a6fec2a8236dfc31a1248baff1556"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00045.json",
+      "sha256": "02c387cfb69039aeaa787e8da2e2f989a2cfabb127df9ff81177097bc16b3420"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00046.json",
+      "sha256": "01d0835490d89ce936e3ac70e4c9ded269e9f5742125039116ea4b21aa2853b2"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00047.json",
+      "sha256": "9bc076d1f11efc7f22678d538a4070a26b06814c50caa2677ecb75199c1f9051"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00048.json",
+      "sha256": "128dc82935e1f8511c06d5e277b39134c536c95e1d0d6dee9dd3bfc615516579"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00049.json",
+      "sha256": "e47f47b31166135859ac6e880c3440fe12a5e3634e36988b50c4019ebb21d3e7"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00050.json",
+      "sha256": "b929ff438adeb1d6599f57ce876f35ad1f54dcdd6074812c13b42941933c0aac"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00051.json",
+      "sha256": "4068b1858f5f24bb7654558c16f8d3e07564c5062b611162506e16b7e3620e58"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00052.json",
+      "sha256": "a34b57e50af1592bf750c82857d65957eb276772c8a604a8540cc1bb376595c9"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00053.json",
+      "sha256": "76ac954a927c5ea572cb334fff2d6fa5403929bd1c57d67aa27a0a9cb275c560"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00054.json",
+      "sha256": "3f8d7d148a8661c0afba06e4513de4241047f2dff64fc5479205fad029609ff2"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00055.json",
+      "sha256": "066b8c1ca03132ae5157abc086e0940834b14f063d4f57d388bddc13f92763eb"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00056.json",
+      "sha256": "e005b55952f7d22f7ff87bfac790f54206dada8688c1c567cdc78ea23704ee56"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00057.json",
+      "sha256": "ee1569ac76445924da0b86bcb4c2bfd69c7c83ef4573ee164e58bbd8358658b8"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00058.json",
+      "sha256": "b35d3f7ac26b39e2e5b946cd0fef1d2dac098105d4458deeb83103b40019a9b7"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00059.json",
+      "sha256": "fa315af779cedc2f65cf1a1609a10f08e7597e831e5aebc860c07d983190406c"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00060.json",
+      "sha256": "a774ffcb1e0dd3c2c8f69fbd9930d3ce034eb6154b802bddb0cd93779c288263"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00061.json",
+      "sha256": "19d4b10405b2f4e117b218fbd15c0f37fa5ae258e0404cf4f7350c2016cca449"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00062.json",
+      "sha256": "1d214c15e2590e3980d4adac83496e8bdbc0bee2c9f1623c62abda69bdabfbb0"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00063.json",
+      "sha256": "1e768046f52c2681e2ba939d48d28aa5bb53ffca42c2d7877f6d442424386bdf"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00064.json",
+      "sha256": "217fb90ee29cb961dfd883ce035aaddf8a11deecb5f81b3b8f58e323cb378e43"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00065.json",
+      "sha256": "ae6253160dc0f0f8c6f34893e6c42a0a5ea6f5fcd7633673bc5a63f65bd23121"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00066.json",
+      "sha256": "455f35299464d6b821b49cc49675944ad8ee67a29a41e88d90afb18eea18165a"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00067.json",
+      "sha256": "ada0f56c20a4c193e686af5159e3fd294674be7a975e503976b8b08177be4dc1"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00068.json",
+      "sha256": "cd2a4cefacd598f6dad1ab55e011a6ffd78dab25dd6db47e84c4a1a3ee6034ed"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00069.json",
+      "sha256": "6cb378b7d62fe6caccd1076e10df5cb04864221974c8dcf6746b6557a63823fd"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00070.json",
+      "sha256": "c89dfa1685cc8a6f34c7668e1de4df188453cb0771bd59e3e30e853a9ab50fd0"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00071.json",
+      "sha256": "c45a80d0767d5a5de4c322072f785a86d3b1c8143033f715ed36011376530c95"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00072.json",
+      "sha256": "ac0180d2e94f47b41887191c858b196d3108b4d5965008710c1696dba4ac0f0d"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00073.json",
+      "sha256": "03c1835264eef053b7cd14f66f8c4f6a04d1676eb4de166104629969c0e1d33e"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00074.json",
+      "sha256": "59709aba717ac104a50b2abc6082e0294949a4c9d0c943a442a4bd02acb5f467"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00075.json",
+      "sha256": "cb325d411262882f73f2def1bcd3a43c20d8bb84e2a7476aeee1d452d2031d6c"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00076.json",
+      "sha256": "add81e17b7cf45889abfcdf8254f484d53d18a21c02edf3f8f344dfdc75e91cd"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00077.json",
+      "sha256": "8bdc342aeab68781c9cc61cd12f49183a92ec3b6f14edc7ae0bbe5a7a35f2bb3"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00078.json",
+      "sha256": "729cb2d42df9656b5035c00960d0873296ac33af42e4a1025ab80a040b3ab6a0"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00079.json",
+      "sha256": "b874479bb89a643fb4adc9603b5d597e6daa285b76a3bf25404647d4c2c312eb"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00080.json",
+      "sha256": "0e2e771c700434217e9ab254d2e6e2ae0a8abb0a0619c04e04f5ce545c1b60f5"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00081.json",
+      "sha256": "4d143bc5edfde4f007b04b9b905570fc4220cfe0a3ee251cbd4884000dc92f8b"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00082.json",
+      "sha256": "a2d843c0c9fcdf6abeca4065ba7bafc8c0f2833f1695ae95c3f3107af176db65"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00083.json",
+      "sha256": "c7511d06b73d240b1b3ac1c8df10086fd0ad90828b796efec212db7f58029384"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00084.json",
+      "sha256": "8609bcef1a3d65c929b7f9dcae8513d5821c8c80829b1a683cc925d810f49c2b"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00085.json",
+      "sha256": "f584e57d6bb64cc128d6b2eb6fb2b6c5553f948886f6017cd97688495afe11c2"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00086.json",
+      "sha256": "afd37fd15367f86316a5bb8128b83549c40b75561f2540fedbf9dea2b412d9de"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00087.json",
+      "sha256": "16f08e492929c7c5cccaa1dbcf4edfbc105e588dec48ce8dff4352d844e094f6"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00088.json",
+      "sha256": "2ebc1c0402cec45327958356114c461dd5aa7d6c8fa588049f4278d86b4e7f10"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00089.json",
+      "sha256": "22c361dbd150038f3c7d0b4f9df3b21200fb4516fb3ee8c58adf80724c28c5b5"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00090.json",
+      "sha256": "cfec69c3b75e4a874b46b82c652d117a1ab9bc8d26390ccd5652c604a5c66683"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00091.json",
+      "sha256": "1aac8eeb8b33678eddf9337a0b823e21a546df3f4d1d5de7eca5d8c87f8dd342"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00092.json",
+      "sha256": "38a96b5b6feba4a12c13a98341acdbfccb51caf6f58e623d2de3fef5887eb067"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00093.json",
+      "sha256": "539b0555b63aee8dd07b19f7275c00fef50d47fcbe877a4835cf3dc64091e3c5"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00094.json",
+      "sha256": "fba620936eb596186290e427d418f3e990ffe7dacb65127f0cef91eb4416f4e3"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00095.json",
+      "sha256": "ebc95772c80cd3411df5504ea9a514f7b0bc3b23f86f91256ca615110cb233a4"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00096.json",
+      "sha256": "39e4a1faaffde43bfbb09affc1b78c96487790f8d59d2150a11043a2a09d3b5c"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00097.json",
+      "sha256": "e1c55902ec0bac9259c2871fe4300f8081bce8dbcecd7be0b5acccd6636aa18a"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00098.json",
+      "sha256": "e59150b50dd43c718633f3178bed765427febddf696c85ca6fdd14fbaa921adf"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00099.json",
+      "sha256": "09255aa10acbf53dc124dd840e3b7da60cf682ef404bf7d2d8f72ec71893b33c"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00100.json",
+      "sha256": "af34e1703924b25878b8b147356b009c76c9b126d2a2ab6cc11e15adad0dfa5f"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00101.json",
+      "sha256": "a9d552eef6462c77d10cbb516d0c59b4f3c6a81a82e61d75d8738ca6020b82bb"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00102.json",
+      "sha256": "75ea557c955c03708954b253d4503c2bd6f2402860b3941eb7abdb9b7dafa5ca"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00103.json",
+      "sha256": "67f0bb5904bf207645029bd2609495187b102807ca30427c7acfd77c287a97a8"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00104.json",
+      "sha256": "27eeda5f0dd404407f3af6e2bffcf6f7ac8aa1c5b73a49710b3c957e5b72da16"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00105.json",
+      "sha256": "d0dd7c9db47f4d8d7fd42d63c64ef15410861ba9d745b09fe70af7c147511d78"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00106.json",
+      "sha256": "2528b86bbc3bf8ae332956fed563cde7235327d8b85a672115625b1488d9a351"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00107.json",
+      "sha256": "a088292f2752393b45efc0b3d39e61fa5cacf489caf397ab285f95e0d4d0dcb8"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00108.json",
+      "sha256": "31e03bb4bbea607edeee2ea3d9ecaf0bf4d7a988a16303d1ec50f9cd0c5f7281"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00109.json",
+      "sha256": "0cb86c8f79cb879aff7a80b18242695e430b9a864e3e03779a77128fa309c7ac"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00110.json",
+      "sha256": "fd7b9b4da6f4c48729facfaaf5a4822d0377e22d7890ae4b783cc51cf522465a"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00111.json",
+      "sha256": "ad9169c92410d480238f53a62130e73ca93b9d665ddf7472355cff1baff66286"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00112.json",
+      "sha256": "20103940d8b3b703a511d59b34514bf7dd632534d0571feddaee9742f4bc8cc2"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00113.json",
+      "sha256": "234988ec32b9c917334ba58460d8409252f8e5398415c108c09d6d7e7387c339"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00114.json",
+      "sha256": "9808e0ad00d865258ba692b4224696e3ce0ac1adf0a4e51d35b31ba0d6d8b408"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00115.json",
+      "sha256": "751eaae46cb14db3442154f382d6f7e707118bbf24741862b554bb6efe58be61"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00116.json",
+      "sha256": "2b3bd3725a152612c6997078a70e5ccfc7c6838405c5922f92d84c14cf5b5d67"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00117.json",
+      "sha256": "789cd9b9fe7c524e6f15764c1230d96bf1cc369c77b2398cb4d3dc7d7e73658c"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00118.json",
+      "sha256": "05bce7e637891d5400f9c3bc45b4830ba613cb52ebda3522962353b2a9421b25"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00119.json",
+      "sha256": "f8d888c0a556d57b0e40879571d21b01e8dba023e7ce0cd533c191e49e1853b4"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00120.json",
+      "sha256": "5874d05dd03c78b6b8de2d871316ed5c1e4b31ca4bd8692f7acf8e389322975d"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00121.json",
+      "sha256": "908795428f1f7b771d044fc0946ee8ad3e7de301e6691d00962c500c2be3a5c9"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00122.json",
+      "sha256": "674ec422283e929e244ff0b162cec4c30e352d802cde1ab29639efac5ec03da4"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00123.json",
+      "sha256": "23c8c19b09185679636c4c163b7c089794cd23202951d0c1436ef7136ca9bcbe"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00124.json",
+      "sha256": "ff05cb71dd15759c2a05a6f388095e86c213c9c84009e07a087b7897c02dc0cb"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00125.json",
+      "sha256": "a8be2ffdcf7914f8c646d153887df1e9cba66f6ee46a55f3f54d9db342bdf75e"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00126.json",
+      "sha256": "098af4858941e0e8beab10e7a542ba34b86fdecb6d388722e54e79f30a1ee846"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00127.json",
+      "sha256": "da07128a9e4cb41f6c96e933a6fc0f6b5b37acdf894382a0c66f6870009114ff"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00128.json",
+      "sha256": "1818f6f57f7f0b282e113800397c6576434b941958e2fc01ac756820a6fcdd19"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00129.json",
+      "sha256": "c02af28ade6d0813360aff5866a0f756d3e4a1a7f22da70429ee26c833721e71"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00130.json",
+      "sha256": "0dc56c978678c3fb03a6a6ad9339c350051cecbab98e187049fd0d2a455db1f1"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00131.json",
+      "sha256": "0b34f1bda422bb6d2ce71fbad16d19c2135cf35b6ba384f47f5ae16e165ac373"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00132.json",
+      "sha256": "b20e086769bf50f25009cbf4c645bca7986febc670137bbd623029ed562481ab"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00133.json",
+      "sha256": "9864ba2cd1606bb8a4c0c70a4c38a592f6e0e6d74c7f9b89ba3e3025a6a153e9"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00134.json",
+      "sha256": "da35d3cbff109996eddda20fc90489746169344acb7ff1cd4a92ba577328420e"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00135.json",
+      "sha256": "2643669f0f7aa5acbb2f31c856bbc6754736cfc3593f0cb97cda69a00e4dde72"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00136.json",
+      "sha256": "2ef1b11fb1e45e3b9cc1755afd272d6cd891b4d025fecccdb0878a2a95bcda2c"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00137.json",
+      "sha256": "9dc1ea2219c108cab62889460f1a5b4530b315d4337774a5b4c42645dfc5e339"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00138.json",
+      "sha256": "32a68bb677e73d8d1a597b2def552c5f831f86e34383469eb4f7550e1ab74be8"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00139.json",
+      "sha256": "25ce0c3327f6d952c9371886bcdfcad7159ee10c814f4b00fc08a5fb1cd2088b"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00140.json",
+      "sha256": "ca6ba0c5c8cfa0f06c64f8623e5b1cf0a07e68d318ecfb965e9f8b240d07fa25"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00141.json",
+      "sha256": "a63033895933673bd5400bc7102370345fd8059c9b679ebce23aad85d269b893"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00142.json",
+      "sha256": "03452066b7fa441183e1e0cb12088caa3461f5e94e4dd217c12730995c4ca0f3"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00143.json",
+      "sha256": "f469b293a0449e3cc5fd3c58448b230ec818eb8bce0bed33c1a357e9aca1186f"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00144.json",
+      "sha256": "96c1cf6a6f90740063a3babf39e55001798ccc72682fad149612364421a00e0c"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00145.json",
+      "sha256": "32861f2ca87f591914e0f63452a49481d01a0c55e59a2b0d0b14e32d09e0d2e7"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00146.json",
+      "sha256": "09d27bc4b0d636bf995c699acea31012923bcea317933a745ddcaf206b4aa817"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00147.json",
+      "sha256": "4e39991a87c8710544a80c4da2671a9acabdc5c2247302aaa0c9cbd07c85f6e0"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00148.json",
+      "sha256": "fdd21a98deca09ce9ee9fdd2728e6b5fdbea2649fd04105f93c0145e291aa2f9"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00149.json",
+      "sha256": "abfedb649faaf4dff0d231429cd0f8eec03f3cae6e140fb02483e55aba5bba53"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00150.json",
+      "sha256": "2fd405de65fe454651233e410984c253663e49079eae0fd4753115f310b86f1d"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00151.json",
+      "sha256": "cfc36dfb30c188688a9dc761177e6c56b3f73b5171c8caa0cab5c678ddb21513"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00152.json",
+      "sha256": "681edfa7d22cb167ab95f953bcdb3d5861204701505145f1034e4144cbe6db81"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00153.json",
+      "sha256": "eedc7e9b620ee7935d59febbb347bc893970a3b951dd6aac89adda0d41c3da05"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00154.json",
+      "sha256": "77c2a19440afc9fb377bbda4814d76db7d5664ff5f9c28c4db5ccfd3872f9729"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00155.json",
+      "sha256": "bcbbb11c6355a247f1cf5957ded942d2c669caa338e433848f544a724d2c57c6"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00156.json",
+      "sha256": "4fa53ccba47c0a430b531a9786eef68d56ecdc9f05b2a484f8c5821ae53eba61"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00157.json",
+      "sha256": "fa566cf6dccf4a3236abb0d1f6d5f42ee742679e4ccf705227369907eb096542"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00158.json",
+      "sha256": "bc89f906554309423d0d9b782d89e34a98ba6df333695d3639336391e78d13a7"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00159.json",
+      "sha256": "6b932f757f5dc0770fa3c929e882f4293b47bcfe4aef8c5eaccbdf8583f692a1"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00160.json",
+      "sha256": "2e3db9dd9897f5692c17cce038008e2b58dbd65b1f769cb8bb1198a9dc83126f"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00161.json",
+      "sha256": "8840acf99ae70dd1b686196c92948b000ad91efe9afc2312ab88ae1bb2650c8e"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00162.json",
+      "sha256": "2cace09635672a04e560c5d8965402e675b86c9a9dc3117a28fb31b8f83b0234"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00163.json",
+      "sha256": "ba16bd8f80e4ddf0ddfe6782749062212956a62ebec1eeefb452e3f578bf9085"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00164.json",
+      "sha256": "df5a3b71af63c538e4823d8ed72eb9458680b8224c8df880caf261604b8d2782"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00165.json",
+      "sha256": "f0557d0ec6fc8e91f0f0fc899cebeb69a6011dbcdd204a0ec90471b0f209955c"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00166.json",
+      "sha256": "54d218dfeebe6a5b7c56ca56dcc0108c54c3c658def653a61657ad1bb6e59a1e"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00167.json",
+      "sha256": "c87dc9ecbcb98f7bf9dcb3d0f0c2502ed4731ead86580d5b049a268036a33794"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00168.json",
+      "sha256": "783593f02e67057ac3082a41c1ad79ac17bf4a2a338c78173708df1cfa39900a"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00169.json",
+      "sha256": "2290374aacdce3df83624d82e74d5acdc57a4a4bb83b8bbee8ec4837ccaec3d5"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00170.json",
+      "sha256": "75e5111fd96c21097f2d48261d1977cd77bf82a2d38a5e8c7a43ee6bf8b96e3f"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00171.json",
+      "sha256": "bdb61270717e9cfc40f5edcf067311d5493f556b51868b35d1026171eb724d66"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00172.json",
+      "sha256": "7cc980d45270652774cf58c505f3e6525e320a57add3bfb77b80838e8115d9f4"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00173.json",
+      "sha256": "e067dba1db2894ae15c1c70fa05ebedd001ce3343174066a5089aa6e3b47c05d"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00174.json",
+      "sha256": "d2c80009a7a5061570fa58a367fa2057b1ec0372b3d18d8960cbfd89b9e0499e"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00175.json",
+      "sha256": "13ad74ba98449fca9846ef5407bb7a9033cff3529a878b5478e32e1e55a23730"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00176.json",
+      "sha256": "27eb4f0600fcd73195be16c3b7579572b767c37a90bf1bf42b8349679b88e0f9"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00177.json",
+      "sha256": "fc385c507d8c7375afddd1c9cae67d2e7a0732336fe0c810a7f1d3aeccb72a65"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00178.json",
+      "sha256": "9e138f83af3c6fb156f4af344ca28f33dec43163c9341d56d687019bf38722f2"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00179.json",
+      "sha256": "eeef4d11b8272c16f30eb6ebb3912e97b1e2805cc59e3edbf7869621f9fc397f"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00180.json",
+      "sha256": "9ab16aabb9133814f0f1351f5908bf6a5cf62bf344345bbee35faa3b3a2930e4"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00181.json",
+      "sha256": "609d10aa6ce22d582d7071287c84dd6c6ea409450f78cd5051c323aa25dba51a"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00182.json",
+      "sha256": "bab68fe4f6d3b9ecdc55d486e9fafba7167ba9e652a109e10f90437c17383385"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00183.json",
+      "sha256": "7615d4b6d86aa439e77f9b69b855c20d816a976e282cd982cf10866b635d46f1"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00184.json",
+      "sha256": "315c798a30643c3d516efbd5071f49bea02d51fbcab642dc3fdd7a7fc8c41e1a"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00185.json",
+      "sha256": "b8bc4708ac8754dafa83b1793a369f875b93689defccb1f0c854ef3c39f5a400"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00186.json",
+      "sha256": "0f60202ffe84dec09a8092f0020d855a37ce1479cbe4d32058226f8992991b1d"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00187.json",
+      "sha256": "3ef8ca02a7c1ff81e7de38a86c7a8101e4f2e06041822c43698bb7bee690e497"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00188.json",
+      "sha256": "2451e7672f987691bccfd0cd9b60ac8ba63840e9618819cfa31c4ee2657c5da0"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00189.json",
+      "sha256": "7c6ae30c06fe6c24d6cb717b14c01c02a4fe386a27b03ce29727d0556e3f055c"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00190.json",
+      "sha256": "7d1dd4228ddecc90c1477128261e947f19a4965ef35c3ce1d2db90c5008064c4"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00191.json",
+      "sha256": "fec6d915f3b4d19301d169176db9cc81c291b96155c460c1494df69877924f8e"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00192.json",
+      "sha256": "678c29310e8733a81c19a5a586b8a6d74f51666d94a219d2d4f716efce9c6e38"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00193.json",
+      "sha256": "0db69445381e7ed51b475d1122d944f3d1d7f506d73398a6756a924a6e746766"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00194.json",
+      "sha256": "b0e1d02f285dd866a3131106efa62dbc1769a7365ca3ad0185bcb54406cb17f6"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00195.json",
+      "sha256": "efda50630d6bf6df98eaff068dde382b19b12ccccb9cfdbe82ee4604252a9ebe"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00196.json",
+      "sha256": "1abe437ee07eae8bde0919eb60e30e006c487f1a01ba2373075f592ac442195b"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00197.json",
+      "sha256": "3d3ebd8b6a7fb38a15c84d83cb8644235cf768ba75bcb19aaefc11195e6477de"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00198.json",
+      "sha256": "f4abe8b1e5128d2c7cfae3a91451a8e0cd5ff2e864d0bdad9b7596ad7c45f543"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00199.json",
+      "sha256": "1d0d113fb78db55353d73a3e9795b7007ba2edb3aaff61a6120069f3d3276ce2"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00200.json",
+      "sha256": "63f9c76976094374053718b51ec428c796b88ba3e9872c0bd540c3a3ae244d2a"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00201.json",
+      "sha256": "c2c2d315b3ae87d36ceb137038452f0f2b7c97e8b40c63cf5a6a20b475776141"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00202.json",
+      "sha256": "44a8ca2af70832a2ad563e748fdfc94858f76f48b64c3701e7743b41fe22a257"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00203.json",
+      "sha256": "5d4a66bf1c40b0e3dd1eced10bd68a90680cc38a58cdf4de10f44093af5484ce"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00204.json",
+      "sha256": "15b7168539033da92d9b8aef2a9ba21f8453a1b529ab627dcd6458b434ddee7d"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00205.json",
+      "sha256": "c7f7f6ca0c716ee4bb69e2e3692bcfd1408e77002dc67aa81c58fa69e5fdfc04"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00206.json",
+      "sha256": "7bd02f36c6b1faafaded451da2a360817b76fa463b416d2d856bba407c34a4ee"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00207.json",
+      "sha256": "c851b2dd5d338f2cdde865536a70d660cedf4b9b9b7534e1aee91dcfff77e325"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00208.json",
+      "sha256": "a8d02a7d4dbf4cace399eed0e2bd7b8e397d540e5b6076efda513de5239f7f1c"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00209.json",
+      "sha256": "9e6a3e6defbd942a9c19dee0a37d4557256a061de90ce97d358977b200c35899"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00210.json",
+      "sha256": "58967e19b250534f42d6cef3f4685f8e261cf9c81c680a23633f6e9308fec917"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00211.json",
+      "sha256": "367b9ccf081669b61ef3d23cd7c5ef915adf785b525e4d36a15ebfc6dd07b8fd"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00212.json",
+      "sha256": "fcb914f6ea1c2cb015495f776c77079aa2e9a2b45dee8a777ddf94727f98d0a1"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00213.json",
+      "sha256": "0b9d21ab827dbb452b472ebaf2a19ffc5475e85b86140a59f295ae45c15b766f"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00214.json",
+      "sha256": "015989045f4e6cbdacefa237eafb4b6130109f004f6e85330a074920df364f48"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00215.json",
+      "sha256": "5803784b10c0cc756dce840baec9ef6173a3a70d610ec5106f30fa3c0404a9a6"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00216.json",
+      "sha256": "e7a31d9b00b79cd7f6b21a75c121a5c9c33f99b9794fa90f33ea9f6858fd9520"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00217.json",
+      "sha256": "9097a0e652c74fb7362641b2eb7b343537cd08822fc11a6a47cd702725539dbd"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00218.json",
+      "sha256": "6a85f6b919e41bf6e92980b5230ec8735169cfea61abbf4cc8e787c049a6cb5c"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00219.json",
+      "sha256": "f17779548f6777e5deb86b1ffdf0f880c8104f8671f83adae2530ca04979303d"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00220.json",
+      "sha256": "72f99cceebabb4db86ed43312cf74d76cda366fef420f8c99625ec2d028cf7db"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00221.json",
+      "sha256": "7a7a4e4bbf20267402f692b0c4f18988657c074f327b6f478869fcf4428e7be5"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00222.json",
+      "sha256": "c6d9960d60ed3729ebe641ec50f4d74eef1072e2c6853ff8a5ed869d093a85c0"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00223.json",
+      "sha256": "068ca478e1426961822d4c4f5fe908bf31bed9af89d972725defd0e4f0c5b9b0"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00224.json",
+      "sha256": "55779263bd4c6ca26cd53b56483dad98005542c751abc540a0c732803c84c10c"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00225.json",
+      "sha256": "8fe6ad56651f0365c6421d87466b573496febe8cdaaf84c480640c4b93b9da5c"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00226.json",
+      "sha256": "9680c60a701972dd259e06a89aace15f21e9a48acdc251b3ca7047fbb6f3d5ed"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00227.json",
+      "sha256": "384da7d9659bd4588ec5e07335d6ca320b6b842a279b841ff31f5e3324401ee1"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00228.json",
+      "sha256": "877ec6add4b4ab51fc6c5a1c49119cb36237e356896c8a91482170b2ac4a5551"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00229.json",
+      "sha256": "45ea19dbc022088d9ac101e21c26d0c20490fa853b7fac61ad2fce9d1913dafa"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00230.json",
+      "sha256": "13639875f9482389b42d91032df6cd39cb391e778a13e6491691c4677d4013c2"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00231.json",
+      "sha256": "21900a26ef77dff7d130a8faa6960b1018b9451c8adbfc39707d2e3e840d45fd"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00232.json",
+      "sha256": "8cb3b5bdec469e16b87d810124b8c2442fed53aadd64ed4fad7f11040521dfef"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00233.json",
+      "sha256": "8a1ec85068bd5dced1aba57dc9dae56e6039d669021f4a4adbb62bff78aafdd2"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00234.json",
+      "sha256": "00add0d74c5c0eabf8f00ef3288d5210684ca6aa8e746643659ca5cc435a7716"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/batch-00235.json",
+      "sha256": "db8758f7eccc17fbf4f50b8bb82c33c919603843a41c69c12f86966a6c625a79"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/supplemental/batch-00000.json",
+      "sha256": "c5ccf7e7ff093e184ca0cfbd9643f76d0e694e4ea6406f092feac4d2c2c364f9"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/supplemental/batch-00001.json",
+      "sha256": "cc1521ec3e3ba7d29862e657db7b353ef9b3da842ce0114a6201b95c61e0631b"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/supplemental/batch-00002.json",
+      "sha256": "30f7cb6663421b6b9a85513c3c2c458e79717447803f24218f2fd6bbfce421fd"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/supplemental/batch-00003.json",
+      "sha256": "6e0179ac4b861c02e647d5f5ef236a98eba80ac8b7fd49bf4ecace55200f0d25"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/supplemental/batch-00004.json",
+      "sha256": "855105fe71979651057ad343af7921f4d6f0ddcff42fd17a6c31e61d3282cfe3"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/supplemental/batch-00005.json",
+      "sha256": "388e27df2f969e7d02e7ebb8f095789a8ac2e9b6094da2a4c83bc73b0718c21c"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/supplemental/batch-00006.json",
+      "sha256": "0456cbc4d0687b2188db3ffec3e9bd4dac606401e74c985b4237be2cb75c51bc"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/supplemental/batch-00007.json",
+      "sha256": "30c85c34c333ee0be2da93e784bee375e4d7b454ba81ddeacd8d66c7778c83df"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/supplemental/batch-00008.json",
+      "sha256": "eeb45400f6c759128cbe2c89d32a65d40bbde613fdbebea715b48ea1658d94d9"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/supplemental/batch-00009.json",
+      "sha256": "1e93e6ec33352e2cb65a8d1b53940b11373f57f0e6283be264defdffcffcdf6a"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/supplemental/batch-00010.json",
+      "sha256": "dc00e2d7e06f53f116a8a9ad8787eece4f3356ad8a32063558c6572642126b43"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/supplemental/batch-00011.json",
+      "sha256": "87fc9ba2ebeb485b129bb7dd493f058c426cf348f26e850859f6408768750584"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/supplemental/batch-00012.json",
+      "sha256": "26a7fd73102aa942c121e98b2da0047939e28020e511f5e4236d3b4d3cde8a9c"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/supplemental/batch-00013.json",
+      "sha256": "9319ab8b02092a6cf0e1a2c56038bd874a2d7f3958518aae45b9e2f527c4a63b"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/supplemental/batch-00014.json",
+      "sha256": "d7f8392db6483143c1a7eb200eb6b870bd9d1410d88ac5b5e7903f9add8360a7"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/supplemental/batch-00015.json",
+      "sha256": "7ba02b51d2c1a0dd2a81284f50b9e73ee851520378a7e89e0fa11204556dddb0"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/supplemental/batch-00016.json",
+      "sha256": "c708cb9d01e49f14cc8a02a86c21dd77cf30d1beb72ca53d488a08118407ec4b"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/supplemental/batch-00017.json",
+      "sha256": "b0ac3ad97b6d0f860e4de2df0077d47941bec6bc28c75adc673aa086d4059fce"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/supplemental/batch-00018.json",
+      "sha256": "55f2f24257ab11e671a57d815536b2a54d89af2d34f3914e66fd5e12e083a963"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/supplemental/batch-00019.json",
+      "sha256": "3f14f670b6e6f677dfba5263cd2b458c8620131d9857f770a3cb573c70ec65bd"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/supplemental/batch-00020.json",
+      "sha256": "69ca589e2b697c4f7b976e0ce0c1f10128fb3fbce7cce3f1c65d985236d8a55c"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/supplemental/batch-00021.json",
+      "sha256": "19ffa5c347246456c604a619401f31f55d596303d1b3d93b9f9172a32c9e46aa"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/supplemental/batch-00022.json",
+      "sha256": "f146ad6166c2be96501cc71f45181918b569920129b061985dec34a57e99a447"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/supplemental/batch-00023.json",
+      "sha256": "bdffe8db8e12dc62045338e992374b1256095a8fc8c1e544985bad80c019a220"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/supplemental/batch-00024.json",
+      "sha256": "53aeda587e4c1c92f7730ce743ef2ed734c0c34329864323868176c3639eb72d"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/supplemental/batch-00025.json",
+      "sha256": "2740cb7cfb1a95cf0cf41841c094931da0021335fd289612aaba12434ac4cb29"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/supplemental/batch-00026.json",
+      "sha256": "244d74a942929d06804542c594d2e494e67995929617e93d29b5487b2ea5a156"
+    },
+    {
+      "path": "data/sources/residential-survey-2026-09-20/supplemental/batch-00027.json",
+      "sha256": "6d87a38974924fc38accee444b9b9195f60034a3ef13d0e91ff17f0020ddb6ea"
+    }
+  ],
+  "registerIndexSha256": "0ab57dc997496c26a4be12604c97e9e745fe4f84f1a6989907a65ad511cdf7e6",
+  "sharedRegisterRecordsNotTransferred": 980,
+  "selectorSha256": "380bdc3757d15404617d0fe25c363cb9f77a9b3755fb1f810a488f36499b50e9",
+  "sourceIdsExactlyAccounted": true,
+  "scope": "All downloaded targeted official records accounted for. Excluded conflicts are not fabricated. Source publication/vintage is unspecified; acquisition date is not a construction or survey date."
+}

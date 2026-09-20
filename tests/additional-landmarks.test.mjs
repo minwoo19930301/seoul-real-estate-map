@@ -32,7 +32,7 @@ test('300 additional sites cover all districts with unique physical footprint ow
   const oldIds = new Set(baseline.map(x => x.id));
   assert.equal(added.length, 300);
   assert.equal(new Set(added.map(x => x.id)).size, 300);
-  assert.equal(manifest.assets.length, 3088);
+  assert.equal(manifest.assets.filter(a => !a.id.startsWith('residential-')).length, 3088);
   const counts = new Map();
   for (const candidate of added) {
     assert.ok(!oldIds.has(candidate.id));
@@ -72,7 +72,7 @@ test('400-household priority batch accounts for verified counts, unknown counts 
   const audit = read('docs/apartment-400-selection-audit.json');
   const oldIds = new Set(read('tests/fixtures/preserved-555-landmarks.json').map(a => a.id));
   assert.equal(added.length, 605);
-  assert.equal(manifest.assets.length, 3088);
+  assert.equal(manifest.assets.filter(a => !a.id.startsWith('residential-')).length, 3088);
   assert.equal(new Set(added.map(a => a.id)).size, added.length);
   const counts = new Map();
   for (const candidate of added) {
