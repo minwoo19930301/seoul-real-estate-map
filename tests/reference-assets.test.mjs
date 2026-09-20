@@ -228,3 +228,23 @@ test('reference replacement targets never replace each other and footprint claim
   }
   assert.ok(footprints.size > 0 && replacements.size > 0, 'geometric replacement evidence is present');
 });
+
+test('Seoul City Hall explicitly replaces the six source-linked Seoul Library parts', async () => {
+  const { results } = await inspectPublished();
+  const { asset, proof } = results.get('reference-flight-seoul-city-hall');
+  const parent = '93725b2d-b39e-490f-bc2e-77536fc0d0c4';
+  const children = [
+    '65353666-6637-3832-B737-653535376535', '61663761-3634-3437-B130-396663306134',
+    '66386562-6237-3130-B832-613137653632', '64653532-3632-3162-A430-656635303463',
+    '39366536-6530-3761-A336-633966663466', '34396137-6165-3238-B830-313064633537',
+  ];
+  assert.ok(asset.footprintIds.includes(parent));
+  assert.ok(asset.supersedes.includes('civic-' + parent));
+  assert.equal(asset.placementReview.explicitBuildingPartParentId, parent);
+  for (const child of children) {
+    assert.ok(asset.footprintIds.includes(child), `${child}: original solid is suppressed with the authored library`);
+    const identity = proof.explicitIdentityMatches.find(match => match.id === child);
+    assert.equal(identity?.parentId, parent, `${child}: source parent relation recorded`);
+    assert.match(identity.basis, /not a measured footprint fit/);
+  }
+});
