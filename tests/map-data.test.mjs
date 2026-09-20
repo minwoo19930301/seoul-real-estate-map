@@ -59,7 +59,8 @@ test('building render payload is lean while coordinates, raw data and inspection
   assert.equal(rendered.properties.footprint_area_m2, undefined);
   assert.equal(rendered.properties.source_detail, undefined);
   assert.equal(rendered.properties._building_label, '원본 이름');
-  assert.equal(Object.keys(rendered.properties).length, 8);
+  assert.equal(rendered.properties.parent_id, original.properties.parent_id);
+  assert.equal(Object.keys(rendered.properties).length, 9);
   const displayed = [];
   h.controller.showDetail = props => displayed.push(props);
   await h.controller.inspect(rendered, [126.96, 37.55]);

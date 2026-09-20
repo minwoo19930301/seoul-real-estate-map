@@ -208,7 +208,7 @@ for (const module of extraLandmarks) {
       const pristineJson = JSON.parse(pristineBytes.subarray(20, 20 + pristineBytes.readUInt32LE(12)));
       const materialsSha256 = sha(JSON.stringify(gltf.materials));
       const pristineMaterialsSha256 = sha(JSON.stringify(pristineJson.materials));
-      const removesDecoration = module.id === 'tower-palace' && adaptationRecipe.namedFootprintPlacement
+      const removesDecoration = ['tower-palace', 'garden-five'].includes(module.id) && adaptationRecipe.namedFootprintPlacement
         && adaptationRecipe.removedDecorativeTriangles > 0;
       const retainedMaterialMap = gltf.materials.map((material, index) => {
         const materialSha256 = sha(JSON.stringify(material));
@@ -220,7 +220,7 @@ for (const module of extraLandmarks) {
       const removedTriangles = removesDecoration ? adaptationRecipe.removedDecorativeTriangles : 0;
       if (stats.triangles + removedTriangles !== pristine.exportedStats.triangles) throw Error('Unaccounted source triangle change');
       adaptationIntegrity = { preservedPbrMaterials: true, preservedTriangleCount: !removesDecoration,
-        preservationMode: removesDecoration ? 'complete-seven-towers-with-documented-site-removal' : 'complete-source-model',
+        preservationMode: removesDecoration ? (module.id === 'tower-palace' ? 'complete-seven-towers-with-documented-site-removal' : 'complete-four-life-halls-with-documented-unverified-site-removal') : 'complete-source-model',
         removedTriangles, retainedMaterialMap, materialsSha256, pristineMaterialsSha256,
         ...(removesDecoration ? { pristineMaterialDefinitions: pristineJson.materials } : {}) };
     }

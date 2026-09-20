@@ -135,25 +135,31 @@ test('94 Flight assets preserve source PBR materials and detail through 38 expli
     const materialHash = sha(JSON.stringify(actual.gltf.materials));
     assert.equal(materialHash, source.adaptationIntegrity.materialsSha256);
     assert.equal(actual.triangles, source.exportedStats.triangles);
-    if (source.id === 'tower-palace') {
+    if (['tower-palace', 'garden-five'].includes(source.id)) {
       const integrity = source.adaptationIntegrity, recipe = source.adaptationRecipe;
-      assert.equal(integrity.preservationMode, 'complete-seven-towers-with-documented-site-removal');
+      const tower = source.id === 'tower-palace';
+      assert.equal(integrity.preservationMode, tower ? 'complete-seven-towers-with-documented-site-removal' : 'complete-four-life-halls-with-documented-unverified-site-removal');
       assert.equal(sha(JSON.stringify(integrity.pristineMaterialDefinitions)), integrity.pristineMaterialsSha256);
       assert.equal(integrity.retainedMaterialMap.length, actual.gltf.materials.length);
       for (const entry of integrity.retainedMaterialMap) {
         assert.deepEqual(actual.gltf.materials[entry.adaptedIndex], integrity.pristineMaterialDefinitions[entry.pristineIndex]);
         assert.equal(sha(JSON.stringify(actual.gltf.materials[entry.adaptedIndex])), entry.sha256);
       }
-      assert.equal(recipe.removedDecorativeMeshes, 105);
-      assert.equal(recipe.removedDecorativeTriangles, 5804);
+      assert.equal(recipe.removedDecorativeMeshes, tower ? 105 : 43);
+      assert.equal(recipe.removedDecorativeTriangles, tower ? 5804 : 1484);
       assert.equal(integrity.removedTriangles, recipe.removedDecorativeTriangles);
       assert.equal(actual.triangles + integrity.removedTriangles, source.pristineSource.sourceStats.triangles);
       const components = recipe.componentRecipe.components;
-      assert.deepEqual(components.map(component => component.name).sort(), ['A', 'B', 'C', 'D', 'E', 'F', 'G']);
+      assert.deepEqual(components.map(component => component.name).sort(), tower ? ['A', 'B', 'C', 'D', 'E', 'F', 'G'] : ['패션관', '영관', '리빙관', '테크노관'].sort());
       assert.equal(sum(components.map(component => component.sourceComponentGeometry.triangles)), actual.triangles);
-      assert.equal(new Set(components.map(component => component.footprintId)).size, 7);
+      assert.equal(new Set(components.map(component => component.footprintId)).size, tower ? 7 : 4);
       assert.equal(recipe.componentRecipe.landscapeObjects, 0);
       assert.ok(recipe.removalReason.includes('pristine GLB stays unchanged'));
+      if (!tower) {
+        assert.ok(asset.dimensions[0] < 250 && asset.dimensions[2] < 250, 'Life halls no longer span neighbouring apartment blocks');
+        assert.ok(recipe.omittedSourceComponents.includes('unverified fifth Tool/Works bar'));
+        for (const component of components) assert.ok(component.widthScale > .9 && component.widthScale < 1.6);
+      }
     } else {
       assert.equal(materialHash, source.adaptationIntegrity.pristineMaterialsSha256, `${source.id}: original PBR colours preserved`);
       assert.equal(source.adaptationIntegrity.preservedTriangleCount, true);
@@ -162,7 +168,7 @@ test('94 Flight assets preserve source PBR materials and detail through 38 expli
     assert.equal(source.footprintFitVerified, false, `${source.id}: export does not imply surveyed fit`);
     if (!source.adaptationRecipe.changed) assert.equal(source.sha256, source.pristineSource.glbSha256);
   }
-  for (const [id, count] of [['tower-palace', 7], ['parc1-ifc', 12], ['samsung-town', 5], ['walkerhill', 9]]) {
+  for (const [id, count] of [['tower-palace', 7], ['garden-five', 4], ['parc1-ifc', 12], ['samsung-town', 5], ['walkerhill', 9]]) {
     const source = flight.assets.find(asset => asset.id === id);
     assert.equal(source.adaptationRecipe.kind, 'component-width-and-centre-spacing');
     assert.equal(source.adaptationRecipe.componentRecipe.components.length, count);
@@ -247,4 +253,70 @@ test('Seoul City Hall explicitly replaces the six source-linked Seoul Library pa
     assert.equal(identity?.parentId, parent, `${child}: source parent relation recorded`);
     assert.match(identity.basis, /not a measured footprint fit/);
   }
+});
+
+test('reviewed building identities and their source descendants survive partial geometric coverage', async () => {
+  const { results } = await inspectPublished();
+  const placements = await json('scripts/reference_placements.json');
+  for (const [key, placement] of Object.entries(placements)) {
+    const result = results.get('reference-flight-' + key);
+    if (!result) continue;
+    const { asset, proof } = result;
+    for (const id of placement.explicitFootprintIds ?? []) {
+      assert.ok(asset.footprintIds.includes(id), `${key}: reviewed same-building identity ${id}`);
+      assert.ok(proof.explicitIdentityMatches.some(match => match.id === id));
+    }
+    for (const name of placement.reviewedSourceBuildingNames ?? []) {
+      assert.ok(proof.explicitIdentityMatches.some(match => match.name === name), `${key}: reviewed source name ${name}`);
+    }
+    for (const id of placement.excludedFootprintIds ?? []) {
+      assert.ok(!asset.footprintIds.includes(id), `${key}: unrelated neighbour stays visible`);
+    }
+    for (const match of proof.descendantIdentityMatches ?? []) {
+      assert.ok(asset.footprintIds.includes(match.id));
+      assert.ok(asset.footprintIds.includes(match.parentId), `${key}: descendant has a claimed source parent`);
+    }
+    assert.equal(proof.descendantOwnershipConflicts?.length ?? 0, 0, `${key}: no ambiguous descendant owners`);
+  }
+  for (const [key, id] of [
+    ['gfc', '8c853160-e816-4fa5-9bc8-37d2a4902c39'],
+    ['technomart', '16db731d-41af-45e1-9faa-c7c2febc6584'],
+    ['central-city', 'bf07fa32-2bb1-45f4-95d9-eb4d863f0c34'],
+    ['myeongdong-cathedral', '2723fab9-38dc-4308-830a-748355caca48'],
+    ['national-assembly', '34656637-6534-3134-B038-306162663631'],
+    ['dcube-city', '85db7664-8f97-4739-a0b9-e6d36c2be470'],
+    ['dongnimmun', '820d282e-dcb9-4186-baff-425cb01fbe58'],
+    ['cheongwadae', 'c4dcbadb-1db4-4f64-a89d-541529a582f4'],
+    ['cheongwadae', '36633834-3566-3232-B535-373635303565'],
+  ]) assert.ok(results.get('reference-flight-' + key).asset.footprintIds.includes(id), `${key}: formerly occluding source solid is replaced`);
+  for (const key of ['dcube-city', 'dongnimmun', 'cheongwadae']) {
+    const sources = results.get('reference-flight-' + key).asset.placementReview.identitySources;
+    assert.ok(sources.some(source => source.url.startsWith('https://api.openstreetmap.org/api/0.6/')));
+    assert.ok(sources.every(source => source.supports.length > 20), `${key}: reviewed source supports the stated identity`);
+  }
+  const garden = results.get('reference-flight-garden-five').asset;
+  assert.ok(!garden.footprintIds.includes('ff6bff59-b677-475e-ad56-f54e43db2a5a'));
+  assert.ok(!garden.supersedes.includes('apt-a10027346'), 'Garden Five does not replace Park Habio');
+  const acro = results.get('reference-flight-acro-seoul-forest').asset;
+  assert.ok(!acro.footprintIds.includes('c982c559-cf35-4b97-8296-4d6fcf9674af'), 'D Tower lies outside the authored Acro model');
+  const gold = results.get('reference-flight-lotte-castle-goldpark');
+  assert.deepEqual(gold.asset.placementReview.reviewedSourceBuildingNames.slice().sort(), ['301동', '302동', '303동', '304동', '305동', '306동']);
+  assert.equal(gold.asset.placementReview.coordinateSourceFootprintIds.length, 6);
+  assert.ok(Math.abs(gold.asset.coordinate.lon - 126.89730848375991) < 1e-8);
+  assert.ok(Math.abs(gold.asset.coordinate.lat - 37.45994546325999) < 1e-8);
+  assert.ok(!gold.asset.footprintIds.includes('bc9e12f5-3148-4e0f-8cd4-020854c8edc2'), 'phase 1 tower 107 is not part of phase 3');
+});
+
+test('the original five landmarks retain their matches and gain only source-linked descendants', async () => {
+  const { manifest, integration } = await inspectPublished();
+  const originals = await json('public/models/footprint-matches.json');
+  const expanded = manifest.preservedLandmarkFootprints;
+  assert.deepEqual(Object.keys(expanded).sort(), ['sixtythree', 'lotte', 'nseoul', 'coex', 'gyeongbokgung'].sort());
+  for (const [id, ids] of Object.entries(expanded)) {
+    assert.equal(new Set(ids).size, ids.length);
+    for (const sourceId of originals[id]) assert.ok(ids.includes(sourceId), `${id}: original match retained`);
+    assert.deepEqual(ids, integration.preservedLandmarkFootprints.models[id].footprintIds);
+  }
+  assert.ok(expanded.nseoul.includes('37616532-6231-3236-B565-353535326361'));
+  assert.ok(expanded.gyeongbokgung.includes('66653035-3832-3836-A634-643863373039'));
 });

@@ -23,6 +23,13 @@ test('reference entries carry visible footprint replacement metadata', () => {
   assert.deepEqual(value.assets[0].supersedes, ['generic-1']);
 });
 
+test('preserved landmark descendants extend known assets and reject invalid identities', () => {
+  const value = { version: 1, assets: [], places: [], preservedLandmarkFootprints: { generic: ['parent', 'part'] } };
+  assert.deepEqual(referenceManifest(value, preserved).preservedLandmarkFootprints.generic, ['parent', 'part']);
+  assert.throws(() => referenceManifest({ ...value, preservedLandmarkFootprints: { missing: ['part'] } }, preserved));
+  assert.throws(() => referenceManifest({ ...value, preservedLandmarkFootprints: { generic: [''] } }, preserved));
+});
+
 function cityHarness() {
   const events=[]; let center=[127.1,37.5], ready=true;
   const map={getZoom:()=>16,getCenter:()=>({lng:center[0],lat:center[1]}),getBounds:()=>({getWest:()=>center[0]-.002,getEast:()=>center[0]+.002,getSouth:()=>center[1]-.002,getNorth:()=>center[1]+.002}),getTerrain:()=>({source:'local',exaggeration:1}),getSource:()=>({}),isSourceLoaded:()=>ready,queryTerrainElevation:()=>80,triggerRepaint(){},off(){},getLayer:()=>null};
@@ -36,6 +43,42 @@ test('reference model hides superseded footprint only while reference is active'
 test('reference load failure restores superseded generic visibility',async()=>{const h=cityHarness(), old=globalThis.fetch;globalThis.fetch=async()=>{throw new Error('load failed')};try{h.m.entries[1].scene=undefined;await h.m.loadNearby();h.m.render({defaultProjectionData:{mainMatrix:new THREE.Matrix4().elements},shaderData:{variantName:'mercator'}});assert.deepEqual(h.m.getState().activeFootprintIds,[]);assert.equal(h.m.getState().models.find(x=>x.id==='generic').active,true)}finally{globalThis.fetch=old;h.m.destroy()}});
 test('reference replacement recovers after toggle and view changes',()=>{const h=cityHarness(),a={defaultProjectionData:{mainMatrix:new THREE.Matrix4().elements},shaderData:{variantName:'mercator'}};h.m.render(a);h.m.setVisible(false);h.m.setVisible(true);h.setCenter([126.8,37.7]);h.m.render(a);assert.deepEqual(h.m.getState().activeFootprintIds,[]);h.setCenter([127.1,37.5]);h.m.render(a);assert.deepEqual(h.m.getState().activeFootprintIds,['fp-ref']);h.m.destroy()});
 test('reference priority remains selected with 32 nearby generic catalog entries',()=>{const h=cityHarness();const g=h.m.entries[0];h.m.entries=[h.m.entries[1],...Array.from({length:32},(_,i)=>({...g,asset:{...g.asset,id:'g'+i,coordinate:{lon:127.1,lat:37.5}}}))];h.m.render({defaultProjectionData:{mainMatrix:new THREE.Matrix4().elements},shaderData:{variantName:'mercator'}});assert.ok(h.m.getState().models.find(x=>x.id==='ref').active);assert.equal(h.m.getState().activeFootprintIds.includes('fp-ref'),true);h.m.destroy()});
+
+test('a partly overlapping compound GLB yields to the landmark without hiding its unrelated source solids', () => {
+  const h = cityHarness(), [generic, reference] = h.m.entries;
+  reference.asset.supersedes = [];
+  generic.asset.footprintIds = ['fp-ref', 'neighbour'];
+  h.m.setFootprintMatches({ generic: ['fp-ref', 'neighbour'] });
+  h.m.render({ defaultProjectionData: { mainMatrix: new THREE.Matrix4().elements }, shaderData: { variantName: 'mercator' } });
+  assert.equal(generic.active, false);
+  assert.equal(reference.active, true);
+  assert.deepEqual(h.m.getState().activeFootprintIds, ['fp-ref']);
+  reference.scene = undefined;
+  h.m.render({ defaultProjectionData: { mainMatrix: new THREE.Matrix4().elements }, shaderData: { variantName: 'mercator' } });
+  assert.equal(generic.active, true, 'the retained compound remains available while the landmark is not drawable');
+  h.m.destroy();
+});
+
+test('original Flight landmarks win over later generic and lazy catalog copies', () => {
+  const h = cityHarness(), [generic, reference] = h.m.entries;
+  reference.asset = { ...reference.asset, id: 'lotte', quality: undefined, supersedes: undefined };
+  h.m.setFootprintMatches({ lotte: ['tower'], generic: ['tower', 'mall'] });
+  generic.catalogTile = 'late-tile'; generic.asset.footprintIds = ['tower', 'mall'];
+  h.m.render({ defaultProjectionData: { mainMatrix: new THREE.Matrix4().elements }, shaderData: { variantName: 'mercator' } });
+  assert.equal(reference.active, true);
+  assert.equal(generic.active, false);
+  assert.deepEqual(h.m.getState().activeFootprintIds, ['tower']);
+  h.m.destroy();
+});
+
+test('a landmark culled by the camera does not hide a drawable fallback', () => {
+  const h = cityHarness(), [generic, reference] = h.m.entries;
+  h.m.renderer.render = scene => { h.m.renderer.info.render.calls = scene === reference.scene ? 0 : 2; };
+  h.m.render({ defaultProjectionData: { mainMatrix: new THREE.Matrix4().elements }, shaderData: { variantName: 'mercator' } });
+  assert.equal(reference.active, false);
+  assert.equal(generic.active, true);
+  h.m.destroy();
+});
 
 test('a failed reference fetch loads the unloaded preserved replacement and restores its footprint', async () => {
   const h = cityHarness(), originalFetch = globalThis.fetch, requested = [];

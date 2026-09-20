@@ -27,6 +27,8 @@ export interface CityModelState {
 type Options = { assets?: CityModelAsset[]; catalogIndex?: string; onState?: (state: CityModelState) => void; onActiveFootprints?: (ids: string[]) => void };
 type Entry = { asset: CityModelAsset; catalogTile?: string; scene?: THREE.Scene; error: string | null; ground: number | null; draws: number; active: boolean; pending?: Promise<void>; lastUsed?: number };
 type View = { zoom: number; lon: number; lat: number; west: number; east: number; south: number; north: number };
+const originalLandmarks = new Set(['sixtythree', 'lotte', 'nseoul', 'coex', 'gyeongbokgung']);
+const isLandmark = (asset: CityModelAsset) => asset.quality === 'reference' || originalLandmarks.has(asset.id);
 
 /** GLB metres: +X east, +Y up, +Z south at yaw=0. Ground is already exaggerated. */
 export function modelMercatorMatrix(coordinate: [number, number], groundM: number) {
@@ -219,11 +221,9 @@ export class CityModels {
     if (this.nearbyCache?.key === key) return this.nearbyCache.entries;
     const scale = Math.cos(view.lat * Math.PI / 180);
     const distance = (entry: Entry) => ((entry.asset.coordinate.lon - view.lon) * scale) ** 2 + (entry.asset.coordinate.lat - view.lat) ** 2;
-    const candidates = this.entries.filter(entry => this.inView(entry.asset, view));
-    const replaced = new Set(candidates.filter(entry => !entry.error)
-      .flatMap(entry => entry.asset.supersedes ?? []));
-    const entries = candidates.filter(entry => !replaced.has(entry.asset.id))
-      .sort((a, b) => Number(b.asset.quality === 'reference') - Number(a.asset.quality === 'reference')
+    const candidates = this.entries.filter(entry => !entry.error && this.inView(entry.asset, view));
+    const entries = candidates
+      .sort((a, b) => Number(isLandmark(b.asset)) - Number(isLandmark(a.asset))
         || distance(a) - distance(b) || a.asset.id.localeCompare(b.asset.id))
       .slice(0, this.maxNearby);
     this.nearbyCache = { key, entries };
@@ -290,7 +290,7 @@ export class CityModels {
           if (!this.disposed) {
             entry.error = error instanceof Error ? error.message : String(error);
             this.nearbyCache = undefined;
-            if (entry.asset.supersedes?.length) this.loadAgain = true;
+            if (isLandmark(entry.asset)) this.loadAgain = true;
           }
         }
         entry.pending = undefined;
@@ -344,9 +344,15 @@ export class CityModels {
     const supported = args.shaderData.variantName === 'mercator';
     const ready = supported && this.terrainReady();
     const visible = this.nearbyEntries();
+    const landmarkFootprints = new Set<string>(), replacedModels = new Set<string>();
     this.clearActiveEntries();
     for (const entry of visible) {
       if (!this.enabled || !entry.scene || entry.error || !ready) continue;
+      // A compound fallback may contain both a landmark and its neighbours.
+      // Skip that GLB only after the landmark draws; its other raw solids remain.
+      if (!isLandmark(entry.asset) && (replacedModels.has(entry.asset.id)
+        || this.footprints(entry).some(id => landmarkFootprints.has(id))
+        || entry.asset.footprintIds?.some(id => landmarkFootprints.has(id)))) continue;
       const coordinate: [number, number] = [entry.asset.coordinate.lon, entry.asset.coordinate.lat];
       const ground = this.map.queryTerrainElevation(coordinate);
       if (ground === null || !Number.isFinite(ground)) continue;
@@ -359,11 +365,17 @@ export class CityModels {
         // Being inside a padded geographic bbox does not guarantee that any
         // mesh survives the Three.js camera frustum (especially at high pitch).
         entry.active = calls > 0;
-        if (entry.active) entry.draws++;
+        if (entry.active) {
+          entry.draws++;
+          if (isLandmark(entry.asset)) {
+            for (const id of this.footprints(entry)) landmarkFootprints.add(id);
+            for (const id of entry.asset.supersedes ?? []) replacedModels.add(id);
+          }
+        }
       } catch (error) {
         entry.error = error instanceof Error ? error.message : String(error);
         this.nearbyCache = undefined;
-        if (entry.asset.supersedes?.length) void this.loadNearby();
+        if (isLandmark(entry.asset)) void this.loadNearby();
       }
       this.trackEntry(entry);
     }

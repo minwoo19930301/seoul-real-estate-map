@@ -6,13 +6,24 @@ export interface ReferencePlace {
   household_count?: number;
   supersedesPlaceIds?: string[];
 }
-export interface ReferenceManifest { version: 1; assets: CityModelAsset[]; places: ReferencePlace[] }
+export interface ReferenceManifest {
+  version: 1; assets: CityModelAsset[]; places: ReferencePlace[];
+  preservedLandmarkFootprints?: Record<string, string[]>;
+}
 
 export function referenceManifest(value: unknown, preserved: CityModelAsset[]): ReferenceManifest {
   const data = value as ReferenceManifest;
   if (data?.version !== 1 || !Array.isArray(data.assets) || data.assets.length > 5000
     || !Array.isArray(data.places)) throw Error('잘못된 개별 건물 모델 목록입니다.');
   const ids = new Set(preserved.map(asset => asset.id));
+  if (data.preservedLandmarkFootprints !== undefined) {
+    if (!data.preservedLandmarkFootprints || typeof data.preservedLandmarkFootprints !== 'object'
+      || Array.isArray(data.preservedLandmarkFootprints)
+      || Object.entries(data.preservedLandmarkFootprints).some(([id, footprints]) => !ids.has(id)
+        || !Array.isArray(footprints) || footprints.some(fid => typeof fid !== 'string' || !fid))) {
+      throw Error('잘못된 기존 랜드마크 건물 목록입니다.');
+    }
+  }
   for (const asset of data.assets) {
     if (!asset || typeof asset.id !== 'string' || !/^[a-z0-9_-]+$/.test(asset.id) || ids.has(asset.id)
       || !/^[a-z0-9_-]+(?:\/[a-z0-9_-]+)*\.glb$/.test(asset.model)
