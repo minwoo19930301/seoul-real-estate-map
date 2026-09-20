@@ -176,6 +176,8 @@ let previousStreetScale = 4;
 let previousStreetMode = true;
 let cityModels: CityModels;
 let modelPlaces: SearchPlace[] = [];
+let resolveModelPlaces: () => void;
+const modelPlacesReady = new Promise<void>(resolve => { resolveModelPlaces = resolve; });
 let greeneryTimer: ReturnType<typeof setTimeout>;
 let greeneryController: AbortController | undefined;
 let greeneryKey = '';
@@ -353,7 +355,8 @@ async function loadCityModels() {
   });
 
   modelPlaces = assets.filter(asset => asset.searchable !== false && !replaced.has(asset.id)).map(asset => ({ id: `model:${asset.id}`, name: asset.nameKo, subtitle: `${asset.category === 'bridge' ? '대교 모형' : asset.category === 'company-office' ? '회사 건물 모형' : ['city-hall', 'cultural-site'].includes(asset.category ?? '') ? '시청·문화시설 모형' : ['k12-school', 'district-public-office'].includes(asset.category ?? '') ? '학교·공공기관 모형' : '건물 모형'} · 모형 높이 ${Math.round(asset.dimensions[1] * 10) / 10} m`, center: [asset.coordinate.lon, asset.coordinate.lat], zoom: asset.dimensions[1] > 400 ? 15.3 : 16.8, kind: 'building', source_url: asset.referenceUrl }));
-  modelPlaces.push(...references.places.map(place => ({ ...place, kind: 'building' as const })));
+  modelPlaces.unshift(...references.places.map(place => ({ ...place, kind: 'building' as const })));
+  resolveModelPlaces();
   landmarks?.setReferencePlaces(references.places);
   const publicAssets = assets.filter(a => ['k12-school', 'district-public-office'].includes(a.category ?? ''));
   map.addSource('public-facility-points', { type: 'geojson', data: { type: 'FeatureCollection', features: publicAssets.map(a => ({ type: 'Feature', geometry: { type: 'Point', coordinates: [a.coordinate.lon, a.coordinate.lat] }, properties: { name: a.nameKo } })) } });
@@ -475,9 +478,11 @@ async function updateSearch(submit = false) {
   if (!value.trim()) return;
   searchController = new AbortController();
   const normalized = value.trim().replace(/\s+/g, '').toLowerCase();
-  const local = [...modelPlaces.filter(place => place.name.replace(/\s+/g, '').toLowerCase().includes(normalized)), ...searchPlaces(value)];
   let remote: SearchPlace[] = [], failed = false;
   container.innerHTML = '<p>장소를 찾는 중…</p>';
+  if (submit) await modelPlacesReady;
+  if (id !== searchRequest) return;
+  const local = [...modelPlaces.filter(place => place.name.replace(/\s+/g, '').toLowerCase().includes(normalized)), ...searchPlaces(value)];
   try {
     const data = await request<{ results: SearchPlace[] }>(`/api/places?${new URLSearchParams({ q: value, limit: '12' })}`, { signal: searchController.signal });
     remote = data.results;
@@ -740,7 +745,7 @@ try {
   map.once('style.load', () => { mapLoaded = true; buildings.init(); landmarks.init();
   avenues = new Avenues(map); void avenues.init().catch(console.error);
   transit = new TransitLayer(map); void transit.init().then(() => { transit.setKinds(($('#toggle-landmarks') as HTMLInputElement).checked && ($('#pin-station') as HTMLInputElement).checked, ($('#toggle-bus-stops') as HTMLInputElement).checked, ($('#toggle-bike-stations') as HTMLInputElement).checked); landmarks.useExternalStations(true); }).catch(console.error);
-  renewalZones = new RenewalZones(map); renewalZones.init(); void roads.init(); void loadFeatures(); void loadTerrain(); void loadBookmarks(); void loadContextMetadata(); void loadCityModels().catch(error => { $('#city-model-status').textContent = '주요 빌딩 모형을 불러오지 못했습니다.'; console.error(error); }); });
+  renewalZones = new RenewalZones(map); renewalZones.init(); void roads.init(); void loadFeatures(); void loadTerrain(); void loadBookmarks(); void loadContextMetadata(); void loadCityModels().catch(error => { resolveModelPlaces(); $('#city-model-status').textContent = '주요 빌딩 모형을 불러오지 못했습니다.'; console.error(error); }); });
   map.on('sourcedata', event => { if (event.sourceId === 'osm' && event.sourceDataType === 'content') { greeneryRevision++; scheduleGreenery(); } });
   map.on('idle', scheduleGreenery);
   map.on('moveend', () => { const center = map.getCenter(); $('#coordinate-readout').textContent = `중심 ${center.lat.toFixed(5)}° N · ${center.lng.toFixed(5)}° E`; applyVisibility(); loadFeaturesSoon(); buildings.schedule(); landmarks.schedule(); renewalZones?.schedule(); roads.schedule(); cityModels?.updateTerrain(); scheduleGreenery(); });

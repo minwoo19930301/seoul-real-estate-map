@@ -13,6 +13,12 @@ test('latest authored landmarks and Maple Xi replace generic shapes on the map',
   await page.locator('#exaggeration').evaluate((input: HTMLInputElement) => { input.value = '1'; input.dispatchEvent(new Event('input')); });
   await page.locator('#place-search').fill('메이플자이');
   await expect(page.locator('#search-results')).toContainText('메이플자이');
+  await page.locator('#place-search').press('Enter');
+  await expect.poll(() => page.evaluate(() => {
+    const map = (window as any).__SEOUL_MAP__.map;
+    return { center: map.getCenter().toArray(), zoom: map.getZoom() };
+  })).toEqual({ center: references.places[0].center, zoom: references.places[0].zoom });
+  await expect(page.locator('#place-subtitle')).toHaveText(references.places[0].subtitle);
   await page.locator('#place-search').fill('');
   mkdirSync('tests/screenshots', { recursive: true });
   const samples = ['reference-flight-seoul-city-hall', 'reference-flight-amorepacific-hq', 'reference-flight-ddp', 'reference-flight-tower-palace', 'maple-xi-210'];
