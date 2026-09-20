@@ -14,7 +14,8 @@ const base = json('public/models/manifest.json'), matches=json('public/models/fo
 const correction=json('public/models/generic-corrections.json');
 const source=base.assets.find(a=>a.id==='apt-a14003002');
 const effective=applyGenericCorrections(base.assets,matches,correction);
-const parts=correction.corrections[0].assets;
+const parts=correction.corrections.find(c=>c.sourceId===source.id).assets;
+const addedPartitions=correction.corrections.reduce((count,c)=>count+c.assets.length-1,0);
 const fp='805bb192-2c3d-473f-b645-1eca99731876';
 const proof=json('docs/model-audit/caelitus-generic-split.json');
 function polygonDistance(point, polygon) {
@@ -70,8 +71,9 @@ test('partition preserves every original triangle, material and attribute exactl
   assert.ok(proof.maximumVertexDistanceOutsideSourceFootprintM<.05);
 });
 test('effective catalog replaces only the bad compound and exactly partitions its seven footprint owners',()=>{
-  assert.equal(effective.assets.length,base.assets.length+1);
-  for(const a of base.assets.filter(a=>a.id!==source.id)) assert.equal(effective.assets.find(b=>b.id===a.id),a);
+  assert.equal(effective.assets.length,base.assets.length+addedPartitions);
+  const correctedIds=new Set(correction.corrections.map(c=>c.sourceId));
+  for(const a of base.assets.filter(a=>!correctedIds.has(a.id))) assert.equal(effective.assets.find(b=>b.id===a.id),a);
   assert.deepEqual(effective.matches['fallback-caelitus-101'],[fp]);
   assert.equal(effective.matches[source.id].length,6);assert.ok(!effective.matches[source.id].includes(fp));
   assert.equal(matches[source.id].length,7);assert.equal(source.model,'apt-a14003002.glb');
@@ -81,7 +83,7 @@ test('effective catalog replaces only the bad compound and exactly partitions it
 });
 test('invalid source hashes, overlap, omitted neighbors, unsafe paths and reference takeover are rejected without mutations',()=>{
   const before=JSON.stringify({base,matches});
-  for(const corrupt of [d=>d.corrections[0].sourceSha256='0'.repeat(64),d=>d.corrections[0].assets[0].footprintIds.push(fp),d=>d.corrections[0].assets[0].footprintIds.pop(),d=>d.corrections[0].assets[1].model='../bad.glb',d=>d.corrections[0].assets[1].quality='reference']) {
+  for(const corrupt of [d=>d.corrections.find(c=>c.sourceId===source.id).sourceSha256='0'.repeat(64),d=>d.corrections.find(c=>c.sourceId===source.id).assets[0].footprintIds.push(fp),d=>d.corrections.find(c=>c.sourceId===source.id).assets[0].footprintIds.pop(),d=>d.corrections.find(c=>c.sourceId===source.id).assets[1].model='../bad.glb',d=>d.corrections.find(c=>c.sourceId===source.id).assets[1].quality='reference']) {
     const d=structuredClone(correction);corrupt(d);assert.throws(()=>applyGenericCorrections(base.assets,matches,d));
   }
   assert.equal(JSON.stringify({base,matches}),before);
@@ -119,11 +121,11 @@ test('off-center split101 remains eligible when its footprint is visible but pre
   assert.equal(h.models.inView(a,view),true);h.models.destroy();
 });
 
-test('effective legacy plus lazy catalog retains all113123 sources and adds one split record with unique ownership',async()=>{
+test('effective legacy plus lazy catalog retains all113123 sources and adds the split records with unique ownership',async()=>{
   let count=0,found=0;
   for await(const {asset,footprintIds} of iterateModelAssets(fileURLToPath(new URL('../public/models',import.meta.url)),{...base,assets:effective.assets},effective.matches)) {
     count++;
     if(asset.id==='fallback-caelitus-101'){found++;assert.deepEqual(footprintIds,[fp]);}
   }
-  assert.equal(count,113124);assert.equal(found,1);
+  assert.equal(count,113123+addedPartitions);assert.equal(found,1);
 });

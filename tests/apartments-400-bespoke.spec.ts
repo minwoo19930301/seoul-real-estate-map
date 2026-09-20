@@ -3,6 +3,8 @@ import { readFileSync, mkdirSync, writeFileSync } from 'node:fs';
 
 const manifest = JSON.parse(readFileSync('public/models/bespoke-manifest.json', 'utf8'));
 const samples = [
+  { site: 'lotte-castle-empire', prefix: 'bespoke-lotte-castle-empire-', numbers: ['101','102','common'], center: [126.92637,37.52027], old: 'apt-a15088614' },
+  { site: 'mecenatpolis', prefix: 'bespoke-mecenatpolis-', numbers: ['101','102','103','residential-podium'], center: [126.9139379,37.5513225], old: 'apt-a12174601' },
   { site: 'lotte-castle-ivy', prefix: 'bespoke-lotte-castle-ivy-', numbers: ['101','102','connector'], center: [126.9317762,37.52018955], old: 'apt-a15088915' },
   { site: 'gratte-ciel', prefix: 'bespoke-gratte-ciel-', numbers: ['101','102','103','104'], center: [127.043016,37.577328], old: 'apt-a10023188' },
   { site: 'trimage', prefix: 'bespoke-trimage-', numbers: ['101','102','103','104'], center: [127.044915,37.538834], old: 'apt-a10026988' },
@@ -40,6 +42,15 @@ for (const sample of samples) {
       expect(s.activeFootprintIds).toContain(fid);
       expect(s.renderedSolids).not.toContain(fid);
     }
+    if(sample.site==='lotte-castle-empire') {
+      expect(s.models.find((m:any)=>m.id==='fallback-miseong-a')?.active).toBe(true);
+      expect(s.activeFootprintIds).toContain('2dd7515f-ae2d-4bec-a511-5398d365e039');
+    }
+    if(sample.site==='mecenatpolis') {
+      expect(s.activeFootprintIds).not.toContain('b028f776-57de-460a-ad6f-4f0919b2d0e7');
+      expect(s.renderedSolids).toContain('b028f776-57de-460a-ad6f-4f0919b2d0e7');
+      expect(s.models.find((m:any)=>m.id==='survey-upis-32688666')?.active).toBe(true);
+    }
     if(sample.site==='raemian-caelitus') {
       expect(s.models.find((m:any)=>m.id==='apt-a14003002')?.active).toBe(true);
       expect(s.models.find((m:any)=>m.id==='fallback-caelitus-101')?.active??false).toBe(false);
@@ -62,6 +73,7 @@ for (const sample of samples) {
     const s=await state(page);
     const peers=sample.site==='raemian-caelitus'?['102','103'].map(n=>sample.prefix+n):ids;
     for(const id of peers) expect(s.models.find((m:any)=>m.id===id)?.active??false).toBe(false);
+    if(sample.site==='lotte-castle-empire') expect(s.models.find((m:any)=>m.id==='fallback-miseong-a')?.active).toBe(true);
     if(sample.site==='raemian-caelitus') expect(s.models.find((m:any)=>m.id==='apt-a14003002')?.active).toBe(true);
     await page.screenshot({path:`${directory}/${sample.site}-fallback.png`});
     writeFileSync(`${directory}/${sample.site}-fallback.json`,JSON.stringify({failed,old:sample.old,active:s.models.filter((m:any)=>m.active),errors:s.models.filter((m:any)=>m.error)},null,2)+'\n');

@@ -195,7 +195,7 @@ class FrozenPublicInventoryTests(unittest.TestCase):
         self.assertEqual(rows['A10023188']['householdValues'], [1152])
         self.assertEqual(rows['A10020557']['modelStatus'], 'partial')
         self.assertEqual(rows['A10020557']['expectedResidentialBuildingCount'], 29)
-        self.assertEqual(rows['A10020557']['verifiedBespokeBuildingCount'], 7)
+        self.assertEqual(rows['A10020557']['verifiedBespokeBuildingCount'], 8)
         maple213 = next(b for b in rows['A10020557']['buildings'] if b['label'] == '213')
         self.assertEqual(maple213['assetId'], 'bespoke-maple-xi-213-corrected')
         self.assertEqual(maple213['verificationErrors'], [])
@@ -206,7 +206,7 @@ class FrozenPublicInventoryTests(unittest.TestCase):
         queue, summary = build(self.snapshot, read(AUDIT / 'apartments-400-coverage.json'), read(ROOT / 'public/models/bespoke-manifest.json'), read(AUDIT / 'published-bespoke.json'), read(ROOT / 'public/models/manifest.json'), ROOT)
         self.assertEqual(b''.join(canonical(r) for r in queue), self.raw)
         completed = {r['code'] for r in queue if r['modelStatus'] == 'complete_residential_buildings'}
-        self.assertTrue({'A10023083', 'A13527017', 'A13585402', 'A13585403'} <= completed)
+        self.assertTrue({'A10023083', 'A13527017', 'A13585402', 'A13585403', 'A12174601', 'A15088614'} <= completed)
         self.assertEqual(summary['remainingEligibleManagementCodes'], 1417 - len(completed))
         for row in queue:
             if row['modelStatus'] == 'complete_residential_buildings':
