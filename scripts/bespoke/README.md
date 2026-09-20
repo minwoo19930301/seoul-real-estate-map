@@ -2,7 +2,7 @@
 
 Each site has its own authored script, editable Blender scene, real-world references, and visual comparison. Shared helpers below only execute MCP calls, normalize GLB encoding, and publish verified files. They do not invent building shapes, colors or facades.
 
-The first batch uses Blender 4.5.11 LTS and [mcp-for-blender](https://github.com/ahujasid/mcp-for-blender) revision `6f992ffbca3cb715d111fc640b737b808632273c`. Install the server in a separate environment and use the addon from the same revision. The authoring sessions were independent GUI instances on localhost ports 9876, 9877 and 9878; no global app configuration was changed.
+The reviewed models use Blender 4.5.11 LTS and [mcp-for-blender](https://github.com/ahujasid/mcp-for-blender) revision `6f992ffbca3cb715d111fc640b737b808632273c`. Install the server in a separate environment and use the addon from the same revision. The authoring sessions were independent GUI instances on localhost ports 9876, 9877 and 9878; no global app configuration was changed.
 
 ```sh
 git clone https://github.com/ahujasid/mcp-for-blender.git /tmp/seoul-blender-mcp
@@ -23,7 +23,7 @@ The complete model inventory is a review backlog. Unique filenames, hashes, sour
 
 ## Frozen scope and recovery
 
-This batch contains **6 reviewed sites and 14 GLBs**: terminal1, SKY-L65 four towers, Banpo/Jamsu1, Hyperion three towers plus parking podium plus department store5, Seoul2841, and Maple210/211 two towers. This is not a claim that Seoul, every apartment complex, or every Maple building has been rebuilt to this standard. The remainder stays in the review backlog.
+The first two batches contain **8 reviewed physical sites and 27 GLBs**: terminal1, SKY-L65 four towers, Banpo/Jamsu1, Hyperion five components, Seoul2841, Maple208–213 six towers, Tower Palace A–G seven towers, and City Hall new/library two buildings. The current inventory and later additions are listed in [the model audit](../../docs/model-audit/README.md). This is not a claim that every Seoul building or every apartment has been rebuilt to this standard. The remainder stays in the review backlog.
 
 The committed `.blend` files under `modeling/bespoke/` are the editable recovery source. The runtime assets are in `public/models/bespoke/`; geographic anchors, component names, source ownership and uncertainties are in `public/models/bespoke-manifest.json`. The reviewed input hashes and comparisons are in `docs/model-audit/published-bespoke.json`. Inspect those records together rather than assuming a newly exported file is the reviewed file.
 
@@ -40,7 +40,9 @@ stage = Path('data/model-source/bespoke')
 for folder in source.iterdir():
     if not folder.is_dir():
         continue
-    name = 'express-terminal' if folder.name == 'seoul-express-terminal-gyeongbu-yeongdong' else folder.name
+    aliases = {'seoul-express-terminal-gyeongbu-yeongdong': 'express-terminal',
+               'lg-art-center-seoul': 'lg-art-center'}
+    name = aliases.get(folder.name, folder.name)
     target = stage / name
     target.mkdir(parents=True, exist_ok=True)
     for file in folder.iterdir():
@@ -67,6 +69,12 @@ The scripts below run inside Blender through the MCP client unless marked as pre
 | `banpo-jamsu` | `banpo_jamsu.py` uses committed `public/bridge-outlines.geojson`, specifically `osm:way/1085504592`. Saved `recipe.json` records the authored parameters; the builder writes it rather than reading it. | Builder creates GLB, scene and recipe, **not a complete publishing bundle**. Recover reviewed metadata from the manifest/audit record and construct a fresh staging bundle for publication. |
 | `culture-station-seoul284` | `culture_station_seoul284.py`; dimensions, separate wings and facade details are authored in the script. | Render and validation helpers expect the matching scene. Historical plan/photo files used for comparison are external. |
 | `maple-club-cloud` | Copy committed `authored-input.json` into staging, then run `maple_club_cloud_blender.py`. This constructs only210/211 and the connector owned by210. | Builder reads the staging input without a committed-path fallback. Optional `maple_club_cloud_prepare.py` derives it from `docs/MAPLE_XI_MODEL_RECIPE.json` with NumPy/Shapely; earlier full-complex source acquisition is not an automatic prerequisite workflow included here. Other Maple models remain unchanged. |
+| `tower-palace` | `tower_palace_blender.py` reads the frozen `recipe-input.json`, with a committed-path fallback, and exports A–G at their individual anchors. | The combined scene uses assembly offsets recorded in the recipe; retain per-tower origins when exporting. The preparation script can recreate a trace, but does not replace the reviewed face assignments. |
+| `seoul-city-hall` | Restore `source-footprints.json`, then run `seoul_city_hall.py`; after the MCP call returns, run `seoul_city_hall_finalize.py` with regular Python to validate and bind the transcript. | Two assets share the retained geographic origin. The new and historic buildings divide nine source IDs. Finalization validates files; it does not approve architectural likeness. |
+| `maple-next-towers` | Restore `authored-input.json`, then run `maple_next_blender.py`. It builds only208/209/212/213. | The staged recipe contains face-specific assignments and unequal roof tiers; do not substitute the full-complex template. Review/render helpers require the matching scene. |
+| `jungmyeongjeon` | Restore `recipe-input.json` and `source-footprint.json`, then run `jungmyeongjeon.py` through MCP. Render with `jungmyeongjeon_render.py`; validate with regular Python `jungmyeongjeon_validate.py`. | Restoration drawing dimensions and photographed post-restoration details are distinct from the larger retained source outline. Reference photographs and the restoration PDF remain external. |
+| `mmca-deoksugung` | Restore `authored-input.json` and `source-footprint.json`, then run `mmca_deoksugung_blender.py` through MCP and the matching render helper. | Only the west museum wing is included. The adjoining east Seokjojeon, connecting passage and fountain remain separate. Wing roof covers and rear openings are explicitly provisional. |
+| `lg-art-center-seoul` | Restore inputs into staging `lg-art-center/` using the alias above; run `lg_art_center_blender.py` through MCP. | A single source footprint includes both the Arts Center and Discovery Lab. The authoring folder and published site ID differ. Optional research preparation requires external architect/operator sources; use the frozen authored input for recovery. |
 
 For example, after restoring inputs, a fresh Hyperion construction requires two separate calls:
 

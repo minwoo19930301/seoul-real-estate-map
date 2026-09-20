@@ -208,3 +208,47 @@ input[type=range] { width: 100%; margin: 0 0 7px; accent-color: var(--blue); }
 
 .legend-renewal { display:inline-block; width:14px; height:10px; border:1.5px dashed #7c3aed; background:rgba(124,58,237,.12); border-radius:2px; }
 .apartment-details p { margin: 2px 0; }
+
+.brandmark { flex-shrink: 0; object-fit: contain; }
+.flight-controls { position: absolute; inset: 0; z-index: 4; pointer-events: none; color: white; }
+.flight-instruments { display: flex; justify-content: center; gap: 30px; margin: 20px auto 0; width: fit-content; padding: 12px 24px; border: 1px solid #ffffff38; border-radius: 6px; background: #183039e8; font-variant-numeric: tabular-nums; }
+.flight-instruments > div { min-width: 52px; }
+.flight-instruments small { display: block; font-size: 10px; color: #b9ced3; margin-bottom: 4px; }
+.flight-instruments strong { font: 23px/1.2 'SFMono-Regular', Consolas, monospace; }
+.flight-instruments span { font-size: 10px; margin-left: 4px; color: #b9ced3; }
+.flight-reticle { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; align-items: center; gap: 8px; filter: drop-shadow(0 1px 2px #183039); }
+.flight-reticle i { width: 42px; height: 8px; border-bottom: 2px solid white; border-left: 2px solid white; }
+.flight-reticle i:last-child { transform: scaleX(-1); }
+.flight-reticle b { width: 5px; height: 5px; border-radius: 50%; background: white; }
+.flight-console { position: absolute; bottom: 80px; left: 50%; transform: translateX(-50%); max-width: calc(100% - 24px); width: 440px; background: #183039; padding: 12px; border: 1px solid #ffffff38; border-radius: 7px; pointer-events: auto; }
+#flight-status { font-size: 11px; color: #c9dde0; margin-bottom: 10px; }
+.flight-actions, .flight-pad { display: flex; gap: 5px; }
+.flight-console button { flex: 1; min-width: 0; min-height: 36px; padding: 7px 8px; border-color: #78919a; background: #25444f; color: white; font-size: 11px; white-space: nowrap; }
+.flight-console button:hover:not(:disabled), .flight-console button:active { background: #456570; }
+.flight-pad { margin-top: 7px; touch-action: none; user-select: none; }
+.flight-pad button { min-height: 42px; touch-action: none; }
+.flight-help { margin-top: 10px; font-size: 10px; line-height: 1.7; color: #b9ced3; }
+.flight-help summary { cursor: pointer; width: fit-content; }
+.flight-help p { margin-top: 7px; }
+.flying .map-tools, .flying .terrain-badge, .flying .map-legend, .flying .maplibregl-ctrl-top-right { display: none; }
+.flying .map-notice { bottom: 285px; }
+@media (max-width: 760px) {
+  .topbar { height: 104px; align-items: flex-start; padding: 10px 12px 0; }
+  .identity h1 { max-width: none; font-size: 14px; line-height: 1.15; }
+  .identity h1 span { display: inline; }
+  .identity { height: 30px; gap: 7px; }
+  .brandmark { width: 26px; height: 26px; }
+  .top-actions { display: contents; }
+  #mobile-panel { margin-top: 1px; }
+  .mode-switch { position: absolute; left: 12px; right: 12px; bottom: 9px; }
+  .mode-switch button { flex: 1; padding: 0 4px; font-size: 11px; }
+  .workspace { height: calc(100dvh - 104px); }
+  .sidebar { top: 104px; }
+  .flight-instruments { margin-top: 12px; gap: 14px; padding: 10px 14px; }
+  .flight-instruments > div { min-width: 46px; }
+  .flight-instruments strong { font-size: 19px; }
+  .flight-console { bottom: 72px; }
+  #flight-mouse { display: none; }
+}
+
+.flying .landmark-pin, .flying .maplibregl-popup { display: none; }

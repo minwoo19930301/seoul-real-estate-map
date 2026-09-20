@@ -264,6 +264,26 @@ test('nearby cache invalidates for bounds, zoom, center, categories and replaced
   h.models.destroy();
 });
 
+test('cultural visibility hides the three bespoke facilities and their retained fallbacks together', () => {
+  const h = harness();
+  const bespoke = JSON.parse(readFileSync(new URL('../public/models/bespoke-manifest.json', import.meta.url))).assets;
+  const ids = ['bespoke-jungmyeongjeon', 'bespoke-mmca-deoksugung', 'bespoke-lg-art-center-seoul-discovery-lab'];
+  const upgrades = ids.map(id => bespoke.find(asset => asset.id === id));
+  const originals = upgrades.flatMap(asset => asset.supersedes.map(id => manifest.assets.find(old => old.id === id)));
+  assert.ok([...upgrades, ...originals].every(Boolean), 'actual published upgrade/fallback records exist');
+  h.models.entries = [...upgrades, ...originals].map(asset => ({ asset, error: null, ground: null, draws: 0, active: false }));
+  h.models.map.getZoom = () => 17;
+  h.models.map.getBounds = () => ({ getWest: () => 126.8, getEast: () => 127.1, getSouth: () => 37.5, getNorth: () => 37.6 });
+  const selected = () => h.models.nearbyCandidates().map(entry => entry.asset.id).sort();
+  const all = [...upgrades, ...originals].map(asset => asset.id).sort();
+  assert.deepEqual(selected(), all, 'retained references remain available as fallbacks');
+  h.models.setCategories(true, true, false, true);
+  assert.deepEqual(selected(), [], 'off hides heritage, cultural and civic-cultural-landmark together');
+  h.models.setCategories(true, true, true, true);
+  assert.deepEqual(selected(), all, 'on restores both upgrades and fallbacks');
+  h.models.destroy();
+});
+
 test('catalog admission accepts 20000 models and rejects more than 25000 before adding a layer', async () => {
   const template = manifest.assets.find(a => a.id === 'lotte');
   for (const count of [20000, 25001]) {

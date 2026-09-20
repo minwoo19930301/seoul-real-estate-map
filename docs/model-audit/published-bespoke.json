@@ -4481,6 +4481,1017 @@
           "sha256": "b76451f936d205c3308c12c3e2d17e14a6fb437f4e51a3abf0333c81e885a725"
         }
       ]
+    },
+    "jungmyeongjeon": {
+      "sources": [
+        {
+          "url": "https://dh.aks.ac.kr/hanyang2/image/2021/cha/A/04/%EB%8D%95%EC%88%98%EA%B6%81%20%EC%A4%91%EB%AA%85%EC%A0%84%20%EB%B3%B4%EC%88%98%20%EB%B3%B5%EC%9B%90%20%EB%B3%B4%EA%B3%A0%EC%84%9C_2009.pdf",
+          "observations": [
+            "2009 restoration report: restored site/plan/roof/elevations/section on printed pages251,257,263,265,267,269,271,273; existing-state drawings not used as restored appearance."
+          ]
+        },
+        {
+          "url": "https://mediahub.seoul.go.kr/archives/1504110",
+          "observations": [
+            "Original municipal-platform photographs dated2020: open front/side arcades, contrasting grey bands and balusters, projecting balcony, rear notch and chimney positions; current exterior takes precedence over2009 site-grade depiction."
+          ]
+        }
+      ],
+      "review": {
+        "siteId": "jungmyeongjeon",
+        "status": "visually-reviewed",
+        "reviewer": "root; independent of modeling agent",
+        "date": "2026-09-21",
+        "method": "Opened source photographs and architectural plans, compared multiple candidate views, requested corrections where recorded and inspected revised renders. Frozen GLB and editable-scene hashes bind this approval.",
+        "comparisons": [
+          {
+            "source": "https://mediahub.seoul.go.kr/archives/1504110",
+            "observed": "Opened municipal-platform original front and rear photographs and compared low and elevated model views. Seven front bays and different side/rear arcade lengths are genuine openings around an inner wall. Requested and re-inspected pale plinth pier strips, small basement vents, shallow brick window lintels instead of round grey caps, chimney side vents and roof-seated dormers. Rear notch and windowed walls do not duplicate the front."
+          },
+          {
+            "source": "https://dh.aks.ac.kr/hanyang2/image/2021/cha/A/04/%EB%8D%95%EC%88%98%EA%B6%81%20%EC%A4%91%EB%AA%85%EC%A0%84%20%EB%B3%B4%EC%88%98%20%EB%B3%B5%EC%9B%90%20%EB%B3%B4%EA%B3%A0%EC%84%9C_2009.pdf",
+            "observed": "Opened restoration floor drawing257 and compared roof/oblique renders. Measured20.635m front width and asymmetric21.470m deep plan are retained without stretching to the larger source polygon. The projecting entrance, recessed northwest portion, hip intersections, dormers and separate chimneys produce an individual silhouette."
+          }
+        ],
+        "limits": "Restoration drawing and2020 photographs, not a2026 as-built survey. Retained geographic anchor and orientation may differ from source-outline extents. Post2017 ground/stair profile, masonry color, small ornament, roof seams and hidden details are interpreted; interiors and adjoining garden/structures excluded. Ridge13.140m follows the restoration drawing datum, total13.652m includes chimney tops.",
+        "renders": [
+          "docs/model-audit/renders/jungmyeongjeon/Front_Southwest.png",
+          "docs/model-audit/renders/jungmyeongjeon/Front_Southeast.png",
+          "docs/model-audit/renders/jungmyeongjeon/Rear_Northwest.png",
+          "docs/model-audit/renders/jungmyeongjeon/Measured_Roof.png",
+          "docs/model-audit/renders/jungmyeongjeon/Photo_Southwest_Ground.png",
+          "docs/model-audit/renders/jungmyeongjeon/Photo_Rear_Ground.png"
+        ],
+        "renderSha256": {
+          "docs/model-audit/renders/jungmyeongjeon/Front_Southwest.png": "e94ce59c471e8120ec9484ae08fc905b79e1391960de1aa6fea7f919e0c90853",
+          "docs/model-audit/renders/jungmyeongjeon/Front_Southeast.png": "f8a0f14fa43aa5a1308f697c323e24eab2fc7b732d3f5ad86403c5679a0e687e",
+          "docs/model-audit/renders/jungmyeongjeon/Rear_Northwest.png": "15c8891b34b75ce12f7c34ddea0fa710793f89595c82dfe373f4943dadeabe0d",
+          "docs/model-audit/renders/jungmyeongjeon/Measured_Roof.png": "1814e12986850a36f080156ef1a7519aa51da859db80b599dc032e89f8f6a08e",
+          "docs/model-audit/renders/jungmyeongjeon/Photo_Southwest_Ground.png": "b1157b81c0b17b73410b8322632caf25118b9a62dd8dd91377321a7e047efaed",
+          "docs/model-audit/renders/jungmyeongjeon/Photo_Rear_Ground.png": "b409b07d1f101046929f3c7d1e8508b91ebd04d013d7014d889dbf8cc0bbfe40"
+        },
+        "reviewedInputs": {
+          "bespoke-jungmyeongjeon.glb": "deacff8c372977650e852a038fdc585c15b8f445f76dcc73ab04ff53a1a45f00",
+          "jungmyeongjeon.blend": "1b9a38b19490c57026338e8a1c8af5699c3a7ccd7045261d44673eded452769a"
+        }
+      },
+      "assets": [
+        {
+          "id": "bespoke-jungmyeongjeon",
+          "sourceSha256": "deacff8c372977650e852a038fdc585c15b8f445f76dcc73ab04ff53a1a45f00",
+          "sha256": "1ca268459d83d5ee5b8561777c5090f0b2618461afb152a52858f5a1790f32b2",
+          "bytes": 8035052,
+          "dimensions": [
+            22.96499252319336,
+            13.652000427246094,
+            26.078874588012695
+          ],
+          "min": [
+            -11.48249626159668,
+            0,
+            -11.660625457763672
+          ],
+          "max": [
+            11.48249626159668,
+            13.652000427246094,
+            14.418249130249023
+          ],
+          "triangles": 143360,
+          "components": [
+            {
+              "name": "01_Raised_Brick_Plinth_Warm_recessed_mortar",
+              "triangles": 20
+            },
+            {
+              "name": "01_Raised_Brick_Plinth_Photographic_brick_variation_0",
+              "triangles": 1820
+            },
+            {
+              "name": "01_Raised_Brick_Plinth_Photographic_brick_variation_3",
+              "triangles": 1812
+            },
+            {
+              "name": "01_Raised_Brick_Plinth_Photographic_brick_variation_1",
+              "triangles": 1804
+            },
+            {
+              "name": "01_Raised_Brick_Plinth_Photographic_brick_variation_4",
+              "triangles": 1806
+            },
+            {
+              "name": "01_Raised_Brick_Plinth_Photographic_brick_variation_2",
+              "triangles": 1816
+            },
+            {
+              "name": "01_Raised_Brick_Plinth_Grey_limestone_and_weathered_balusters",
+              "triangles": 1380
+            },
+            {
+              "name": "01_Raised_Brick_Plinth_Open_flue_shadow",
+              "triangles": 156
+            },
+            {
+              "name": "01_Raised_Brick_Plinth_Dark_grey_zinc_gutters",
+              "triangles": 624
+            },
+            {
+              "name": "02_Asymmetric_Rear_Core_Warm_recessed_mortar",
+              "triangles": 20
+            },
+            {
+              "name": "02_Asymmetric_Rear_Core_Corridor_stone_floor",
+              "triangles": 40
+            },
+            {
+              "name": "02_Asymmetric_Rear_Core_Painted_cream_arcade_soffit",
+              "triangles": 20
+            },
+            {
+              "name": "02_Asymmetric_Rear_Core_Photographic_brick_variation_0",
+              "triangles": 4250
+            },
+            {
+              "name": "02_Asymmetric_Rear_Core_Photographic_brick_variation_3",
+              "triangles": 4246
+            },
+            {
+              "name": "02_Asymmetric_Rear_Core_Photographic_brick_variation_1",
+              "triangles": 4256
+            },
+            {
+              "name": "02_Asymmetric_Rear_Core_Photographic_brick_variation_4",
+              "triangles": 4258
+            },
+            {
+              "name": "02_Asymmetric_Rear_Core_Photographic_brick_variation_2",
+              "triangles": 4254
+            },
+            {
+              "name": "03_Seven_Bay_Front_Arcade_Red_brick_body",
+              "triangles": 4224
+            },
+            {
+              "name": "03_Seven_Bay_Front_Arcade_Photographic_brick_variation_0",
+              "triangles": 856
+            },
+            {
+              "name": "03_Seven_Bay_Front_Arcade_Photographic_brick_variation_3",
+              "triangles": 824
+            },
+            {
+              "name": "03_Seven_Bay_Front_Arcade_Photographic_brick_variation_1",
+              "triangles": 792
+            },
+            {
+              "name": "03_Seven_Bay_Front_Arcade_Photographic_brick_variation_2",
+              "triangles": 824
+            },
+            {
+              "name": "03_Seven_Bay_Front_Arcade_Photographic_brick_variation_4",
+              "triangles": 736
+            },
+            {
+              "name": "03_Seven_Bay_Front_Arcade_Grey_limestone_and_weathered_baluster",
+              "triangles": 192
+            },
+            {
+              "name": "03_Seven_Bay_Front_Arcade_Stone_cap_and_sills",
+              "triangles": 192
+            },
+            {
+              "name": "03_Seven_Bay_Front_Arcade_Grey_header_brick",
+              "triangles": 192
+            },
+            {
+              "name": "04_Long_East_Arcade_Red_brick_body",
+              "triangles": 4824
+            },
+            {
+              "name": "04_Long_East_Arcade_Photographic_brick_variation_0",
+              "triangles": 968
+            },
+            {
+              "name": "04_Long_East_Arcade_Photographic_brick_variation_3",
+              "triangles": 932
+            },
+            {
+              "name": "04_Long_East_Arcade_Photographic_brick_variation_1",
+              "triangles": 896
+            },
+            {
+              "name": "04_Long_East_Arcade_Photographic_brick_variation_2",
+              "triangles": 932
+            },
+            {
+              "name": "04_Long_East_Arcade_Photographic_brick_variation_4",
+              "triangles": 832
+            },
+            {
+              "name": "04_Long_East_Arcade_Grey_limestone_and_weathered_balusters",
+              "triangles": 216
+            },
+            {
+              "name": "04_Long_East_Arcade_Stone_cap_and_sills",
+              "triangles": 216
+            },
+            {
+              "name": "04_Long_East_Arcade_Grey_header_brick",
+              "triangles": 216
+            },
+            {
+              "name": "05_Short_West_Arcade_Red_brick_body",
+              "triangles": 3624
+            },
+            {
+              "name": "05_Short_West_Arcade_Photographic_brick_variation_0",
+              "triangles": 744
+            },
+            {
+              "name": "05_Short_West_Arcade_Photographic_brick_variation_3",
+              "triangles": 716
+            },
+            {
+              "name": "05_Short_West_Arcade_Photographic_brick_variation_1",
+              "triangles": 688
+            },
+            {
+              "name": "05_Short_West_Arcade_Photographic_brick_variation_2",
+              "triangles": 716
+            },
+            {
+              "name": "05_Short_West_Arcade_Photographic_brick_variation_4",
+              "triangles": 640
+            },
+            {
+              "name": "05_Short_West_Arcade_Grey_limestone_and_weathered_balusters",
+              "triangles": 168
+            },
+            {
+              "name": "05_Short_West_Arcade_Stone_cap_and_sills",
+              "triangles": 168
+            },
+            {
+              "name": "05_Short_West_Arcade_Grey_header_brick",
+              "triangles": 168
+            },
+            {
+              "name": "06_Rear_Returns_Red_brick_body",
+              "triangles": 1872
+            },
+            {
+              "name": "06_Rear_Returns_Photographic_brick_variation_0",
+              "triangles": 3214
+            },
+            {
+              "name": "06_Rear_Returns_Photographic_brick_variation_3",
+              "triangles": 3184
+            },
+            {
+              "name": "06_Rear_Returns_Photographic_brick_variation_1",
+              "triangles": 3160
+            },
+            {
+              "name": "06_Rear_Returns_Photographic_brick_variation_2",
+              "triangles": 3192
+            },
+            {
+              "name": "06_Rear_Returns_Photographic_brick_variation_4",
+              "triangles": 3146
+            },
+            {
+              "name": "06_Rear_Returns_Grey_limestone_and_weathered_balusters",
+              "triangles": 120
+            },
+            {
+              "name": "06_Rear_Returns_Stone_cap_and_sills",
+              "triangles": 120
+            },
+            {
+              "name": "06_Rear_Returns_Grey_header_brick",
+              "triangles": 120
+            },
+            {
+              "name": "07_Projecting_Entrance_Balcony_Grey_limestone_and_weathered_bal",
+              "triangles": 108
+            },
+            {
+              "name": "07_Projecting_Entrance_Balcony_Red_brick_body",
+              "triangles": 936
+            },
+            {
+              "name": "07_Projecting_Entrance_Balcony_Photographic_brick_variation_0",
+              "triangles": 276
+            },
+            {
+              "name": "07_Projecting_Entrance_Balcony_Photographic_brick_variation_3",
+              "triangles": 264
+            },
+            {
+              "name": "07_Projecting_Entrance_Balcony_Photographic_brick_variation_1",
+              "triangles": 252
+            },
+            {
+              "name": "07_Projecting_Entrance_Balcony_Photographic_brick_variation_2",
+              "triangles": 264
+            },
+            {
+              "name": "07_Projecting_Entrance_Balcony_Photographic_brick_variation_4",
+              "triangles": 240
+            },
+            {
+              "name": "07_Projecting_Entrance_Balcony_Stone_cap_and_sills",
+              "triangles": 180
+            },
+            {
+              "name": "07_Projecting_Entrance_Balcony_Grey_header_brick",
+              "triangles": 96
+            },
+            {
+              "name": "08_Stone_Balustrades_Grey_limestone_and_weathered_balusters",
+              "triangles": 46636
+            },
+            {
+              "name": "08_Stone_Balustrades_Stone_cap_and_sills",
+              "triangles": 576
+            },
+            {
+              "name": "09_Windows_and_Doors_Recessed_window_glass",
+              "triangles": 552
+            },
+            {
+              "name": "09_Windows_and_Doors_Dark_brown_wood_frames",
+              "triangles": 3876
+            },
+            {
+              "name": "09_Windows_and_Doors_Stone_cap_and_sills",
+              "triangles": 552
+            },
+            {
+              "name": "09_Windows_and_Doors_Grey_header_brick",
+              "triangles": 460
+            },
+            {
+              "name": "09_Windows_and_Doors_Photographic_brick_variation_1",
+              "triangles": 736
+            },
+            {
+              "name": "09_Windows_and_Doors_Dark_grey_zinc_gutters",
+              "triangles": 12
+            },
+            {
+              "name": "10_L_Hipped_Slate_Roof_Grey_slate_roof",
+              "triangles": 10
+            },
+            {
+              "name": "10_L_Hipped_Slate_Roof_Slate_courses",
+              "triangles": 1656
+            },
+            {
+              "name": "10_L_Hipped_Slate_Roof_Dark_grey_zinc_gutters",
+              "triangles": 96
+            },
+            {
+              "name": "10_L_Hipped_Slate_Roof_Dark_brown_wood_frames",
+              "triangles": 72
+            },
+            {
+              "name": "11_Dormers_and_Chimneys_Dark_grey_zinc_gutters",
+              "triangles": 72
+            },
+            {
+              "name": "11_Dormers_and_Chimneys_Recessed_window_glass",
+              "triangles": 36
+            },
+            {
+              "name": "11_Dormers_and_Chimneys_Dark_brown_wood_frames",
+              "triangles": 216
+            },
+            {
+              "name": "11_Dormers_and_Chimneys_Red_brick_body",
+              "triangles": 24
+            },
+            {
+              "name": "11_Dormers_and_Chimneys_Photographic_brick_variation_1",
+              "triangles": 48
+            },
+            {
+              "name": "11_Dormers_and_Chimneys_Open_flue_shadow",
+              "triangles": 168
+            },
+            {
+              "name": "11_Dormers_and_Chimneys_Warm_recessed_mortar",
+              "triangles": 1848
+            },
+            {
+              "name": "12_Cornices_Drainage_Grey_header_brick",
+              "triangles": 5364
+            },
+            {
+              "name": "12_Cornices_Drainage_Grey_limestone_and_weathered_balusters",
+              "triangles": 72
+            },
+            {
+              "name": "12_Cornices_Drainage_Stone_cap_and_sills",
+              "triangles": 72
+            },
+            {
+              "name": "12_Cornices_Drainage_Dark_brown_wood_frames",
+              "triangles": 72
+            },
+            {
+              "name": "12_Cornices_Drainage_Dark_grey_zinc_gutters",
+              "triangles": 312
+            }
+          ]
+        }
+      ],
+      "mcpEvidence": [
+        {
+          "path": "docs/model-audit/mcp/jungmyeongjeon/build.json",
+          "sha256": "0ef7117aefe249d8471d757702cbf19c9aef5e065d7b6d5eacb168f0236e67ec",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0",
+          "blender": "4.5.11 LTS"
+        }
+      ],
+      "recipeInputs": [
+        {
+          "path": "modeling/bespoke/jungmyeongjeon/recipe-input.json",
+          "sha256": "0d38260f1c255d815fc5ed5f40346501bded4d19c814236363026bf3151be712"
+        },
+        {
+          "path": "modeling/bespoke/jungmyeongjeon/source-footprint.json",
+          "sha256": "64ffe5f22caf2f326310ccc9dffe5eaa1b8aa7102e793d2e9b695ff619c688ef"
+        }
+      ]
+    },
+    "mmca-deoksugung": {
+      "sources": [
+        {
+          "url": "https://www.mmca.go.kr/deoksugung/accessibility/subway.do",
+          "observations": "Museum operator states23stairs to2F entrance; current facade photographs directly inspected."
+        },
+        {
+          "url": "https://www.mmca.go.kr/asset/images/accessibility/deoksugung/gettingHere/subway_6.jpg",
+          "observations": "Long flat stone wings, one tall window row, squat basement windows, blank upper gallery wall, central elevated columned entry; fountain is separate and excluded."
+        },
+        {
+          "url": "https://www.mmca.go.kr/asset/images/accessibility/deoksugung/gettingHere/subway_7.jpg",
+          "observations": "Six round smooth columns with Corinthian foliage/volute capitals; deep portico and rectangular flat entablature, broad23stepapproach, three upper windows, central doorway and tall flank windows. Photograph includes2025exhibitionbanner, exactcapturedateunspecified."
+        },
+        {
+          "url": "https://www.mmca.go.kr/eng/visitingInfo/deoksugungInfo.do",
+          "observations": "Official1F/2F/3F visitor diagrams show central hall, two long galleries and narrower terminal stair/service zones; schematic not measuredCAD."
+        },
+        {
+          "url": "https://www.mmca.go.kr/assetGwanEng/images/contents/deoksugung/2f_img_pc.png",
+          "observations": "Central entrance projection and lateral galleries; matched to source N/S plan topology."
+        },
+        {
+          "url": "https://www.mmca.go.kr/upload/artInfo/2015/08/2015080610370456313586.pdf",
+          "observations": "2014annualreport PDF20/printed21 visually inspected: Deoksugung westwing,1938-03-31completion; floorheights3.40/4.85/4.55m, concrete/stone construction. These are not overall height."
+        },
+        {
+          "url": "https://www.mmca.go.kr/upload/board/201309040000011/2018/05/2018052910540905316321.pdf",
+          "observations": "2018May MMCA education workbook PDF3 directly inspected: PalaceManagement credited elevated exterior photo shows raised central roof, lower wing parapet and ordered window/cornice. Decorative collage combines east+west motifs and is not used as a west-wing elevation."
+        }
+      ],
+      "review": {
+        "siteId": "mmca-deoksugung",
+        "status": "visually-reviewed",
+        "reviewer": "root; independent of modeling agent",
+        "date": "2026-09-21",
+        "method": "Opened source photographs and architectural plans, compared multiple candidate views, requested corrections where recorded and inspected revised renders. Frozen GLB and editable-scene hashes bind this approval.",
+        "comparisons": [
+          {
+            "source": "https://www.mmca.go.kr/deoksugung/accessibility/subway.do",
+            "observed": "Opened operator exterior photo6 and compared front whole/portico renders. Long stone gallery wings retain one main vertical window row, low basement windows and a broad blank upper wall. Six round columns and deep five-bay portico support a flat entablature, without borrowing the adjoining east palace pediment. The23-step approach is separate from the fountain."
+          },
+          {
+            "source": "https://www.mmca.go.kr/upload/board/201309040000011/2018/05/2018052910540905316321.pdf",
+            "observed": "Opened actual worksheet page3 photograph credited to Palace Management. Rejected the first translucent central hip-cover interpretation; revised opaque raised gable and small end opening follow the visible roof volume. Requested closure of unsupported black end-roof seams and a complete roof-plan camera, then inspected both revised renders. Decorative collage is not treated as a west-wing elevation."
+          },
+          {
+            "source": "https://www.mmca.go.kr/upload/artInfo/2015/08/2015080610370456313586.pdf",
+            "observed": "Opened PDF20/printed21 and confirmed official floor-to-floor heights3.40/4.85/4.55m; their sum is not claimed as surveyed overall height. Compared operator2F visitor plan to source-aligned central projection and separate end/stair volumes. East Seokjojeon and its parts remain unclaimed."
+          }
+        ],
+        "limits": "Overall14.564m height, ground/roof datums, moulding and capital details are estimates. Source inner rings are not ground-level courtyards; low wing roof covers remain a provisional interpretation. Rear/service elevations lack individually verified completion photos and are conservative approximations. No east Seokjojeon, separate connecting passage, fountain, temporary banners or adjacent palace model is included.",
+        "renders": [
+          "docs/model-audit/renders/mmca-deoksugung/front-whole.png",
+          "docs/model-audit/renders/mmca-deoksugung/front-portico.png",
+          "docs/model-audit/renders/mmca-deoksugung/elevated-official-worksheet.png",
+          "docs/model-audit/renders/mmca-deoksugung/source-roof-plan.png",
+          "docs/model-audit/renders/mmca-deoksugung/rear-limit.png"
+        ],
+        "renderSha256": {
+          "docs/model-audit/renders/mmca-deoksugung/front-whole.png": "be391f27136c3af381461b08e97027157900b85b69ccb54e76b334c8ae4110a6",
+          "docs/model-audit/renders/mmca-deoksugung/front-portico.png": "b0539f9a892f5a088ff3f01f00b501cd4ce3f782eed174f9d5409738ef8af595",
+          "docs/model-audit/renders/mmca-deoksugung/elevated-official-worksheet.png": "6d757e0d8ef1e14df97cc45fcf0d4b9dff900f57a87b04b8de9b392bd593e93d",
+          "docs/model-audit/renders/mmca-deoksugung/source-roof-plan.png": "69cf92f712d418a1754a2f0c39c583b3cf159727539ed11119a48bd75139f87a",
+          "docs/model-audit/renders/mmca-deoksugung/rear-limit.png": "136594fd6ed6beb844f6147fba026a54ca69402fb852ee87164cdc3de07682cf"
+        },
+        "reviewedInputs": {
+          "bespoke-mmca-deoksugung.glb": "61adbb9dcb58a7fee69f64dfdeb7add9a8780b661ada384ede5e4c61d80a1a48",
+          "mmca-deoksugung.blend": "86cdfd102b6dc00fdcb80284667a7907a96d6a641bd0b9bca94e0094dfa508c7"
+        }
+      },
+      "assets": [
+        {
+          "id": "bespoke-mmca-deoksugung",
+          "sourceSha256": "61adbb9dcb58a7fee69f64dfdeb7add9a8780b661ada384ede5e4c61d80a1a48",
+          "sha256": "52ac5385b48935b32cb2c1ff08addbfbb145963045f83b265d2a65099a5acd26",
+          "bytes": 3804964,
+          "dimensions": [
+            26.62298011779785,
+            14.563970565795898,
+            81.2835807800293
+          ],
+          "min": [
+            -10.138376235961914,
+            0,
+            -40.64191818237305
+          ],
+          "max": [
+            16.484603881835938,
+            14.563970565795898,
+            40.64166259765625
+          ],
+          "triangles": 71140,
+          "components": [
+            {
+              "name": "01_named_source_footprint_mass_and_floor_bands003",
+              "triangles": 312
+            },
+            {
+              "name": "01_named_source_footprint_mass_and_floor_bands003_1",
+              "triangles": 72
+            },
+            {
+              "name": "01_named_source_footprint_mass_and_floor_bands003_2",
+              "triangles": 60
+            },
+            {
+              "name": "02_east_cutstone_courses_and_openings003",
+              "triangles": 19200
+            },
+            {
+              "name": "02_east_cutstone_courses_and_openings003_1",
+              "triangles": 4704
+            },
+            {
+              "name": "03_deep_reveals_stone_architraves_sashes003",
+              "triangles": 3480
+            },
+            {
+              "name": "03_deep_reveals_stone_architraves_sashes003_1",
+              "triangles": 300
+            },
+            {
+              "name": "03_deep_reveals_stone_architraves_sashes003_2",
+              "triangles": 4260
+            },
+            {
+              "name": "03_deep_reveals_stone_architraves_sashes003_3",
+              "triangles": 744
+            },
+            {
+              "name": "03_deep_reveals_stone_architraves_sashes003_4",
+              "triangles": 744
+            },
+            {
+              "name": "04_six_freestanding_Corinthian_columns003",
+              "triangles": 84
+            },
+            {
+              "name": "04_six_freestanding_Corinthian_columns003_1",
+              "triangles": 3744
+            },
+            {
+              "name": "04_six_freestanding_Corinthian_columns003_2",
+              "triangles": 6216
+            },
+            {
+              "name": "05_acanthus_leaf_capitals_and_corner_volutes003",
+              "triangles": 4800
+            },
+            {
+              "name": "05_acanthus_leaf_capitals_and_corner_volutes003_1",
+              "triangles": 12432
+            },
+            {
+              "name": "06_flat_entablature_modillions_and_parapets003",
+              "triangles": 1812
+            },
+            {
+              "name": "06_flat_entablature_modillions_and_parapets003_1",
+              "triangles": 324
+            },
+            {
+              "name": "07_twenty_three_steps_stone_cheeks003",
+              "triangles": 864
+            },
+            {
+              "name": "07_twenty_three_steps_stone_cheeks003_1",
+              "triangles": 72
+            },
+            {
+              "name": "07_twenty_three_steps_stone_cheeks003_2",
+              "triangles": 276
+            },
+            {
+              "name": "08_provisional_low_rooflights003",
+              "triangles": 24
+            },
+            {
+              "name": "08_provisional_low_rooflights003_1",
+              "triangles": 12
+            },
+            {
+              "name": "08_provisional_low_rooflights003_2",
+              "triangles": 1188
+            },
+            {
+              "name": "08_provisional_low_rooflights003_3",
+              "triangles": 16
+            },
+            {
+              "name": "09_unverified_rear_and_terminal_service_faces003",
+              "triangles": 5136
+            },
+            {
+              "name": "09_unverified_rear_and_terminal_service_faces003_1",
+              "triangles": 72
+            },
+            {
+              "name": "09_unverified_rear_and_terminal_service_faces003_2",
+              "triangles": 192
+            }
+          ]
+        }
+      ],
+      "mcpEvidence": [
+        {
+          "path": "docs/model-audit/mcp/mmca-deoksugung/build.json",
+          "sha256": "deb68ad5a0c77c14eca0fb5d33da2beb182ddd466ee8a833a60635965a8d3099",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0",
+          "blender": "4.5.11 LTS"
+        }
+      ],
+      "recipeInputs": [
+        {
+          "path": "modeling/bespoke/mmca-deoksugung/authored-input.json",
+          "sha256": "09c37120298d82cbe9c9dcdd713a0a010a67df3a3157995b5b89d08abbe2b9b3"
+        },
+        {
+          "path": "modeling/bespoke/mmca-deoksugung/source-footprint.json",
+          "sha256": "2b3be1b975ca33c2ab28ded54b1a8309301d8fa64384e887dd0d7c50d50951dc"
+        }
+      ]
+    },
+    "lg-art-center-seoul": {
+      "sources": [
+        {
+          "url": "https://www.gansam.com/works/work.php?ptype=view&idx=4030",
+          "observations": "Architect states approximate100m square, theatre east/DiscoveryLab west; published physical model, axonometric and sections."
+        },
+        {
+          "url": "https://kiramonthly.com/1422",
+          "observations": "Architect member project: north-arrow1F floor plan and section; actual plan controls Tube diagonal, distinct theatre/science layout and metro-side notch."
+        },
+        {
+          "url": "https://www.lgart.com/home/display/region/content/JSVFelN3a2tTendqd1FGWHRaQTNQNU15c2N4eW1wSkppNjdDSW9JK0xkTEFhND0=",
+          "observations": "Operator:10m-high Tube, StepAtrium andGateArc; do not derive entire height from tube."
+        },
+        {
+          "url": "https://www.lgsciencepark.com/KR/video_detail.php?idx=324&media_type=2&page=1",
+          "observations": "LGSciencePark:80m Tube and15degree tilted elliptical section. Exactalignment derived fromplan, nominal80m differs from traced source footprint."
+        },
+        {
+          "url": "https://www.lgart.com/images/contents/img_visit_tab01_01.png",
+          "observations": "Completed terrace photo: pale oval stage enclosure, lower curved roof rim, terrace openings, separate circular stair turret."
+        },
+        {
+          "url": "https://sca.seoul.go.kr/seoulhour/site/urbanArch/board/permanent/320",
+          "observations": "Municipal architectural-award entry:combined ArtsCenter andDiscoveryLab;3above/4below differs from architectmetadata4above/3below; no false exactfloor claim."
+        },
+        {
+          "url": "https://www.gansam.com/admin/data/bbs/works/2307200958386_2.png",
+          "observations": "Completed aerial; full complex,high/low rooflevels, openoval withtransverse beams, lowerpartialarc, terraceandtower."
+        },
+        {
+          "url": "https://www.gansam.com/admin/data/bbs/works/2307200958386_4.png",
+          "observations": "Architect physical models show separation ofmainhall,blackbox,ScienceHall,Tube andStepAtrium."
+        },
+        {
+          "url": "https://www.gansam.com/admin/data/bbs/works/2307200958386_5.png",
+          "observations": "Axonometric explains Tube throughvoid andGateArc intersection."
+        },
+        {
+          "url": "https://www.gansam.com/admin/data/bbs/works/2307200958386_6.png",
+          "observations": "Completed glazed front:highatrium left,lowTube facade right,concretebase anddoor openings."
+        },
+        {
+          "url": "https://www.gansam.com/admin/data/bbs/works/2307200958386_16.png",
+          "observations": "Section shows different roofheights andTube height relative toatrium; unmeasuredproportions."
+        },
+        {
+          "url": "https://www.gansam.com/admin/data/bbs/works/2307200958386_17.png",
+          "observations": "Section identifiesScienceHall,MainHall andBlackBox Theatre."
+        }
+      ],
+      "review": {
+        "siteId": "lg-art-center-seoul",
+        "status": "visually-reviewed",
+        "reviewer": "root; independent of modeling agent",
+        "date": "2026-09-21",
+        "method": "Opened source photographs and architectural plans, compared multiple candidate views, requested corrections where recorded and inspected revised renders. Frozen GLB and editable-scene hashes bind this approval.",
+        "comparisons": [
+          {
+            "source": "https://www.gansam.com/works/work.php?ptype=view&idx=4030",
+            "observed": "Opened architect aerial2, model4, cutaway5 and sections16/17. Compared final west aerial and roof renders: unequal theatre/lab roofs, separate open oval enclosure with exposed crossbeams, lower incomplete arc, planted terrace and round stair turret replace the old uniform low slab. Requested the lower arc to rise from a flat lip toward the photographed proportion; revised2.5m remains an estimate."
+          },
+          {
+            "source": "https://kiramonthly.com/1422",
+            "observed": "Opened architect-credited1F plan with north arrow. Confirmed clipped southwest approach, theatre/lab arrangement and off-axis Tube against retained geographic footprint rather than assuming the drawing top is north."
+          },
+          {
+            "source": "https://www.lgsciencepark.com/KR/video_detail.php?idx=324&media_type=2&page=1",
+            "observed": "Compared actual Tube interior photograph with final axial interior/portal renders. A deep open elliptical passage and genuine lateral openings replace a surface oval; opposite exit is visible. Rejected disconnected tangent ribs and narrow tangent-to-ground floor. Final continuous ribs and broad level walkway follow the photo and ground-intersecting section16. Official80m length and15degree rolled section are separated from image-estimated width and datum."
+          }
+        ],
+        "limits": "Source footprint includes theatre and Discovery Lab, with one unchanged anchor and one replacement ID. Plan-to-footprint alignment is interpreted and gives an approximately90.86m facade-axis span versus80m Tube itself.20.8m theatre roof,11.7m lab roof,31.2m oval top and fine facade/roof dimensions are photographic estimates. Floor-count sources conflict. Hidden service elevations, interiors, acoustic equipment and landscaping are incomplete; neighbouring SciencePark and botanic park are excluded.",
+        "renders": [
+          "docs/model-audit/renders/lg-art-center-seoul/west_aerial_source_match.png",
+          "docs/model-audit/renders/lg-art-center-seoul/roof_layout.png",
+          "docs/model-audit/renders/lg-art-center-seoul/Tube_north_portal.png",
+          "docs/model-audit/renders/lg-art-center-seoul/Tube_through_interior.png"
+        ],
+        "renderSha256": {
+          "docs/model-audit/renders/lg-art-center-seoul/west_aerial_source_match.png": "4ae400f7fff854d0c23b129248ae1a73c7d651b24d887ef8d145a86b8b55be9c",
+          "docs/model-audit/renders/lg-art-center-seoul/roof_layout.png": "a37117aa103c2121bbc14a5a85a90ca25e48c30aeb2be168f37d1e52a6a97bf7",
+          "docs/model-audit/renders/lg-art-center-seoul/Tube_north_portal.png": "e3a04d546c08e7e4b765e93fb79e2241e8bb188604a3c5d9f2740e55c661257c",
+          "docs/model-audit/renders/lg-art-center-seoul/Tube_through_interior.png": "f4f870598751f3a40055b3c43b4e5a977ba25edb5005c8c9e4202bc57be1d6e5"
+        },
+        "reviewedInputs": {
+          "bespoke-lg-art-center-seoul-discovery-lab.glb": "74260715b40417183e983352ca171bacf007ad29f35bc9909e1ef524df0b3ba5",
+          "lg-art-center-seoul.blend": "b48fbe77d9d7a5c05478870233aff4c83a29106a9e746659b3902943fed3f973"
+        }
+      },
+      "assets": [
+        {
+          "id": "bespoke-lg-art-center-seoul-discovery-lab",
+          "sourceSha256": "74260715b40417183e983352ca171bacf007ad29f35bc9909e1ef524df0b3ba5",
+          "sha256": "fd107c9d873efd03db859c110cec7e496a43c9e3957d522d8e89e797a9edfb7d",
+          "bytes": 6321464,
+          "dimensions": [
+            158.55580139160156,
+            31.31999969482422,
+            137.218505859375
+          ],
+          "min": [
+            -79.27790069580078,
+            0,
+            -68.58396911621094
+          ],
+          "max": [
+            79.27790069580078,
+            31.31999969482422,
+            68.63453674316406
+          ],
+          "triangles": 106624,
+          "components": [
+            {
+              "name": "LG_retained_complex_ground_slab",
+              "triangles": 20
+            },
+            {
+              "name": "LG_DiscoveryLab_low_roof_plate",
+              "triangles": 28
+            },
+            {
+              "name": "LG_ArtsCenter_high_roof_plate",
+              "triangles": 12
+            },
+            {
+              "name": "LG_main_pale_roof_field",
+              "triangles": 12
+            },
+            {
+              "name": "LG_NW_concrete_plinth",
+              "triangles": 48
+            },
+            {
+              "name": "LG_NW_recessed_ground_doors",
+              "triangles": 36
+            },
+            {
+              "name": "LG_NW_tall_atrium_glazing",
+              "triangles": 12
+            },
+            {
+              "name": "LG_NW_low_tube_glazing",
+              "triangles": 12
+            },
+            {
+              "name": "LG_NW_glazing_vertical_frames",
+              "triangles": 420
+            },
+            {
+              "name": "LG_NW_glazing_horizontal_frames",
+              "triangles": 144
+            },
+            {
+              "name": "LG_atrium_tall_concrete_columns",
+              "triangles": 108
+            },
+            {
+              "name": "LG_DiscoveryLab_west_concrete_wall",
+              "triangles": 36
+            },
+            {
+              "name": "LG_DiscoveryLab_west_windows",
+              "triangles": 24
+            },
+            {
+              "name": "LG_DiscoveryLab_window_sill",
+              "triangles": 24
+            },
+            {
+              "name": "LG_DiscoveryLab_window_header",
+              "triangles": 24
+            },
+            {
+              "name": "LG_DiscoveryLab_window_mullions",
+              "triangles": 144
+            },
+            {
+              "name": "LG_metro_recess_glazing",
+              "triangles": 24
+            },
+            {
+              "name": "LG_metro_recess_vertical_frames",
+              "triangles": 300
+            },
+            {
+              "name": "LG_metro_recess_horizontal_frames",
+              "triangles": 144
+            },
+            {
+              "name": "LG_east_blackbox_service_wall",
+              "triangles": 24
+            },
+            {
+              "name": "LG_east_blackbox_tall_glazed_bay",
+              "triangles": 12
+            },
+            {
+              "name": "LG_east_tall_glazing_frames",
+              "triangles": 132
+            },
+            {
+              "name": "LG_east_tall_horizontal_frames",
+              "triangles": 120
+            },
+            {
+              "name": "LG_SE_service_concrete_piers",
+              "triangles": 48
+            },
+            {
+              "name": "LG_SE_service_dark_bays",
+              "triangles": 36
+            },
+            {
+              "name": "LG_SE_service_bay_sill",
+              "triangles": 36
+            },
+            {
+              "name": "LG_SE_service_bay_header",
+              "triangles": 36
+            },
+            {
+              "name": "LG_SE_service_window_frames",
+              "triangles": 192
+            },
+            {
+              "name": "LG_terrace_concrete_wall_piers",
+              "triangles": 48
+            },
+            {
+              "name": "LG_terrace_recessed_glazed_doors",
+              "triangles": 36
+            },
+            {
+              "name": "LG_terrace_opening_lintel",
+              "triangles": 36
+            },
+            {
+              "name": "LG_terrace_door_mullions",
+              "triangles": 216
+            },
+            {
+              "name": "LG_DiscoveryLab_rooftop_terrace_paving",
+              "triangles": 12
+            },
+            {
+              "name": "LG_terrace_long_planter_earth",
+              "triangles": 12
+            },
+            {
+              "name": "LG_terrace_planted_strip",
+              "triangles": 12
+            },
+            {
+              "name": "LG_terrace_end_planter",
+              "triangles": 12
+            },
+            {
+              "name": "LG_terrace_glass_balustrade",
+              "triangles": 36
+            },
+            {
+              "name": "LG_terrace_top_handrail",
+              "triangles": 36
+            },
+            {
+              "name": "LG_DiscoveryLab_circular_stair_turret",
+              "triangles": 960
+            },
+            {
+              "name": "LG_stair_turret_visible_treads",
+              "triangles": 324
+            },
+            {
+              "name": "LG_upper_stage_oval_wall",
+              "triangles": 1536
+            },
+            {
+              "name": "LG_upper_stage_recessed_inner_roof",
+              "triangles": 508
+            },
+            {
+              "name": "LG_upper_stage_oval_top_cap",
+              "triangles": 1536
+            },
+            {
+              "name": "LG_oval_vertical_cladding_seams",
+              "triangles": 2400
+            },
+            {
+              "name": "LG_open_oval_visible_transverse_roof_beams",
+              "triangles": 108
+            },
+            {
+              "name": "LG_oval_exterior_small_rectangular_vent",
+              "triangles": 12
+            },
+            {
+              "name": "LG_lower_auditorium_roof_arc",
+              "triangles": 960
+            },
+            {
+              "name": "LG_lower_auditorium_rectangular_roof",
+              "triangles": 12
+            },
+            {
+              "name": "LG_rolled_elliptical_Tube_shell",
+              "triangles": 1972
+            },
+            {
+              "name": "LG_Tube_fine_wood_section_ribs",
+              "triangles": 92000
+            },
+            {
+              "name": "LG_Tube_level_walkway",
+              "triangles": 12
+            },
+            {
+              "name": "LG_StepAtrium_rising_stair",
+              "triangles": 660
+            },
+            {
+              "name": "LG_GateArc_upper_curved_wall",
+              "triangles": 960
+            }
+          ]
+        }
+      ],
+      "mcpEvidence": [
+        {
+          "path": "docs/model-audit/mcp/lg-art-center-seoul/build.json",
+          "sha256": "3dc4ee1434fed278ab945f026df44d3c810dfaeca6375d32bfb2a2119ac45d5e",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0",
+          "blender": "4.5.11 LTS"
+        }
+      ],
+      "recipeInputs": [
+        {
+          "path": "modeling/bespoke/lg-art-center-seoul/authored-input.json",
+          "sha256": "b320dbd02d7209e187de33e47c719d21134a709d1480b67e8e690b8d84dcea1c"
+        }
+      ]
     }
   }
 }
