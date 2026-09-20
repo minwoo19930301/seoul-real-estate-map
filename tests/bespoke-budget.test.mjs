@@ -18,43 +18,44 @@ function harness(entries) {
     render(scene) { this.info.render.calls = scene.userData.calls ?? 1; } };
   return models;
 }
+const upgradedMaple = [208, 209, 210, 211, 212, 213];
 function maple() {
   const old = Array.from({ length: 29 }, (_, i) => entry(asset(`maple-${201+i}`, {
     coordinate: { lon: 127 + i * .0001, lat: 37.5 },
   })));
   const auxiliary = ['kindergarten', 'road'].map(id => entry(asset(id)));
-  const upgrades = [210, 211].map(n => entry(asset(`bespoke-maple-xi-${n}`, {
+  const upgrades = upgradedMaple.map(n => entry(asset(`bespoke-maple-xi-${n}`, {
     supersedes: [`maple-${n}`], footprintIds: [`fp-maple-${n}`], coordinate: { lon: 127.001, lat: 37.5 },
   })));
   const models = harness([...old, ...auxiliary, ...upgrades]);
   return { models, old, auxiliary, upgrades };
 }
 
-test('31-piece Maple site draws all 29 towers and two auxiliaries without charging two hidden references to primary budget', () => {
+test('31-piece Maple site draws all 29 towers and two auxiliaries without charging six hidden references to primary budget', () => {
   const h = maple();
   assert.equal(h.models.nearbyEntries().length, 31);
-  assert.equal(h.models.nearbyCandidates().length, 33);
+  assert.equal(h.models.nearbyCandidates().length, 37);
   h.models.render(frame);
   const active = h.models.getState().models.filter(m => m.active).map(m => m.id);
   assert.equal(active.length, 31);
-  for (let n = 201; n <= 229; n++) assert.ok(active.includes([210, 211].includes(n) ? `bespoke-maple-xi-${n}` : `maple-${n}`));
+  for (let n = 201; n <= 229; n++) assert.ok(active.includes(upgradedMaple.includes(n) ? `bespoke-maple-xi-${n}` : `maple-${n}`));
   assert.ok(h.auxiliary.every(e => e.active));
-  assert.ok(h.old.filter(e => ['maple-210', 'maple-211'].includes(e.asset.id)).every(e => !e.active));
+  assert.ok(h.old.filter(e => upgradedMaple.some(n => e.asset.id === `maple-${n}`)).every(e => !e.active));
   h.models.destroy();
 });
 
 test('dense site uses the retained same-tower reference for pending, failed, or camera-culled upgrade', () => {
   for (const mode of ['pending', 'failed', 'culled']) {
-    const h = maple(), upgrade = h.upgrades[0], old = h.old.find(e => e.asset.id === 'maple-210');
+    const h = maple(), upgrade = h.upgrades.find(e => e.asset.id === 'bespoke-maple-xi-210'), old = h.old.find(e => e.asset.id === 'maple-210');
     if (mode === 'pending') { upgrade.scene = undefined; upgrade.pending = Promise.resolve(); }
     if (mode === 'failed') { upgrade.scene = undefined; upgrade.error = 'HTTP 404'; }
     if (mode === 'culled') upgrade.scene.userData.calls = 0;
     h.models.render(frame);
     assert.equal(old.active, true, mode);
     assert.equal(upgrade.active, false, mode);
-    assert.equal(h.upgrades[1].active, true, mode);
+    assert.ok(h.upgrades.filter(e => e !== upgrade).every(e => e.active), mode);
     assert.equal(h.models.getState().models.filter(m => m.active).length, 31, mode);
-    assert.ok(h.old.filter(e => !['maple-210', 'maple-211'].includes(e.asset.id)).every(e => e.active), mode);
+    assert.ok(h.old.filter(e => !upgradedMaple.some(n => e.asset.id === `maple-${n}`)).every(e => e.active), mode);
     h.models.destroy();
   }
 });
@@ -114,7 +115,7 @@ test('a pending multi-building replacement cannot turn its many fallback models 
   models.destroy();
 });
 
-test('loading the 31 primary models plus two retained references keeps four-worker scheduling and a bounded resident cache', async () => {
+test('loading the 31 primary models plus six retained references keeps four-worker scheduling and a bounded resident cache', async () => {
   const h = maple(), requested = []; let inflight = 0, peak = 0;
   for (const e of h.models.entries) e.scene = undefined;
   h.models.loadEntry = async e => {
@@ -123,7 +124,7 @@ test('loading the 31 primary models plus two retained references keeps four-work
     e.scene = new THREE.Scene(); e.pending = undefined; inflight--; h.models.trackEntry(e);
   };
   await h.models.loadNearby();
-  assert.equal(requested.length, 33); assert.equal(new Set(requested).size, 33);
+  assert.equal(requested.length, 37); assert.equal(new Set(requested).size, 37);
   assert.equal(peak, 4);
   assert.ok(h.models.entries.filter(e => e.scene).length <= 48);
   h.models.render(frame);

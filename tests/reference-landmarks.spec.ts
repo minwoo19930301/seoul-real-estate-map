@@ -3,8 +3,9 @@ import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 const references = JSON.parse(readFileSync('public/models/reference-manifest.json', 'utf8'));
 const bespoke = JSON.parse(readFileSync('public/models/bespoke-manifest.json', 'utf8'));
 const maplePlace = references.places.find((p: any) => p.name === '메이플자이');
+const mapleUpgrades = ['maple-xi-208', 'maple-xi-209', 'maple-xi-210', 'maple-xi-211', 'maple-xi-212', 'maple-xi-213'];
 const mapleBuildings = references.assets.filter((a: any) => /^maple-xi-\d+$/.test(a.id))
-  .map((a: any) => ['maple-xi-210', 'maple-xi-211'].includes(a.id) ? `bespoke-${a.id}` : a.id).sort();
+  .map((a: any) => mapleUpgrades.includes(a.id) ? `bespoke-${a.id}` : a.id).sort();
 
 test('latest authored landmarks and Maple Xi replace generic shapes on the map', async ({ page }) => {
   test.setTimeout(300_000);
@@ -25,7 +26,7 @@ test('latest authored landmarks and Maple Xi replace generic shapes on the map',
   await expect(page.locator('#place-subtitle')).toHaveText(maplePlace.subtitle);
   await page.locator('#place-search').fill('');
   mkdirSync('tests/screenshots', { recursive: true });
-  const samples = ['reference-flight-seoul-city-hall', 'reference-flight-amorepacific-hq', 'reference-flight-ddp', 'reference-flight-tower-palace', 'bespoke-maple-xi-210'];
+  const samples = ['bespoke-seoul-city-hall-new', 'reference-flight-amorepacific-hq', 'reference-flight-ddp', 'bespoke-tower-palace-g', 'bespoke-maple-xi-210'];
   const results: any[] = [];
   for (const id of samples) {
     const asset = [...bespoke.assets, ...references.assets].find((a: any) => a.id === id);
@@ -49,7 +50,7 @@ test('latest authored landmarks and Maple Xi replace generic shapes on the map',
       const buildings = activeMaple.filter((m: any) => /^(?:bespoke-)?maple-xi-\d+$/.test(m.id)).map((m: any) => m.id).sort();
       expect(buildings).toHaveLength(29);
       expect(buildings).toEqual(mapleBuildings);
-      for (const old of ['maple-xi-210', 'maple-xi-211']) expect(state.models.find((m: any) => m.id === old)?.active).toBe(false);
+      for (const old of mapleUpgrades) expect(state.models.find((m: any) => m.id === old)?.active).toBe(false);
     }
     await page.screenshot({ path: `tests/screenshots/reference-${isMaple ? 'maple-xi' : id.replace('reference-flight-', '')}.png` });
     results.push({ id, model: state.models.find((m: any) => m.id === id), activeMaple: activeMaple.map((m: any) => m.id), active: state.models.filter((m: any) => m.active).length, drawCalls: state.lastDrawCalls });

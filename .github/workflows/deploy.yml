@@ -33,6 +33,7 @@ jobs:
       - run: python -m unittest discover -s tests -p 'test_hosted*.py' -v
       - run: python -m unittest discover -s tests -p 'test_database.py' -v
       - run: python -m unittest discover -s tests -p 'test_residential_survey*.py' -v
+      - run: python -m unittest discover -s tests -p 'test_bespoke_publisher.py' -v
       - run: node --test tests/*.test.mjs
       - run: python scripts/prepare_hosted_assets.py
       - run: npm run build

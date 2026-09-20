@@ -1,0 +1,99 @@
+{
+  "sources": [
+    {
+      "id": "samooI",
+      "url": "https://www.samoo.com/home/works/view.do?cntntsSn=59",
+      "authority": "Project architect",
+      "confirmed": "PhaseI two59F + one66F + one42F;2002completion; lower commercial streetmall; photos visually inspected.",
+      "photoUrls": [
+        "https://www.samoo.com/home/works/content/download.do?seq=3&cntntsSn=59"
+      ],
+      "photoDate": "Unspecified capture/publication date"
+    },
+    {
+      "id": "samooII",
+      "url": "https://www.samoo.com/home/works/view.do?cntntsSn=60",
+      "authority": "Project architect",
+      "confirmed": "PhaseII55F/6basements,2003completion; image visually inspected.",
+      "photoUrls": [
+        "https://www.samoo.com/home/works/content/download.do?seq=3&cntntsSn=60"
+      ],
+      "photoDate": "Unspecified"
+    },
+    {
+      "id": "samooIII",
+      "url": "https://www.samoo.com/home/works/view.do?cntntsSn=61",
+      "authority": "Project architect",
+      "confirmed": "PhaseIII69F/6basements,2004completion, radiating Y-shaped/three-bladed plan. Two exterior photos visually inspected.",
+      "photoUrls": [
+        "https://www.samoo.com/home/works/content/download.do?seq=3&cntntsSn=61",
+        "https://www.samoo.com/home/works/content/download.do?seq=4&cntntsSn=61"
+      ],
+      "photoDate": "Unspecified"
+    },
+    {
+      "id": "samsung",
+      "url": "https://www.secc.co.kr/ko/business/portfolio/housing/124",
+      "authority": "Project contractor",
+      "confirmed": "Detailed phaseI section4towers1297households; phaseIII1tower480households;1999–2004 construction.",
+      "caution": "Summary line mistakenly says2차480 while detailed section says3차480; do not reuse summary phase label."
+    },
+    {
+      "id": "ctbuh",
+      "url": "https://www.skyscrapercenter.com/complex/215",
+      "authority": "CTBUH/CVU primary building database",
+      "confirmed": "Explicit phase/letter mapping I=A/B/C/D,II=E/F,III=G. Heights A/C209,B234,D153,E/F191,G264m.",
+      "caution": "Not independently measured; A/C and D differ from retained OSM heights."
+    },
+    {
+      "id": "swa",
+      "url": "https://swacdn.s3.amazonaws.com/1/988ea28b_towerpalace.pdf",
+      "authority": "Project landscape architect",
+      "confirmed": "Downloaded one-page project sheet; inspected plan image and photographs. Plan has three road-separated sites, northeast twin towers and southwest three-wingG; suitable future topology/control reference.",
+      "caution": "Small plan not yet georeferenced or traced. Prose saysthree towers despite7towers incomplex; interpreted as three projects, not tower-count authority. PDF metadata2010-05-05."
+    },
+    {
+      "id": "ctbuh-paper",
+      "url": "https://global.ctbuh.org/paper/317",
+      "authority": "Project-participant structural paper listing",
+      "confirmed": "Search-index abstract describes phasesI+II6residential towers; phaseIII single tower plus8storey sportscentre.",
+      "caution": "Directopen404; only search-index abstract verified.73-storey wording conflicts with architect/contractor69; cannot use as final floor datum."
+    }
+  ],
+  "visualDifferences": [
+    {
+      "phase": "III",
+      "priority": 1,
+      "actualObserved": "Radiating three-wing/Y plan, deeply notched/reentrant mass, several unequal wing heights and tall vertical fins/blades at crown; blue-grey glazing and distinct silver-white verticaledges with dark service/louver strips. No conical central spire in inspected architectphotos.",
+      "currentImplementation": "ovalTower uses one scaled cylinder/ellipse, oval setbacks, lathed pointed conical silvercrown andmast. Correct264m total cannot fixwrongplan andsilhouette.",
+      "nextComponents": [
+        "Separate3wingfootprint trace",
+        "Eachwing steppedheight envelope",
+        "Glazed verticalfins and recessedlouver strips",
+        "Photograph-matched crownblade terminations",
+        "Independent low sportscentre onlyafter exactsourceidentity confirmed"
+      ]
+    },
+    {
+      "phase": "II",
+      "priority": 2,
+      "actualObserved": "Architectphoto shows visibly articulated angular multi-wing/stepped bodies, major setbacks at different heights, flat white spandrel bands and blueglazing, and open curved roof canopy/arch structure.",
+      "currentImplementation": "bowTower starts from one chamfered rectangle with two cylindrical bowed glassbays, then sharedgenericsteppedcrown. No observed asymmetricstep composition oropenrooftoparch.",
+      "uncertain": "Photo alone insufficient to assign everyvisibleface toE versusF; require numberedplan/photo viewregistration."
+    },
+    {
+      "phase": "I",
+      "priority": 3,
+      "actualObserved": "Pale neutralmetal/stone frames around broadblueglass windowbanks, centralverticalglassspine, wide horizontal mechanical/openbands, and setbacks with flat overhangingroofcaps; D42F distinctlylower thanA/C59 andB66.",
+      "currentImplementation": "Same panelTower scheme A–D uses beigechamferedsquare, one whitebay andtwo narrowdarkstrips perflatface, thinwholefloorlines, sharedtieredcrown+mast. Largeglassbanks/mechanicalbandcomposition and building-specific roofcaps missing.",
+      "uncertain": "Exactalbedo not inferred from blue-sky versus sunsetphotos; A/C209mvsOSM211m andD153mvs154m require consistent heightdatum beforebuild."
+    }
+  ],
+  "uncertainties": [
+    "Need numbered siteplan/georeference control points before final footprint/face-specific tracing; SWA plan topology has been seen but not calibrated.",
+    "No current architectural register or measuredCAD obtained.",
+    "G69officialfloors vs older paper73 wording unresolved; architect69 preferred, never silentlymix.",
+    "Sportscentre8storey claim onlyindexedpaper; exactsourceID androofheight notyetidentified.",
+    "Do not assign unidentified retail/podium source IDs to towers based only on boundingbox proximity."
+  ]
+}

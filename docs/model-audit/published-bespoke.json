@@ -2065,6 +2065,2422 @@
           "sha256": "7838e5558ed3c863585d30d63c91afe4eaf173a8fb97e83d5b2c65d5b279a214"
         }
       ]
+    },
+    "tower-palace": {
+      "sources": [
+        {
+          "url": "https://www.samoo.com/home/works/view.do?cntntsSn=59",
+          "observations": "PhaseI two59F + one66F + one42F;2002completion; lower commercial streetmall; photos visually inspected."
+        },
+        {
+          "url": "https://www.samoo.com/home/works/view.do?cntntsSn=60",
+          "observations": "PhaseII55F/6basements,2003completion; image visually inspected."
+        },
+        {
+          "url": "https://www.samoo.com/home/works/view.do?cntntsSn=61",
+          "observations": "PhaseIII69F/6basements,2004completion, radiating Y-shaped/three-bladed plan. Two exterior photos visually inspected."
+        },
+        {
+          "url": "https://www.secc.co.kr/ko/business/portfolio/housing/124",
+          "observations": "Detailed phaseI section4towers1297households; phaseIII1tower480households;1999–2004 construction."
+        },
+        {
+          "url": "https://www.skyscrapercenter.com/complex/215",
+          "observations": "Explicit phase/letter mapping I=A/B/C/D,II=E/F,III=G. Heights A/C209,B234,D153,E/F191,G264m."
+        },
+        {
+          "url": "https://swacdn.s3.amazonaws.com/1/988ea28b_towerpalace.pdf",
+          "observations": "Downloaded one-page project sheet; inspected plan image and photographs. Plan has three road-separated sites, northeast twin towers and southwest three-wingG; suitable future topology/control reference."
+        },
+        {
+          "url": "https://global.ctbuh.org/paper/317",
+          "observations": "Search-index abstract describes phasesI+II6residential towers; phaseIII single tower plus8storey sportscentre."
+        }
+      ],
+      "review": {
+        "siteId": "tower-palace",
+        "status": "visually-reviewed",
+        "reviewer": "root; independent of modeling agent",
+        "date": "2026-09-20",
+        "method": "Actual source photographs and site-plan images were opened, compared with candidate renders, rejected where specified, then final renders opened again. Geometry hashes bind this approval to exported files.",
+        "comparisons": [
+          {
+            "source": "https://www.samoo.com/home/works/view.do?cntntsSn=59",
+            "observed": "Compared SAMOO59 exterior and courtyard photographs against whole-site and I close-up renders. Rejected first uniform grid because broad twin courtyard stone piers and blue centre slot were missing. Revised face-specific piers, interrupted mechanical gallery and occupied setback penthouse now distinguish inward and outer faces."
+          },
+          {
+            "source": "https://www.samoo.com/home/works/view.do?cntntsSn=60",
+            "observed": "Compared SAMOO60 stepped bodies and upper silhouette with E/F close-up. Angular recesses, broad white bands, open triangular shoulders and shallow roof arches replace bowed generic masses. Requested and verified dark upper crown opening, lower blue band and adjacent return window instead of entirely blank screen."
+          },
+          {
+            "source": "https://www.samoo.com/home/works/view.do?cntntsSn=61",
+            "observed": "Compared SAMOO61 blade skyline and blue/metal facade against G upper view. Y-shaped serrated footprint, three unequal wing tops, dark reentrant channels and fins projecting above glazing replace the prior elliptical body and cone."
+          },
+          {
+            "source": "https://swacdn.s3.amazonaws.com/1/988ea28b_towerpalace.pdf",
+            "observed": "Compared SWA labelled plan with seven-component geographic roof view. The 4+2+1 topology remains, with one named source footprint per independently anchored GLB. D and G no longer inherit each other through the misnamed combined apartment asset."
+          }
+        ],
+        "limits": "A/C209m and D153m follow CTBUH rather than conflicting OSM211/154m; datum differences unresolved. Courtyard face assignment, wing heights253/218m, window spacing, crown depth, materials and unseen elevations are photographic interpretations, not measured CAD. Shared podiums, sports centre, roads and landscapes are excluded. Reviewed seven towers, not the complete physical development.",
+        "renders": [
+          "docs/model-audit/renders/tower-palace/review-complex-north.png",
+          "docs/model-audit/renders/tower-palace/review-plan.png",
+          "docs/model-audit/renders/tower-palace/review-I-courtyard-slot.png",
+          "docs/model-audit/renders/tower-palace/review-I-penthouse.png",
+          "docs/model-audit/renders/tower-palace/review-II-open-crown.png",
+          "docs/model-audit/renders/tower-palace/review-III-upper.png"
+        ],
+        "renderSha256": {
+          "docs/model-audit/renders/tower-palace/review-complex-north.png": "9a1ea4f7eb513c25796d77dfad3acf3566d20b0b8299aec592907e260403e85d",
+          "docs/model-audit/renders/tower-palace/review-plan.png": "d6dece090f8f49cfabd06bc04e4f66c265051ce86c3d23b912ee02e3b5994621",
+          "docs/model-audit/renders/tower-palace/review-I-courtyard-slot.png": "235da632db7880e85f5e558322405f2689a54734c1f6aa91e2e32b98a1366e3f",
+          "docs/model-audit/renders/tower-palace/review-I-penthouse.png": "8e04b883b0ce6f0b55c9a2a51131bab759663e03c8fd05875a98a964cde45f25",
+          "docs/model-audit/renders/tower-palace/review-II-open-crown.png": "181f7a606c835d768f2007c33751148285bf8ee3c1d57052f608b7fdf15588fd",
+          "docs/model-audit/renders/tower-palace/review-III-upper.png": "d014034d99d8c412937d3b3dd40ad90ba797698f9e042095abc403252061c90f"
+        },
+        "reviewedInputs": {
+          "bespoke-tower-palace-a.glb": "8d757880df03dfba86068f0a6230c8085feb8a1e524c7899dd6ece95a3d38952",
+          "tower-palace-authored.blend": "3a206ef04b53684e8dbea2025184a010989b317f4b026498495d087df692e10c",
+          "bespoke-tower-palace-b.glb": "8ad8e4a86899eb066c220bc8614b50b889ce631449b1f1d2e2c20ee8e918497a",
+          "bespoke-tower-palace-c.glb": "4a95a61e8de7d5e406d79b095bef3147795bd802843fd5e042794ee54b242ed0",
+          "bespoke-tower-palace-d.glb": "fb53a90974dc3b0190f564287b9688f073b9842b261ccad07bf2336bf45ff171",
+          "bespoke-tower-palace-e.glb": "e75b03377df3414a7bb6f517416f0ea75c04dce3b5356545edf6bdedbe2b1438",
+          "bespoke-tower-palace-f.glb": "a65200b311135356eb393064f962e8c33662243e5981a803d0efd85416adaa38",
+          "bespoke-tower-palace-g.glb": "fadcf5331e96124439f5cca099f7374042bdba24b1e5b739aa6141ca0b7cff82"
+        }
+      },
+      "assets": [
+        {
+          "id": "bespoke-tower-palace-a",
+          "sourceSha256": "8d757880df03dfba86068f0a6230c8085feb8a1e524c7899dd6ece95a3d38952",
+          "sha256": "4bcb1be8592dc69bdd763ef6d737e8c623032c9751b2576f48aa5a68ae01e22f",
+          "bytes": 1033872,
+          "dimensions": [
+            57.831443786621094,
+            209,
+            57.008766174316406
+          ],
+          "min": [
+            -28.915721893310547,
+            0,
+            -28.504383087158203
+          ],
+          "max": [
+            28.915721893310547,
+            209,
+            28.504383087158203
+          ],
+          "triangles": 18762,
+          "components": [
+            {
+              "name": "A_01_rectangular_bank_massing_1",
+              "triangles": 88
+            },
+            {
+              "name": "A_01_rectangular_bank_massing_2",
+              "triangles": 12
+            },
+            {
+              "name": "A_01_rectangular_bank_massing_3",
+              "triangles": 52
+            },
+            {
+              "name": "A_02_pale_horizontal_bands",
+              "triangles": 418
+            },
+            {
+              "name": "A_03_individual_bank_glazing_1",
+              "triangles": 2166
+            },
+            {
+              "name": "A_03_individual_bank_glazing_2",
+              "triangles": 8838
+            },
+            {
+              "name": "A_03_individual_bank_glazing_3",
+              "triangles": 2156
+            },
+            {
+              "name": "A_03_individual_bank_glazing_4",
+              "triangles": 2156
+            },
+            {
+              "name": "A_04_paired_column_axes_1",
+              "triangles": 1604
+            },
+            {
+              "name": "A_04_paired_column_axes_2",
+              "triangles": 240
+            },
+            {
+              "name": "A_04_paired_column_axes_3",
+              "triangles": 48
+            },
+            {
+              "name": "A_05_open_middle_gallery_1",
+              "triangles": 210
+            },
+            {
+              "name": "A_05_open_middle_gallery_2",
+              "triangles": 8
+            },
+            {
+              "name": "A_06_occupied_setback_penthouse_1",
+              "triangles": 94
+            },
+            {
+              "name": "A_06_occupied_setback_penthouse_2",
+              "triangles": 454
+            },
+            {
+              "name": "A_06_occupied_setback_penthouse_3",
+              "triangles": 2
+            },
+            {
+              "name": "A_06_occupied_setback_penthouse_4",
+              "triangles": 108
+            },
+            {
+              "name": "A_07_flat_cornice_and_roof_1",
+              "triangles": 52
+            },
+            {
+              "name": "A_07_flat_cornice_and_roof_2",
+              "triangles": 56
+            }
+          ]
+        },
+        {
+          "id": "bespoke-tower-palace-b",
+          "sourceSha256": "8ad8e4a86899eb066c220bc8614b50b889ce631449b1f1d2e2c20ee8e918497a",
+          "sha256": "bf95025d71d78bf7dd74c8eff029ba36a37cd055569a7024a6c19c624b4909ed",
+          "bytes": 1156836,
+          "dimensions": [
+            57.10261917114258,
+            234,
+            56.99201202392578
+          ],
+          "min": [
+            -28.55130958557129,
+            0,
+            -28.49600601196289
+          ],
+          "max": [
+            28.55130958557129,
+            234,
+            28.49600601196289
+          ],
+          "triangles": 21038,
+          "components": [
+            {
+              "name": "B_01_rectangular_bank_massing_1",
+              "triangles": 88
+            },
+            {
+              "name": "B_01_rectangular_bank_massing_2",
+              "triangles": 12
+            },
+            {
+              "name": "B_01_rectangular_bank_massing_3",
+              "triangles": 52
+            },
+            {
+              "name": "B_02_pale_horizontal_bands",
+              "triangles": 478
+            },
+            {
+              "name": "B_03_individual_bank_glazing_1",
+              "triangles": 2474
+            },
+            {
+              "name": "B_03_individual_bank_glazing_2",
+              "triangles": 10098
+            },
+            {
+              "name": "B_03_individual_bank_glazing_3",
+              "triangles": 2464
+            },
+            {
+              "name": "B_03_individual_bank_glazing_4",
+              "triangles": 2464
+            },
+            {
+              "name": "B_04_paired_column_axes_1",
+              "triangles": 1604
+            },
+            {
+              "name": "B_04_paired_column_axes_2",
+              "triangles": 272
+            },
+            {
+              "name": "B_04_paired_column_axes_3",
+              "triangles": 48
+            },
+            {
+              "name": "B_05_open_middle_gallery_1",
+              "triangles": 210
+            },
+            {
+              "name": "B_05_open_middle_gallery_2",
+              "triangles": 8
+            },
+            {
+              "name": "B_06_occupied_setback_penthouse_1",
+              "triangles": 94
+            },
+            {
+              "name": "B_06_occupied_setback_penthouse_2",
+              "triangles": 454
+            },
+            {
+              "name": "B_06_occupied_setback_penthouse_3",
+              "triangles": 2
+            },
+            {
+              "name": "B_06_occupied_setback_penthouse_4",
+              "triangles": 108
+            },
+            {
+              "name": "B_07_flat_cornice_and_roof_1",
+              "triangles": 52
+            },
+            {
+              "name": "B_07_flat_cornice_and_roof_2",
+              "triangles": 56
+            }
+          ]
+        },
+        {
+          "id": "bespoke-tower-palace-c",
+          "sourceSha256": "4a95a61e8de7d5e406d79b095bef3147795bd802843fd5e042794ee54b242ed0",
+          "sha256": "f9a377e6e7f72950f7407072046eed1ddaa3e714d9364c2d75ca94144910ae57",
+          "bytes": 1033932,
+          "dimensions": [
+            61.96471405029297,
+            209,
+            61.171443939208984
+          ],
+          "min": [
+            -30.982357025146484,
+            0,
+            -30.585721969604492
+          ],
+          "max": [
+            30.982357025146484,
+            209,
+            30.585721969604492
+          ],
+          "triangles": 18762,
+          "components": [
+            {
+              "name": "C_01_rectangular_bank_massing_1",
+              "triangles": 88
+            },
+            {
+              "name": "C_01_rectangular_bank_massing_2",
+              "triangles": 12
+            },
+            {
+              "name": "C_01_rectangular_bank_massing_3",
+              "triangles": 52
+            },
+            {
+              "name": "C_02_pale_horizontal_bands",
+              "triangles": 418
+            },
+            {
+              "name": "C_03_individual_bank_glazing_1",
+              "triangles": 2166
+            },
+            {
+              "name": "C_03_individual_bank_glazing_2",
+              "triangles": 8838
+            },
+            {
+              "name": "C_03_individual_bank_glazing_3",
+              "triangles": 2156
+            },
+            {
+              "name": "C_03_individual_bank_glazing_4",
+              "triangles": 2156
+            },
+            {
+              "name": "C_04_paired_column_axes_1",
+              "triangles": 1604
+            },
+            {
+              "name": "C_04_paired_column_axes_2",
+              "triangles": 240
+            },
+            {
+              "name": "C_04_paired_column_axes_3",
+              "triangles": 48
+            },
+            {
+              "name": "C_05_open_middle_gallery_1",
+              "triangles": 210
+            },
+            {
+              "name": "C_05_open_middle_gallery_2",
+              "triangles": 8
+            },
+            {
+              "name": "C_06_occupied_setback_penthouse_1",
+              "triangles": 94
+            },
+            {
+              "name": "C_06_occupied_setback_penthouse_2",
+              "triangles": 454
+            },
+            {
+              "name": "C_06_occupied_setback_penthouse_3",
+              "triangles": 2
+            },
+            {
+              "name": "C_06_occupied_setback_penthouse_4",
+              "triangles": 108
+            },
+            {
+              "name": "C_07_flat_cornice_and_roof_1",
+              "triangles": 52
+            },
+            {
+              "name": "C_07_flat_cornice_and_roof_2",
+              "triangles": 56
+            }
+          ]
+        },
+        {
+          "id": "bespoke-tower-palace-d",
+          "sourceSha256": "fb53a90974dc3b0190f564287b9688f073b9842b261ccad07bf2336bf45ff171",
+          "sha256": "3767228afc08e318babd44c64bfd0a24da399046187cee289dc7504da1a079d7",
+          "bytes": 751800,
+          "dimensions": [
+            64.49385833740234,
+            153,
+            64.27467346191406
+          ],
+          "min": [
+            -32.24692916870117,
+            0,
+            -32.13733673095703
+          ],
+          "max": [
+            32.24692916870117,
+            153,
+            32.13733673095703
+          ],
+          "triangles": 13540,
+          "components": [
+            {
+              "name": "D_01_rectangular_bank_massing_1",
+              "triangles": 88
+            },
+            {
+              "name": "D_01_rectangular_bank_massing_2",
+              "triangles": 12
+            },
+            {
+              "name": "D_01_rectangular_bank_massing_3",
+              "triangles": 52
+            },
+            {
+              "name": "D_02_pale_horizontal_bands",
+              "triangles": 282
+            },
+            {
+              "name": "D_03_individual_bank_glazing_1",
+              "triangles": 1462
+            },
+            {
+              "name": "D_03_individual_bank_glazing_2",
+              "triangles": 5958
+            },
+            {
+              "name": "D_03_individual_bank_glazing_3",
+              "triangles": 1452
+            },
+            {
+              "name": "D_03_individual_bank_glazing_4",
+              "triangles": 1452
+            },
+            {
+              "name": "D_04_paired_column_axes_1",
+              "triangles": 1604
+            },
+            {
+              "name": "D_04_paired_column_axes_2",
+              "triangles": 172
+            },
+            {
+              "name": "D_04_paired_column_axes_3",
+              "triangles": 48
+            },
+            {
+              "name": "D_05_open_middle_gallery_1",
+              "triangles": 210
+            },
+            {
+              "name": "D_05_open_middle_gallery_2",
+              "triangles": 8
+            },
+            {
+              "name": "D_06_occupied_setback_penthouse_1",
+              "triangles": 86
+            },
+            {
+              "name": "D_06_occupied_setback_penthouse_2",
+              "triangles": 444
+            },
+            {
+              "name": "D_06_occupied_setback_penthouse_3",
+              "triangles": 2
+            },
+            {
+              "name": "D_06_occupied_setback_penthouse_4",
+              "triangles": 100
+            },
+            {
+              "name": "D_07_flat_cornice_and_roof_1",
+              "triangles": 52
+            },
+            {
+              "name": "D_07_flat_cornice_and_roof_2",
+              "triangles": 56
+            }
+          ]
+        },
+        {
+          "id": "bespoke-tower-palace-e",
+          "sourceSha256": "e75b03377df3414a7bb6f517416f0ea75c04dce3b5356545edf6bdedbe2b1438",
+          "sha256": "12bbe335f529c3b4089fe6e43e603d0332c5c251c539ec8a16c7d648e37f5317",
+          "bytes": 1660808,
+          "dimensions": [
+            56.76667404174805,
+            191,
+            71.77403259277344
+          ],
+          "min": [
+            -28.383337020874023,
+            0,
+            -35.88701629638672
+          ],
+          "max": [
+            28.383337020874023,
+            191,
+            35.88701629638672
+          ],
+          "triangles": 30470,
+          "components": [
+            {
+              "name": "E_01_angular_stepped_five_part_body_1",
+              "triangles": 12
+            },
+            {
+              "name": "E_01_angular_stepped_five_part_body_2",
+              "triangles": 104
+            },
+            {
+              "name": "E_02_broad_white_spandrels",
+              "triangles": 2604
+            },
+            {
+              "name": "E_03_reentrant_blue_banks_1",
+              "triangles": 21262
+            },
+            {
+              "name": "E_03_reentrant_blue_banks_2",
+              "triangles": 2608
+            },
+            {
+              "name": "E_03_reentrant_blue_banks_3",
+              "triangles": 1970
+            },
+            {
+              "name": "E_04_solid_core_and_vent_axes",
+              "triangles": 788
+            },
+            {
+              "name": "E_05_open_triangular_roof_frames_1",
+              "triangles": 26
+            },
+            {
+              "name": "E_05_open_triangular_roof_frames_2",
+              "triangles": 152
+            },
+            {
+              "name": "E_05_open_triangular_roof_frames_3",
+              "triangles": 92
+            },
+            {
+              "name": "E_06_two_open_roof_arches",
+              "triangles": 684
+            },
+            {
+              "name": "E_07_ground_lobby_1",
+              "triangles": 56
+            },
+            {
+              "name": "E_07_ground_lobby_2",
+              "triangles": 56
+            },
+            {
+              "name": "E_07_ground_lobby_3",
+              "triangles": 56
+            }
+          ]
+        },
+        {
+          "id": "bespoke-tower-palace-f",
+          "sourceSha256": "a65200b311135356eb393064f962e8c33662243e5981a803d0efd85416adaa38",
+          "sha256": "3b2061d28cc414927a88b69b9a06f90ec820b3c0d710e802ea71b42844b8eb9e",
+          "bytes": 1786468,
+          "dimensions": [
+            57.60650825500488,
+            191,
+            70.48481750488281
+          ],
+          "min": [
+            -28.762615203857422,
+            0,
+            -35.233707427978516
+          ],
+          "max": [
+            28.84389305114746,
+            191,
+            35.2511100769043
+          ],
+          "triangles": 32790,
+          "components": [
+            {
+              "name": "F_01_angular_stepped_five_part_body_1",
+              "triangles": 12
+            },
+            {
+              "name": "F_01_angular_stepped_five_part_body_2",
+              "triangles": 120
+            },
+            {
+              "name": "F_02_broad_white_spandrels",
+              "triangles": 2982
+            },
+            {
+              "name": "F_03_reentrant_blue_banks_1",
+              "triangles": 22286
+            },
+            {
+              "name": "F_03_reentrant_blue_banks_2",
+              "triangles": 2986
+            },
+            {
+              "name": "F_03_reentrant_blue_banks_3",
+              "triangles": 2334
+            },
+            {
+              "name": "F_04_solid_core_and_vent_axes",
+              "triangles": 900
+            },
+            {
+              "name": "F_05_open_triangular_roof_frames_1",
+              "triangles": 26
+            },
+            {
+              "name": "F_05_open_triangular_roof_frames_2",
+              "triangles": 160
+            },
+            {
+              "name": "F_05_open_triangular_roof_frames_3",
+              "triangles": 108
+            },
+            {
+              "name": "F_06_two_open_roof_arches",
+              "triangles": 684
+            },
+            {
+              "name": "F_07_ground_lobby_1",
+              "triangles": 64
+            },
+            {
+              "name": "F_07_ground_lobby_2",
+              "triangles": 64
+            },
+            {
+              "name": "F_07_ground_lobby_3",
+              "triangles": 64
+            }
+          ]
+        },
+        {
+          "id": "bespoke-tower-palace-g",
+          "sourceSha256": "fadcf5331e96124439f5cca099f7374042bdba24b1e5b739aa6141ca0b7cff82",
+          "sha256": "7ccb8656ad6df1ef58c57aa93b1254c7466f318749b79febdd5b40ec32a2e6fa",
+          "bytes": 2316468,
+          "dimensions": [
+            67.06896781921387,
+            264,
+            74.47089004516602
+          ],
+          "min": [
+            -38.41968536376953,
+            0,
+            -35.6336669921875
+          ],
+          "max": [
+            28.649282455444336,
+            264,
+            38.837223052978516
+          ],
+          "triangles": 42532,
+          "components": [
+            {
+              "name": "G_01_three_unequal_Y_blades",
+              "triangles": 264
+            },
+            {
+              "name": "G_02_fine_silver_horizontal_curtainwall",
+              "triangles": 26580
+            },
+            {
+              "name": "G_03_deep_vertical_blade_fins",
+              "triangles": 1272
+            },
+            {
+              "name": "G_04_blue_glazing_and_spandrels_1",
+              "triangles": 80
+            },
+            {
+              "name": "G_04_blue_glazing_and_spandrels_2",
+              "triangles": 4680
+            },
+            {
+              "name": "G_04_blue_glazing_and_spandrels_3",
+              "triangles": 3498
+            },
+            {
+              "name": "G_05_reentrant_dark_louver_channels_1",
+              "triangles": 1708
+            },
+            {
+              "name": "G_05_reentrant_dark_louver_channels_2",
+              "triangles": 258
+            },
+            {
+              "name": "G_06_independent_flat_blade_terminations_1",
+              "triangles": 80
+            },
+            {
+              "name": "G_06_independent_flat_blade_terminations_2",
+              "triangles": 2054
+            },
+            {
+              "name": "G_06_independent_flat_blade_terminations_3",
+              "triangles": 54
+            },
+            {
+              "name": "G_06_independent_flat_blade_terminations_4",
+              "triangles": 264
+            },
+            {
+              "name": "G_07_green_stone_glazed_lobby_1",
+              "triangles": 64
+            },
+            {
+              "name": "G_07_green_stone_glazed_lobby_2",
+              "triangles": 1380
+            },
+            {
+              "name": "G_07_green_stone_glazed_lobby_3",
+              "triangles": 296
+            }
+          ]
+        }
+      ],
+      "mcpEvidence": [
+        {
+          "path": "docs/model-audit/mcp/tower-palace/build.json",
+          "sha256": "6438142826d56bddb1f2650c9522b7f05f9998a0262017028d703699c6b7a126",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0",
+          "blender": "4.5.11 LTS"
+        }
+      ],
+      "recipeInputs": [
+        {
+          "path": "modeling/bespoke/tower-palace/recipe-input.json",
+          "sha256": "a27308dca768349bc3f09a168c1cdd99b36385498ced6f39164a125d317a1aa8"
+        },
+        {
+          "path": "modeling/bespoke/tower-palace/claimed-source-buildings.json",
+          "sha256": "7e233252c614729e2d3dd4f7688f6d1bb79a077c3495ad712a1534412c0cca4c"
+        },
+        {
+          "path": "modeling/bespoke/tower-palace/source-observations.json",
+          "sha256": "04e5fc6871a5defbf6cc58da96045ae478b1083d2139e2d0c99f532b7b80b061"
+        }
+      ]
+    },
+    "seoul-city-hall": {
+      "sources": [
+        {
+          "url": "https://www.archdaily.com/457570/seoul-new-city-hall-iarc-architects",
+          "observations": [
+            "Architect-supplied ground-floor plan, section and Archframe completion photographs.",
+            "S-shaped double-skin curtainwall; structural triangular lattice; projecting faceted lenses at both ends; suspended pale cultural hall; folded rear side panels."
+          ]
+        },
+        {
+          "url": "https://www.seoul.go.kr/seoul/newoffice.do",
+          "observations": [
+            "Official current 13 above-ground floor guide; diagram confirms historic front building separated from new hall."
+          ]
+        },
+        {
+          "url": "https://culture.seoul.go.kr/night/sub/nightFac/view.do?facId=9",
+          "observations": [
+            "Official photograph confirms historic stone window rhythm, centered clock tablet, lower roof lantern and flat parapet wings."
+          ]
+        }
+      ],
+      "review": {
+        "siteId": "seoul-city-hall",
+        "status": "visually-reviewed",
+        "reviewer": "root; independent of modeling agent",
+        "date": "2026-09-20",
+        "method": "Actual source photographs and site-plan images were opened, compared with candidate renders, rejected where specified, then final renders opened again. Geometry hashes bind this approval to exported files.",
+        "comparisons": [
+          {
+            "source": "https://images.adsttc.com/media/images/52aa/5ebf/e8e4/4ee8/8f00/003e/large_jpg/cityhallct045.jpg?1386897066",
+            "observed": "Compared architect completion photograph arch30 and eastern render: new building lies northeast of historic wing, the recessed lower skin curves into a projecting upper eave, and the side has a separate oval lens with triangular cladding. Requested removal of the first continuous white atrium strip; revised west auditorium and east terrace are separated."
+          },
+          {
+            "source": "https://images.adsttc.com/media/images/52aa/5df1/e8e4/4e30/7c00/002f/large_jpg/cityhallct001.jpg?1386896859",
+            "observed": "Compared arch9/arch27 east and west lenses with both rendered ends. Rejected radial fan seams and bright one-direction lattice; revised Cartesian lens facets, thin glazing seams and darker alternating/crossed inner structure better follow completed photographs."
+          },
+          {
+            "source": "https://culture.seoul.go.kr/night/sub/nightFac/view.do?facId=9",
+            "observed": "Compared official library photograph and historic-front render: long vertical stone/window rhythm, central portal and clock tablet, stepped lantern base and patinated hip cap. Rejected the unsupported dark gap under the clock tower; final mass connects through the18–22m source overlap and uses warmer stone."
+          },
+          {
+            "source": "https://images.adsttc.com/media/images/52aa/632f/e8e4/4e01/d100/0069/large_jpg/floor_(2).jpg?1386898218",
+            "observed": "Geographic roof view retains U-shaped library, angled eastern wing and northwestern return rather than rectangular symmetric bar. The two new assets divide the previously claimed nine source IDs exactly and retain the original common geographic origin."
+          }
+        ],
+        "limits": "New shell nominal47.4m is retained authored estimate, not an official measured height; roof louvers reach48.22m. Historic18–35m tiers are unverified OSM-reported heights. Grid spacing, lens curvature, stone/window detail, interior volumes, material colors and roof garden detail remain simplified photographic interpretations. No neighboring buildings or plaza are included.",
+        "renders": [
+          "docs/model-audit/renders/seoul-city-hall/East_Photo.png",
+          "docs/model-audit/renders/seoul-city-hall/West_Lens.png",
+          "docs/model-audit/renders/seoul-city-hall/Historic_Front.png",
+          "docs/model-audit/renders/seoul-city-hall/Geographic_Roof.png"
+        ],
+        "renderSha256": {
+          "docs/model-audit/renders/seoul-city-hall/East_Photo.png": "41aa78a7756cb12d5b19a8ad9d9d753279b7d3254abbcf9b070b378fdd9dcfd0",
+          "docs/model-audit/renders/seoul-city-hall/West_Lens.png": "6a2ac94495cfbaeff8d41cb18c0243c1eb744bde8a102cdbb1fcb97f1ebc2b69",
+          "docs/model-audit/renders/seoul-city-hall/Historic_Front.png": "67468686ce40aa56f8a7c1692d1075bc635c7d7f07eb08bc00e74530e06db0b1",
+          "docs/model-audit/renders/seoul-city-hall/Geographic_Roof.png": "5d91282f9cc6fe098d2b55e0fc844c84af44bdc288bdad136c0ada6da3c023ad"
+        },
+        "reviewedInputs": {
+          "bespoke-seoul-city-hall-new.glb": "c353fcae90d6afacb3d419c7b4763e75ea04891ebffc343ad32aa1e87730318b",
+          "seoul-city-hall.blend": "34a47c0a2bea21da389a81342a107648ca4f070654e6d53a3cd14172d57e4be8",
+          "bespoke-seoul-city-hall-library.glb": "c8005a6d4ec779f51335d7ec4566fc660cf752b012eba0c22d62379447d68012"
+        }
+      },
+      "assets": [
+        {
+          "id": "bespoke-seoul-city-hall-new",
+          "sourceSha256": "c353fcae90d6afacb3d419c7b4763e75ea04891ebffc343ad32aa1e87730318b",
+          "sha256": "b6a7eba3fc41c66f7e693aa40fd5620a496fa8154bd49222d540e4fa6f52f40c",
+          "bytes": 3114464,
+          "dimensions": [
+            110.14104652404785,
+            48.220001220703125,
+            48.5965461730957
+          ],
+          "min": [
+            -17.770524978637695,
+            0,
+            -45.187408447265625
+          ],
+          "max": [
+            92.37052154541016,
+            48.220001220703125,
+            3.409137725830078
+          ],
+          "triangles": 57292,
+          "components": [
+            {
+              "name": "New_01_Double_Curved_Glass_Glass_panel_0",
+              "triangles": 504
+            },
+            {
+              "name": "New_01_Double_Curved_Glass_Glass_panel_3",
+              "triangles": 504
+            },
+            {
+              "name": "New_01_Double_Curved_Glass_Glass_panel_2",
+              "triangles": 504
+            },
+            {
+              "name": "New_01_Double_Curved_Glass_Glass_panel_1",
+              "triangles": 504
+            },
+            {
+              "name": "New_02_Triangulated_Steel_Curtainwall_grey_steel",
+              "triangles": 24192
+            },
+            {
+              "name": "New_02_Triangulated_Steel_Dark_structural_space_frame",
+              "triangles": 13824
+            },
+            {
+              "name": "New_03_East_Lens_End_Champagne_metal_edge_fascia",
+              "triangles": 4572
+            },
+            {
+              "name": "New_03_East_Lens_End_Side_reflective_glass",
+              "triangles": 24
+            },
+            {
+              "name": "New_03_East_Lens_End_Curtainwall_grey_steel",
+              "triangles": 156
+            },
+            {
+              "name": "New_03_East_Lens_End_Faceted_silver_lens",
+              "triangles": 149
+            },
+            {
+              "name": "New_03_East_Lens_End_Warm_silver_side_panels",
+              "triangles": 3
+            },
+            {
+              "name": "New_03_East_Lens_End_Recess_and_louvres",
+              "triangles": 6
+            },
+            {
+              "name": "New_04_West_Lens_End_Champagne_metal_edge_fascia",
+              "triangles": 4572
+            },
+            {
+              "name": "New_04_West_Lens_End_Side_reflective_glass",
+              "triangles": 24
+            },
+            {
+              "name": "New_04_West_Lens_End_Curtainwall_grey_steel",
+              "triangles": 156
+            },
+            {
+              "name": "New_04_West_Lens_End_Faceted_silver_lens",
+              "triangles": 149
+            },
+            {
+              "name": "New_04_West_Lens_End_Warm_silver_side_panels",
+              "triangles": 3
+            },
+            {
+              "name": "New_04_West_Lens_End_Recess_and_louvres",
+              "triangles": 6
+            },
+            {
+              "name": "New_05_Suspended_Cultural_Hall_Suspended_hall_white_metal",
+              "triangles": 936
+            },
+            {
+              "name": "New_06_Rear_Office_and_Roof_Recess_and_louvres",
+              "triangles": 12
+            },
+            {
+              "name": "New_06_Rear_Office_and_Roof_Warm_silver_side_panels",
+              "triangles": 204
+            },
+            {
+              "name": "New_06_Rear_Office_and_Roof_Side_reflective_glass",
+              "triangles": 5148
+            },
+            {
+              "name": "New_06_Rear_Office_and_Roof_Roof_silver_ribs",
+              "triangles": 960
+            },
+            {
+              "name": "New_07_Green_Wall_and_Entry_Seven_storey_green_wall",
+              "triangles": 12
+            },
+            {
+              "name": "New_07_Green_Wall_and_Entry_Suspended_hall_white_metal",
+              "triangles": 84
+            },
+            {
+              "name": "New_07_Green_Wall_and_Entry_Side_reflective_glass",
+              "triangles": 48
+            },
+            {
+              "name": "New_07_Green_Wall_and_Entry_Curtainwall_grey_steel",
+              "triangles": 36
+            }
+          ]
+        },
+        {
+          "id": "bespoke-seoul-city-hall-library",
+          "sourceSha256": "c8005a6d4ec779f51335d7ec4566fc660cf752b012eba0c22d62379447d68012",
+          "sha256": "8b13f088c064a0c959c4250285cac2363153126e1ed8d96ebb13de3367013adc",
+          "bytes": 1548660,
+          "dimensions": [
+            81.50060272216797,
+            35,
+            43.52403163909912
+          ],
+          "min": [
+            -51.72298049926758,
+            0,
+            -6.3415327072143555
+          ],
+          "max": [
+            29.77762222290039,
+            35,
+            37.182498931884766
+          ],
+          "triangles": 28424,
+          "components": [
+            {
+              "name": "Old_01_Source_U_Footprint_Observed_warm_grey_granite",
+              "triangles": 96
+            },
+            {
+              "name": "Old_02_Stone_Facade_Light_limestone_cornices",
+              "triangles": 8736
+            },
+            {
+              "name": "Old_02_Stone_Facade_Historic_dark_green_windows",
+              "triangles": 536
+            },
+            {
+              "name": "Old_02_Stone_Facade_Historic_bronze_frames",
+              "triangles": 12864
+            },
+            {
+              "name": "Old_02_Stone_Facade_Recessed_stone_courses",
+              "triangles": 4824
+            },
+            {
+              "name": "Old_03_Central_Portal_Observed_warm_grey_granite",
+              "triangles": 12
+            },
+            {
+              "name": "Old_03_Central_Portal_Historic_dark_green_windows",
+              "triangles": 132
+            },
+            {
+              "name": "Old_03_Central_Portal_Historic_bronze_frames",
+              "triangles": 108
+            },
+            {
+              "name": "Old_03_Central_Portal_Light_limestone_cornices",
+              "triangles": 156
+            },
+            {
+              "name": "Old_04_Clock_Tower_Observed_warm_grey_granite",
+              "triangles": 40
+            },
+            {
+              "name": "Old_04_Clock_Tower_Light_limestone_cornices",
+              "triangles": 60
+            },
+            {
+              "name": "Old_04_Clock_Tower_Weathered_blue_green_clock_roof",
+              "triangles": 90
+            },
+            {
+              "name": "Old_04_Clock_Tower_Historic_dark_green_windows",
+              "triangles": 96
+            },
+            {
+              "name": "Old_04_Clock_Tower_Clock_cream_face",
+              "triangles": 62
+            },
+            {
+              "name": "Old_04_Clock_Tower_Recess_and_louvres",
+              "triangles": 168
+            },
+            {
+              "name": "Old_05_Roof_Terraces_Observed_warm_grey_granite",
+              "triangles": 348
+            },
+            {
+              "name": "Old_05_Roof_Terraces_Roof_garden_deck",
+              "triangles": 48
+            },
+            {
+              "name": "Old_05_Roof_Terraces_Library_roof_planting",
+              "triangles": 48
+            }
+          ]
+        }
+      ],
+      "mcpEvidence": [
+        {
+          "path": "docs/model-audit/mcp/seoul-city-hall/build.json",
+          "sha256": "93635b1ec6581ad2ddd11268fb3c3db48b5db6ab331ccbd73f40ee0fe20d26f2",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0",
+          "blender": "4.5.11 LTS"
+        }
+      ],
+      "recipeInputs": [
+        {
+          "path": "modeling/bespoke/seoul-city-hall/source-footprints.json",
+          "sha256": "29a0a586289ce7c9d8cf08b422a183f29f49686ac6bb30cf4d73ecd42128d22f"
+        },
+        {
+          "path": "modeling/bespoke/seoul-city-hall/architecture-recipe.json",
+          "sha256": "8b8994d7fe607e0601be3bac7bee4439e320a0e816f993a68ca7ac9065d802e7"
+        }
+      ]
+    },
+    "maple-next-towers": {
+      "sources": [
+        {
+          "url": "https://www.xi.co.kr/Files/cmsPage/20240205_132346_189001.jpg",
+          "observations": "Numberedbar/L footprint identity and relativeposition; illustrativeplan, notCAD."
+        },
+        {
+          "url": "https://www.xi.co.kr/Files/aptProcRateImg/20250403_170535_099001.JPG",
+          "observations": "March2025east aerial; eastsides, fourindividualroofsilhouettes."
+        },
+        {
+          "url": "https://www.xi.co.kr/Files/aptProcRateImg/20250403_170447_204001.JPG",
+          "observations": "February2025opposite aerial; corroboratesroofpanelcanopies anddifferentwingheights."
+        },
+        {
+          "url": "https://beyondapartment.kr/media/pages/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja/582737ec16-1773801981/pokeoseu-27.webp",
+          "observations": "Completedhighwaypanorama; fincrowns, windowcolorfields andverticalframeaccent."
+        },
+        {
+          "url": "https://beyondapartment.kr/media/pages/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja/8a1bb14d60-1773801981/pokeoseu-15.webp",
+          "observations": "208numberedstoneentry, thickportal, verticalslats, ceilinglouvers."
+        },
+        {
+          "url": "https://beyondapartment.kr/media/pages/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja/16eb139021-1773801981/27.webp",
+          "observations": "209numberedreturnpatch, completedtop-downsitecollage andbridgecontext."
+        },
+        {
+          "url": "https://www.xi.co.kr/Files/cmsPage/20240126_101604_789001.pdf",
+          "observations": "Officialnotice distinguishes curtain-wall-look208/212 from209/213; common35F maximum doesnotverifyeachfloorcount."
+        }
+      ],
+      "review": {
+        "siteId": "maple-next-towers",
+        "status": "visually-reviewed",
+        "reviewer": "root; independent of modeling agent, with a separate civic_modeling orientation check",
+        "date": "2026-09-20",
+        "method": "Opened actual source photographs, source text, revised individual renders and context renders; rejected incorrect face directions, blank roof rooms and unsupported bases before reviewing the final geometry. Export and editable-source hashes bind this record to the reviewed revision.",
+        "comparisons": [
+          {
+            "source": "https://www.xi.co.kr/Files/aptProcRateImg/20250403_170535_099001.JPG",
+            "observed": "Compared official March aerial crops against four individual east/west/roof renders. Using the same-height 208/210/211 roof centres and bridge context corrected the initial dark-face assignment:208 e1 and212 e3 dark northeastern returns, with bright southeastern faces208 e2 and212 e4. The high roof screens and service-room arrangements differ by tower."
+          },
+          {
+            "source": "https://www.xi.co.kr/Files/aptProcRateImg/20250403_170447_204001.JPG",
+            "observed": "Compared the opposite February aerial with final roof/context renders and the independent civic_modeling review.209 has the higher northeastern arm and lower southwestern arm;213 has the higher southwestern arm and lower northeastern dark return. Rejected blank service-room cubes, then verified outward-facing vents, slots, stepped caps and separately placed panel arrays. Exact heights and equipment dimensions remain estimates."
+          },
+          {
+            "source": "https://beyondapartment.kr/media/pages/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja/8a1bb14d60-1773801981/pokeoseu-15.webp",
+            "observed": "Compared the completed photo with readable208 identification to the entry detail render. Rejected the first depth-stacked slat strip; final foreground vertical slat screen, broad central stone divider, deep portal bays, ceiling louvers/lights and mailbox divisions follow the visible source. The number itself is not modeled; entrance compass direction and dimensions remain provisional. Removed unsupported repeated open corner legs from the other three towers."
+          },
+          {
+            "source": "https://www.xi.co.kr/Files/cmsPage/20240126_101604_789001.pdf",
+            "observed": "Read the official notice page49, which lists208 and212 among curtain-wall-look towers but not209/213. Kept separately authored opaque/window faces rather than treating every L-shaped tower as the same glass facade. The notice does not establish individual floor counts or as-built dimensions."
+          }
+        ],
+        "limits": "Only source-visible elevations were compared. Individual actual floor counts and absolute roof heights are unverified;209/213 wing steps, roof equipment, window dimensions and colors are photographic estimates.208 entrance orientation remains provisional;209/212/213 ground floors remain conservative unverified opaque masses. Hidden elevations, interiors and landscaping are incomplete. Original31 GLBs and anchors remain unchanged;23 other residential towers including101/104 still await full individual exterior review. Context images show the four new towers; prior210/211 are preserved separately on the map.",
+        "renders": [
+          "docs/model-audit/renders/maple-next-towers/208-numbered-entry-detail.png",
+          "docs/model-audit/renders/maple-next-towers/208_roof.png",
+          "docs/model-audit/renders/maple-next-towers/209_roof.png",
+          "docs/model-audit/renders/maple-next-towers/212_roof.png",
+          "docs/model-audit/renders/maple-next-towers/213_roof.png",
+          "docs/model-audit/renders/maple-next-towers/four-tower-east-context.png",
+          "docs/model-audit/renders/maple-next-towers/four-tower-opposite-context.png"
+        ],
+        "renderSha256": {
+          "docs/model-audit/renders/maple-next-towers/208-numbered-entry-detail.png": "0f3456007c05db8fce777210cc26ed3da9132e26b21320decb9f47bd83a5cd0e",
+          "docs/model-audit/renders/maple-next-towers/208_roof.png": "bd456fcd498a94d6eec1d15411943c52fb9c7a4cfb8f742ab7826a9edc926d49",
+          "docs/model-audit/renders/maple-next-towers/209_roof.png": "3b79d0266dc551c47977645b453b551b62ab35d7c72c43312567514b17930dce",
+          "docs/model-audit/renders/maple-next-towers/212_roof.png": "3664899ef3b10e170bb3a3306db85a401db29592457913396c0ae027db7f6575",
+          "docs/model-audit/renders/maple-next-towers/213_roof.png": "d06536cdb55cb220b10e9a3098609325a8d304ebccb2a6a541973bd90a8e9661",
+          "docs/model-audit/renders/maple-next-towers/four-tower-east-context.png": "9b9aecde2fa63ee22559317b52a6faaee1118fb6e99177cf48022a3f62715a2a",
+          "docs/model-audit/renders/maple-next-towers/four-tower-opposite-context.png": "0397cf89d6e6bb01aaef720a3812ad9d60716994dde902350cd4583a1d8cacd9"
+        },
+        "reviewedInputs": {
+          "bespoke-maple-xi-208.glb": "f2893ca27808e6b00d205de74219014c558cb228884f9059c8153bc3c61764a5",
+          "maple-next-towers.blend": "78af137803002ef943e486b06198bc10f201bbfb3915a7aabc88797fe21f080e",
+          "bespoke-maple-xi-209.glb": "74228948f788e7f519d032902669a53a2c41206cf168f05258f7ef958df3cbdf",
+          "bespoke-maple-xi-212.glb": "67dc02c1fdc8eabedcf3636a9f23cf62fe5843d4af2284e2df65efd87a10fa5a",
+          "bespoke-maple-xi-213.glb": "9fb65c782bf327325e6051877a1dd029da9c5cff2ff9c7790ef1f833ce6f66c6"
+        }
+      },
+      "assets": [
+        {
+          "id": "bespoke-maple-xi-208",
+          "sourceSha256": "f2893ca27808e6b00d205de74219014c558cb228884f9059c8153bc3c61764a5",
+          "sha256": "6de7866cdfaa9216e3e5c808c1a0b543c8eeed6461ad04b1fafa3fa922d6e380",
+          "bytes": 1613688,
+          "dimensions": [
+            34.19088554382324,
+            94.0999984741211,
+            36.28245735168457
+          ],
+          "min": [
+            -17.078166961669922,
+            0,
+            -18.123592376708984
+          ],
+          "max": [
+            17.11271858215332,
+            94.0999984741211,
+            18.158864974975586
+          ],
+          "triangles": 27360,
+          "components": [
+            {
+              "name": "208_wing_0_observed_massing",
+              "triangles": 12
+            },
+            {
+              "name": "208_208_deep_recessed_lobby_mass",
+              "triangles": 12
+            },
+            {
+              "name": "208_wing_0_roof_slab",
+              "triangles": 12
+            },
+            {
+              "name": "208_wing_0_service_roof",
+              "triangles": 12
+            },
+            {
+              "name": "208_wing_0_roof_rail",
+              "triangles": 732
+            },
+            {
+              "name": "208_e0_lower_stone_field",
+              "triangles": 12
+            },
+            {
+              "name": "208_e0_individually_sized_reveals",
+              "triangles": 1296
+            },
+            {
+              "name": "208_e0_window_glass",
+              "triangles": 1296
+            },
+            {
+              "name": "208_e0_window_center_frames",
+              "triangles": 1296
+            },
+            {
+              "name": "208_e0_stone_vertical_joints",
+              "triangles": 168
+            },
+            {
+              "name": "208_e0_stone_courses",
+              "triangles": 48
+            },
+            {
+              "name": "208_e1_lower_stone_field",
+              "triangles": 12
+            },
+            {
+              "name": "208_e1_paint_zone_graphite",
+              "triangles": 12
+            },
+            {
+              "name": "208_e1_individually_sized_reveals",
+              "triangles": 1944
+            },
+            {
+              "name": "208_e1_window_glass",
+              "triangles": 1944
+            },
+            {
+              "name": "208_e1_window_center_frames",
+              "triangles": 1944
+            },
+            {
+              "name": "208_e1_curtainlook_spandrels",
+              "triangles": 324
+            },
+            {
+              "name": "208_e1_curtainlook_vertical_bars",
+              "triangles": 144
+            },
+            {
+              "name": "208_e1_stone_vertical_joints",
+              "triangles": 156
+            },
+            {
+              "name": "208_e1_stone_courses",
+              "triangles": 48
+            },
+            {
+              "name": "208_e2_lower_stone_field",
+              "triangles": 12
+            },
+            {
+              "name": "208_e2_individually_sized_reveals",
+              "triangles": 1944
+            },
+            {
+              "name": "208_e2_window_glass",
+              "triangles": 1944
+            },
+            {
+              "name": "208_e2_window_center_frames",
+              "triangles": 1944
+            },
+            {
+              "name": "208_e2_stone_vertical_joints",
+              "triangles": 180
+            },
+            {
+              "name": "208_e2_stone_courses",
+              "triangles": 48
+            },
+            {
+              "name": "208_e3_lower_stone_field",
+              "triangles": 12
+            },
+            {
+              "name": "208_e3_paint_zone_warm",
+              "triangles": 12
+            },
+            {
+              "name": "208_e3_individually_sized_reveals",
+              "triangles": 1944
+            },
+            {
+              "name": "208_e3_window_glass",
+              "triangles": 1944
+            },
+            {
+              "name": "208_e3_window_center_frames",
+              "triangles": 1944
+            },
+            {
+              "name": "208_e3_stone_vertical_joints",
+              "triangles": 156
+            },
+            {
+              "name": "208_e3_stone_courses",
+              "triangles": 48
+            },
+            {
+              "name": "208_crown_screen_e0_sill",
+              "triangles": 12
+            },
+            {
+              "name": "208_crown_screen_e0_individual_fins",
+              "triangles": 720
+            },
+            {
+              "name": "208_crown_screen_e0_toprail",
+              "triangles": 12
+            },
+            {
+              "name": "208_crown_screen_e2_sill",
+              "triangles": 12
+            },
+            {
+              "name": "208_crown_screen_e2_individual_fins",
+              "triangles": 756
+            },
+            {
+              "name": "208_crown_screen_e2_toprail",
+              "triangles": 12
+            },
+            {
+              "name": "208_crown_screen_e3_sill",
+              "triangles": 12
+            },
+            {
+              "name": "208_crown_screen_e3_individual_fins",
+              "triangles": 660
+            },
+            {
+              "name": "208_crown_screen_e3_toprail",
+              "triangles": 12
+            },
+            {
+              "name": "208_highway_crown_dark_header",
+              "triangles": 12
+            },
+            {
+              "name": "208_highway_crown_header_mullions",
+              "triangles": 144
+            },
+            {
+              "name": "208_roof_service_volume_0",
+              "triangles": 12
+            },
+            {
+              "name": "208_roof_service_cap_0",
+              "triangles": 12
+            },
+            {
+              "name": "208_roof_room_0_aperture_0",
+              "triangles": 12
+            },
+            {
+              "name": "208_roof_room_0_aperture_reveals",
+              "triangles": 96
+            },
+            {
+              "name": "208_roof_room_0_aperture_1",
+              "triangles": 12
+            },
+            {
+              "name": "208_roof_room_0_aperture_2",
+              "triangles": 12
+            },
+            {
+              "name": "208_roof_room_0_visible_vent_louvers",
+              "triangles": 96
+            },
+            {
+              "name": "208_roof_room_0_aperture_3",
+              "triangles": 12
+            },
+            {
+              "name": "208_roof_room_0_individual_raised_cap_edge",
+              "triangles": 12
+            },
+            {
+              "name": "208_individual_roof_panel_array_0",
+              "triangles": 432
+            },
+            {
+              "name": "208_panel_array_supports_0",
+              "triangles": 24
+            },
+            {
+              "name": "208_208_numbered_entry_thick_stone_jambs",
+              "triangles": 24
+            },
+            {
+              "name": "208_208_numbered_entry_lintel",
+              "triangles": 12
+            },
+            {
+              "name": "208_208_entry_central_stone_divider",
+              "triangles": 12
+            },
+            {
+              "name": "208_208_entry_brown_vertical_slats",
+              "triangles": 108
+            },
+            {
+              "name": "208_208_entry_ceiling_louvers",
+              "triangles": 396
+            },
+            {
+              "name": "208_208_entry_ceiling_light_strips",
+              "triangles": 24
+            },
+            {
+              "name": "208_208_entry_mailbox_bank",
+              "triangles": 12
+            },
+            {
+              "name": "208_208_entry_mailbox_joints",
+              "triangles": 120
+            }
+          ]
+        },
+        {
+          "id": "bespoke-maple-xi-209",
+          "sourceSha256": "74228948f788e7f519d032902669a53a2c41206cf168f05258f7ef958df3cbdf",
+          "sha256": "cd9ecb6e31dff9ba5bc6a429d7ceed281a7349aaa58d6e5f60f0f50180f14181",
+          "bytes": 2081288,
+          "dimensions": [
+            56.7188720703125,
+            115.2300033569336,
+            36.05640411376953
+          ],
+          "min": [
+            -28.403562545776367,
+            0,
+            -18.062963485717773
+          ],
+          "max": [
+            28.315309524536133,
+            115.2300033569336,
+            17.993440628051758
+          ],
+          "triangles": 35508,
+          "components": [
+            {
+              "name": "209_wing_0_observed_massing",
+              "triangles": 12
+            },
+            {
+              "name": "209_unverified_solid_ground_mass",
+              "triangles": 24
+            },
+            {
+              "name": "209_wing_0_roof_slab",
+              "triangles": 12
+            },
+            {
+              "name": "209_wing_0_service_roof",
+              "triangles": 12
+            },
+            {
+              "name": "209_wing_0_roof_rail",
+              "triangles": 780
+            },
+            {
+              "name": "209_wing_1_observed_massing",
+              "triangles": 12
+            },
+            {
+              "name": "209_wing_1_roof_slab",
+              "triangles": 12
+            },
+            {
+              "name": "209_wing_1_service_roof",
+              "triangles": 12
+            },
+            {
+              "name": "209_wing_1_roof_rail",
+              "triangles": 672
+            },
+            {
+              "name": "209_e0_lower_stone_field",
+              "triangles": 12
+            },
+            {
+              "name": "209_e0_individually_sized_reveals",
+              "triangles": 360
+            },
+            {
+              "name": "209_e0_window_glass",
+              "triangles": 360
+            },
+            {
+              "name": "209_e0_blank_wall_joints",
+              "triangles": 144
+            },
+            {
+              "name": "209_e0_stone_vertical_joints",
+              "triangles": 108
+            },
+            {
+              "name": "209_e0_stone_courses",
+              "triangles": 48
+            },
+            {
+              "name": "209_e1_lower_stone_field",
+              "triangles": 12
+            },
+            {
+              "name": "209_e1_individually_sized_reveals",
+              "triangles": 1440
+            },
+            {
+              "name": "209_e1_window_glass",
+              "triangles": 1440
+            },
+            {
+              "name": "209_e1_window_center_frames",
+              "triangles": 1440
+            },
+            {
+              "name": "209_e1_stone_vertical_joints",
+              "triangles": 192
+            },
+            {
+              "name": "209_e1_stone_courses",
+              "triangles": 48
+            },
+            {
+              "name": "209_e2_lower_stone_field",
+              "triangles": 12
+            },
+            {
+              "name": "209_e2_paint_zone_warm",
+              "triangles": 12
+            },
+            {
+              "name": "209_e2_individually_sized_reveals",
+              "triangles": 1584
+            },
+            {
+              "name": "209_e2_window_glass",
+              "triangles": 1584
+            },
+            {
+              "name": "209_e2_window_center_frames",
+              "triangles": 1584
+            },
+            {
+              "name": "209_e2_stone_vertical_joints",
+              "triangles": 156
+            },
+            {
+              "name": "209_e2_stone_courses",
+              "triangles": 48
+            },
+            {
+              "name": "209_e3_lower_stone_field",
+              "triangles": 12
+            },
+            {
+              "name": "209_e3_individually_sized_reveals",
+              "triangles": 1980
+            },
+            {
+              "name": "209_e3_window_glass",
+              "triangles": 1980
+            },
+            {
+              "name": "209_e3_window_center_frames",
+              "triangles": 1584
+            },
+            {
+              "name": "209_e3_stone_vertical_joints",
+              "triangles": 96
+            },
+            {
+              "name": "209_e3_stone_courses",
+              "triangles": 48
+            },
+            {
+              "name": "209_e4_lower_stone_field",
+              "triangles": 12
+            },
+            {
+              "name": "209_e4_paint_zone_warm",
+              "triangles": 12
+            },
+            {
+              "name": "209_e4_individually_sized_reveals",
+              "triangles": 2376
+            },
+            {
+              "name": "209_e4_window_glass",
+              "triangles": 2376
+            },
+            {
+              "name": "209_e4_window_center_frames",
+              "triangles": 2376
+            },
+            {
+              "name": "209_e4_stone_vertical_joints",
+              "triangles": 240
+            },
+            {
+              "name": "209_e4_stone_courses",
+              "triangles": 48
+            },
+            {
+              "name": "209_e5_lower_stone_field",
+              "triangles": 12
+            },
+            {
+              "name": "209_e5_paint_zone_warm",
+              "triangles": 12
+            },
+            {
+              "name": "209_e5_individually_sized_reveals",
+              "triangles": 2520
+            },
+            {
+              "name": "209_e5_window_glass",
+              "triangles": 2520
+            },
+            {
+              "name": "209_e5_window_center_frames",
+              "triangles": 2520
+            },
+            {
+              "name": "209_e5_stone_vertical_joints",
+              "triangles": 288
+            },
+            {
+              "name": "209_e5_stone_courses",
+              "triangles": 48
+            },
+            {
+              "name": "209_roof_service_volume_0",
+              "triangles": 12
+            },
+            {
+              "name": "209_roof_service_cap_0",
+              "triangles": 12
+            },
+            {
+              "name": "209_roof_room_0_aperture_0",
+              "triangles": 12
+            },
+            {
+              "name": "209_roof_room_0_aperture_reveals",
+              "triangles": 72
+            },
+            {
+              "name": "209_roof_room_0_aperture_1",
+              "triangles": 12
+            },
+            {
+              "name": "209_roof_room_0_visible_vent_louvers",
+              "triangles": 84
+            },
+            {
+              "name": "209_roof_room_0_aperture_2",
+              "triangles": 12
+            },
+            {
+              "name": "209_roof_room_0_individual_raised_cap_edge",
+              "triangles": 12
+            },
+            {
+              "name": "209_roof_service_volume_1",
+              "triangles": 12
+            },
+            {
+              "name": "209_roof_service_cap_1",
+              "triangles": 12
+            },
+            {
+              "name": "209_roof_room_1_aperture_0",
+              "triangles": 12
+            },
+            {
+              "name": "209_roof_room_1_aperture_reveals",
+              "triangles": 72
+            },
+            {
+              "name": "209_roof_room_1_aperture_1",
+              "triangles": 12
+            },
+            {
+              "name": "209_roof_room_1_aperture_2",
+              "triangles": 12
+            },
+            {
+              "name": "209_roof_room_1_visible_vent_louvers",
+              "triangles": 96
+            },
+            {
+              "name": "209_roof_room_1_individual_raised_cap_edge",
+              "triangles": 12
+            },
+            {
+              "name": "209_individual_roof_panel_array_0",
+              "triangles": 1080
+            },
+            {
+              "name": "209_panel_array_supports_0",
+              "triangles": 24
+            },
+            {
+              "name": "209_individual_roof_panel_array_1",
+              "triangles": 720
+            },
+            {
+              "name": "209_panel_array_supports_1",
+              "triangles": 24
+            }
+          ]
+        },
+        {
+          "id": "bespoke-maple-xi-212",
+          "sourceSha256": "67dc02c1fdc8eabedcf3636a9f23cf62fe5843d4af2284e2df65efd87a10fa5a",
+          "sha256": "7ec8092171524a88ae53021f29e4c5224a3d6f7de70852f24ab63a0f5cd1ad4c",
+          "bytes": 2178804,
+          "dimensions": [
+            49.47165489196777,
+            94.9800033569336,
+            44.210554122924805
+          ],
+          "min": [
+            -24.863075256347656,
+            0,
+            -22.23039436340332
+          ],
+          "max": [
+            24.608579635620117,
+            94.9800033569336,
+            21.980159759521484
+          ],
+          "triangles": 37068,
+          "components": [
+            {
+              "name": "212_wing_0_observed_massing",
+              "triangles": 12
+            },
+            {
+              "name": "212_unverified_solid_ground_mass",
+              "triangles": 24
+            },
+            {
+              "name": "212_wing_0_roof_slab",
+              "triangles": 12
+            },
+            {
+              "name": "212_wing_0_service_roof",
+              "triangles": 12
+            },
+            {
+              "name": "212_wing_0_roof_rail",
+              "triangles": 624
+            },
+            {
+              "name": "212_wing_1_observed_massing",
+              "triangles": 12
+            },
+            {
+              "name": "212_wing_1_roof_slab",
+              "triangles": 12
+            },
+            {
+              "name": "212_wing_1_service_roof",
+              "triangles": 12
+            },
+            {
+              "name": "212_wing_1_roof_rail",
+              "triangles": 768
+            },
+            {
+              "name": "212_e0_lower_stone_field",
+              "triangles": 12
+            },
+            {
+              "name": "212_e0_individually_sized_reveals",
+              "triangles": 324
+            },
+            {
+              "name": "212_e0_window_glass",
+              "triangles": 324
+            },
+            {
+              "name": "212_e0_blank_wall_joints",
+              "triangles": 144
+            },
+            {
+              "name": "212_e0_stone_vertical_joints",
+              "triangles": 120
+            },
+            {
+              "name": "212_e0_stone_courses",
+              "triangles": 48
+            },
+            {
+              "name": "212_e1_lower_stone_field",
+              "triangles": 12
+            },
+            {
+              "name": "212_e1_individually_sized_reveals",
+              "triangles": 1296
+            },
+            {
+              "name": "212_e1_window_glass",
+              "triangles": 1296
+            },
+            {
+              "name": "212_e1_window_center_frames",
+              "triangles": 1296
+            },
+            {
+              "name": "212_e1_stone_vertical_joints",
+              "triangles": 72
+            },
+            {
+              "name": "212_e1_stone_courses",
+              "triangles": 48
+            },
+            {
+              "name": "212_e2_lower_stone_field",
+              "triangles": 12
+            },
+            {
+              "name": "212_e2_paint_zone_warm",
+              "triangles": 12
+            },
+            {
+              "name": "212_e2_individually_sized_reveals",
+              "triangles": 1620
+            },
+            {
+              "name": "212_e2_window_glass",
+              "triangles": 1620
+            },
+            {
+              "name": "212_e2_window_center_frames",
+              "triangles": 1620
+            },
+            {
+              "name": "212_e2_stone_vertical_joints",
+              "triangles": 192
+            },
+            {
+              "name": "212_e2_stone_courses",
+              "triangles": 48
+            },
+            {
+              "name": "212_e3_lower_stone_field",
+              "triangles": 12
+            },
+            {
+              "name": "212_e3_paint_zone_graphite",
+              "triangles": 12
+            },
+            {
+              "name": "212_e3_individually_sized_reveals",
+              "triangles": 1620
+            },
+            {
+              "name": "212_e3_window_glass",
+              "triangles": 1620
+            },
+            {
+              "name": "212_e3_window_center_frames",
+              "triangles": 1620
+            },
+            {
+              "name": "212_e3_curtainlook_spandrels",
+              "triangles": 324
+            },
+            {
+              "name": "212_e3_curtainlook_vertical_bars",
+              "triangles": 120
+            },
+            {
+              "name": "212_e3_stone_vertical_joints",
+              "triangles": 84
+            },
+            {
+              "name": "212_e3_stone_courses",
+              "triangles": 48
+            },
+            {
+              "name": "212_e4_lower_stone_field",
+              "triangles": 12
+            },
+            {
+              "name": "212_e4_paint_zone_warm",
+              "triangles": 12
+            },
+            {
+              "name": "212_e4_individually_sized_reveals",
+              "triangles": 2268
+            },
+            {
+              "name": "212_e4_window_glass",
+              "triangles": 2268
+            },
+            {
+              "name": "212_e4_window_center_frames",
+              "triangles": 2268
+            },
+            {
+              "name": "212_e4_stone_vertical_joints",
+              "triangles": 288
+            },
+            {
+              "name": "212_e4_stone_courses",
+              "triangles": 48
+            },
+            {
+              "name": "212_e5_lower_stone_field",
+              "triangles": 12
+            },
+            {
+              "name": "212_e5_paint_zone_warm",
+              "triangles": 12
+            },
+            {
+              "name": "212_e5_individually_sized_reveals",
+              "triangles": 2268
+            },
+            {
+              "name": "212_e5_window_glass",
+              "triangles": 2268
+            },
+            {
+              "name": "212_e5_window_center_frames",
+              "triangles": 2268
+            },
+            {
+              "name": "212_e5_stone_vertical_joints",
+              "triangles": 204
+            },
+            {
+              "name": "212_e5_stone_courses",
+              "triangles": 48
+            },
+            {
+              "name": "212_crown_screen_e0_sill",
+              "triangles": 12
+            },
+            {
+              "name": "212_crown_screen_e0_individual_fins",
+              "triangles": 516
+            },
+            {
+              "name": "212_crown_screen_e0_toprail",
+              "triangles": 12
+            },
+            {
+              "name": "212_crown_screen_e1_sill",
+              "triangles": 12
+            },
+            {
+              "name": "212_crown_screen_e1_individual_fins",
+              "triangles": 348
+            },
+            {
+              "name": "212_crown_screen_e1_toprail",
+              "triangles": 12
+            },
+            {
+              "name": "212_crown_screen_e2_sill",
+              "triangles": 12
+            },
+            {
+              "name": "212_crown_screen_e2_individual_fins",
+              "triangles": 804
+            },
+            {
+              "name": "212_crown_screen_e2_toprail",
+              "triangles": 12
+            },
+            {
+              "name": "212_crown_screen_e4_sill",
+              "triangles": 12
+            },
+            {
+              "name": "212_crown_screen_e4_individual_fins",
+              "triangles": 1152
+            },
+            {
+              "name": "212_crown_screen_e4_toprail",
+              "triangles": 12
+            },
+            {
+              "name": "212_crown_screen_e5_sill",
+              "triangles": 12
+            },
+            {
+              "name": "212_crown_screen_e5_individual_fins",
+              "triangles": 852
+            },
+            {
+              "name": "212_crown_screen_e5_toprail",
+              "triangles": 12
+            },
+            {
+              "name": "212_highway_crown_dark_header",
+              "triangles": 12
+            },
+            {
+              "name": "212_highway_crown_header_mullions",
+              "triangles": 84
+            },
+            {
+              "name": "212_roof_service_volume_0",
+              "triangles": 12
+            },
+            {
+              "name": "212_roof_service_cap_0",
+              "triangles": 12
+            },
+            {
+              "name": "212_roof_room_0_aperture_0",
+              "triangles": 12
+            },
+            {
+              "name": "212_roof_room_0_aperture_reveals",
+              "triangles": 72
+            },
+            {
+              "name": "212_roof_room_0_aperture_1",
+              "triangles": 12
+            },
+            {
+              "name": "212_roof_room_0_visible_vent_louvers",
+              "triangles": 108
+            },
+            {
+              "name": "212_roof_room_0_aperture_2",
+              "triangles": 12
+            },
+            {
+              "name": "212_roof_room_0_individual_raised_cap_edge",
+              "triangles": 12
+            },
+            {
+              "name": "212_roof_service_volume_1",
+              "triangles": 12
+            },
+            {
+              "name": "212_roof_service_cap_1",
+              "triangles": 12
+            },
+            {
+              "name": "212_roof_room_1_aperture_0",
+              "triangles": 12
+            },
+            {
+              "name": "212_roof_room_1_aperture_reveals",
+              "triangles": 72
+            },
+            {
+              "name": "212_roof_room_1_aperture_1",
+              "triangles": 12
+            },
+            {
+              "name": "212_roof_room_1_aperture_2",
+              "triangles": 12
+            },
+            {
+              "name": "212_roof_room_1_visible_vent_louvers",
+              "triangles": 84
+            },
+            {
+              "name": "212_roof_room_1_individual_raised_cap_edge",
+              "triangles": 12
+            },
+            {
+              "name": "212_individual_roof_panel_array_0",
+              "triangles": 480
+            },
+            {
+              "name": "212_panel_array_supports_0",
+              "triangles": 24
+            },
+            {
+              "name": "212_individual_roof_panel_array_1",
+              "triangles": 864
+            },
+            {
+              "name": "212_panel_array_supports_1",
+              "triangles": 24
+            }
+          ]
+        },
+        {
+          "id": "bespoke-maple-xi-213",
+          "sourceSha256": "9fb65c782bf327325e6051877a1dd029da9c5cff2ff9c7790ef1f833ce6f66c6",
+          "sha256": "699706b21dfcf3d19726e4fbd4c93ca57c7f98ae7c6b57441702ea1974e3580f",
+          "bytes": 1969952,
+          "dimensions": [
+            46.9017448425293,
+            114.77999877929688,
+            35.39051055908203
+          ],
+          "min": [
+            -23.503408432006836,
+            0,
+            -17.748464584350586
+          ],
+          "max": [
+            23.39833641052246,
+            114.77999877929688,
+            17.642045974731445
+          ],
+          "triangles": 33576,
+          "components": [
+            {
+              "name": "213_wing_0_observed_massing",
+              "triangles": 12
+            },
+            {
+              "name": "213_unverified_solid_ground_mass",
+              "triangles": 24
+            },
+            {
+              "name": "213_wing_0_roof_slab",
+              "triangles": 12
+            },
+            {
+              "name": "213_wing_0_service_roof",
+              "triangles": 12
+            },
+            {
+              "name": "213_wing_0_roof_rail",
+              "triangles": 588
+            },
+            {
+              "name": "213_wing_1_observed_massing",
+              "triangles": 12
+            },
+            {
+              "name": "213_wing_1_roof_slab",
+              "triangles": 12
+            },
+            {
+              "name": "213_wing_1_service_roof",
+              "triangles": 12
+            },
+            {
+              "name": "213_wing_1_roof_rail",
+              "triangles": 672
+            },
+            {
+              "name": "213_e0_lower_stone_field",
+              "triangles": 12
+            },
+            {
+              "name": "213_e0_individually_sized_reveals",
+              "triangles": 396
+            },
+            {
+              "name": "213_e0_window_glass",
+              "triangles": 396
+            },
+            {
+              "name": "213_e0_blank_wall_joints",
+              "triangles": 120
+            },
+            {
+              "name": "213_e0_stone_vertical_joints",
+              "triangles": 96
+            },
+            {
+              "name": "213_e0_stone_courses",
+              "triangles": 48
+            },
+            {
+              "name": "213_e1_lower_stone_field",
+              "triangles": 12
+            },
+            {
+              "name": "213_e1_individually_sized_reveals",
+              "triangles": 1584
+            },
+            {
+              "name": "213_e1_window_glass",
+              "triangles": 1584
+            },
+            {
+              "name": "213_e1_window_center_frames",
+              "triangles": 1584
+            },
+            {
+              "name": "213_e1_stone_vertical_joints",
+              "triangles": 96
+            },
+            {
+              "name": "213_e1_stone_courses",
+              "triangles": 48
+            },
+            {
+              "name": "213_e2_lower_stone_field",
+              "triangles": 12
+            },
+            {
+              "name": "213_e2_paint_zone_warm",
+              "triangles": 12
+            },
+            {
+              "name": "213_e2_individually_sized_reveals",
+              "triangles": 1740
+            },
+            {
+              "name": "213_e2_window_glass",
+              "triangles": 1740
+            },
+            {
+              "name": "213_e2_window_center_frames",
+              "triangles": 1740
+            },
+            {
+              "name": "213_e2_stone_vertical_joints",
+              "triangles": 168
+            },
+            {
+              "name": "213_e2_stone_courses",
+              "triangles": 48
+            },
+            {
+              "name": "213_e3_lower_stone_field",
+              "triangles": 12
+            },
+            {
+              "name": "213_e3_paint_zone_graphite",
+              "triangles": 12
+            },
+            {
+              "name": "213_e3_individually_sized_reveals",
+              "triangles": 1740
+            },
+            {
+              "name": "213_e3_window_glass",
+              "triangles": 1740
+            },
+            {
+              "name": "213_e3_window_center_frames",
+              "triangles": 1392
+            },
+            {
+              "name": "213_e3_stone_vertical_joints",
+              "triangles": 96
+            },
+            {
+              "name": "213_e3_stone_courses",
+              "triangles": 48
+            },
+            {
+              "name": "213_e4_lower_stone_field",
+              "triangles": 12
+            },
+            {
+              "name": "213_e4_paint_zone_warm",
+              "triangles": 12
+            },
+            {
+              "name": "213_e4_individually_sized_reveals",
+              "triangles": 2088
+            },
+            {
+              "name": "213_e4_window_glass",
+              "triangles": 2088
+            },
+            {
+              "name": "213_e4_window_center_frames",
+              "triangles": 2088
+            },
+            {
+              "name": "213_e4_stone_vertical_joints",
+              "triangles": 228
+            },
+            {
+              "name": "213_e4_stone_courses",
+              "triangles": 48
+            },
+            {
+              "name": "213_e5_lower_stone_field",
+              "triangles": 12
+            },
+            {
+              "name": "213_e5_paint_zone_warm",
+              "triangles": 12
+            },
+            {
+              "name": "213_e5_individually_sized_reveals",
+              "triangles": 2376
+            },
+            {
+              "name": "213_e5_window_glass",
+              "triangles": 2376
+            },
+            {
+              "name": "213_e5_window_center_frames",
+              "triangles": 2376
+            },
+            {
+              "name": "213_e5_stone_vertical_joints",
+              "triangles": 204
+            },
+            {
+              "name": "213_e5_stone_courses",
+              "triangles": 48
+            },
+            {
+              "name": "213_roof_service_volume_0",
+              "triangles": 12
+            },
+            {
+              "name": "213_roof_service_cap_0",
+              "triangles": 12
+            },
+            {
+              "name": "213_roof_room_0_aperture_0",
+              "triangles": 12
+            },
+            {
+              "name": "213_roof_room_0_aperture_reveals",
+              "triangles": 72
+            },
+            {
+              "name": "213_roof_room_0_aperture_1",
+              "triangles": 12
+            },
+            {
+              "name": "213_roof_room_0_aperture_2",
+              "triangles": 12
+            },
+            {
+              "name": "213_roof_room_0_visible_vent_louvers",
+              "triangles": 96
+            },
+            {
+              "name": "213_roof_room_0_individual_raised_cap_edge",
+              "triangles": 12
+            },
+            {
+              "name": "213_roof_service_volume_1",
+              "triangles": 12
+            },
+            {
+              "name": "213_roof_service_cap_1",
+              "triangles": 12
+            },
+            {
+              "name": "213_roof_room_1_aperture_0",
+              "triangles": 12
+            },
+            {
+              "name": "213_roof_room_1_aperture_reveals",
+              "triangles": 72
+            },
+            {
+              "name": "213_roof_room_1_aperture_1",
+              "triangles": 12
+            },
+            {
+              "name": "213_roof_room_1_aperture_2",
+              "triangles": 12
+            },
+            {
+              "name": "213_roof_room_1_visible_vent_louvers",
+              "triangles": 96
+            },
+            {
+              "name": "213_roof_room_1_individual_raised_cap_edge",
+              "triangles": 12
+            },
+            {
+              "name": "213_individual_roof_panel_array_0",
+              "triangles": 528
+            },
+            {
+              "name": "213_panel_array_supports_0",
+              "triangles": 24
+            },
+            {
+              "name": "213_individual_roof_panel_array_1",
+              "triangles": 720
+            },
+            {
+              "name": "213_panel_array_supports_1",
+              "triangles": 24
+            }
+          ]
+        }
+      ],
+      "mcpEvidence": [
+        {
+          "path": "docs/model-audit/mcp/maple-next-towers/build.json",
+          "sha256": "5ae957901006574b335eb6dc36e2bdb7bbc2e5ef85cda04e4c18a8f920ffc279",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender 2.0.0",
+          "blender": "4.5.11 LTS"
+        }
+      ],
+      "recipeInputs": [
+        {
+          "path": "modeling/bespoke/maple-next-towers/authored-input.json",
+          "sha256": "b76451f936d205c3308c12c3e2d17e14a6fb437f4e51a3abf0333c81e885a725"
+        }
+      ]
     }
   }
 }

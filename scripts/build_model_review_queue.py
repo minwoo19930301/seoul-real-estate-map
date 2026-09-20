@@ -34,9 +34,9 @@ def main():
     def add(a,origin):
         if a['id'] in seen:return
         seen.add(a['id']);h=a.get('householdCount');evidence=None
-        if (a['id'].startswith('maple-xi-') or a.get('sourceRecord',{}).get('siteId')=='maple-club-cloud') and a.get('category') in {'apartment','residential-apartment'}:h=maple['household_count'];evidence={'basis':'complex total, not per building','source':maple['source_url']}
+        if (a['id'].startswith('maple-xi-') or a.get('sourceRecord',{}).get('siteId') in {'maple-club-cloud','maple-next-towers'}) and a.get('category') in {'apartment','residential-apartment'}:h=maple['household_count'];evidence={'basis':'complex total, not per building','source':maple['source_url']}
         if a['id']=='reference-flight-hyperion' or a.get('sourceRecord',{}).get('siteId')=='hyperion':h=known['apt-a15805114']['householdCount'];evidence={'basis':'known apartment component of mixed-use complex; not every tower total','assetId':'apt-a15805114'}
-        if a['id']=='reference-flight-tower-palace':h=max(known[x]['householdCount'] for x in ['apt-a13585402','apt-a13585403']);evidence={'basis':'one known component meets threshold; not entire compound total','assetIds':['apt-a13585402','apt-a13585403']}
+        if a['id']=='reference-flight-tower-palace' or a.get('sourceRecord',{}).get('siteId')=='tower-palace':h=max(known[x]['householdCount'] for x in ['apt-a13585402','apt-a13585403']);evidence={'basis':'one known component meets threshold; not entire compound total','assetIds':['apt-a13585402','apt-a13585403']}
         if a['id']=='reference-flight-cheongnyangni-skyl65' or a['id'].startswith('bespoke-skyl65-'):h=1425;evidence={'basis':'official complex total, not per tower','source':'https://www.lottecastle.co.kr/APT/AT00174/1449/summary/view.do'}
         site=a.get('sourceRecord',{}).get('siteId');review=reviews.get(site,{}).get('review',{})
         b=bucket(a,h);row={'id':a['id'],'nameKo':a.get('nameKo',a.get('name')),'origin':origin,'category':a.get('category'),'district':a.get('district'),'coordinate':a.get('coordinate'),'footprintIds':a.get('footprintIds',[]),'priorityRank':BUCKETS.index(b)+1,'priorityBucket':b,'needsVisualReview':review.get('status')!='visually-reviewed','visualStatus':review.get('status','unreviewed')}
@@ -45,7 +45,7 @@ def main():
         if a.get('supersedes'):row['supersedes']=a['supersedes']
         if reverse[a['id']]:row['supersededBy']=sorted(reverse[a['id']])
         if site:row['siteId']=site;row['reviewLimits']=review.get('limits')
-        if site=='maple-club-cloud':row['fullExteriorReviewPending']=True
+        if site in {'maple-club-cloud','maple-next-towers'}:row['fullExteriorReviewPending']=True
         rows.append(row)
     for a in legacy:add(a,'legacy-manifest')
     for f in sorted((ROOT/'public/models/residential-survey/tiles').glob('*.json')):

@@ -68,6 +68,8 @@ bespoke_bytes = read('/models/bespoke-manifest.json')
 assert hashlib.sha256(bespoke_bytes).hexdigest() == manifest['files']['public/models/bespoke-manifest.json'], 'Bespoke manifest is stale'
 bespoke = json.loads(bespoke_bytes)
 assert {'bespoke-seoul-express-terminal', 'bespoke-skyl65-a', 'bespoke-skyl65-b', 'bespoke-skyl65-c', 'bespoke-skyl65-d', 'bespoke-banpo-jamsu', 'bespoke-culture-station-seoul284', 'bespoke-hyperion-a', 'bespoke-hyperion-b', 'bespoke-hyperion-c', 'bespoke-hyperion-parking-podium', 'bespoke-hyperion-department-store', 'bespoke-maple-xi-210', 'bespoke-maple-xi-211'} <= {a['id'] for a in bespoke['assets']}, 'Reviewed Blender models missing'
+second_wave = {f'bespoke-tower-palace-{letter}' for letter in 'abcdefg'} | {f'bespoke-maple-xi-{number}' for number in [208, 209, 212, 213]} | {'bespoke-seoul-city-hall-new', 'bespoke-seoul-city-hall-library'}
+assert second_wave <= {a['id'] for a in bespoke['assets']}, 'Second-wave individual models missing'
 for asset in bespoke['assets']:
     assert hashlib.sha256(read('/models/' + asset['model'])).hexdigest() == asset['sha256'], 'Bespoke model stale or corrupted: ' + asset['id']
 

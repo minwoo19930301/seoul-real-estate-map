@@ -28,6 +28,7 @@ test('reviewed Blender exports retain geographic anchors, source evidence, edita
     assert.equal(sha('public/models/'+a.model),a.sha256);assert.equal(deployment['public/models/'+a.model],a.sha256);
     const record=a.sourceRecord;assert.equal(sha(record.blendSource),record.blendSha256);
     const e=evidence.sites[record.siteId];assert.equal(e.review.status,'visually-reviewed');assert.ok(e.review.comparisons.length&&e.sources.length);
+    assert.ok(e.mcpEvidence.length,'recorded Blender MCP execution is required');
     for(const p of e.review.renders)assert.ok(fs.statSync(p).size>1000);
     for(const p of e.mcpEvidence){assert.equal(sha(p.path),p.sha256);assert.ok(json(p.path).some(call=>call.tool==='execute_blender_code'&&!call.isError&&call.content.some(c=>c.text?.includes('Code executed successfully'))));}
     const s=await scene(a.id),b=bounds(meshes(s,/.*/));
@@ -98,4 +99,39 @@ test('Maple ClubCloud replacement keeps separate tower anchors and a single conn
  assert.ok(meshes(await scene(a.id),/skybridge_continuous_glazing/).length);
  assert.equal(meshes(await scene(b.id),/skybridge/).length,0);
  assert.ok(meshes(await scene(b.id),/e4_source_mapped_window_sizes/).length);
+});
+
+test('Tower Palace owns seven independent footprints including the formerly misgrouped D and G',()=>{
+ const old=legacy.find(a=>a.id==='reference-flight-tower-palace');
+ const components=old.sourceRecord.adaptation.componentRecipe.components;
+ const fixtures=[['a','9197849d-bf83-4832-9abe-0e78bd90981c',209],['b','995d5ddd-41d8-44aa-89d0-78b5b8207de6',234],['c','2d2c76d4-7f8d-48f7-895a-eb2cd30da173',209],['d','acdd801b-57dc-4384-b867-3cef5d194fa9',153],['e','0aa4cf05-c633-4f2b-83c5-604b8629272d',191],['f','c6873a11-88e5-4129-bc93-19bc68cd7bd5',191],['g','0279553d-08e7-48de-bd31-6016d2b5445c',264]];
+ for(const [letter,footprint,height] of fixtures){
+  const a=manifest.assets.find(a=>a.id==='bespoke-tower-palace-'+letter);assert.ok(a);
+  assert.deepEqual(a.footprintIds,[footprint]);assert.ok(a.supersedes.includes(old.id));
+  const previous=components.find(c=>c.name===letter.toUpperCase());
+  assert.deepEqual([a.coordinate.lon,a.coordinate.lat],previous.coordinate,'named geographic anchor retained');
+  assert.ok(Math.abs(a.dimensions[1]-height)<.01);
+  if(['d','g'].includes(letter))assert.ok(a.supersedes.includes('apt-a13585403'));
+  if(['e','f'].includes(letter))assert.ok(a.supersedes.includes('apt-a13585402'));
+ }
+});
+
+test('new and historic City Hall divide the nine identified source parts without absorbing neighbours',()=>{
+ const old=legacy.find(a=>a.id==='reference-flight-seoul-city-hall');
+ const newer=manifest.assets.find(a=>a.id==='bespoke-seoul-city-hall-new');
+ const library=manifest.assets.find(a=>a.id==='bespoke-seoul-city-hall-library');
+ assert.deepEqual(new Set(newer.footprintIds),new Set(['c1e08f26-ebe0-4a95-827d-c617ca8b3d5f','bb10e1bc-1807-41fc-87c5-3bdac2090c9c']));
+ assert.equal(library.footprintIds.length,7);assert.ok(library.footprintIds.includes('93725b2d-b39e-490f-bc2e-77536fc0d0c4'));
+ assert.equal(new Set([...newer.footprintIds,...library.footprintIds]).size,9);
+ assert.deepEqual(new Set([...newer.footprintIds,...library.footprintIds]),new Set(old.footprintIds));
+ for(const a of [newer,library])assert.ok(a.supersedes.includes(old.id),'both buildings share one complete fallback');
+});
+
+test('four more Maple replacements retain each original tower anchor and only replace that tower',()=>{
+ for(const n of [208,209,212,213]){
+  const old=legacy.find(a=>a.id==='maple-xi-'+n);
+  const a=manifest.assets.find(a=>a.id==='bespoke-maple-xi-'+n);assert.ok(a);
+  assert.deepEqual(a.coordinate,old.coordinate);assert.deepEqual(a.supersedes,[old.id]);
+  assert.deepEqual(a.footprintIds,[],'no inferred ownership of source buildings inside approximate illustration bounds');
+ }
 });
