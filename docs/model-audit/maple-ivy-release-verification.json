@@ -1,0 +1,106 @@
+{
+  "date": "2026-09-21",
+  "releaseSha": "a35608c4066b183754223ab5a59646989b09e0d4",
+  "pullRequest": "https://github.com/minwoo19930301/seoul-real-estate-map/pull/13",
+  "workflowRun": "https://github.com/minwoo19930301/seoul-real-estate-map/actions/runs/35529663289",
+  "workflowConclusion": "success",
+  "url": "https://seoul-elevation.vercel.app",
+  "remoteBespokeAssets": 46,
+  "remoteManifestSha256": "509ab7610be19be5f608518da6b41e45effcd23f0ab89d6ea54f81b6cce7eede",
+  "apiAndAssetChecks": "Release SHA, all46bespoke GLB hashes, reference preservation samples, Caelitus ownership partitions, terrain, search, GeoJSON layers, gzip and frontend passed the PR13 snapshot verifier.",
+  "publicBrowserCases": 10,
+  "publicBrowserResult": "passed",
+  "publicBrowserScope": "Real production UI search and normal/intentionalHTTP404 file responses across Maple, Ivy, Gratteciel, Trimage and Caelitus. No dev-only debug globals used.",
+  "rootOpenedScreenshots": [
+    "maple-normal",
+    "maple-fallback",
+    "lotte-castle-ivy-normal",
+    "lotte-castle-ivy-fallback",
+    "gratte-ciel-normal",
+    "trimage-normal",
+    "raemian-caelitus-normal"
+  ],
+  "observed": "New Maple and Ivy exterior models render on the public map; intentional missing files show retained fallbacks. Unchanged three apartment sites also render after the catalog-parser correction. Draw ownership and29logical Maple towers separately checked in local integration.",
+  "evidence": [
+    {
+      "path": "docs/model-audit/renders/maple-ivy-public/gratte-ciel-fallback.json",
+      "sha256": "8c3de61aba4a38d4857c527869f989f72005849f7884400b78534592c3759e56"
+    },
+    {
+      "path": "docs/model-audit/renders/maple-ivy-public/gratte-ciel-fallback.png",
+      "sha256": "d0eb98c9138be01b7cd38bca3ff48a4cd2ac9290b5c6b5fed8021de2345250bf"
+    },
+    {
+      "path": "docs/model-audit/renders/maple-ivy-public/gratte-ciel-normal.json",
+      "sha256": "3dad9e030679ada913666b5bb9de78d576fa7624910452d3f001c59796db1545"
+    },
+    {
+      "path": "docs/model-audit/renders/maple-ivy-public/gratte-ciel-normal.png",
+      "sha256": "ea44ca8921dd2a714efc063b9c6ca495f82a9c4641ffc1bdc6b80ab5a0b553fe"
+    },
+    {
+      "path": "docs/model-audit/renders/maple-ivy-public/lotte-castle-ivy-fallback.json",
+      "sha256": "7ffe7398b3ce0c62dba6b319ae196780d7947d4605aee1acbc4d0e3decec3fce"
+    },
+    {
+      "path": "docs/model-audit/renders/maple-ivy-public/lotte-castle-ivy-fallback.png",
+      "sha256": "c0e0950973eff334fd54a79eefe6ecafd37c9f47b53433f60ddcd4e455469659"
+    },
+    {
+      "path": "docs/model-audit/renders/maple-ivy-public/lotte-castle-ivy-normal.json",
+      "sha256": "8577dddab77322b2ec62108ca91705a26dc8aa0173c7e1d20dc3dcd4de005867"
+    },
+    {
+      "path": "docs/model-audit/renders/maple-ivy-public/lotte-castle-ivy-normal.png",
+      "sha256": "a592df253fc76ebc60bcb380b9798617ba33749addd49a542413b4bbba1b83b9"
+    },
+    {
+      "path": "docs/model-audit/renders/maple-ivy-public/maple-fallback.json",
+      "sha256": "9d90d4bcb0b3e167e609dbe16d86362bd4c47ae00bb2a2d8a1b7c04beadd2668"
+    },
+    {
+      "path": "docs/model-audit/renders/maple-ivy-public/maple-fallback.png",
+      "sha256": "685874a317656c224ecca5ae27366991354e84ad6339f46a5f92730800a8e955"
+    },
+    {
+      "path": "docs/model-audit/renders/maple-ivy-public/maple-normal.json",
+      "sha256": "a30911d62adf542505fd3954f2968ebd2b2da64b2d8494a30a1d98ac09cb2efd"
+    },
+    {
+      "path": "docs/model-audit/renders/maple-ivy-public/maple-normal.png",
+      "sha256": "bb024356d027df57cda6f6e3cc9303d072b4190f44a4c5be29100eeb01372bfd"
+    },
+    {
+      "path": "docs/model-audit/renders/maple-ivy-public/raemian-caelitus-fallback.json",
+      "sha256": "765ae9f2aabba5d29f3d79fa72980060723c9e29dafa6dc443d38ec8d0e8a907"
+    },
+    {
+      "path": "docs/model-audit/renders/maple-ivy-public/raemian-caelitus-fallback.png",
+      "sha256": "2e650185b8a64d9e4ca5abb05dc1030434f68c44bf989f54b287e5f925d10e38"
+    },
+    {
+      "path": "docs/model-audit/renders/maple-ivy-public/raemian-caelitus-normal.json",
+      "sha256": "8df31b59de27eeef727618b6081786fb2c8fbb83a60a0649018f656ea43e0411"
+    },
+    {
+      "path": "docs/model-audit/renders/maple-ivy-public/raemian-caelitus-normal.png",
+      "sha256": "3bd212894369fabb0326e501b21f8ef5b6bbcd09951cd77f540b99cd3e744879"
+    },
+    {
+      "path": "docs/model-audit/renders/maple-ivy-public/trimage-fallback.json",
+      "sha256": "30a2490b34f2f8a23907c00f8c59548563dd043897753498ffa0cf24861afdcb"
+    },
+    {
+      "path": "docs/model-audit/renders/maple-ivy-public/trimage-fallback.png",
+      "sha256": "7a6e8ac93e72e9221ae52a73cee3e7e8809b0daa54ef5fc31895a1ff63ead89b"
+    },
+    {
+      "path": "docs/model-audit/renders/maple-ivy-public/trimage-normal.json",
+      "sha256": "63c46d5f68ea859316793257c014ada2a5714eabef1edf8e44d2bf2422d8af8e"
+    },
+    {
+      "path": "docs/model-audit/renders/maple-ivy-public/trimage-normal.png",
+      "sha256": "88b361d4de249dcfb4b73ae2ef27aae67cca117c1e2b9fb726bc73b53946b471"
+    }
+  ]
+}

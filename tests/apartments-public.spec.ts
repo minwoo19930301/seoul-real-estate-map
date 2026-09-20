@@ -1,15 +1,35 @@
 import { test, expect } from '@playwright/test';
 import { readFileSync, mkdirSync, writeFileSync } from 'node:fs';
 const manifest=JSON.parse(readFileSync('public/models/bespoke-manifest.json','utf8'));
+const references=JSON.parse(readFileSync('public/models/reference-manifest.json','utf8'));
+const mapleNumbers=[...Array.from({length:14},(_,i)=>101+i),...Array.from({length:15},(_,i)=>201+i)];
+const mapleModels=mapleNumbers.map(n=>{
+  let asset=references.assets.find((a:any)=>a.id===`maple-xi-${n}`);
+  const seen=new Set<string>();
+  while(asset){
+    if(seen.has(asset.id))throw new Error('Cyclic Maple replacement '+asset.id);
+    seen.add(asset.id);
+    const next=manifest.assets.find((a:any)=>a.supersedes?.includes(asset.id));
+    if(!next)break;
+    asset=next;
+  }
+  if(!asset)throw new Error('Missing Maple tower '+n);
+  return asset;
+});
 for(const site of [
-  {id:'maple',query:'메이플자이',count:2,modelIds:['bespoke-maple-xi-207','bespoke-maple-xi-213-corrected'],failedId:'bespoke-maple-xi-213-corrected'},
+  {id:'mokdong-trapalace',query:'목동 트라팰리스',count:5,failedId:'bespoke-mokdong-trapalace-western-a'},
+  {id:'mokdong-hyperion-2',query:'목동 하이페리온2차',count:4,failedId:'bespoke-mokdong-hyperion-2-201'},
+  {id:'galleria-palace',query:'잠실 갤러리아팰리스',count:4,failedId:'bespoke-galleria-palace-a'},
+  {id:'maple',query:'메이플자이',count:29,failedId:'bespoke-maple-xi-204'},
+  {id:'mecenatpolis',query:'메세나폴리스',count:4},
+  {id:'lotte-castle-empire',query:'여의도 롯데캐슬엠파이어',count:3},
   {id:'lotte-castle-ivy',query:'여의도 롯데캐슬아이비',count:3},
   {id:'gratte-ciel',query:'청량리역 한양수자인 그라시엘',count:4},
   {id:'trimage',query:'서울숲 트리마제',count:4},
   {id:'raemian-caelitus',query:'래미안 첼리투스',count:3},
 ]) for(const missing of [false,true]) test(`Public UI ${site.id} ${missing?'missing asset':'normal'}`,async({page})=>{
   test.setTimeout(120_000);
-  const models=manifest.assets.filter((a:any)=>site.modelIds ? site.modelIds.includes(a.id) : a.id.startsWith(`bespoke-${site.id}-`));
+  const models=site.id==='maple'?mapleModels:manifest.assets.filter((a:any)=>a.id.startsWith(`bespoke-${site.id}-`));
   const failed=models.find((a:any)=>site.failedId ? a.id===site.failedId : a.id.endsWith(site.id==='raemian-caelitus'?'102':'101'));
   const statuses:Record<string,number>={},errors:string[]=[];
   page.on('response',r=>{if(r.url().includes('/models/'))statuses[new URL(r.url()).pathname]=r.status();});

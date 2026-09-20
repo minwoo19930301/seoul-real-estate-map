@@ -406,6 +406,211 @@
           }
         }
       ]
+    },
+    {
+      "sourceId": "apt-a15805111",
+      "sourceSha256": "f92d9da98ba1324d2296e9a47cc012b9db34d48cdf8c06cc16c4898c1d8c564f",
+      "sourceFootprintIds": [
+        "ed9b1fad-4a3a-4c4f-8413-36fb9104b37e",
+        "24bcc2ab-6c41-4033-8b83-c9f94bf16496",
+        "f399d96e-461e-4baa-9fc5-bdcf6d919279",
+        "e75bec98-4829-45f0-ac3e-a2b73a4d8999",
+        "13e9a720-1daf-4c3d-89a0-5d3d53b70139",
+        "a2684722-dba2-4c6f-9bad-fcf0276f0f8a"
+      ],
+      "assets": [
+        {
+          "id": "apt-a15805111",
+          "model": "generic-corrections/apt-a15805111.glb",
+          "name": "목동현대하이페리온2차 아파트 201–204동 (기존 추정 모형)",
+          "nameKo": "목동현대하이페리온2차 아파트 201–204동 (기존 추정 모형)",
+          "district": "양천구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            134.06387329101562,
+            135.0,
+            122.00572204589844
+          ],
+          "measuredGlbDimensions": [
+            134.06387329101562,
+            135.0,
+            122.00572204589844
+          ],
+          "bounds": {
+            "min": [
+              -74.69084167480469,
+              0.0,
+              -28.987133026123047
+            ],
+            "max": [
+              59.37303924560547,
+              135.0,
+              93.01859283447266
+            ]
+          },
+          "triangles": 2806,
+          "drawCalls": 3,
+          "bytes": 171348,
+          "sha256": "ab24d5abc09a013826d9ccd5dd212955a9b3067e33b85be1362c0e89224db182",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.8705019,
+            "lat": 37.52423190467956,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 4,
+          "footprintIds": [
+            "ed9b1fad-4a3a-4c4f-8413-36fb9104b37e",
+            "24bcc2ab-6c41-4033-8b83-c9f94bf16496",
+            "f399d96e-461e-4baa-9fc5-bdcf6d919279",
+            "a2684722-dba2-4c6f-9bad-fcf0276f0f8a"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/APARTMENT_400_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "householdCount": 576,
+          "apartmentCode": "A15805111",
+          "searchable": true,
+          "geoBounds": [
+            126.8696558997566,
+            37.52339629976351,
+            126.87117440019583,
+            37.5244923000715
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a15805111",
+            "sourceSha256": "f92d9da98ba1324d2296e9a47cc012b9db34d48cdf8c06cc16c4898c1d8c564f",
+            "operation": "Exact triangle partition; unchanged vertex attributes, materials and original terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-hyperion-ii-officetels",
+          "model": "generic-corrections/fallback-hyperion-ii-officetels.glb",
+          "name": "목동현대하이페리온2차 오피스텔 205·206동 (기존 추정 모형)",
+          "nameKo": "목동현대하이페리온2차 오피스텔 205·206동 (기존 추정 모형)",
+          "district": "양천구",
+          "category": "officetel",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            137.4717559814453,
+            144.0,
+            70.38782501220703
+          ],
+          "measuredGlbDimensions": [
+            137.4717559814453,
+            144.0,
+            70.38782501220703
+          ],
+          "bounds": {
+            "min": [
+              -62.78091812133789,
+              0.0,
+              -93.01859283447266
+            ],
+            "max": [
+              74.69084167480469,
+              144.0,
+              -22.630767822265625
+            ]
+          },
+          "triangles": 1771,
+          "drawCalls": 3,
+          "bytes": 111072,
+          "sha256": "408359f3ddf560c99b85e36f8b5bc26ac7a187e34c9f4018659615458c43b296",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.8705019,
+            "lat": 37.52423190467956,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 2,
+          "footprintIds": [
+            "e75bec98-4829-45f0-ac3e-a2b73a4d8999",
+            "13e9a720-1daf-4c3d-89a0-5d3d53b70139"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/APARTMENT_400_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "geoBounds": [
+            126.86979079980591,
+            37.524435200048835,
+            126.87134790024339,
+            37.52506750023649
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a15805111",
+            "sourceSha256": "f92d9da98ba1324d2296e9a47cc012b9db34d48cdf8c06cc16c4898c1d8c564f",
+            "operation": "Exact triangle partition; unchanged vertex attributes, materials and original terrain anchor."
+          },
+          "residentialCompletionCredit": false
+        }
+      ]
     }
   ]
 }
