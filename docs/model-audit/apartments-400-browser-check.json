@@ -1,0 +1,41 @@
+{
+  "date": "2026-09-21",
+  "environment": "Local Vite4175 with existing read-only source API8791, real Chrome WebGL",
+  "scenarios": 6,
+  "result": "passed",
+  "normalSites": [
+    "gratte-ciel",
+    "trimage",
+    "raemian-caelitus"
+  ],
+  "forcedHttp404": [
+    "bespoke-gratte-ciel-101",
+    "bespoke-trimage-101",
+    "bespoke-raemian-caelitus-102"
+  ],
+  "assertions": [
+    "All11 named models drew with successful source ownership and no duplicate generic solids.",
+    "One failed visible tower preserves the entire retained compound and withholds its sibling replacements.",
+    "Caelitus101 replacement leaves six neighboring source buildings visible.",
+    "At most32 models active per view.",
+    "No page errors in normal views."
+  ],
+  "initialFailuresAndFixes": [
+    "Test initialization now waits for the asynchronous city-model layer.",
+    "Runtime replacement peer grouping previously only included reference fallbacks; broadened to every explicit retained asset ID so generic apartment compounds remain whole on partial failure."
+  ],
+  "files": {
+    "docs/model-audit/renders/apartments-400-map/raemian-caelitus-fallback.json": "38936ff7bc30f0dbef0a986b0090f97f4650f62c500523ed35bd80fb2a67d73f",
+    "docs/model-audit/renders/apartments-400-map/gratte-ciel-fallback.json": "b83d8c80183feb43f7269ea61a3f6bccb4092c764d189adad6c4dc7e76ce2181",
+    "docs/model-audit/renders/apartments-400-map/gratte-ciel-fallback.png": "78a56b410b2a820de0df848276f088251c8a4d37c2f366c35be971761673146f",
+    "docs/model-audit/renders/apartments-400-map/raemian-caelitus.json": "83677d1ce2ab2cc752741539ab47c475ce63eb868f3365e6e79776bf8185c12d",
+    "docs/model-audit/renders/apartments-400-map/trimage-fallback.json": "35dd3e011a3db3d0587dbec99af506e714ab617aa7450fdb6d74fc207bb20df6",
+    "docs/model-audit/renders/apartments-400-map/gratte-ciel.png": "5e3983a3a7adb6a5de9a3f46e92675e8845aa79cf3db7d94e331d526a823c5ea",
+    "docs/model-audit/renders/apartments-400-map/trimage.json": "b77190cf003f569e509dae557409e4d659012647e48bd75e4bfdf852572f0f3c",
+    "docs/model-audit/renders/apartments-400-map/gratte-ciel.json": "35ed2674b7ef99b4a9fd817681d2f44add82b8cb4f92469b719b29ca0cc0a100",
+    "docs/model-audit/renders/apartments-400-map/raemian-caelitus.png": "20e35e5ecb4df5f7489b938e027c415655b0a4355a2902273ccda15037d0a33a",
+    "docs/model-audit/renders/apartments-400-map/trimage.png": "0dd483ab19caaa7b9d6dc44efb43742b815aea5f36e71fa7e67a1298af33a815",
+    "docs/model-audit/renders/apartments-400-map/raemian-caelitus-fallback.png": "7f6d61fbe7b9b714a261d23c2a4de5db99c509ee95ca15d0d459f2cf8dd82a32",
+    "docs/model-audit/renders/apartments-400-map/trimage-fallback.png": "23716453dc18d1b0f24033a1160946e395a4fabff879c12ca0c75e23e34fc458"
+  }
+}

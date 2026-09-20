@@ -1,0 +1,1076 @@
+{
+  "version": 1,
+  "checkedOn": "2026-09-21",
+  "purpose": "Independent height and residential-building identity cross-check of four currently completed management codes; no geometry or coverage approval changes.",
+  "source": {
+    "officialRegisterUrl": "https://data.seoul.go.kr/dataList/OA-22424/S/1/datasetView.do",
+    "retainedExtractDate": "2026-09-08",
+    "registerInputSha256": "ba00150bbc9b2343fd2ba2fbaaa0c723df7d5dabbbd820345a405e9aaa5162aa",
+    "registerRows": 585194,
+    "addressRows": 593178,
+    "databasePath": "data/model-source/residential-survey/register.sqlite",
+    "databaseSha256": "0ab57dc997496c26a4be12604c97e9e745fe4f84f1a6989907a65ad511cdf7e6",
+    "sourceAgeCaveat": "This audit reads the retained official extract; it is not a fresh2026-09-21 registry download.",
+    "rowHashVerification": "Every included register source_hash was recomputed against the stored raw_json; only allowlisted public building fields are published."
+  },
+  "complexes": [
+    {
+      "managementCode": "A10023083",
+      "nameKo": "청량리역 롯데캐슬 SKY-L65",
+      "publicAddresses": [
+        "서울특별시 동대문구 답십리로 27"
+      ],
+      "managementHouseholdValues": [
+        1425
+      ],
+      "officialManagementBuildingCountValues": [
+        4
+      ],
+      "query": {
+        "exactRoadKey": "동대문구|답십리로|27|0|지상",
+        "roadMatchedRegisterIds": [
+          "1000000000000005421368"
+        ],
+        "exactParcelKey": "동대문구|전농동|land|620|47",
+        "method": "Exact public road address first; inspect all records sharing the exact district/legal-dong/land-kind/lot/sub-lot. Explicit building_dong then cross-check juso detail_name. No height transfer from an address alone."
+      },
+      "registerRecords": [
+        {
+          "row_number": 573394,
+          "id": "1000000000000005420396",
+          "district": "동대문구",
+          "dong": "전농동",
+          "parcel_key": "동대문구|전농동|land|620|47",
+          "road_key": "동대문구|왕산로|200|0|지상",
+          "building_dong": "타워",
+          "main_aux": "주건축물",
+          "main_use": "업무시설",
+          "other_use": "업무시설(사무소,오피스텔),판매시설(상점,백화점),숙박시설,문화및집회시설",
+          "floors": "42",
+          "basement": "6",
+          "height": "180.019",
+          "households": "0",
+          "approval_year": "2023",
+          "source_hash": "8b0876ed91a0871b6bb3b90d0ef9cecdcd2bcd36ccb5b9c2efe5f619a06596cf",
+          "registerKind": "표제부",
+          "registerClass": "집합",
+          "buildingAreaM2": "7420.386",
+          "approvalDate": "2023-07-12"
+        },
+        {
+          "row_number": 559570,
+          "id": "1000000000000005421368",
+          "district": "동대문구",
+          "dong": "전농동",
+          "parcel_key": "동대문구|전농동|land|620|47",
+          "road_key": "동대문구|답십리로|27|0|지상",
+          "building_dong": "나동",
+          "main_aux": "주건축물",
+          "main_use": "공동주택",
+          "other_use": "공동주택(아파트),판매시설(상점)",
+          "floors": "65",
+          "basement": "7",
+          "height": "199.54",
+          "households": "1425",
+          "approval_year": "2023",
+          "source_hash": "b661cf2ac15cef49544a50d0abdad77ca775361fdfbae95ba18db2dcf2191cee",
+          "registerKind": "표제부",
+          "registerClass": "집합",
+          "buildingAreaM2": "7925.072",
+          "approvalDate": "2023-07-12"
+        }
+      ],
+      "addressBuildingRecords": [
+        {
+          "building_manager_id": "1123010400106200047000002",
+          "parcel_id": "1123010400106200047",
+          "parcel_key": "동대문구|전농동|land|620|47",
+          "road_key": "동대문구|답십리로|27|0|지상",
+          "name": "청량리역 롯데캐슬 Sky-L65",
+          "detail_name": "A동",
+          "district": "동대문구",
+          "source_hash": "35a97ec9a8653defb44b617f9a385c1c21c467bbc2328be0c2d211c044f789ab"
+        },
+        {
+          "building_manager_id": "1123010400106200047000003",
+          "parcel_id": "1123010400106200047",
+          "parcel_key": "동대문구|전농동|land|620|47",
+          "road_key": "동대문구|답십리로|27|0|지상",
+          "name": "청량리역 롯데캐슬 Sky-L65",
+          "detail_name": "B동",
+          "district": "동대문구",
+          "source_hash": "2e9ad288f544e17fda1dfef0d9892c48ee6a4b8cfa065b788a8f5346f50c71d0"
+        },
+        {
+          "building_manager_id": "1123010400106200047000004",
+          "parcel_id": "1123010400106200047",
+          "parcel_key": "동대문구|전농동|land|620|47",
+          "road_key": "동대문구|답십리로|27|0|지상",
+          "name": "청량리역 롯데캐슬 Sky-L65",
+          "detail_name": "C동",
+          "district": "동대문구",
+          "source_hash": "3714006c7867d7d84eccc2305bf1a3643939899cd0695cb6f04c0277caa4e1fe"
+        },
+        {
+          "building_manager_id": "1123010400106200047000005",
+          "parcel_id": "1123010400106200047",
+          "parcel_key": "동대문구|전농동|land|620|47",
+          "road_key": "동대문구|답십리로|27|0|지상",
+          "name": "청량리역 롯데캐슬 Sky-L65",
+          "detail_name": "D동",
+          "district": "동대문구",
+          "source_hash": "fadeeac98d21f2f83e914073251fc58a66a728bca017ac72f132b3402b88e471"
+        },
+        {
+          "building_manager_id": "1123010400106200047000006",
+          "parcel_id": "1123010400106200047",
+          "parcel_key": "동대문구|전농동|land|620|47",
+          "road_key": "동대문구|답십리로|27|0|지상",
+          "name": "",
+          "detail_name": "",
+          "district": "동대문구",
+          "source_hash": "0f64112bfe3acfcc0c1bd34cc0ef9ba45f6ec80d331d805c6e1de33180f6d743"
+        },
+        {
+          "building_manager_id": "1123010400106200047000007",
+          "parcel_id": "1123010400106200047",
+          "parcel_key": "동대문구|전농동|land|620|47",
+          "road_key": "동대문구|답십리로|27|0|지상",
+          "name": "",
+          "detail_name": "",
+          "district": "동대문구",
+          "source_hash": "e47082eb443da999514c500e6643b4c1a6afe42ac01ea8bf56afad1c6583a6fb"
+        },
+        {
+          "building_manager_id": "1123010400106200069027772",
+          "parcel_id": "1123010400106200047",
+          "parcel_key": "동대문구|전농동|land|620|47",
+          "road_key": "동대문구|왕산로|200|0|지상",
+          "name": "",
+          "detail_name": "타워",
+          "district": "동대문구",
+          "source_hash": "8e76482f04b28fc78ae2e4e3987d7cc9625693ebc77bcb2fab331046d03aa02b"
+        }
+      ],
+      "buildings": [
+        {
+          "label": "A",
+          "publishedModel": {
+            "id": "bespoke-skyl65-a",
+            "nameKo": "청량리역 롯데캐슬 SKY-L65 A동",
+            "sha256": "5b5b2fbbdffd1bdcc53dc389ede163a9919e374d989f4a86f911ba482dec0438",
+            "heightM": 196.0,
+            "localMinYM": 0.0,
+            "floors": 64,
+            "heightBasis": "B/D use OSM 199m recorded height; A/C reduced by estimated 3m per differing official storey. Height includes illustrative crown. No measured as-built heights.",
+            "floorBasis": "official dated 2022-06-17 dong/unit chart, source OSM all65 superseded",
+            "footprintIds": [
+              "2b68ae2e-2c06-48b5-885e-149a84aea147"
+            ]
+          },
+          "primaryBuildingRow": null,
+          "identityStatus": "individual_named_address_building_confirmed_but_no_individual_register_row",
+          "addressBuildingManagerId": "1123010400106200047000002",
+          "heightDifferenceModelMinusRegisterM": null,
+          "floorDifferenceModelMinusRegister": null,
+          "heightDatumReconciled": false,
+          "heightReviewStatus": "individual_height_not_confirmed_by_this_register_extract"
+        },
+        {
+          "label": "B",
+          "publishedModel": {
+            "id": "bespoke-skyl65-b",
+            "nameKo": "청량리역 롯데캐슬 SKY-L65 B동",
+            "sha256": "9809415799cb3b498ff7c48f272166f96765f1a5ede30a85572f271a5bdb3941",
+            "heightM": 199.0,
+            "localMinYM": 0.0,
+            "floors": 65,
+            "heightBasis": "B/D use OSM 199m recorded height; A/C reduced by estimated 3m per differing official storey. Height includes illustrative crown. No measured as-built heights.",
+            "floorBasis": "official dated 2022-06-17 dong/unit chart, source OSM all65 superseded",
+            "footprintIds": [
+              "64b81053-77b5-474e-9511-4613763e9659"
+            ]
+          },
+          "primaryBuildingRow": null,
+          "identityStatus": "individual_named_address_building_confirmed_but_no_individual_register_row",
+          "addressBuildingManagerId": "1123010400106200047000003",
+          "heightDifferenceModelMinusRegisterM": null,
+          "floorDifferenceModelMinusRegister": null,
+          "heightDatumReconciled": false,
+          "heightReviewStatus": "individual_height_not_confirmed_by_this_register_extract"
+        },
+        {
+          "label": "C",
+          "publishedModel": {
+            "id": "bespoke-skyl65-c",
+            "nameKo": "청량리역 롯데캐슬 SKY-L65 C동",
+            "sha256": "8753fb146d2b89057cfdfa3523be307f48fd6d50297fcb26cdde64ff744862b1",
+            "heightM": 193.0,
+            "localMinYM": 0.0,
+            "floors": 63,
+            "heightBasis": "B/D use OSM 199m recorded height; A/C reduced by estimated 3m per differing official storey. Height includes illustrative crown. No measured as-built heights.",
+            "floorBasis": "official dated 2022-06-17 dong/unit chart, source OSM all65 superseded",
+            "footprintIds": [
+              "9da9e8a3-a799-43a6-9aed-552bc7577042"
+            ]
+          },
+          "primaryBuildingRow": null,
+          "identityStatus": "individual_named_address_building_confirmed_but_no_individual_register_row",
+          "addressBuildingManagerId": "1123010400106200047000004",
+          "heightDifferenceModelMinusRegisterM": null,
+          "floorDifferenceModelMinusRegister": null,
+          "heightDatumReconciled": false,
+          "heightReviewStatus": "individual_height_not_confirmed_by_this_register_extract"
+        },
+        {
+          "label": "D",
+          "publishedModel": {
+            "id": "bespoke-skyl65-d",
+            "nameKo": "청량리역 롯데캐슬 SKY-L65 D동",
+            "sha256": "fcfa371e362df66dba079e5a76adc337fcf3f7e501058486d729608c65105b96",
+            "heightM": 199.0,
+            "localMinYM": 0.0,
+            "floors": 65,
+            "heightBasis": "B/D use OSM 199m recorded height; A/C reduced by estimated 3m per differing official storey. Height includes illustrative crown. No measured as-built heights.",
+            "floorBasis": "official dated 2022-06-17 dong/unit chart, source OSM all65 superseded",
+            "footprintIds": [
+              "de59be43-3b37-45f7-bc6c-894a5680db1f"
+            ]
+          },
+          "primaryBuildingRow": null,
+          "identityStatus": "individual_named_address_building_confirmed_but_no_individual_register_row",
+          "addressBuildingManagerId": "1123010400106200047000005",
+          "heightDifferenceModelMinusRegisterM": null,
+          "floorDifferenceModelMinusRegister": null,
+          "heightDatumReconciled": false,
+          "heightReviewStatus": "individual_height_not_confirmed_by_this_register_extract"
+        }
+      ],
+      "reviewRecommendations": [
+        "Keep the independently corroborated four A/B/C/D identities; the42-floor 왕산로200 업무시설 tower is a different non-residential component.",
+        "The existing64/65/63/65 floors remain supported by their cited official dong chart; this shared65-floor register row cannot verify or contradict individual tower floors.",
+        "Retain the explicit per-tower height-estimate caveat (196/199/193/199m). Seek approved per-tower elevations or as-built height schedules before claiming registry-confirmed tower heights."
+      ],
+      "coverageModified": false,
+      "sharedResidentialRegisterRow": {
+        "row_number": 559570,
+        "id": "1000000000000005421368",
+        "district": "동대문구",
+        "dong": "전농동",
+        "parcel_key": "동대문구|전농동|land|620|47",
+        "road_key": "동대문구|답십리로|27|0|지상",
+        "building_dong": "나동",
+        "main_aux": "주건축물",
+        "main_use": "공동주택",
+        "other_use": "공동주택(아파트),판매시설(상점)",
+        "floors": "65",
+        "basement": "7",
+        "height": "199.54",
+        "households": "1425",
+        "approval_year": "2023",
+        "source_hash": "b661cf2ac15cef49544a50d0abdad77ca775361fdfbae95ba18db2dcf2191cee",
+        "registerKind": "표제부",
+        "registerClass": "집합",
+        "buildingAreaM2": "7925.072",
+        "approvalDate": "2023-07-12"
+      },
+      "registerResidentialBuildingCount": null,
+      "namedAddressResidentialTowerCount": 4,
+      "excludedRegisterIds": [
+        "1000000000000005420396"
+      ],
+      "sharedRowInterpretation": {
+        "observed": "One 집합/표제부 row named 나동 holds all1425 households,65 floors and199.54m at the shared residential address; juso separately names A/B/C/D at that same exact address/parcel.",
+        "inference": "The register row is not safely attributable to one of the four renderable towers. It likely describes the joined residential building/podium scope; that scope is not independently proven here.",
+        "prohibitedTransfer": "Do not translate 나동 into B, set all four towers to199.54m, or treat this one register row as evidence that only one residential tower exists."
+      }
+    },
+    {
+      "managementCode": "A13527017",
+      "nameKo": "타워팰리스1차",
+      "publicAddresses": [
+        "서울특별시 강남구 언주로30길 56"
+      ],
+      "managementHouseholdValues": [
+        0,
+        1297
+      ],
+      "officialManagementBuildingCountValues": [
+        4
+      ],
+      "query": {
+        "exactRoadKey": "강남구|언주로30길|56|0|지상",
+        "roadMatchedRegisterIds": [
+          "102412197",
+          "102412198",
+          "102412199",
+          "102412200",
+          "102412201",
+          "102412202"
+        ],
+        "exactParcelKey": "강남구|도곡동|land|467|0",
+        "method": "Exact public road address first; inspect all records sharing the exact district/legal-dong/land-kind/lot/sub-lot. Explicit building_dong then cross-check juso detail_name. No height transfer from an address alone."
+      },
+      "registerRecords": [
+        {
+          "row_number": 102636,
+          "id": "102412197",
+          "district": "강남구",
+          "dong": "도곡동",
+          "parcel_key": "강남구|도곡동|land|467|0",
+          "road_key": "강남구|언주로30길|56|0|지상",
+          "building_dong": "상가동",
+          "main_aux": "주건축물",
+          "main_use": "판매시설",
+          "other_use": "판매및영업시설,근린생활시설",
+          "floors": "3",
+          "basement": "0",
+          "height": "0",
+          "households": "0",
+          "approval_year": "2002",
+          "source_hash": "2d13cd2b4c4fb494404242b0c0834429399215265cf29a70b5ffdafa8635b26e",
+          "registerKind": "표제부",
+          "registerClass": "집합",
+          "buildingAreaM2": "1975.249",
+          "approvalDate": "2002-10-23"
+        },
+        {
+          "row_number": 246060,
+          "id": "102412198",
+          "district": "강남구",
+          "dong": "도곡동",
+          "parcel_key": "강남구|도곡동|land|467|0",
+          "road_key": "강남구|언주로30길|56|0|지상",
+          "building_dong": "지하동",
+          "main_aux": "주건축물",
+          "main_use": "자동차관련시설",
+          "other_use": "자동차관련시설",
+          "floors": "1",
+          "basement": "5",
+          "height": "0",
+          "households": "0",
+          "approval_year": "2002",
+          "source_hash": "a58f167c7619621822c19f7ecdb817f2052b8587e8b86b79d0700e8eb374a3d8",
+          "registerKind": "표제부",
+          "registerClass": "집합",
+          "buildingAreaM2": "65.207",
+          "approvalDate": "2002-10-23"
+        },
+        {
+          "row_number": 572590,
+          "id": "102412199",
+          "district": "강남구",
+          "dong": "도곡동",
+          "parcel_key": "강남구|도곡동|land|467|0",
+          "road_key": "강남구|언주로30길|56|0|지상",
+          "building_dong": "디동",
+          "main_aux": "주건축물",
+          "main_use": "업무시설",
+          "other_use": "아파트/업무시설",
+          "floors": "42",
+          "basement": "0",
+          "height": "153.9",
+          "households": "168",
+          "approval_year": "2002",
+          "source_hash": "eab90e5632e3e004a9fc3eb027eb4a52fcbc6bfee2e609237a99d0e70c7266e0",
+          "registerKind": "표제부",
+          "registerClass": "집합",
+          "buildingAreaM2": "1588.465",
+          "approvalDate": "2002-10-23"
+        },
+        {
+          "row_number": 344774,
+          "id": "102412200",
+          "district": "강남구",
+          "dong": "도곡동",
+          "parcel_key": "강남구|도곡동|land|467|0",
+          "road_key": "강남구|언주로30길|56|0|지상",
+          "building_dong": "씨동",
+          "main_aux": "주건축물",
+          "main_use": "공동주택",
+          "other_use": "공동주택 (아파트)",
+          "floors": "59",
+          "basement": "0",
+          "height": "211.5",
+          "households": "353",
+          "approval_year": "2002",
+          "source_hash": "2ae3cc4c073fc2f8a4c0cc316c68691e079271bb1985d1c95168baa25a68d376",
+          "registerKind": "표제부",
+          "registerClass": "집합",
+          "buildingAreaM2": "1475.47",
+          "approvalDate": "2002-10-23"
+        },
+        {
+          "row_number": 575742,
+          "id": "102412201",
+          "district": "강남구",
+          "dong": "도곡동",
+          "parcel_key": "강남구|도곡동|land|467|0",
+          "road_key": "강남구|언주로30길|56|0|지상",
+          "building_dong": "비동",
+          "main_aux": "주건축물",
+          "main_use": "공동주택",
+          "other_use": "공동주택 (아파트)",
+          "floors": "66",
+          "basement": "0",
+          "height": "233.9",
+          "households": "399",
+          "approval_year": "2002",
+          "source_hash": "6c5dad4631c4b0dc357b689d6a9e76dd33f53fa7f9f2ebf7d684f8a383c40c7e",
+          "registerKind": "표제부",
+          "registerClass": "집합",
+          "buildingAreaM2": "1475.47",
+          "approvalDate": "2002-10-23"
+        },
+        {
+          "row_number": 190678,
+          "id": "102412202",
+          "district": "강남구",
+          "dong": "도곡동",
+          "parcel_key": "강남구|도곡동|land|467|0",
+          "road_key": "강남구|언주로30길|56|0|지상",
+          "building_dong": "에이동",
+          "main_aux": "주건축물",
+          "main_use": "공동주택",
+          "other_use": "공동주택 (아파트)",
+          "floors": "59",
+          "basement": "0",
+          "height": "211.5",
+          "households": "375",
+          "approval_year": "2002",
+          "source_hash": "0c3b8a79ae5a74e04bdc422cdfdc24bbd87e1050fed13271084fd8816f03eb42",
+          "registerKind": "표제부",
+          "registerClass": "집합",
+          "buildingAreaM2": "1475.47",
+          "approvalDate": "2002-10-23"
+        }
+      ],
+      "addressBuildingRecords": [
+        {
+          "building_manager_id": "1168011800104670000027311",
+          "parcel_id": "1168011800104670000",
+          "parcel_key": "강남구|도곡동|land|467|0",
+          "road_key": "강남구|언주로30길|56|0|지상",
+          "name": "타워팰리스",
+          "detail_name": "디동",
+          "district": "강남구",
+          "source_hash": "fa8f20fd494f0afa7e089f82b96151ff3401e647d3d46a065b0131ff13137cb9"
+        },
+        {
+          "building_manager_id": "1168011800104670000027312",
+          "parcel_id": "1168011800104670000",
+          "parcel_key": "강남구|도곡동|land|467|0",
+          "road_key": "강남구|언주로30길|56|0|지상",
+          "name": "타워팰리스",
+          "detail_name": "에이동",
+          "district": "강남구",
+          "source_hash": "cbabedc5d25ba1689776ff5679017842faf4f414ea6b8508f9bc28cc4b1d81da"
+        },
+        {
+          "building_manager_id": "1168011800104670000027313",
+          "parcel_id": "1168011800104670000",
+          "parcel_key": "강남구|도곡동|land|467|0",
+          "road_key": "강남구|언주로30길|56|0|지상",
+          "name": "타워팰리스",
+          "detail_name": "비동",
+          "district": "강남구",
+          "source_hash": "74a0f1ed03c0af51bcb31d86993b1270a9e852b8fadb4f109181ce72bdb7dae9"
+        },
+        {
+          "building_manager_id": "1168011800104670000027314",
+          "parcel_id": "1168011800104670000",
+          "parcel_key": "강남구|도곡동|land|467|0",
+          "road_key": "강남구|언주로30길|56|0|지상",
+          "name": "타워팰리스",
+          "detail_name": "씨동",
+          "district": "강남구",
+          "source_hash": "72b652954e9d0caa9b63dd60072bbc1581669bd6ebfbbd21e880e5de9e4af529"
+        },
+        {
+          "building_manager_id": "1168011800104670000027315",
+          "parcel_id": "1168011800104670000",
+          "parcel_key": "강남구|도곡동|land|467|0",
+          "road_key": "강남구|언주로30길|56|0|지상",
+          "name": "",
+          "detail_name": "상가동",
+          "district": "강남구",
+          "source_hash": "352eb691f2b386e72adc23b1de1d7c51b35e8bf6ec76e901752e2c347dc54189"
+        }
+      ],
+      "buildings": [
+        {
+          "label": "A",
+          "publishedModel": {
+            "id": "bespoke-tower-palace-a",
+            "nameKo": "타워팰리스 A동",
+            "sha256": "4bcb1be8592dc69bdd763ef6d737e8c623032c9751b2576f48aa5a68ae01e22f",
+            "heightM": 209.0,
+            "localMinYM": 0.0,
+            "floors": 59,
+            "heightBasis": "CTBUH/CVU named complex table, architectural top. A/C209m and D153m conflict with OSM211/154m; CTBUH preferred, no datum reconciliation claimed.",
+            "floorBasis": "SAMOO phase I59/66/42, phase II55, phase III69; older III73-storey descriptions use unresolved different counting.",
+            "footprintIds": [
+              "9197849d-bf83-4832-9abe-0e78bd90981c"
+            ]
+          },
+          "primaryBuildingRow": {
+            "row_number": 190678,
+            "id": "102412202",
+            "district": "강남구",
+            "dong": "도곡동",
+            "parcel_key": "강남구|도곡동|land|467|0",
+            "road_key": "강남구|언주로30길|56|0|지상",
+            "building_dong": "에이동",
+            "main_aux": "주건축물",
+            "main_use": "공동주택",
+            "other_use": "공동주택 (아파트)",
+            "floors": "59",
+            "basement": "0",
+            "height": "211.5",
+            "households": "375",
+            "approval_year": "2002",
+            "source_hash": "0c3b8a79ae5a74e04bdc422cdfdc24bbd87e1050fed13271084fd8816f03eb42",
+            "registerKind": "표제부",
+            "registerClass": "집합",
+            "buildingAreaM2": "1475.47",
+            "approvalDate": "2002-10-23"
+          },
+          "identityStatus": "exact_parcel_and_explicit_building_dong_with_address_database_confirmation",
+          "addressBuildingManagerId": "1168011800104670000027312",
+          "identityBasis": "Explicit English-letter/Korean-letter building label equivalence; no fuzzy name or nearest-building selection.",
+          "heightDifferenceModelMinusRegisterM": -2.5,
+          "floorDifferenceModelMinusRegister": 0,
+          "heightDatumReconciled": false,
+          "heightReviewStatus": "published_architectural_top_and_register_height_differ"
+        },
+        {
+          "label": "B",
+          "publishedModel": {
+            "id": "bespoke-tower-palace-b",
+            "nameKo": "타워팰리스 B동",
+            "sha256": "bf95025d71d78bf7dd74c8eff029ba36a37cd055569a7024a6c19c624b4909ed",
+            "heightM": 234.0,
+            "localMinYM": 0.0,
+            "floors": 66,
+            "heightBasis": "CTBUH/CVU named complex table, architectural top. A/C209m and D153m conflict with OSM211/154m; CTBUH preferred, no datum reconciliation claimed.",
+            "floorBasis": "SAMOO phase I59/66/42, phase II55, phase III69; older III73-storey descriptions use unresolved different counting.",
+            "footprintIds": [
+              "995d5ddd-41d8-44aa-89d0-78b5b8207de6"
+            ]
+          },
+          "primaryBuildingRow": {
+            "row_number": 575742,
+            "id": "102412201",
+            "district": "강남구",
+            "dong": "도곡동",
+            "parcel_key": "강남구|도곡동|land|467|0",
+            "road_key": "강남구|언주로30길|56|0|지상",
+            "building_dong": "비동",
+            "main_aux": "주건축물",
+            "main_use": "공동주택",
+            "other_use": "공동주택 (아파트)",
+            "floors": "66",
+            "basement": "0",
+            "height": "233.9",
+            "households": "399",
+            "approval_year": "2002",
+            "source_hash": "6c5dad4631c4b0dc357b689d6a9e76dd33f53fa7f9f2ebf7d684f8a383c40c7e",
+            "registerKind": "표제부",
+            "registerClass": "집합",
+            "buildingAreaM2": "1475.47",
+            "approvalDate": "2002-10-23"
+          },
+          "identityStatus": "exact_parcel_and_explicit_building_dong_with_address_database_confirmation",
+          "addressBuildingManagerId": "1168011800104670000027313",
+          "identityBasis": "Explicit English-letter/Korean-letter building label equivalence; no fuzzy name or nearest-building selection.",
+          "heightDifferenceModelMinusRegisterM": 0.1,
+          "floorDifferenceModelMinusRegister": 0,
+          "heightDatumReconciled": false,
+          "heightReviewStatus": "published_architectural_top_and_register_height_differ"
+        },
+        {
+          "label": "C",
+          "publishedModel": {
+            "id": "bespoke-tower-palace-c",
+            "nameKo": "타워팰리스 C동",
+            "sha256": "f9a377e6e7f72950f7407072046eed1ddaa3e714d9364c2d75ca94144910ae57",
+            "heightM": 209.0,
+            "localMinYM": 0.0,
+            "floors": 59,
+            "heightBasis": "CTBUH/CVU named complex table, architectural top. A/C209m and D153m conflict with OSM211/154m; CTBUH preferred, no datum reconciliation claimed.",
+            "floorBasis": "SAMOO phase I59/66/42, phase II55, phase III69; older III73-storey descriptions use unresolved different counting.",
+            "footprintIds": [
+              "2d2c76d4-7f8d-48f7-895a-eb2cd30da173"
+            ]
+          },
+          "primaryBuildingRow": {
+            "row_number": 344774,
+            "id": "102412200",
+            "district": "강남구",
+            "dong": "도곡동",
+            "parcel_key": "강남구|도곡동|land|467|0",
+            "road_key": "강남구|언주로30길|56|0|지상",
+            "building_dong": "씨동",
+            "main_aux": "주건축물",
+            "main_use": "공동주택",
+            "other_use": "공동주택 (아파트)",
+            "floors": "59",
+            "basement": "0",
+            "height": "211.5",
+            "households": "353",
+            "approval_year": "2002",
+            "source_hash": "2ae3cc4c073fc2f8a4c0cc316c68691e079271bb1985d1c95168baa25a68d376",
+            "registerKind": "표제부",
+            "registerClass": "집합",
+            "buildingAreaM2": "1475.47",
+            "approvalDate": "2002-10-23"
+          },
+          "identityStatus": "exact_parcel_and_explicit_building_dong_with_address_database_confirmation",
+          "addressBuildingManagerId": "1168011800104670000027314",
+          "identityBasis": "Explicit English-letter/Korean-letter building label equivalence; no fuzzy name or nearest-building selection.",
+          "heightDifferenceModelMinusRegisterM": -2.5,
+          "floorDifferenceModelMinusRegister": 0,
+          "heightDatumReconciled": false,
+          "heightReviewStatus": "published_architectural_top_and_register_height_differ"
+        },
+        {
+          "label": "D",
+          "publishedModel": {
+            "id": "bespoke-tower-palace-d",
+            "nameKo": "타워팰리스 D동",
+            "sha256": "3767228afc08e318babd44c64bfd0a24da399046187cee289dc7504da1a079d7",
+            "heightM": 153.0,
+            "localMinYM": 0.0,
+            "floors": 42,
+            "heightBasis": "CTBUH/CVU named complex table, architectural top. A/C209m and D153m conflict with OSM211/154m; CTBUH preferred, no datum reconciliation claimed.",
+            "floorBasis": "SAMOO phase I59/66/42, phase II55, phase III69; older III73-storey descriptions use unresolved different counting.",
+            "footprintIds": [
+              "acdd801b-57dc-4384-b867-3cef5d194fa9"
+            ]
+          },
+          "primaryBuildingRow": {
+            "row_number": 572590,
+            "id": "102412199",
+            "district": "강남구",
+            "dong": "도곡동",
+            "parcel_key": "강남구|도곡동|land|467|0",
+            "road_key": "강남구|언주로30길|56|0|지상",
+            "building_dong": "디동",
+            "main_aux": "주건축물",
+            "main_use": "업무시설",
+            "other_use": "아파트/업무시설",
+            "floors": "42",
+            "basement": "0",
+            "height": "153.9",
+            "households": "168",
+            "approval_year": "2002",
+            "source_hash": "eab90e5632e3e004a9fc3eb027eb4a52fcbc6bfee2e609237a99d0e70c7266e0",
+            "registerKind": "표제부",
+            "registerClass": "집합",
+            "buildingAreaM2": "1588.465",
+            "approvalDate": "2002-10-23"
+          },
+          "identityStatus": "exact_parcel_and_explicit_building_dong_with_address_database_confirmation",
+          "addressBuildingManagerId": "1168011800104670000027311",
+          "identityBasis": "Explicit English-letter/Korean-letter building label equivalence; no fuzzy name or nearest-building selection.",
+          "heightDifferenceModelMinusRegisterM": -0.9,
+          "floorDifferenceModelMinusRegister": 0,
+          "heightDatumReconciled": false,
+          "heightReviewStatus": "published_architectural_top_and_register_height_differ"
+        }
+      ],
+      "reviewRecommendations": [
+        "Retain all named residential towers; exclude separately named shop/garage/sports-center rows from residential coverage.",
+        "Record the direct register heights alongside the existing CTBUH architectural-top values; reconcile the measurement definition and roof/crown scope before resizing any completed GLB. No source proves these two height datums are identical.",
+        "Floor counts match the existing modeled facts. Reopening height-basis review does not itself prove a missing residential tower or invalidate the existing photo comparison.",
+        "D is main_use 업무시설 but other_use 아파트/업무시설 and168 households: retain D as a mixed residential building.",
+        "Register household sum1295 differs from management source1297 by2; preserve both, do not fabricate a household allocation."
+      ],
+      "coverageModified": false,
+      "registerResidentialBuildingCount": 4,
+      "registerResidentialHouseholdSum": 1295,
+      "excludedRegisterIds": [
+        "102412197",
+        "102412198"
+      ]
+    },
+    {
+      "managementCode": "A13585402",
+      "nameKo": "타워팰리스2차",
+      "publicAddresses": [
+        "서울특별시 강남구 언주로30길 57"
+      ],
+      "managementHouseholdValues": [
+        813
+      ],
+      "officialManagementBuildingCountValues": [
+        2
+      ],
+      "query": {
+        "exactRoadKey": "강남구|언주로30길|57|0|지상",
+        "roadMatchedRegisterIds": [
+          "102412209",
+          "102412211"
+        ],
+        "exactParcelKey": "강남구|도곡동|land|467|17",
+        "method": "Exact public road address first; inspect all records sharing the exact district/legal-dong/land-kind/lot/sub-lot. Explicit building_dong then cross-check juso detail_name. No height transfer from an address alone."
+      },
+      "registerRecords": [
+        {
+          "row_number": 294358,
+          "id": "102412209",
+          "district": "강남구",
+          "dong": "도곡동",
+          "parcel_key": "강남구|도곡동|land|467|17",
+          "road_key": "강남구|언주로30길|57|0|지상",
+          "building_dong": "상가동",
+          "main_aux": "주건축물",
+          "main_use": "판매시설",
+          "other_use": "판매및영업시설",
+          "floors": "0",
+          "basement": "1",
+          "height": "0",
+          "households": "0",
+          "approval_year": "2003",
+          "source_hash": "1fc0907c1bbec6c2bab7af6540e6b78d848c83efcc0fc0d788f25c213c4adce2",
+          "registerKind": "표제부",
+          "registerClass": "집합",
+          "buildingAreaM2": "0",
+          "approvalDate": "2003-02-28"
+        },
+        {
+          "row_number": 565364,
+          "id": "102412210",
+          "district": "강남구",
+          "dong": "도곡동",
+          "parcel_key": "강남구|도곡동|land|467|17",
+          "road_key": null,
+          "building_dong": "에프동",
+          "main_aux": "주건축물",
+          "main_use": "공동주택",
+          "other_use": "공동주택 (아파트)",
+          "floors": "55",
+          "basement": "",
+          "height": "184.65",
+          "households": "450",
+          "approval_year": "2003",
+          "source_hash": "fbff3dacd62679578d4682a2fee31e8da705572014c9ec2fa3ec6a288e96a89d",
+          "registerKind": "표제부",
+          "registerClass": "집합",
+          "buildingAreaM2": "2277.23",
+          "approvalDate": "2003-02-28"
+        },
+        {
+          "row_number": 136464,
+          "id": "102412211",
+          "district": "강남구",
+          "dong": "도곡동",
+          "parcel_key": "강남구|도곡동|land|467|17",
+          "road_key": "강남구|언주로30길|57|0|지상",
+          "building_dong": "이동",
+          "main_aux": "주건축물",
+          "main_use": "공동주택",
+          "other_use": "공동주택(아파트), 오피스텔",
+          "floors": "55",
+          "basement": "6",
+          "height": "184.65",
+          "households": "363",
+          "approval_year": "2003",
+          "source_hash": "eb75cc0d247997666cda61caad320d7423c81e4e89fb3df62445e7edd0938977",
+          "registerKind": "표제부",
+          "registerClass": "집합",
+          "buildingAreaM2": "2442.76",
+          "approvalDate": "2003-02-28"
+        }
+      ],
+      "addressBuildingRecords": [
+        {
+          "building_manager_id": "1168011800104670017026752",
+          "parcel_id": "1168011800104670017",
+          "parcel_key": "강남구|도곡동|land|467|17",
+          "road_key": "강남구|언주로30길|57|0|지상",
+          "name": "타워팰리스",
+          "detail_name": "이동",
+          "district": "강남구",
+          "source_hash": "d593c3d98556d114d1dc3b3e1dfba9f3ff7def5edcfe869b89945191ba6a7e8c"
+        },
+        {
+          "building_manager_id": "1168011800104670017026753",
+          "parcel_id": "1168011800104670017",
+          "parcel_key": "강남구|도곡동|land|467|17",
+          "road_key": "강남구|언주로30길|57|0|지상",
+          "name": "타워팰리스",
+          "detail_name": "에프동",
+          "district": "강남구",
+          "source_hash": "013dffd4070cfdd49a98fe8582a2253885999e2d4e3c3719ef65f70eb45eb3c7"
+        }
+      ],
+      "buildings": [
+        {
+          "label": "E",
+          "publishedModel": {
+            "id": "bespoke-tower-palace-e",
+            "nameKo": "타워팰리스 E동",
+            "sha256": "12bbe335f529c3b4089fe6e43e603d0332c5c251c539ec8a16c7d648e37f5317",
+            "heightM": 191.0,
+            "localMinYM": 0.0,
+            "floors": 55,
+            "heightBasis": "CTBUH/CVU named complex table, architectural top. A/C209m and D153m conflict with OSM211/154m; CTBUH preferred, no datum reconciliation claimed.",
+            "floorBasis": "SAMOO phase I59/66/42, phase II55, phase III69; older III73-storey descriptions use unresolved different counting.",
+            "footprintIds": [
+              "0aa4cf05-c633-4f2b-83c5-604b8629272d"
+            ]
+          },
+          "primaryBuildingRow": {
+            "row_number": 136464,
+            "id": "102412211",
+            "district": "강남구",
+            "dong": "도곡동",
+            "parcel_key": "강남구|도곡동|land|467|17",
+            "road_key": "강남구|언주로30길|57|0|지상",
+            "building_dong": "이동",
+            "main_aux": "주건축물",
+            "main_use": "공동주택",
+            "other_use": "공동주택(아파트), 오피스텔",
+            "floors": "55",
+            "basement": "6",
+            "height": "184.65",
+            "households": "363",
+            "approval_year": "2003",
+            "source_hash": "eb75cc0d247997666cda61caad320d7423c81e4e89fb3df62445e7edd0938977",
+            "registerKind": "표제부",
+            "registerClass": "집합",
+            "buildingAreaM2": "2442.76",
+            "approvalDate": "2003-02-28"
+          },
+          "identityStatus": "exact_parcel_and_explicit_building_dong_with_address_database_confirmation",
+          "addressBuildingManagerId": "1168011800104670017026752",
+          "identityBasis": "Explicit English-letter/Korean-letter building label equivalence; no fuzzy name or nearest-building selection.",
+          "heightDifferenceModelMinusRegisterM": 6.35,
+          "floorDifferenceModelMinusRegister": 0,
+          "heightDatumReconciled": false,
+          "heightReviewStatus": "published_architectural_top_and_register_height_differ"
+        },
+        {
+          "label": "F",
+          "publishedModel": {
+            "id": "bespoke-tower-palace-f",
+            "nameKo": "타워팰리스 F동",
+            "sha256": "3b2061d28cc414927a88b69b9a06f90ec820b3c0d710e802ea71b42844b8eb9e",
+            "heightM": 191.0,
+            "localMinYM": 0.0,
+            "floors": 55,
+            "heightBasis": "CTBUH/CVU named complex table, architectural top. A/C209m and D153m conflict with OSM211/154m; CTBUH preferred, no datum reconciliation claimed.",
+            "floorBasis": "SAMOO phase I59/66/42, phase II55, phase III69; older III73-storey descriptions use unresolved different counting.",
+            "footprintIds": [
+              "c6873a11-88e5-4129-bc93-19bc68cd7bd5"
+            ]
+          },
+          "primaryBuildingRow": {
+            "row_number": 565364,
+            "id": "102412210",
+            "district": "강남구",
+            "dong": "도곡동",
+            "parcel_key": "강남구|도곡동|land|467|17",
+            "road_key": null,
+            "building_dong": "에프동",
+            "main_aux": "주건축물",
+            "main_use": "공동주택",
+            "other_use": "공동주택 (아파트)",
+            "floors": "55",
+            "basement": "",
+            "height": "184.65",
+            "households": "450",
+            "approval_year": "2003",
+            "source_hash": "fbff3dacd62679578d4682a2fee31e8da705572014c9ec2fa3ec6a288e96a89d",
+            "registerKind": "표제부",
+            "registerClass": "집합",
+            "buildingAreaM2": "2277.23",
+            "approvalDate": "2003-02-28"
+          },
+          "identityStatus": "exact_parcel_and_explicit_building_dong_with_address_database_confirmation",
+          "addressBuildingManagerId": "1168011800104670017026753",
+          "identityBasis": "Explicit English-letter/Korean-letter building label equivalence; no fuzzy name or nearest-building selection.",
+          "heightDifferenceModelMinusRegisterM": 6.35,
+          "floorDifferenceModelMinusRegister": 0,
+          "heightDatumReconciled": false,
+          "heightReviewStatus": "published_architectural_top_and_register_height_differ",
+          "identityCaveat": "Register road key is missing. Exact parcel, unique 에프동 label and juso 에프동 with the expected road key independently identify F; do not discard or infer a road key into the source row."
+        }
+      ],
+      "reviewRecommendations": [
+        "Retain all named residential towers; exclude separately named shop/garage/sports-center rows from residential coverage.",
+        "Record the direct register heights alongside the existing CTBUH architectural-top values; reconcile the measurement definition and roof/crown scope before resizing any completed GLB. No source proves these two height datums are identical.",
+        "Floor counts match the existing modeled facts. Reopening height-basis review does not itself prove a missing residential tower or invalidate the existing photo comparison.",
+        "E/F modeled191m vs register184.65m each is the largest discrepancy (+6.35m); prioritize roof/crown datum reconciliation. Both rows are55 floors; household363+450=813 supports the two named buildings."
+      ],
+      "coverageModified": false,
+      "registerResidentialBuildingCount": 2,
+      "registerResidentialHouseholdSum": 813,
+      "excludedRegisterIds": [
+        "102412209"
+      ]
+    },
+    {
+      "managementCode": "A13585403",
+      "nameKo": "타워팰리스G동",
+      "publicAddresses": [
+        "서울특별시 강남구 언주로30길 26"
+      ],
+      "managementHouseholdValues": [
+        480
+      ],
+      "officialManagementBuildingCountValues": [
+        1
+      ],
+      "query": {
+        "exactRoadKey": "강남구|언주로30길|26|0|지상",
+        "roadMatchedRegisterIds": [
+          "102412344",
+          "102412345"
+        ],
+        "exactParcelKey": "강남구|도곡동|land|467|29",
+        "method": "Exact public road address first; inspect all records sharing the exact district/legal-dong/land-kind/lot/sub-lot. Explicit building_dong then cross-check juso detail_name. No height transfer from an address alone."
+      },
+      "registerRecords": [
+        {
+          "row_number": 491419,
+          "id": "102412344",
+          "district": "강남구",
+          "dong": "도곡동",
+          "parcel_key": "강남구|도곡동|land|467|29",
+          "road_key": "강남구|언주로30길|26|0|지상",
+          "building_dong": "에스동",
+          "main_aux": "주건축물",
+          "main_use": "운동시설",
+          "other_use": "근린생활시설, 운동시설, 업무시설",
+          "floors": "7",
+          "basement": "6",
+          "height": "54.23",
+          "households": "0",
+          "approval_year": "2004",
+          "source_hash": "00debe3921d9a18172aa34ad1a07842f9263a6590e601b1eab089314bbbead0c",
+          "registerKind": "표제부",
+          "registerClass": "집합",
+          "buildingAreaM2": "4270.44",
+          "approvalDate": "2004-04-19"
+        },
+        {
+          "row_number": 235468,
+          "id": "102412345",
+          "district": "강남구",
+          "dong": "도곡동",
+          "parcel_key": "강남구|도곡동|land|467|29",
+          "road_key": "강남구|언주로30길|26|0|지상",
+          "building_dong": "지동",
+          "main_aux": "주건축물",
+          "main_use": "공동주택",
+          "other_use": "공동주택(아파트), 오피스텔",
+          "floors": "69",
+          "basement": "6",
+          "height": "262.82",
+          "households": "480",
+          "approval_year": "2004",
+          "source_hash": "2e7ca3b1a97709a8b8595fa6036455c1e515bdd4e1a6c3d2b89c52bdaf26038a",
+          "registerKind": "표제부",
+          "registerClass": "집합",
+          "buildingAreaM2": "2814.37",
+          "approvalDate": "2004-04-19"
+        }
+      ],
+      "addressBuildingRecords": [
+        {
+          "building_manager_id": "1168011800104670029027315",
+          "parcel_id": "1168011800104670029",
+          "parcel_key": "강남구|도곡동|land|467|29",
+          "road_key": "강남구|언주로30길|26|0|지상",
+          "name": "",
+          "detail_name": "에스동",
+          "district": "강남구",
+          "source_hash": "b445303c93ed10ffbfd4725a88f5242b4a5084ed593b6c4df91c92dae871079e"
+        },
+        {
+          "building_manager_id": "1168011800104670029027316",
+          "parcel_id": "1168011800104670029",
+          "parcel_key": "강남구|도곡동|land|467|29",
+          "road_key": "강남구|언주로30길|26|0|지상",
+          "name": "타워팰리스",
+          "detail_name": "지동",
+          "district": "강남구",
+          "source_hash": "abe062fdedfdb750e4b66c12ef3864bb8ba1ce3739da83805cdf45e18b7994ca"
+        }
+      ],
+      "buildings": [
+        {
+          "label": "G",
+          "publishedModel": {
+            "id": "bespoke-tower-palace-g",
+            "nameKo": "타워팰리스 G동",
+            "sha256": "7ccb8656ad6df1ef58c57aa93b1254c7466f318749b79febdd5b40ec32a2e6fa",
+            "heightM": 264.0,
+            "localMinYM": 0.0,
+            "floors": 69,
+            "heightBasis": "CTBUH/CVU named complex table, architectural top. A/C209m and D153m conflict with OSM211/154m; CTBUH preferred, no datum reconciliation claimed.",
+            "floorBasis": "SAMOO phase I59/66/42, phase II55, phase III69; older III73-storey descriptions use unresolved different counting.",
+            "footprintIds": [
+              "0279553d-08e7-48de-bd31-6016d2b5445c"
+            ]
+          },
+          "primaryBuildingRow": {
+            "row_number": 235468,
+            "id": "102412345",
+            "district": "강남구",
+            "dong": "도곡동",
+            "parcel_key": "강남구|도곡동|land|467|29",
+            "road_key": "강남구|언주로30길|26|0|지상",
+            "building_dong": "지동",
+            "main_aux": "주건축물",
+            "main_use": "공동주택",
+            "other_use": "공동주택(아파트), 오피스텔",
+            "floors": "69",
+            "basement": "6",
+            "height": "262.82",
+            "households": "480",
+            "approval_year": "2004",
+            "source_hash": "2e7ca3b1a97709a8b8595fa6036455c1e515bdd4e1a6c3d2b89c52bdaf26038a",
+            "registerKind": "표제부",
+            "registerClass": "집합",
+            "buildingAreaM2": "2814.37",
+            "approvalDate": "2004-04-19"
+          },
+          "identityStatus": "exact_parcel_and_explicit_building_dong_with_address_database_confirmation",
+          "addressBuildingManagerId": "1168011800104670029027316",
+          "identityBasis": "Explicit English-letter/Korean-letter building label equivalence; no fuzzy name or nearest-building selection.",
+          "heightDifferenceModelMinusRegisterM": 1.18,
+          "floorDifferenceModelMinusRegister": 0,
+          "heightDatumReconciled": false,
+          "heightReviewStatus": "published_architectural_top_and_register_height_differ"
+        }
+      ],
+      "reviewRecommendations": [
+        "Retain all named residential towers; exclude separately named shop/garage/sports-center rows from residential coverage.",
+        "Record the direct register heights alongside the existing CTBUH architectural-top values; reconcile the measurement definition and roof/crown scope before resizing any completed GLB. No source proves these two height datums are identical.",
+        "Floor counts match the existing modeled facts. Reopening height-basis review does not itself prove a missing residential tower or invalidate the existing photo comparison."
+      ],
+      "coverageModified": false,
+      "registerResidentialBuildingCount": 1,
+      "registerResidentialHouseholdSum": 480,
+      "excludedRegisterIds": [
+        "102412344"
+      ]
+    }
+  ],
+  "summary": {
+    "managementCodes": 4,
+    "namedResidentialModelComponents": 11,
+    "individualHeightsUnresolvedBySharedRegister": 4,
+    "namedResidentialTowerCountContradictions": 0,
+    "coverageApprovalChanges": 0,
+    "largestAbsoluteModelRegisterDifferenceM": 6.35,
+    "importantLimits": [
+      "Exact building identity does not equate the registry height definition with CTBUH architectural-top height.",
+      "This audit does not reassess photographs, hidden facades, footprints or a finished-CAD accuracy claim."
+    ],
+    "individualRegisterRowMatches": 7
+  }
+}

@@ -1,0 +1,211 @@
+{
+  "version": 1,
+  "corrections": [
+    {
+      "sourceId": "apt-a14003002",
+      "sourceSha256": "5494b70faff113da6d2decc3e11ba1eaae690d41204b11ee109e48dd86f6472a",
+      "sourceFootprintIds": [
+        "23c1dad4-d364-4838-a55e-ef3b1dd06ab5",
+        "a9333b31-8353-4bb1-8bc2-54706d7a665d",
+        "1dea497c-6aa0-4d0c-b8c7-401469e17de9",
+        "bafa53ba-3419-4227-8bc1-5832d4121f33",
+        "9f73bcfb-e6b1-420b-9131-cecea73bce33",
+        "500aac7b-3e0f-473b-a046-f422ab16efd9",
+        "805bb192-2c3d-473f-b645-1eca99731876"
+      ],
+      "assets": [
+        {
+          "id": "apt-a14003002",
+          "model": "generic-corrections/apt-a14003002.glb",
+          "name": "이촌왕궁 및 인접 점보아파트 (기존 6동)",
+          "nameKo": "이촌왕궁 및 인접 점보아파트 (기존 6동)",
+          "district": "용산구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            159.3025360107422,
+            57.29999923706055,
+            188.60916137695312
+          ],
+          "measuredGlbDimensions": [
+            159.3025360107422,
+            57.29999923706055,
+            188.60916137695312
+          ],
+          "bounds": {
+            "min": [
+              -109.1198501586914,
+              0.0,
+              -94.30458068847656
+            ],
+            "max": [
+              50.182682037353516,
+              57.29999923706055,
+              94.30458068847656
+            ]
+          },
+          "triangles": 1520,
+          "drawCalls": 3,
+          "bytes": 97376,
+          "sha256": "6dc032d6bd07fa8a0e6be9f06983a14f2758f4f0b12dcd4295e91132ce0de24e",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.97868345,
+            "lat": 37.517378354808606,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 6,
+          "footprintIds": [
+            "23c1dad4-d364-4838-a55e-ef3b1dd06ab5",
+            "a9333b31-8353-4bb1-8bc2-54706d7a665d",
+            "1dea497c-6aa0-4d0c-b8c7-401469e17de9",
+            "bafa53ba-3419-4227-8bc1-5832d4121f33",
+            "9f73bcfb-e6b1-420b-9131-cecea73bce33",
+            "500aac7b-3e0f-473b-a046-f422ab16efd9"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/APARTMENT_400_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "householdCount": 250,
+          "apartmentCode": "A14003002",
+          "searchable": true,
+          "geoBounds": [
+            126.97744759646646,
+            37.516531197537994,
+            126.97925180163197,
+            37.518225502461874
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a14003002",
+            "sourceSha256": "5494b70faff113da6d2decc3e11ba1eaae690d41204b11ee109e48dd86f6472a",
+            "operation": "Exact triangle partition; unchanged vertex attributes, materials and original terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-caelitus-101",
+          "model": "generic-corrections/fallback-caelitus-101.glb",
+          "name": "래미안 첼리투스 101동 (기존 추정 모형)",
+          "nameKo": "래미안 첼리투스 101동 (기존 추정 모형)",
+          "district": "용산구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            39.22080993652344,
+            196.0,
+            39.106300354003906
+          ],
+          "measuredGlbDimensions": [
+            39.22080993652344,
+            196.0,
+            39.106300354003906
+          ],
+          "bounds": {
+            "min": [
+              69.89904022216797,
+              0.0,
+              54.88658905029297
+            ],
+            "max": [
+              109.1198501586914,
+              196.0,
+              93.99288940429688
+            ]
+          },
+          "triangles": 476,
+          "drawCalls": 3,
+          "bytes": 32608,
+          "sha256": "d486f0885e86ea99e5614daae74483ef7da7df7c90ec384047e9056eeb5cd8a0",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.97868345,
+            "lat": 37.517378354808606,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "805bb192-2c3d-473f-b645-1eca99731876"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/APARTMENT_400_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "geoBounds": [
+            126.97947510225873,
+            37.51653399754018,
+            126.97991930353355,
+            37.51688529856135
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a14003002",
+            "sourceSha256": "5494b70faff113da6d2decc3e11ba1eaae690d41204b11ee109e48dd86f6472a",
+            "operation": "Exact triangle partition; unchanged vertex attributes, materials and original terrain anchor."
+          }
+        }
+      ]
+    }
+  ]
+}

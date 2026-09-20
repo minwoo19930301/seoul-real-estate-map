@@ -223,7 +223,7 @@ export class CityModels {
     for (const entry of this.entries) {
       if (!isLandmark(entry.asset)) continue;
       for (const id of entry.asset.supersedes ?? []) {
-        if (landmarks.has(id)) replacing.set(id, [...(replacing.get(id) ?? []), entry]);
+        if (byId.has(id)) replacing.set(id, [...(replacing.get(id) ?? []), entry]);
       }
     }
     for (const group of replacing.values()) for (const entry of group) {
