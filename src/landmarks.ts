@@ -3,6 +3,7 @@ import type { FeatureCollection, Point } from 'geojson';
 import type { Place } from './places';
 import { queryBounds } from './view-window.ts';
 import { renewalZoneControls } from './renewal-zones.ts';
+import type { ReferencePlace } from './reference-models.ts';
 
 type ApartmentRecord = { household_count?: number | null; official_complex_code?: string | null; household_count_source?: string; source_updated_at?: string; coordinate_source_url?: string };
 export type SearchPlace = Place & ApartmentRecord & { id?: string; kind?: string; source_url?: string; building_id?: string | null };
@@ -30,6 +31,8 @@ export const landmarkControls = `
 
 export class Landmarks {
   private data: PinData = empty();
+  private referenceFeatures: PinData['features'] = [];
+  private retiredPlaceIds = new Set<string>();
   private externalStations = false;
   private markers: Marker[] = [];
   private controller?: AbortController;
@@ -60,6 +63,13 @@ export class Landmarks {
   }
 
   useExternalStations(enabled: boolean) { this.externalStations = enabled; this.cachedKey = ''; this.clear(); void this.load(); }
+  setReferencePlaces(places: ReferencePlace[]) {
+    this.referenceFeatures = places.map(place => ({ type: 'Feature', geometry: { type: 'Point', coordinates: place.center },
+      properties: { id: place.id, name: place.name, kind: 'residential', priority: 1000,
+        subtitle: place.subtitle, household_count: place.household_count, source_url: place.source_url } }));
+    this.retiredPlaceIds = new Set(places.flatMap(place => place.supersedesPlaceIds ?? []));
+    this.dataRevision++; this.render();
+  }
   schedule() { clearTimeout(this.timer); this.timer = setTimeout(() => void this.load(), 180); }
   getData() { return this.data; }
   private clear() { this.renderKey = ''; this.markers.splice(0).forEach(marker => marker.remove()); }
@@ -111,7 +121,8 @@ export class Landmarks {
     measure.font = '650 11px "Apple SD Gothic Neo", "Noto Sans KR", sans-serif';
     const center = this.map.getCenter();
     const distance = (point: number[]) => (point[0] - center.lng) ** 2 + (point[1] - center.lat) ** 2;
-    const features = [...this.data.features].filter(f => kinds[f.properties.kind] && input(`pin-${f.properties.kind}`).checked)
+    const features = [...this.referenceFeatures, ...this.data.features.filter(f => !this.retiredPlaceIds.has(f.properties.id))]
+      .filter(f => kinds[f.properties.kind] && input(`pin-${f.properties.kind}`).checked)
       .sort((a, b) => (b.properties.priority ?? 0) - (a.properties.priority ?? 0) || distance(a.geometry.coordinates) - distance(b.geometry.coordinates));
     const maxPins = canvas.clientWidth < 600 ? 14 : 30;
     for (const feature of features) {

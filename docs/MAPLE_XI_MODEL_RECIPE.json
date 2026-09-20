@@ -1,0 +1,4881 @@
+{
+  "name": "메이플자이",
+  "generator": "scripts/build_maple_xi.py",
+  "acquiredAt": "2026-09-20",
+  "sources": [
+    {
+      "url": "https://www.xi.co.kr/Files/cmsPage/20240205_132346_189001.jpg",
+      "kind": "developer illustrative numbered plan",
+      "date": "2024-02-05 filename; pre-completion"
+    },
+    {
+      "url": "https://www.xi.co.kr/Files/cmsPage/20240126_101604_789001.pdf",
+      "kind": "official sales notice",
+      "date": "2024-01-26"
+    },
+    {
+      "url": "https://www.xi.co.kr/Files/aptProcRateImg/20250403_170535_099001.JPG",
+      "kind": "developer actual aerial construction photo",
+      "date": "2025-03 photo label; uploaded2025-04-03"
+    },
+    {
+      "url": "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+      "kind": "developer magazine completed-building photographs",
+      "date": "2025-11-26 publication; capture dates unspecified"
+    },
+    {
+      "url": "https://www.xi.co.kr/maple/aptconst?aptSeq=2527&type=9",
+      "kind": "developer construction page",
+      "moveInYearMonth": "2025-06"
+    },
+    {
+      "url": "https://overpass.kumi.systems/api/interpreter",
+      "kind": "OpenStreetMap public road geometries",
+      "osmBaseTimestamp": "2026-06-01T08:52:28Z",
+      "license": "ODbL; ©OpenStreetMap contributors"
+    }
+  ],
+  "imagesRedistributed": false,
+  "residentialBuildingCount": 29,
+  "ancillaryBuildingCount": 2,
+  "skybridgeAttachedTo": "maple-xi-210",
+  "individualFloorCountsVerified": [
+    210,
+    211
+  ],
+  "georeference": {
+    "controls": [
+      {
+        "pixel": [
+          110,
+          386
+        ],
+        "coordinate": [
+          127.0096393,
+          37.5120376
+        ],
+        "osmNode": 436816900,
+        "intersection": "신반포로33길 / 잠원로4길"
+      },
+      {
+        "pixel": [
+          669,
+          84
+        ],
+        "coordinate": [
+          127.0133484,
+          37.5138164
+        ],
+        "osmNode": 436816903,
+        "intersection": "나루터로4길 / 잠원로4길"
+      },
+      {
+        "pixel": [
+          377,
+          985
+        ],
+        "coordinate": [
+          127.0113552,
+          37.5088814
+        ],
+        "osmNode": 571450682,
+        "intersection": "나루터로4길 / 신반포로33길"
+      }
+    ],
+    "pixelToLonLatAffine": [
+      [
+        6.594747457737152e-06,
+        2.703623563538801e-07
+      ],
+      [
+        -7.495420903148482e-08,
+        -5.3896272940608815e-06
+      ],
+      [
+        127.00894281010433,
+        37.5140882562763
+      ]
+    ],
+    "method": "3 road intersection centers; visual cross-check against all nearby road polylines",
+    "accuracy": "illustrative-plan trace, not surveying; control selection/changed road width and plan roof overhang introduce error"
+  },
+  "siteMaskGeoJSON": {
+    "type": "MultiPolygon",
+    "coordinates": [
+      [
+        [
+          [
+            127.01089042816174,
+            37.51195422816535
+          ],
+          [
+            127.01099751815944,
+            37.51207173613622
+          ],
+          [
+            127.01103334086406,
+            37.5120503116926
+          ],
+          [
+            127.01113728207761,
+            37.51216903740971
+          ],
+          [
+            127.01253492125927,
+            37.51314205014454
+          ],
+          [
+            127.01317011573308,
+            37.51331891449498
+          ],
+          [
+            127.01328656889223,
+            37.51174004168001
+          ],
+          [
+            127.01330095643155,
+            37.5113527996019
+          ],
+          [
+            127.01292004191485,
+            37.51077091456593
+          ],
+          [
+            127.01294333976172,
+            37.510756390649256
+          ],
+          [
+            127.01284913944208,
+            37.510617864893916
+          ],
+          [
+            127.01282840696028,
+            37.510630933004464
+          ],
+          [
+            127.01258714722185,
+            37.510262384615196
+          ],
+          [
+            127.01200973265972,
+            37.510448788192306
+          ],
+          [
+            127.01151272928865,
+            37.51073005978169
+          ],
+          [
+            127.01132635241302,
+            37.51059852820795
+          ],
+          [
+            127.01118628867802,
+            37.5104796684253
+          ],
+          [
+            127.01051220030735,
+            37.51034968854636
+          ],
+          [
+            127.01022390649739,
+            37.51094655012455
+          ],
+          [
+            127.01003438399086,
+            37.5115366878835
+          ],
+          [
+            127.0102279552476,
+            37.511711606837956
+          ],
+          [
+            127.01070195256825,
+            37.511671787027375
+          ],
+          [
+            127.01093173264813,
+            37.511934250816566
+          ],
+          [
+            127.01089042816174,
+            37.51195422816535
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            127.01301580336073,
+            37.509331924489324
+          ],
+          [
+            127.01262798870522,
+            37.509881613613814
+          ],
+          [
+            127.01339665461244,
+            37.511125101063605
+          ],
+          [
+            127.01348988175029,
+            37.51166757850364
+          ],
+          [
+            127.01355973357599,
+            37.51376781809734
+          ],
+          [
+            127.01353904804259,
+            37.513781123489984
+          ],
+          [
+            127.01356078973676,
+            37.513799573755094
+          ],
+          [
+            127.01356917474287,
+            37.51405168630411
+          ],
+          [
+            127.0147119399083,
+            37.514233199674116
+          ],
+          [
+            127.01480838151657,
+            37.51168931321115
+          ],
+          [
+            127.01483895689388,
+            37.51158591364088
+          ],
+          [
+            127.01484660082556,
+            37.511593922093994
+          ],
+          [
+            127.01497722155317,
+            37.511507705677126
+          ],
+          [
+            127.01488740710715,
+            37.51142206509107
+          ],
+          [
+            127.01529309117444,
+            37.51005012590602
+          ],
+          [
+            127.01301580336073,
+            37.509331924489324
+          ]
+        ]
+      ]
+    ]
+  },
+  "siteMaskPixelTraces": [
+    [
+      [
+        171,
+        482
+      ],
+      [
+        200,
+        451
+      ],
+      [
+        272,
+        462
+      ],
+      [
+        337,
+        373
+      ],
+      [
+        547,
+        203
+      ],
+      [
+        643,
+        175
+      ],
+      [
+        664,
+        469
+      ],
+      [
+        667,
+        541
+      ],
+      [
+        561,
+        738
+      ],
+      [
+        473,
+        699
+      ],
+      [
+        397,
+        643
+      ],
+      [
+        369,
+        666
+      ],
+      [
+        348,
+        687
+      ],
+      [
+        246,
+        706
+      ],
+      [
+        201,
+        593
+      ]
+    ],
+    [
+      [
+        702,
+        42
+      ],
+      [
+        875,
+        17
+      ],
+      [
+        895,
+        490
+      ],
+      [
+        972,
+        798
+      ],
+      [
+        628,
+        914
+      ],
+      [
+        568,
+        809
+      ],
+      [
+        682,
+        584
+      ],
+      [
+        695,
+        484
+      ]
+    ]
+  ],
+  "assets": [
+    {
+      "id": "maple-xi-101",
+      "nameKo": "메이플자이 101동",
+      "model": "maple-xi-101.glb",
+      "coordinate": {
+        "lon": 127.0128703516378,
+        "lat": 37.51306172479104
+      },
+      "dimensions": [
+        50.70289611816406,
+        113.04000091552734,
+        41.833763122558594
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "local ground at individual model anchor",
+      "category": "residential-apartment",
+      "district": "서초구",
+      "minZoom": 15,
+      "referenceQuality": "photo-authored",
+      "referenceUrl": "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+      "referenceUrls": [
+        "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+        "https://www.xi.co.kr/Files/cmsPage/20240205_132346_189001.jpg",
+        "https://www.xi.co.kr/Files/cmsPage/20240126_101604_789001.pdf",
+        "https://www.xi.co.kr/maple/view?cmsMenuSeq=19690",
+        "https://www.xi.co.kr/Files/aptProcRateImg/20250403_170535_099001.JPG"
+      ],
+      "heightEstimated": true,
+      "geometryEstimated": true,
+      "footprintIds": [],
+      "geoBounds": [
+        127.01258595529212,
+        37.51287611873013,
+        127.0131547525661,
+        37.51324802063325
+      ],
+      "groundFootprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              127.01258595529212,
+              37.51302025161562
+            ],
+            [
+              127.01271972409651,
+              37.5131603995451
+            ],
+            [
+              127.0128502698699,
+              37.513068793500935
+            ],
+            [
+              127.01301753709103,
+              37.51324802063325
+            ],
+            [
+              127.0131547525661,
+              37.51316207457874
+            ],
+            [
+              127.01288054525567,
+              37.51287611873013
+            ],
+            [
+              127.01258595529212,
+              37.51302025161562
+            ]
+          ]
+        ]
+      },
+      "recipe": {
+        "dong": 101,
+        "floorsEstimate": 35,
+        "floorCountVerified": false,
+        "floorBasis": "Unverified individual floor count; approximate aerial silhouette constrained by official35F complex maximum",
+        "storeyHeightEstimateM": 3.08,
+        "mainRoofHeightEstimateM": 108.64,
+        "groundFootprintPixelTrace": [
+          [
+            555,
+            226
+          ],
+          [
+            575,
+            201
+          ],
+          [
+            595,
+            219
+          ],
+          [
+            620,
+            187
+          ],
+          [
+            641,
+            204
+          ],
+          [
+            600,
+            255
+          ]
+        ],
+        "features": [
+          "individually traced numbered plan",
+          "7m pilotis portal",
+          "recessed stone lobby",
+          "broad gray paired-window stacks and projecting white perimeter frames",
+          "unequal center/corner window widths by elevation",
+          "gray stone lower sleeve",
+          "raised window mullions",
+          "plan-shaped crown",
+          "rooftop service enclosure"
+        ]
+      },
+      "measuredGlbDimensions": [
+        50.70289611816406,
+        113.04000091552734,
+        41.833763122558594
+      ],
+      "bounds": {
+        "min": [
+          -25.35144805908203,
+          0.0,
+          -20.916881561279297
+        ],
+        "max": [
+          25.35144805908203,
+          113.04000091552734,
+          20.916881561279297
+        ]
+      },
+      "triangles": 13441,
+      "drawCalls": 3,
+      "bytes": 830268,
+      "sha256": "7e0c76dfb55321b7f0f58bece1a69f4cef3b93e666e789b1ae7fe48bdeb42da6"
+    },
+    {
+      "id": "maple-xi-102",
+      "nameKo": "메이플자이 102동",
+      "model": "maple-xi-102.glb",
+      "coordinate": {
+        "lon": 127.01280025810065,
+        "lat": 37.51250698848682
+      },
+      "dimensions": [
+        51.0501594543457,
+        113.04000091552734,
+        32.958961486816406
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "local ground at individual model anchor",
+      "category": "residential-apartment",
+      "district": "서초구",
+      "minZoom": 15,
+      "referenceQuality": "photo-authored",
+      "referenceUrl": "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+      "referenceUrls": [
+        "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+        "https://www.xi.co.kr/Files/cmsPage/20240205_132346_189001.jpg",
+        "https://www.xi.co.kr/Files/cmsPage/20240126_101604_789001.pdf",
+        "https://www.xi.co.kr/maple/view?cmsMenuSeq=19690",
+        "https://www.xi.co.kr/Files/aptProcRateImg/20250403_170535_099001.JPG"
+      ],
+      "heightEstimated": true,
+      "geometryEstimated": true,
+      "footprintIds": [],
+      "geoBounds": [
+        127.01251318698453,
+        37.51236113015128,
+        127.01308707992177,
+        37.51265299873205
+      ],
+      "groundFootprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              127.01251318698453,
+              37.512527091908304
+            ],
+            [
+              127.01262687172971,
+              37.51264487024153
+            ],
+            [
+              127.0127834966761,
+              37.512532787137616
+            ],
+            [
+              127.01295653414839,
+              37.51265299873205
+            ],
+            [
+              127.01308707992177,
+              37.51256139268789
+            ],
+            [
+              127.01280088238377,
+              37.51236113015128
+            ],
+            [
+              127.01251318698453,
+              37.512527091908304
+            ]
+          ]
+        ]
+      },
+      "recipe": {
+        "dong": 102,
+        "floorsEstimate": 35,
+        "floorCountVerified": false,
+        "floorBasis": "Unverified individual floor count; approximate aerial silhouette constrained by official35F complex maximum",
+        "storeyHeightEstimateM": 3.08,
+        "mainRoofHeightEstimateM": 108.64,
+        "groundFootprintPixelTrace": [
+          [
+            545,
+            317
+          ],
+          [
+            562,
+            296
+          ],
+          [
+            586,
+            318
+          ],
+          [
+            612,
+            297
+          ],
+          [
+            632,
+            315
+          ],
+          [
+            589,
+            350
+          ]
+        ],
+        "features": [
+          "individually traced numbered plan",
+          "7m pilotis portal",
+          "recessed stone lobby",
+          "broad gray paired-window stacks and projecting white perimeter frames",
+          "unequal center/corner window widths by elevation",
+          "gray stone lower sleeve",
+          "raised window mullions",
+          "plan-shaped crown",
+          "rooftop service enclosure"
+        ]
+      },
+      "measuredGlbDimensions": [
+        51.0501594543457,
+        113.04000091552734,
+        32.958961486816406
+      ],
+      "bounds": {
+        "min": [
+          -25.52507972717285,
+          0.0,
+          -16.479480743408203
+        ],
+        "max": [
+          25.52507972717285,
+          113.04000091552734,
+          16.479480743408203
+        ]
+      },
+      "triangles": 12426,
+      "drawCalls": 3,
+      "bytes": 767500,
+      "sha256": "e4ed03538637cc4953750bdae2539536147e222f20d078351f2473148e99bed8"
+    },
+    {
+      "id": "maple-xi-103",
+      "nameKo": "메이플자이 103동",
+      "model": "maple-xi-103.glb",
+      "coordinate": {
+        "lon": 127.01200212873212,
+        "lat": 37.51246111533258
+      },
+      "dimensions": [
+        55.94973373413086,
+        113.04000091552734,
+        47.85836410522461
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "local ground at individual model anchor",
+      "category": "residential-apartment",
+      "district": "서초구",
+      "minZoom": 15,
+      "referenceQuality": "photo-authored",
+      "referenceUrl": "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+      "referenceUrls": [
+        "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+        "https://www.xi.co.kr/Files/cmsPage/20240205_132346_189001.jpg",
+        "https://www.xi.co.kr/Files/cmsPage/20240126_101604_789001.pdf",
+        "https://www.xi.co.kr/maple/view?cmsMenuSeq=19690",
+        "https://www.xi.co.kr/Files/aptProcRateImg/20250403_170535_099001.JPG"
+      ],
+      "heightEstimated": true,
+      "geometryEstimated": true,
+      "footprintIds": [],
+      "geoBounds": [
+        127.01168794410181,
+        37.51224838298381,
+        127.0123161690571,
+        37.51267472188459
+      ],
+      "groundFootprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              127.01168794410181,
+              37.51242862108622
+            ],
+            [
+              127.01182156299778,
+              37.51255798976112
+            ],
+            [
+              127.0119978222781,
+              37.51243593848968
+            ],
+            [
+              127.012172508743,
+              37.51267472188459
+            ],
+            [
+              127.0123161690571,
+              37.512578266937844
+            ],
+            [
+              127.01202157787063,
+              37.51224838298381
+            ],
+            [
+              127.01168794410181,
+              37.51242862108622
+            ]
+          ]
+        ]
+      },
+      "recipe": {
+        "dong": 103,
+        "floorsEstimate": 35,
+        "floorCountVerified": false,
+        "floorBasis": "Unverified individual floor count; approximate aerial silhouette constrained by official35F complex maximum",
+        "storeyHeightEstimateM": 3.08,
+        "mainRoofHeightEstimateM": 108.64,
+        "groundFootprintPixelTrace": [
+          [
+            420,
+            329
+          ],
+          [
+            440,
+            306
+          ],
+          [
+            467,
+            330
+          ],
+          [
+            493,
+            287
+          ],
+          [
+            515,
+            306
+          ],
+          [
+            471,
+            365
+          ]
+        ],
+        "features": [
+          "individually traced numbered plan",
+          "7m pilotis portal",
+          "recessed stone lobby",
+          "broad gray paired-window stacks and projecting white perimeter frames",
+          "unequal center/corner window widths by elevation",
+          "gray stone lower sleeve",
+          "raised window mullions",
+          "plan-shaped crown",
+          "rooftop service enclosure"
+        ]
+      },
+      "measuredGlbDimensions": [
+        55.94973373413086,
+        113.04000091552734,
+        47.85836410522461
+      ],
+      "bounds": {
+        "min": [
+          -27.97486686706543,
+          0.0,
+          -23.929182052612305
+        ],
+        "max": [
+          27.97486686706543,
+          113.04000091552734,
+          23.929182052612305
+        ]
+      },
+      "triangles": 17191,
+      "drawCalls": 3,
+      "bytes": 1062992,
+      "sha256": "205292ebef13772315a7631efa57733d79b45eb0b8eadf392dc2d55cb5976bfe"
+    },
+    {
+      "id": "maple-xi-104",
+      "nameKo": "메이플자이 104동",
+      "model": "maple-xi-104.glb",
+      "coordinate": {
+        "lon": 127.0112137879258,
+        "lat": 37.51190366348841
+      },
+      "dimensions": [
+        57.418731689453125,
+        113.04000091552734,
+        37.898651123046875
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "local ground at individual model anchor",
+      "category": "residential-apartment",
+      "district": "서초구",
+      "minZoom": 15,
+      "referenceQuality": "photo-authored",
+      "referenceUrl": "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+      "referenceUrls": [
+        "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+        "https://www.xi.co.kr/Files/cmsPage/20240205_132346_189001.jpg",
+        "https://www.xi.co.kr/Files/cmsPage/20240126_101604_789001.pdf",
+        "https://www.xi.co.kr/maple/view?cmsMenuSeq=19690",
+        "https://www.xi.co.kr/Files/aptProcRateImg/20250403_170535_099001.JPG"
+      ],
+      "heightEstimated": true,
+      "geometryEstimated": true,
+      "footprintIds": [],
+      "geoBounds": [
+        127.01089042816174,
+        37.511735739566994,
+        127.01153618873313,
+        37.51207173613622
+      ],
+      "groundFootprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              127.01089042816174,
+              37.51195422816535
+            ],
+            [
+              127.01099751815944,
+              37.51207173613622
+            ],
+            [
+              127.01131781252494,
+              37.51188017805451
+            ],
+            [
+              127.01143846678862,
+              37.512025174886574
+            ],
+            [
+              127.01153618873313,
+              37.511942996285214
+            ],
+            [
+              127.01134216775112,
+              37.511735739566994
+            ],
+            [
+              127.01089042816174,
+              37.51195422816535
+            ]
+          ]
+        ]
+      },
+      "recipe": {
+        "dong": 104,
+        "floorsEstimate": 35,
+        "floorCountVerified": false,
+        "floorBasis": "Unverified individual floor count; approximate aerial silhouette constrained by official35F complex maximum",
+        "storeyHeightEstimateM": 3.08,
+        "mainRoofHeightEstimateM": 108.64,
+        "groundFootprintPixelTrace": [
+          [
+            300,
+            411
+          ],
+          [
+            316,
+            390
+          ],
+          [
+            365,
+            428
+          ],
+          [
+            383,
+            402
+          ],
+          [
+            398,
+            418
+          ],
+          [
+            369,
+            455
+          ]
+        ],
+        "features": [
+          "individually traced numbered plan",
+          "7m pilotis portal",
+          "recessed stone lobby",
+          "broad gray paired-window stacks and projecting white perimeter frames",
+          "unequal center/corner window widths by elevation",
+          "gray stone lower sleeve",
+          "raised window mullions",
+          "plan-shaped crown",
+          "rooftop service enclosure"
+        ]
+      },
+      "measuredGlbDimensions": [
+        57.418731689453125,
+        113.04000091552734,
+        37.898651123046875
+      ],
+      "bounds": {
+        "min": [
+          -28.709365844726562,
+          0.0,
+          -18.949325561523438
+        ],
+        "max": [
+          28.709365844726562,
+          113.04000091552734,
+          18.949325561523438
+        ]
+      },
+      "triangles": 14423,
+      "drawCalls": 3,
+      "bytes": 891436,
+      "sha256": "f7484dae3800ca59561f2ed0b8ae5ac51ef0ff47db5b014b62f964d5b529bf76"
+    },
+    {
+      "id": "maple-xi-105",
+      "nameKo": "메이플자이 105동",
+      "model": "maple-xi-105.glb",
+      "coordinate": {
+        "lon": 127.01203465814697,
+        "lat": 37.51192576539625
+      },
+      "dimensions": [
+        65.11567687988281,
+        113.04000091552734,
+        45.172935485839844
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "local ground at individual model anchor",
+      "category": "residential-apartment",
+      "district": "서초구",
+      "minZoom": 15,
+      "referenceQuality": "photo-authored",
+      "referenceUrl": "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+      "referenceUrls": [
+        "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+        "https://www.xi.co.kr/Files/cmsPage/20240205_132346_189001.jpg",
+        "https://www.xi.co.kr/Files/cmsPage/20240126_101604_789001.pdf",
+        "https://www.xi.co.kr/maple/view?cmsMenuSeq=19690",
+        "https://www.xi.co.kr/Files/aptProcRateImg/20250403_170535_099001.JPG"
+      ],
+      "heightEstimated": true,
+      "geometryEstimated": true,
+      "footprintIds": [],
+      "geoBounds": [
+        127.01166860836176,
+        37.51172506603141,
+        127.01240062532956,
+        37.51212654921524
+      ],
+      "groundFootprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              127.01166860836176,
+              37.5119861309234
+            ],
+            [
+              127.0118089719136,
+              37.51212654921524
+            ],
+            [
+              127.01205072894325,
+              37.511974863803594
+            ],
+            [
+              127.0122834939137,
+              37.51212445679571
+            ],
+            [
+              127.01240062532956,
+              37.512016141144954
+            ],
+            [
+              127.01213293781238,
+              37.51172506603141
+            ],
+            [
+              127.01166860836176,
+              37.5119861309234
+            ]
+          ]
+        ]
+      },
+      "recipe": {
+        "dong": 105,
+        "floorsEstimate": 35,
+        "floorCountVerified": false,
+        "floorBasis": "Unverified individual floor count; approximate aerial silhouette constrained by official35F complex maximum",
+        "storeyHeightEstimateM": 3.08,
+        "mainRoofHeightEstimateM": 108.64,
+        "groundFootprintPixelTrace": [
+          [
+            418,
+            411
+          ],
+          [
+            439,
+            386
+          ],
+          [
+            476,
+            416
+          ],
+          [
+            511,
+            390
+          ],
+          [
+            529,
+            411
+          ],
+          [
+            489,
+            463
+          ]
+        ],
+        "features": [
+          "individually traced numbered plan",
+          "7m pilotis portal",
+          "recessed stone lobby",
+          "broad gray paired-window stacks and projecting white perimeter frames",
+          "unequal center/corner window widths by elevation",
+          "gray stone lower sleeve",
+          "raised window mullions",
+          "plan-shaped crown",
+          "rooftop service enclosure"
+        ]
+      },
+      "measuredGlbDimensions": [
+        65.11567687988281,
+        113.04000091552734,
+        45.172935485839844
+      ],
+      "bounds": {
+        "min": [
+          -32.557838439941406,
+          0.0,
+          -22.586467742919922
+        ],
+        "max": [
+          32.557838439941406,
+          113.04000091552734,
+          22.586467742919922
+        ]
+      },
+      "triangles": 18820,
+      "drawCalls": 3,
+      "bytes": 1163992,
+      "sha256": "c93db90083bff6cee0eb89e857bd58a16c384919dd67f61ae61f6de86a959e9b"
+    },
+    {
+      "id": "maple-xi-106",
+      "nameKo": "메이플자이 106동",
+      "model": "maple-xi-106.glb",
+      "coordinate": {
+        "lon": 127.01287823540348,
+        "lat": 37.51195951145115
+      },
+      "dimensions": [
+        69.5281982421875,
+        113.04000091552734,
+        40.20705032348633
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "local ground at individual model anchor",
+      "category": "residential-apartment",
+      "district": "서초구",
+      "minZoom": 15,
+      "referenceQuality": "photo-authored",
+      "referenceUrl": "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+      "referenceUrls": [
+        "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+        "https://www.xi.co.kr/Files/cmsPage/20240205_132346_189001.jpg",
+        "https://www.xi.co.kr/Files/cmsPage/20240126_101604_789001.pdf",
+        "https://www.xi.co.kr/maple/view?cmsMenuSeq=19690",
+        "https://www.xi.co.kr/Files/aptProcRateImg/20250403_170535_099001.JPG"
+      ],
+      "heightEstimated": true,
+      "geometryEstimated": true,
+      "footprintIds": [],
+      "geoBounds": [
+        127.0124862820923,
+        37.511781230922196,
+        127.01326985777243,
+        37.51213797491353
+      ],
+      "groundFootprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              127.0124862820923,
+              37.5120142662283
+            ],
+            [
+              127.0126132312866,
+              37.51213797491353
+            ],
+            [
+              127.01296612461832,
+              37.51192082050713
+            ],
+            [
+              127.01313923704483,
+              37.51204642172887
+            ],
+            [
+              127.01326985777243,
+              37.51196020531199
+            ],
+            [
+              127.01297736530381,
+              37.511781230922196
+            ],
+            [
+              127.0124862820923,
+              37.5120142662283
+            ]
+          ]
+        ]
+      },
+      "recipe": {
+        "dong": 106,
+        "floorsEstimate": 35,
+        "floorCountVerified": false,
+        "floorBasis": "Unverified individual floor count; approximate aerial silhouette constrained by official35F complex maximum",
+        "storeyHeightEstimateM": 3.08,
+        "mainRoofHeightEstimateM": 108.64,
+        "groundFootprintPixelTrace": [
+          [
+            542,
+            412
+          ],
+          [
+            561,
+            390
+          ],
+          [
+            615,
+            433
+          ],
+          [
+            641,
+            411
+          ],
+          [
+            661,
+            428
+          ],
+          [
+            617,
+            459
+          ]
+        ],
+        "features": [
+          "individually traced numbered plan",
+          "7m pilotis portal",
+          "recessed stone lobby",
+          "broad gray paired-window stacks and projecting white perimeter frames",
+          "unequal center/corner window widths by elevation",
+          "gray stone lower sleeve",
+          "raised window mullions",
+          "plan-shaped crown",
+          "rooftop service enclosure"
+        ]
+      },
+      "measuredGlbDimensions": [
+        69.5281982421875,
+        113.04000091552734,
+        40.20705032348633
+      ],
+      "bounds": {
+        "min": [
+          -34.76409912109375,
+          0.0,
+          -20.103525161743164
+        ],
+        "max": [
+          34.76409912109375,
+          113.04000091552734,
+          20.103525161743164
+        ]
+      },
+      "triangles": 17643,
+      "drawCalls": 3,
+      "bytes": 1091128,
+      "sha256": "6ccfb1aa3b7fc422589aa4548e70274eec2db3d68c35e4f12d0a386a1bbdd54b"
+    },
+    {
+      "id": "maple-xi-107",
+      "nameKo": "메이플자이 107동",
+      "model": "maple-xi-107.glb",
+      "coordinate": {
+        "lon": 127.01294866850837,
+        "lat": 37.51134035769232
+      },
+      "dimensions": [
+        61.428611755371094,
+        113.04000091552734,
+        35.198638916015625
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "local ground at individual model anchor",
+      "category": "residential-apartment",
+      "district": "서초구",
+      "minZoom": 15,
+      "referenceQuality": "photo-authored",
+      "referenceUrl": "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+      "referenceUrls": [
+        "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+        "https://www.xi.co.kr/Files/cmsPage/20240205_132346_189001.jpg",
+        "https://www.xi.co.kr/Files/cmsPage/20240126_101604_789001.pdf",
+        "https://www.xi.co.kr/maple/view?cmsMenuSeq=19690",
+        "https://www.xi.co.kr/Files/aptProcRateImg/20250403_170535_099001.JPG"
+      ],
+      "heightEstimated": true,
+      "geometryEstimated": true,
+      "footprintIds": [],
+      "geoBounds": [
+        127.0126025128347,
+        37.5111846044667,
+        127.0132944366383,
+        37.51149635652302
+      ],
+      "groundFootprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              127.0126025128347,
+              37.511367258210484
+            ],
+            [
+              127.0127295369832,
+              37.51149635652302
+            ],
+            [
+              127.01299085339262,
+              37.511329313316566
+            ],
+            [
+              127.01316396581912,
+              37.5114549145383
+            ],
+            [
+              127.0132944366383,
+              37.51135791886684
+            ],
+            [
+              127.01300861387136,
+              37.5111846044667
+            ],
+            [
+              127.0126025128347,
+              37.511367258210484
+            ]
+          ]
+        ]
+      },
+      "recipe": {
+        "dong": 107,
+        "floorsEstimate": 35,
+        "floorCountVerified": false,
+        "floorBasis": "Unverified individual floor count; approximate aerial silhouette constrained by official35F complex maximum",
+        "storeyHeightEstimateM": 3.08,
+        "mainRoofHeightEstimateM": 108.64,
+        "groundFootprintPixelTrace": [
+          [
+            561,
+            533
+          ],
+          [
+            580,
+            510
+          ],
+          [
+            620,
+            543
+          ],
+          [
+            646,
+            521
+          ],
+          [
+            666,
+            540
+          ],
+          [
+            623,
+            570
+          ]
+        ],
+        "features": [
+          "individually traced numbered plan",
+          "7m pilotis portal",
+          "recessed stone lobby",
+          "broad gray paired-window stacks and projecting white perimeter frames",
+          "unequal center/corner window widths by elevation",
+          "gray stone lower sleeve",
+          "raised window mullions",
+          "plan-shaped crown",
+          "rooftop service enclosure"
+        ]
+      },
+      "measuredGlbDimensions": [
+        61.428611755371094,
+        113.04000091552734,
+        35.198638916015625
+      ],
+      "bounds": {
+        "min": [
+          -30.714305877685547,
+          0.0,
+          -17.599319458007812
+        ],
+        "max": [
+          30.714305877685547,
+          113.04000091552734,
+          17.599319458007812
+        ]
+      },
+      "triangles": 15166,
+      "drawCalls": 3,
+      "bytes": 937496,
+      "sha256": "f19ca3fe743fed0c91f773880acb89d7c8ff62eb7e163e7f8a93822eda6da566"
+    },
+    {
+      "id": "maple-xi-108",
+      "nameKo": "메이플자이 108동",
+      "model": "maple-xi-108.glb",
+      "coordinate": {
+        "lon": 127.01219497994241,
+        "lat": 37.51138007303395
+      },
+      "dimensions": [
+        65.52837371826172,
+        113.04000091552734,
+        43.2575569152832
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "local ground at individual model anchor",
+      "category": "residential-apartment",
+      "district": "서초구",
+      "minZoom": 15,
+      "referenceQuality": "photo-authored",
+      "referenceUrl": "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+      "referenceUrls": [
+        "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+        "https://www.xi.co.kr/Files/cmsPage/20240205_132346_189001.jpg",
+        "https://www.xi.co.kr/Files/cmsPage/20240126_101604_789001.pdf",
+        "https://www.xi.co.kr/maple/view?cmsMenuSeq=19690",
+        "https://www.xi.co.kr/Files/aptProcRateImg/20250403_170535_099001.JPG"
+      ],
+      "heightEstimated": true,
+      "geometryEstimated": true,
+      "footprintIds": [],
+      "geoBounds": [
+        127.01182583171888,
+        37.51118801345833,
+        127.01256354398363,
+        37.51157224631085
+      ],
+      "groundFootprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              127.01182583171888,
+              37.511443147998314
+            ],
+            [
+              127.01195285586738,
+              37.51157224631085
+            ],
+            [
+              127.01228611486515,
+              37.51136506007197
+            ],
+            [
+              127.0124395929577,
+              37.511500629461224
+            ],
+            [
+              127.01256354398363,
+              37.511408753054695
+            ],
+            [
+              127.01230342561863,
+              37.51118801345833
+            ],
+            [
+              127.01182583171888,
+              37.511443147998314
+            ]
+          ]
+        ]
+      },
+      "recipe": {
+        "dong": 108,
+        "floorsEstimate": 35,
+        "floorCountVerified": false,
+        "floorBasis": "Unverified individual floor count; approximate aerial silhouette constrained by official35F complex maximum",
+        "storeyHeightEstimateM": 3.08,
+        "mainRoofHeightEstimateM": 108.64,
+        "groundFootprintPixelTrace": [
+          [
+            443,
+            513
+          ],
+          [
+            462,
+            490
+          ],
+          [
+            513,
+            531
+          ],
+          [
+            536,
+            507
+          ],
+          [
+            555,
+            525
+          ],
+          [
+            516,
+            564
+          ]
+        ],
+        "features": [
+          "individually traced numbered plan",
+          "7m pilotis portal",
+          "recessed stone lobby",
+          "broad gray paired-window stacks and projecting white perimeter frames",
+          "unequal center/corner window widths by elevation",
+          "gray stone lower sleeve",
+          "raised window mullions",
+          "plan-shaped crown",
+          "rooftop service enclosure"
+        ]
+      },
+      "measuredGlbDimensions": [
+        65.52837371826172,
+        113.04000091552734,
+        43.2575569152832
+      ],
+      "bounds": {
+        "min": [
+          -32.76418685913086,
+          0.0,
+          -21.6287784576416
+        ],
+        "max": [
+          32.76418685913086,
+          113.04000091552734,
+          21.6287784576416
+        ]
+      },
+      "triangles": 16983,
+      "drawCalls": 3,
+      "bytes": 1050096,
+      "sha256": "0349e220289076a4c780bc76d7282a623db981b7b518987292a486a04e575330"
+    },
+    {
+      "id": "maple-xi-109",
+      "nameKo": "메이플자이 109동",
+      "model": "maple-xi-109.glb",
+      "coordinate": {
+        "lon": 127.01143333264422,
+        "lat": 37.51135520720204
+      },
+      "dimensions": [
+        61.42613220214844,
+        113.04000091552734,
+        44.44984817504883
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "local ground at individual model anchor",
+      "category": "residential-apartment",
+      "district": "서초구",
+      "minZoom": 15,
+      "referenceQuality": "photo-authored",
+      "referenceUrl": "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+      "referenceUrls": [
+        "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+        "https://www.xi.co.kr/Files/cmsPage/20240205_132346_189001.jpg",
+        "https://www.xi.co.kr/Files/cmsPage/20240126_101604_789001.pdf",
+        "https://www.xi.co.kr/maple/view?cmsMenuSeq=19690",
+        "https://www.xi.co.kr/Files/aptProcRateImg/20250403_170535_099001.JPG"
+      ],
+      "heightEstimated": true,
+      "geometryEstimated": true,
+      "footprintIds": [],
+      "geoBounds": [
+        127.01108751982045,
+        37.51115773287442,
+        127.01177854417354,
+        37.51155274498153
+      ],
+      "groundFootprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              127.01108751982045,
+              37.511434425923575
+            ],
+            [
+              127.01121439406053,
+              37.51155274498153
+            ],
+            [
+              127.01152801872435,
+              37.511355526910165
+            ],
+            [
+              127.01164807335435,
+              37.51145740672386
+            ],
+            [
+              127.01177854417354,
+              37.51136041105241
+            ],
+            [
+              127.01156481390336,
+              37.51115773287442
+            ],
+            [
+              127.01108751982045,
+              37.511434425923575
+            ]
+          ]
+        ]
+      },
+      "recipe": {
+        "dong": 109,
+        "floorsEstimate": 35,
+        "floorCountVerified": false,
+        "floorBasis": "Unverified individual floor count; approximate aerial silhouette constrained by official35F complex maximum",
+        "storeyHeightEstimateM": 3.08,
+        "mainRoofHeightEstimateM": 108.64,
+        "groundFootprintPixelTrace": [
+          [
+            331,
+            509
+          ],
+          [
+            350,
+            488
+          ],
+          [
+            398,
+            527
+          ],
+          [
+            416,
+            509
+          ],
+          [
+            436,
+            528
+          ],
+          [
+            404,
+            564
+          ]
+        ],
+        "features": [
+          "individually traced numbered plan",
+          "7m pilotis portal",
+          "recessed stone lobby",
+          "broad gray paired-window stacks and projecting white perimeter frames",
+          "unequal center/corner window widths by elevation",
+          "gray stone lower sleeve",
+          "raised window mullions",
+          "plan-shaped crown",
+          "rooftop service enclosure"
+        ]
+      },
+      "measuredGlbDimensions": [
+        61.42613220214844,
+        113.04000091552734,
+        44.44984817504883
+      ],
+      "bounds": {
+        "min": [
+          -30.71306610107422,
+          0.0,
+          -22.224924087524414
+        ],
+        "max": [
+          30.71306610107422,
+          113.04000091552734,
+          22.224924087524414
+        ]
+      },
+      "triangles": 13514,
+      "drawCalls": 3,
+      "bytes": 834960,
+      "sha256": "9aaf14826279680df6ee9ea1223762c9ee5e667642559132167bda156756bf97"
+    },
+    {
+      "id": "maple-xi-110",
+      "nameKo": "메이플자이 110동",
+      "model": "maple-xi-110.glb",
+      "coordinate": {
+        "lon": 127.01062988835822,
+        "lat": 37.51134201066167
+      },
+      "dimensions": [
+        73.19700622558594,
+        113.04000091552734,
+        46.70088195800781
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "local ground at individual model anchor",
+      "category": "residential-apartment",
+      "district": "서초구",
+      "minZoom": 15,
+      "referenceQuality": "photo-authored",
+      "referenceUrl": "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+      "referenceUrls": [
+        "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+        "https://www.xi.co.kr/Files/cmsPage/20240205_132346_189001.jpg",
+        "https://www.xi.co.kr/Files/cmsPage/20240126_101604_789001.pdf",
+        "https://www.xi.co.kr/maple/view?cmsMenuSeq=19690",
+        "https://www.xi.co.kr/Files/aptProcRateImg/20250403_170535_099001.JPG"
+      ],
+      "heightEstimated": true,
+      "geometryEstimated": true,
+      "footprintIds": [],
+      "geoBounds": [
+        127.01021738792707,
+        37.511134446472106,
+        127.01104165640507,
+        37.511549665276604
+      ],
+      "groundFootprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              127.01021738792707,
+              37.51142568622901
+            ],
+            [
+              127.01035093186883,
+              37.511549665276604
+            ],
+            [
+              127.0107102700396,
+              37.51132200197797
+            ],
+            [
+              127.01091755547073,
+              37.511535189048196
+            ],
+            [
+              127.01104165640507,
+              37.51145409189626
+            ],
+            [
+              127.0107340256321,
+              37.511134446472106
+            ],
+            [
+              127.01021738792707,
+              37.51142568622901
+            ]
+          ]
+        ]
+      },
+      "recipe": {
+        "dong": 110,
+        "floorsEstimate": 35,
+        "floorCountVerified": false,
+        "floorBasis": "Unverified individual floor count; approximate aerial silhouette constrained by official35F complex maximum",
+        "storeyHeightEstimateM": 3.08,
+        "mainRoofHeightEstimateM": 108.64,
+        "groundFootprintPixelTrace": [
+          [
+            199,
+            504
+          ],
+          [
+            219,
+            482
+          ],
+          [
+            274,
+            527
+          ],
+          [
+            305,
+            489
+          ],
+          [
+            324,
+            505
+          ],
+          [
+            278,
+            562
+          ]
+        ],
+        "features": [
+          "individually traced numbered plan",
+          "7m pilotis portal",
+          "recessed stone lobby",
+          "broad gray paired-window stacks and projecting white perimeter frames",
+          "unequal center/corner window widths by elevation",
+          "gray stone lower sleeve",
+          "raised window mullions",
+          "plan-shaped crown",
+          "rooftop service enclosure"
+        ]
+      },
+      "measuredGlbDimensions": [
+        73.19700622558594,
+        113.04000091552734,
+        46.70088195800781
+      ],
+      "bounds": {
+        "min": [
+          -36.59850311279297,
+          0.0,
+          -23.350440979003906
+        ],
+        "max": [
+          36.59850311279297,
+          113.04000091552734,
+          23.350440979003906
+        ]
+      },
+      "triangles": 20468,
+      "drawCalls": 3,
+      "bytes": 1266172,
+      "sha256": "567e1a65c7a9f621ea9309c324816cdb90d501edcf5e0c3e3f45ba8333cdc57f"
+    },
+    {
+      "id": "maple-xi-111",
+      "nameKo": "메이플자이 111동",
+      "model": "maple-xi-111.glb",
+      "coordinate": {
+        "lon": 127.01087888400897,
+        "lat": 37.5108792924147
+      },
+      "dimensions": [
+        49.62919998168945,
+        94.55999755859375,
+        46.180049896240234
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "local ground at individual model anchor",
+      "category": "residential-apartment",
+      "district": "서초구",
+      "minZoom": 15,
+      "referenceQuality": "photo-authored",
+      "referenceUrl": "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+      "referenceUrls": [
+        "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+        "https://www.xi.co.kr/Files/cmsPage/20240205_132346_189001.jpg",
+        "https://www.xi.co.kr/Files/cmsPage/20240126_101604_789001.pdf",
+        "https://www.xi.co.kr/maple/view?cmsMenuSeq=19690",
+        "https://www.xi.co.kr/Files/aptProcRateImg/20250403_170535_099001.JPG"
+      ],
+      "heightEstimated": true,
+      "geometryEstimated": true,
+      "footprintIds": [],
+      "geoBounds": [
+        127.0106000319651,
+        37.510673947750405,
+        127.01115781219328,
+        37.511084588014675
+      ],
+      "groundFootprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              127.0106000319651,
+              37.51097812966075
+            ],
+            [
+              127.01070037730693,
+              37.511084588014675
+            ],
+            [
+              127.01115781219328,
+              37.51080169425116
+            ],
+            [
+              127.01106376178205,
+              37.510673947750405
+            ],
+            [
+              127.0106000319651,
+              37.51097812966075
+            ]
+          ]
+        ]
+      },
+      "recipe": {
+        "dong": 111,
+        "floorsEstimate": 29,
+        "floorCountVerified": false,
+        "floorBasis": "Unverified individual floor count; approximate aerial silhouette constrained by official35F complex maximum",
+        "storeyHeightEstimateM": 3.08,
+        "mainRoofHeightEstimateM": 90.16,
+        "groundFootprintPixelTrace": [
+          [
+            258,
+            590
+          ],
+          [
+            273,
+            571
+          ],
+          [
+            343,
+            627
+          ],
+          [
+            329,
+            650
+          ]
+        ],
+        "features": [
+          "individually traced numbered plan",
+          "7m pilotis portal",
+          "recessed stone lobby",
+          "broad gray paired-window stacks and projecting white perimeter frames",
+          "unequal center/corner window widths by elevation",
+          "gray stone lower sleeve",
+          "raised window mullions",
+          "plan-shaped crown",
+          "rooftop service enclosure"
+        ]
+      },
+      "measuredGlbDimensions": [
+        49.62919998168945,
+        94.55999755859375,
+        46.180049896240234
+      ],
+      "bounds": {
+        "min": [
+          -24.814599990844727,
+          0.0,
+          -23.090024948120117
+        ],
+        "max": [
+          24.814599990844727,
+          94.55999755859375,
+          23.090024948120117
+        ]
+      },
+      "triangles": 11666,
+      "drawCalls": 3,
+      "bytes": 722340,
+      "sha256": "48064dc96da5d41a45ccb97ba349dc29affa4075ee38e3c40da6260342cba74a"
+    },
+    {
+      "id": "maple-xi-112",
+      "nameKo": "메이플자이 112동",
+      "model": "maple-xi-112.glb",
+      "coordinate": {
+        "lon": 127.01139282922406,
+        "lat": 37.510857348375914
+      },
+      "dimensions": [
+        27.970327377319336,
+        94.55999755859375,
+        33.7270622253418
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "local ground at individual model anchor",
+      "category": "residential-apartment",
+      "district": "서초구",
+      "minZoom": 15,
+      "referenceQuality": "photo-authored",
+      "referenceUrl": "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+      "referenceUrls": [
+        "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+        "https://www.xi.co.kr/Files/cmsPage/20240205_132346_189001.jpg",
+        "https://www.xi.co.kr/Files/cmsPage/20240126_101604_789001.pdf",
+        "https://www.xi.co.kr/maple/view?cmsMenuSeq=19690",
+        "https://www.xi.co.kr/Files/aptProcRateImg/20250403_170535_099001.JPG"
+      ],
+      "heightEstimated": true,
+      "geometryEstimated": true,
+      "footprintIds": [],
+      "geoBounds": [
+        127.01123709907118,
+        37.510707672565616,
+        127.01154840137745,
+        37.51100680569035
+      ],
+      "groundFootprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              127.01123709907118,
+              37.51081571785402
+            ],
+            [
+              127.01143089519057,
+              37.51100680569035
+            ],
+            [
+              127.01154840137745,
+              37.510925438176066
+            ],
+            [
+              127.01136082523449,
+              37.510707672565616
+            ],
+            [
+              127.01123709907118,
+              37.51081571785402
+            ]
+          ]
+        ]
+      },
+      "recipe": {
+        "dong": 112,
+        "floorsEstimate": 29,
+        "floorCountVerified": false,
+        "floorBasis": "Unverified individual floor count; approximate aerial silhouette constrained by official35F complex maximum",
+        "storeyHeightEstimateM": 3.08,
+        "mainRoofHeightEstimateM": 90.16,
+        "groundFootprintPixelTrace": [
+          [
+            355,
+            625
+          ],
+          [
+            384,
+            591
+          ],
+          [
+            402,
+            607
+          ],
+          [
+            374,
+            646
+          ]
+        ],
+        "features": [
+          "individually traced numbered plan",
+          "7m pilotis portal",
+          "recessed stone lobby",
+          "broad gray paired-window stacks and projecting white perimeter frames",
+          "unequal center/corner window widths by elevation",
+          "gray stone lower sleeve",
+          "raised window mullions",
+          "plan-shaped crown",
+          "rooftop service enclosure"
+        ]
+      },
+      "measuredGlbDimensions": [
+        27.970327377319336,
+        94.55999755859375,
+        33.7270622253418
+      ],
+      "bounds": {
+        "min": [
+          -13.985163688659668,
+          0.0,
+          -16.8635311126709
+        ],
+        "max": [
+          13.985163688659668,
+          94.55999755859375,
+          16.8635311126709
+        ]
+      },
+      "triangles": 9572,
+      "drawCalls": 3,
+      "bytes": 592624,
+      "sha256": "0e2e25ad227760d0258a9ed15c39a908bfe1be0776dc3c7c88c584560444976d"
+    },
+    {
+      "id": "maple-xi-113",
+      "nameKo": "메이플자이 113동",
+      "model": "maple-xi-113.glb",
+      "coordinate": {
+        "lon": 127.01196249311234,
+        "lat": 37.51079038214059
+      },
+      "dimensions": [
+        50.376285552978516,
+        113.04000091552734,
+        42.365299224853516
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "local ground at individual model anchor",
+      "category": "residential-apartment",
+      "district": "서초구",
+      "minZoom": 15,
+      "referenceQuality": "photo-authored",
+      "referenceUrl": "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+      "referenceUrls": [
+        "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+        "https://www.xi.co.kr/Files/cmsPage/20240205_132346_189001.jpg",
+        "https://www.xi.co.kr/Files/cmsPage/20240126_101604_789001.pdf",
+        "https://www.xi.co.kr/maple/view?cmsMenuSeq=19690",
+        "https://www.xi.co.kr/Files/aptProcRateImg/20250403_170535_099001.JPG"
+      ],
+      "heightEstimated": true,
+      "geometryEstimated": true,
+      "footprintIds": [],
+      "geoBounds": [
+        127.01167947183032,
+        37.51060213101775,
+        127.01224504607329,
+        37.5109785586016
+      ],
+      "groundFootprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              127.01167947183032,
+              37.510871559522954
+            ],
+            [
+              127.01179300666706,
+              37.5109785586016
+            ],
+            [
+              127.01207395741044,
+              37.51080154722763
+            ],
+            [
+              127.0121275398864,
+              37.51086299602672
+            ],
+            [
+              127.01224504607329,
+              37.510781628512426
+            ],
+            [
+              127.0120711841047,
+              37.51060213101775
+            ],
+            [
+              127.01167947183032,
+              37.510871559522954
+            ]
+          ]
+        ]
+      },
+      "recipe": {
+        "dong": 113,
+        "floorsEstimate": 35,
+        "floorCountVerified": false,
+        "floorBasis": "Unverified individual floor count; approximate aerial silhouette constrained by official35F complex maximum",
+        "storeyHeightEstimateM": 3.08,
+        "mainRoofHeightEstimateM": 108.64,
+        "groundFootprintPixelTrace": [
+          [
+            422,
+            618
+          ],
+          [
+            439,
+            599
+          ],
+          [
+            482,
+            634
+          ],
+          [
+            490,
+            623
+          ],
+          [
+            508,
+            639
+          ],
+          [
+            482,
+            671
+          ]
+        ],
+        "features": [
+          "individually traced numbered plan",
+          "7m pilotis portal",
+          "recessed stone lobby",
+          "broad gray paired-window stacks and projecting white perimeter frames",
+          "unequal center/corner window widths by elevation",
+          "gray stone lower sleeve",
+          "raised window mullions",
+          "plan-shaped crown",
+          "rooftop service enclosure"
+        ]
+      },
+      "measuredGlbDimensions": [
+        50.376285552978516,
+        113.04000091552734,
+        42.365299224853516
+      ],
+      "bounds": {
+        "min": [
+          -25.188142776489258,
+          0.0,
+          -21.182649612426758
+        ],
+        "max": [
+          25.188142776489258,
+          113.04000091552734,
+          21.182649612426758
+        ]
+      },
+      "triangles": 12442,
+      "drawCalls": 3,
+      "bytes": 768496,
+      "sha256": "2445d124474e97274c7739400c681ba873636b1b9b561252b0d309a3dd8e846a"
+    },
+    {
+      "id": "maple-xi-114",
+      "nameKo": "메이플자이 114동",
+      "model": "maple-xi-114.glb",
+      "coordinate": {
+        "lon": 127.01266755248092,
+        "lat": 37.51082359533819
+      },
+      "dimensions": [
+        49.07637023925781,
+        113.04000091552734,
+        46.2733039855957
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "local ground at individual model anchor",
+      "category": "residential-apartment",
+      "district": "서초구",
+      "minZoom": 15,
+      "referenceQuality": "photo-authored",
+      "referenceUrl": "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+      "referenceUrls": [
+        "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+        "https://www.xi.co.kr/Files/cmsPage/20240205_132346_189001.jpg",
+        "https://www.xi.co.kr/Files/cmsPage/20240126_101604_789001.pdf",
+        "https://www.xi.co.kr/maple/view?cmsMenuSeq=19690",
+        "https://www.xi.co.kr/Files/aptProcRateImg/20250403_170535_099001.JPG"
+      ],
+      "heightEstimated": true,
+      "geometryEstimated": true,
+      "footprintIds": [],
+      "geoBounds": [
+        127.01239177950995,
+        37.510617864893916,
+        127.01294333976172,
+        37.51102931624526
+      ],
+      "groundFootprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              127.01239177950995,
+              37.51090614828473
+            ],
+            [
+              127.01250553920934,
+              37.51102931624526
+            ],
+            [
+              127.01294333976172,
+              37.510756390649256
+            ],
+            [
+              127.01284913944208,
+              37.510617864893916
+            ],
+            [
+              127.01239177950995,
+              37.51090614828473
+            ]
+          ]
+        ]
+      },
+      "recipe": {
+        "dong": 114,
+        "floorsEstimate": 35,
+        "floorCountVerified": false,
+        "floorBasis": "Unverified individual floor count; approximate aerial silhouette constrained by official35F complex maximum",
+        "storeyHeightEstimateM": 3.08,
+        "mainRoofHeightEstimateM": 108.64,
+        "groundFootprintPixelTrace": [
+          [
+            530,
+            617
+          ],
+          [
+            547,
+            595
+          ],
+          [
+            614,
+            649
+          ],
+          [
+            600,
+            674
+          ]
+        ],
+        "features": [
+          "individually traced numbered plan",
+          "7m pilotis portal",
+          "recessed stone lobby",
+          "broad gray paired-window stacks and projecting white perimeter frames",
+          "unequal center/corner window widths by elevation",
+          "gray stone lower sleeve",
+          "raised window mullions",
+          "plan-shaped crown",
+          "rooftop service enclosure"
+        ]
+      },
+      "measuredGlbDimensions": [
+        49.07637023925781,
+        113.04000091552734,
+        46.2733039855957
+      ],
+      "bounds": {
+        "min": [
+          -24.538185119628906,
+          0.0,
+          -23.13665199279785
+        ],
+        "max": [
+          24.538185119628906,
+          113.04000091552734,
+          23.13665199279785
+        ]
+      },
+      "triangles": 12138,
+      "drawCalls": 3,
+      "bytes": 751664,
+      "sha256": "28b3e892dd1f2f157c671f2db59cd5c50be8dbef6386e8d339deb88706e79e1a"
+    },
+    {
+      "id": "maple-xi-201",
+      "nameKo": "메이플자이 201동",
+      "model": "maple-xi-201.glb",
+      "coordinate": {
+        "lon": 127.0131304358098,
+        "lat": 37.50993638339112
+      },
+      "dimensions": [
+        65.88610076904297,
+        113.04000091552734,
+        52.51515197753906
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "local ground at individual model anchor",
+      "category": "residential-apartment",
+      "district": "서초구",
+      "minZoom": 15,
+      "referenceQuality": "photo-authored",
+      "referenceUrl": "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+      "referenceUrls": [
+        "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+        "https://www.xi.co.kr/Files/cmsPage/20240205_132346_189001.jpg",
+        "https://www.xi.co.kr/Files/cmsPage/20240126_101604_789001.pdf",
+        "https://www.xi.co.kr/maple/view?cmsMenuSeq=19690",
+        "https://www.xi.co.kr/Files/aptProcRateImg/20250403_170535_099001.JPG"
+      ],
+      "heightEstimated": true,
+      "geometryEstimated": true,
+      "footprintIds": [],
+      "geoBounds": [
+        127.0127600335628,
+        37.50970274494302,
+        127.01350081895012,
+        37.510170596307844
+      ],
+      "groundFootprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              127.0127600335628,
+              37.50989780011553
+            ],
+            [
+              127.01290039711463,
+              37.51003821840737
+            ],
+            [
+              127.01310948022383,
+              37.50990673969313
+            ],
+            [
+              127.01337019822252,
+              37.510170596307844
+            ],
+            [
+              127.01350081895012,
+              37.51008437989097
+            ],
+            [
+              127.01312641620628,
+              37.50970274494302
+            ],
+            [
+              127.0127600335628,
+              37.50989780011553
+            ]
+          ]
+        ]
+      },
+      "recipe": {
+        "dong": 201,
+        "floorsEstimate": 35,
+        "floorCountVerified": false,
+        "floorBasis": "Unverified individual floor count; approximate aerial silhouette constrained by official35F complex maximum",
+        "storeyHeightEstimateM": 3.08,
+        "mainRoofHeightEstimateM": 108.64,
+        "groundFootprintPixelTrace": [
+          [
+            588,
+            807
+          ],
+          [
+            609,
+            782
+          ],
+          [
+            641,
+            808
+          ],
+          [
+            680,
+            761
+          ],
+          [
+            700,
+            778
+          ],
+          [
+            644,
+            846
+          ]
+        ],
+        "features": [
+          "individually traced numbered plan",
+          "7m pilotis portal",
+          "recessed stone lobby",
+          "broad gray paired-window stacks and projecting white perimeter frames",
+          "unequal center/corner window widths by elevation",
+          "gray stone lower sleeve",
+          "raised window mullions",
+          "plan-shaped crown",
+          "rooftop service enclosure"
+        ]
+      },
+      "measuredGlbDimensions": [
+        65.88610076904297,
+        113.04000091552734,
+        52.51515197753906
+      ],
+      "bounds": {
+        "min": [
+          -32.943050384521484,
+          0.0,
+          -26.25757598876953
+        ],
+        "max": [
+          32.943050384521484,
+          113.04000091552734,
+          26.25757598876953
+        ]
+      },
+      "triangles": 19228,
+      "drawCalls": 3,
+      "bytes": 1189460,
+      "sha256": "db1b30b974e4773def63090bfc2352bb1753c6d27673c56fae26acd1366107c8"
+    },
+    {
+      "id": "maple-xi-202",
+      "nameKo": "메이플자이 202동",
+      "model": "maple-xi-202.glb",
+      "coordinate": {
+        "lon": 127.01394384313261,
+        "lat": 37.51010996971627
+      },
+      "dimensions": [
+        68.15851593017578,
+        113.04000091552734,
+        52.5322151184082
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "local ground at individual model anchor",
+      "category": "residential-apartment",
+      "district": "서초구",
+      "minZoom": 15,
+      "referenceQuality": "photo-authored",
+      "referenceUrl": "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+      "referenceUrls": [
+        "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+        "https://www.xi.co.kr/Files/cmsPage/20240205_132346_189001.jpg",
+        "https://www.xi.co.kr/Files/cmsPage/20240126_101604_789001.pdf",
+        "https://www.xi.co.kr/maple/view?cmsMenuSeq=19690",
+        "https://www.xi.co.kr/Files/aptProcRateImg/20250403_170535_099001.JPG"
+      ],
+      "heightEstimated": true,
+      "geometryEstimated": true,
+      "footprintIds": [],
+      "geoBounds": [
+        127.01355949708936,
+        37.50987640018485,
+        127.01432711119178,
+        37.510344251549675
+      ],
+      "groundFootprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              127.01355949708936,
+              37.51003830650653
+            ],
+            [
+              127.0136798515362,
+              37.51016174482942
+            ],
+            [
+              127.01388241485216,
+              37.51003538538011
+            ],
+            [
+              127.01418989571671,
+              37.510344251549675
+            ],
+            [
+              127.01432711119178,
+              37.510258305495164
+            ],
+            [
+              127.01394611370046,
+              37.50987640018485
+            ],
+            [
+              127.01355949708936,
+              37.51003830650653
+            ]
+          ]
+        ]
+      },
+      "recipe": {
+        "dong": 202,
+        "floorsEstimate": 35,
+        "floorCountVerified": false,
+        "floorBasis": "Unverified individual floor count; approximate aerial silhouette constrained by official35F complex maximum",
+        "storeyHeightEstimateM": 3.08,
+        "mainRoofHeightEstimateM": 108.64,
+        "groundFootprintPixelTrace": [
+          [
+            709,
+            787
+          ],
+          [
+            727,
+            765
+          ],
+          [
+            758,
+            790
+          ],
+          [
+            804,
+            735
+          ],
+          [
+            825,
+            752
+          ],
+          [
+            768,
+            820
+          ]
+        ],
+        "features": [
+          "individually traced numbered plan",
+          "7m pilotis portal",
+          "recessed stone lobby",
+          "broad gray paired-window stacks and projecting white perimeter frames",
+          "unequal center/corner window widths by elevation",
+          "gray stone lower sleeve",
+          "raised window mullions",
+          "plan-shaped crown",
+          "rooftop service enclosure"
+        ]
+      },
+      "measuredGlbDimensions": [
+        68.15851593017578,
+        113.04000091552734,
+        52.5322151184082
+      ],
+      "bounds": {
+        "min": [
+          -34.07925796508789,
+          0.0,
+          -26.2661075592041
+        ],
+        "max": [
+          34.07925796508789,
+          113.04000091552734,
+          26.2661075592041
+        ]
+      },
+      "triangles": 18800,
+      "drawCalls": 3,
+      "bytes": 1162692,
+      "sha256": "0de61e6845397c6d91daf474de53c221f6c6fb432efc1918546aaf4b5f17e4b1"
+    },
+    {
+      "id": "maple-xi-203",
+      "nameKo": "메이플자이 203동",
+      "model": "maple-xi-203.glb",
+      "coordinate": {
+        "lon": 127.01480752559553,
+        "lat": 37.51032812216982
+      },
+      "dimensions": [
+        61.93123245239258,
+        94.55999755859375,
+        45.40498733520508
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "local ground at individual model anchor",
+      "category": "residential-apartment",
+      "district": "서초구",
+      "minZoom": 15,
+      "referenceQuality": "photo-authored",
+      "referenceUrl": "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+      "referenceUrls": [
+        "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+        "https://www.xi.co.kr/Files/cmsPage/20240205_132346_189001.jpg",
+        "https://www.xi.co.kr/Files/cmsPage/20240126_101604_789001.pdf",
+        "https://www.xi.co.kr/maple/view?cmsMenuSeq=19690",
+        "https://www.xi.co.kr/Files/aptProcRateImg/20250403_170535_099001.JPG"
+      ],
+      "heightEstimated": true,
+      "geometryEstimated": true,
+      "footprintIds": [],
+      "geoBounds": [
+        127.01445338579819,
+        37.51012336492978,
+        127.0151601480893,
+        37.51053461639811
+      ],
+      "groundFootprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              127.01445338579819,
+              37.51033350753475
+            ],
+            [
+              127.01457366529083,
+              37.51045155623034
+            ],
+            [
+              127.01479578798653,
+              37.510309838986224
+            ],
+            [
+              127.01502300756844,
+              37.51053461639811
+            ],
+            [
+              127.0151601480893,
+              37.510443280716295
+            ],
+            [
+              127.01484592256887,
+              37.51012336492978
+            ],
+            [
+              127.01445338579819,
+              37.51033350753475
+            ]
+          ]
+        ]
+      },
+      "recipe": {
+        "dong": 203,
+        "floorsEstimate": 29,
+        "floorCountVerified": false,
+        "floorBasis": "Unverified individual floor count; approximate aerial silhouette constrained by official35F complex maximum",
+        "storeyHeightEstimateM": 3.08,
+        "mainRoofHeightEstimateM": 90.16,
+        "groundFootprintPixelTrace": [
+          [
+            844,
+            739
+          ],
+          [
+            862,
+            718
+          ],
+          [
+            896,
+            746
+          ],
+          [
+            930,
+            706
+          ],
+          [
+            951,
+            724
+          ],
+          [
+            904,
+            781
+          ]
+        ],
+        "features": [
+          "individually traced numbered plan",
+          "7m pilotis portal",
+          "recessed stone lobby",
+          "broad gray paired-window stacks and projecting white perimeter frames",
+          "unequal center/corner window widths by elevation",
+          "gray stone lower sleeve",
+          "raised window mullions",
+          "plan-shaped crown",
+          "rooftop service enclosure",
+          "documented highway-facing curtain-wall-look elevation",
+          "projecting vertical fins",
+          "louver crown screen"
+        ]
+      },
+      "measuredGlbDimensions": [
+        61.93123245239258,
+        94.55999755859375,
+        45.40498733520508
+      ],
+      "bounds": {
+        "min": [
+          -30.96561622619629,
+          0.0,
+          -22.70249366760254
+        ],
+        "max": [
+          30.96561622619629,
+          94.55999755859375,
+          22.70249366760254
+        ]
+      },
+      "triangles": 12435,
+      "drawCalls": 3,
+      "bytes": 766056,
+      "sha256": "19928eda8e89107c66aec7f785263dcc68991406049d32270f8e568f9c7b4bb1"
+    },
+    {
+      "id": "maple-xi-204",
+      "nameKo": "메이플자이 204동",
+      "model": "maple-xi-204.glb",
+      "coordinate": {
+        "lon": 127.01468735690746,
+        "lat": 37.510894264704795
+      },
+      "dimensions": [
+        56.763816833496094,
+        94.55999755859375,
+        41.5963134765625
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "local ground at individual model anchor",
+      "category": "residential-apartment",
+      "district": "서초구",
+      "minZoom": 15,
+      "referenceQuality": "photo-authored",
+      "referenceUrl": "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+      "referenceUrls": [
+        "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+        "https://www.xi.co.kr/Files/cmsPage/20240205_132346_189001.jpg",
+        "https://www.xi.co.kr/Files/cmsPage/20240126_101604_789001.pdf",
+        "https://www.xi.co.kr/maple/view?cmsMenuSeq=19690",
+        "https://www.xi.co.kr/Files/aptProcRateImg/20250403_170535_099001.JPG"
+      ],
+      "heightEstimated": true,
+      "geometryEstimated": true,
+      "footprintIds": [],
+      "geoBounds": [
+        127.01436225982405,
+        37.51070704923185,
+        127.01500966938806,
+        37.51108434076227
+      ],
+      "groundFootprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              127.01436225982405,
+              37.510889973337996
+            ],
+            [
+              127.01448928397257,
+              37.51101907165052
+            ],
+            [
+              127.01471140666827,
+              37.51087735440641
+            ],
+            [
+              127.01489883290283,
+              37.51108434076227
+            ],
+            [
+              127.01500966938806,
+              37.51099731325833
+            ],
+            [
+              127.01476176611324,
+              37.51070704923185
+            ],
+            [
+              127.01436225982405,
+              37.510889973337996
+            ]
+          ]
+        ]
+      },
+      "recipe": {
+        "dong": 204,
+        "floorsEstimate": 29,
+        "floorCountVerified": false,
+        "floorBasis": "Unverified individual floor count; approximate aerial silhouette constrained by official35F complex maximum",
+        "storeyHeightEstimateM": 3.08,
+        "mainRoofHeightEstimateM": 90.16,
+        "groundFootprintPixelTrace": [
+          [
+            829,
+            635
+          ],
+          [
+            848,
+            612
+          ],
+          [
+            882,
+            640
+          ],
+          [
+            910,
+            603
+          ],
+          [
+            927,
+            620
+          ],
+          [
+            890,
+            672
+          ]
+        ],
+        "features": [
+          "individually traced numbered plan",
+          "7m pilotis portal",
+          "recessed stone lobby",
+          "broad gray paired-window stacks and projecting white perimeter frames",
+          "unequal center/corner window widths by elevation",
+          "gray stone lower sleeve",
+          "raised window mullions",
+          "plan-shaped crown",
+          "rooftop service enclosure",
+          "documented highway-facing curtain-wall-look elevation",
+          "projecting vertical fins",
+          "louver crown screen"
+        ]
+      },
+      "measuredGlbDimensions": [
+        56.763816833496094,
+        94.55999755859375,
+        41.5963134765625
+      ],
+      "bounds": {
+        "min": [
+          -28.381908416748047,
+          0.0,
+          -20.79815673828125
+        ],
+        "max": [
+          28.381908416748047,
+          94.55999755859375,
+          20.79815673828125
+        ]
+      },
+      "triangles": 11460,
+      "drawCalls": 3,
+      "bytes": 705520,
+      "sha256": "af69bdbaa4d56adc1cc9a36548b3df42471f59cc244393770cf2b64bd0daaaf1"
+    },
+    {
+      "id": "maple-xi-205",
+      "nameKo": "메이플자이 205동",
+      "model": "maple-xi-205.glb",
+      "coordinate": {
+        "lon": 127.0137942071784,
+        "lat": 37.5107007860175
+      },
+      "dimensions": [
+        77.4640121459961,
+        113.04000091552734,
+        56.86705017089844
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "local ground at individual model anchor",
+      "category": "residential-apartment",
+      "district": "서초구",
+      "minZoom": 15,
+      "referenceQuality": "photo-authored",
+      "referenceUrl": "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+      "referenceUrls": [
+        "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+        "https://www.xi.co.kr/Files/cmsPage/20240205_132346_189001.jpg",
+        "https://www.xi.co.kr/Files/cmsPage/20240126_101604_789001.pdf",
+        "https://www.xi.co.kr/maple/view?cmsMenuSeq=19690",
+        "https://www.xi.co.kr/Files/aptProcRateImg/20250403_170535_099001.JPG"
+      ],
+      "heightEstimated": true,
+      "geometryEstimated": true,
+      "footprintIds": [],
+      "geoBounds": [
+        127.01335730976737,
+        37.51044768305819,
+        127.01423014001227,
+        37.51095461362585
+      ],
+      "groundFootprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              127.01335730976737,
+              37.510665630931825
+            ],
+            [
+              127.01348425896167,
+              37.51078933961706
+            ],
+            [
+              127.01377832424573,
+              37.510607479340514
+            ],
+            [
+              127.01409951928467,
+              37.51095461362585
+            ],
+            [
+              127.01423014001227,
+              37.51086839720898
+            ],
+            [
+              127.01382223885167,
+              37.51044768305819
+            ],
+            [
+              127.01335730976737,
+              37.510665630931825
+            ]
+          ]
+        ]
+      },
+      "recipe": {
+        "dong": 205,
+        "floorsEstimate": 35,
+        "floorCountVerified": false,
+        "floorBasis": "Unverified individual floor count; approximate aerial silhouette constrained by official35F complex maximum",
+        "storeyHeightEstimateM": 3.08,
+        "mainRoofHeightEstimateM": 108.64,
+        "groundFootprintPixelTrace": [
+          [
+            677,
+            669
+          ],
+          [
+            696,
+            647
+          ],
+          [
+            741,
+            683
+          ],
+          [
+            789,
+            621
+          ],
+          [
+            809,
+            638
+          ],
+          [
+            748,
+            713
+          ]
+        ],
+        "features": [
+          "individually traced numbered plan",
+          "7m pilotis portal",
+          "recessed stone lobby",
+          "broad gray paired-window stacks and projecting white perimeter frames",
+          "unequal center/corner window widths by elevation",
+          "gray stone lower sleeve",
+          "raised window mullions",
+          "plan-shaped crown",
+          "rooftop service enclosure"
+        ]
+      },
+      "measuredGlbDimensions": [
+        77.4640121459961,
+        113.04000091552734,
+        56.86705017089844
+      ],
+      "bounds": {
+        "min": [
+          -38.73200607299805,
+          0.0,
+          -28.43352508544922
+        ],
+        "max": [
+          38.73200607299805,
+          113.04000091552734,
+          28.43352508544922
+        ]
+      },
+      "triangles": 22894,
+      "drawCalls": 3,
+      "bytes": 1416636,
+      "sha256": "89d0a10ba29873ebe6c5928d46846113f6e0465d18b6e177daae2ce653fbc023"
+    },
+    {
+      "id": "maple-xi-206",
+      "nameKo": "메이플자이 206동",
+      "model": "maple-xi-206.glb",
+      "coordinate": {
+        "lon": 127.01398751330217,
+        "lat": 37.51135114174896
+      },
+      "dimensions": [
+        65.72881317138672,
+        113.04000091552734,
+        43.885528564453125
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "local ground at individual model anchor",
+      "category": "residential-apartment",
+      "district": "서초구",
+      "minZoom": 15,
+      "referenceQuality": "photo-authored",
+      "referenceUrl": "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+      "referenceUrls": [
+        "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+        "https://www.xi.co.kr/Files/cmsPage/20240205_132346_189001.jpg",
+        "https://www.xi.co.kr/Files/cmsPage/20240126_101604_789001.pdf",
+        "https://www.xi.co.kr/maple/view?cmsMenuSeq=19690",
+        "https://www.xi.co.kr/Files/aptProcRateImg/20250403_170535_099001.JPG"
+      ],
+      "heightEstimated": true,
+      "geometryEstimated": true,
+      "footprintIds": [],
+      "geoBounds": [
+        127.01361682972164,
+        37.51115644547711,
+        127.01435709042951,
+        37.511546679160965
+      ],
+      "groundFootprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              127.01361682972164,
+              37.51131727034936
+            ],
+            [
+              127.01374385387015,
+              37.5114463686619
+            ],
+            [
+              127.01398553594561,
+              37.511289293622966
+            ],
+            [
+              127.01421980000023,
+              37.511546679160965
+            ],
+            [
+              127.01435709042951,
+              37.511466122733744
+            ],
+            [
+              127.01402982532258,
+              37.51115644547711
+            ],
+            [
+              127.01361682972164,
+              37.51131727034936
+            ]
+          ]
+        ]
+      },
+      "recipe": {
+        "dong": 206,
+        "floorsEstimate": 35,
+        "floorCountVerified": false,
+        "floorBasis": "Unverified individual floor count; approximate aerial silhouette constrained by official35F complex maximum",
+        "storeyHeightEstimateM": 3.08,
+        "mainRoofHeightEstimateM": 108.64,
+        "groundFootprintPixelTrace": [
+          [
+            715,
+            550
+          ],
+          [
+            734,
+            527
+          ],
+          [
+            771,
+            558
+          ],
+          [
+            806,
+            512
+          ],
+          [
+            827,
+            528
+          ],
+          [
+            778,
+            583
+          ]
+        ],
+        "features": [
+          "individually traced numbered plan",
+          "7m pilotis portal",
+          "recessed stone lobby",
+          "broad gray paired-window stacks and projecting white perimeter frames",
+          "unequal center/corner window widths by elevation",
+          "gray stone lower sleeve",
+          "raised window mullions",
+          "plan-shaped crown",
+          "rooftop service enclosure"
+        ]
+      },
+      "measuredGlbDimensions": [
+        65.72881317138672,
+        113.04000091552734,
+        43.885528564453125
+      ],
+      "bounds": {
+        "min": [
+          -32.86440658569336,
+          0.0,
+          -21.942764282226562
+        ],
+        "max": [
+          32.86440658569336,
+          113.04000091552734,
+          21.942764282226562
+        ]
+      },
+      "triangles": 17874,
+      "drawCalls": 3,
+      "bytes": 1105284,
+      "sha256": "72453d90c48063e37eabba1cb6bcff0586254c3fb3f92ae7947bf45b46b280de"
+    },
+    {
+      "id": "maple-xi-207",
+      "nameKo": "메이플자이 207동",
+      "model": "maple-xi-207.glb",
+      "coordinate": {
+        "lon": 127.01472252339238,
+        "lat": 37.511444239906304
+      },
+      "dimensions": [
+        44.56463623046875,
+        94.55999755859375,
+        39.38968276977539
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "local ground at individual model anchor",
+      "category": "residential-apartment",
+      "district": "서초구",
+      "minZoom": 15,
+      "referenceQuality": "photo-authored",
+      "referenceUrl": "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+      "referenceUrls": [
+        "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+        "https://www.xi.co.kr/Files/cmsPage/20240205_132346_189001.jpg",
+        "https://www.xi.co.kr/Files/cmsPage/20240126_101604_789001.pdf",
+        "https://www.xi.co.kr/maple/view?cmsMenuSeq=19690",
+        "https://www.xi.co.kr/Files/aptProcRateImg/20250403_170535_099001.JPG"
+      ],
+      "heightEstimated": true,
+      "geometryEstimated": true,
+      "footprintIds": [],
+      "geoBounds": [
+        127.01446867645683,
+        37.51126567793394,
+        127.01497722155317,
+        37.511623538614366
+      ],
+      "groundFootprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              127.01446867645683,
+              37.51143299150274
+            ],
+            [
+              127.0146492830813,
+              37.511623538614366
+            ],
+            [
+              127.01479309330381,
+              37.511537862922204
+            ],
+            [
+              127.01484660082556,
+              37.511593922093994
+            ],
+            [
+              127.01497722155317,
+              37.511507705677126
+            ],
+            [
+              127.01472339811879,
+              37.51126567793394
+            ],
+            [
+              127.01446867645683,
+              37.51143299150274
+            ]
+          ]
+        ]
+      },
+      "recipe": {
+        "dong": 207,
+        "floorsEstimate": 29,
+        "floorCountVerified": false,
+        "floorBasis": "Unverified individual floor count; approximate aerial silhouette constrained by official35F complex maximum",
+        "storeyHeightEstimateM": 3.08,
+        "mainRoofHeightEstimateM": 90.16,
+        "groundFootprintPixelTrace": [
+          [
+            844,
+            535
+          ],
+          [
+            871,
+            501
+          ],
+          [
+            893,
+            518
+          ],
+          [
+            901,
+            508
+          ],
+          [
+            921,
+            525
+          ],
+          [
+            883,
+            568
+          ]
+        ],
+        "features": [
+          "individually traced numbered plan",
+          "7m pilotis portal",
+          "recessed stone lobby",
+          "broad gray paired-window stacks and projecting white perimeter frames",
+          "unequal center/corner window widths by elevation",
+          "gray stone lower sleeve",
+          "raised window mullions",
+          "plan-shaped crown",
+          "rooftop service enclosure",
+          "documented highway-facing curtain-wall-look elevation",
+          "projecting vertical fins",
+          "louver crown screen"
+        ]
+      },
+      "measuredGlbDimensions": [
+        44.56463623046875,
+        94.55999755859375,
+        39.38968276977539
+      ],
+      "bounds": {
+        "min": [
+          -22.282318115234375,
+          0.0,
+          -19.694841384887695
+        ],
+        "max": [
+          22.282318115234375,
+          94.55999755859375,
+          19.694841384887695
+        ]
+      },
+      "triangles": 8767,
+      "drawCalls": 3,
+      "bytes": 538304,
+      "sha256": "1dc70ad1ba1cb0dd639cb724bf4b500c31fe97572ea9502ead30644535503740"
+    },
+    {
+      "id": "maple-xi-208",
+      "nameKo": "메이플자이 208동",
+      "model": "maple-xi-208.glb",
+      "coordinate": {
+        "lon": 127.01455024773136,
+        "lat": 37.51209357823009
+      },
+      "dimensions": [
+        33.4962043762207,
+        94.55999755859375,
+        35.44146728515625
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "local ground at individual model anchor",
+      "category": "residential-apartment",
+      "district": "서초구",
+      "minZoom": 15,
+      "referenceQuality": "photo-authored",
+      "referenceUrl": "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+      "referenceUrls": [
+        "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+        "https://www.xi.co.kr/Files/cmsPage/20240205_132346_189001.jpg",
+        "https://www.xi.co.kr/Files/cmsPage/20240126_101604_789001.pdf",
+        "https://www.xi.co.kr/maple/view?cmsMenuSeq=19690",
+        "https://www.xi.co.kr/Files/aptProcRateImg/20250403_170535_099001.JPG"
+      ],
+      "heightEstimated": true,
+      "geometryEstimated": true,
+      "footprintIds": [],
+      "geoBounds": [
+        127.01435896550767,
+        37.51193208156207,
+        127.01474191058549,
+        37.512254648112645
+      ],
+      "groundFootprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              127.01435896550767,
+              37.51207488025562
+            ],
+            [
+              127.01453942222372,
+              37.512254648112645
+            ],
+            [
+              127.01474191058549,
+              37.51212289903605
+            ],
+            [
+              127.01455470921356,
+              37.51193208156207
+            ],
+            [
+              127.01435896550767,
+              37.51207488025562
+            ]
+          ]
+        ]
+      },
+      "recipe": {
+        "dong": 208,
+        "floorsEstimate": 29,
+        "floorCountVerified": false,
+        "floorBasis": "Unverified individual floor count; approximate aerial silhouette constrained by official35F complex maximum",
+        "storeyHeightEstimateM": 3.08,
+        "mainRoofHeightEstimateM": 90.16,
+        "groundFootprintPixelTrace": [
+          [
+            826,
+            415
+          ],
+          [
+            853,
+            383
+          ],
+          [
+            884,
+            409
+          ],
+          [
+            856,
+            443
+          ]
+        ],
+        "features": [
+          "individually traced numbered plan",
+          "7m pilotis portal",
+          "recessed stone lobby",
+          "broad gray paired-window stacks and projecting white perimeter frames",
+          "unequal center/corner window widths by elevation",
+          "gray stone lower sleeve",
+          "raised window mullions",
+          "plan-shaped crown",
+          "rooftop service enclosure",
+          "documented highway-facing curtain-wall-look elevation",
+          "projecting vertical fins",
+          "louver crown screen"
+        ]
+      },
+      "measuredGlbDimensions": [
+        33.4962043762207,
+        94.55999755859375,
+        35.44146728515625
+      ],
+      "bounds": {
+        "min": [
+          -16.74810218811035,
+          0.0,
+          -17.720733642578125
+        ],
+        "max": [
+          16.74810218811035,
+          94.55999755859375,
+          17.720733642578125
+        ]
+      },
+      "triangles": 7534,
+      "drawCalls": 3,
+      "bytes": 464628,
+      "sha256": "a2e7a3c435e07574d9b8a638fe28a92f2cc511f87c98eee49e6c0a754dedbbd2"
+    },
+    {
+      "id": "maple-xi-209",
+      "nameKo": "메이플자이 209동",
+      "model": "maple-xi-209.glb",
+      "coordinate": {
+        "lon": 127.01394065124983,
+        "lat": 37.51200105478979
+      },
+      "dimensions": [
+        56.907718658447266,
+        113.04000091552734,
+        36.28892517089844
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "local ground at individual model anchor",
+      "category": "residential-apartment",
+      "district": "서초구",
+      "minZoom": 15,
+      "referenceQuality": "photo-authored",
+      "referenceUrl": "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+      "referenceUrls": [
+        "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+        "https://www.xi.co.kr/Files/cmsPage/20240205_132346_189001.jpg",
+        "https://www.xi.co.kr/Files/cmsPage/20240126_101604_789001.pdf",
+        "https://www.xi.co.kr/maple/view?cmsMenuSeq=19690",
+        "https://www.xi.co.kr/Files/aptProcRateImg/20250403_170535_099001.JPG"
+      ],
+      "heightEstimated": true,
+      "geometryEstimated": true,
+      "footprintIds": [],
+      "geoBounds": [
+        127.01362012892979,
+        37.511840387418744,
+        127.01426019420423,
+        37.512162430864436
+      ],
+      "groundFootprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              127.01362012892979,
+              37.51202843078982
+            ],
+            [
+              127.01373388862916,
+              37.51215159875035
+            ],
+            [
+              127.01397564565882,
+              37.51199991333871
+            ],
+            [
+              127.01412949852242,
+              37.512162430864436
+            ],
+            [
+              127.01426019420423,
+              37.51208160407486
+            ],
+            [
+              127.0140261550122,
+              37.511840387418744
+            ],
+            [
+              127.01362012892979,
+              37.51202843078982
+            ]
+          ]
+        ]
+      },
+      "recipe": {
+        "dong": 209,
+        "floorsEstimate": 35,
+        "floorCountVerified": false,
+        "floorBasis": "Unverified individual floor count; approximate aerial silhouette constrained by official35F complex maximum",
+        "storeyHeightEstimateM": 3.08,
+        "mainRoofHeightEstimateM": 108.64,
+        "groundFootprintPixelTrace": [
+          [
+            714,
+            418
+          ],
+          [
+            731,
+            396
+          ],
+          [
+            768,
+            426
+          ],
+          [
+            791,
+            397
+          ],
+          [
+            811,
+            413
+          ],
+          [
+            776,
+            456
+          ]
+        ],
+        "features": [
+          "individually traced numbered plan",
+          "7m pilotis portal",
+          "recessed stone lobby",
+          "broad gray paired-window stacks and projecting white perimeter frames",
+          "unequal center/corner window widths by elevation",
+          "gray stone lower sleeve",
+          "raised window mullions",
+          "plan-shaped crown",
+          "rooftop service enclosure"
+        ]
+      },
+      "measuredGlbDimensions": [
+        56.907718658447266,
+        113.04000091552734,
+        36.28892517089844
+      ],
+      "bounds": {
+        "min": [
+          -28.453859329223633,
+          0.0,
+          -18.14446258544922
+        ],
+        "max": [
+          28.453859329223633,
+          113.04000091552734,
+          18.14446258544922
+        ]
+      },
+      "triangles": 15038,
+      "drawCalls": 3,
+      "bytes": 929340,
+      "sha256": "01928a4437fed85e06f25098dd731d5eec91ae6cc8599aa08e59673a57a6e807"
+    },
+    {
+      "id": "maple-xi-210",
+      "nameKo": "메이플자이 210동",
+      "model": "maple-xi-210.glb",
+      "coordinate": {
+        "lon": 127.01394021769015,
+        "lat": 37.51264316090632
+      },
+      "dimensions": [
+        62.739688873291016,
+        94.55999755859375,
+        39.35163497924805
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "local ground at individual model anchor",
+      "category": "residential-apartment",
+      "district": "서초구",
+      "minZoom": 15,
+      "referenceQuality": "photo-authored",
+      "referenceUrl": "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+      "referenceUrls": [
+        "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+        "https://www.xi.co.kr/Files/cmsPage/20240205_132346_189001.jpg",
+        "https://www.xi.co.kr/Files/cmsPage/20240126_101604_789001.pdf",
+        "https://www.xi.co.kr/maple/view?cmsMenuSeq=19690",
+        "https://www.xi.co.kr/Files/aptProcRateImg/20250403_170535_099001.JPG"
+      ],
+      "heightEstimated": true,
+      "geometryEstimated": true,
+      "footprintIds": [],
+      "geoBounds": [
+        127.01358880540802,
+        37.51246960438053,
+        127.01397714596594,
+        37.51274310594091
+      ],
+      "groundFootprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              127.01358880540802,
+              37.512619667618026
+            ],
+            [
+              127.01370915985487,
+              37.51274310594091
+            ],
+            [
+              127.01397714596594,
+              37.512581722724114
+            ],
+            [
+              127.01387013092244,
+              37.51246960438053
+            ],
+            [
+              127.01358880540802,
+              37.512619667618026
+            ]
+          ]
+        ]
+      },
+      "recipe": {
+        "dong": 210,
+        "floorsEstimate": 29,
+        "floorCountVerified": true,
+        "floorBasis": "Official CLUB CLOUD 29F page and 2025 completed photo",
+        "storeyHeightEstimateM": 3.08,
+        "mainRoofHeightEstimateM": 90.16,
+        "groundFootprintPixelTrace": [
+          [
+            708,
+            308
+          ],
+          [
+            726,
+            286
+          ],
+          [
+            767,
+            318
+          ],
+          [
+            751,
+            338
+          ]
+        ],
+        "features": [
+          "individually traced numbered plan",
+          "7m pilotis portal",
+          "recessed stone lobby",
+          "broad gray paired-window stacks and projecting white perimeter frames",
+          "unequal center/corner window widths by elevation",
+          "gray stone lower sleeve",
+          "raised window mullions",
+          "plan-shaped crown",
+          "rooftop service enclosure",
+          "29F CLUB CLOUD glazed roof lounge",
+          "diagonal glazed skybridge connecting210–211 at29F"
+        ]
+      },
+      "measuredGlbDimensions": [
+        62.739688873291016,
+        94.55999755859375,
+        39.35163497924805
+      ],
+      "bounds": {
+        "min": [
+          -31.369844436645508,
+          0.0,
+          -19.675817489624023
+        ],
+        "max": [
+          31.369844436645508,
+          94.55999755859375,
+          19.675817489624023
+        ]
+      },
+      "triangles": 8472,
+      "drawCalls": 3,
+      "bytes": 520784,
+      "sha256": "da169df3350278cd50403301feebc6c58a2f1801c799c5c4465851e0162f2988"
+    },
+    {
+      "id": "maple-xi-211",
+      "nameKo": "메이플자이 211동",
+      "model": "maple-xi-211.glb",
+      "coordinate": {
+        "lon": 127.01441646018621,
+        "lat": 37.51283454045865
+      },
+      "dimensions": [
+        48.10577392578125,
+        94.55999755859375,
+        35.430599212646484
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "local ground at individual model anchor",
+      "category": "residential-apartment",
+      "district": "서초구",
+      "minZoom": 15,
+      "referenceQuality": "photo-authored",
+      "referenceUrl": "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+      "referenceUrls": [
+        "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+        "https://www.xi.co.kr/Files/cmsPage/20240205_132346_189001.jpg",
+        "https://www.xi.co.kr/Files/cmsPage/20240126_101604_789001.pdf",
+        "https://www.xi.co.kr/maple/view?cmsMenuSeq=19690",
+        "https://www.xi.co.kr/Files/aptProcRateImg/20250403_170535_099001.JPG"
+      ],
+      "heightEstimated": true,
+      "geometryEstimated": true,
+      "footprintIds": [],
+      "geoBounds": [
+        127.01414516272916,
+        37.51267745468296,
+        127.01468690642542,
+        37.51299329741429
+      ],
+      "groundFootprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              127.01414516272916,
+              37.51281484612937
+            ],
+            [
+              127.01427233678608,
+              37.512954723696495
+            ],
+            [
+              127.01445526576809,
+              37.51283833241471
+            ],
+            [
+              127.01455628569781,
+              37.51299329741429
+            ],
+            [
+              127.01468690642542,
+              37.51290708099742
+            ],
+            [
+              127.0144728013842,
+              37.51267745468296
+            ],
+            [
+              127.01414516272916,
+              37.51281484612937
+            ]
+          ]
+        ]
+      },
+      "recipe": {
+        "dong": 211,
+        "floorsEstimate": 29,
+        "floorCountVerified": true,
+        "floorBasis": "Official CLUB CLOUD 29F page and 2025 completed photo",
+        "storeyHeightEstimateM": 3.08,
+        "mainRoofHeightEstimateM": 90.16,
+        "groundFootprintPixelTrace": [
+          [
+            792,
+            276
+          ],
+          [
+            811,
+            251
+          ],
+          [
+            839,
+            274
+          ],
+          [
+            854,
+            246
+          ],
+          [
+            874,
+            263
+          ],
+          [
+            842,
+            304
+          ]
+        ],
+        "features": [
+          "individually traced numbered plan",
+          "7m pilotis portal",
+          "recessed stone lobby",
+          "broad gray paired-window stacks and projecting white perimeter frames",
+          "unequal center/corner window widths by elevation",
+          "gray stone lower sleeve",
+          "raised window mullions",
+          "plan-shaped crown",
+          "rooftop service enclosure",
+          "documented highway-facing curtain-wall-look elevation",
+          "projecting vertical fins",
+          "louver crown screen",
+          "29F CLUB CLOUD glazed roof lounge"
+        ]
+      },
+      "measuredGlbDimensions": [
+        48.10577392578125,
+        94.55999755859375,
+        35.430599212646484
+      ],
+      "bounds": {
+        "min": [
+          -24.052886962890625,
+          0.0,
+          -17.715299606323242
+        ],
+        "max": [
+          24.052886962890625,
+          94.55999755859375,
+          17.715299606323242
+        ]
+      },
+      "triangles": 10257,
+      "drawCalls": 3,
+      "bytes": 626660,
+      "sha256": "a3439915ec22e0e5b056343f7e5be532e7a2e06f38201393e082868e7c0d0fb0"
+    },
+    {
+      "id": "maple-xi-212",
+      "nameKo": "메이플자이 212동",
+      "model": "maple-xi-212.glb",
+      "coordinate": {
+        "lon": 127.01439916883281,
+        "lat": 37.513409389822115
+      },
+      "dimensions": [
+        48.65498352050781,
+        94.55999755859375,
+        43.454978942871094
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "local ground at individual model anchor",
+      "category": "residential-apartment",
+      "district": "서초구",
+      "minZoom": 15,
+      "referenceQuality": "photo-authored",
+      "referenceUrl": "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+      "referenceUrls": [
+        "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+        "https://www.xi.co.kr/Files/cmsPage/20240205_132346_189001.jpg",
+        "https://www.xi.co.kr/Files/cmsPage/20240126_101604_789001.pdf",
+        "https://www.xi.co.kr/maple/view?cmsMenuSeq=19690",
+        "https://www.xi.co.kr/Files/aptProcRateImg/20250403_170535_099001.JPG"
+      ],
+      "heightEstimated": true,
+      "geometryEstimated": true,
+      "footprintIds": [],
+      "geoBounds": [
+        127.01411968441278,
+        37.5132137137888,
+        127.01467566696289,
+        37.513607444563455
+      ],
+      "groundFootprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              127.01411968441278,
+              37.513352457047
+            ],
+            [
+              127.01425322835453,
+              37.51347643609459
+            ],
+            [
+              127.01435769495494,
+              37.51340530711018
+            ],
+            [
+              127.01455823573019,
+              37.513607444563455
+            ],
+            [
+              127.01467566696289,
+              37.513520687421874
+            ],
+            [
+              127.01441434933052,
+              37.5132137137888
+            ],
+            [
+              127.01411968441278,
+              37.513352457047
+            ]
+          ]
+        ]
+      },
+      "recipe": {
+        "dong": 212,
+        "floorsEstimate": 29,
+        "floorCountVerified": false,
+        "floorBasis": "Unverified individual floor count; approximate aerial silhouette constrained by official35F complex maximum",
+        "storeyHeightEstimateM": 3.08,
+        "mainRoofHeightEstimateM": 90.16,
+        "groundFootprintPixelTrace": [
+          [
+            787,
+            176
+          ],
+          [
+            807,
+            154
+          ],
+          [
+            823,
+            168
+          ],
+          [
+            853,
+            132
+          ],
+          [
+            871,
+            149
+          ],
+          [
+            832,
+            204
+          ]
+        ],
+        "features": [
+          "individually traced numbered plan",
+          "7m pilotis portal",
+          "recessed stone lobby",
+          "broad gray paired-window stacks and projecting white perimeter frames",
+          "unequal center/corner window widths by elevation",
+          "gray stone lower sleeve",
+          "raised window mullions",
+          "plan-shaped crown",
+          "rooftop service enclosure",
+          "documented highway-facing curtain-wall-look elevation",
+          "projecting vertical fins",
+          "louver crown screen"
+        ]
+      },
+      "measuredGlbDimensions": [
+        48.65498352050781,
+        94.55999755859375,
+        43.454978942871094
+      ],
+      "bounds": {
+        "min": [
+          -24.327491760253906,
+          0.0,
+          -21.727489471435547
+        ],
+        "max": [
+          24.327491760253906,
+          94.55999755859375,
+          21.727489471435547
+        ]
+      },
+      "triangles": 9822,
+      "drawCalls": 3,
+      "bytes": 603800,
+      "sha256": "b97c28db14b976e61934f18a0a1e44626bfb3330e83cc5641a52ed2881ec9e65"
+    },
+    {
+      "id": "maple-xi-213",
+      "nameKo": "메이플자이 213동",
+      "model": "maple-xi-213.glb",
+      "coordinate": {
+        "lon": 127.01380958458438,
+        "lat": 37.513267089858836
+      },
+      "dimensions": [
+        47.07436752319336,
+        113.04000091552734,
+        35.598350524902344
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "local ground at individual model anchor",
+      "category": "residential-apartment",
+      "district": "서초구",
+      "minZoom": 15,
+      "referenceQuality": "photo-authored",
+      "referenceUrl": "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+      "referenceUrls": [
+        "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+        "https://www.xi.co.kr/Files/cmsPage/20240205_132346_189001.jpg",
+        "https://www.xi.co.kr/Files/cmsPage/20240126_101604_789001.pdf",
+        "https://www.xi.co.kr/maple/view?cmsMenuSeq=19690",
+        "https://www.xi.co.kr/Files/aptProcRateImg/20250403_170535_099001.JPG"
+      ],
+      "heightEstimated": true,
+      "geometryEstimated": true,
+      "footprintIds": [],
+      "geoBounds": [
+        127.01354451725399,
+        37.51310961821674,
+        127.01407344622636,
+        37.51342546094807
+      ],
+      "groundFootprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              127.01354451725399,
+              37.513226532603404
+            ],
+            [
+              127.01365145734327,
+              37.513333261319694
+            ],
+            [
+              127.01377548332343,
+              37.51324677454047
+            ],
+            [
+              127.01392956104965,
+              37.51342546094807
+            ],
+            [
+              127.01407344622636,
+              37.51334517488321
+            ],
+            [
+              127.01384607673602,
+              37.51310961821674
+            ],
+            [
+              127.01354451725399,
+              37.513226532603404
+            ]
+          ]
+        ]
+      },
+      "recipe": {
+        "dong": 213,
+        "floorsEstimate": 35,
+        "floorCountVerified": false,
+        "floorBasis": "Unverified individual floor count; approximate aerial silhouette constrained by official35F complex maximum",
+        "storeyHeightEstimateM": 3.08,
+        "mainRoofHeightEstimateM": 108.64,
+        "groundFootprintPixelTrace": [
+          [
+            700,
+            195
+          ],
+          [
+            716,
+            176
+          ],
+          [
+            735,
+            193
+          ],
+          [
+            758,
+            161
+          ],
+          [
+            780,
+            177
+          ],
+          [
+            746,
+            219
+          ]
+        ],
+        "features": [
+          "individually traced numbered plan",
+          "7m pilotis portal",
+          "recessed stone lobby",
+          "broad gray paired-window stacks and projecting white perimeter frames",
+          "unequal center/corner window widths by elevation",
+          "gray stone lower sleeve",
+          "raised window mullions",
+          "plan-shaped crown",
+          "rooftop service enclosure"
+        ]
+      },
+      "measuredGlbDimensions": [
+        47.07436752319336,
+        113.04000091552734,
+        35.598350524902344
+      ],
+      "bounds": {
+        "min": [
+          -23.53718376159668,
+          0.0,
+          -17.799175262451172
+        ],
+        "max": [
+          23.53718376159668,
+          113.04000091552734,
+          17.799175262451172
+        ]
+      },
+      "triangles": 10765,
+      "drawCalls": 3,
+      "bytes": 664356,
+      "sha256": "93fe03532fffd65d90679943712d8297377e5c5d33a616be6b4eec5b9cbb7435"
+    },
+    {
+      "id": "maple-xi-214",
+      "nameKo": "메이플자이 214동",
+      "model": "maple-xi-214.glb",
+      "coordinate": {
+        "lon": 127.01380766043425,
+        "lat": 37.513803516064726
+      },
+      "dimensions": [
+        47.814517974853516,
+        94.55999755859375,
+        49.420047760009766
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "local ground at individual model anchor",
+      "category": "residential-apartment",
+      "district": "서초구",
+      "minZoom": 15,
+      "referenceQuality": "photo-authored",
+      "referenceUrl": "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+      "referenceUrls": [
+        "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+        "https://www.xi.co.kr/Files/cmsPage/20240205_132346_189001.jpg",
+        "https://www.xi.co.kr/Files/cmsPage/20240126_101604_789001.pdf",
+        "https://www.xi.co.kr/maple/view?cmsMenuSeq=19690",
+        "https://www.xi.co.kr/Files/aptProcRateImg/20250403_170535_099001.JPG"
+      ],
+      "heightEstimated": true,
+      "geometryEstimated": true,
+      "footprintIds": [],
+      "geoBounds": [
+        127.01353904804259,
+        37.513583635056264,
+        127.01407532130453,
+        37.51402425030243
+      ],
+      "groundFootprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              127.01353904804259,
+              37.513781123489984
+            ],
+            [
+              127.01366577237427,
+              37.51388866329334
+            ],
+            [
+              127.01380291289512,
+              37.513797327611535
+            ],
+            [
+              127.01395107046176,
+              37.51402425030243
+            ],
+            [
+              127.01407532130453,
+              37.51395393240509
+            ],
+            [
+              127.01391996935676,
+              37.513683622333474
+            ],
+            [
+              127.01384607795897,
+              37.513583635056264
+            ],
+            [
+              127.01353904804259,
+              37.513781123489984
+            ]
+          ]
+        ]
+      },
+      "recipe": {
+        "dong": 214,
+        "floorsEstimate": 29,
+        "floorCountVerified": false,
+        "floorBasis": "Unverified individual floor count; approximate aerial silhouette constrained by official35F complex maximum",
+        "storeyHeightEstimateM": 3.08,
+        "mainRoofHeightEstimateM": 90.16,
+        "groundFootprintPixelTrace": [
+          [
+            698,
+            92
+          ],
+          [
+            717,
+            73
+          ],
+          [
+            738,
+            91
+          ],
+          [
+            760,
+            50
+          ],
+          [
+            779,
+            64
+          ],
+          [
+            756,
+            113
+          ],
+          [
+            745,
+            131
+          ]
+        ],
+        "features": [
+          "individually traced numbered plan",
+          "7m pilotis portal",
+          "recessed stone lobby",
+          "broad gray paired-window stacks and projecting white perimeter frames",
+          "unequal center/corner window widths by elevation",
+          "gray stone lower sleeve",
+          "raised window mullions",
+          "plan-shaped crown",
+          "rooftop service enclosure"
+        ]
+      },
+      "measuredGlbDimensions": [
+        47.814517974853516,
+        94.55999755859375,
+        49.420047760009766
+      ],
+      "bounds": {
+        "min": [
+          -23.907258987426758,
+          0.0,
+          -24.710023880004883
+        ],
+        "max": [
+          23.907258987426758,
+          94.55999755859375,
+          24.710023880004883
+        ]
+      },
+      "triangles": 10616,
+      "drawCalls": 3,
+      "bytes": 655004,
+      "sha256": "dcb94f2ab52fd88417805a58047907698f3f46c29acb45841aea05302acb5bd0"
+    },
+    {
+      "id": "maple-xi-215",
+      "nameKo": "메이플자이 215동",
+      "model": "maple-xi-215.glb",
+      "coordinate": {
+        "lon": 127.01441989544088,
+        "lat": 37.513972117321565
+      },
+      "dimensions": [
+        47.4920654296875,
+        94.55999755859375,
+        44.14006805419922
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "local ground at individual model anchor",
+      "category": "residential-apartment",
+      "district": "서초구",
+      "minZoom": 15,
+      "referenceQuality": "photo-authored",
+      "referenceUrl": "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+      "referenceUrls": [
+        "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+        "https://www.xi.co.kr/Files/cmsPage/20240205_132346_189001.jpg",
+        "https://www.xi.co.kr/Files/cmsPage/20240126_101604_789001.pdf",
+        "https://www.xi.co.kr/maple/view?cmsMenuSeq=19690",
+        "https://www.xi.co.kr/Files/aptProcRateImg/20250403_170535_099001.JPG"
+      ],
+      "heightEstimated": true,
+      "geometryEstimated": true,
+      "footprintIds": [],
+      "geoBounds": [
+        127.01414681416763,
+        37.51377396466503,
+        127.01469020685649,
+        37.51417308506697
+      ],
+      "groundFootprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              127.01414681416763,
+              37.51388145160888
+            ],
+            [
+              127.01427376336194,
+              37.514005160294126
+            ],
+            [
+              127.01437178512329,
+              37.51394454020194
+            ],
+            [
+              127.01455951117468,
+              37.51417308506697
+            ],
+            [
+              127.01469020685649,
+              37.5140922582774
+            ],
+            [
+              127.01441554982081,
+              37.51377396466503
+            ],
+            [
+              127.01414681416763,
+              37.51388145160888
+            ]
+          ]
+        ]
+      },
+      "recipe": {
+        "dong": 215,
+        "floorsEstimate": 29,
+        "floorCountVerified": false,
+        "floorBasis": "Unverified individual floor count; approximate aerial silhouette constrained by official35F complex maximum",
+        "storeyHeightEstimateM": 3.08,
+        "mainRoofHeightEstimateM": 90.16,
+        "groundFootprintPixelTrace": [
+          [
+            790,
+            78
+          ],
+          [
+            809,
+            56
+          ],
+          [
+            824,
+            68
+          ],
+          [
+            852,
+            27
+          ],
+          [
+            872,
+            43
+          ],
+          [
+            831,
+            100
+          ]
+        ],
+        "features": [
+          "individually traced numbered plan",
+          "7m pilotis portal",
+          "recessed stone lobby",
+          "broad gray paired-window stacks and projecting white perimeter frames",
+          "unequal center/corner window widths by elevation",
+          "gray stone lower sleeve",
+          "raised window mullions",
+          "plan-shaped crown",
+          "rooftop service enclosure",
+          "documented highway-facing curtain-wall-look elevation",
+          "projecting vertical fins",
+          "louver crown screen"
+        ]
+      },
+      "measuredGlbDimensions": [
+        47.4920654296875,
+        94.55999755859375,
+        44.14006805419922
+      ],
+      "bounds": {
+        "min": [
+          -23.74603271484375,
+          0.0,
+          -22.07003402709961
+        ],
+        "max": [
+          23.74603271484375,
+          94.55999755859375,
+          22.07003402709961
+        ]
+      },
+      "triangles": 9094,
+      "drawCalls": 3,
+      "bytes": 558600,
+      "sha256": "301aa6ebd1f031daf000ac96166e82e96d2651871b525eadf19ebf035776a078"
+    },
+    {
+      "id": "maple-xi-kindergarten",
+      "nameKo": "메이플자이 남측 유치원·종교시설 예정부지",
+      "model": "maple-xi-kindergarten.glb",
+      "coordinate": {
+        "lon": 127.01243618949401,
+        "lat": 37.51053668584383
+      },
+      "dimensions": [
+        50.96605682373047,
+        17.200000762939453,
+        46.00714874267578
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "local ground at individual model anchor",
+      "category": "kindergarten",
+      "district": "서초구",
+      "minZoom": 15,
+      "referenceQuality": "photo-authored",
+      "referenceUrl": "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+      "referenceUrls": [
+        "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+        "https://www.xi.co.kr/Files/cmsPage/20240205_132346_189001.jpg",
+        "https://www.xi.co.kr/Files/cmsPage/20240126_101604_789001.pdf",
+        "https://www.xi.co.kr/maple/view?cmsMenuSeq=19690",
+        "https://www.xi.co.kr/Files/aptProcRateImg/20250403_170535_099001.JPG"
+      ],
+      "heightEstimated": true,
+      "geometryEstimated": true,
+      "footprintIds": [],
+      "geoBounds": [
+        127.01215017116577,
+        37.51033217940766,
+        127.01272204033937,
+        37.51074121511763
+      ],
+      "groundFootprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              127.01215017116577,
+              37.51059459611144
+            ],
+            [
+              127.01231039391419,
+              37.51074121511763
+            ],
+            [
+              127.01272204033937,
+              37.51048337695409
+            ],
+            [
+              127.01258152687912,
+              37.51033217940766
+            ],
+            [
+              127.01215017116577,
+              37.51059459611144
+            ]
+          ]
+        ]
+      },
+      "recipe": {
+        "residential": false,
+        "floorsEstimate": 5,
+        "floorCountVerified": false,
+        "basis": "2024 official plan labels separate kindergarten/religious planned facility1–5F; completed dimensions not independently confirmed",
+        "pixelTrace": [
+          [
+            494,
+            673
+          ],
+          [
+            518,
+            647
+          ],
+          [
+            581,
+            698
+          ],
+          [
+            560,
+            725
+          ]
+        ]
+      },
+      "measuredGlbDimensions": [
+        50.96605682373047,
+        17.200000762939453,
+        46.00714874267578
+      ],
+      "bounds": {
+        "min": [
+          -25.483028411865234,
+          0.0,
+          -23.00357437133789
+        ],
+        "max": [
+          25.483028411865234,
+          17.200000762939453,
+          23.00357437133789
+        ]
+      },
+      "triangles": 1754,
+      "drawCalls": 3,
+      "bytes": 111864,
+      "sha256": "b87b602eeaf6b7009c8850c649afa72821cfa7542b3a652def8d1af19118f98c"
+    },
+    {
+      "id": "maple-xi-maple-road",
+      "nameKo": "메이플자이 메이플로드 보행브리지",
+      "model": "maple-xi-maple-road.glb",
+      "coordinate": {
+        "lon": 127.01320328033385,
+        "lat": 37.511628827315434
+      },
+      "dimensions": [
+        253.59181213378906,
+        10.199999809265137,
+        17.64495277404785
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "local ground at individual model anchor",
+      "category": "pedestrian-bridge",
+      "district": "서초구",
+      "minZoom": 15,
+      "referenceQuality": "photo-authored",
+      "referenceUrl": "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+      "referenceUrls": [
+        "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+        "https://www.xi.co.kr/Files/cmsPage/20240205_132346_189001.jpg",
+        "https://www.xi.co.kr/Files/cmsPage/20240126_101604_789001.pdf",
+        "https://www.xi.co.kr/maple/view?cmsMenuSeq=19690",
+        "https://www.xi.co.kr/Files/aptProcRateImg/20250403_170535_099001.JPG"
+      ],
+      "heightEstimated": true,
+      "geometryEstimated": true,
+      "footprintIds": [],
+      "geoBounds": [
+        127.01173380309052,
+        37.51155320040535,
+        127.01466461515798,
+        37.51170445341999
+      ],
+      "groundFootprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              127.01234672326527,
+              37.511639648566984
+            ],
+            [
+              127.01287268646688,
+              37.5117041229011
+            ],
+            [
+              127.01287694032946,
+              37.51170438294066
+            ],
+            [
+              127.01340422030924,
+              37.51170445341999
+            ],
+            [
+              127.01340709554519,
+              37.51170433550595
+            ],
+            [
+              127.0138876876133,
+              37.51166478605772
+            ],
+            [
+              127.01388821333126,
+              37.51166473880109
+            ],
+            [
+              127.01431186157464,
+              37.511623434559475
+            ],
+            [
+              127.0146246958095,
+              37.511668154558244
+            ],
+            [
+              127.0146281157352,
+              37.511668473192536
+            ],
+            [
+              127.01463155042465,
+              37.51166845508118
+            ],
+            [
+              127.01463496679992,
+              37.51166810039859
+            ],
+            [
+              127.01463833195943,
+              37.51166741256056
+            ],
+            [
+              127.01464161349486,
+              37.51166639819135
+            ],
+            [
+              127.01464477980322,
+              37.51166506705989
+            ],
+            [
+              127.01464780039124,
+              37.511663431985696
+            ],
+            [
+              127.01465064616902,
+              37.51166150871543
+            ],
+            [
+              127.01465328973015,
+              37.51165931577124
+            ],
+            [
+              127.01465570561568,
+              37.51165687427237
+            ],
+            [
+              127.01465787055933,
+              37.511654207731794
+            ],
+            [
+              127.0146597637115,
+              37.511651341829754
+            ],
+            [
+              127.01466136684012,
+              37.51164830416645
+            ],
+            [
+              127.01466266450615,
+              37.51164512399625
+            ],
+            [
+              127.01466364421238,
+              37.51164183194592
+            ],
+            [
+              127.01466429652369,
+              37.51163845971971
+            ],
+            [
+              127.01466461515798,
+              37.51163503979401
+            ],
+            [
+              127.01466459704662,
+              37.511631605104554
+            ],
+            [
+              127.01466424236403,
+              37.5116281887293
+            ],
+            [
+              127.01466355452601,
+              37.51162482356979
+            ],
+            [
+              127.01466254015679,
+              37.51162154203436
+            ],
+            [
+              127.01466120902533,
+              37.511618375725995
+            ],
+            [
+              127.01465957395114,
+              37.51161535513796
+            ],
+            [
+              127.01465765068087,
+              37.51161250936019
+            ],
+            [
+              127.01465545773668,
+              37.511609865799066
+            ],
+            [
+              127.01465301623782,
+              37.51160744991353
+            ],
+            [
+              127.01465034969723,
+              37.511605284969875
+            ],
+            [
+              127.0146474837952,
+              37.51160339181771
+            ],
+            [
+              127.0146444461319,
+              37.5116017886891
+            ],
+            [
+              127.0146412659617,
+              37.51160049102307
+            ],
+            [
+              127.01463797391136,
+              37.51159951131684
+            ],
+            [
+              127.01463460168516,
+              37.511598859005524
+            ],
+            [
+              127.01431760408194,
+              37.511553543848656
+            ],
+            [
+              127.01431343507427,
+              37.51155320040535
+            ],
+            [
+              127.01430925486851,
+              37.51155335679601
+            ],
+            [
+              127.01388168346084,
+              37.5115950435326
+            ],
+            [
+              127.01340278962209,
+              37.51163445322813
+            ],
+            [
+              127.01287908454809,
+              37.51163438322665
+            ],
+            [
+              127.01235302411835,
+              37.51156989697398
+            ],
+            [
+              127.01234857510484,
+              37.511569637452396
+            ],
+            [
+              127.0117686120996,
+              37.51157279370151
+            ],
+            [
+              127.01176518246767,
+              37.51157298090317
+            ],
+            [
+              127.01176178769931,
+              37.51157350336611
+            ],
+            [
+              127.01175846048802,
+              37.51157435605873
+            ],
+            [
+              127.01175523287667,
+              37.51157553076914
+            ],
+            [
+              127.0117521359489,
+              37.51157701618424
+            ],
+            [
+              127.01174919952982,
+              37.51157879799866
+            ],
+            [
+              127.01174645189874,
+              37.51158085905256
+            ],
+            [
+              127.01174391951689,
+              37.51158317949686
+            ],
+            [
+              127.01174162677245,
+              37.511585736984415
+            ],
+            [
+              127.01173959574582,
+              37.511588506885225
+            ],
+            [
+              127.01173784599689,
+              37.511591462523626
+            ],
+            [
+              127.01173639437671,
+              37.511594575435204
+            ],
+            [
+              127.01173525486517,
+              37.51159781564092
+            ],
+            [
+              127.01173443843638,
+              37.51160115193583
+            ],
+            [
+              127.01173395295301,
+              37.511604552189574
+            ],
+            [
+              127.01173380309052,
+              37.511607983655864
+            ],
+            [
+              127.01173399029217,
+              37.511611413287795
+            ],
+            [
+              127.01173451275511,
+              37.51161480805614
+            ],
+            [
+              127.01173536544775,
+              37.511618135267426
+            ],
+            [
+              127.01173654015815,
+              37.511621362878785
+            ],
+            [
+              127.01173802557325,
+              37.51162445980656
+            ],
+            [
+              127.01173980738767,
+              37.51162739622564
+            ],
+            [
+              127.01174186844158,
+              37.51163014385671
+            ],
+            [
+              127.01174418888587,
+              37.51163267623858
+            ],
+            [
+              127.01174674637343,
+              37.51163496898301
+            ],
+            [
+              127.01174951627424,
+              37.51163700000964
+            ],
+            [
+              127.01175247191263,
+              37.51163874975857
+            ],
+            [
+              127.01175558482421,
+              37.511640201378746
+            ],
+            [
+              127.01175882502993,
+              37.51164134089029
+            ],
+            [
+              127.01176216132484,
+              37.51164215731908
+            ],
+            [
+              127.01176556157858,
+              37.51164264280245
+            ],
+            [
+              127.01176899304487,
+              37.51164279266494
+            ],
+            [
+              127.01234672326527,
+              37.511639648566984
+            ]
+          ]
+        ]
+      },
+      "recipe": {
+        "residential": false,
+        "basis": "Official plan route and completed2025 photos; deck height/width, pier spacing are visual estimates",
+        "pixelCenterline": [
+          [
+            434,
+            482
+          ],
+          [
+            522,
+            487
+          ],
+          [
+            602,
+            479
+          ],
+          [
+            682,
+            483
+          ],
+          [
+            755,
+            494
+          ],
+          [
+            820,
+            505
+          ],
+          [
+            868,
+            499
+          ]
+        ],
+        "distinguishedFromSkybridge": true
+      },
+      "measuredGlbDimensions": [
+        253.59181213378906,
+        10.199999809265137,
+        17.64495277404785
+      ],
+      "bounds": {
+        "min": [
+          -126.79590606689453,
+          0.0,
+          -8.822476387023926
+        ],
+        "max": [
+          126.79590606689453,
+          10.199999809265137,
+          8.822476387023926
+        ]
+      },
+      "triangles": 737,
+      "drawCalls": 2,
+      "bytes": 42376,
+      "sha256": "9f1d4e64f3598d10fec32c246fd9a1e27c67e47752a41eef0469ff06b4b4cc38"
+    }
+  ],
+  "totals": {
+    "glbs": 31,
+    "bytes": 24792528,
+    "triangles": 401440
+  },
+  "limitations": [
+    "Individual floors except210/211 need as-built register confirmation; other heights are aerial silhouette estimates, not certified metrics.",
+    "Plan is2024 sales illustration, cross-checked against actual2025 photographs; exterior details on unseen faces are inferred.",
+    "Site mask is digitized and must be overlap-reviewed before suppressing surrounding original buildings.",
+    "Only the seven documented highway-facing towers use curtain-wall-look elevations; podiums and louver spacing are photo-led approximations."
+  ]
+}

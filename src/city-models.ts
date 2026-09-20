@@ -10,6 +10,10 @@ export interface CityModelAsset {
   coordinate: { lon: number; lat: number }; yawDegFromEast: number;
   heightDatum: string; sha256: string; referenceUrl: string; minZoom?: number; district?: string; category?: string; geoBounds?: [number, number, number, number];
   footprintIds?: string[];
+  supersedes?: string[];
+  quality?: 'reference';
+  searchable?: boolean;
+  groundOffsetM?: number;
 }
 export interface DecorativeTree { coordinate: [number, number]; height_m: number; crown_radius_m: number }
 export interface CityModelState {
@@ -169,7 +173,8 @@ export class CityModels {
       id => [...this.trackedEntries].some(entry => entry.catalogTile === id && (entry.active || !!entry.pending)));
   }
   private footprints(entry: Entry) {
-    return entry.catalogTile ? entry.asset.footprintIds ?? [] : this.matches[entry.asset.id] ?? [];
+    return entry.catalogTile || entry.asset.quality === 'reference'
+      ? entry.asset.footprintIds ?? [] : this.matches[entry.asset.id] ?? [];
   }
   private syncCatalog() {
     if (this.indexedEntries === this.entries && this.indexedLength === this.entries.length) return;
@@ -214,8 +219,12 @@ export class CityModels {
     if (this.nearbyCache?.key === key) return this.nearbyCache.entries;
     const scale = Math.cos(view.lat * Math.PI / 180);
     const distance = (entry: Entry) => ((entry.asset.coordinate.lon - view.lon) * scale) ** 2 + (entry.asset.coordinate.lat - view.lat) ** 2;
-    const entries = this.entries.filter(entry => this.inView(entry.asset, view))
-      .sort((a, b) => distance(a) - distance(b) || a.asset.id.localeCompare(b.asset.id))
+    const candidates = this.entries.filter(entry => this.inView(entry.asset, view));
+    const replaced = new Set(candidates.filter(entry => !entry.error)
+      .flatMap(entry => entry.asset.supersedes ?? []));
+    const entries = candidates.filter(entry => !replaced.has(entry.asset.id))
+      .sort((a, b) => Number(b.asset.quality === 'reference') - Number(a.asset.quality === 'reference')
+        || distance(a) - distance(b) || a.asset.id.localeCompare(b.asset.id))
       .slice(0, this.maxNearby);
     this.nearbyCache = { key, entries };
     return entries;
@@ -278,7 +287,11 @@ export class CityModels {
           model.rotation.y = THREE.MathUtils.degToRad(asset.yawDegFromEast);
           entry.scene = new THREE.Scene(); illuminate(entry.scene); entry.scene.add(model);
         } catch (error) {
-          if (!this.disposed) entry.error = error instanceof Error ? error.message : String(error);
+          if (!this.disposed) {
+            entry.error = error instanceof Error ? error.message : String(error);
+            this.nearbyCache = undefined;
+            if (entry.asset.supersedes?.length) this.loadAgain = true;
+          }
         }
         entry.pending = undefined;
         this.trackEntry(entry);
@@ -337,9 +350,9 @@ export class CityModels {
       const coordinate: [number, number] = [entry.asset.coordinate.lon, entry.asset.coordinate.lat];
       const ground = this.map.queryTerrainElevation(coordinate);
       if (ground === null || !Number.isFinite(ground)) continue;
-      entry.ground = ground;
+      entry.ground = ground + (entry.asset.groundOffsetM ?? 0);
       try {
-        this.camera.projectionMatrix.fromArray(args.defaultProjectionData.mainMatrix).multiply(modelMercatorMatrix(coordinate, ground));
+        this.camera.projectionMatrix.fromArray(args.defaultProjectionData.mainMatrix).multiply(modelMercatorMatrix(coordinate, entry.ground));
         this.renderer.resetState(); this.renderer.render(entry.scene, this.camera);
         const calls = this.renderer.info.render.calls;
         this.drawCalls += calls;
@@ -347,7 +360,11 @@ export class CityModels {
         // mesh survives the Three.js camera frustum (especially at high pitch).
         entry.active = calls > 0;
         if (entry.active) entry.draws++;
-      } catch (error) { entry.error = error instanceof Error ? error.message : String(error); }
+      } catch (error) {
+        entry.error = error instanceof Error ? error.message : String(error);
+        this.nearbyCache = undefined;
+        if (entry.asset.supersedes?.length) void this.loadNearby();
+      }
       this.trackEntry(entry);
     }
     this.activeTrees = 0;

@@ -339,19 +339,27 @@ async function loadGreenery() {
 async function loadCityModels() {
   const { CityModels } = await import('./city-models');
   const manifest = await request<{ assets: CityModelAsset[]; catalogIndex?: string }>('/models/manifest.json');
+  const { referenceManifest } = await import('./reference-models');
+  let references: import('./reference-models').ReferenceManifest = { version: 1, assets: [], places: [] };
+  try { references = referenceManifest(await request<unknown>('/models/reference-manifest.json'), manifest.assets); }
+  catch (error) { console.warn('개별 건물 모델을 불러오지 못해 기존 건물을 표시합니다.', error); }
+  const assets = [...manifest.assets, ...references.assets];
+  const replaced = new Set(references.assets.flatMap(asset => asset.supersedes ?? []));
   cityModels = new CityModels(map, {
-    assets: manifest.assets,
+    assets,
     catalogIndex: manifest.catalogIndex,
     onState: state => { $('#city-model-status').textContent = state.message; },
     onActiveFootprints: ids => buildings.setModelFootprints(ids),
   });
 
-  modelPlaces = manifest.assets.map(asset => ({ id: `model:${asset.id}`, name: asset.nameKo, subtitle: `${asset.category === 'bridge' ? '대교 모형' : asset.category === 'company-office' ? '회사 건물 모형' : ['city-hall', 'cultural-site'].includes(asset.category ?? '') ? '시청·문화시설 모형' : ['k12-school', 'district-public-office'].includes(asset.category ?? '') ? '학교·공공기관 모형' : '건물 모형'} · 모형 높이 ${Math.round(asset.dimensions[1] * 10) / 10} m`, center: [asset.coordinate.lon, asset.coordinate.lat], zoom: asset.dimensions[1] > 400 ? 15.3 : 16, kind: 'building', source_url: asset.referenceUrl }));
-  const publicAssets = manifest.assets.filter(a => ['k12-school', 'district-public-office'].includes(a.category ?? ''));
+  modelPlaces = assets.filter(asset => asset.searchable !== false && !replaced.has(asset.id)).map(asset => ({ id: `model:${asset.id}`, name: asset.nameKo, subtitle: `${asset.category === 'bridge' ? '대교 모형' : asset.category === 'company-office' ? '회사 건물 모형' : ['city-hall', 'cultural-site'].includes(asset.category ?? '') ? '시청·문화시설 모형' : ['k12-school', 'district-public-office'].includes(asset.category ?? '') ? '학교·공공기관 모형' : '건물 모형'} · 모형 높이 ${Math.round(asset.dimensions[1] * 10) / 10} m`, center: [asset.coordinate.lon, asset.coordinate.lat], zoom: asset.dimensions[1] > 400 ? 15.3 : 16.8, kind: 'building', source_url: asset.referenceUrl }));
+  modelPlaces.push(...references.places.map(place => ({ ...place, kind: 'building' as const })));
+  landmarks?.setReferencePlaces(references.places);
+  const publicAssets = assets.filter(a => ['k12-school', 'district-public-office'].includes(a.category ?? ''));
   map.addSource('public-facility-points', { type: 'geojson', data: { type: 'FeatureCollection', features: publicAssets.map(a => ({ type: 'Feature', geometry: { type: 'Point', coordinates: [a.coordinate.lon, a.coordinate.lat] }, properties: { name: a.nameKo } })) } });
   map.addLayer({ id: 'public-facility-labels', type: 'symbol', source: 'public-facility-points', minzoom: 15, layout: { 'text-field': ['get', 'name'], 'text-font': ['Noto Sans Regular'], 'text-size': 11, 'text-offset': [0, 1.1], 'text-allow-overlap': false }, paint: { 'text-color': '#304d45', 'text-halo-color': '#fff', 'text-halo-width': 1.5 } });
   for (const [id, categories, color] of [['cultural-site', ['city-hall', 'cultural-site'], '#795137'], ['company-office', ['company-office'], '#36556f']] as [string, string[], string][]) {
-    map.addSource(id + '-points', { type: 'geojson', data: { type: 'FeatureCollection', features: manifest.assets.filter(a => categories.includes(a.category ?? '')).map(a => ({ type: 'Feature', geometry: { type: 'Point', coordinates: [a.coordinate.lon, a.coordinate.lat] }, properties: { name: a.nameKo } })) } });
+    map.addSource(id + '-points', { type: 'geojson', data: { type: 'FeatureCollection', features: assets.filter(a => !replaced.has(a.id) && categories.includes(a.category ?? '')).map(a => ({ type: 'Feature', geometry: { type: 'Point', coordinates: [a.coordinate.lon, a.coordinate.lat] }, properties: { name: a.nameKo } })) } });
     map.addLayer({ id: id + '-labels', type: 'symbol', source: id + '-points', minzoom: 14.5, layout: { 'text-field': ['get', 'name'], 'text-font': ['Noto Sans Regular'], 'text-size': 12, 'text-offset': [0, 1], 'text-allow-overlap': false }, paint: { 'text-color': color, 'text-halo-color': '#fff', 'text-halo-width': 1.5 } });
   }
   const matches = await request<Record<string, string[]>>('/models/footprint-matches.json');
@@ -647,6 +655,7 @@ try {
     container: 'map', center: currentPlace.center, zoom: currentPlace.zoom, minZoom: 10.2, maxZoom: 24,
     maxBounds: [[126.70, 37.37], [127.27, 37.78]], maxPitch: 85,
     attributionControl: false, hash: false,
+    canvasContextAttributes: { antialias: true },
     pixelRatio: Math.min(window.devicePixelRatio || 1, 1.25),
     style: {
       version: 8,

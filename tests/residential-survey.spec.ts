@@ -22,7 +22,7 @@ test('official survey housing renders individually with bounded regional metadat
    const api=(window as any).__SEOUL_MAP__, city=api.cityModels,s=city.getState();
    return {metadataModels:s.models.length,catalogTotal:s.catalogTotal,metadataTiles:city.catalog.tileCount,loaded:s.models.filter((m:any)=>m.loaded).length,active:s.models.filter((m:any)=>m.active).length,errors:s.models.filter((m:any)=>m.error),error:s.error,model:s.models.find((m:any)=>m.id===a.id),footprints:s.activeFootprintIds,terrainAtAnchor:api.map.queryTerrainElevation([a.coordinate.lon,a.coordinate.lat])};
   },asset);
-  expect(state.catalogTotal).toBe(113123);expect(state.metadataModels).toBeLessThan(113123);
+  expect(state.catalogTotal).toBe(113123 + JSON.parse(readFileSync('public/models/reference-manifest.json','utf8')).assets.length);expect(state.metadataModels).toBeLessThan(113123);
   expect(state.metadataTiles).toBeLessThanOrEqual(32);expect(state.loaded).toBeLessThanOrEqual(48);expect(state.active).toBeLessThanOrEqual(32);
   expect(state.errors).toEqual([]);expect(state.error).toBeNull();
   expect(state.model.height_m).toBe(asset.dimensions[1]);expect(state.model.ground_m).not.toBeNull();

@@ -1,4 +1,5 @@
 """Check the deployed revision, real source counts, terrain, and a GLB asset."""
+import hashlib
 import json
 import gzip
 import sys
@@ -57,6 +58,12 @@ manifest = json.loads(read('/data/deployment-assets.json'))
 model = next(path.removeprefix('public') for path in manifest['files'] if path.endswith('.glb'))
 assert read(model).startswith(b'glTF'), '3D model unavailable'
 assert b'<html' in read('/').lower(), 'Frontend unavailable'
+references = json.loads(read('/models/reference-manifest.json'))
+assert len(references['assets']) >= 125, 'Current reference models are missing'
+for model_id in ['reference-flight-seoul-city-hall', 'reference-flight-ddp', 'maple-xi-210']:
+    asset = next(a for a in references['assets'] if a['id'] == model_id)
+    assert hashlib.sha256(read('/models/' + asset['model'])).hexdigest() == asset['sha256'], 'Reference model stale or corrupted: ' + model_id
+assert any(p['name'] == '메이플자이' for p in references['places']), 'Maple Xi search location missing'
 
 # Exercise the same calls used by the initial map view instead of accepting a
 # deployment that only serves health metadata.  Keep this bbox small enough to
