@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
+from unittest.mock import patch
 
 spec = importlib.util.spec_from_file_location('publisher', Path(__file__).resolve().parents[1] / 'scripts/publish_bespoke_models.py')
 publisher = importlib.util.module_from_spec(spec)
@@ -48,6 +49,26 @@ class McpEvidenceTest(unittest.TestCase):
         records[0]['path'] = 'docs/model-audit/mcp/../../../outside.json'
         with self.assertRaisesRegex(ValueError, 'local audit'):
             publisher.validate_mcp_evidence(records, self.root)
+
+
+class StagingPathTest(unittest.TestCase):
+    def test_linked_workspace_is_accepted_but_outside_bundle_is_rejected(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            actual = root / 'shared-data'
+            actual.mkdir()
+            linked = root / 'worktree-data'
+            linked.symlink_to(actual, target_is_directory=True)
+            (actual / 'bundle.json').write_text('{"siteId":"example"}')
+            review = root / 'review.json'
+            review.write_text('{}')
+            outside = root / 'outside.json'
+            outside.write_text('{"siteId":"example"}')
+            with patch.object(publisher, 'STAGE', linked):
+                with self.assertRaisesRegex(ValueError, 'completed, site-specific'):
+                    publisher.publish(linked / 'bundle.json', review)
+                with self.assertRaisesRegex(ValueError, 'staging directory'):
+                    publisher.publish(outside, review)
 
 
 if __name__ == '__main__':

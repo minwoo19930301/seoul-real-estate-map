@@ -133,3 +133,42 @@ test('a split tower replacement waits for every visible peer and retains the com
   h.m.render(frame); assert.equal(old.active, false); assert.equal(a.active, true); assert.equal(b.active, true);
   h.m.destroy();
 });
+
+test('splitting a generic apartment compound also waits for pending or failed sibling towers', () => {
+  for (const state of ['pending', '404', 'ready']) {
+    const h = cityHarness(), old = h.m.entries[0];
+    const tower = suffix => ({ asset: asset('rebuilt-' + suffix, {coordinate: old.asset.coordinate,
+      footprintIds: ['tower-' + suffix], supersedes: ['generic']}), scene: new THREE.Scene(),
+      error: null, ground: null, draws: 0, active: false });
+    const a = tower('a'), b = tower('b');
+    if (state !== 'ready') b.scene = undefined;
+    if (state === '404') b.error = 'HTTP 404';
+    h.m.entries = [old, a, b];
+    h.m.setFootprintMatches({generic: ['tower-a', 'tower-b']});
+    h.m.render({defaultProjectionData: {mainMatrix: new THREE.Matrix4().elements}, shaderData: {variantName: 'mercator'}});
+    assert.equal(old.active, state !== 'ready', state);
+    assert.equal(a.active, state === 'ready', state);
+    assert.equal(b.active, state === 'ready', state);
+    assert.deepEqual(new Set(h.m.getState().activeFootprintIds), new Set(['tower-a', 'tower-b']), state);
+    h.m.destroy();
+  }
+});
+
+test('reference and upgraded tower generations sharing a generic fallback never wait on each other', () => {
+  for (const failed of ['none', 'old-reference', 'new-b', 'both-generations']) {
+    const h = cityHarness(), [generic, old] = h.m.entries;
+    const tower = suffix => ({asset: asset('rebuilt-' + suffix, {coordinate: old.asset.coordinate,
+      footprintIds: ['tower-' + suffix], supersedes: ['ref', 'generic']}), scene: new THREE.Scene(),
+      error: null, ground: null, draws: 0, active: false});
+    const a = tower('a'), b = tower('b');
+    if (failed === 'old-reference' || failed === 'both-generations') { old.scene = undefined; old.error = 'HTTP 404'; }
+    if (failed === 'new-b' || failed === 'both-generations') { b.scene = undefined; b.error = 'HTTP 404'; }
+    h.m.entries = [generic, old, a, b];
+    h.m.render({defaultProjectionData: {mainMatrix: new THREE.Matrix4().elements}, shaderData: {variantName: 'mercator'}});
+    const newReady = failed === 'none' || failed === 'old-reference';
+    assert.equal(a.active, newReady, failed); assert.equal(b.active, newReady, failed);
+    assert.equal(old.active, failed === 'new-b', failed);
+    assert.equal(generic.active, failed === 'both-generations', failed);
+    h.m.destroy();
+  }
+});

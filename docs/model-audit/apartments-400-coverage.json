@@ -1,0 +1,407 @@
+{
+  "version": 1,
+  "scope": "Explicit management-code to named residential building mapping; edits require photo/plan ownership review. No automatic inference from names, proximity, model count or template provenance.",
+  "complexes": [
+    {
+      "code": "A13527017",
+      "physicalSiteId": "tower-palace-phase-1",
+      "expectedResidentialBuildingCount": 4,
+      "coverageApproved": true,
+      "buildingIdentitySource": "https://swacdn.s3.amazonaws.com/1/988ea28b_towerpalace.pdf",
+      "photoCoverageBasis": "published-bespoke.json tower-palace review explicitly compares phaseI SAMOO completed photos and named A–G plan with independent renders; reviewedInputs binds every listed source GLB. Exact phase/code linkage corroborated by K-apt name and address; no legacy apt asset identity inferred.",
+      "buildings": [
+        {
+          "label": "A",
+          "assetId": "bespoke-tower-palace-a",
+          "photoReviewSiteId": "tower-palace"
+        },
+        {
+          "label": "B",
+          "assetId": "bespoke-tower-palace-b",
+          "photoReviewSiteId": "tower-palace"
+        },
+        {
+          "label": "C",
+          "assetId": "bespoke-tower-palace-c",
+          "photoReviewSiteId": "tower-palace"
+        },
+        {
+          "label": "D",
+          "assetId": "bespoke-tower-palace-d",
+          "photoReviewSiteId": "tower-palace"
+        }
+      ],
+      "limits": "Completion covers the named residential towers only. Shared podiums, sports centre and landscaping excluded; unseen elevations, photo colors and dimensions remain approximations. No claim of exact measured CAD."
+    },
+    {
+      "code": "A13585402",
+      "physicalSiteId": "tower-palace-phase-2",
+      "expectedResidentialBuildingCount": 2,
+      "coverageApproved": true,
+      "buildingIdentitySource": "https://swacdn.s3.amazonaws.com/1/988ea28b_towerpalace.pdf",
+      "photoCoverageBasis": "published-bespoke.json tower-palace review explicitly compares phaseII SAMOO completed photos and named A–G plan with independent renders; reviewedInputs binds every listed source GLB. Exact phase/code linkage corroborated by K-apt name and address; no legacy apt asset identity inferred.",
+      "buildings": [
+        {
+          "label": "E",
+          "assetId": "bespoke-tower-palace-e",
+          "photoReviewSiteId": "tower-palace"
+        },
+        {
+          "label": "F",
+          "assetId": "bespoke-tower-palace-f",
+          "photoReviewSiteId": "tower-palace"
+        }
+      ],
+      "limits": "Completion covers the named residential towers only. Shared podiums, sports centre and landscaping excluded; unseen elevations, photo colors and dimensions remain approximations. No claim of exact measured CAD."
+    },
+    {
+      "code": "A13585403",
+      "physicalSiteId": "tower-palace-phase-3",
+      "expectedResidentialBuildingCount": 1,
+      "coverageApproved": true,
+      "buildingIdentitySource": "https://swacdn.s3.amazonaws.com/1/988ea28b_towerpalace.pdf",
+      "photoCoverageBasis": "published-bespoke.json tower-palace review explicitly compares phaseIII SAMOO completed photos and named A–G plan with independent renders; reviewedInputs binds every listed source GLB. Exact phase/code linkage corroborated by K-apt name and address; no legacy apt asset identity inferred.",
+      "buildings": [
+        {
+          "label": "G",
+          "assetId": "bespoke-tower-palace-g",
+          "photoReviewSiteId": "tower-palace"
+        }
+      ],
+      "limits": "Completion covers the named residential towers only. Shared podiums, sports centre and landscaping excluded; unseen elevations, photo colors and dimensions remain approximations. No claim of exact measured CAD."
+    },
+    {
+      "code": "A10023083",
+      "physicalSiteId": "cheongnyangni-lotte-skyl65",
+      "expectedResidentialBuildingCount": 4,
+      "coverageApproved": true,
+      "buildingIdentitySource": "https://www.lottecastle.co.kr/APT/AT00174/1449/summary/view.do",
+      "photoCoverageBasis": "Official business overview states four apartment towers; official numbered/floor diagrams and July2023 completed photos are explicitly compared in skyl65 independent review. Every A/B/C/D source GLB appears in reviewedInputs.",
+      "buildings": [
+        {
+          "label": "A",
+          "assetId": "bespoke-skyl65-a",
+          "photoReviewSiteId": "skyl65"
+        },
+        {
+          "label": "B",
+          "assetId": "bespoke-skyl65-b",
+          "photoReviewSiteId": "skyl65"
+        },
+        {
+          "label": "C",
+          "assetId": "bespoke-skyl65-c",
+          "photoReviewSiteId": "skyl65"
+        },
+        {
+          "label": "D",
+          "assetId": "bespoke-skyl65-d",
+          "photoReviewSiteId": "skyl65"
+        }
+      ],
+      "limits": "Four residential towers only; separate business tower/shared landscape not claimed. Unmeasured crown, facades and source heights remain estimates."
+    },
+    {
+      "code": "A15805114",
+      "physicalSiteId": "mokdong-hyperion-phase-1",
+      "expectedResidentialBuildingCount": null,
+      "coverageApproved": false,
+      "coverageReviewRequired": true,
+      "buildingIdentitySource": "docs/model-audit/hyperion-reference.md",
+      "photoCoverageBasis": "Existing independent review compares three modeled towers, but that does not resolve apartment vs officetel use for the two-building official management record.",
+      "buildings": [
+        {
+          "label": "A",
+          "assetId": "bespoke-hyperion-a",
+          "photoReviewSiteId": "hyperion"
+        },
+        {
+          "label": "B",
+          "assetId": "bespoke-hyperion-b",
+          "photoReviewSiteId": "hyperion"
+        },
+        {
+          "label": "C",
+          "assetId": "bespoke-hyperion-c",
+          "photoReviewSiteId": "hyperion"
+        }
+      ],
+      "reviewReason": "OA and K-apt both record two management-complex buildings; modeled A/B/C are three towers. Verify residential use and exact management-code allocation before marking complete. Department store and parking podium receive no apartment completion credit."
+    },
+    {
+      "code": "A10020557",
+      "physicalSiteId": "maple-xi",
+      "expectedResidentialBuildingCount": 29,
+      "coverageApproved": false,
+      "buildingIdentitySource": "https://www.xi.co.kr/Files/cmsPage/20240205_132346_189001.jpg",
+      "photoCoverageBasis": "Six previously published towers have photo-comparison improvements, but213 requires major floor/height correction after official-register audit and receives no completion credit. Remaining23 reference towers are not bespoke completion.",
+      "buildings": [
+        {
+          "label": "101",
+          "assetId": null,
+          "photoReviewSiteId": null
+        },
+        {
+          "label": "102",
+          "assetId": null,
+          "photoReviewSiteId": null
+        },
+        {
+          "label": "103",
+          "assetId": null,
+          "photoReviewSiteId": null
+        },
+        {
+          "label": "104",
+          "assetId": null,
+          "photoReviewSiteId": null
+        },
+        {
+          "label": "105",
+          "assetId": null,
+          "photoReviewSiteId": null
+        },
+        {
+          "label": "106",
+          "assetId": null,
+          "photoReviewSiteId": null
+        },
+        {
+          "label": "107",
+          "assetId": null,
+          "photoReviewSiteId": null
+        },
+        {
+          "label": "108",
+          "assetId": null,
+          "photoReviewSiteId": null
+        },
+        {
+          "label": "109",
+          "assetId": null,
+          "photoReviewSiteId": null
+        },
+        {
+          "label": "110",
+          "assetId": null,
+          "photoReviewSiteId": null
+        },
+        {
+          "label": "111",
+          "assetId": null,
+          "photoReviewSiteId": null
+        },
+        {
+          "label": "112",
+          "assetId": null,
+          "photoReviewSiteId": null
+        },
+        {
+          "label": "113",
+          "assetId": null,
+          "photoReviewSiteId": null
+        },
+        {
+          "label": "114",
+          "assetId": null,
+          "photoReviewSiteId": null
+        },
+        {
+          "label": "201",
+          "assetId": null,
+          "photoReviewSiteId": null
+        },
+        {
+          "label": "202",
+          "assetId": null,
+          "photoReviewSiteId": null
+        },
+        {
+          "label": "203",
+          "assetId": null,
+          "photoReviewSiteId": null
+        },
+        {
+          "label": "204",
+          "assetId": null,
+          "photoReviewSiteId": null
+        },
+        {
+          "label": "205",
+          "assetId": null,
+          "photoReviewSiteId": null
+        },
+        {
+          "label": "206",
+          "assetId": null,
+          "photoReviewSiteId": null
+        },
+        {
+          "label": "207",
+          "assetId": null,
+          "photoReviewSiteId": null
+        },
+        {
+          "label": "208",
+          "assetId": "bespoke-maple-xi-208",
+          "photoReviewSiteId": "maple-next-towers",
+          "buildingIdentity": {
+            "sourceUrl": "https://www.xi.co.kr/Files/cmsPage/20240205_132346_189001.jpg",
+            "retainedAssetId": "maple-xi-208",
+            "basis": "Official numbered site plan identifies this individual retained tower; source footprints are absent for this new construction."
+          }
+        },
+        {
+          "label": "209",
+          "assetId": "bespoke-maple-xi-209",
+          "photoReviewSiteId": "maple-next-towers",
+          "buildingIdentity": {
+            "sourceUrl": "https://www.xi.co.kr/Files/cmsPage/20240205_132346_189001.jpg",
+            "retainedAssetId": "maple-xi-209",
+            "basis": "Official numbered site plan identifies this individual retained tower; source footprints are absent for this new construction."
+          }
+        },
+        {
+          "label": "210",
+          "assetId": "bespoke-maple-xi-210",
+          "photoReviewSiteId": "maple-club-cloud",
+          "buildingIdentity": {
+            "sourceUrl": "https://www.xi.co.kr/Files/cmsPage/20240205_132346_189001.jpg",
+            "retainedAssetId": "maple-xi-210",
+            "basis": "Official numbered site plan identifies this individual retained tower; source footprints are absent for this new construction."
+          }
+        },
+        {
+          "label": "211",
+          "assetId": "bespoke-maple-xi-211",
+          "photoReviewSiteId": "maple-club-cloud",
+          "buildingIdentity": {
+            "sourceUrl": "https://www.xi.co.kr/Files/cmsPage/20240205_132346_189001.jpg",
+            "retainedAssetId": "maple-xi-211",
+            "basis": "Official numbered site plan identifies this individual retained tower; source footprints are absent for this new construction."
+          }
+        },
+        {
+          "label": "212",
+          "assetId": "bespoke-maple-xi-212",
+          "photoReviewSiteId": "maple-next-towers",
+          "buildingIdentity": {
+            "sourceUrl": "https://www.xi.co.kr/Files/cmsPage/20240205_132346_189001.jpg",
+            "retainedAssetId": "maple-xi-212",
+            "basis": "Official numbered site plan identifies this individual retained tower; source footprints are absent for this new construction."
+          }
+        },
+        {
+          "label": "213",
+          "assetId": "bespoke-maple-xi-213",
+          "photoReviewSiteId": "maple-next-towers",
+          "buildingIdentity": {
+            "sourceUrl": "https://www.xi.co.kr/Files/cmsPage/20240205_132346_189001.jpg",
+            "retainedAssetId": "maple-xi-213",
+            "basis": "Official numbered site plan identifies this individual retained tower; source footprints are absent for this new construction."
+          },
+          "reviewRequiredReason": "2026-09-21 exact-parcel numbered building register says23F/74.5m; previous authored35F/108.64m conflicts. Retain the existing file for now but remove completion credit pending numbered-photo/height correction. See maple-next-buildings.md."
+        },
+        {
+          "label": "214",
+          "assetId": null,
+          "photoReviewSiteId": null
+        },
+        {
+          "label": "215",
+          "assetId": null,
+          "photoReviewSiteId": null
+        }
+      ],
+      "limits": "Six visible-face/roof improvements do not certify all six exteriors or all29 towers. Remaining reference assets stay visible until reviewed replacements are published."
+    },
+    {
+      "code": "A10023188",
+      "physicalSiteId": "gratte-ciel",
+      "expectedResidentialBuildingCount": 4,
+      "coverageApproved": true,
+      "buildingIdentitySource": "https://m.sujain.co.kr/complex/crrgratteciel/plan",
+      "photoCoverageBasis": "Named source footprints and exact-parcel numbered building-register rows matched official photos/plans. Independent root photo/render review and frozen GLB/blend hashes appear in published-bespoke.json. Successful actual Blender MCP proof is checked.",
+      "buildings": [
+        {
+          "label": "101",
+          "assetId": "bespoke-gratte-ciel-101",
+          "photoReviewSiteId": "gratte-ciel"
+        },
+        {
+          "label": "102",
+          "assetId": "bespoke-gratte-ciel-102",
+          "photoReviewSiteId": "gratte-ciel"
+        },
+        {
+          "label": "103",
+          "assetId": "bespoke-gratte-ciel-103",
+          "photoReviewSiteId": "gratte-ciel"
+        },
+        {
+          "label": "104",
+          "assetId": "bespoke-gratte-ciel-104",
+          "photoReviewSiteId": "gratte-ciel"
+        }
+      ],
+      "limits": "Named residential towers only. Unseen details and photo-based facade dimensions remain approximate; landscaping/interiors and unlocated ancillary buildings excluded. Height datum limitations are preserved in site reference and review."
+    },
+    {
+      "code": "A10026988",
+      "physicalSiteId": "trimage",
+      "expectedResidentialBuildingCount": 4,
+      "coverageApproved": true,
+      "buildingIdentitySource": "https://www.nocktown.com/web-front/trimage/",
+      "photoCoverageBasis": "Named source footprints and exact-parcel numbered building-register rows matched official photos/plans. Independent root photo/render review and frozen GLB/blend hashes appear in published-bespoke.json. Successful actual Blender MCP proof is checked.",
+      "buildings": [
+        {
+          "label": "101",
+          "assetId": "bespoke-trimage-101",
+          "photoReviewSiteId": "trimage"
+        },
+        {
+          "label": "102",
+          "assetId": "bespoke-trimage-102",
+          "photoReviewSiteId": "trimage"
+        },
+        {
+          "label": "103",
+          "assetId": "bespoke-trimage-103",
+          "photoReviewSiteId": "trimage"
+        },
+        {
+          "label": "104",
+          "assetId": "bespoke-trimage-104",
+          "photoReviewSiteId": "trimage"
+        }
+      ],
+      "limits": "Named residential towers only. Unseen details and photo-based facade dimensions remain approximate; landscaping/interiors and unlocated ancillary buildings excluded. Height datum limitations are preserved in site reference and review."
+    },
+    {
+      "code": "A10027908",
+      "physicalSiteId": "raemian-caelitus",
+      "expectedResidentialBuildingCount": 3,
+      "coverageApproved": true,
+      "buildingIdentitySource": "https://www.aurum.re.kr/Bits/BuildingDoc.aspx?mm=4&num=5805&ss=1",
+      "photoCoverageBasis": "Named source footprints and exact-parcel numbered building-register rows matched official photos/plans. Independent root photo/render review and frozen GLB/blend hashes appear in published-bespoke.json. Successful actual Blender MCP proof is checked.",
+      "buildings": [
+        {
+          "label": "101",
+          "assetId": "bespoke-raemian-caelitus-101",
+          "photoReviewSiteId": "raemian-caelitus"
+        },
+        {
+          "label": "102",
+          "assetId": "bespoke-raemian-caelitus-102",
+          "photoReviewSiteId": "raemian-caelitus"
+        },
+        {
+          "label": "103",
+          "assetId": "bespoke-raemian-caelitus-103",
+          "photoReviewSiteId": "raemian-caelitus"
+        }
+      ],
+      "limits": "Named residential towers only. Unseen details and photo-based facade dimensions remain approximate; landscaping/interiors and unlocated ancillary buildings excluded. Height datum limitations are preserved in site reference and review."
+    }
+  ]
+}

@@ -355,6 +355,13 @@ async function loadGreenery() {
 async function loadCityModels() {
   const { CityModels } = await import('./city-models');
   const manifest = await request<{ assets: CityModelAsset[]; catalogIndex?: string }>('/models/manifest.json');
+  // Bundled correction metadata cannot fail independently of the application.
+  // The immutable base catalog remains the archival source of the partition.
+  const { applyGenericCorrections } = await import('./generic-corrections');
+  const correctionText = (await import('../public/models/generic-corrections.json?raw')).default;
+  const corrected = applyGenericCorrections(manifest.assets,
+    await request<Record<string, string[]>>('/models/footprint-matches.json'), JSON.parse(correctionText));
+  manifest.assets = corrected.assets;
   const { referenceManifest } = await import('./reference-models');
   let references: import('./reference-models').ReferenceManifest = { version: 1, assets: [], places: [] };
   try { references = referenceManifest(await request<unknown>('/models/reference-manifest.json'), manifest.assets); }
@@ -383,7 +390,7 @@ async function loadCityModels() {
     map.addSource(id + '-points', { type: 'geojson', data: { type: 'FeatureCollection', features: assets.filter(a => !replaced.has(a.id) && categories.includes(a.category ?? '')).map(a => ({ type: 'Feature', geometry: { type: 'Point', coordinates: [a.coordinate.lon, a.coordinate.lat] }, properties: { name: a.nameKo } })) } });
     map.addLayer({ id: id + '-labels', type: 'symbol', source: id + '-points', minzoom: 14.5, layout: { 'text-field': ['get', 'name'], 'text-font': ['Noto Sans Regular'], 'text-size': 12, 'text-offset': [0, 1], 'text-allow-overlap': false }, paint: { 'text-color': color, 'text-halo-color': '#fff', 'text-halo-width': 1.5 } });
   }
-  const matches = await request<Record<string, string[]>>('/models/footprint-matches.json');
+  const matches = corrected.matches;
   for (const [id, footprints] of Object.entries(references.preservedLandmarkFootprints ?? {})) {
     matches[id] = [...new Set([...(matches[id] ?? []), ...footprints])];
   }

@@ -60,7 +60,7 @@ def validate_mcp_evidence(records, root=ROOT):
 
 def publish(bundle_path, review_path):
     bundle_path=bundle_path.resolve(); review_path=review_path.resolve()
-    if not bundle_path.is_relative_to(STAGE):raise ValueError('Bundle must be in the bespoke staging directory')
+    if not bundle_path.is_relative_to(STAGE.resolve()):raise ValueError('Bundle must be in the bespoke staging directory')
     b=read(bundle_path);review=read(review_path);site=safe_id(b['siteId'])
     if review.get('siteId')!=site or review.get('status')!='visually-reviewed' or not review.get('comparisons'):
         raise ValueError('A completed, site-specific visual comparison record is required')

@@ -5492,6 +5492,1935 @@
           "sha256": "b320dbd02d7209e187de33e47c719d21134a709d1480b67e8e690b8d84dcea1c"
         }
       ]
+    },
+    "raemian-caelitus": {
+      "sources": [
+        {
+          "url": "https://www.raemian.co.kr/sales/ichon",
+          "observations": "Official460 households,3towers,max56floors,2015.08move-in."
+        },
+        {
+          "url": "https://www.aurum.re.kr/Bits/BuildingDoc.aspx?mm=4&num=5805&ss=1",
+          "observations": "KIRA2016architecturalaward: numbered site/elevations/101floorplans/17Fbridgeplan and completed photo captions. Published graphic scales control geometry."
+        },
+        {
+          "url": "https://www.h-architecture.com/projects/raemian-caelitus",
+          "observations": "Design architect completed photos: crystalline curtainwalls,9m piloti,17Fskybridges and green-roofpodium."
+        },
+        {
+          "url": "https://www.raemian.co.kr/community/times/raemianHomeStyling/view.do?pg=5&searchStr=&searchType=ss&seq=22",
+          "observations": "Builder2015completed photos: stepped bluefacades,large white exposed rearcore,crownlouvres,bridgeandcanopy ovalholes."
+        },
+        {
+          "url": "https://news.samsungcnt.com/en/features/engineering-construction/2017-05-bridging-the-sky-samsung-ct-pioneering-the-future-of-the-skybridge/",
+          "observations": "Builder2017reports10156F/201m,10242F/166m,10336F/150m; height differs frompublishedarchitectdrawing,so not silently treatedas equivalentdatum."
+        },
+        {
+          "url": "https://data.seoul.go.kr/dataList/OA-22424/S/1/datasetView.do",
+          "observations": "Official Seoul register retained2026-09-08 CSV: exactparcel436 confirms10156F205households184m,10242F142households138.7m,10336F113households120.7m. Roof elevations equal KIRA drawings; architectural top screen separately drawn."
+        }
+      ],
+      "review": {
+        "siteId": "raemian-caelitus",
+        "status": "visually-reviewed",
+        "reviewer": "root (independent from Caelitus/Trimage author); civic_modeling independently reviewed Gratte-ciel",
+        "date": "2026-09-21",
+        "method": "Direct source photograph and plan comparison with revised Blender renders, frozen export and editable scene hashes. Approval is scoped to visible residential exteriors with the listed limitations.",
+        "comparisons": [
+          "Root independently opened HArchitecture completed south-facing photograph h-03 and AURUM completed rear photograph aurum-03 against revised south/northwest render views. Verified 101/103/102 skyline order, three unequal heights, separate stepped rear wings, stronger white primary mullions, narrower secondary window frames and slotted stone rear cores.",
+          "Root rejected initial thin piloti and plain side panels. Revised Blender views show wall-like stone piers, 17F bridge spans and louvers, two oval canopy holes and simplified roof garden. Published AURUM 26/27 plans and elevations identify the three tower locations and height components.",
+          "Exact-parcel Seoul building register records match 56/42/36 floors, 205/142/113 households and 184/138.7/120.7m roof elevations; published elevation crowns add 12/8.4/8.4m. Their 196/147.1/129.1m modeled tops are explicit drawing interpretations."
+        ],
+        "limits": [
+          "2015 completed photos and published drawings, not an as-built 2026 survey.",
+          "Concealed surfaces, window member thickness and rear-wing setbacks remain photo-proportion estimates.",
+          "Shared garden details and interiors are simplified or omitted; no exact landscape completion claim.",
+          "Register roof height and builder article height use unresolved differing definitions; conflicts retained in reference note."
+        ],
+        "renders": [
+          "docs/model-audit/renders/raemian-caelitus/southwest_completed_photo.png",
+          "docs/model-audit/renders/raemian-caelitus/northwest_rear_steps.png",
+          "docs/model-audit/renders/raemian-caelitus/east_completed_photo.png",
+          "docs/model-audit/renders/raemian-caelitus/roof_and_bridges.png",
+          "docs/model-audit/renders/raemian-caelitus/bridge_and_piloti.png",
+          "docs/model-audit/renders/raemian-caelitus/podium_canopy_ovals.png"
+        ],
+        "renderSha256": {
+          "docs/model-audit/renders/raemian-caelitus/southwest_completed_photo.png": "5e0d1f277e3fe9136d0dffe28605486799713df636385084eee4b531dc62c7f7",
+          "docs/model-audit/renders/raemian-caelitus/northwest_rear_steps.png": "8f119093b0664ac4e8fab409f949c72ce2b98df08a786d2f655a592c21563796",
+          "docs/model-audit/renders/raemian-caelitus/east_completed_photo.png": "17de5f028162a0f984a67ee6b7a336de85237228efbd4cd97fc283788a8edcff",
+          "docs/model-audit/renders/raemian-caelitus/roof_and_bridges.png": "27450bd987c40accac3825c32fe83f6c6cf2c72dcb8842e5d512c3c4f55b8dfd",
+          "docs/model-audit/renders/raemian-caelitus/bridge_and_piloti.png": "31578c6a5c5ba8ff489a5ff6bf29be38e5ade00795569ab39793bebfe62f07a5",
+          "docs/model-audit/renders/raemian-caelitus/podium_canopy_ovals.png": "0a53b9b2f81ff5a95cf615292f175075c34ec47f86f396428a1bd4e04f84e974"
+        },
+        "reviewedInputs": {
+          "bespoke-raemian-caelitus-101.glb": "189a5ee22c938b96cade4ed1b5e767dc27e1cab5964006fe1ea27f00a3bd53c8",
+          "raemian-caelitus.blend": "06fd2a803c0844ceb62ab9edb44b9dae9f953d5848ac16e874ba4582e972a4d6",
+          "bespoke-raemian-caelitus-102.glb": "eb65eb39f1905a20235f0b6388ed8ac70fd170efb1546fb35c6870f9fee3f86b",
+          "bespoke-raemian-caelitus-103.glb": "a9851b3b6839682c994ed772c9ed79ed460b87a60ca38bb64892075ab75f32c1"
+        }
+      },
+      "assets": [
+        {
+          "id": "bespoke-raemian-caelitus-101",
+          "sourceSha256": "189a5ee22c938b96cade4ed1b5e767dc27e1cab5964006fe1ea27f00a3bd53c8",
+          "sha256": "62b73159ca9ef5fe15fd250aa467aca3f7108fd0839b20363a06f48b67433111",
+          "bytes": 6639136,
+          "dimensions": [
+            41.55666732788086,
+            196,
+            40.712982177734375
+          ],
+          "min": [
+            -20.168731689453125,
+            0,
+            -21.14905548095703
+          ],
+          "max": [
+            21.387935638427734,
+            196,
+            19.563926696777344
+          ],
+          "triangles": 118960,
+          "components": [
+            {
+              "name": "Caelitus_101_riverfront_notched_pair_occupied_mass",
+              "triangles": 140
+            },
+            {
+              "name": "Caelitus_101_riverfront_notched_pair_roof_slab",
+              "triangles": 140
+            },
+            {
+              "name": "Caelitus_101_riverfront_notched_pair_silver_mullions",
+              "triangles": 684
+            },
+            {
+              "name": "Caelitus_101_riverfront_notched_pair_blue_spandrels",
+              "triangles": 7260
+            },
+            {
+              "name": "Caelitus_101_riverfront_notched_pair_silver_transoms",
+              "triangles": 14520
+            },
+            {
+              "name": "Caelitus_101_riverfront_notched_pair_opening_sashes",
+              "triangles": 11448
+            },
+            {
+              "name": "Caelitus_101_riverfront_notched_pair_sash_headers",
+              "triangles": 11448
+            },
+            {
+              "name": "Caelitus_101_riverfront_notched_pair_bay_edge_fins",
+              "triangles": 264
+            },
+            {
+              "name": "Caelitus_101_riverfront_notched_pair_solid_bay_returns",
+              "triangles": 264
+            },
+            {
+              "name": "Caelitus_101_northwest_49storey_arm_occupied_mass",
+              "triangles": 60
+            },
+            {
+              "name": "Caelitus_101_northwest_49storey_arm_roof_slab",
+              "triangles": 60
+            },
+            {
+              "name": "Caelitus_101_northwest_49storey_arm_silver_mullions",
+              "triangles": 324
+            },
+            {
+              "name": "Caelitus_101_northwest_49storey_arm_blue_spandrels",
+              "triangles": 2880
+            },
+            {
+              "name": "Caelitus_101_northwest_49storey_arm_silver_transoms",
+              "triangles": 5760
+            },
+            {
+              "name": "Caelitus_101_northwest_49storey_arm_opening_sashes",
+              "triangles": 4416
+            },
+            {
+              "name": "Caelitus_101_northwest_49storey_arm_sash_headers",
+              "triangles": 4416
+            },
+            {
+              "name": "Caelitus_101_northwest_49storey_arm_bay_edge_fins",
+              "triangles": 120
+            },
+            {
+              "name": "Caelitus_101_northwest_49storey_arm_solid_bay_returns",
+              "triangles": 84
+            },
+            {
+              "name": "Caelitus_101_northeast_56storey_arm_occupied_mass",
+              "triangles": 84
+            },
+            {
+              "name": "Caelitus_101_northeast_56storey_arm_roof_slab",
+              "triangles": 84
+            },
+            {
+              "name": "Caelitus_101_northeast_56storey_arm_silver_mullions",
+              "triangles": 576
+            },
+            {
+              "name": "Caelitus_101_northeast_56storey_arm_blue_spandrels",
+              "triangles": 7260
+            },
+            {
+              "name": "Caelitus_101_northeast_56storey_arm_silver_transoms",
+              "triangles": 14520
+            },
+            {
+              "name": "Caelitus_101_northeast_56storey_arm_bay_edge_fins",
+              "triangles": 264
+            },
+            {
+              "name": "Caelitus_101_northeast_56storey_arm_opening_sashes",
+              "triangles": 7632
+            },
+            {
+              "name": "Caelitus_101_northeast_56storey_arm_sash_headers",
+              "triangles": 7632
+            },
+            {
+              "name": "Caelitus_101_northeast_56storey_arm_solid_bay_returns",
+              "triangles": 120
+            },
+            {
+              "name": "Caelitus_101_four_primary_riverfront_stone_axes",
+              "triangles": 48
+            },
+            {
+              "name": "Caelitus_101_deep_central_slot_sidewalls",
+              "triangles": 24
+            },
+            {
+              "name": "Caelitus_101_exposed_rear_core_cladding",
+              "triangles": 12
+            },
+            {
+              "name": "Caelitus_101_rear_core_slot_transoms",
+              "triangles": 696
+            },
+            {
+              "name": "Caelitus_101_rear_cladding_vertical_panel_joints",
+              "triangles": 228
+            },
+            {
+              "name": "Caelitus_101_rear_cladding_horizontal_panel_joints",
+              "triangles": 1392
+            },
+            {
+              "name": "Caelitus_101_central_recess_backwall",
+              "triangles": 12
+            },
+            {
+              "name": "Caelitus_101_central_recess_stair_louvres",
+              "triangles": 2448
+            },
+            {
+              "name": "Caelitus_101_open_crown_verticals",
+              "triangles": 1680
+            },
+            {
+              "name": "Caelitus_101_open_crown_louvres",
+              "triangles": 6780
+            },
+            {
+              "name": "Caelitus_101_crown_blue_screen",
+              "triangles": 420
+            },
+            {
+              "name": "Caelitus_101_recessed_roof_plant",
+              "triangles": 12
+            },
+            {
+              "name": "Caelitus_101_helipad_roof",
+              "triangles": 12
+            },
+            {
+              "name": "Caelitus_101_helipad_ring",
+              "triangles": 768
+            },
+            {
+              "name": "Caelitus_101_helipad_H",
+              "triangles": 36
+            },
+            {
+              "name": "Caelitus_101_NW_roof_guard",
+              "triangles": 192
+            },
+            {
+              "name": "Caelitus_101_NE_roof_guard",
+              "triangles": 264
+            },
+            {
+              "name": "Caelitus_101_piloti_stone_wall_piers",
+              "triangles": 288
+            },
+            {
+              "name": "Caelitus_101_ground_elevator_core",
+              "triangles": 12
+            },
+            {
+              "name": "Caelitus_101_ground_lounge_glazing",
+              "triangles": 12
+            },
+            {
+              "name": "Caelitus_101_ground_lounge_mullions",
+              "triangles": 144
+            },
+            {
+              "name": "Caelitus_101_ground_lounge_transoms",
+              "triangles": 48
+            },
+            {
+              "name": "Caelitus_101_17F_community_glass",
+              "triangles": 20
+            },
+            {
+              "name": "Caelitus_101_17F_community_lower_frame",
+              "triangles": 20
+            },
+            {
+              "name": "Caelitus_101_17F_community_upper_frame",
+              "triangles": 20
+            },
+            {
+              "name": "Caelitus_101_17F_community_window_frames",
+              "triangles": 912
+            }
+          ]
+        },
+        {
+          "id": "bespoke-raemian-caelitus-102",
+          "sourceSha256": "eb65eb39f1905a20235f0b6388ed8ac70fd170efb1546fb35c6870f9fee3f86b",
+          "sha256": "15bfb461576d7ddf3aeec9a9db6f95d68b4c60a6ce7e05892df65eb5e38e0567",
+          "bytes": 4468048,
+          "dimensions": [
+            42.74795150756836,
+            147.10000610351562,
+            41.24838829040527
+          ],
+          "min": [
+            -20.357017517089844,
+            0,
+            -21.487138748168945
+          ],
+          "max": [
+            22.390933990478516,
+            147.10000610351562,
+            19.761249542236328
+          ],
+          "triangles": 79936,
+          "components": [
+            {
+              "name": "Caelitus_102_riverfront_notched_pair_occupied_mass",
+              "triangles": 140
+            },
+            {
+              "name": "Caelitus_102_riverfront_notched_pair_roof_slab",
+              "triangles": 140
+            },
+            {
+              "name": "Caelitus_102_riverfront_notched_pair_silver_mullions",
+              "triangles": 684
+            },
+            {
+              "name": "Caelitus_102_riverfront_notched_pair_blue_spandrels",
+              "triangles": 5412
+            },
+            {
+              "name": "Caelitus_102_riverfront_notched_pair_silver_transoms",
+              "triangles": 10824
+            },
+            {
+              "name": "Caelitus_102_riverfront_notched_pair_opening_sashes",
+              "triangles": 8424
+            },
+            {
+              "name": "Caelitus_102_riverfront_notched_pair_sash_headers",
+              "triangles": 8424
+            },
+            {
+              "name": "Caelitus_102_riverfront_notched_pair_bay_edge_fins",
+              "triangles": 264
+            },
+            {
+              "name": "Caelitus_102_riverfront_notched_pair_solid_bay_returns",
+              "triangles": 264
+            },
+            {
+              "name": "Caelitus_102_northwest_38storey_arm_occupied_mass",
+              "triangles": 60
+            },
+            {
+              "name": "Caelitus_102_northwest_38storey_arm_roof_slab",
+              "triangles": 60
+            },
+            {
+              "name": "Caelitus_102_northwest_38storey_arm_silver_mullions",
+              "triangles": 324
+            },
+            {
+              "name": "Caelitus_102_northwest_38storey_arm_blue_spandrels",
+              "triangles": 2220
+            },
+            {
+              "name": "Caelitus_102_northwest_38storey_arm_silver_transoms",
+              "triangles": 4440
+            },
+            {
+              "name": "Caelitus_102_northwest_38storey_arm_opening_sashes",
+              "triangles": 3360
+            },
+            {
+              "name": "Caelitus_102_northwest_38storey_arm_sash_headers",
+              "triangles": 3360
+            },
+            {
+              "name": "Caelitus_102_northwest_38storey_arm_bay_edge_fins",
+              "triangles": 120
+            },
+            {
+              "name": "Caelitus_102_northwest_38storey_arm_solid_bay_returns",
+              "triangles": 84
+            },
+            {
+              "name": "Caelitus_102_northeast_28storey_arm_occupied_mass",
+              "triangles": 84
+            },
+            {
+              "name": "Caelitus_102_northeast_28storey_arm_roof_slab",
+              "triangles": 84
+            },
+            {
+              "name": "Caelitus_102_northeast_28storey_arm_silver_mullions",
+              "triangles": 576
+            },
+            {
+              "name": "Caelitus_102_northeast_28storey_arm_blue_spandrels",
+              "triangles": 3564
+            },
+            {
+              "name": "Caelitus_102_northeast_28storey_arm_silver_transoms",
+              "triangles": 7128
+            },
+            {
+              "name": "Caelitus_102_northeast_28storey_arm_bay_edge_fins",
+              "triangles": 264
+            },
+            {
+              "name": "Caelitus_102_northeast_28storey_arm_opening_sashes",
+              "triangles": 3600
+            },
+            {
+              "name": "Caelitus_102_northeast_28storey_arm_sash_headers",
+              "triangles": 3600
+            },
+            {
+              "name": "Caelitus_102_northeast_28storey_arm_solid_bay_returns",
+              "triangles": 120
+            },
+            {
+              "name": "Caelitus_102_four_primary_riverfront_stone_axes",
+              "triangles": 48
+            },
+            {
+              "name": "Caelitus_102_deep_central_slot_sidewalls",
+              "triangles": 24
+            },
+            {
+              "name": "Caelitus_102_NW_exposed_internal_wall_above_NE",
+              "triangles": 12
+            },
+            {
+              "name": "Caelitus_102_exposed_rear_core_cladding",
+              "triangles": 12
+            },
+            {
+              "name": "Caelitus_102_rear_core_narrow_slot",
+              "triangles": 12
+            },
+            {
+              "name": "Caelitus_102_rear_core_slot_transoms",
+              "triangles": 504
+            },
+            {
+              "name": "Caelitus_102_rear_cladding_vertical_panel_joints",
+              "triangles": 228
+            },
+            {
+              "name": "Caelitus_102_rear_cladding_horizontal_panel_joints",
+              "triangles": 1032
+            },
+            {
+              "name": "Caelitus_102_rear_core_slot_glazing",
+              "triangles": 12
+            },
+            {
+              "name": "Caelitus_102_rear_slot_horizontal_frames",
+              "triangles": 96
+            },
+            {
+              "name": "Caelitus_102_central_recess_backwall",
+              "triangles": 12
+            },
+            {
+              "name": "Caelitus_102_central_recess_stair_louvres",
+              "triangles": 1848
+            },
+            {
+              "name": "Caelitus_102_open_crown_verticals",
+              "triangles": 1680
+            },
+            {
+              "name": "Caelitus_102_open_crown_louvres",
+              "triangles": 4536
+            },
+            {
+              "name": "Caelitus_102_crown_blue_screen",
+              "triangles": 420
+            },
+            {
+              "name": "Caelitus_102_recessed_roof_plant",
+              "triangles": 12
+            },
+            {
+              "name": "Caelitus_102_helipad_roof",
+              "triangles": 12
+            },
+            {
+              "name": "Caelitus_102_NW_roof_guard",
+              "triangles": 192
+            },
+            {
+              "name": "Caelitus_102_NE_roof_guard",
+              "triangles": 264
+            },
+            {
+              "name": "Caelitus_102_piloti_stone_wall_piers",
+              "triangles": 288
+            },
+            {
+              "name": "Caelitus_102_ground_elevator_core",
+              "triangles": 12
+            },
+            {
+              "name": "Caelitus_102_ground_lounge_glazing",
+              "triangles": 12
+            },
+            {
+              "name": "Caelitus_102_ground_lounge_mullions",
+              "triangles": 144
+            },
+            {
+              "name": "Caelitus_102_ground_lounge_transoms",
+              "triangles": 48
+            },
+            {
+              "name": "Caelitus_102_17F_community_glass",
+              "triangles": 12
+            },
+            {
+              "name": "Caelitus_102_17F_community_lower_frame",
+              "triangles": 12
+            },
+            {
+              "name": "Caelitus_102_17F_community_upper_frame",
+              "triangles": 12
+            },
+            {
+              "name": "Caelitus_102_17F_community_window_frames",
+              "triangles": 504
+            },
+            {
+              "name": "Caelitus_102_17F_rear_plant_louvres",
+              "triangles": 312
+            }
+          ]
+        },
+        {
+          "id": "bespoke-raemian-caelitus-103",
+          "sourceSha256": "a9851b3b6839682c994ed772c9ed79ed460b87a60ca38bb64892075ab75f32c1",
+          "sha256": "26bb52bebc0510b232556d44a2e712a5d57be85ab4e80273eca2f92286cba573",
+          "bytes": 4145992,
+          "dimensions": [
+            132.34262084960938,
+            129.10000610351562,
+            121.72537231445312
+          ],
+          "min": [
+            -70.06826782226562,
+            0,
+            -21.65802764892578
+          ],
+          "max": [
+            62.27435302734375,
+            129.10000610351562,
+            100.06734466552734
+          ],
+          "triangles": 73984,
+          "components": [
+            {
+              "name": "Caelitus_103_riverfront_notched_pair_occupied_mass",
+              "triangles": 140
+            },
+            {
+              "name": "Caelitus_103_riverfront_notched_pair_roof_slab",
+              "triangles": 140
+            },
+            {
+              "name": "Caelitus_103_riverfront_notched_pair_silver_mullions",
+              "triangles": 684
+            },
+            {
+              "name": "Caelitus_103_riverfront_notched_pair_blue_spandrels",
+              "triangles": 4620
+            },
+            {
+              "name": "Caelitus_103_riverfront_notched_pair_silver_transoms",
+              "triangles": 9240
+            },
+            {
+              "name": "Caelitus_103_riverfront_notched_pair_opening_sashes",
+              "triangles": 7128
+            },
+            {
+              "name": "Caelitus_103_riverfront_notched_pair_sash_headers",
+              "triangles": 7128
+            },
+            {
+              "name": "Caelitus_103_riverfront_notched_pair_bay_edge_fins",
+              "triangles": 264
+            },
+            {
+              "name": "Caelitus_103_riverfront_notched_pair_solid_bay_returns",
+              "triangles": 264
+            },
+            {
+              "name": "Caelitus_103_northwest_29storey_arm_occupied_mass",
+              "triangles": 60
+            },
+            {
+              "name": "Caelitus_103_northwest_29storey_arm_roof_slab",
+              "triangles": 60
+            },
+            {
+              "name": "Caelitus_103_northwest_29storey_arm_silver_mullions",
+              "triangles": 324
+            },
+            {
+              "name": "Caelitus_103_northwest_29storey_arm_blue_spandrels",
+              "triangles": 1680
+            },
+            {
+              "name": "Caelitus_103_northwest_29storey_arm_silver_transoms",
+              "triangles": 3360
+            },
+            {
+              "name": "Caelitus_103_northwest_29storey_arm_opening_sashes",
+              "triangles": 2496
+            },
+            {
+              "name": "Caelitus_103_northwest_29storey_arm_sash_headers",
+              "triangles": 2496
+            },
+            {
+              "name": "Caelitus_103_northwest_29storey_arm_bay_edge_fins",
+              "triangles": 120
+            },
+            {
+              "name": "Caelitus_103_northwest_29storey_arm_solid_bay_returns",
+              "triangles": 84
+            },
+            {
+              "name": "Caelitus_103_northeast_22storey_arm_occupied_mass",
+              "triangles": 84
+            },
+            {
+              "name": "Caelitus_103_northeast_22storey_arm_roof_slab",
+              "triangles": 84
+            },
+            {
+              "name": "Caelitus_103_northeast_22storey_arm_silver_mullions",
+              "triangles": 576
+            },
+            {
+              "name": "Caelitus_103_northeast_22storey_arm_blue_spandrels",
+              "triangles": 2772
+            },
+            {
+              "name": "Caelitus_103_northeast_22storey_arm_silver_transoms",
+              "triangles": 5544
+            },
+            {
+              "name": "Caelitus_103_northeast_22storey_arm_bay_edge_fins",
+              "triangles": 264
+            },
+            {
+              "name": "Caelitus_103_northeast_22storey_arm_opening_sashes",
+              "triangles": 2736
+            },
+            {
+              "name": "Caelitus_103_northeast_22storey_arm_sash_headers",
+              "triangles": 2736
+            },
+            {
+              "name": "Caelitus_103_northeast_22storey_arm_solid_bay_returns",
+              "triangles": 120
+            },
+            {
+              "name": "Caelitus_103_four_primary_riverfront_stone_axes",
+              "triangles": 48
+            },
+            {
+              "name": "Caelitus_103_deep_central_slot_sidewalls",
+              "triangles": 24
+            },
+            {
+              "name": "Caelitus_103_NW_exposed_internal_wall_above_NE",
+              "triangles": 12
+            },
+            {
+              "name": "Caelitus_103_exposed_rear_core_cladding",
+              "triangles": 12
+            },
+            {
+              "name": "Caelitus_103_rear_core_narrow_slot",
+              "triangles": 12
+            },
+            {
+              "name": "Caelitus_103_rear_core_slot_transoms",
+              "triangles": 432
+            },
+            {
+              "name": "Caelitus_103_rear_cladding_vertical_panel_joints",
+              "triangles": 228
+            },
+            {
+              "name": "Caelitus_103_rear_cladding_horizontal_panel_joints",
+              "triangles": 888
+            },
+            {
+              "name": "Caelitus_103_rear_core_slot_glazing",
+              "triangles": 12
+            },
+            {
+              "name": "Caelitus_103_rear_slot_horizontal_frames",
+              "triangles": 168
+            },
+            {
+              "name": "Caelitus_103_central_recess_backwall",
+              "triangles": 12
+            },
+            {
+              "name": "Caelitus_103_central_recess_stair_louvres",
+              "triangles": 1608
+            },
+            {
+              "name": "Caelitus_103_open_crown_verticals",
+              "triangles": 1680
+            },
+            {
+              "name": "Caelitus_103_open_crown_louvres",
+              "triangles": 4536
+            },
+            {
+              "name": "Caelitus_103_crown_blue_screen",
+              "triangles": 420
+            },
+            {
+              "name": "Caelitus_103_recessed_roof_plant",
+              "triangles": 12
+            },
+            {
+              "name": "Caelitus_103_helipad_roof",
+              "triangles": 12
+            },
+            {
+              "name": "Caelitus_103_NW_roof_guard",
+              "triangles": 192
+            },
+            {
+              "name": "Caelitus_103_NE_roof_guard",
+              "triangles": 264
+            },
+            {
+              "name": "Caelitus_103_piloti_stone_wall_piers",
+              "triangles": 288
+            },
+            {
+              "name": "Caelitus_103_ground_elevator_core",
+              "triangles": 12
+            },
+            {
+              "name": "Caelitus_103_ground_lounge_glazing",
+              "triangles": 12
+            },
+            {
+              "name": "Caelitus_103_ground_lounge_mullions",
+              "triangles": 144
+            },
+            {
+              "name": "Caelitus_103_ground_lounge_transoms",
+              "triangles": 48
+            },
+            {
+              "name": "Caelitus_103_17F_community_glass",
+              "triangles": 20
+            },
+            {
+              "name": "Caelitus_103_17F_community_lower_frame",
+              "triangles": 20
+            },
+            {
+              "name": "Caelitus_103_17F_community_upper_frame",
+              "triangles": 20
+            },
+            {
+              "name": "Caelitus_103_17F_community_window_frames",
+              "triangles": 312
+            },
+            {
+              "name": "Caelitus_103_103_17F_readingroom_front_frames",
+              "triangles": 48
+            },
+            {
+              "name": "Caelitus_103_103_17F_NE_dark_vent_backing",
+              "triangles": 24
+            },
+            {
+              "name": "Caelitus_103_103_17F_NE_horizontal_vent_blades",
+              "triangles": 192
+            },
+            {
+              "name": "Caelitus_103_103_17F_NE_white_pavilion_frame",
+              "triangles": 24
+            },
+            {
+              "name": "Caelitus_103_103_17F_NE_white_pavilion_jambs",
+              "triangles": 24
+            },
+            {
+              "name": "Caelitus_103_17F_rear_plant_louvres",
+              "triangles": 312
+            },
+            {
+              "name": "Caelitus_103_bridge_101_to_103_soffit",
+              "triangles": 12
+            },
+            {
+              "name": "Caelitus_103_bridge_101_to_103_roof",
+              "triangles": 12
+            },
+            {
+              "name": "Caelitus_103_bridge_101_to_103_blue_glazing",
+              "triangles": 24
+            },
+            {
+              "name": "Caelitus_103_bridge_101_to_103_vertical_frames",
+              "triangles": 744
+            },
+            {
+              "name": "Caelitus_103_bridge_101_to_103_transoms",
+              "triangles": 72
+            },
+            {
+              "name": "Caelitus_103_bridge_101_to_103_underside_panels",
+              "triangles": 144
+            },
+            {
+              "name": "Caelitus_103_bridge_103_to_102_soffit",
+              "triangles": 12
+            },
+            {
+              "name": "Caelitus_103_bridge_103_to_102_roof",
+              "triangles": 12
+            },
+            {
+              "name": "Caelitus_103_bridge_103_to_102_blue_glazing",
+              "triangles": 24
+            },
+            {
+              "name": "Caelitus_103_bridge_103_to_102_vertical_frames",
+              "triangles": 672
+            },
+            {
+              "name": "Caelitus_103_bridge_103_to_102_transoms",
+              "triangles": 72
+            },
+            {
+              "name": "Caelitus_103_bridge_103_to_102_underside_panels",
+              "triangles": 120
+            },
+            {
+              "name": "Caelitus_103_west_community_podium",
+              "triangles": 72
+            },
+            {
+              "name": "Caelitus_103_west_podium_metal_fascia",
+              "triangles": 72
+            },
+            {
+              "name": "Caelitus_103_west_podium_wood_soffit",
+              "triangles": 72
+            },
+            {
+              "name": "Caelitus_103_west_podium_roof_planting",
+              "triangles": 72
+            },
+            {
+              "name": "Caelitus_103_podium_glazing_frames",
+              "triangles": 2028
+            },
+            {
+              "name": "Caelitus_103_podium_window_crossbars",
+              "triangles": 228
+            },
+            {
+              "name": "Caelitus_103_roof_garden_straight_walk",
+              "triangles": 12
+            },
+            {
+              "name": "Caelitus_103_roof_garden_wood_deck",
+              "triangles": 12
+            },
+            {
+              "name": "Caelitus_103_roof_garden_pergola_posts",
+              "triangles": 48
+            },
+            {
+              "name": "Caelitus_103_roof_garden_pergola_beams",
+              "triangles": 48
+            },
+            {
+              "name": "Caelitus_103_roof_garden_pergola_slats",
+              "triangles": 108
+            },
+            {
+              "name": "Caelitus_103_roof_garden_raised_bed_wood_edges",
+              "triangles": 24
+            },
+            {
+              "name": "Caelitus_103_podium_exterior_roof_stair",
+              "triangles": 360
+            },
+            {
+              "name": "Caelitus_103_canopy_with_two_oval_openings",
+              "triangles": 576
+            },
+            {
+              "name": "Caelitus_103_canopy_wood_soffit_with_two_oval_openings",
+              "triangles": 576
+            },
+            {
+              "name": "Caelitus_103_canopy_round_columns",
+              "triangles": 480
+            }
+          ]
+        }
+      ],
+      "mcpEvidence": [
+        {
+          "path": "docs/model-audit/mcp/raemian-caelitus/build.json",
+          "sha256": "d05367ec42cce424b577f1c71be64eb50ec5acd2515d6864997ed8a2a6675205",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0",
+          "blender": "4.5.11 LTS",
+          "port": 9878
+        },
+        {
+          "path": "docs/model-audit/mcp/raemian-caelitus/validation.json",
+          "sha256": "a34954dfb3ba1e002796d6fd1061e3a2d413b47a1efe368863cf69563e73f649",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0",
+          "blender": "4.5.11 LTS",
+          "port": 9878
+        },
+        {
+          "path": "docs/model-audit/mcp/raemian-caelitus/render.json",
+          "sha256": "71e7e6bc5afeabb91da9a3329d0aad2f218b47a7b6afa0806e447aebc669e53b",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0",
+          "blender": "4.5.11 LTS",
+          "port": 9878
+        }
+      ],
+      "recipeInputs": [
+        {
+          "path": "modeling/bespoke/raemian-caelitus/authored-input.json",
+          "sha256": "8ddc7cfeff8793f5db3d5a34a3f74f4c571d6f5d4da5d0d21b21b625ea50cdf5"
+        },
+        {
+          "path": "modeling/bespoke/raemian-caelitus/building-register-rows.json",
+          "sha256": "0089595cc04fe6571a52b6fffd5f5d852432b8b513750484dc6dc2d1806dfe6f"
+        }
+      ]
+    },
+    "trimage": {
+      "sources": [
+        {
+          "url": "https://data.seoul.go.kr/dataList/OA-22424/S/1/datasetView.do",
+          "observations": "Official Seoul building-register title CSV downloaded2026-09-08, SHA256 ba00150bbc9b2343fd2ba2fbaaa0c723df7d5dabbbd820345a405e9aaa5162aa; exact Seongdong/Seongsu1/718-0+Wangsimni-ro16+number match.101157.1m47F143households;102153.6m46F143;103144.35m45F189;104150.45m47F213. All approved2017; raw rows/hash retained."
+        },
+        {
+          "url": "https://www.nocktown.com/web-front/trimage/",
+          "observations": "Current official resident site for Wangsimni-ro16,688households in public initial state. Supplies completed east/aerial reference image, date unspecified, uploaded2024-03."
+        },
+        {
+          "url": "https://d1uew7hepkc3d0.cloudfront.net/lifeknock/upload/2024/03/G2rBj4MEbbbpmKudUTEhrIdaePZITh.png",
+          "observations": "Resident-site photograph directly inspected.102east side has a broad pale narrow-window core above a low curved glass wing; rear104has a flat glass facade, pale vertical edges and a crown stepped behind the main face."
+        },
+        {
+          "url": "http://www.nowarch.com/works/view?idx=48",
+          "observations": "Original architect NOW project48, completed2017 photograph. Page retains an earlier48F design figure; not substituted for current source floor counts."
+        },
+        {
+          "url": "http://www.nowarch.com/uploads/media/w_m_tri.jpg",
+          "observations": "Completed river/southwest photograph, date unspecified. Four staggered towers: rounded horizontal white ribbons on101/102, flat glass and stone spines on103/104; substantial louver crowns and open refuge bands. Manually inspected."
+        },
+        {
+          "url": "https://www.skyedaily.com/news/news_view.html?ID=89974",
+          "observations": "First-party Skyedaily photograph credited to the publication, published2019-09-07. Opposite courtyard faces show broad pale punched-window core walls and narrower staggered glass wings. Exact photographer position is not surveyed."
+        },
+        {
+          "url": "https://pds.skyedaily.com/news_data/20190906095150_doydecsc.jpg",
+          "observations": "Actual completed photograph inspected; individual face-to-source mapping is inferred from the four source footprints and river view, not a surveyed elevation."
+        },
+        {
+          "url": "https://www.doosanenerbility.com/heavy_file/management/data/overview_result/report/2017_report_kr.pdf",
+          "observations": "Contractor2017 report PDF13, printed20–21, actual completed exterior photo bottom right and green-building certification2017-04-06. Small image supports design, not dimension measurement."
+        },
+        {
+          "url": "https://pluspp.co.kr/result/result_highend.asp",
+          "observations": "Project participant official performance record identifies688households, B3–47F, Seoul Forest Doosan Trimage."
+        },
+        {
+          "url": "https://realty.chosun.com/m/article.amp.html?contid=2024032801176",
+          "observations": "2024-03-28 firsthand entrance photo by reporter Kim Seo-gyeong: long shallow grey stone portal, deep opening, sloping outer end. Gate location/dimensions not yet surveyed; separate feature not exported until geographically established."
+        },
+        {
+          "url": "https://image.chosun.com/sitedata/image/202403/28/2024032801172_1.jpg",
+          "observations": "Entrance photograph directly inspected. No image is distributed with the GLB or editable blend."
+        },
+        {
+          "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "observations": "Existing Seoul apartment inventory A10026988 identifies688households and4residential buildings. Superseded model apt-a10026988 is a4tower compound."
+        }
+      ],
+      "review": {
+        "siteId": "trimage",
+        "status": "visually-reviewed",
+        "reviewer": "root (independent from Caelitus/Trimage author); civic_modeling independently reviewed Gratte-ciel",
+        "date": "2026-09-21",
+        "method": "Direct source photograph and plan comparison with revised Blender renders, frozen export and editable scene hashes. Approval is scoped to visible residential exteriors with the listed limitations.",
+        "comparisons": [
+          "Root independently opened NOW Architects completed river photograph now-photo-2 and current resident operator aerial resident-background beside revised river and east render views. Compared four distinct stepped silhouettes, curved horizontal glass wings on 101/102, flat curtain walls on 103/104, stone rear cores and upper louver crowns.",
+          "Initial 101 tall inner wing incorrectly had a blank stone face. Root withheld approval; revised v4 restores the continuing curved glass ribbons on the exposed connection face while preserving the broad actual eastern stone core confirmed by operator aerial.",
+          "Open mechanical bands were too tall and sparse in the first candidate; revised bands and piers were inspected at closer scale. Exact numbered register records confirm four buildings, 47/46/45/47 floors, 143/143/189/213 households, sum688, and registered heights157.1/153.6/144.35/150.45m."
+        ],
+        "limits": [
+          "Legal registered height is conservatively used as a total envelope; unmeasured rooftop screens are contained within it. This is not a confirmed architectural top.",
+          "CTBUH annual report older height conflict remains recorded; no unexplained average or arbitrary 40m extension.",
+          "Concealed window placement and proportions are photo estimates. Separate gate georeference is unresolved and not modeled; landscaping and underground interiors are excluded."
+        ],
+        "renders": [
+          "docs/model-audit/renders/trimage/review-river-source-match.png",
+          "docs/model-audit/renders/trimage/review-east-oblique.png",
+          "docs/model-audit/renders/trimage/review-101-ribbons.png",
+          "docs/model-audit/renders/trimage/review-103-stone-crown.png",
+          "docs/model-audit/renders/trimage/review-roof-plan.png"
+        ],
+        "renderSha256": {
+          "docs/model-audit/renders/trimage/review-river-source-match.png": "e03f3a64abf11861fdbe299600226ddf41d0d8f6284dd69650e271eb786476c5",
+          "docs/model-audit/renders/trimage/review-east-oblique.png": "c7041cc5325004ee3872482bf418afbf7fcec0968c8ff4ee64cca9f5d285c6b8",
+          "docs/model-audit/renders/trimage/review-101-ribbons.png": "d0d6e558f1ef46c7ac0917ba768c2afb89642751aecd9ed2453bd807e5a70de4",
+          "docs/model-audit/renders/trimage/review-103-stone-crown.png": "d740c883d3211dab141b47b022b8aed1f37688758fea384d890c86d27ced1b80",
+          "docs/model-audit/renders/trimage/review-roof-plan.png": "3f0e99dd05445433bc33d14d6de46866d991d83d6fd311641557757183450a65"
+        },
+        "reviewedInputs": {
+          "bespoke-trimage-101.glb": "7b5c3b440ede4d16f21b2cd2e3ed7e3c12c4e40fc473dcf208ff84b7105c1cbc",
+          "trimage.blend": "b417594dab4ea04b96c2b424c51235acc8ceef76604e72d61efab7c24bfa65dd",
+          "bespoke-trimage-102.glb": "2af2e15be630c782b0c25598fb5f821d11c9d0b82dd37cf67f9620813ce13aba",
+          "bespoke-trimage-103.glb": "24c2b0dae80d612a29eaffe1b6d5ba0d6529194340df09af54920493c40262d4",
+          "bespoke-trimage-104.glb": "c3c3b0886b8146f02e732b7fa3b922b31b1024eb0dc52096af0b464c683808e2"
+        }
+      },
+      "assets": [
+        {
+          "id": "bespoke-trimage-101",
+          "sourceSha256": "7b5c3b440ede4d16f21b2cd2e3ed7e3c12c4e40fc473dcf208ff84b7105c1cbc",
+          "sha256": "87b2112d8b4111bd446c6248d1d01a9d2364c78e57397fcf909d8e320a84a7e0",
+          "bytes": 5409396,
+          "dimensions": [
+            46.11300468444824,
+            157.10000610351562,
+            36.659027099609375
+          ],
+          "min": [
+            -23.154708862304688,
+            0,
+            -18.32648468017578
+          ],
+          "max": [
+            22.958295822143555,
+            157.10000610351562,
+            18.332542419433594
+          ],
+          "triangles": 82808,
+          "components": [
+            {
+              "name": "101_stepped_wing_masses003",
+              "triangles": 1024
+            },
+            {
+              "name": "101_stepped_wing_masses003_1",
+              "triangles": 592
+            },
+            {
+              "name": "101_stepped_wing_masses003_2",
+              "triangles": 432
+            },
+            {
+              "name": "101_photo_specific_facades003",
+              "triangles": 240
+            },
+            {
+              "name": "101_photo_specific_facades003_1",
+              "triangles": 4596
+            },
+            {
+              "name": "101_photo_specific_facades003_2",
+              "triangles": 8316
+            },
+            {
+              "name": "101_photo_specific_facades003_3",
+              "triangles": 7476
+            },
+            {
+              "name": "101_photo_specific_facades003_4",
+              "triangles": 51228
+            },
+            {
+              "name": "101_photo_specific_facades003_5",
+              "triangles": 3732
+            },
+            {
+              "name": "101_louver_crowns003",
+              "triangles": 408
+            },
+            {
+              "name": "101_louver_crowns003_1",
+              "triangles": 636
+            },
+            {
+              "name": "101_louver_crowns003_2",
+              "triangles": 36
+            },
+            {
+              "name": "101_louver_crowns003_3",
+              "triangles": 2160
+            },
+            {
+              "name": "101_pilotis_and_recessed_lobby003",
+              "triangles": 1872
+            },
+            {
+              "name": "101_pilotis_and_recessed_lobby003_1",
+              "triangles": 12
+            },
+            {
+              "name": "101_pilotis_and_recessed_lobby003_2",
+              "triangles": 36
+            },
+            {
+              "name": "101_pilotis_and_recessed_lobby003_3",
+              "triangles": 12
+            }
+          ]
+        },
+        {
+          "id": "bespoke-trimage-102",
+          "sourceSha256": "2af2e15be630c782b0c25598fb5f821d11c9d0b82dd37cf67f9620813ce13aba",
+          "sha256": "cc2325e362b546d8b9d2c580cbbd0d943251a6b80a888f0efdcf8e5b4fc00547",
+          "bytes": 4985448,
+          "dimensions": [
+            36.0097541809082,
+            153.60000610351562,
+            45.71787452697754
+          ],
+          "min": [
+            -18.048242568969727,
+            0,
+            -22.944623947143555
+          ],
+          "max": [
+            17.961511611938477,
+            153.60000610351562,
+            22.773250579833984
+          ],
+          "triangles": 76700,
+          "components": [
+            {
+              "name": "102_stepped_wing_masses003",
+              "triangles": 1120
+            },
+            {
+              "name": "102_stepped_wing_masses003_1",
+              "triangles": 640
+            },
+            {
+              "name": "102_stepped_wing_masses003_2",
+              "triangles": 480
+            },
+            {
+              "name": "102_photo_specific_facades003",
+              "triangles": 240
+            },
+            {
+              "name": "102_photo_specific_facades003_1",
+              "triangles": 8712
+            },
+            {
+              "name": "102_photo_specific_facades003_2",
+              "triangles": 4500
+            },
+            {
+              "name": "102_photo_specific_facades003_3",
+              "triangles": 5280
+            },
+            {
+              "name": "102_photo_specific_facades003_4",
+              "triangles": 46164
+            },
+            {
+              "name": "102_photo_specific_facades003_5",
+              "triangles": 4260
+            },
+            {
+              "name": "102_louver_crowns003",
+              "triangles": 408
+            },
+            {
+              "name": "102_louver_crowns003_1",
+              "triangles": 636
+            },
+            {
+              "name": "102_louver_crowns003_2",
+              "triangles": 36
+            },
+            {
+              "name": "102_louver_crowns003_3",
+              "triangles": 2160
+            },
+            {
+              "name": "102_pilotis_and_recessed_lobby003",
+              "triangles": 2004
+            },
+            {
+              "name": "102_pilotis_and_recessed_lobby003_1",
+              "triangles": 12
+            },
+            {
+              "name": "102_pilotis_and_recessed_lobby003_2",
+              "triangles": 36
+            },
+            {
+              "name": "102_pilotis_and_recessed_lobby003_3",
+              "triangles": 12
+            }
+          ]
+        },
+        {
+          "id": "bespoke-trimage-103",
+          "sourceSha256": "24c2b0dae80d612a29eaffe1b6d5ba0d6529194340df09af54920493c40262d4",
+          "sha256": "def1c709e9393a9d9e7b26be5dc464e6bc0dfd1dd2a72be59d73252af9b302ef",
+          "bytes": 4222820,
+          "dimensions": [
+            41.64247131347656,
+            144.35000610351562,
+            42.183658599853516
+          ],
+          "min": [
+            -20.835744857788086,
+            0,
+            -21.168703079223633
+          ],
+          "max": [
+            20.806726455688477,
+            144.35000610351562,
+            21.014955520629883
+          ],
+          "triangles": 63804,
+          "components": [
+            {
+              "name": "103_stepped_wing_masses003",
+              "triangles": 48
+            },
+            {
+              "name": "103_stepped_wing_masses003_1",
+              "triangles": 240
+            },
+            {
+              "name": "103_stepped_wing_masses003_2",
+              "triangles": 112
+            },
+            {
+              "name": "103_stepped_wing_masses003_3",
+              "triangles": 80
+            },
+            {
+              "name": "103_photo_specific_facades003",
+              "triangles": 300
+            },
+            {
+              "name": "103_photo_specific_facades003_1",
+              "triangles": 3840
+            },
+            {
+              "name": "103_photo_specific_facades003_2",
+              "triangles": 8964
+            },
+            {
+              "name": "103_photo_specific_facades003_3",
+              "triangles": 42900
+            },
+            {
+              "name": "103_photo_specific_facades003_4",
+              "triangles": 4380
+            },
+            {
+              "name": "103_louver_crowns003",
+              "triangles": 192
+            },
+            {
+              "name": "103_louver_crowns003_1",
+              "triangles": 444
+            },
+            {
+              "name": "103_louver_crowns003_2",
+              "triangles": 24
+            },
+            {
+              "name": "103_louver_crowns003_3",
+              "triangles": 1344
+            },
+            {
+              "name": "103_pilotis_and_recessed_lobby003",
+              "triangles": 876
+            },
+            {
+              "name": "103_pilotis_and_recessed_lobby003_1",
+              "triangles": 12
+            },
+            {
+              "name": "103_pilotis_and_recessed_lobby003_2",
+              "triangles": 36
+            },
+            {
+              "name": "103_pilotis_and_recessed_lobby003_3",
+              "triangles": 12
+            }
+          ]
+        },
+        {
+          "id": "bespoke-trimage-104",
+          "sourceSha256": "c3c3b0886b8146f02e732b7fa3b922b31b1024eb0dc52096af0b464c683808e2",
+          "sha256": "0baefbf7ae448cb689344060883e63909f8717a01227f6008659c3e0ce7072e9",
+          "bytes": 4242052,
+          "dimensions": [
+            39.12471389770508,
+            150.4499969482422,
+            37.57576370239258
+          ],
+          "min": [
+            -19.70500946044922,
+            0,
+            -18.749244689941406
+          ],
+          "max": [
+            19.41970443725586,
+            150.4499969482422,
+            18.826519012451172
+          ],
+          "triangles": 64104,
+          "components": [
+            {
+              "name": "104_stepped_wing_masses003",
+              "triangles": 48
+            },
+            {
+              "name": "104_stepped_wing_masses003_1",
+              "triangles": 240
+            },
+            {
+              "name": "104_stepped_wing_masses003_2",
+              "triangles": 112
+            },
+            {
+              "name": "104_stepped_wing_masses003_3",
+              "triangles": 80
+            },
+            {
+              "name": "104_photo_specific_facades003",
+              "triangles": 300
+            },
+            {
+              "name": "104_photo_specific_facades003_1",
+              "triangles": 3912
+            },
+            {
+              "name": "104_photo_specific_facades003_2",
+              "triangles": 9060
+            },
+            {
+              "name": "104_photo_specific_facades003_3",
+              "triangles": 43008
+            },
+            {
+              "name": "104_photo_specific_facades003_4",
+              "triangles": 4404
+            },
+            {
+              "name": "104_louver_crowns003",
+              "triangles": 192
+            },
+            {
+              "name": "104_louver_crowns003_1",
+              "triangles": 444
+            },
+            {
+              "name": "104_louver_crowns003_2",
+              "triangles": 24
+            },
+            {
+              "name": "104_louver_crowns003_3",
+              "triangles": 1344
+            },
+            {
+              "name": "104_pilotis_and_recessed_lobby003",
+              "triangles": 876
+            },
+            {
+              "name": "104_pilotis_and_recessed_lobby003_1",
+              "triangles": 12
+            },
+            {
+              "name": "104_pilotis_and_recessed_lobby003_2",
+              "triangles": 36
+            },
+            {
+              "name": "104_pilotis_and_recessed_lobby003_3",
+              "triangles": 12
+            }
+          ]
+        }
+      ],
+      "mcpEvidence": [
+        {
+          "path": "docs/model-audit/mcp/trimage/build.json",
+          "sha256": "c4dbb397ab9a130c4e1416d31270eeeb5992fea18dabcbadf8729c700d69a5fd",
+          "tool": "execute_blender_code",
+          "port": 9877,
+          "stageFile": "/Users/hyemini/Documents/Codex/2026-09-21/seoul-real-estate-map/data/model-source/bespoke/trimage/mcp-build.json"
+        }
+      ],
+      "recipeInputs": [
+        {
+          "path": "modeling/bespoke/trimage/authored-input.json",
+          "sha256": "ebf267e7e367f6c962a163e606937b5ffa863ece49e33a560e0f784f125d97bb"
+        },
+        {
+          "path": "modeling/bespoke/trimage/source-footprints.json",
+          "sha256": "27223b38ee46184f92f96396670276ec79ac48515694a4c06ee5466a4debe1e3"
+        },
+        {
+          "path": "modeling/bespoke/trimage/official-register-source.json",
+          "sha256": "28a51b396d9d3ed72a3ff4b99ca9f888093b46c20b1e3e636bea7673cdeed811"
+        }
+      ]
+    },
+    "gratte-ciel": {
+      "sources": [
+        {
+          "url": "https://m.sujain.co.kr/complex/crrgratteciel/overview",
+          "observations": "Developer identity, location and1152households."
+        },
+        {
+          "url": "https://m.sujain.co.kr/complex/crrgratteciel/plan",
+          "observations": "Official roof/site plan identifies10159F321households,10255F303,10350F271,10456F257; floor schedule marks29F refuge and4–20F projecting balconies. This published design is crosschecked against completed photographs."
+        },
+        {
+          "url": "https://www.archiveh.co.kr/board/board.php?bo_table=sujain&idx=17",
+          "observations": "June2023 completed skyline, woven dark-brown/white facade, coloured projecting balconies, low retail base and elevated garden."
+        },
+        {
+          "url": "https://www.archiveh.co.kr/board/board.php?bo_table=sujain&idx=20",
+          "observations": "Completed facade award photographs: open white roof-frame extensions, individual blue windows, offset paired-storey frames and sinuous terracotta retail band."
+        },
+        {
+          "url": "https://data.seoul.go.kr/dataList/OA-22424/S/1/datasetView.do",
+          "observations": "Seoul public building register, snapshot 2026-09-08. Exact parcel and numbered towers identify 192/179.5/164/183 metre legal heights and 59/55/50/56 floors; raw rows and hashes frozen in official-register-source.json."
+        }
+      ],
+      "review": {
+        "siteId": "gratte-ciel",
+        "status": "visually-reviewed",
+        "reviewer": "root (independent from Caelitus/Trimage author); civic_modeling independently reviewed Gratte-ciel",
+        "date": "2026-09-21",
+        "method": "Direct source photograph and plan comparison with revised Blender renders, frozen export and editable scene hashes. Approval is scoped to visible residential exteriors with the listed limitations.",
+        "comparisons": [
+          "Root opened official Sujain north-marked roof/site plan and numbered floor schedule against each separately anchored tower. 101/102/103 have six-direction stepped plans;104 has a distinct five-direction plan. Floors59/55/50/56 and household totals321/303/271/257 match the exact numbered Seoul building-register records.",
+          "Root compared BS Hanyang June2023 completed southwest overall and facade close-ups plus completed award photographs. Initial uniform grids and invented full-width black refuge band were rejected. Revised face-specific white window banks, broad brown service strips, alternating frame projection and muted salmon/ochre lower balconies are visible in the reviewed views.",
+          "Civic modeling agent independently compared source photos, site plan and candidate renders, requesting a lighter grey-beige roof core; that correction was applied. Flat crown screens were replaced with open three-dimensional white lattice boxes. Final root comparison follows registered-height correction102179.5/103164/104183m with all other face treatments retained."
+        ],
+        "limits": [
+          "Four residential towers; simplified low commercial base. Full mall, roof garden, interiors and landscaping excluded.",
+          "Registered height is used as a conservative total envelope. Inclusion of rooftop ornament in legal height is unresolved; the 7.2m crown is a photo-based interpretation within that envelope.",
+          "Unseen rear openings, frame dimensions, roof core geometry and photo colors remain estimates, not measured CAD."
+        ],
+        "renders": [
+          "docs/model-audit/renders/gratte-ciel/review-southwest.png",
+          "docs/model-audit/renders/gratte-ciel/review-northeast.png",
+          "docs/model-audit/renders/gratte-ciel/review-plan.png",
+          "docs/model-audit/renders/gratte-ciel/review-crown.png"
+        ],
+        "renderSha256": {
+          "docs/model-audit/renders/gratte-ciel/review-southwest.png": "9503e48649f4ccf472e6da77312645dbc0a51518961a1af1146df503a7cce8af",
+          "docs/model-audit/renders/gratte-ciel/review-northeast.png": "6b437671f017f9cd22c2d29e7dda024aae01ebd5e2036c0b7106d0051bf97e8f",
+          "docs/model-audit/renders/gratte-ciel/review-plan.png": "c61aa472bf9ab954516de089b463cad09eabaa71c7e597ab1da60198990e616b",
+          "docs/model-audit/renders/gratte-ciel/review-crown.png": "49271bf6d3734f0ab855a2bb90f49bb46c109e1e88c1bb1053e3102dfa47d937"
+        },
+        "reviewedInputs": {
+          "bespoke-gratte-ciel-101.glb": "5c1da578d82e31bd2bc01ee2dc0ece18a630a91dc8698c8aa92247928a6067f2",
+          "gratte-ciel-authored.blend": "659d32722257b0ada4f442664a9502f000be8d05a31f624334f9050550247788",
+          "bespoke-gratte-ciel-102.glb": "074968b04a13b7985f91dfa4266e2639ff0b70c7c1dc6e6d5bfa1a77a599c2e1",
+          "bespoke-gratte-ciel-103.glb": "38d5aaa7ab6bf43a6efb5c8b7529f1a40ec65200427431ee5a4759f6052c5441",
+          "bespoke-gratte-ciel-104.glb": "4243327505e4cd09d23b21ea5ee4483d86f3e80f60582391d69893e4bc09381c"
+        }
+      },
+      "assets": [
+        {
+          "id": "bespoke-gratte-ciel-101",
+          "sourceSha256": "5c1da578d82e31bd2bc01ee2dc0ece18a630a91dc8698c8aa92247928a6067f2",
+          "sha256": "81e5dd1c8ed37637e0db77f3c78dfa07ad2ed87fb442d7aacd3f4184d3d237ad",
+          "bytes": 4808188,
+          "dimensions": [
+            53.94078063964844,
+            192,
+            54.52995491027832
+          ],
+          "min": [
+            -24.847339630126953,
+            0,
+            -29.06316375732422
+          ],
+          "max": [
+            29.093441009521484,
+            192,
+            25.4667911529541
+          ],
+          "triangles": 75446,
+          "components": [
+            {
+              "name": "101_individual_stepped_plan",
+              "triangles": 52
+            },
+            {
+              "name": "101_recessed_windows_and_mullions004",
+              "triangles": 5684
+            },
+            {
+              "name": "101_recessed_windows_and_mullions004_1",
+              "triangles": 5684
+            },
+            {
+              "name": "101_recessed_windows_and_mullions004_2",
+              "triangles": 34104
+            },
+            {
+              "name": "101_projecting_woven_white_frames",
+              "triangles": 25464
+            },
+            {
+              "name": "101_lower_coloured_projecting_balconies004",
+              "triangles": 420
+            },
+            {
+              "name": "101_lower_coloured_projecting_balconies004_1",
+              "triangles": 70
+            },
+            {
+              "name": "101_lower_coloured_projecting_balconies004_2",
+              "triangles": 420
+            },
+            {
+              "name": "101_lower_coloured_projecting_balconies004_3",
+              "triangles": 228
+            },
+            {
+              "name": "101_lower_coloured_projecting_balconies004_4",
+              "triangles": 192
+            },
+            {
+              "name": "101_29F_refuge_louvers",
+              "triangles": 28
+            },
+            {
+              "name": "101_open_lattice_crowns_and_roof_core004",
+              "triangles": 28
+            },
+            {
+              "name": "101_open_lattice_crowns_and_roof_core004_1",
+              "triangles": 1368
+            },
+            {
+              "name": "101_open_lattice_crowns_and_roof_core004_2",
+              "triangles": 64
+            },
+            {
+              "name": "101_open_lattice_crowns_and_roof_core004_3",
+              "triangles": 28
+            },
+            {
+              "name": "101_simplified_retail_and_lobby004",
+              "triangles": 912
+            },
+            {
+              "name": "101_simplified_retail_and_lobby004_1",
+              "triangles": 672
+            },
+            {
+              "name": "101_simplified_retail_and_lobby004_2",
+              "triangles": 28
+            }
+          ]
+        },
+        {
+          "id": "bespoke-gratte-ciel-102",
+          "sourceSha256": "074968b04a13b7985f91dfa4266e2639ff0b70c7c1dc6e6d5bfa1a77a599c2e1",
+          "sha256": "699bdc9f6b9155cdb7b0b07f1600b1cdfcf9e652fc49d8651d8540cfa049bc75",
+          "bytes": 4487548,
+          "dimensions": [
+            53.94944381713867,
+            179.5,
+            54.529823303222656
+          ],
+          "min": [
+            -24.851655960083008,
+            0,
+            -29.06533432006836
+          ],
+          "max": [
+            29.097787857055664,
+            179.5,
+            25.464488983154297
+          ],
+          "triangles": 70406,
+          "components": [
+            {
+              "name": "102_individual_stepped_plan",
+              "triangles": 52
+            },
+            {
+              "name": "102_recessed_windows_and_mullions004",
+              "triangles": 5276
+            },
+            {
+              "name": "102_recessed_windows_and_mullions004_1",
+              "triangles": 5276
+            },
+            {
+              "name": "102_recessed_windows_and_mullions004_2",
+              "triangles": 31656
+            },
+            {
+              "name": "102_projecting_woven_white_frames",
+              "triangles": 23688
+            },
+            {
+              "name": "102_lower_coloured_projecting_balconies004",
+              "triangles": 420
+            },
+            {
+              "name": "102_lower_coloured_projecting_balconies004_1",
+              "triangles": 70
+            },
+            {
+              "name": "102_lower_coloured_projecting_balconies004_2",
+              "triangles": 420
+            },
+            {
+              "name": "102_lower_coloured_projecting_balconies004_3",
+              "triangles": 228
+            },
+            {
+              "name": "102_lower_coloured_projecting_balconies004_4",
+              "triangles": 192
+            },
+            {
+              "name": "102_29F_refuge_louvers",
+              "triangles": 28
+            },
+            {
+              "name": "102_open_lattice_crowns_and_roof_core004",
+              "triangles": 28
+            },
+            {
+              "name": "102_open_lattice_crowns_and_roof_core004_1",
+              "triangles": 1368
+            },
+            {
+              "name": "102_open_lattice_crowns_and_roof_core004_2",
+              "triangles": 64
+            },
+            {
+              "name": "102_open_lattice_crowns_and_roof_core004_3",
+              "triangles": 28
+            },
+            {
+              "name": "102_simplified_retail_and_lobby004",
+              "triangles": 912
+            },
+            {
+              "name": "102_simplified_retail_and_lobby004_1",
+              "triangles": 672
+            },
+            {
+              "name": "102_simplified_retail_and_lobby004_2",
+              "triangles": 28
+            }
+          ]
+        },
+        {
+          "id": "bespoke-gratte-ciel-103",
+          "sourceSha256": "38d5aaa7ab6bf43a6efb5c8b7529f1a40ec65200427431ee5a4759f6052c5441",
+          "sha256": "acdddeee393c54301366a90ce8cabd38fd8c2bf788f4d7b4565aabc6ec406045",
+          "bytes": 4086724,
+          "dimensions": [
+            53.94069862365723,
+            164,
+            54.52980613708496
+          ],
+          "min": [
+            -24.84346580505371,
+            0,
+            -29.066587448120117
+          ],
+          "max": [
+            29.097232818603516,
+            164,
+            25.463218688964844
+          ],
+          "triangles": 64106,
+          "components": [
+            {
+              "name": "103_individual_stepped_plan",
+              "triangles": 52
+            },
+            {
+              "name": "103_recessed_windows_and_mullions004",
+              "triangles": 4766
+            },
+            {
+              "name": "103_recessed_windows_and_mullions004_1",
+              "triangles": 4766
+            },
+            {
+              "name": "103_recessed_windows_and_mullions004_2",
+              "triangles": 28596
+            },
+            {
+              "name": "103_projecting_woven_white_frames",
+              "triangles": 21468
+            },
+            {
+              "name": "103_lower_coloured_projecting_balconies004",
+              "triangles": 420
+            },
+            {
+              "name": "103_lower_coloured_projecting_balconies004_1",
+              "triangles": 70
+            },
+            {
+              "name": "103_lower_coloured_projecting_balconies004_2",
+              "triangles": 420
+            },
+            {
+              "name": "103_lower_coloured_projecting_balconies004_3",
+              "triangles": 228
+            },
+            {
+              "name": "103_lower_coloured_projecting_balconies004_4",
+              "triangles": 192
+            },
+            {
+              "name": "103_29F_refuge_louvers",
+              "triangles": 28
+            },
+            {
+              "name": "103_open_lattice_crowns_and_roof_core004",
+              "triangles": 28
+            },
+            {
+              "name": "103_open_lattice_crowns_and_roof_core004_1",
+              "triangles": 1368
+            },
+            {
+              "name": "103_open_lattice_crowns_and_roof_core004_2",
+              "triangles": 64
+            },
+            {
+              "name": "103_open_lattice_crowns_and_roof_core004_3",
+              "triangles": 28
+            },
+            {
+              "name": "103_simplified_retail_and_lobby004",
+              "triangles": 912
+            },
+            {
+              "name": "103_simplified_retail_and_lobby004_1",
+              "triangles": 672
+            },
+            {
+              "name": "103_simplified_retail_and_lobby004_2",
+              "triangles": 28
+            }
+          ]
+        },
+        {
+          "id": "bespoke-gratte-ciel-104",
+          "sourceSha256": "4243327505e4cd09d23b21ea5ee4483d86f3e80f60582391d69893e4bc09381c",
+          "sha256": "5454ed8f3a46b7d0acbf19eb603832efeca241ff7779363b5f943614e6984f7b",
+          "bytes": 4439144,
+          "dimensions": [
+            56.30425453186035,
+            183,
+            47.38483428955078
+          ],
+          "min": [
+            -25.765113830566406,
+            0,
+            -25.42579460144043
+          ],
+          "max": [
+            30.539140701293945,
+            183,
+            21.95903968811035
+          ],
+          "triangles": 69686,
+          "components": [
+            {
+              "name": "104_individual_stepped_plan",
+              "triangles": 72
+            },
+            {
+              "name": "104_recessed_windows_and_mullions004",
+              "triangles": 5068
+            },
+            {
+              "name": "104_recessed_windows_and_mullions004_1",
+              "triangles": 5068
+            },
+            {
+              "name": "104_recessed_windows_and_mullions004_2",
+              "triangles": 30408
+            },
+            {
+              "name": "104_projecting_woven_white_frames",
+              "triangles": 24792
+            },
+            {
+              "name": "104_lower_coloured_projecting_balconies004",
+              "triangles": 216
+            },
+            {
+              "name": "104_lower_coloured_projecting_balconies004_1",
+              "triangles": 36
+            },
+            {
+              "name": "104_lower_coloured_projecting_balconies004_2",
+              "triangles": 216
+            },
+            {
+              "name": "104_lower_coloured_projecting_balconies004_3",
+              "triangles": 120
+            },
+            {
+              "name": "104_lower_coloured_projecting_balconies004_4",
+              "triangles": 96
+            },
+            {
+              "name": "104_29F_refuge_louvers",
+              "triangles": 20
+            },
+            {
+              "name": "104_open_lattice_crowns_and_roof_core004",
+              "triangles": 28
+            },
+            {
+              "name": "104_open_lattice_crowns_and_roof_core004_1",
+              "triangles": 1476
+            },
+            {
+              "name": "104_open_lattice_crowns_and_roof_core004_2",
+              "triangles": 84
+            },
+            {
+              "name": "104_open_lattice_crowns_and_roof_core004_3",
+              "triangles": 28
+            },
+            {
+              "name": "104_simplified_retail_and_lobby004",
+              "triangles": 1008
+            },
+            {
+              "name": "104_simplified_retail_and_lobby004_1",
+              "triangles": 912
+            },
+            {
+              "name": "104_simplified_retail_and_lobby004_2",
+              "triangles": 38
+            }
+          ]
+        }
+      ],
+      "mcpEvidence": [
+        {
+          "path": "docs/model-audit/mcp/gratte-ciel/build.json",
+          "sha256": "144e67c1d6b783f0402ae5abd41100959fe5575af0dac3be9415ed5d13eef418",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0",
+          "blender": "4.5.11 LTS"
+        },
+        {
+          "path": "docs/model-audit/mcp/gratte-ciel/render.json",
+          "sha256": "c92429eb001c520efe6988cd65ec8ada0cab3ac58a34010105aab7ce4e3b127b",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0",
+          "blender": "4.5.11 LTS"
+        }
+      ],
+      "recipeInputs": [
+        {
+          "path": "modeling/bespoke/gratte-ciel/authored-input.json",
+          "sha256": "3240ed95a7eae2a333dc28e6194a7a906a4a6eb44432666bab99c54e7a8ae2dc"
+        },
+        {
+          "path": "modeling/bespoke/gratte-ciel/source-footprints.json",
+          "sha256": "785e0d7778e166079f0f4075dd06e068222fec951d6f2626f39d57067c0ac3c9"
+        },
+        {
+          "path": "modeling/bespoke/gratte-ciel/official-register-source.json",
+          "sha256": "9f76d1c4bab6dee85ed06f584c9782f9c424a05dccf274e1ff187420af14eca4"
+        }
+      ]
     }
   }
 }

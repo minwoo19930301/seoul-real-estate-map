@@ -1,0 +1,67 @@
+{
+  "siteId": "raemian-caelitus",
+  "status": "frozen-candidate-awaiting-independent-review",
+  "assets": [
+    {
+      "id": "bespoke-raemian-caelitus-101",
+      "file": "bespoke-raemian-caelitus-101.glb",
+      "sha256": "189a5ee22c938b96cade4ed1b5e767dc27e1cab5964006fe1ea27f00a3bd53c8",
+      "blendSource": "raemian-caelitus.blend",
+      "blendSha256": "06fd2a803c0844ceb62ab9edb44b9dae9f953d5848ac16e874ba4582e972a4d6"
+    },
+    {
+      "id": "bespoke-raemian-caelitus-102",
+      "file": "bespoke-raemian-caelitus-102.glb",
+      "sha256": "eb65eb39f1905a20235f0b6388ed8ac70fd170efb1546fb35c6870f9fee3f86b",
+      "blendSource": "raemian-caelitus.blend",
+      "blendSha256": "06fd2a803c0844ceb62ab9edb44b9dae9f953d5848ac16e874ba4582e972a4d6"
+    },
+    {
+      "id": "bespoke-raemian-caelitus-103",
+      "file": "bespoke-raemian-caelitus-103.glb",
+      "sha256": "a9851b3b6839682c994ed772c9ed79ed460b87a60ca38bb64892075ab75f32c1",
+      "blendSource": "raemian-caelitus.blend",
+      "blendSha256": "06fd2a803c0844ceb62ab9edb44b9dae9f953d5848ac16e874ba4582e972a4d6"
+    }
+  ],
+  "recipes": {
+    "authored-input.json": "8ddc7cfeff8793f5db3d5a34a3f74f4c571d6f5d4da5d0d21b21b625ea50cdf5",
+    "building-register-rows.json": "0089595cc04fe6571a52b6fffd5f5d852432b8b513750484dc6dc2d1806dfe6f"
+  },
+  "renders": {
+    "southwest_completed_photo.png": "5e0d1f277e3fe9136d0dffe28605486799713df636385084eee4b531dc62c7f7",
+    "northwest_rear_steps.png": "8f119093b0664ac4e8fab409f949c72ce2b98df08a786d2f655a592c21563796",
+    "east_completed_photo.png": "17de5f028162a0f984a67ee6b7a336de85237228efbd4cd97fc283788a8edcff",
+    "roof_and_bridges.png": "27450bd987c40accac3825c32fe83f6c6cf2c72dcb8842e5d512c3c4f55b8dfd",
+    "bridge_and_piloti.png": "31578c6a5c5ba8ff489a5ff6bf29be38e5ade00795569ab39793bebfe62f07a5",
+    "podium_canopy_ovals.png": "0a53b9b2f81ff5a95cf615292f175075c34ec47f86f396428a1bd4e04f84e974",
+    "mcp-viewport.png": "d2ad05f9781fa61e72a23365c607c8f00813df2ad028252280d06a334fbc7209"
+  },
+  "mcpEvidence": [
+    {
+      "path": "docs/model-audit/mcp/raemian-caelitus/build.json",
+      "sha256": "d05367ec42cce424b577f1c71be64eb50ec5acd2515d6864997ed8a2a6675205",
+      "tool": "execute_blender_code",
+      "server": "mcp-for-blender2.0.0",
+      "blender": "4.5.11 LTS",
+      "port": 9878
+    },
+    {
+      "path": "docs/model-audit/mcp/raemian-caelitus/validation.json",
+      "sha256": "a34954dfb3ba1e002796d6fd1061e3a2d413b47a1efe368863cf69563e73f649",
+      "tool": "execute_blender_code",
+      "server": "mcp-for-blender2.0.0",
+      "blender": "4.5.11 LTS",
+      "port": 9878
+    },
+    {
+      "path": "docs/model-audit/mcp/raemian-caelitus/render.json",
+      "sha256": "71e7e6bc5afeabb91da9a3329d0aad2f218b47a7b6afa0806e447aebc669e53b",
+      "tool": "execute_blender_code",
+      "server": "mcp-for-blender2.0.0",
+      "blender": "4.5.11 LTS",
+      "port": 9878
+    }
+  ],
+  "geometryValidation": "5dde8b6563ae6f49c5c380a024524b56a84431c6ded709f222abc3806b60cebb"
+}

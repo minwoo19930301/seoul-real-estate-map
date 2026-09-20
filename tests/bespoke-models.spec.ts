@@ -3,6 +3,7 @@ import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 const manifest = JSON.parse(readFileSync('public/models/bespoke-manifest.json','utf8'));
 async function setup(page: any) {
   await page.goto('/'); await page.waitForFunction(() => (window as any).__SEOUL_MAP__?.getState().terrainReady);
+  await page.waitForFunction(() => (window as any).__SEOUL_MAP__?.cityModels);
   await page.locator('#mode-25d').click();
   await page.locator('#exaggeration').evaluate((e: HTMLInputElement) => {e.value='1';e.dispatchEvent(new Event('input'));});
 }
