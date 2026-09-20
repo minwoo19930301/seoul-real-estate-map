@@ -1,0 +1,46 @@
+{
+  "exactAssetRecords": 113262,
+  "baselineAssetRecords": 113248,
+  "reviewedNewAssetRecords": 14,
+  "uniquePhysicalSiteCount": null,
+  "status": "Model-file inventory, not physical building count; pending records have not been rebuilt.",
+  "counts": {
+    "bespoke-manifest:apartments-400-plus": 10,
+    "bespoke-manifest:bridges-parks-heritage": 2,
+    "bespoke-manifest:landmarks": 2,
+    "legacy-manifest:apartments-100-399": 1292,
+    "legacy-manifest:apartments-400-plus": 843,
+    "legacy-manifest:bridges-parks-heritage": 41,
+    "legacy-manifest:civic-institutions": 369,
+    "legacy-manifest:landmarks": 31,
+    "legacy-manifest:pending-household-classification": 8435,
+    "legacy-manifest:remaining-housing": 2596,
+    "reference-manifest:apartments-400-plus": 32,
+    "reference-manifest:bridges-parks-heritage": 44,
+    "reference-manifest:civic-institutions": 15,
+    "reference-manifest:landmarks": 31,
+    "reference-manifest:pending-household-classification": 3,
+    "residential-survey:pending-household-classification": 5143,
+    "residential-survey:remaining-housing": 94373
+  },
+  "priorityOrder": {
+    "1": "landmarks",
+    "2": "apartments-400-plus",
+    "3": "bridges-parks-heritage",
+    "4": "civic-institutions",
+    "5": "apartments-100-399",
+    "6": "remaining-housing",
+    "7": "pending-household-classification",
+    "8": "pending-physical-type"
+  },
+  "sha256UncompressedJsonl": "88561b6ed2f233b1413fc226ec96bf35ceafce7e135015b7d07d53466fe843d2",
+  "source": "scripts/build_model_review_queue.py",
+  "nonAssetTargets": [
+    {
+      "name": "서울고속버스터미널 경부·영동선",
+      "sourceFootprintId": "c313b964-022c-4f5a-9599-d69d0155d010",
+      "previousState": "raw source extrusion; no dedicated legacy asset",
+      "replacement": "bespoke-seoul-express-terminal"
+    }
+  ]
+}

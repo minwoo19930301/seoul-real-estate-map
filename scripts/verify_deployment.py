@@ -64,6 +64,12 @@ for model_id in ['reference-flight-seoul-city-hall', 'reference-flight-ddp', 'ma
     asset = next(a for a in references['assets'] if a['id'] == model_id)
     assert hashlib.sha256(read('/models/' + asset['model'])).hexdigest() == asset['sha256'], 'Reference model stale or corrupted: ' + model_id
 assert any(p['name'] == '메이플자이' for p in references['places']), 'Maple Xi search location missing'
+bespoke_bytes = read('/models/bespoke-manifest.json')
+assert hashlib.sha256(bespoke_bytes).hexdigest() == manifest['files']['public/models/bespoke-manifest.json'], 'Bespoke manifest is stale'
+bespoke = json.loads(bespoke_bytes)
+assert {'bespoke-seoul-express-terminal', 'bespoke-skyl65-a', 'bespoke-skyl65-b', 'bespoke-skyl65-c', 'bespoke-skyl65-d', 'bespoke-banpo-jamsu', 'bespoke-culture-station-seoul284', 'bespoke-hyperion-a', 'bespoke-hyperion-b', 'bespoke-hyperion-c', 'bespoke-hyperion-parking-podium', 'bespoke-hyperion-department-store', 'bespoke-maple-xi-210', 'bespoke-maple-xi-211'} <= {a['id'] for a in bespoke['assets']}, 'Reviewed Blender models missing'
+for asset in bespoke['assets']:
+    assert hashlib.sha256(read('/models/' + asset['model'])).hexdigest() == asset['sha256'], 'Bespoke model stale or corrupted: ' + asset['id']
 
 # Exercise the same calls used by the initial map view instead of accepting a
 # deployment that only serves health metadata.  Keep this bbox small enough to
@@ -82,4 +88,4 @@ assert_feature_collection('/api/landmarks?' + query)
 _, headers = json_response('/api/features?' + query, accept_encoding='gzip')
 if headers.get('Content-Encoding', '').lower() == 'gzip':
     assert headers.get('Vary', '').lower().find('accept-encoding') >= 0, 'gzip response missing Vary header'
-print(f'Live release {expected_sha}: health, source data, search, GeoJSON map layers, terrain, 3D model, gzip handling, and frontend verified')
+print(f'Live release {expected_sha}: health, source data, search, GeoJSON map layers, terrain, all reviewed Blender models, gzip handling, and frontend verified')

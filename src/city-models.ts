@@ -76,8 +76,11 @@ export class CityModels {
   private indexedLength = -1;
   private catalogRevision = 0;
   private entryOrder = new Map<Entry, number>();
+  private referenceUpgrades = new Set<string>();
+  private replacementTargets = new Map<string, Set<string>>();
+  private replacementPeers = new Map<string, Entry[]>();
   private trackedEntries = new Set<Entry>();
-  private nearbyCache?: { key: string; entries: Entry[] };
+  private nearbyCache?: { key: string; entries: Entry[]; candidates: Entry[] };
   private loadCycle?: Promise<void>;
   private loadAgain = false;
   private useCounter = 0;
@@ -183,6 +186,32 @@ export class CityModels {
     this.indexedEntries = this.entries; this.indexedLength = this.entries.length;
     this.catalogRevision++; this.nearbyCache = undefined;
     this.entryOrder.clear(); this.trackedEntries.clear();
+    const landmarks = new Set(this.entries.filter(entry => isLandmark(entry.asset)).map(entry => entry.asset.id));
+    this.referenceUpgrades = new Set(this.entries.filter(entry => isLandmark(entry.asset)
+      && entry.asset.supersedes?.some(id => landmarks.has(id))).map(entry => entry.asset.id));
+    const byId = new Map(this.entries.map(entry => [entry.asset.id, entry.asset]));
+    this.replacementTargets.clear();
+    this.replacementPeers.clear();
+    const replacing = new Map<string, Entry[]>();
+    for (const entry of this.entries) {
+      if (!isLandmark(entry.asset)) continue;
+      for (const id of entry.asset.supersedes ?? []) {
+        if (landmarks.has(id)) replacing.set(id, [...(replacing.get(id) ?? []), entry]);
+      }
+    }
+    for (const group of replacing.values()) for (const entry of group) {
+      this.replacementPeers.set(entry.asset.id, [...new Set([...(this.replacementPeers.get(entry.asset.id) ?? []), ...group])]);
+    }
+    for (const entry of this.entries) {
+      if (!isLandmark(entry.asset)) continue;
+      const targets = new Set<string>(), pending = [...(entry.asset.supersedes ?? [])];
+      while (pending.length) {
+        const id = pending.pop()!;
+        if (id === entry.asset.id || targets.has(id)) continue;
+        targets.add(id); pending.push(...(byId.get(id)?.supersedes ?? []));
+      }
+      this.replacementTargets.set(entry.asset.id, targets);
+    }
     this.entries.forEach((entry, index) => {
       this.entryOrder.set(entry, index);
       if (entry.scene || entry.error || entry.pending || entry.active) this.trackedEntries.add(entry);
@@ -213,24 +242,47 @@ export class CityModels {
     return asset.coordinate.lon >= view.west - dx && asset.coordinate.lon <= view.east + dx
       && asset.coordinate.lat >= view.south - dy && asset.coordinate.lat <= view.north + dy;
   }
-  private nearbyEntries() {
+  private nearbyEntries(view = this.viewSnapshot()) {
     this.syncCatalog();
-    const view = this.viewSnapshot();
     const key = [view.zoom, view.lon, view.lat, view.west, view.east, view.south, view.north,
       this.publicVisible, this.bridgesVisible, this.culturalVisible, this.officesVisible].join(':');
     if (this.nearbyCache?.key === key) return this.nearbyCache.entries;
     const scale = Math.cos(view.lat * Math.PI / 180);
     const distance = (entry: Entry) => ((entry.asset.coordinate.lon - view.lon) * scale) ** 2 + (entry.asset.coordinate.lat - view.lat) ** 2;
     const candidates = this.entries.filter(entry => !entry.error && this.inView(entry.asset, view));
-    const entries = candidates
-      .sort((a, b) => Number(isLandmark(b.asset)) - Number(isLandmark(a.asset))
-        || distance(a) - distance(b) || a.asset.id.localeCompare(b.asset.id))
-      .slice(0, this.maxNearby);
-    this.nearbyCache = { key, entries };
+    const priority = (entry: Entry) => Number(isLandmark(entry.asset)) + Number(this.referenceUpgrades.has(entry.asset.id));
+    candidates.sort((a, b) => priority(b) - priority(a)
+      || distance(a) - distance(b) || a.asset.id.localeCompare(b.asset.id));
+    // A retained replacement is a fallback for the same place, not another
+    // primary slot. Otherwise 31 towers plus two upgrades fill a 32-entry
+    // selection with hidden old towers and leave a real tower unselected.
+    const replaced = new Set<string>();
+    for (const entry of candidates) {
+      for (const id of this.replacementTargets.get(entry.asset.id) ?? []) replaced.add(id);
+    }
+    const entries = candidates.filter(entry => !replaced.has(entry.asset.id)).slice(0, this.maxNearby);
+    const fallbackIds = new Set<string>();
+    for (const entry of entries) {
+      for (const id of this.replacementTargets.get(entry.asset.id) ?? []) fallbackIds.add(id);
+    }
+    const primary = new Set(entries);
+    const fallbacks = candidates.filter(entry => !primary.has(entry) && fallbackIds.has(entry.asset.id))
+      .slice(0, this.maxResident - entries.length);
+    // Draw primary landmarks first, then their retained references, then
+    // generic buildings. Only a successful draw suppresses a fallback.
+    const selected = [...entries.filter(entry => isLandmark(entry.asset)),
+      ...fallbacks.filter(entry => isLandmark(entry.asset)),
+      ...entries.filter(entry => !isLandmark(entry.asset)),
+      ...fallbacks.filter(entry => !isLandmark(entry.asset))];
+    this.nearbyCache = { key, entries, candidates: selected };
     return entries;
   }
+  private nearbyCandidates(view?: View) {
+    this.nearbyEntries(view);
+    return this.nearbyCache!.candidates;
+  }
   private trimCache() {
-    const protectedEntries = new Set(this.nearbyEntries());
+    const protectedEntries = new Set(this.nearbyCandidates());
     const resident = [...this.trackedEntries].filter(entry => !!entry.scene);
     let excess = resident.length - this.maxResident;
     for (const entry of resident.sort((a, b) => (a.lastUsed ?? 0) - (b.lastUsed ?? 0))) {
@@ -249,13 +301,13 @@ export class CityModels {
         this.loadAgain = false;
         await this.updateCatalog();
         if (this.disposed || !this.enabled || !this.is25d) break;
-        const nearby = this.nearbyEntries();
+        const nearby = this.nearbyCandidates();
         for (const entry of nearby) entry.lastUsed = ++this.useCounter;
         const queue = nearby.filter(entry => !entry.scene && !entry.error);
         const worker = async () => {
           while (queue.length) {
             const entry = queue.shift()!;
-            if (this.disposed || !this.enabled || !this.is25d || !this.nearbyEntries().includes(entry)) continue;
+            if (this.disposed || !this.enabled || !this.is25d || !this.nearbyCandidates().includes(entry)) continue;
             entry.pending = Promise.resolve().then(() => this.loadEntry(entry));
             this.trackEntry(entry);
             await entry.pending;
@@ -343,15 +395,23 @@ export class CityModels {
     this.drawCalls = 0;
     const supported = args.shaderData.variantName === 'mercator';
     const ready = supported && this.terrainReady();
-    const visible = this.nearbyEntries();
+    const view = this.viewSnapshot();
+    const visible = this.nearbyCandidates(view);
     const landmarkFootprints = new Set<string>(), replacedModels = new Set<string>();
     this.clearActiveEntries();
+    let activeCount = 0;
     for (const entry of visible) {
+      if (activeCount >= this.maxNearby) break;
       if (!this.enabled || !entry.scene || entry.error || !ready) continue;
+      // Several new towers can replace one old compound. If any visible peer
+      // is still unavailable, retain that compound without drawing new towers
+      // through it. Offscreen peers need not load to show an onscreen tower.
+      if (this.replacementPeers.get(entry.asset.id)?.some(peer => this.inView(peer.asset, view)
+        && (!peer.scene || peer.error || this.map.queryTerrainElevation([peer.asset.coordinate.lon, peer.asset.coordinate.lat]) === null))) continue;
       // A compound fallback may contain both a landmark and its neighbours.
       // Skip that GLB only after the landmark draws; its other raw solids remain.
-      if (!isLandmark(entry.asset) && (replacedModels.has(entry.asset.id)
-        || this.footprints(entry).some(id => landmarkFootprints.has(id))
+      if (replacedModels.has(entry.asset.id)) continue;
+      if (!isLandmark(entry.asset) && (this.footprints(entry).some(id => landmarkFootprints.has(id))
         || entry.asset.footprintIds?.some(id => landmarkFootprints.has(id)))) continue;
       const coordinate: [number, number] = [entry.asset.coordinate.lon, entry.asset.coordinate.lat];
       const ground = this.map.queryTerrainElevation(coordinate);
@@ -366,10 +426,11 @@ export class CityModels {
         // mesh survives the Three.js camera frustum (especially at high pitch).
         entry.active = calls > 0;
         if (entry.active) {
+          activeCount++;
           entry.draws++;
           if (isLandmark(entry.asset)) {
             for (const id of this.footprints(entry)) landmarkFootprints.add(id);
-            for (const id of entry.asset.supersedes ?? []) replacedModels.add(id);
+            for (const id of this.replacementTargets.get(entry.asset.id) ?? []) replacedModels.add(id);
           }
         }
       } catch (error) {

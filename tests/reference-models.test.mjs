@@ -98,3 +98,38 @@ test('a failed reference fetch loads the unloaded preserved replacement and rest
     assert.equal(h.m.getState().models.find(m => m.id === 'generic').active, true);
   } finally { globalThis.fetch = originalFetch; h.m.destroy(); }
 });
+
+test('a rebuilt reference replaces an older authored model only after a successful draw', () => {
+  const h = cityHarness(), old = h.m.entries[1];
+  const upgrade = { ...old, asset: { ...old.asset, id: 'rebuilt', supersedes: ['ref'], coordinate: { lon: 127.101, lat: 37.5 } }, scene: undefined, active: false };
+  h.m.entries.push(upgrade);
+  const args = { defaultProjectionData: { mainMatrix: new THREE.Matrix4().elements }, shaderData: { variantName: 'mercator' } };
+  h.m.render(args);
+  assert.equal(old.active, true, 'previous authored model survives pending rebuild');
+  upgrade.scene = new THREE.Scene();
+  h.m.render(args);
+  assert.equal(upgrade.active, true);
+  assert.equal(old.active, false, 'nearer previous reference cannot cover its rebuilt replacement');
+  assert.equal(h.m.entries[0].active, false, 'generic source duplicate remains suppressed');
+  h.m.renderer.render = scene => { h.m.renderer.info.render.calls = scene === upgrade.scene ? 0 : 2; };
+  h.m.render(args);
+  assert.equal(upgrade.active, false);
+  assert.equal(old.active, true, 'frustum-culled rebuild restores previous reference');
+  upgrade.error = '404'; h.m.nearbyCache = undefined;
+  h.m.render(args);
+  assert.equal(old.active, true, 'failed rebuild restores previous reference');
+  h.m.destroy();
+});
+
+test('a split tower replacement waits for every visible peer and retains the compound on partial failure', () => {
+  const h = cityHarness(), old = h.m.entries[1];
+  const tower = suffix => ({ asset: asset('rebuilt-' + suffix, {coordinate: old.asset.coordinate, supersedes: ['ref']}), scene: new THREE.Scene(), error: null, ground: null, draws: 0, active: false });
+  const a = tower('a'), b = tower('b'); b.scene = undefined;
+  h.m.entries = [...h.m.entries, a, b];
+  const frame = {defaultProjectionData: {mainMatrix: new THREE.Matrix4().elements}, shaderData: {variantName: 'mercator'}};
+  h.m.render(frame); assert.equal(old.active, true); assert.equal(a.active, false);
+  b.error = '404'; h.m.render(frame); assert.equal(old.active, true); assert.equal(a.active, false);
+  b.error = null; b.scene = new THREE.Scene(); h.m.nearbyCache = undefined;
+  h.m.render(frame); assert.equal(old.active, false); assert.equal(a.active, true); assert.equal(b.active, true);
+  h.m.destroy();
+});

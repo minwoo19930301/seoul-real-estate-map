@@ -1,0 +1,125 @@
+{
+  "id": "bespoke-hyperion-department-store",
+  "nameKo": "현대백화점 목동점 본관",
+  "coordinate": {
+    "lon": 126.87524759969328,
+    "lat": 37.52652000185615
+  },
+  "siteEN": [
+    24.507550557233476,
+    -50.09356423141018
+  ],
+  "yawDegFromEast": -10.296981165873934,
+  "footprintIds": [
+    "c7f66902-54ea-4bac-ae09-73a57bdf98b7"
+  ],
+  "sourceOutline": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          126.8749617,
+          37.5268617
+        ],
+        [
+          126.8748617,
+          37.5268761
+        ],
+        [
+          126.8747284,
+          37.5262943
+        ],
+        [
+          126.8756335,
+          37.5261639
+        ],
+        [
+          126.8757668,
+          37.5267457
+        ],
+        [
+          126.8749617,
+          37.5268617
+        ]
+      ]
+    ]
+  },
+  "localTrace": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -43.92105964092666,
+          35.71194917161936
+        ],
+        [
+          33.59648718443926,
+          36.09665190441886
+        ],
+        [
+          33.465872184084645,
+          -13.89036320769108
+        ],
+        [
+          17.125279275557187,
+          -30.36817165545695
+        ],
+        [
+          -44.07888052853898,
+          -29.851319672947923
+        ],
+        [
+          -43.92105964092666,
+          35.71194917161936
+        ]
+      ]
+    ]
+  },
+  "traceBasis": "Existing official UPIS32702773 ground outline, including southeast chamfer; ignores its erroneous parcel-level69-floor attribute. OSM named department-store polygon supplies independent identity/anchor.",
+  "heightM": 38.5,
+  "mainCorniceHeightM": 34.5,
+  "floors": 7,
+  "heightBasis": "Manual photo proportion estimate: main cornice34.5m and raised southeast corner38.5m. No measured height available.",
+  "floorsBasis": "Current official Hyundai Mokdong floor guide lists1F–7F; not an architectural roof-level survey.",
+  "referenceUrl": "https://ehyundai.com/newPortal/DP/DP000000_V.do?branchCd=B00142000",
+  "imageUrl": "https://ehyundai.com/attachfiles/branch/8b29c131d8cc4e8787576fcc65c00ae2.png",
+  "photoObservations": [
+    "Five tall arch-and-round-window bays south face; three east face.",
+    "Large pale stone blank panels and slender vertical mouldings, continuous upper blue glass ribbon, multi-step projecting cornices.",
+    "Raised southeast chamfer facade has a poster frame above triangular clock pediment and columned glass entrance.",
+    "Poster artwork, tiny lettering and sculptures omitted; no source photo is embedded."
+  ],
+  "uncertainties": [
+    "Height and all facade feature dimensions inferred from one official exterior photo; source image capture date unknown.",
+    "Service-side elevations and roof equipment unseen and simplified.",
+    "UPIS and OSM footprint boundaries differ; UPIS chamfer used for visible mass, OSM polygon only identity and geographic anchor."
+  ],
+  "invalidGenericModelReview": {
+    "invalidModelId": "survey-upis-32702773",
+    "sourceObjectId": 32702773,
+    "preservedFootprintId": "c7f66902-54ea-4bac-ae09-73a57bdf98b7",
+    "reason": "UPIS whole-complex69-floor record applied to the independent Hyundai department-store polygon, producing210.45m estimated model. This is invalid-source-height suppression, not ownership by the podium.",
+    "towerIntersectionsM2": {
+      "A": 0.0,
+      "B": 0.0,
+      "C": 0.0
+    },
+    "departmentStoreIntersectionM2": 4541.574044637514,
+    "surveyCoveredRatio": 0.91074276,
+    "departmentStoreCoveredRatio": 0.84952717,
+    "rawSource": {
+      "name": "현대",
+      "parent_id": null,
+      "height_m": null,
+      "num_floors": null,
+      "extrude": false,
+      "height_status": "missing",
+      "display_top_m": null,
+      "geometrySourceRecord": "OpenStreetMap w254292805@10"
+    },
+    "referenceUrl": "https://www.ehyundai.com/newPortal/DP/FG/FG000000_V.do?branchCd=B00142000",
+    "referenceObservation": "Official department store floor guide lists above-ground floors1F through7F; does not provide measured building height.",
+    "limitation": "Removing invalid generic preserves underlying department-store footprint, but cannot restore a raw3D solid because source height is missing."
+  },
+  "floorsReferenceUrl": "https://www.ehyundai.com/newPortal/DP/FG/FG000000_V.do?branchCd=B00142000"
+}

@@ -1,0 +1,107 @@
+{
+  "auditDate": "2026-09-20",
+  "scope": "Existing manifests, git history, and checked-in generation scripts; no GLB geometry regeneration",
+  "reproducibleCommands": [
+    "git log --oneline --all -25",
+    "python3 -c 'import json,collections; ...' (category, householdCount, sha256, dimensions counts)",
+    "grep -nE 'template|generic|facade|seed|variation|random|boxgeometry|household' scripts/build_residential_models.py scripts/residential_facade.py scripts/public_facade.py scripts/build_civic_models.py"
+  ],
+  "manifestSnapshot": {
+    "mainAssets": 13607,
+    "referenceAssets": 125,
+    "mainSha256Unique": 13607,
+    "mainModelPathUnique": 13607,
+    "referenceSha256Unique": 125,
+    "referenceModelPathUnique": 125,
+    "mainCategoryCounts": {
+      "residential-apartment": 7963,
+      "major-apartment-complex": 2614,
+      "residential-villa": 2254,
+      "residential-officetel": 241,
+      "residential-mixed-use": 61,
+      "k12-school": 224,
+      "district-public-office": 140,
+      "bridge": 26,
+      "civic-cultural-landmark": 21,
+      "cultural-site": 12,
+      "company-office": 11,
+      "city-hall": 2,
+      "named-apartment-site": 33,
+      "other_or_missing": 5
+    },
+    "priorityCountsNonExclusive": {
+      "landmarks_and_named_cultural_or_company": 46,
+      "apartments_households_at_least_400": 843,
+      "bridges": 26,
+      "civic_k12_or_district_office": 364,
+      "apartments_households_100_to_399": 1294,
+      "villa_mixed_use_officetel": 2556
+    },
+    "householdCount": {
+      "nonNull": 2180,
+      "maximum": 2100,
+      "unknownOrNull": 11427
+    }
+  },
+  "templateProvenance": [
+    {
+      "family": "residential-apartment, major-apartment-complex, residential-villa, residential-officetel, residential-mixed-use",
+      "generator": "scripts/build_residential_models.py",
+      "facadeModule": "scripts/residential_facade.py",
+      "assessment": "procedural source-footprint extrusion with illustrative facade; each file has a unique seed from candidate ID, but this is not a photo-surveyed or architecturally unique likeness",
+      "evidence": "residential_geometry(..., kind, seed), _PALETTES and deterministic window/balcony rules; manifest modelingEstimates.facade explicitly says illustrative"
+    },
+    {
+      "family": "k12-school, district-public-office and early civic assets",
+      "generator": "scripts/build_civic_models.py",
+      "facadeModule": "scripts/civic_facade.py and scripts/public_facade.py",
+      "assessment": "source-footprint-informed procedural silhouettes; specialized civic geometry exists for some names, with public_facade fallback and explicit estimates",
+      "evidence": "build_civic_models.py calls civic_geometry then public_facade; manifest modelingEstimates says not photo-surveyed"
+    },
+    {
+      "family": "bridges",
+      "generator": "scripts/build_bridge_models.py",
+      "assessment": "source-outline bridge models; distinct family but audit did not establish photo likeness for every bridge",
+      "evidence": "26 bridge assets in main manifest; geometry source and model metadata require separate visual review"
+    },
+    {
+      "family": "reference landmarks and Flight assets",
+      "generator": "scripts/publish_reference_models.py and scripts/export_flight_landmarks.mjs",
+      "assessment": "authored/reference provenance only; visual faithfulness is not established until photo and geometry comparison",
+      "evidence": "125 reference assets use separate source modules. Unique paths or hashes are file identity evidence only, not likeness evidence."
+    }
+  ],
+  "unknownsAndLimits": [
+    "A unique GLB path/hash proves generated files are not byte duplicates; it does not prove real-world visual likeness.",
+    "The checked-in manifest has householdCount for only 2180 of 13607 assets, so household priority cannot classify the remaining residential assets without source joins.",
+    "Parks and heritage are not fully represented by one manifest category; this audit reports bridges and named cultural/landmark categories only.",
+    "No reliable geometry-level mesh signature was computed because that would require parsing every GLB; exact template reuse inside distinct files may remain undetected.",
+    "Generic procedural residential facades are explicitly estimates in the generator metadata and should not be described as individual real-world likenesses.",
+    "Survey apartments without reliable household counts remain pending household classification; known villa, multifamily, officetel and mixed-use categories enter remaining housing without inventing counts."
+  ],
+  "surveyInventory": {
+    "generator": "scripts/build_residential_survey.py",
+    "provenance": "docs/RESIDENTIAL_SURVEY_PROVENANCE.json",
+    "newModels": 99516,
+    "catalogTiles": 1660,
+    "categories": {
+      "multifamily": 18085,
+      "villa": 74203,
+      "officetel": 1596,
+      "apartment": 5143,
+      "mixed-use": 489
+    },
+    "visualReviewRequired": true,
+    "note": "Survey assets use Seoul UPIS source footprints and procedural illustrative facades; named/category evidence does not establish visual faithfulness."
+  },
+  "referenceInventory": {
+    "generator": "scripts/publish_reference_models.py and scripts/export_flight_landmarks.mjs",
+    "exactAssetCount": 125,
+    "queueOrigin": "reference-manifest",
+    "visualReviewRequired": true,
+    "replacementRelations": 12,
+    "supersededLegacyAssetCount": 12,
+    "note": "Named/reference provenance does not establish visual faithfulness; all remain unreviewed."
+  },
+  "currentQueue": "rebuild-queue-summary.json and rebuild-queue.jsonl.gz, generated by scripts/build_model_review_queue.py"
+}
