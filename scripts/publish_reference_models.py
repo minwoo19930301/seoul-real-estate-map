@@ -119,13 +119,18 @@ def main():
     by_id={a['id']:a for a in assets};ev_id={a['id']:a for a in evidence}
     for key, placement in placements.items():
         for fid in placement.get('explicitFootprintIds', []):
-            row=building.execute('SELECT name,geometry FROM buildings WHERE id=?',(fid,)).fetchone()
+            row=building.execute('SELECT name,geometry,parent_id FROM buildings WHERE id=?',(fid,)).fetchone()
             if not row:raise ValueError('Missing explicit source identity '+fid)
+            expected_parent=placement.get('explicitBuildingPartParentId')
+            if expected_parent and fid!=expected_parent and row[2]!=expected_parent:
+                raise ValueError('Explicit building part does not belong to reviewed parent: '+fid)
             owner='reference-flight-'+key
             shape_bounds=shape(json.loads(row[1])).bounds
             if not box(*by_id[owner]['geoBounds']).buffer(.0007).intersects(box(*shape_bounds)):raise ValueError('Explicit source identity is outside authored site')
             claims[fid]=(1,owner,None,row[0])
-            ev_id[owner].setdefault('explicitIdentityMatches',[]).append({'id':fid,'name':row[0],'basis':placement['identityMatchBasis']})
+            identity={'id':fid,'name':row[0],'basis':placement['identityMatchBasis']}
+            if expected_parent and fid!=expected_parent:identity['parentId']=row[2]
+            ev_id[owner].setdefault('explicitIdentityMatches',[]).append(identity)
     for fid,(_,owner,fraction,name) in claims.items():
         by_id[owner]['footprintIds'].append(fid);ev_id[owner]['matchedFootprints'].append({'id':fid,'name':name,'coveredFraction':round(fraction,4) if fraction is not None else None})
     for generic in legacy:
