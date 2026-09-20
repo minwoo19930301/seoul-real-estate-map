@@ -13,7 +13,8 @@ import { TransitLayer } from './transit';
 import { RenewalZones } from './renewal-zones';
 import { ScaleReferences } from './scale-references';
 import { StreetView } from './street-view';
-import { isCloseView, queryBounds } from './view-window';
+import { FlightView, type FlightState, type FlightControl } from './flight-view';
+import { isCloseView, queryBounds, setFlightQueryFocus } from './view-window';
 import { basemapSource, basemapLayers, basemapIds, basemapRoadIds } from './basemap';
 import type { CityModels, CityModelAsset } from './city-models';
 import { GREENERY_DECORATION_NOTICE, type DecorativeTree, type GreeneryInput } from './greenery';
@@ -53,8 +54,8 @@ maplibregl.setWorkerUrl(workerUrl);
 
 $('#app').innerHTML = `
   <header class="topbar">
-    <div class="identity"><span class="brandmark">${icons.contour}</span><h1>Seoul <span>Real Estate Map</span></h1></div>
-    <div class="top-actions"><div class="mode-switch" role="group" aria-label="지도 보기 모드"><button id="mode-2d" class="active" aria-pressed="true">2D 지도</button><button id="mode-25d" aria-pressed="false" disabled>2.5D 지형</button><button id="mode-eye" aria-pressed="false" disabled>사람 1인칭</button></div><button id="mobile-panel" class="mobile-only" aria-expanded="false" aria-controls="sidebar">지도 설정</button></div>
+    <div class="identity"><img class="brandmark" src="/brand/seoul-real-estate-map.svg" alt="" aria-hidden="true"/><h1>Seoul <span>Real Estate Map</span></h1></div>
+    <div class="top-actions"><div class="mode-switch" role="group" aria-label="지도 보기 모드"><button id="mode-2d" class="active" aria-pressed="true">2D 지도</button><button id="mode-25d" aria-pressed="false" disabled>2.5D 지형</button><button id="mode-eye" aria-pressed="false" disabled>사람 1인칭</button><button id="mode-flight" aria-pressed="false" disabled>비행기 모드</button></div><button id="mobile-panel" class="mobile-only" aria-expanded="false" aria-controls="sidebar">지도 설정</button></div>
   </header>
   <div class="workspace">
     <aside id="sidebar" class="sidebar" aria-label="지도 탐색 및 높이 조회">
@@ -124,6 +125,14 @@ $('#app').innerHTML = `
       <div id="map" aria-label="서울 등고선 지도"></div>
       <div class="map-tools" role="group" aria-label="지도 표시 빠른 선택"><button id="quick-buildings" aria-pressed="true">건물</button><button id="quick-roads" aria-pressed="true">차도</button><button id="quick-walkways" aria-pressed="true">보행로</button><button id="quick-landmarks" aria-pressed="true">장소 핀</button></div>
       <div id="eye-controls" class="eye-controls" hidden><span id="eye-status" role="status"></span><small id="eye-scale-note" hidden>고정 모형 · 사람 키 1.7m · 차 길이 4.3m</small><div><button id="eye-back" aria-label="길을 따라 3m 뒤로">뒤로</button><button id="eye-forward" aria-label="길을 따라 3m 앞으로">앞으로 3m</button><button id="eye-left" aria-label="왼쪽으로 보기">↶</button><button id="eye-right" aria-label="오른쪽으로 보기">↷</button><button id="eye-exit">지도 시점</button></div></div>
+      <section id="flight-controls" class="flight-controls" aria-label="비행 조종석" hidden>
+        <div class="flight-instruments"><div><small>속도</small><strong id="flight-speed">0</strong><span>km/h</span></div><div><small>고도</small><strong id="flight-altitude">—</strong><span>m</span></div><div><small>지면 위</small><strong id="flight-clearance">—</strong><span>m</span></div><div><small>방향</small><strong id="flight-heading">0</strong><span>°</span></div></div>
+        <div class="flight-reticle" aria-hidden="true"><i></i><b></b><i></i></div>
+        <div class="flight-console"><p id="flight-status" role="status"></p><div class="flight-actions"><button id="flight-pause">일시정지</button><button id="flight-recover">자세 복구</button><button id="flight-mouse">마우스 조종</button><button id="flight-exit">비행 종료</button></div>
+          <div class="flight-pad" role="group" aria-label="비행 방향과 속도"><button data-flight-control="bankLeft" aria-label="왼쪽 선회">↶</button><button data-flight-control="pitchUp">상승</button><button data-flight-control="pitchDown">하강</button><button data-flight-control="bankRight" aria-label="오른쪽 선회">↷</button><button data-flight-control="boost">가속</button><button data-flight-control="brake">감속</button></div>
+          <details class="flight-help"><summary>조종 방법</summary><p>W/S 상승·하강 · A/D 선회 · Q/E 방향타<br/>Shift 가속 · Ctrl 감속 · Space/P 일시정지<br/>L 수평 · R 자세 복구 · Esc 종료</p><p>현재 위치에서 출발합니다. 지형은 실제 배율 1×이며, 건물을 통과할 수 있는 자유 비행입니다.</p></details>
+        </div>
+      </section>
       <div class="sr-only" role="status" aria-live="polite"><span id="place-title"></span><span id="place-subtitle"></span></div>
       <div id="terrain-badge" class="terrain-badge" hidden>지형 <span id="terrain-badge-scale">4×</span></div>
       <div class="map-legend" aria-label="지도 범례"><span><i class="legend-line"></i>5 m 등고선</span><span><i class="legend-line major"></i>25 m 기준선</span><span><i class="legend-dot"></i>표고점</span></div>
@@ -173,6 +182,10 @@ let avenues: Avenues;
 let transit: TransitLayer;
 let scaleReferences: ScaleReferences;
 let streetView: StreetView;
+let flightView: FlightView;
+let flightSnapshot: { mode: boolean; scale: number; targetPitch: number; center: [number, number]; zoom: number; pitch: number; bearing: number; roll: number; elevation: number; attributionOpen: boolean } | undefined;
+let lastFlightDataAt = -Infinity;
+let lastFlightDataKey = '';
 let previousStreetScale = 4;
 let previousStreetMode = true;
 let cityModels: CityModels;
@@ -249,7 +262,7 @@ function applyVisibility() {
   if (!mapLoaded) return;
   const contours = $('#toggle-contours') as HTMLInputElement;
   const spots = $('#toggle-spots') as HTMLInputElement;
-  const close = isCloseView(map);
+  const close = isCloseView(map) || Boolean(flightSnapshot);
   for (const id of ['contours', 'contour-labels']) setLayerVisible(id, contours.checked && !close);
   for (const id of ['spots', 'spot-labels']) setLayerVisible(id, spots.checked && !close);
   setLayerVisible('selection-link-line', !close);
@@ -277,7 +290,7 @@ function updateModelVisibility() {
   ($('#toggle-city-models') as HTMLInputElement).disabled = !enabled || apartmentsOnly;
 }
 
-function scheduleGreenery() { clearTimeout(greeneryTimer); greeneryTimer = setTimeout(() => void loadGreenery(), 300); }
+function scheduleGreenery() { if (flightSnapshot) return; clearTimeout(greeneryTimer); greeneryTimer = setTimeout(() => void loadGreenery(), 300); }
 
 function generateTrees(input: GreeneryInput): Promise<DecorativeTree[]> {
   if (!treeWorker) {
@@ -304,7 +317,7 @@ function loadExclusions(bbox: string) {
 }
 
 async function loadGreenery() {
-  if (!mapLoaded || !cityModels || map.isMoving()) return;
+  if (!mapLoaded || !cityModels || map.isMoving() || flightSnapshot) return;
   if (!is25d || map.getZoom() < 14.8 || !($('#toggle-trees') as HTMLInputElement).checked || !($('#toggle-base') as HTMLInputElement).checked) {
     greeneryController?.abort(); greeneryKey = ''; cityModels.setTrees([]);
     $('#tree-status').textContent = !is25d ? '나무 모형은 2.5D에서 보입니다.' : '숲은 녹색으로 표시하며, 확대하면 나무 모형이 보입니다.';
@@ -436,6 +449,7 @@ async function loadTerrain() {
     terrainReady = true;
     ($('#mode-25d') as HTMLButtonElement).disabled = false;
     ($('#mode-eye') as HTMLButtonElement).disabled = false;
+    ($('#mode-flight') as HTMLButtonElement).disabled = false;
     if (!modeChosen) changeMode(true);
     else applyVisibility();
   } catch {
@@ -447,6 +461,7 @@ async function loadTerrain() {
 
 function changeMode(next: boolean) {
   if (!mapLoaded || (next && !terrainReady)) return;
+  exitFlightMode();
   const view = { center: map.getCenter().toArray() as [number, number], zoom: map.getZoom() };
   streetView?.exit(false);
   map.setCenterClampedToGround(true);
@@ -465,7 +480,74 @@ function changeMode(next: boolean) {
   applyVisibility();
 }
 
+function refreshMapData() {
+  applyVisibility(); loadFeaturesSoon(); buildings?.schedule(); landmarks?.schedule();
+  renewalZones?.schedule(); roads?.schedule(); cityModels?.updateTerrain(); scheduleGreenery();
+}
+
+function setFlightControls(active: boolean, scale: number) {
+  ($('#exaggeration') as HTMLInputElement).value = String(scale);
+  ($('#exaggeration') as HTMLInputElement).disabled = active;
+  ($('#pitch') as HTMLInputElement).disabled = active;
+  document.querySelectorAll<HTMLButtonElement>('[data-scale]').forEach(button => {
+    button.disabled = active; button.classList.toggle('selected', Number(button.dataset.scale) === scale);
+  });
+  $('#exaggeration-value').textContent = `${scale}×`; $('#terrain-badge-scale').textContent = `${scale}×`;
+  $('#terrain-settings').hidden = !is25d; $('#terrain-badge').hidden = !is25d || active;
+  for (const [id, selected] of [['#mode-flight', active], ['#mode-eye', false], ['#mode-25d', !active && is25d], ['#mode-2d', !active && !is25d]] as const) {
+    $(id).classList.toggle('active', selected); $(id).setAttribute('aria-pressed', String(selected));
+  }
+  $('.map-wrap').classList.toggle('flying', active);
+}
+
+function updateFlightHud(state: FlightState) {
+  $('#flight-controls').hidden = !state.active;
+  $('#flight-speed').textContent = String(Math.round(state.speedKmh));
+  $('#flight-altitude').textContent = String(Math.round(state.altitudeM));
+  $('#flight-clearance').textContent = state.clearanceM === null ? '—' : String(Math.round(state.clearanceM));
+  $('#flight-heading').textContent = String(Math.round(state.headingDeg) % 360).padStart(3, '0');
+  $('#flight-status').textContent = state.message || '서울 자유 비행';
+  $('#flight-pause').textContent = state.paused ? '계속 비행' : '일시정지';
+  $('#flight-pause').setAttribute('aria-pressed', String(state.paused));
+  document.querySelectorAll<HTMLButtonElement>('[data-flight-control]').forEach(button => { button.disabled = state.paused || state.loading; });
+}
+
+function startFlightMode() {
+  if (!mapLoaded || !terrainReady) return;
+  if (flightSnapshot) { exitFlightMode(); return; }
+  streetView.exit(true); map.stop();
+  flightSnapshot = { mode: is25d, scale: Number(($('#exaggeration') as HTMLInputElement).value), targetPitch,
+    center: map.getCenter().toArray(), zoom: map.getZoom(), pitch: map.getPitch(), bearing: map.getBearing(), roll: map.getRoll(), elevation: map.getCenterElevation(), attributionOpen: Boolean(document.querySelector<HTMLDetailsElement>('.maplibregl-ctrl-attrib')?.open) };
+  is25d = true; modeChosen = true;
+  setFlightQueryFocus(map, { lon: flightSnapshot.center[0], lat: flightSnapshot.center[1] });
+  map.setTerrain({ source: 'local-terrain', exaggeration: 1 });
+  const attribution = document.querySelector<HTMLDetailsElement>('.maplibregl-ctrl-attrib');
+  if (attribution) attribution.open = false;
+  setFlightControls(true, 1); buildings.setMode(true); cityModels?.setMode(true);
+  clearTimeout(greeneryTimer); greeneryController?.abort();
+  lastFlightDataAt = -Infinity; lastFlightDataKey = '';
+  setPanel(false); clearMarkers();
+  if (!flightView.start()) { exitFlightMode(); return; }
+  map.getCanvas().focus({ preventScroll: true });
+  refreshMapData();
+}
+
+function exitFlightMode() {
+  if (!flightSnapshot) return;
+  const saved = flightSnapshot;
+  flightView.exit(); flightSnapshot = undefined;
+  setFlightQueryFocus(map, null); is25d = saved.mode; targetPitch = saved.targetPitch;
+  map.setTerrain(is25d ? { source: 'local-terrain', exaggeration: saved.scale } : null);
+  map.jumpTo({ center: saved.center, zoom: saved.zoom, pitch: saved.pitch, bearing: saved.bearing, roll: saved.roll, elevation: saved.elevation });
+  setFlightControls(false, saved.scale);
+  const attribution = document.querySelector<HTMLDetailsElement>('.maplibregl-ctrl-attrib');
+  if (attribution) attribution.open = saved.attributionOpen;
+  ($('#pitch') as HTMLInputElement).value = String(targetPitch); $('#pitch-value').textContent = `${targetPitch}°`;
+  buildings.setMode(is25d); cityModels?.setMode(is25d); refreshMapData();
+}
+
 function moveTo(place: SearchPlace) {
+  exitFlightMode();
   streetView?.exit(false);
   currentPlace = place;
   $('#place-title').textContent = place.name;
@@ -594,6 +676,7 @@ function setPanel(open: boolean) {
 $('#search-form').addEventListener('submit', event => { event.preventDefault(); updateSearch(true); });
 $('#place-search').addEventListener('input', () => { clearTimeout(searchTimer); searchController?.abort(); ++searchRequest; searchTimer = setTimeout(() => void updateSearch(), 180); });
 $('#show-seoul').addEventListener('click', () => {
+  exitFlightMode();
   streetView?.exit(false);
   clearTimeout(searchTimer); searchController?.abort(); ++searchRequest;
   $('#search-results').replaceChildren();
@@ -603,7 +686,23 @@ $('#show-seoul').addEventListener('click', () => {
 });
 $('#mode-2d').addEventListener('click', () => { modeChosen = true; changeMode(false); });
 $('#mode-25d').addEventListener('click', () => { modeChosen = true; changeMode(true); });
-$('#mode-eye').addEventListener('click', () => { modeChosen = true; void streetView.enter(); });
+$('#mode-eye').addEventListener('click', () => { modeChosen = true; exitFlightMode(); void streetView.enter(); });
+$('#mode-flight').addEventListener('click', startFlightMode);
+$('#flight-pause').addEventListener('click', () => flightView.togglePause());
+$('#flight-recover').addEventListener('click', () => flightView.recover());
+$('#flight-exit').addEventListener('click', exitFlightMode);
+$('#flight-mouse').addEventListener('click', () => flightView.requestPointerLock());
+for (const button of document.querySelectorAll<HTMLButtonElement>('[data-flight-control]')) {
+  const control = button.dataset.flightControl as FlightControl;
+  button.addEventListener('pointerdown', event => {
+    event.preventDefault(); button.setPointerCapture(event.pointerId);
+    flightView.setControl(control, true, `pointer-${event.pointerId}`);
+  });
+  for (const type of ['pointerup', 'pointercancel', 'lostpointercapture'] as const) button.addEventListener(type, event => flightView.setControl(control, false, `pointer-${event.pointerId}`));
+  button.addEventListener('keydown', event => { if (event.code === 'Space' || event.code === 'Enter') { event.preventDefault(); flightView.setControl(control, true, `button-${event.code}`); } });
+  button.addEventListener('keyup', event => { if (event.code === 'Space' || event.code === 'Enter') { event.preventDefault(); flightView.setControl(control, false, `button-${event.code}`); } });
+  button.addEventListener('blur', () => { flightView.setControl(control, false, 'button-Space'); flightView.setControl(control, false, 'button-Enter'); });
+}
 $('#interval').addEventListener('change', loadFeaturesSoon);
 for (const [quick, control] of [['quick-buildings', 'toggle-buildings'], ['quick-roads', 'toggle-roads'], ['quick-walkways', 'toggle-walkways'], ['quick-landmarks', 'toggle-landmarks']]) {
   const checkbox = $(`#${control}`) as HTMLInputElement;
@@ -625,6 +724,7 @@ $('#render-quality').addEventListener('change', () => {
 });
 $('#toggle-scale-references').addEventListener('change', () => scaleReferences?.setEnabled(($('#toggle-scale-references') as HTMLInputElement).checked));
 $('#show-uphill').addEventListener('click', () => {
+  exitFlightMode();
   void streetView.enter([127.03911815, 37.561191125], 350.39);
   if (window.innerWidth <= 760) setPanel(false);
 });
@@ -634,6 +734,7 @@ $('#eye-left').addEventListener('click', () => streetView.turn(-1));
 $('#eye-right').addEventListener('click', () => streetView.turn(1));
 $('#eye-exit').addEventListener('click', () => streetView.exit(true));
 $('#exaggeration').addEventListener('input', () => {
+  if (flightSnapshot) return;
   const value = Number(($('#exaggeration') as HTMLInputElement).value);
   $('#exaggeration-value').textContent = `${value}×`; $('#terrain-badge-scale').textContent = `${value}×`;
   document.querySelectorAll<HTMLButtonElement>('[data-scale]').forEach(button => button.classList.toggle('selected', Number(button.dataset.scale) === value));
@@ -643,6 +744,7 @@ $('#exaggeration').addEventListener('input', () => {
 });
 document.querySelectorAll<HTMLButtonElement>('[data-scale]').forEach(button => button.addEventListener('click', () => { ($('#exaggeration') as HTMLInputElement).value = button.dataset.scale!; $('#exaggeration').dispatchEvent(new Event('input')); }));
 $('#pitch').addEventListener('input', () => {
+  if (flightSnapshot) return;
   const value = Number(($('#pitch') as HTMLInputElement).value); $('#pitch-value').textContent = `${value}°`;
   targetPitch = value;
   if (is25d) map.setPitch(value);
@@ -673,6 +775,7 @@ try {
     pixelRatio: Math.min(window.devicePixelRatio || 1, 1.25),
     style: {
       version: 8,
+      sky: { 'sky-color': '#a9cee5', 'horizon-color': '#edf3f4', 'sky-horizon-blend': 0.8 },
       glyphs: 'https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf',
       sources: {
         osm: basemapSource,
@@ -750,6 +853,19 @@ try {
     },
   });
 
+  flightView = new FlightView(map, {
+    onChange: updateFlightHud,
+    onExitRequest: exitFlightMode,
+    onPosition: position => {
+      setFlightQueryFocus(map, position);
+      $('#coordinate-readout').textContent = `비행 ${position.lat.toFixed(5)}° N · ${position.lon.toFixed(5)}° E`;
+      const key = queryBounds(map)?.map(n => n.toFixed(6)).join(',') ?? '';
+      const now = performance.now();
+      if (now - lastFlightDataAt < 1200 || key === lastFlightDataKey) return;
+      lastFlightDataAt = now; lastFlightDataKey = key; refreshMapData();
+    },
+  });
+
   // Local data must start even when the optional online basemap has pending tiles.
   map.once('style.load', () => { mapLoaded = true; buildings.init(); landmarks.init();
   avenues = new Avenues(map); void avenues.init().catch(console.error);
@@ -757,17 +873,22 @@ try {
   renewalZones = new RenewalZones(map); renewalZones.init(); void roads.init(); void loadFeatures(); void loadTerrain(); void loadBookmarks(); void loadContextMetadata(); void loadCityModels().catch(error => { resolveModelPlaces(); $('#city-model-status').textContent = '주요 빌딩 모형을 불러오지 못했습니다.'; console.error(error); }); });
   map.on('sourcedata', event => { if (event.sourceId === 'osm' && event.sourceDataType === 'content') { greeneryRevision++; scheduleGreenery(); } });
   map.on('idle', scheduleGreenery);
-  map.on('moveend', () => { const center = map.getCenter(); $('#coordinate-readout').textContent = `중심 ${center.lat.toFixed(5)}° N · ${center.lng.toFixed(5)}° E`; applyVisibility(); loadFeaturesSoon(); buildings.schedule(); landmarks.schedule(); renewalZones?.schedule(); roads.schedule(); cityModels?.updateTerrain(); scheduleGreenery(); });
+  map.on('moveend', event => {
+    if ((event as typeof event & { flightView?: boolean }).flightView || flightSnapshot) return;
+    const center = map.getCenter(); $('#coordinate-readout').textContent = `중심 ${center.lat.toFixed(5)}° N · ${center.lng.toFixed(5)}° E`;
+    refreshMapData();
+  });
   let lastCoordinatePaint = 0;
   map.on('mousemove', event => {
     const now = performance.now();
-    if (map.isMoving() || now - lastCoordinatePaint < 100) return;
+    if (flightSnapshot || map.isMoving() || now - lastCoordinatePaint < 100) return;
     lastCoordinatePaint = now;
     $('#coordinate-readout').textContent = `커서 ${event.lngLat.lat.toFixed(5)}° N · ${event.lngLat.lng.toFixed(5)}° E`;
   });
-  map.on('pitch', () => { if (is25d) { const value = Math.round(map.getPitch()); ($('#pitch') as HTMLInputElement).value = String(value); $('#pitch-value').textContent = `${value}°`; } });
-  map.on('pitchend', () => { if (is25d) targetPitch = Math.round(map.getPitch()); });
+  map.on('pitch', () => { if (is25d && !flightSnapshot) { const value = Math.round(map.getPitch()); ($('#pitch') as HTMLInputElement).value = String(value); $('#pitch-value').textContent = `${value}°`; } });
+  map.on('pitchend', () => { if (is25d && !flightSnapshot) targetPitch = Math.round(map.getPitch()); });
   map.on('click', event => {
+    if (flightSnapshot) return;
     const transitPoints = ['transit-rail-points', 'transit-bus-points', 'transit-bike-points'].filter(id => map.getLayer(id));
     if (transitPoints.length && map.queryRenderedFeatures(event.point, { layers: transitPoints }).length) return;
     if (buildings.click(event.point, [event.lngLat.lng, event.lngLat.lat])) return;
@@ -783,7 +904,7 @@ try {
     else if (sourceId === 'local-terrain') notice('지형 타일을 불러오지 못했습니다. 2D 원본 등고선으로 확인할 수 있습니다.', true);
     else console.error('Map rendering error', event.error);
   });
-  if (import.meta.env.DEV) Object.assign(window, { __SEOUL_MAP__: { map, buildings, landmarks, roads, get transit() { return transit; }, scaleReferences, streetView, get cityModels() { return cityModels; }, getData: () => lastData, inspect, getState: () => ({ mapLoaded, terrainReady, is25d, selectedCoordinate, greeneryPending: exclusionRequests.size > 0 || treeJobs.size > 0 }) } });
+  if (import.meta.env.DEV) Object.assign(window, { __SEOUL_MAP__: { map, buildings, landmarks, roads, get transit() { return transit; }, scaleReferences, streetView, flightView, get cityModels() { return cityModels; }, getData: () => lastData, inspect, getState: () => ({ mapLoaded, terrainReady, is25d, selectedCoordinate, greeneryPending: exclusionRequests.size > 0 || treeJobs.size > 0 }) } });
 } catch (error) {
   notice('이 브라우저에서 지도를 시작하지 못했습니다. WebGL을 지원하는 브라우저로 열어 주세요.', true);
   console.error(error);

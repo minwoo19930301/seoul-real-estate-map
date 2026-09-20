@@ -56,8 +56,10 @@ export class Landmarks {
         this.clear(); this.popup?.remove(); this.schedule();
       });
     }
-    this.map.on('pitchend', () => this.render());
-    this.map.on('rotateend', () => this.render());
+    // Flight refreshes these pins with its bounded data update, not every
+    // camera frame (which would destroy and recreate every DOM marker).
+    this.map.on('pitchend', event => { if (!(event as typeof event & { flightView?: boolean }).flightView) this.render(); });
+    this.map.on('rotateend', event => { if (!(event as typeof event & { flightView?: boolean }).flightView) this.render(); });
     this.map.on('resize', () => this.render());
     void this.load();
   }

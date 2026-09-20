@@ -86,8 +86,16 @@ test('mobile eye controls fit the screen and eye setup failure preserves the pre
   for (const selector of ['h1', '#mode-eye', '#mobile-panel']) {
     expect(await page.locator(selector).evaluate(element => {
       const range = document.createRange(); range.selectNodeContents(element);
-      return range.getBoundingClientRect().height;
-    })).toBeLessThan(23);
+      const box = element.getBoundingClientRect(), text = range.getBoundingClientRect();
+      const header = element.closest('.topbar')!.getBoundingClientRect();
+      const inside = text.left >= box.left - 1 && text.right <= box.right + 1
+        && text.top >= header.top && text.bottom <= header.bottom && box.right <= innerWidth;
+      const unobscured = Array.from(range.getClientRects()).filter(rect => rect.width && rect.height).every(rect => {
+        const hit = document.elementFromPoint(rect.x + rect.width / 2, rect.y + rect.height / 2);
+        return !!hit && element.contains(hit);
+      });
+      return inside && unobscured;
+    }), `${selector} text is not clipped or overlapped`).toBe(true);
   }
   for (const id of ['mode-eye', 'eye-forward', 'eye-left', 'eye-exit']) {
     expect(await page.locator(`#${id}`).evaluate(element => {

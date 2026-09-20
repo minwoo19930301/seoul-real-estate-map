@@ -2,6 +2,7 @@ import { MercatorCoordinate } from 'maplibre-gl';
 import type { Map as MapInstance, CustomLayerInterface, CustomRenderMethodInput } from 'maplibre-gl';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { getFlightQueryFocus, queryBounds } from './view-window.ts';
 import { CityModelCatalog } from './city-model-catalog.ts';
 import type { CatalogTile } from './city-model-catalog.ts';
 
@@ -103,7 +104,33 @@ export class CityModels {
   private treesDirty = true;
   private treesSignature = '';
   private abort = new AbortController();
-  private onViewChanged = () => { void this.loadNearby(); this.updateTerrain(); };
+  private flightViewTimer?: ReturnType<typeof setTimeout>;
+  private lastFlightViewUpdate = -Infinity;
+  private flightSnapshot?: { at: number; view: View };
+  private onViewChanged = (event: { type?: string; flightView?: boolean } = {}) => {
+    if (this.disposed) return;
+    if (!event.flightView) {
+      if (this.flightViewTimer !== undefined) clearTimeout(this.flightViewTimer);
+      this.flightViewTimer = undefined;
+      this.flightSnapshot = undefined;
+      this.lastFlightViewUpdate = -Infinity;
+      void this.loadNearby(); this.updateTerrain();
+      return;
+    }
+    const remaining = 1000 - (performance.now() - this.lastFlightViewUpdate);
+    if (remaining <= 0) {
+      if (this.flightViewTimer !== undefined) clearTimeout(this.flightViewTimer);
+      this.flightViewTimer = undefined;
+      this.lastFlightViewUpdate = performance.now();
+      void this.loadNearby(); this.updateTerrain();
+    } else if (this.flightViewTimer === undefined) {
+      // Coalesce frame-by-frame camera events, including a trailing update.
+      this.flightViewTimer = setTimeout(() => {
+        this.flightViewTimer = undefined;
+        this.onViewChanged({ flightView: true });
+      }, remaining);
+    }
+  };
   private onTerrainData = (event: { sourceId?: string; sourceDataType?: string }) => { if (event.sourceId === 'local-terrain' && event.sourceDataType === 'content') this.updateTerrain(); };
   private onLost = () => { this.contextLost = true; this.clearActiveEntries(); this.activeTrees = 0; this.emit(); };
   private onRestored = () => { this.contextLost = false; this.updateTerrain(); };
@@ -228,13 +255,24 @@ export class CityModels {
     for (const entry of this.trackedEntries) entry.active = false;
   }
   private viewSnapshot(): View {
+    if (getFlightQueryFocus(this.map)) {
+      const now = performance.now();
+      // Rendering also calls selection. Hold its key for a second so camera
+      // motion and 4Hz position callbacks cannot repeatedly scan the catalog.
+      if (this.flightSnapshot && now - this.flightSnapshot.at < 1000) return this.flightSnapshot.view;
+      const [west, south, east, north] = queryBounds(this.map);
+      const view = { zoom: this.map.getZoom(), lon: (west + east) / 2, lat: (south + north) / 2, west, east, south, north };
+      this.flightSnapshot = { at: now, view };
+      return view;
+    }
+    this.flightSnapshot = undefined;
     const bounds = this.map.getBounds();
     const { lng: lon, lat } = this.map.getCenter();
     return { zoom: this.map.getZoom(), lon, lat, west: bounds.getWest(), east: bounds.getEast(), south: bounds.getSouth(), north: bounds.getNorth() };
   }
   private inView(asset: CityModelAsset, view: View) {
     if (asset.category === 'bridge' && !this.bridgesVisible || ['k12-school', 'district-public-office'].includes(asset.category ?? '') && !this.publicVisible) return false;
-    if (['city-hall', 'cultural-site'].includes(asset.category ?? '') && !this.culturalVisible || asset.category === 'company-office' && !this.officesVisible) return false;
+    if (['city-hall', 'cultural-site', 'heritage', 'cultural', 'civic-cultural-landmark'].includes(asset.category ?? '') && !this.culturalVisible || asset.category === 'company-office' && !this.officesVisible) return false;
     if (view.zoom < (asset.minZoom ?? 13)) return false;
     const dx = (view.east - view.west) * 0.2;
     const dy = (view.north - view.south) * 0.2;
@@ -507,6 +545,8 @@ export class CityModels {
   private disposeResources() {
     if (this.disposed) return;
     this.disposed = true; this.catalog?.dispose(); this.abort.abort();
+    if (this.flightViewTimer !== undefined) clearTimeout(this.flightViewTimer);
+    this.flightViewTimer = undefined; this.flightSnapshot = undefined;
     this.map.off('sourcedata', this.onTerrainData); this.map.off('webglcontextlost', this.onLost); this.map.off('webglcontextrestored', this.onRestored);
     this.map.off('moveend', this.onViewChanged);
     this.syncCatalog();
