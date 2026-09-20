@@ -1,0 +1,67 @@
+{
+  "releaseSha": "1fa5fc204b67aae94afe255a4cd9ccfd5b06907a",
+  "pullRequest": "https://github.com/minwoo19930301/seoul-real-estate-map/pull/12",
+  "workflow": "https://github.com/minwoo19930301/seoul-real-estate-map/actions/runs/35527455034",
+  "url": "https://seoul-elevation.vercel.app/",
+  "checkedOn": "2026-09-21",
+  "deploymentConclusion": "success",
+  "artifactVerification": "Live release 1fa5fc204b67aae94afe255a4cd9ccfd5b06907a: health, source data, search, GeoJSON map layers, terrain, all reviewed Blender models, gzip handling, and frontend verified",
+  "bespokeFilesChecked": 41,
+  "genericCorrectionFilesChecked": 3,
+  "browser": {
+    "cases": 6,
+    "passed": 6,
+    "method": "Actual production UI search and2.5D controls; network responses checked, normal and intentional404 screenshots independently opened by root. No development-only globals assumed.",
+    "limits": "Runtime active-model ownership and render-budget assertions were run in local development; production checks independently cover UI, resource responses and visible output."
+  },
+  "screenshotsAndResponses": [
+    {
+      "path": "docs/model-audit/renders/apartments-400-public/gratte-ciel-fallback.json",
+      "sha256": "932358b14022566ab187f40bd2615e1052c23f6681a3aee6c6937c16d64e5601"
+    },
+    {
+      "path": "docs/model-audit/renders/apartments-400-public/gratte-ciel-fallback.png",
+      "sha256": "22cb6adb7bf1095711e031a72a8db83b24dc5a830c3d11309b8144ce0cfe5e4c"
+    },
+    {
+      "path": "docs/model-audit/renders/apartments-400-public/gratte-ciel-normal.json",
+      "sha256": "c5acc6216df50b9363e83d935e5b33adeb78e79a0aeb569d08f6c1124c4541bd"
+    },
+    {
+      "path": "docs/model-audit/renders/apartments-400-public/gratte-ciel-normal.png",
+      "sha256": "2199452dcbc7406083301988d548ebde416367f9d8e1e6d8a3b2a8baaeddf4dc"
+    },
+    {
+      "path": "docs/model-audit/renders/apartments-400-public/raemian-caelitus-fallback.json",
+      "sha256": "c59960b1a231a58d90ed23cae37d734cbcdb22341bdd1a7182a2538179ff4745"
+    },
+    {
+      "path": "docs/model-audit/renders/apartments-400-public/raemian-caelitus-fallback.png",
+      "sha256": "b9149a8c7c93ff541f94b8cf5fdda914b11f3557977238dcd03984678a9e1b16"
+    },
+    {
+      "path": "docs/model-audit/renders/apartments-400-public/raemian-caelitus-normal.json",
+      "sha256": "99a3f14e9eb6d5dcd58e97021f63e13e9b8d911963a0b1caf3a2cbf0e04a9281"
+    },
+    {
+      "path": "docs/model-audit/renders/apartments-400-public/raemian-caelitus-normal.png",
+      "sha256": "ec45793dcbb49a6e27c801445e49399a42b5e250255391fc3d5049f56b4292af"
+    },
+    {
+      "path": "docs/model-audit/renders/apartments-400-public/trimage-fallback.json",
+      "sha256": "7e33593e4aecb69ec7108f4dffbaadc9ee83f682c9e57e5033be4aafc05917e4"
+    },
+    {
+      "path": "docs/model-audit/renders/apartments-400-public/trimage-fallback.png",
+      "sha256": "a2c79547ef10cd416e0e3d4e3797c67d62391b1427bce261f1b0ab5289db68fc"
+    },
+    {
+      "path": "docs/model-audit/renders/apartments-400-public/trimage-normal.json",
+      "sha256": "013ae0c0ccd53b1dd339470b3cabffbad381ff0a941d9f7998adeee34941b27a"
+    },
+    {
+      "path": "docs/model-audit/renders/apartments-400-public/trimage-normal.png",
+      "sha256": "a216a50b612f950501df331070356442515720c21e8a624d5819be683bc392e9"
+    }
+  ]
+}

@@ -3,6 +3,7 @@ import { readFileSync, mkdirSync, writeFileSync } from 'node:fs';
 
 const manifest = JSON.parse(readFileSync('public/models/bespoke-manifest.json', 'utf8'));
 const samples = [
+  { site: 'lotte-castle-ivy', prefix: 'bespoke-lotte-castle-ivy-', numbers: ['101','102','connector'], center: [126.9317762,37.52018955], old: 'apt-a15088915' },
   { site: 'gratte-ciel', prefix: 'bespoke-gratte-ciel-', numbers: ['101','102','103','104'], center: [127.043016,37.577328], old: 'apt-a10023188' },
   { site: 'trimage', prefix: 'bespoke-trimage-', numbers: ['101','102','103','104'], center: [127.044915,37.538834], old: 'apt-a10026988' },
   { site: 'raemian-caelitus', prefix: 'bespoke-raemian-caelitus-', numbers: ['101','102','103'], center: [126.98002,37.51733], old: 'apt-a10027908' },

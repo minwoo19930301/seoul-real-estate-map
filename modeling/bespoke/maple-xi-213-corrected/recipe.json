@@ -1,0 +1,325 @@
+{
+  "siteId": "maple-xi-213-corrected",
+  "coordinate": {
+    "lon": 127.01380958458438,
+    "lat": 37.513267089858836
+  },
+  "ringEastNorthM": [
+    [
+      -23.405551208052515,
+      -4.514833674622878
+    ],
+    [
+      -13.962698585652436,
+      7.366207022745925
+    ],
+    [
+      -3.011154970616528,
+      -2.261501240527082
+    ],
+    [
+      10.59396983227615,
+      17.629869653615344
+    ],
+    [
+      23.2990884399466,
+      8.692424913660659
+    ],
+    [
+      3.222271573664648,
+      -17.529743198300594
+    ]
+  ],
+  "articulatedCoreRingEastNorthM": [
+    [
+      -23.405551208052515,
+      -4.514833674622878
+    ],
+    [
+      -13.962698585652436,
+      7.366207022745925
+    ],
+    [
+      -3.011154970616528,
+      -2.261501240527082
+    ],
+    [
+      -1.1064373254776,
+      0.5232906341552734
+    ],
+    [
+      0.09039163589477539,
+      -0.2953060269355774
+    ],
+    [
+      1.7230066061019897,
+      2.091658353805542
+    ],
+    [
+      0.5261776447296143,
+      2.910254955291748
+    ],
+    [
+      10.59396983227615,
+      17.629869653615344
+    ],
+    [
+      23.2990884399466,
+      8.692424913660659
+    ],
+    [
+      3.222271573664648,
+      -17.529743198300594
+    ]
+  ],
+  "coreRecessDepthMEstimate": 1.45,
+  "sourceRegister": {
+    "sourceUrl": "https://data.seoul.go.kr/dataList/OA-22424/S/1/datasetView.do",
+    "snapshot": "Preserved 2026-09-08 input; no new registry download.",
+    "row": {
+      "row_number": 575702,
+      "id": "1000000000000007632020",
+      "district": "서초구",
+      "dong": "잠원동",
+      "parcel_key": "서초구|잠원동|land|167|0",
+      "road_key": "서초구|신반포로|253|0|지상",
+      "building_dong": "213동",
+      "main_aux": "주건축물",
+      "main_use": "공동주택",
+      "other_use": "공동주택(아파트)",
+      "floors": "23",
+      "basement": "0",
+      "height": "74.5",
+      "households": "87",
+      "approval_year": "2025",
+      "roof": "(철근)콘크리트",
+      "structure": "철근콘크리트구조",
+      "source_hash": "edfb61e4807d567178c93108a11a03b09eac4b03f842acc33efaa727262b6799"
+    },
+    "rawStringSha256Verified": true,
+    "publicFields": {
+      "floors": 23,
+      "heightM": 74.5,
+      "households": 87,
+      "buildingAreaM2": 516.23,
+      "approvalDate": "2025-06-27"
+    },
+    "datumLimit": "No exact datum, per-arm floors, or decorative/plant/parapet inclusion is supplied. Do not automatically make GLB highest vertex 74.5m. Roof-top excess requires separate evidence/estimate."
+  },
+  "storeys": 23,
+  "groundStoreyM": 3.9,
+  "estimatedUpperStoreyM": 3.209090909090909,
+  "mainRoofDatumM": 74.5,
+  "datumConvention": "Use register height as nominal main roof for draft; not measured highest parapet/plant. Roof excess is independent estimate.",
+  "roofTopM": 77.83999633789062,
+  "roofRooms": [
+    {
+      "wing": 0,
+      "center": [
+        -4.967656135559082,
+        -6.838869094848633
+      ],
+      "sizeM": [
+        5.4,
+        3.6,
+        3.2
+      ],
+      "source": "March2025 official east aerial, partially occluded213 roof behind212; room size and hidden sides estimated. WithdrawnFebruarycrop is not evidence."
+    },
+    {
+      "wing": 1,
+      "center": [
+        5.15785026550293,
+        -2.978590965270996
+      ],
+      "sizeM": [
+        5.0,
+        3.3,
+        2.75
+      ],
+      "source": "March2025 official east aerial, partially occluded213 roof behind212; room size and hidden sides estimated. WithdrawnFebruarycrop is not evidence."
+    }
+  ],
+  "PV": {
+    "wing": "SW",
+    "columns": 9,
+    "rows": 3,
+    "estimatedSizeM": [
+      10.2,
+      3.8
+    ],
+    "tiltDegreesEstimate": 10
+  },
+  "faces": [
+    {
+      "edge": 0,
+      "basis": "April25 numbered213 photograph: NW road-facing end is broad blue-gray panel/window grid. Distinct from pale core behind.",
+      "windows": [
+        [
+          0.035,
+          0.245
+        ],
+        [
+          0.275,
+          0.485
+        ],
+        [
+          0.515,
+          0.725
+        ],
+        [
+          0.755,
+          0.965
+        ]
+      ],
+      "warm": [
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "edge": 1,
+      "basis": "NE inside return not clearly visible; conservative window field, not photo-approved exact elevation.",
+      "windows": [
+        [
+          0.06,
+          0.19
+        ],
+        [
+          0.27,
+          0.4
+        ],
+        [
+          0.53,
+          0.66
+        ],
+        [
+          0.76,
+          0.9
+        ]
+      ],
+      "warm": [
+        [
+          0,
+          0.055
+        ]
+      ]
+    },
+    {
+      "edge": 2,
+      "basis": "April numbered213 view: recessed pale core face behind NW glass end, narrow dark square-window vertical slots and broad blank pale panel.",
+      "windows": [
+        [
+          0.182,
+          0.218
+        ],
+        [
+          0.82,
+          0.855
+        ]
+      ],
+      "warm": []
+    },
+    {
+      "edge": 3,
+      "basis": "NE end largely blocked by 212 in March; restrained pale wall and two small core-slot groups, not old dark curtain-wall.",
+      "windows": [
+        [
+          0.16,
+          0.22
+        ],
+        [
+          0.7,
+          0.76
+        ]
+      ],
+      "warm": []
+    },
+    {
+      "edge": 4,
+      "basis": "March partial southeast pale facade, broad outside stacks and narrower centre. Lower rows obscured by212; continuation estimated.",
+      "windows": [
+        [
+          0.055,
+          0.2
+        ],
+        [
+          0.27,
+          0.41
+        ],
+        [
+          0.47,
+          0.53
+        ],
+        [
+          0.59,
+          0.65
+        ],
+        [
+          0.71,
+          0.85
+        ],
+        [
+          0.9,
+          0.97
+        ]
+      ],
+      "warm": [
+        [
+          0.44,
+          0.68
+        ]
+      ]
+    },
+    {
+      "edge": 5,
+      "basis": "March visible southwest white window bank, narrow paired central stacks; low floors partly hidden.",
+      "windows": [
+        [
+          0.045,
+          0.19
+        ],
+        [
+          0.25,
+          0.4
+        ],
+        [
+          0.46,
+          0.52
+        ],
+        [
+          0.58,
+          0.64
+        ],
+        [
+          0.7,
+          0.84
+        ],
+        [
+          0.895,
+          0.97
+        ]
+      ],
+      "warm": [
+        [
+          0.43,
+          0.67
+        ]
+      ]
+    }
+  ],
+  "sourceLedgerSha256": "bd27506917eab5fbae604794ef641ec7c95294faecb8a57b792035bba0ab83a9",
+  "uncertainties": [
+    "No as-built213 roof section/elevation obtained.",
+    "Official74.5m does not specify top datum or decorative/service-block inclusion.",
+    "Exact per-arm floor counts and whether small roof step exists remain unverified.",
+    "NE/SE rear partially obscured, window grouping simplified.",
+    "The old February crop evidence is explicitly rejected.",
+    "Ground plinth visible in April, but lobby/opening depths are not surveyed.",
+    "No old GLB loaded. Roof zero-step and nominal74.5m main-roof datum are provisional registry interpretation; wrong February identification withdrawn. March+numbered April photo now govern facade.",
+    "Ground/lobby simplified conservative solid; unseen openings not invented.",
+    "Facade photos not rectified, window widths and row heights estimates."
+  ]
+}

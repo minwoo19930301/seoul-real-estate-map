@@ -195,9 +195,10 @@ class FrozenPublicInventoryTests(unittest.TestCase):
         self.assertEqual(rows['A10023188']['householdValues'], [1152])
         self.assertEqual(rows['A10020557']['modelStatus'], 'partial')
         self.assertEqual(rows['A10020557']['expectedResidentialBuildingCount'], 29)
-        self.assertEqual(rows['A10020557']['verifiedBespokeBuildingCount'], 5)
+        self.assertEqual(rows['A10020557']['verifiedBespokeBuildingCount'], 7)
         maple213 = next(b for b in rows['A10020557']['buildings'] if b['label'] == '213')
-        self.assertIn('building_correction_review_required', maple213['verificationErrors'])
+        self.assertEqual(maple213['assetId'], 'bespoke-maple-xi-213-corrected')
+        self.assertEqual(maple213['verificationErrors'], [])
         self.assertEqual(rows['A15805114']['modelStatus'], 'coverage_review_needed')
         self.assertEqual(rows['A10022891']['eligibility'], 'eligibility_review')
 
