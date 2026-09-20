@@ -153,3 +153,22 @@ test('splitting a generic apartment compound also waits for pending or failed si
     h.m.destroy();
   }
 });
+
+test('reference and upgraded tower generations sharing a generic fallback never wait on each other', () => {
+  for (const failed of ['none', 'old-reference', 'new-b', 'both-generations']) {
+    const h = cityHarness(), [generic, old] = h.m.entries;
+    const tower = suffix => ({asset: asset('rebuilt-' + suffix, {coordinate: old.asset.coordinate,
+      footprintIds: ['tower-' + suffix], supersedes: ['ref', 'generic']}), scene: new THREE.Scene(),
+      error: null, ground: null, draws: 0, active: false});
+    const a = tower('a'), b = tower('b');
+    if (failed === 'old-reference' || failed === 'both-generations') { old.scene = undefined; old.error = 'HTTP 404'; }
+    if (failed === 'new-b' || failed === 'both-generations') { b.scene = undefined; b.error = 'HTTP 404'; }
+    h.m.entries = [generic, old, a, b];
+    h.m.render({defaultProjectionData: {mainMatrix: new THREE.Matrix4().elements}, shaderData: {variantName: 'mercator'}});
+    const newReady = failed === 'none' || failed === 'old-reference';
+    assert.equal(a.active, newReady, failed); assert.equal(b.active, newReady, failed);
+    assert.equal(old.active, failed === 'new-b', failed);
+    assert.equal(generic.active, failed === 'both-generations', failed);
+    h.m.destroy();
+  }
+});

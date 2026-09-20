@@ -22,7 +22,8 @@
   ],
   "initialFailuresAndFixes": [
     "Test initialization now waits for the asynchronous city-model layer.",
-    "Runtime replacement peer grouping previously only included reference fallbacks; broadened to every explicit retained asset ID so generic apartment compounds remain whole on partial failure."
+    "Runtime replacement peer grouping previously only included reference fallbacks; broadened to every explicit retained asset ID so generic apartment compounds remain whole on partial failure.",
+    "Independent review caught a three-generation fallback regression: retained reference ancestors are now excluded from sibling peer groups. Node fixtures cover old-reference failure, new-tower failure and both-generation failure; existing-site browser fallback cases passed."
   ],
   "files": {
     "docs/model-audit/renders/apartments-400-map/raemian-caelitus-fallback.json": "38936ff7bc30f0dbef0a986b0090f97f4650f62c500523ed35bd80fb2a67d73f",
@@ -36,6 +37,36 @@
     "docs/model-audit/renders/apartments-400-map/raemian-caelitus.png": "20e35e5ecb4df5f7489b938e027c415655b0a4355a2902273ccda15037d0a33a",
     "docs/model-audit/renders/apartments-400-map/trimage.png": "0dd483ab19caaa7b9d6dc44efb43742b815aea5f36e71fa7e67a1298af33a815",
     "docs/model-audit/renders/apartments-400-map/raemian-caelitus-fallback.png": "7f6d61fbe7b9b714a261d23c2a4de5db99c509ee95ca15d0d459f2cf8dd82a32",
-    "docs/model-audit/renders/apartments-400-map/trimage-fallback.png": "23716453dc18d1b0f24033a1160946e395a4fabff879c12ca0c75e23e34fc458"
+    "docs/model-audit/renders/apartments-400-map/trimage-fallback.png": "23716453dc18d1b0f24033a1160946e395a4fabff879c12ca0c75e23e34fc458",
+    "docs/model-audit/renders/apartments-400-map/legacy-terminal.png": "875a2e00bd520f421d59f930dd3e7f9844240ef361682776f788af4fe9c271f3",
+    "docs/model-audit/renders/apartments-400-map/legacy-skyl65.png": "d157a3a1572bc0aa3fed052c75c65fe2faf3fd6049d2c036b0acb613747c283a",
+    "docs/model-audit/renders/apartments-400-map/legacy-hyperion.png": "3622822f2cd937f6c7824df217bfd2fa2682df4bbd460bc2bf792fb158047736",
+    "docs/model-audit/renders/apartments-400-map/legacy-seoul284.png": "e919157aca34c416b82ee1c1a19f2079c47cb945a6d944005dac6de2ab2abca6",
+    "docs/model-audit/renders/apartments-400-map/legacy-maple.png": "cad57a34190535ad9442a41fa33bfb959890bd40f562a5ba03a9d4f9e9d5e2e5",
+    "docs/model-audit/renders/apartments-400-map/legacy-tower-palace.png": "2b1ef7786cdd9cb5a29fc29182092dc534fb2ed5506977e7cefd3ab1f633f10a",
+    "docs/model-audit/renders/apartments-400-map/legacy-city-hall.png": "588d3e22186014d38200483f00453adc82c64a0662dd8f87398e59e0ea27e8b6",
+    "docs/model-audit/renders/apartments-400-map/legacy-banpo-jamsu.png": "545913c2c166c61642df62904464a44d20c96edf1f77f6b84babafcc5421326d",
+    "docs/model-audit/renders/apartments-400-map/legacy-partial-failure.png": "af2a8aa50f83ca9a4bd86d119ad206ffda98c220a2cc69fdff83dc570b6f2585",
+    "docs/model-audit/renders/apartments-400-map/legacy-tower-palace-partial-failure.png": "a3ffe138c53948bde63c5b8669dbbe3c0d89663af9ed185673aae4e8991bfd80",
+    "docs/model-audit/renders/apartments-400-map/legacy-city-hall-partial-failure.png": "59c15475d936a4ba56777ff080490e641a789c69d87c22072f3557f0323c4044"
+  },
+  "legacyRegression": {
+    "normalSites": [
+      "terminal",
+      "skyl65",
+      "hyperion",
+      "seoul284",
+      "maple",
+      "tower-palace",
+      "city-hall",
+      "banpo-jamsu"
+    ],
+    "forcedHttp404": [
+      "skyl65",
+      "tower-palace",
+      "city-hall"
+    ],
+    "result": "passed",
+    "initializationRetry": "TowerPalace test was rerun after adding the same asynchronous model-layer readiness wait used by the new tests."
   }
 }

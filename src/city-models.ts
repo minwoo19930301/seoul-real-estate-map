@@ -226,9 +226,6 @@ export class CityModels {
         if (byId.has(id)) replacing.set(id, [...(replacing.get(id) ?? []), entry]);
       }
     }
-    for (const group of replacing.values()) for (const entry of group) {
-      this.replacementPeers.set(entry.asset.id, [...new Set([...(this.replacementPeers.get(entry.asset.id) ?? []), ...group])]);
-    }
     for (const entry of this.entries) {
       if (!isLandmark(entry.asset)) continue;
       const targets = new Set<string>(), pending = [...(entry.asset.supersedes ?? [])];
@@ -238,6 +235,14 @@ export class CityModels {
         targets.add(id); pending.push(...(byId.get(id)?.supersedes ?? []));
       }
       this.replacementTargets.set(entry.asset.id, targets);
+    }
+    for (const group of replacing.values()) for (const entry of group) {
+      // An older reference and its upgrade are alternative generations, not
+      // siblings. Either must remain drawable when the other generation fails.
+      const peers = group.filter(peer => peer !== entry
+        && !this.replacementTargets.get(entry.asset.id)?.has(peer.asset.id)
+        && !this.replacementTargets.get(peer.asset.id)?.has(entry.asset.id));
+      this.replacementPeers.set(entry.asset.id, [...new Set([...(this.replacementPeers.get(entry.asset.id) ?? []), ...peers])]);
     }
     this.entries.forEach((entry, index) => {
       this.entryOrder.set(entry, index);
