@@ -23,7 +23,7 @@ test('new residential types, small official complexes and source building parts 
   await page.waitForFunction(id=>{const s=(window as any).__SEOUL_MAP__.cityModels.getState();return !s.loading && s.models.some((m:any)=>m.id===id&&m.active&&m.drawCount>0);},asset.id,{timeout:35_000});
   await page.waitForLoadState('networkidle');
   const state=await page.evaluate(id=>{const s=(window as any).__SEOUL_MAP__.cityModels.getState();return {total:s.models.length,loaded:s.models.filter((m:any)=>m.loaded).length,active:s.models.filter((m:any)=>m.active).length,errors:s.models.filter((m:any)=>m.error),model:s.models.find((m:any)=>m.id===id),footprints:s.activeFootprintIds};},asset.id);
-  expect(state.total).toBe(13607);expect(state.loaded).toBeLessThanOrEqual(48);expect(state.active).toBeLessThanOrEqual(32);expect(state.errors).toEqual([]);
+  expect(state.total).toBeGreaterThanOrEqual(13607);expect(state.loaded).toBeLessThanOrEqual(48);expect(state.active).toBeLessThanOrEqual(32);expect(state.errors).toEqual([]);
   expect(state.model.height_m).toBe(asset.dimensions[1]);expect(state.model.ground_m).not.toBeNull();
   for(const bid of c.buildingIds)expect(state.footprints).toContain(bid);
   await page.screenshot({path:`tests/screenshots/residential-${i}-${c.kind}.png`});

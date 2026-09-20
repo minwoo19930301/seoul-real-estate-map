@@ -2,11 +2,14 @@ import { MercatorCoordinate } from 'maplibre-gl';
 import type { Map as MapInstance, CustomLayerInterface, CustomRenderMethodInput } from 'maplibre-gl';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { CityModelCatalog } from './city-model-catalog.ts';
+import type { CatalogTile } from './city-model-catalog.ts';
 
 export interface CityModelAsset {
   id: string; nameKo: string; model: string; dimensions: [number, number, number];
   coordinate: { lon: number; lat: number }; yawDegFromEast: number;
   heightDatum: string; sha256: string; referenceUrl: string; minZoom?: number; district?: string; category?: string; geoBounds?: [number, number, number, number];
+  footprintIds?: string[];
 }
 export interface DecorativeTree { coordinate: [number, number]; height_m: number; crown_radius_m: number }
 export interface CityModelState {
@@ -15,9 +18,10 @@ export interface CityModelState {
   models: { id: string; name: string; loaded: boolean; active: boolean; error: string | null; height_m: number; ground_m: number | null; drawCount: number }[];
   activeFootprintIds: string[]; trees: { count: number; activeCount: number; enabled: boolean; decorative: true };
   frameCount: number; lastDrawCalls: number; error: string | null;
+  catalogTotal?: number;
 }
-type Options = { assets?: CityModelAsset[]; onState?: (state: CityModelState) => void; onActiveFootprints?: (ids: string[]) => void };
-type Entry = { asset: CityModelAsset; scene?: THREE.Scene; error: string | null; ground: number | null; draws: number; active: boolean; pending?: Promise<void>; lastUsed?: number };
+type Options = { assets?: CityModelAsset[]; catalogIndex?: string; onState?: (state: CityModelState) => void; onActiveFootprints?: (ids: string[]) => void };
+type Entry = { asset: CityModelAsset; catalogTile?: string; scene?: THREE.Scene; error: string | null; ground: number | null; draws: number; active: boolean; pending?: Promise<void>; lastUsed?: number };
 type View = { zoom: number; lon: number; lat: number; west: number; east: number; south: number; north: number };
 
 /** GLB metres: +X east, +Y up, +Z south at yaw=0. Ground is already exaggerated. */
@@ -60,6 +64,8 @@ export class CityModels {
   private contextLost = false;
   private error: string | null = null;
   private entries: Entry[] = [];
+  private legacyEntries: Entry[] = [];
+  private catalog?: CityModelCatalog;
   private indexedEntries?: Entry[];
   private indexedLength = -1;
   private catalogRevision = 0;
@@ -104,16 +110,22 @@ export class CityModels {
   private async initialize() {
     this.loading = true; this.emit();
     try {
-      let manifest: { assets: CityModelAsset[] };
-      if (this.options.assets) manifest = { assets: this.options.assets };
+      let manifest: { assets: CityModelAsset[]; catalogIndex?: string };
+      if (this.options.assets) manifest = { assets: this.options.assets, catalogIndex: this.options.catalogIndex };
       else {
         const response = await fetch('/models/manifest.json', { signal: this.abort.signal });
         if (!response.ok) throw new Error('랜드마크 목록을 불러오지 못했습니다.');
-        manifest = await response.json() as { assets: CityModelAsset[] };
+        manifest = await response.json() as { assets: CityModelAsset[]; catalogIndex?: string };
       }
       if (!Array.isArray(manifest.assets) || manifest.assets.length > 25000) throw new Error('잘못된 모델 목록입니다.');
       if (new Set(manifest.assets.map(a => a.id)).size !== manifest.assets.length || manifest.assets.some(a => !a.coordinate || !Number.isFinite(a.coordinate.lon) || !Number.isFinite(a.coordinate.lat) || Math.abs(a.coordinate.lon) > 180 || Math.abs(a.coordinate.lat) > 90)) throw new Error('잘못된 모델 위치입니다.');
       this.entries = manifest.assets.map(asset => ({ asset, error: null, ground: null, draws: 0, active: false }));
+      this.legacyEntries = this.entries;
+      if (manifest.catalogIndex !== undefined) {
+        // A broken optional catalog must not prevent the preserved models loading.
+        try { this.catalog = new CityModelCatalog(manifest.catalogIndex, new Set(manifest.assets.map(a => a.id)), tiles => this.replaceCatalogTiles(tiles)); }
+        catch (error) { this.error = error instanceof Error ? error.message : String(error); }
+      }
       const layer: CustomLayerInterface = {
         id: this.layerId, type: 'custom', renderingMode: '3d',
         onAdd: (_map, gl) => {
@@ -136,6 +148,28 @@ export class CityModels {
     } catch (error) {
       if (!this.disposed) this.error = error instanceof Error ? error.message : String(error);
     } finally { this.loading = false; if (!this.disposed) { this.emit(); this.map.triggerRepaint(); } }
+  }
+  private replaceCatalogTiles(tiles: CatalogTile[]) {
+    if (this.disposed) return;
+    const current = new Map(this.entries.filter(e => e.catalogTile).map(e => [e.asset.id, e]));
+    const added = tiles.flatMap(tile => tile.assets.map(asset => {
+      const existing = current.get(asset.id);
+      current.delete(asset.id);
+      return existing ?? { asset, catalogTile: tile.id, error: null, ground: null, draws: 0, active: false };
+    }));
+    for (const entry of current.values()) if (entry.scene) disposeScene(entry.scene);
+    this.entries = [...this.legacyEntries, ...added];
+    this.syncCatalog(); this.emit(); this.map.triggerRepaint();
+  }
+  private updateCatalog() {
+    if (!this.catalog) return Promise.resolve();
+    const view = this.viewSnapshot();
+    for (const entry of this.trackedEntries) if (entry.active && !this.inView(entry.asset, view)) entry.active = false;
+    return this.catalog.update(view, !this.disposed && this.enabled && this.is25d,
+      id => [...this.trackedEntries].some(entry => entry.catalogTile === id && (entry.active || !!entry.pending)));
+  }
+  private footprints(entry: Entry) {
+    return entry.catalogTile ? entry.asset.footprintIds ?? [] : this.matches[entry.asset.id] ?? [];
   }
   private syncCatalog() {
     if (this.indexedEntries === this.entries && this.indexedLength === this.entries.length) return;
@@ -198,11 +232,14 @@ export class CityModels {
     }
   }
   private loadNearby(): Promise<void> {
+    void this.updateCatalog();
     if (this.disposed || !this.enabled || !this.is25d) return Promise.resolve();
     if (this.loadCycle) { this.loadAgain = true; return this.loadCycle; }
     this.loadCycle = Promise.resolve().then(async () => {
       do {
         this.loadAgain = false;
+        await this.updateCatalog();
+        if (this.disposed || !this.enabled || !this.is25d) break;
         const nearby = this.nearbyEntries();
         for (const entry of nearby) entry.lastUsed = ++this.useCounter;
         const queue = nearby.filter(entry => !entry.scene && !entry.error);
@@ -225,7 +262,7 @@ export class CityModels {
   private async loadEntry(entry: Entry) {
         try {
           const asset = entry.asset;
-          if (!/^[a-z0-9_-]+\.glb$/.test(asset.model) || !asset.dimensions.every(n => Number.isFinite(n) && n > 0)) throw new Error('Invalid model manifest');
+          if (!/^[a-z0-9_-]+(?:\/[a-z0-9_-]+)*\.glb$/.test(asset.model) || !asset.dimensions.every(n => Number.isFinite(n) && n > 0)) throw new Error('Invalid model manifest');
           const response = await fetch(`/models/${asset.model}`, { signal: this.abort.signal });
           if (!response.ok) throw new Error(`HTTP ${response.status}`);
           const bytes = await response.arrayBuffer();
@@ -352,13 +389,15 @@ export class CityModels {
     const pending = this.loading || !!this.loadCycle || this.entries.some(e => !!e.pending);
     const active = this.entries.filter(e => e.active).length;
     const errors = this.entries.filter(e => e.error).length;
-    const message = this.error ?? (this.contextLost ? '그래픽 연결을 복구하는 중입니다.' : !this.is25d ? '주요 건물 모델은 2.5D에서 표시합니다.' : !this.enabled ? '주요 건물 모델 표시 꺼짐' : pending ? '화면 근처의 주요 건물 모델을 불러오는 중…' : errors ? `모델 ${errors}개를 불러오지 못했습니다. 원본 건물 표시를 유지합니다.` : active ? `주요 건물 모델 ${active}개 · 모형 높이 1배 · 외관은 참고 재현` : '주요 건물 위치로 확대하면 모델이 표시됩니다.');
+    const error = this.error ?? this.catalog?.error ?? null;
+    const message = error ?? (this.contextLost ? '그래픽 연결을 복구하는 중입니다.' : !this.is25d ? '주요 건물 모델은 2.5D에서 표시합니다.' : !this.enabled ? '주요 건물 모델 표시 꺼짐' : pending ? '화면 근처의 주요 건물 모델을 불러오는 중…' : errors ? `모델 ${errors}개를 불러오지 못했습니다. 원본 건물 표시를 유지합니다.` : active ? `주요 건물 모델 ${active}개 · 모형 높이 1배 · 외관은 참고 재현` : '주요 건물 위치로 확대하면 모델이 표시됩니다.');
     return { message, enabled: this.enabled, is25d: this.is25d, loading: pending, contextLost: this.contextLost,
       models: this.entries.map(e => ({ id: e.asset.id, name: e.asset.nameKo, loaded: !!e.scene, active: e.active,
         error: e.error, height_m: e.asset.dimensions[1], ground_m: e.ground, drawCount: e.draws })),
-      activeFootprintIds: [...new Set(this.entries.filter(e => e.active).flatMap(e => this.matches[e.asset.id] ?? []))],
+      activeFootprintIds: [...new Set(this.entries.filter(e => e.active).flatMap(e => this.footprints(e)))],
       trees: { count: this.trees.length, activeCount: this.activeTrees, enabled: this.treesEnabled, decorative: true },
-      frameCount: this.frameCount, lastDrawCalls: this.drawCalls, error: this.error };
+      frameCount: this.frameCount, lastDrawCalls: this.drawCalls, error,
+      ...(this.catalog ? { catalogTotal: this.legacyEntries.length + this.catalog.assetCount } : {}) };
   }
   private emit() {
     this.syncCatalog();
@@ -366,18 +405,18 @@ export class CityModels {
     // complete catalog available through getState(), but build it for callbacks
     // only when this compact state changes (not for draw/frame counters).
     const tracked = [...this.trackedEntries].sort((a, b) => this.entryOrder.get(a)! - this.entryOrder.get(b)!);
-    const activeFootprints = [...new Set(tracked.filter(entry => entry.active).flatMap(entry => this.matches[entry.asset.id] ?? []))];
+    const activeFootprints = [...new Set(tracked.filter(entry => entry.active).flatMap(entry => this.footprints(entry)))];
     const footprints = JSON.stringify(activeFootprints);
     if (footprints !== this.lastFootprints) { this.lastFootprints = footprints; this.options.onActiveFootprints?.(activeFootprints); }
     const signature = JSON.stringify([this.catalogRevision, this.enabled, this.is25d, this.loading, !!this.loadCycle,
-      this.contextLost, this.error, this.trees.length, this.activeTrees, this.treesEnabled, footprints,
+      this.contextLost, this.error, this.catalog?.error, this.catalog?.assetCount, this.trees.length, this.activeTrees, this.treesEnabled, footprints,
       tracked.map(entry => [entry.asset.id, entry.asset.nameKo, entry.asset.dimensions[1], !!entry.scene, entry.error,
         entry.ground, entry.active, !!entry.pending])]);
     if (signature !== this.lastState) { this.lastState = signature; this.options.onState?.(this.getState()); }
   }
   private disposeResources() {
     if (this.disposed) return;
-    this.disposed = true; this.abort.abort();
+    this.disposed = true; this.catalog?.dispose(); this.abort.abort();
     this.map.off('sourcedata', this.onTerrainData); this.map.off('webglcontextlost', this.onLost); this.map.off('webglcontextrestored', this.onRestored);
     this.map.off('moveend', this.onViewChanged);
     this.syncCatalog();

@@ -131,6 +131,23 @@ test('invalid manifest fails before fetch and exits loading state with originals
   h.models.destroy();
 });
 
+test('namespaced GLB path loads the verified per-building mesh without changing its ground placement', async () => {
+  const h = harness();
+  const entry = h.models.entries.find(e => e.asset.id === 'lotte');
+  const originalAsset = entry.asset;
+  entry.scene = undefined;
+  entry.asset = { ...originalAsset, model: 'residential-survey/glb/16-55909-25393/survey-upis-42.glb' };
+  const originalFetch = globalThis.fetch, requests = [];
+  globalThis.fetch = async url => { requests.push(url); return new Response(assetBytes(originalAsset)); };
+  try {
+    h.models.setMode(true); await h.models.loadNearby(); h.models.render(h.args);
+    assert.deepEqual(requests, ['/models/residential-survey/glb/16-55909-25393/survey-upis-42.glb']);
+    const state = h.models.getState().models.find(m => m.id === 'lotte');
+    assert.equal(state.loaded, true); assert.equal(state.active, true);
+    assert.equal(state.ground_m, 80); assert.equal(state.height_m, 555);
+  } finally { globalThis.fetch = originalFetch; h.models.destroy(); }
+});
+
 test('dense district catalog limits concurrent loads and evicts old GPU scenes across navigation', async () => {
   const h = harness();
   const template = manifest.assets.find(a => a.id === 'lotte');

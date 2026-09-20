@@ -1,0 +1,22 @@
+[
+  {
+    "endpoint": "https://urban.seoul.go.kr/proxy/proxy.jsp?http://98.33.2.225:6080/arcgis/rest/services/UPIS/20200526_WFS/MapServer/86/query?",
+    "where": "DBJYDCD IN ('공동주택','업무시설') OR BLDG_NAME LIKE '%오피스텔%'",
+    "outFields": "OBJECTID,ADDRESS,SAYONG_YEA,DBJSFLOOR,BLDG_NAME,GU_CODE,DONG_CODE,BLDG_MGRNU,DBJYDCD,ROAD_NAME,DBYDETC",
+    "outSR": "4326",
+    "count": 117935,
+    "features": 117935,
+    "batches": 236,
+    "collectedAt": "2026-09-20T00:51:25.343822+00:00"
+  },
+  {
+    "endpoint": "https://urban.seoul.go.kr/proxy/proxy.jsp?http://98.33.2.225:6080/arcgis/rest/services/UPIS/20200526_WFS/MapServer/86/query?",
+    "where": "DBYDETC LIKE '%아파트%' OR DBYDETC LIKE '%다세대%' OR DBYDETC LIKE '%연립%' OR DBYDETC LIKE '%오피스텔%' OR DBYDETC LIKE '%주상복합%' OR DBYDETC LIKE '%공동주택%' OR BLDG_NAME LIKE '%빌라%' OR BLDG_NAME LIKE '%연립%' OR BLDG_NAME LIKE '%다세대%' OR BLDG_NAME LIKE '%오피스텔%' OR BLDG_NAME LIKE '%주상복합%' OR BLDG_NAME LIKE '%아파트%'",
+    "outFields": "OBJECTID,ADDRESS,SAYONG_YEA,DBJSFLOOR,BLDG_NAME,GU_CODE,DONG_CODE,BLDG_MGRNU,DBJYDCD,ROAD_NAME,DBYDETC",
+    "outSR": "4326",
+    "count": 13683,
+    "features": 13683,
+    "batches": 28,
+    "collectedAt": "2026-09-20T00:55:26.929700+00:00"
+  }
+]
