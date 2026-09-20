@@ -12,14 +12,14 @@ MODERN={'central-city','ddp','galleria-west','garden-five','gimpo-airport','goch
 CIVIC={'national-assembly','supreme-court','chung-ang-univ','ewha-ecc','hanyang-univ','hongik-univ','korea-univ-main','kyunghee-peace-hall','sejong-univ','seoultech','snu-main-gate','univ-of-seoul','yonsei-underwood'}
 def bucket(a,h):
     aid=a['id'];cat=a.get('category','');slug=aid.removeprefix('reference-flight-');name=a.get('nameKo','')
-    if aid in ORIGINAL or cat in {'landmark','company-office'} or slug in MODERN:return 'landmarks'
+    if aid in ORIGINAL or aid=='bespoke-hyperion-department-store' or cat in {'landmark','company-office'} or slug in MODERN:return 'landmarks'
     if cat in {'city-hall','k12-school','district-public-office'} or slug in CIVIC or name.endswith('구청') or name=='국회의사당':return 'civic-institutions'
     if cat in {'bridge','park','heritage','cultural-site'}:return 'bridges-parks-heritage'
     if cat=='civic-cultural-landmark':return 'bridges-parks-heritage' if name in {'독립문','봉은사 진여문','현충관'} else 'landmarks'
     if cat in {'apartment','residential-apartment','major-apartment-complex','named-apartment-site'}:
         if h is None:return 'pending-household-classification'
         return 'apartments-400-plus' if h>=400 else 'apartments-100-399' if h>=100 else 'remaining-housing'
-    if cat in {'villa','multifamily','officetel','mixed-use','residential-villa','residential-officetel','residential-mixed-use'}:return 'remaining-housing'
+    if cat in {'villa','multifamily','officetel','mixed-use','residential-villa','residential-multifamily','residential-officetel','residential-mixed-use'}:return 'remaining-housing'
     return 'pending-physical-type'
 def read(p):return json.loads(p.read_text())
 def main():
