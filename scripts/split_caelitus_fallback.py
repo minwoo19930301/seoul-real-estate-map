@@ -95,7 +95,8 @@ def main():
             for k in ['householdCount','apartmentCode']:new.pop(k,None)
         outputs.append(new)
     assert sum(x['triangles'] for x in outputs)==asset['triangles']
-    correction={'version':1,'corrections':[{'sourceId':SOURCE,'sourceSha256':EXPECTED,'sourceFootprintIds':ids,'assets':outputs}]}
+    correction=json.loads((folder/'generic-corrections.json').read_text())
+    correction['corrections']=[c for c in correction['corrections'] if c['sourceId']!=SOURCE]+[{'sourceId':SOURCE,'sourceSha256':EXPECTED,'sourceFootprintIds':ids,'assets':outputs}]
     proof={'version':1,'sourceId':SOURCE,'sourceSha256':EXPECTED,'sourceTriangles':asset['triangles'],'sourceCoordinate':anchor,'sourceFootprints':sources,'triangleCountsByFootprint':counts,'vertexConnectedComponents':len(components),'crossBuildingComponents':0,'maximumVertexDistanceOutsideSourceFootprintM':max_distance,'outputs':[{k:a[k] for k in ['id','model','sha256','bytes','triangles','bounds','footprintIds']} for a in outputs],'limits':['No new photo modeling or completion credit. Six retained neighbors include a separately named Jumbo apartment; original management-compound identity was not re-certified.','Both partitions deliberately retain the original anchor and vertex positions, preserving world geometry and original shared terrain datum.']}
     documents[folder/'generic-corrections.json']=(json.dumps(correction,ensure_ascii=False,indent=2)+'\n').encode()
     documents[ROOT/'docs/model-audit/caelitus-generic-split.json']=(json.dumps(proof,ensure_ascii=False,indent=2)+'\n').encode()

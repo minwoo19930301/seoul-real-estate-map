@@ -206,6 +206,206 @@
           }
         }
       ]
+    },
+    {
+      "sourceId": "apt-a15088614",
+      "sourceSha256": "ce66b8516ec44f261e03347aef84573fc7e2d996bc02ff028d55789b8838591d",
+      "sourceFootprintIds": [
+        "0636a278-d30b-482c-87d8-118625ee5ca3",
+        "def555d6-72b7-4ff6-a0c1-1de987396c7e",
+        "b35abb4a-e9f1-4aba-a2cd-20319ba4b91f",
+        "2dd7515f-ae2d-4bec-a511-5398d365e039"
+      ],
+      "assets": [
+        {
+          "id": "apt-a15088614",
+          "model": "generic-corrections/apt-a15088614.glb",
+          "name": "롯데캐슬엠파이어 (기존 주거2동과 연결체)",
+          "nameKo": "롯데캐슬엠파이어 (기존 주거2동과 연결체)",
+          "district": "영등포구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            83.96543884277344,
+            126.0,
+            99.15225219726562
+          ],
+          "measuredGlbDimensions": [
+            83.96543884277344,
+            126.0,
+            99.15225219726562
+          ],
+          "bounds": {
+            "min": [
+              -4.586755752563477,
+              0.0,
+              -76.57084655761719
+            ],
+            "max": [
+              79.3786849975586,
+              126.0,
+              22.581401824951172
+            ]
+          },
+          "triangles": 1967,
+          "drawCalls": 3,
+          "bytes": 120308,
+          "sha256": "02c5cd826f63f29a99feb042334993f367a475e9b46504c7f98aac3462b70b73",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.92595275,
+            "lat": 37.519990053170496,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 3,
+          "footprintIds": [
+            "0636a278-d30b-482c-87d8-118625ee5ca3",
+            "def555d6-72b7-4ff6-a0c1-1de987396c7e",
+            "b35abb4a-e9f1-4aba-a2cd-20319ba4b91f"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/APARTMENT_100_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "householdCount": 406,
+          "apartmentCode": "A15088614",
+          "searchable": true,
+          "geoBounds": [
+            126.92590080017875,
+            37.51978720071079,
+            126.92685179689038,
+            37.52067789761781
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a15088614",
+            "sourceSha256": "ce66b8516ec44f261e03347aef84573fc7e2d996bc02ff028d55789b8838591d",
+            "operation": "Exact triangle partition; unchanged vertex attributes, materials and original terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-miseong-a",
+          "model": "generic-corrections/fallback-miseong-a.glb",
+          "name": "여의도 미성 A동 (기존 추정 모형)",
+          "nameKo": "여의도 미성 A동 (기존 추정 모형)",
+          "district": "영등포구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            81.21956634521484,
+            39.0,
+            99.85292053222656
+          ],
+          "measuredGlbDimensions": [
+            81.21956634521484,
+            39.0,
+            99.85292053222656
+          ],
+          "bounds": {
+            "min": [
+              -79.3786849975586,
+              0.0,
+              -23.28207015991211
+            ],
+            "max": [
+              1.840882658958435,
+              39.0,
+              76.57084655761719
+            ]
+          },
+          "triangles": 551,
+          "drawCalls": 3,
+          "bytes": 36580,
+          "sha256": "406711b7fcc9ccf4df34e1a47c4a083c01cec6abcf15960ba69f745e70bda0a9",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.92595275,
+            "lat": 37.519990053170496,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "2dd7515f-ae2d-4bec-a511-5398d365e039"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/APARTMENT_100_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "geoBounds": [
+            126.92505370310961,
+            37.5193022023822,
+            126.92597359992753,
+            37.520199199272085
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a15088614",
+            "sourceSha256": "ce66b8516ec44f261e03347aef84573fc7e2d996bc02ff028d55789b8838591d",
+            "operation": "Exact triangle partition; unchanged vertex attributes, materials and original terrain anchor."
+          }
+        }
+      ]
     }
   ]
 }

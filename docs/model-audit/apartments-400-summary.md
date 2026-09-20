@@ -1,6 +1,6 @@
 # 서울 400세대 이상 아파트 개별 모델링 현황
 
-공식 자료 확인일: 2026-09-21. `scripts/build_apartment_bespoke_queue.py`로 생성합니다. **대상 1,417 관리코드, 주거동 전체 검토 완료 8, 미완료 1,409**입니다. 분류 보강 검토 2건과 명시적 비아파트 제외 1건은 큐에 별도로 남깁니다.
+공식 자료 확인일: 2026-09-21. `scripts/build_apartment_bespoke_queue.py`로 생성합니다. **대상 1,417 관리코드, 주거동 전체 검토 완료 10, 미완료 1,407**입니다. 분류 보강 검토 2건과 명시적 비아파트 제외 1건은 큐에 별도로 남깁니다.
 
 ## 모수와 중복
 
@@ -16,15 +16,17 @@ K-apt 서울 자료의 123코드에는 복수 주소 등에 따른 추가 147행
 
 | 관리코드 | 단지 | 상태 | 검증된 bespoke / 확인된 주거동 |
 |---|---|---|---:|
-| A10020557 | 메이플자이 | partial | 7 / 29 |
+| A10020557 | 메이플자이 | partial | 8 / 29 |
 | A10023043 | 래미안원베일리 | not_started | 0 / 미확정 |
 | A10023083 | 청량리역 롯데캐슬 SKY-L65 | complete_residential_buildings | 4 / 4 |
 | A10023188 | 청량리역 한양수자인 그라시엘 | complete_residential_buildings | 4 / 4 |
 | A10026988 | 트리마제 | complete_residential_buildings | 4 / 4 |
 | A10027908 | 래미안첼리투스 | complete_residential_buildings | 3 / 3 |
+| A12174601 | 메세나폴리스 | complete_residential_buildings | 3 / 3 |
 | A13527017 | 타워팰리스1차 | complete_residential_buildings | 4 / 4 |
 | A13585402 | 타워팰리스2차 | complete_residential_buildings | 2 / 2 |
 | A13585403 | 타워팰리스G동 | complete_residential_buildings | 1 / 1 |
+| A15088614 | 롯데캐슬엠파이어 | complete_residential_buildings | 2 / 2 |
 | A15088915 | 롯데캐슬아이비 | complete_residential_buildings | 2 / 2 |
 | A15805114 | 목동현대하이페리온 | coverage_review_needed | 2 / 2 |
 

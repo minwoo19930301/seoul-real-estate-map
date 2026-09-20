@@ -234,8 +234,13 @@
         },
         {
           "label": "204",
-          "assetId": null,
-          "photoReviewSiteId": null
+          "assetId": "bespoke-maple-xi-204",
+          "photoReviewSiteId": "maple-xi-204",
+          "buildingIdentity": {
+            "sourceUrl": "https://www.xi.co.kr/Files/cmsPage/20240205_132346_189001.jpg",
+            "retainedAssetId": "maple-xi-204",
+            "basis": "Official numbered plan and highway-row/roof-feature matching across official aerial and completedphotographs. No readable204number in crops; approximate planwidth/hiddenfaces unresolved."
+          }
         },
         {
           "label": "205",
@@ -438,6 +443,73 @@
         }
       ],
       "limits": "Scoped two residential exterior review only. Inner V placement, crown datum and hidden faces remain approximate; shared connector/podium gets no extra apartment-building credit."
+    },
+    {
+      "code": "A12174601",
+      "physicalSiteId": "mecenatpolis",
+      "expectedResidentialBuildingCount": 3,
+      "coverageApproved": true,
+      "buildingIdentitySource": "https://www.aurum.re.kr/Bits/BuildingDoc.aspx?num=5119&page=1",
+      "photoCoverageBasis": "Root independently compared architect-supplied completed photographs, roof plan, section, elevation and final six v2 Blender renders. Hash-bound source GLBs, editableblend and actual MCP execution records are published. 101/10239F and10329F are explicitly stated in EAWES supplied ANC description; numbering uses named polygons and road/compass alignment rather than unreadable plan numerals.",
+      "buildings": [
+        {
+          "label": "101",
+          "assetId": "bespoke-mecenatpolis-101",
+          "photoReviewSiteId": "mecenatpolis"
+        },
+        {
+          "label": "102",
+          "assetId": "bespoke-mecenatpolis-102",
+          "photoReviewSiteId": "mecenatpolis"
+        },
+        {
+          "label": "103",
+          "assetId": "bespoke-mecenatpolis-103",
+          "photoReviewSiteId": "mecenatpolis"
+        }
+      ],
+      "preservedOutsideApartmentCoverage": [
+        {
+          "footprintId": "b028f776-57de-460a-ad6f-4f0919b2d0e7",
+          "use": "SeAH office tower"
+        },
+        {
+          "assetId": "bespoke-mecenatpolis-residential-podium",
+          "use": "simplified shared retail base"
+        }
+      ],
+      "limits": "Photographed residential exterior scope only. Shared137.4m register is an envelope interpretation; 103height is derived, not measured. Hiddenpanes and dimensions remain approximate. Commercialbase is simplified; office/culturehall/interiors excluded."
+    },
+    {
+      "code": "A15088614",
+      "physicalSiteId": "lotte-castle-empire",
+      "expectedResidentialBuildingCount": 2,
+      "coverageApproved": true,
+      "buildingIdentitySource": "https://www.auric.or.kr/pdf_view/pdf_view2_open.asp?filename=ex_KCI_1_2004_11_77(C).pdf",
+      "photoCoverageBasis": "Site-manager article explicitly states two39F towers/406households. Root independently compared corporate Mitsubishi completedphoto, numbered appraiser aerial, multiple actual street photographs and all final six v6 renders. 101NW/102SE labels use numbered aerial rather than an unavailable officialmanagement drawing. All originalgeometry/editableblend/MCP hashes are bound to the independent review.",
+      "buildings": [
+        {
+          "label": "101",
+          "assetId": "bespoke-lotte-castle-empire-101",
+          "photoReviewSiteId": "lotte-castle-empire"
+        },
+        {
+          "label": "102",
+          "assetId": "bespoke-lotte-castle-empire-102",
+          "photoReviewSiteId": "lotte-castle-empire"
+        }
+      ],
+      "preservedOutsideApartmentCoverage": [
+        {
+          "assetId": "fallback-miseong-a",
+          "use": "separate13F MiseongA169household apartment"
+        },
+        {
+          "assetId": "bespoke-lotte-castle-empire-common",
+          "use": "shared connector and simplified retail podium"
+        }
+      ],
+      "limits": "Photographed residential exterior scope only. Shared126m register is not independently measured per tower. Crown depths and levels/rear windows approximate. Common connector is not a thirdresidentialtower; original incorrectly grouped neighbour remains preserved."
     }
   ]
 }
