@@ -14,7 +14,27 @@ test('reference validator accepts valid fixture and rejects duplicate/path/cycli
   assert.equal(valid.assets[0].quality, 'reference');
   assert.throws(() => referenceManifest({ version: 1, assets: [asset('bad.id')], places: [place] }, preserved));
   assert.throws(() => referenceManifest({ version: 1, assets: [asset('ref-a'), asset('ref-a')], places: [place] }, preserved));
-  assert.throws(() => referenceManifest({ version: 1, assets: [asset('ref-a', { supersedes: ['ref-b'] }), asset('ref-b')], places: [place] }, preserved));
+  assert.throws(() => referenceManifest({ version: 1, assets: [asset('ref-a', { supersedes: ['ref-b'] }), asset('ref-b', { supersedes: ['ref-a'] })], places: [place] }, preserved));
+  assert.throws(() => referenceManifest({ version: 1, assets: [asset('ref-a', { supersedes: ['ref-a'] })], places: [place] }, preserved));
+});
+
+test('reference validator accepts replacement generations in either catalog order', () => {
+  const chain = [asset('ref-a', {supersedes: ['generic']}), asset('ref-b', {supersedes: ['ref-a']}),
+    asset('ref-c', {supersedes: ['ref-b', 'ref-a', 'generic']})];
+  for (const assets of [chain, [...chain].reverse()]) {
+    assert.equal(referenceManifest({version: 1, assets, places: []}, preserved).assets.length, 3);
+  }
+  chain[0].supersedes.push('ref-c');
+  assert.throws(() => referenceManifest({version: 1, assets: chain, places: []}, preserved));
+});
+
+test('published catalogs accept the corrected Maple tower without dropping all bespoke models', () => {
+  const read = name => JSON.parse(readFileSync(new URL(`../public/models/${name}.json`, import.meta.url)));
+  const base = read('manifest');
+  const reference = referenceManifest(read('reference-manifest'), base.assets);
+  const bespoke = referenceManifest(read('bespoke-manifest'), [...base.assets, ...reference.assets]);
+  assert.ok(bespoke.assets.some(asset => asset.id === 'bespoke-maple-xi-213-corrected'));
+  assert.ok(bespoke.assets.some(asset => asset.id === 'bespoke-maple-xi-213'));
 });
 
 test('reference entries carry visible footprint replacement metadata', () => {

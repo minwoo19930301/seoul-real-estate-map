@@ -104,20 +104,15 @@
     {
       "code": "A15805114",
       "physicalSiteId": "mokdong-hyperion-phase-1",
-      "expectedResidentialBuildingCount": null,
+      "expectedResidentialBuildingCount": 2,
       "coverageApproved": false,
       "coverageReviewRequired": true,
-      "buildingIdentitySource": "docs/model-audit/hyperion-reference.md",
-      "photoCoverageBasis": "Existing independent review compares three modeled towers, but that does not resolve apartment vs officetel use for the two-building official management record.",
+      "buildingIdentitySource": "https://www.auric.or.kr/pdf_view/pdf_view2_open.asp?filename=ex_ksscw_200412_004.pdf",
+      "photoCoverageBasis": "The structural designer's2004 published figure2 explicitly labels A69F and C54F apartments and B59F officetel. Root independently rendered/read preview page8. A/C are the two apartment towers; existing exterior review remains separate from unresolved height/crown datum review.",
       "buildings": [
         {
           "label": "A",
           "assetId": "bespoke-hyperion-a",
-          "photoReviewSiteId": "hyperion"
-        },
-        {
-          "label": "B",
-          "assetId": "bespoke-hyperion-b",
           "photoReviewSiteId": "hyperion"
         },
         {
@@ -126,7 +121,23 @@
           "photoReviewSiteId": "hyperion"
         }
       ],
-      "reviewReason": "OA and K-apt both record two management-complex buildings; modeled A/B/C are three towers. Verify residential use and exact management-code allocation before marking complete. Department store and parking podium receive no apartment completion credit."
+      "reviewReason": "Apartment/officetel allocation resolved as A/C versus B. Keep completion pending because the structural designer's highest heights247.8/220/188.9m conflict with model256/216/201.2m and other cited sources; crown/roof datum reconciliation is still needed.",
+      "preservedOutsideApartmentCoverage": [
+        {
+          "assetId": "bespoke-hyperion-b",
+          "use": "officetel",
+          "basis": "Explicit B59F officetel label in2004 structural-designer figure2."
+        },
+        {
+          "assetId": "bespoke-hyperion-parking-podium",
+          "use": "shared-parking"
+        },
+        {
+          "assetId": "bespoke-hyperion-department-store",
+          "use": "department-store"
+        }
+      ],
+      "limits": "A/C usage assignment is confirmed, but whole-site geometry accuracy and conflicting top/roof heights are not. B and both low-rise models remain published without receiving apartment-building credit."
     },
     {
       "code": "A10020557",
@@ -134,7 +145,7 @@
       "expectedResidentialBuildingCount": 29,
       "coverageApproved": false,
       "buildingIdentitySource": "https://www.xi.co.kr/Files/cmsPage/20240205_132346_189001.jpg",
-      "photoCoverageBasis": "Six previously published towers have photo-comparison improvements, but213 requires major floor/height correction after official-register audit and receives no completion credit. Remaining23 reference towers are not bespoke completion.",
+      "photoCoverageBasis": "Seven towers207/208/209/210/211/212/213 have scoped photo-comparison improvements.207 is newly authored;213 has a fresh23-floor correction supported by literal-number ground photos and its exact register row. Remaining22 reference towers are not bespoke completion.",
       "buildings": [
         {
           "label": "101",
@@ -238,8 +249,13 @@
         },
         {
           "label": "207",
-          "assetId": null,
-          "photoReviewSiteId": null
+          "assetId": "bespoke-maple-xi-207",
+          "photoReviewSiteId": "maple-xi-207",
+          "buildingIdentity": {
+            "sourceUrl": "https://www.xi.co.kr/Files/cmsPage/20240205_132346_189001.jpg",
+            "retainedAssetId": "maple-xi-207",
+            "basis": "Official numbered site plan identifies this individual retained tower; source footprints are absent for this new construction. Official aerial and completed panorama cross-check its highway-side position."
+          }
         },
         {
           "label": "208",
@@ -293,14 +309,13 @@
         },
         {
           "label": "213",
-          "assetId": "bespoke-maple-xi-213",
-          "photoReviewSiteId": "maple-next-towers",
+          "assetId": "bespoke-maple-xi-213-corrected",
+          "photoReviewSiteId": "maple-xi-213-corrected",
           "buildingIdentity": {
             "sourceUrl": "https://www.xi.co.kr/Files/cmsPage/20240205_132346_189001.jpg",
             "retainedAssetId": "maple-xi-213",
             "basis": "Official numbered site plan identifies this individual retained tower; source footprints are absent for this new construction."
-          },
-          "reviewRequiredReason": "2026-09-21 exact-parcel numbered building register says23F/74.5m; previous authored35F/108.64m conflicts. Retain the existing file for now but remove completion credit pending numbered-photo/height correction. See maple-next-buildings.md."
+          }
         },
         {
           "label": "214",
@@ -313,7 +328,7 @@
           "photoReviewSiteId": null
         }
       ],
-      "limits": "Six visible-face/roof improvements do not certify all six exteriors or all29 towers. Remaining reference assets stay visible until reviewed replacements are published."
+      "limits": "Seven scoped visible-face/roof reviews do not certify every concealed elevation or all29towers. Existing208/209/212 floor estimates still require official-register reconciliation. Reference assets stay visible until reviewed replacements load."
     },
     {
       "code": "A10023188",
@@ -402,6 +417,27 @@
         }
       ],
       "limits": "Named residential towers only. Unseen details and photo-based facade dimensions remain approximate; landscaping/interiors and unlocated ancillary buildings excluded. Height datum limitations are preserved in site reference and review."
+    },
+    {
+      "code": "A15088915",
+      "physicalSiteId": "lotte-castle-ivy",
+      "expectedResidentialBuildingCount": 2,
+      "coverageApproved": true,
+      "buildingIdentitySource": "https://www.redauction.co.kr/gam/000212/2014/000212_20140130000564.pdf",
+      "photoCoverageBasis": "Original numbered appraiser photographs and architect orientation plan identify101/102; root independently compared final MCP-produced models to actual completed photos. Frozen source/publicGLB and blend hashes are in published-bespoke.json.",
+      "buildings": [
+        {
+          "label": "101",
+          "assetId": "bespoke-lotte-castle-ivy-101",
+          "photoReviewSiteId": "lotte-castle-ivy"
+        },
+        {
+          "label": "102",
+          "assetId": "bespoke-lotte-castle-ivy-102",
+          "photoReviewSiteId": "lotte-castle-ivy"
+        }
+      ],
+      "limits": "Scoped two residential exterior review only. Inner V placement, crown datum and hidden faces remain approximate; shared connector/podium gets no extra apartment-building credit."
     }
   ]
 }

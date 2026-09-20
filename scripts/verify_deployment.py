@@ -74,6 +74,8 @@ cultural_sites = {'bespoke-lg-art-center-seoul-discovery-lab', 'bespoke-jungmyeo
 assert cultural_sites <= {a['id'] for a in bespoke['assets']}, 'Individual cultural reconstructions missing'
 apartment_sites = {f'bespoke-{site}-{number}' for site, count in [('gratte-ciel', 4), ('trimage', 4), ('raemian-caelitus', 3)] for number in range(101, 101 + count)}
 assert apartment_sites <= {a['id'] for a in bespoke['assets']}, 'Reviewed apartment towers missing'
+next_batch = {'bespoke-maple-xi-207', 'bespoke-maple-xi-213-corrected', 'bespoke-lotte-castle-ivy-101', 'bespoke-lotte-castle-ivy-102', 'bespoke-lotte-castle-ivy-connector'}
+assert next_batch <= {a['id'] for a in bespoke['assets']}, 'Next individual apartment models missing'
 for path in ['public/models/generic-corrections.json', 'public/models/generic-corrections/apt-a14003002.glb', 'public/models/generic-corrections/fallback-caelitus-101.glb']:
     assert hashlib.sha256(read(path.removeprefix('public'))).hexdigest() == manifest['files'][path], 'Caelitus ownership partition stale: ' + path
 for asset in bespoke['assets']:

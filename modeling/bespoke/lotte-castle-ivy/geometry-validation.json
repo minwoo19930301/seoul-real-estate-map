@@ -1,0 +1,113 @@
+{
+  "siteId": "lotte-castle-ivy",
+  "assets": [
+    {
+      "id": "bespoke-lotte-castle-ivy-101",
+      "triangles": 146357,
+      "bytes": 9700456,
+      "sha256": "7a82a885ac4f31825cde8522e33d4385afaf79f0584fa442f020f1ed42dd9052",
+      "bounds": {
+        "min": [
+          -22.624492645263672,
+          0.0,
+          -24.886465072631836
+        ],
+        "max": [
+          22.77097511291504,
+          117.66999816894531,
+          24.94339370727539
+        ]
+      },
+      "maxUnitNormalError": 1.3494628725574387e-07,
+      "images": 0,
+      "allNodeTransformsBaked": true,
+      "footprintIds": [
+        "a3286371-f291-40a6-9d11-140aaf7e3294"
+      ],
+      "coordinate": {
+        "lon": 126.9315588,
+        "lat": 37.52040565
+      }
+    },
+    {
+      "id": "bespoke-lotte-castle-ivy-102",
+      "triangles": 144248,
+      "bytes": 9563564,
+      "sha256": "55836353ef8221ceeadc5e05ddf146248ff318e4979ae853a6cd3d4f3522603d",
+      "bounds": {
+        "min": [
+          -21.855884552001953,
+          0.0,
+          -23.614337921142578
+        ],
+        "max": [
+          21.70604133605957,
+          117.3699951171875,
+          23.55185317993164
+        ]
+      },
+      "maxUnitNormalError": 1.2417510442119806e-07,
+      "images": 0,
+      "allNodeTransformsBaked": true,
+      "footprintIds": [
+        "da0687ee-3cb2-478b-956d-0247418f90ef"
+      ],
+      "coordinate": {
+        "lon": 126.93198240000001,
+        "lat": 37.51998665
+      }
+    },
+    {
+      "id": "bespoke-lotte-castle-ivy-connector",
+      "triangles": 10632,
+      "bytes": 668952,
+      "sha256": "963499ee939cf8017a294283bf66254fca9184dae3b89b18351a23397ba71375",
+      "bounds": {
+        "min": [
+          -44.64833450317383,
+          0.0,
+          -51.547813415527344
+        ],
+        "max": [
+          45.241905212402344,
+          30.350000381469727,
+          46.37314987182617
+        ]
+      },
+      "maxUnitNormalError": 7.158565740184031e-08,
+      "images": 0,
+      "allNodeTransformsBaked": true,
+      "footprintIds": [
+        "2d174f84-d1c6-47b2-bce2-9759575b439d",
+        "661b7804-5f3e-4169-ad13-8dbcf2c0fead"
+      ],
+      "coordinate": {
+        "lon": 126.9317762,
+        "lat": 37.52018955
+      }
+    }
+  ],
+  "blendSha256": "640adad8d82485faa6eb4f91a73b38a9fdeec81882011e6930d879780b8f9280",
+  "mcpBuildSha256": "2d5e313fac83390a4a69ca7867483d3036ea6cad70499f3ad7a1bfe333e0ea3e",
+  "households": 445,
+  "coverage": {
+    "managementCode": "A15088915",
+    "households": 445,
+    "expectedResidentialBuildings": [
+      "101",
+      "102"
+    ],
+    "residentialAssets": [
+      "bespoke-lotte-castle-ivy-101",
+      "bespoke-lotte-castle-ivy-102"
+    ],
+    "nonResidentialComponents": [
+      "low central connector",
+      "8mcommonretailpodium"
+    ],
+    "sourceFootprintCount": 4,
+    "legacyFootprintCount": 3,
+    "note": "Existing three legacyfootprints aretwo towers plusconnector, notthree residentialtowers; new exactraw8mpodium footprint separatelyclaimed. Completeonlyresidentialexterior scope afterindependentreview."
+  },
+  "heightDatumCaveat": "112.25m is the single compound register datum, not independently measured per tower. Applying it to both main high roofs is a conservative shared-envelope interpretation; stepped wings and additional pitched crown are estimated from photographs."
+}

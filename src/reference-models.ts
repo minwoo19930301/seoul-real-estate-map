@@ -39,8 +39,23 @@ export function referenceManifest(value: unknown, preserved: CityModelAsset[]): 
     }
     ids.add(asset.id);
   }
-  const referenceIds = new Set(data.assets.map(asset => asset.id));
-  if (data.assets.some(asset => asset.supersedes?.some(id => referenceIds.has(id)))) throw Error('개별 모델 사이의 대체 관계가 잘못됐습니다.');
+  const generations = new Map(data.assets.map(asset => [asset.id, asset]));
+  const incoming = new Map(data.assets.map(asset => [asset.id, 0]));
+  for (const asset of data.assets) {
+    for (const id of asset.supersedes!) {
+      if (incoming.has(id)) incoming.set(id, incoming.get(id)! + 1);
+    }
+  }
+  const pending = data.assets.filter(asset => incoming.get(asset.id) === 0).map(asset => asset.id);
+  for (let index = 0; index < pending.length; index++) {
+    for (const id of generations.get(pending[index])!.supersedes!) {
+      if (!incoming.has(id)) continue;
+      const remaining = incoming.get(id)! - 1;
+      incoming.set(id, remaining);
+      if (remaining === 0) pending.push(id);
+    }
+  }
+  if (pending.length !== data.assets.length) throw Error('개별 모델 사이의 대체 관계가 잘못됐습니다.');
   for (const place of data.places) {
     if (!place || typeof place.id !== 'string' || typeof place.name !== 'string' || typeof place.subtitle !== 'string'
       || !Array.isArray(place.center) || place.center.length !== 2 || !place.center.every(Number.isFinite)
