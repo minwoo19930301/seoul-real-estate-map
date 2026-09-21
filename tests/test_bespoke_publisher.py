@@ -22,11 +22,22 @@ class McpEvidenceTest(unittest.TestCase):
 
     def evidence(self, calls):
         self.path.write_text(json.dumps(calls))
-        return [{'path': str(self.path.relative_to(self.root)), 'sha256': hashlib.sha256(self.path.read_bytes()).hexdigest()}]
+        return [{'tool': 'execute_blender_code', 'path': str(self.path.relative_to(self.root)), 'sha256': hashlib.sha256(self.path.read_bytes()).hexdigest()}]
 
     def test_successful_execution_is_accepted(self):
         records = self.evidence([{'tool': 'execute_blender_code', 'isError': False, 'content': [{'text': 'Code executed successfully: exported model.glb'}]}])
         publisher.validate_mcp_evidence(records, self.root)
+
+    def test_publisher_rejects_proof_metadata_that_the_completion_queue_cannot_verify(self):
+        for tool in [None, 'get_scene_info']:
+            records = self.evidence([{'tool': 'execute_blender_code', 'isError': False,
+                                      'content': [{'text': 'Code executed successfully: exported model.glb'}]}])
+            if tool is None:
+                records[0].pop('tool')
+            else:
+                records[0]['tool'] = tool
+            with self.subTest(tool=tool), self.assertRaisesRegex(ValueError, 'Invalid Blender MCP evidence'):
+                publisher.validate_mcp_evidence(records, self.root)
 
     def test_empty_evidence_and_failed_or_unrelated_calls_are_rejected(self):
         for records in [None, []]:

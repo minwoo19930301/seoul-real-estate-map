@@ -43,7 +43,7 @@ def validate_mcp_evidence(records, root=ROOT):
         raise ValueError('Recorded Blender MCP execution is required')
     audit=(root/'docs/model-audit/mcp').resolve()
     for record in records:
-        if not isinstance(record,dict) or not isinstance(record.get('path'),str):
+        if not isinstance(record,dict) or record.get('tool')!='execute_blender_code' or not isinstance(record.get('path'),str):
             raise ValueError('Invalid Blender MCP evidence record')
         path=(root/record['path']).resolve()
         if not path.is_relative_to(audit) or not path.is_file() or path.suffix!='.json':
