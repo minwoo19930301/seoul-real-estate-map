@@ -58,6 +58,30 @@ def validate_mcp_evidence(records, root=ROOT):
                 for c in call.get('content',[])) for call in calls):
             raise ValueError('MCP evidence has no successful Blender code execution')
 
+def inference_record(asset, existing, review):
+    """Keep representative facade reuse explicit and tied to reviewed source bytes."""
+    basis = asset.get('modelingBasis', 'individual-photo-review')
+    if basis == 'individual-photo-review':
+        if asset.get('inferredFromAssetIds'):
+            raise ValueError('Inferred models must declare representative-photo-inference')
+        return {}
+    if basis != 'representative-photo-inference':
+        raise ValueError('Unknown modeling basis')
+    references = asset.get('inferredFromAssetIds')
+    if not isinstance(references, list) or not references or len(set(references)) != len(references):
+        raise ValueError('Representative inference requires distinct source asset IDs')
+    if asset['id'] not in review.get('inferenceApprovedAssets', []) or not asset.get('inferenceScope'):
+        raise ValueError('Representative inference scope requires explicit visual-review acknowledgement')
+    by_id = {a['id']: a for a in existing}
+    proofs = []
+    for aid in references:
+        source = by_id.get(aid)
+        if not source or aid == asset['id'] or not source.get('sourceRecord', {}).get('sourceGlbSha256'):
+            raise ValueError('Representative source must be an existing reviewed bespoke asset')
+        proofs.append({'id': aid, 'sha256': source['sha256'], 'siteId': source['sourceRecord']['siteId']})
+    return {'modelingBasis': basis, 'inferredFrom': proofs, 'inferenceScope': asset['inferenceScope'],
+            'accuracy': 'Representative photographed facade adapted to this numbered building; inferred faces are not independently photo-verified.'}
+
 def publish(bundle_path, review_path):
     bundle_path=bundle_path.resolve(); review_path=review_path.resolve()
     if not bundle_path.is_relative_to(STAGE.resolve()):raise ValueError('Bundle must be in the bespoke staging directory')
@@ -80,6 +104,7 @@ def publish(bundle_path, review_path):
     for asset in b['assets']:
         aid=safe_id(asset['id'])
         if aid in old_ids:raise ValueError('New asset must not overwrite a preserved ID')
+        inference = inference_record(asset, current['assets'], review)
         source=(bundle_path.parent/asset['file']).resolve()
         blend=(bundle_path.parent/asset['blendSource']).resolve()
         if not source.is_relative_to(bundle_path.parent) or not blend.is_relative_to(bundle_path.parent):raise ValueError('Source path outside site')
@@ -104,8 +129,9 @@ def publish(bundle_path, review_path):
           'searchable':asset.get('searchable',False),'groundOffsetM':asset.get('groundOffsetM',0),
           'sourceRecord':{'provider':'Individual Blender MCP reconstruction','siteId':site,'sources':b['sources'],
             'blendSource':str(blend_dest.relative_to(ROOT)),'blendSha256':sha(blend),'sourceGlbSha256':sha(source),'components':asset['components'],
-            'buildingFacts':{key:asset[key] for key in ['floors','floorsBasis','heightM','heightBasis'] if key in asset},
+            'buildingFacts':{key:asset[key] for key in ['floors','floorsBasis','sourceHeightM','heightM','heightBasis'] if key in asset},
             'uncertainties':asset.get('uncertainties',[]),'accuracy':'Compared to cited photographs and site plans; unmeasured dimensions remain estimates'}}
+        output['sourceRecord'].update(inference)
         new.append(output);records.append({'id':aid,**geometry});pending.append((normalized,PUB/model))
     ids=[a['id'] for a in new]
     if len(set(ids))!=len(ids):raise ValueError('Duplicate site asset IDs')

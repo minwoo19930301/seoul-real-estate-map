@@ -168,6 +168,24 @@ class QueueRulesTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, 'Duplicate building'):
                 run_build([record()], coverage, [asset], proof, root)
 
+    def test_representative_inference_is_counted_separately_and_source_changes_revoke_credit(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp); asset, proof, coverage = make_proof(root)
+            source_record = asset['sourceRecord']
+            source_record.update(modelingBasis='representative-photo-inference',
+                          inferenceScope='Facade reused, distinct numbered footprint.',
+                          inferredFrom=[{'id': 'bespoke-source', 'siteId': 'representative', 'sha256': 'c' * 64}])
+            proof['sites']['test']['review']['inferenceApprovedAssets'] = [asset['id']]
+            proof['sites']['representative'] = {'assets': [{'id': 'bespoke-source', 'sha256': 'c' * 64}]}
+            queue, summary = run_build([record()], coverage, [asset], proof, root)
+            self.assertEqual(queue[0]['modelStatus'], 'complete_residential_buildings')
+            self.assertEqual(queue[0]['representativeInferredBuildingCount'], 1)
+            self.assertEqual(summary['representativeInferredBuildingCount'], 1)
+            proof['sites']['representative']['assets'][0]['sha256'] = 'd' * 64
+            self.assertIn('representative_source_proof_mismatch', verify_asset(root, asset, proof))
+            del proof['sites']['test']['review']['inferenceApprovedAssets']
+            self.assertIn('representative_inference_review_missing', verify_asset(root, asset, proof))
+
 
 class FrozenPublicInventoryTests(unittest.TestCase):
     @classmethod
@@ -195,10 +213,10 @@ class FrozenPublicInventoryTests(unittest.TestCase):
         self.assertEqual(rows['A10023188']['householdValues'], [1152])
         self.assertEqual(rows['A10020557']['modelStatus'], 'partial')
         self.assertEqual(rows['A10020557']['expectedResidentialBuildingCount'], 29)
-        self.assertEqual(rows['A10020557']['verifiedBespokeBuildingCount'], 11)
-        self.assertEqual(rows['A10022556']['modelStatus'], 'partial')
+        self.assertEqual(rows['A10020557']['verifiedBespokeBuildingCount'], 13)
+        self.assertEqual(rows['A10022556']['modelStatus'], 'complete_residential_buildings')
         self.assertEqual(rows['A10022556']['expectedResidentialBuildingCount'], 6)
-        self.assertEqual(rows['A10022556']['verifiedBespokeBuildingCount'], 2)
+        self.assertEqual(rows['A10022556']['verifiedBespokeBuildingCount'], 6)
         self.assertEqual(rows['A10023043']['verifiedBespokeBuildingCount'], 0)
         maple213 = next(b for b in rows['A10020557']['buildings'] if b['label'] == '213')
         self.assertEqual(maple213['assetId'], 'bespoke-maple-xi-213-corrected')

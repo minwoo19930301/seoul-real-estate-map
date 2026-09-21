@@ -1,6 +1,6 @@
 # 서울 400세대 이상 아파트 개별 모델링 현황
 
-공식 자료 확인일: 2026-09-21. `scripts/build_apartment_bespoke_queue.py`로 생성합니다. **대상 1,417 관리코드, 주거동 전체 검토 완료 13, 미완료 1,404**입니다. 분류 보강 검토 2건과 명시적 비아파트 제외 1건은 큐에 별도로 남깁니다.
+공식 자료 확인일: 2026-09-21. `scripts/build_apartment_bespoke_queue.py`로 생성합니다. **대상 1,417 관리코드, 주거동 전체 검토 완료 14, 미완료 1,403**입니다. 분류 보강 검토 2건과 명시적 비아파트 제외 1건은 큐에 별도로 남깁니다.
 
 ## 모수와 중복
 
@@ -14,25 +14,27 @@ K-apt 서울 자료의 123코드에는 복수 주소 등에 따른 추가 147행
 
 관리코드별 명시적인 주거동 목록, 동별 bespoke ID, 실제 사진·배치도 대조 기록, 검토된 원본 GLB SHA, 게시 GLB SHA, 편집 .blend SHA, 실제 MCP 실행 기록 SHA가 모두 일치해야 완료로 계산합니다. 기존 generic/reference 모델, 동일색·높은 삼각형 수, 파일 생성만으로 완료 처리하지 않습니다. 해시 불일치나 사라진 파일은 완료를 자동 해제합니다.
 
-| 관리코드 | 단지 | 상태 | 검증된 bespoke / 확인된 주거동 |
-|---|---|---|---:|
-| A10020557 | 메이플자이 | partial | 11 / 29 |
-| A10022556 | 래미안 원펜타스 | partial | 2 / 6 |
-| A10023043 | 래미안원베일리 | not_started | 0 / 미확정 |
-| A10023083 | 청량리역 롯데캐슬 SKY-L65 | complete_residential_buildings | 4 / 4 |
-| A10023188 | 청량리역 한양수자인 그라시엘 | complete_residential_buildings | 4 / 4 |
-| A10026988 | 트리마제 | complete_residential_buildings | 4 / 4 |
-| A10027908 | 래미안첼리투스 | complete_residential_buildings | 3 / 3 |
-| A12174601 | 메세나폴리스 | complete_residential_buildings | 3 / 3 |
-| A13527017 | 타워팰리스1차 | complete_residential_buildings | 4 / 4 |
-| A13585402 | 타워팰리스2차 | complete_residential_buildings | 2 / 2 |
-| A13585403 | 타워팰리스G동 | complete_residential_buildings | 1 / 1 |
-| A13822301 | 갤러리아팰리스 | complete_residential_buildings | 3 / 3 |
-| A15088614 | 롯데캐슬엠파이어 | complete_residential_buildings | 2 / 2 |
-| A15088915 | 롯데캐슬아이비 | complete_residential_buildings | 2 / 2 |
-| A15805111 | 목동현대하이페리온2차 | complete_residential_buildings | 4 / 4 |
-| A15805114 | 목동현대하이페리온 | coverage_review_needed | 2 / 2 |
-| A15870101 | 목동트라팰리스 | complete_residential_buildings | 4 / 4 |
+2026-09-22 사용자 지시에 따라 대표 동의 사진 검토된 외관을 같은 단지의 다른 동에 적용할 수 있습니다. 동별 배치·층수·윤곽은 따로 유지하며, 대표 모델 ID·해시와 추정 범위를 기록합니다. 표의 대표 외관 추정 동은 각 동의 모든 면을 사진으로 확인했다는 뜻이 아닙니다.
+
+| 관리코드 | 단지 | 상태 | 검증된 bespoke / 확인된 주거동 | 대표 외관 추정 동 |
+|---|---|---|---:|---:|
+| A10020557 | 메이플자이 | partial | 13 / 29 | 2 |
+| A10022556 | 래미안 원펜타스 | complete_residential_buildings | 6 / 6 | 4 |
+| A10023043 | 래미안원베일리 | not_started | 0 / 미확정 | 0 |
+| A10023083 | 청량리역 롯데캐슬 SKY-L65 | complete_residential_buildings | 4 / 4 | 0 |
+| A10023188 | 청량리역 한양수자인 그라시엘 | complete_residential_buildings | 4 / 4 | 0 |
+| A10026988 | 트리마제 | complete_residential_buildings | 4 / 4 | 0 |
+| A10027908 | 래미안첼리투스 | complete_residential_buildings | 3 / 3 | 0 |
+| A12174601 | 메세나폴리스 | complete_residential_buildings | 3 / 3 | 0 |
+| A13527017 | 타워팰리스1차 | complete_residential_buildings | 4 / 4 | 0 |
+| A13585402 | 타워팰리스2차 | complete_residential_buildings | 2 / 2 | 0 |
+| A13585403 | 타워팰리스G동 | complete_residential_buildings | 1 / 1 | 0 |
+| A13822301 | 갤러리아팰리스 | complete_residential_buildings | 3 / 3 | 0 |
+| A15088614 | 롯데캐슬엠파이어 | complete_residential_buildings | 2 / 2 | 0 |
+| A15088915 | 롯데캐슬아이비 | complete_residential_buildings | 2 / 2 | 0 |
+| A15805111 | 목동현대하이페리온2차 | complete_residential_buildings | 4 / 4 | 0 |
+| A15805114 | 목동현대하이페리온 | coverage_review_needed | 2 / 2 | 0 |
+| A15870101 | 목동트라팰리스 | complete_residential_buildings | 4 / 4 | 0 |
 
 타워팰리스·SKY-L65의 완료는 명시된 주거타워에 한정합니다. 공용 저층부·스포츠센터·조경까지 완공 모델이라는 뜻이 아닙니다. 메이플은 일부 사진 대조 개선만 되어 전체 29동 완료가 아닙니다. 하이페리온은 구조설계자의 배치도로 A/C가 아파트, B가 오피스텔임을 확인했습니다. 아파트 수는 A/C 두 동만 계산하며, 기존 높이와 2004년 구조자료의 최고높이 기준 대조가 남아 완료를 보류합니다.
 

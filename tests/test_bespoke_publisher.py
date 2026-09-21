@@ -71,5 +71,30 @@ class StagingPathTest(unittest.TestCase):
                     publisher.publish(outside, review)
 
 
+class RepresentativeInferenceTest(unittest.TestCase):
+    def setUp(self):
+        self.source = {'id': 'bespoke-representative', 'sha256': 'a' * 64,
+                       'sourceRecord': {'siteId': 'reviewed-site', 'sourceGlbSha256': 'b' * 64}}
+        self.asset = {'id': 'bespoke-sibling', 'modelingBasis': 'representative-photo-inference',
+                      'inferredFromAssetIds': [self.source['id']],
+                      'inferenceScope': 'Facade language reused; numbered footprint and height are independent.'}
+        self.review = {'inferenceApprovedAssets': [self.asset['id']]}
+
+    def test_representative_bytes_and_estimated_scope_survive_publication(self):
+        result = publisher.inference_record(self.asset, [self.source], self.review)
+        self.assertEqual(result['inferredFrom'], [{'id': self.source['id'], 'sha256': 'a' * 64, 'siteId': 'reviewed-site'}])
+        self.assertEqual(result['inferenceScope'], self.asset['inferenceScope'])
+        self.assertIn('not independently photo-verified', result['accuracy'])
+
+    def test_unknown_source_and_unacknowledged_inference_are_rejected(self):
+        with self.assertRaisesRegex(ValueError, 'existing reviewed'):
+            publisher.inference_record(self.asset, [], self.review)
+        with self.assertRaisesRegex(ValueError, 'acknowledgement'):
+            publisher.inference_record(self.asset, [self.source], {})
+        self.asset['modelingBasis'] = 'individual-photo-review'
+        with self.assertRaisesRegex(ValueError, 'must declare'):
+            publisher.inference_record(self.asset, [self.source], self.review)
+
+
 if __name__ == '__main__':
     unittest.main()

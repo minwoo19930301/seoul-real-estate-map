@@ -145,7 +145,7 @@
       "expectedResidentialBuildingCount": 29,
       "coverageApproved": false,
       "buildingIdentitySource": "https://www.xi.co.kr/Files/cmsPage/20240205_132346_189001.jpg",
-      "photoCoverageBasis": "Eleven named towers 203/204/207/208/209/210/211/212/213/214/215 have independent Blender MCP and scoped photo-comparison records. Tower 213 uses its corrected 23-floor reconstruction, and 203 uses its official 19-floor record. The remaining eighteen reference towers are not bespoke completion; hidden facade, footprint scale and rooftop datum limitations remain in each review.",
+      "photoCoverageBasis": "13 of29 numbered residential buildings have reviewed Blender assets;205/206 use explicitly recorded representative facade inference. The remaining16 buildings retain legacy models. This is not whole-complex completion.",
       "buildings": [
         {
           "label": "101",
@@ -249,13 +249,23 @@
         },
         {
           "label": "205",
-          "assetId": null,
-          "photoReviewSiteId": null
+          "assetId": "bespoke-maple-xi-205",
+          "photoReviewSiteId": "maple-205-206",
+          "buildingIdentity": {
+            "sourceUrl": "https://www.xi.co.kr/Files/cmsPage/20240205_132346_189001.jpg",
+            "retainedAssetId": "maple-xi-205",
+            "basis": "Numbered developer plan and exact public register identify this building; original anchor retained. Representative facade inference recorded in sourceRecord."
+          }
         },
         {
           "label": "206",
-          "assetId": null,
-          "photoReviewSiteId": null
+          "assetId": "bespoke-maple-xi-206",
+          "photoReviewSiteId": "maple-205-206",
+          "buildingIdentity": {
+            "sourceUrl": "https://www.xi.co.kr/Files/cmsPage/20240205_132346_189001.jpg",
+            "retainedAssetId": "maple-xi-206",
+            "basis": "Numbered developer plan and exact public register identify this building; original anchor retained. Representative facade inference recorded in sourceRecord."
+          }
         },
         {
           "label": "207",
@@ -630,25 +640,29 @@
       "code": "A10022556",
       "physicalSiteId": "raemian-onepentas",
       "expectedResidentialBuildingCount": 6,
-      "coverageApproved": false,
+      "coverageApproved": true,
       "buildingIdentitySource": "https://www.raemian.co.kr/sales/sub/s/onepentas?menuSeq=10051",
-      "photoCoverageBasis": "105 and 106 independently reviewed against numbered completed photographs and official unit-floor charts. Four other residential buildings remain unfinished.",
+      "photoCoverageBasis": "All six numbered residential buildings have reviewed Blender assets.105/106 provide the photographed representative facade;101–104 adapt that facade to distinct retained footprints and official unit-floor chart massing. Four inferred buildings are counted separately.",
       "buildings": [
         {
           "label": "101",
-          "assetId": null
+          "assetId": "bespoke-raemian-onepentas-101",
+          "photoReviewSiteId": "raemian-onepentas-remaining"
         },
         {
           "label": "102",
-          "assetId": null
+          "assetId": "bespoke-raemian-onepentas-102",
+          "photoReviewSiteId": "raemian-onepentas-remaining"
         },
         {
           "label": "103",
-          "assetId": null
+          "assetId": "bespoke-raemian-onepentas-103",
+          "photoReviewSiteId": "raemian-onepentas-remaining"
         },
         {
           "label": "104",
-          "assetId": null
+          "assetId": "bespoke-raemian-onepentas-104",
+          "photoReviewSiteId": "raemian-onepentas-remaining"
         },
         {
           "label": "105",
@@ -661,7 +675,7 @@
           "photoReviewSiteId": "raemian-onepentas"
         }
       ],
-      "limits": "Official112.85m register height has not been tied to a roof/eaves/mechanical reference drawing. Model uses it as highest residential roof datum and adds photo-estimated servicehead to118.75m; do not label118.75mofficial. Lowarm floors confirmed byofficial unit chart; armcut and setback distances estimated within retained footprint, not measuredCAD. 105/106 north-west and concealed faces are not independently photo-identified; nominal smallservice-window patterns are illustrative inference, explicitly mapped in face-evidence-map.json. Unconfirmedserviceboxesonthe26F/29Flowroofsareomitted. Colors and metal/member thicknesses visuallyestimated from2024Junephotos. Firstphase only105/106of6;101–104andtheirbridge notmodeledhere;neighborPrestige 126unclaimed."
+      "limits": "All six residential buildings modeled, not full site landscaping/interiors. Source building heights and estimated machinery tops are distinct; exact roof datum unresolved. Internal wing boundaries and bridge dimensions are estimates.101–104 use representative facade inference.105/106 concealed faces are also estimated. Neighbor Firstige126 is unclaimed."
     }
   ]
 }
