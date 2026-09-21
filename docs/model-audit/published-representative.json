@@ -722,6 +722,114 @@
         "representative-a15703309",
         "representative-a13381608"
       ]
+    },
+    "representative-batch06": {
+      "constructionMethod": "representative-photo-informed",
+      "completionCredit": false,
+      "review": {
+        "siteId": "representative-batch06",
+        "status": "coarse-visually-reviewed",
+        "comparisons": [
+          {
+            "sourceId": "A15703308-source-1",
+            "observation": "Both elevated renders preserve nine 15-floor slab footprints. White-gray walls, broad blank ends and repeated horizontal balcony/window bands agree broadly with the supplied 307/308 street photo. Render windows are regular planar approximations; projecting balcony stacks, individual air conditioners and recessed stair slots are not reproduced. Tower numbers in the photo do not verify all source tower identities."
+          },
+          {
+            "sourceId": "A10026852-source-1",
+            "observation": "Both elevated renders show three tall articulated source footprints with dense vertical window stacks and gray-white walls, broadly consistent with the official photograph. Recorded 137/145/137m heights are retained. Photo crowns have taller vertical fins and curved/recessed profiles; the low stepped plant enclosures are a coarse simplification. Podium and terraces are absent; exact tower-to-photo correspondence remains unverified."
+          },
+          {
+            "sourceId": "A15279101-source-1",
+            "observation": "Both elevated renders retain all 18 source blocks and show pale walls with orange vertical window panels matching the news photograph at representative scale. Photo includes red lower panel transitions, deeply recessed balconies and a glazed courtyard elevator that are omitted. The source 31/33m heights and 11-13 floor records are retained despite the research summary saying 6-12 floors; the visible photo supports mid-rise massing but cannot verify every tower."
+          }
+        ],
+        "views": [
+          {
+            "file": "docs/model-audit/renders/representative/representative-batch06/A15703308-overview.png",
+            "description": "Southeast elevated overview",
+            "sha256": "c37accd11101ca22fc7c4996dab8ceb9c8ecdda25c2118f9ac66307b7422ba23"
+          },
+          {
+            "file": "docs/model-audit/renders/representative/representative-batch06/A15703308-reverse.png",
+            "description": "Northwest reverse elevated overview",
+            "sha256": "76be119af673708df058143865f4a4b1fd04f0b093ccc1f7a89fe26a704df001"
+          },
+          {
+            "file": "docs/model-audit/renders/representative/representative-batch06/A10026852-overview.png",
+            "description": "Southeast elevated overview",
+            "sha256": "635e374a9a043017029e983e51188417c4ce4869293fa338d6c10f03ea971a8c"
+          },
+          {
+            "file": "docs/model-audit/renders/representative/representative-batch06/A10026852-reverse.png",
+            "description": "Northwest reverse elevated overview",
+            "sha256": "fe4258b855532636f34b2d86279298b7eb308fccdb838fe31d0827cec372247c"
+          },
+          {
+            "file": "docs/model-audit/renders/representative/representative-batch06/A15279101-overview.png",
+            "description": "Southeast elevated overview",
+            "sha256": "5da46f7ef6d3ba63eaeacfc5a9a4a1a733dfa164274e3351723bd2cb3f90f7fc"
+          },
+          {
+            "file": "docs/model-audit/renders/representative/representative-batch06/A15279101-reverse.png",
+            "description": "Northwest reverse elevated overview",
+            "sha256": "c284c16023e3fe88539c9d0b2ccafe59d0a6397d9d07f52b72e52090a91abc06"
+          }
+        ],
+        "limitations": [
+          "Representative facade only; exact tower correspondence and unseen elevations are unresolved. Source counts do not prove tower identity.",
+          "Source footprint, orientation and recorded heights retained; missing heights explicitly estimated at 3m per source floor.",
+          "Terrain, landscaping, podiums and individual balcony alterations are omitted."
+        ],
+        "reviewedInputs": {
+          "outputs/A15703308.glb": "118688cf519b38c4d0f02bc41bd366b99e93a50cbcc5c33ece5067de0b2c6967",
+          "outputs/representative-batch06.blend": "678435da5491a8f75d5c912e69a12bfe70fa1c06c61179e470be9176f418da16",
+          "selected-input.json": "261e634ab2d7f0ddacaae9390fddfcda475cbcc3cc1604927ef98b9d18d01926",
+          "design-recipes.json": "4c35a0a01cbc1a34a32357bb5be3dd45bcfed352bd82ec3e14c1e1951785ca37",
+          "build.py": "ad2795c2aa35d3b1691ba42b5b114e3796519634b4cc147f14930d1df355daa8",
+          "export-compact.py": "9819e048f509c3136db7eed89fee5f4e619ae0619ae793cd4e258cc2ece872c5",
+          "references/A15703308/onsu.jpg": "d1e72aa1136a18f5e78b62b7131287c44d12fbd127fe26769f44e530eb9de96b",
+          "outputs/A10026852.glb": "438b61b880e56882406bcdae32a4f5e1f6e8dd51b6faf3b05ead1e4f3cefaf3a",
+          "references/A10026852/raemian.png": "4f417ddc78f9f4c69d15569085ca4b015021dc804d5329509523b299490ecc99",
+          "outputs/A15279101.glb": "4534403b83d79bf0a9b24e15edf6269ca8a5061fae8d0b10cc071edab64a8d1a",
+          "references/A15279101/onsu.jpg": "8712c93b11637a8a64eacfb0ce85631117335948099ec733416750fb253128bf"
+        },
+        "completionCredit": false
+      },
+      "sources": [
+        {
+          "id": "A15703308-source-1",
+          "url": "https://hogangnono.com/apt/10W55",
+          "inputFile": "references/A15703308/onsu.jpg",
+          "sha256": "d1e72aa1136a18f5e78b62b7131287c44d12fbd127fe26769f44e530eb9de96b"
+        },
+        {
+          "id": "A10026852-source-1",
+          "url": "https://www.secc.co.kr/en/business/portfolio/housing/213",
+          "inputFile": "references/A10026852/raemian.png",
+          "sha256": "4f417ddc78f9f4c69d15569085ca4b015021dc804d5329509523b299490ecc99"
+        },
+        {
+          "id": "A15279101-source-1",
+          "url": "https://kr.aving.net/news/articleView.html?idxno=134711",
+          "inputFile": "references/A15279101/onsu.jpg",
+          "sha256": "8712c93b11637a8a64eacfb0ce85631117335948099ec733416750fb253128bf"
+        }
+      ],
+      "mcpEvidence": [
+        {
+          "path": "docs/model-audit/mcp/representative-batch06-mcp-build-evidence.json",
+          "sha256": "eea90872f6d348fd91e7558b6a23d859c1127822df3bc524017297c0673487ed"
+        },
+        {
+          "path": "docs/model-audit/mcp/representative-batch06-mcp-validation-evidence.json",
+          "sha256": "1bcd90168c30dd7f96b494fbb6b98030f5ddbcfcb1bdd01ec1e5c765bcec0f4f"
+        }
+      ],
+      "assets": [
+        "representative-a15703308",
+        "representative-a10026852",
+        "representative-a15279101"
+      ]
     }
   }
 }
