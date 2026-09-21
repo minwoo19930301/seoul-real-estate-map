@@ -42273,6 +42273,699 @@
           "sha256": "e5cb1312dc6fc7517dfbf1d54b92d9f677baf1a6a2a057727bb290ffdbbe6bfc"
         }
       ]
+    },
+    "acro-riverview-101-representative": {
+      "sources": [
+        {
+          "url": "https://img.kr.gcp-karroter.net/realty/realty/articles/1cc205df-e746-4d30-9418-aafc37c7bfec.jpeg",
+          "sha256": "16ab5a8f40bc47498ba8149cb75d33371bfe42f924af4fcfcdc99ae1b6e0b86f",
+          "scope": "complex",
+          "observations": "Root directly viewed the1440x1080 listing-card image; image-of-screen moire and cropped foregroundroof limit measurements. Numbered tower/cameraorientation unconfirmed."
+        },
+        {
+          "url": "https://realty.daangn.com/complexes/10707418/reviews/19303",
+          "observations": "Actual archived page labels the image listing card AcroRiverviewShinbanpo and contains matching thumbnail/full BigPictureImage UUID. Not proven residentreview photograph."
+        },
+        {
+          "url": "https://api.openstreetmap.org/api/0.6/way/413354844/full",
+          "observations": "Root independently reconstructed named AcroRiverview residential boundary; not cadastral/site-plan survey."
+        },
+        {
+          "dataset": "Exact numbered building-register rows and OSM source polygons",
+          "snapshot": "acro-riverview-source-identity.json",
+          "sha256": "708c5ccb3290059090e12b1a98fdbba28bb1118af3221e3d22f44df13ef1e54e",
+          "observations": "Five unique full numbered sourcepolygons inside named boundary; exact Jamwon-dong159/Jamwon-ro117 registered main residential rows;595households. Nochildparts, uniformmaximumheightassumption."
+        }
+      ],
+      "review": {
+        "siteId": "acro-riverview-101-representative",
+        "status": "visually-reviewed",
+        "reviewer": "root independently viewed source original and every final front/opposite/side/roof render",
+        "inferenceApprovedAssets": [
+          "bespoke-acro-riverview-101"
+        ],
+        "reviewedSourcePhotos": [
+          {
+            "url": "https://img.kr.gcp-karroter.net/realty/realty/articles/1cc205df-e746-4d30-9418-aafc37c7bfec.jpeg",
+            "sha256": "16ab5a8f40bc47498ba8149cb75d33371bfe42f924af4fcfcdc99ae1b6e0b86f",
+            "scope": "complex",
+            "observations": "Root directly viewed the1440x1080 listing-card image; image-of-screen moire and cropped foregroundroof limit measurements. Numbered tower/cameraorientation unconfirmed."
+          }
+        ],
+        "comparisons": [
+          "Compared actualphoto horizontalglazing and whitestructuralframes, brownseams, narrower servicegrid against four final views permodel. Distinct fromShinbanpoXi facade; noXi roofpergola.",
+          "Independently decoded actualGLB triangles and checked originalfullgrade,fullroofdeck,registeredmaximumheight/floors,allprojectionsbelow.5m and raisedroofcontainment.",
+          "Independently verified live sourceDB/register five unique numbered polygons fullyinsideOSMnamedboundary. Nearby112/113 retained in separate residual.",
+          "ActualfinalMCPmetadata save/reload binds each cleanBlender model to its verifiedindependentfallback; GLBandrendersremainunchanged."
+        ],
+        "limits": [
+          "Photo is a screen image with visible moire; uncalibrated colors.",
+          "Numbered tower identity and compass orientation unconfirmed.",
+          "No source childparts; own entire footprint uniformmaximumheight assumption.",
+          "Foregroundroofcropped; modest backgroundroofcaps guide an unmeasuredcontainedroofdetail.",
+          "Hiddenfacades, windowarrangement, materialcolors and dimensions are approximate.",
+          "Listing-card photo attribution, not proven resident-reviewphoto.",
+          "Original archival compounds misgrouped104/105 and included two unrelated112/113buildings; exact partition retainsallneighbors."
+        ],
+        "renders": [
+          "docs/model-audit/renders/acro-riverview-101-representative/front.png",
+          "docs/model-audit/renders/acro-riverview-101-representative/opposite.png",
+          "docs/model-audit/renders/acro-riverview-101-representative/side.png",
+          "docs/model-audit/renders/acro-riverview-101-representative/roof.png"
+        ],
+        "renderSha256": {
+          "docs/model-audit/renders/acro-riverview-101-representative/front.png": "3e2a534efcda954a61540aadfe68de5d7450842f0926e768c848159658e53d9c",
+          "docs/model-audit/renders/acro-riverview-101-representative/opposite.png": "a3ae6b4b91d663b35e8d0876b099020031421074b628f6a4d37cdac8968909b2",
+          "docs/model-audit/renders/acro-riverview-101-representative/side.png": "3604eaeb08ced90455e822df7ac71ae24aee17db57595e5689e3bb13fd95f536",
+          "docs/model-audit/renders/acro-riverview-101-representative/roof.png": "472fd1a217531be37cae57bce95f98198702c02bcf047cad5bf18c1bb2b02986"
+        },
+        "reviewedInputs": {
+          "acro-riverview-101.glb": "576bf05fbc20169bfd459ac65351c202809b794a74e83c478aaf4fa0d5317ed2",
+          "acro-riverview-101-authored.blend": "84f3c92722a313ade23db50fc1a2f5160d119c95ee6bc648f9e08aff75bb2083"
+        }
+      },
+      "assets": [
+        {
+          "id": "bespoke-acro-riverview-101",
+          "sourceSha256": "576bf05fbc20169bfd459ac65351c202809b794a74e83c478aaf4fa0d5317ed2",
+          "sha256": "8e45b712d3c45b41bb18d78491ca76378fb1d19de8aef22e5bc7aa29c157bb80",
+          "bytes": 3202988,
+          "dimensions": [
+            37.18942642211914,
+            93.55000305175781,
+            39.13077163696289
+          ],
+          "min": [
+            -19.379030227661133,
+            0,
+            -19.186887741088867
+          ],
+          "max": [
+            17.810396194458008,
+            93.55000305175781,
+            19.943883895874023
+          ],
+          "triangles": 59152,
+          "components": [
+            {
+              "name": "ARV101_editable_ARV101_light_grey_solid_wall002",
+              "triangles": 56
+            },
+            {
+              "name": "ARV101_editable_ARV101_modest_grey_flat_roof_caps002",
+              "triangles": 56
+            },
+            {
+              "name": "ARV101_editable_ARV101_muted_ground_wall002",
+              "triangles": 144
+            },
+            {
+              "name": "ARV101_editable_ARV101_recessed_brown_vertical_seams002",
+              "triangles": 144
+            },
+            {
+              "name": "ARV101_editable_ARV101_blue_grey_horizontal_glazing002",
+              "triangles": 8928
+            },
+            {
+              "name": "ARV101_editable_ARV101_dark_horizontal_spandrels_and_mullions0",
+              "triangles": 31248
+            },
+            {
+              "name": "ARV101_editable_ARV101_broad_white_facade_frames002",
+              "triangles": 18576
+            }
+          ]
+        }
+      ],
+      "mcpEvidence": [
+        {
+          "path": "docs/model-audit/mcp/acro-riverview-101-representative/mcp-build.json",
+          "sha256": "1c96ccfe4e99de275ff808333c8de9b4569f257da2937afc0ce792a67eb984c8",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        },
+        {
+          "path": "docs/model-audit/mcp/acro-riverview-101-representative/mcp-final-bindings-reload.json",
+          "sha256": "9de28f7c01e47a855deac128201a8c41df248e99a9c26a9736ba48579200e3d3",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        },
+        {
+          "path": "docs/model-audit/mcp/acro-riverview-101-representative/mcp-standalone.json",
+          "sha256": "588aaf7422eb4e34899cc4870e1a47fb21c5bf2be4e4f8e902daf948df233dee",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        }
+      ],
+      "recipeInputs": [
+        {
+          "path": "modeling/bespoke/acro-riverview-101-representative/acro-riverview-source-identity.json",
+          "sha256": "708c5ccb3290059090e12b1a98fdbba28bb1118af3221e3d22f44df13ef1e54e"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverview-101-representative/build.py",
+          "sha256": "8c7146be30f9ac531130b4d0ae1961d0d9627e17d627977fd5c2279892d6726d"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverview-101-representative/check-standalone.py",
+          "sha256": "3c90c110a64f7bbbe3c72cba85879a990c7fe545212210bb35f976b87405ff70"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverview-101-representative/finalize.py",
+          "sha256": "32ce907d2758ef836b12bcc1acafce051c9386fe45746f6f9f5040adecb28453"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverview-101-representative/prepare.py",
+          "sha256": "b88ed6a2764f446b85667061a6813f407ca3ec29a9fee1349056fade98fabe77"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverview-101-representative/rebuild.py",
+          "sha256": "6a314331433fbb00610f5da3dd9860878912aed64df60aff11607d341d40c958"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverview-101-representative/validate.py",
+          "sha256": "0dcc2d18747b668266ce2617b05ef8a6c7e45bbcfe9b2484ccc21c1d297f1297"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverview-101-representative/source-provenance.json",
+          "sha256": "9df4947572f689a6993ce1ef538191939f388a0c50b5c36204da927e48b1d387"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverview-101-representative/source-data.json",
+          "sha256": "dcd8e6fb60bf79d995a6a6ae01d51888d34698cd98a7ab7f45db49c34f49fac8"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverview-101-representative/regions.json",
+          "sha256": "945533189873a50b4ee96bc0c857d8e807d8a649d29dd12a7c4059982fdc1378"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverview-101-representative/geometry-proof.json",
+          "sha256": "85cace97f8d517a7d79d2a68e0e1248277b79e484be6ad4455768437e7390023"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverview-101-representative/standalone-validation.json",
+          "sha256": "74f14b7d9728cebdadd085de3e8ffc1d07d870805c6f8e5e7cb9a53fb44b3d1a"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverview-101-representative/root-geometry-review.json",
+          "sha256": "32be4dbb645298c5284faf7d2b6102de45517ae19dc12ab5a6ccc29017795b45"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverview-101-representative/final-binding-proof.json",
+          "sha256": "60bcd0eda33f5537502251c3c9d23b3912cf6293763ed2481666958fbd613f8a"
+        }
+      ]
+    },
+    "acro-riverview-102-105-family": {
+      "sources": [
+        {
+          "url": "https://img.kr.gcp-karroter.net/realty/realty/articles/1cc205df-e746-4d30-9418-aafc37c7bfec.jpeg",
+          "sha256": "16ab5a8f40bc47498ba8149cb75d33371bfe42f924af4fcfcdc99ae1b6e0b86f",
+          "scope": "complex",
+          "observations": "Root directly viewed the1440x1080 listing-card image; image-of-screen moire and cropped foregroundroof limit measurements. Numbered tower/cameraorientation unconfirmed."
+        },
+        {
+          "url": "https://realty.daangn.com/complexes/10707418/reviews/19303",
+          "observations": "Actual archived page labels the image listing card AcroRiverviewShinbanpo and contains matching thumbnail/full BigPictureImage UUID. Not proven residentreview photograph."
+        },
+        {
+          "url": "https://api.openstreetmap.org/api/0.6/way/413354844/full",
+          "observations": "Root independently reconstructed named AcroRiverview residential boundary; not cadastral/site-plan survey."
+        },
+        {
+          "dataset": "Exact numbered building-register rows and OSM source polygons",
+          "snapshot": "acro-riverview-source-identity.json",
+          "sha256": "708c5ccb3290059090e12b1a98fdbba28bb1118af3221e3d22f44df13ef1e54e",
+          "observations": "Five unique full numbered sourcepolygons inside named boundary; exact Jamwon-dong159/Jamwon-ro117 registered main residential rows;595households. Nochildparts, uniformmaximumheightassumption."
+        }
+      ],
+      "review": {
+        "siteId": "acro-riverview-102-105-family",
+        "status": "visually-reviewed",
+        "reviewer": "root independently viewed source original and every final front/opposite/side/roof render",
+        "inferenceApprovedAssets": [
+          "bespoke-acro-riverview-102",
+          "bespoke-acro-riverview-103",
+          "bespoke-acro-riverview-104",
+          "bespoke-acro-riverview-105"
+        ],
+        "reviewedSourcePhotos": [
+          {
+            "url": "https://img.kr.gcp-karroter.net/realty/realty/articles/1cc205df-e746-4d30-9418-aafc37c7bfec.jpeg",
+            "sha256": "16ab5a8f40bc47498ba8149cb75d33371bfe42f924af4fcfcdc99ae1b6e0b86f",
+            "scope": "complex",
+            "observations": "Root directly viewed the1440x1080 listing-card image; image-of-screen moire and cropped foregroundroof limit measurements. Numbered tower/cameraorientation unconfirmed."
+          }
+        ],
+        "comparisons": [
+          "Compared actualphoto horizontalglazing and whitestructuralframes, brownseams, narrower servicegrid against four final views permodel. Distinct fromShinbanpoXi facade; noXi roofpergola.",
+          "Independently decoded actualGLB triangles and checked originalfullgrade,fullroofdeck,registeredmaximumheight/floors,allprojectionsbelow.5m and raisedroofcontainment.",
+          "Independently verified live sourceDB/register five unique numbered polygons fullyinsideOSMnamedboundary. Nearby112/113 retained in separate residual.",
+          "ActualfinalMCPmetadata save/reload binds each cleanBlender model to its verifiedindependentfallback; GLBandrendersremainunchanged."
+        ],
+        "limits": [
+          "Photo is a screen image with visible moire; uncalibrated colors.",
+          "Numbered tower identity and compass orientation unconfirmed.",
+          "No source childparts; own entire footprint uniformmaximumheight assumption.",
+          "Foregroundroofcropped; modest backgroundroofcaps guide an unmeasuredcontainedroofdetail.",
+          "Hiddenfacades, windowarrangement, materialcolors and dimensions are approximate.",
+          "Listing-card photo attribution, not proven resident-reviewphoto.",
+          "Original archival compounds misgrouped104/105 and included two unrelated112/113buildings; exact partition retainsallneighbors."
+        ],
+        "renders": [
+          "docs/model-audit/renders/acro-riverview-102-105-family/102/front.png",
+          "docs/model-audit/renders/acro-riverview-102-105-family/102/opposite.png",
+          "docs/model-audit/renders/acro-riverview-102-105-family/102/side.png",
+          "docs/model-audit/renders/acro-riverview-102-105-family/102/roof.png",
+          "docs/model-audit/renders/acro-riverview-102-105-family/103/front.png",
+          "docs/model-audit/renders/acro-riverview-102-105-family/103/opposite.png",
+          "docs/model-audit/renders/acro-riverview-102-105-family/103/side.png",
+          "docs/model-audit/renders/acro-riverview-102-105-family/103/roof.png",
+          "docs/model-audit/renders/acro-riverview-102-105-family/104/front.png",
+          "docs/model-audit/renders/acro-riverview-102-105-family/104/opposite.png",
+          "docs/model-audit/renders/acro-riverview-102-105-family/104/side.png",
+          "docs/model-audit/renders/acro-riverview-102-105-family/104/roof.png",
+          "docs/model-audit/renders/acro-riverview-102-105-family/105/front.png",
+          "docs/model-audit/renders/acro-riverview-102-105-family/105/opposite.png",
+          "docs/model-audit/renders/acro-riverview-102-105-family/105/side.png",
+          "docs/model-audit/renders/acro-riverview-102-105-family/105/roof.png"
+        ],
+        "renderSha256": {
+          "docs/model-audit/renders/acro-riverview-102-105-family/102/front.png": "345b2e928fae889b8b48c69f2d5db72acd77bf399d7f1a89805aee067ea12c96",
+          "docs/model-audit/renders/acro-riverview-102-105-family/102/opposite.png": "b0744860072035004f558f7caa05b872e895164156013a0362c2de7481ae1628",
+          "docs/model-audit/renders/acro-riverview-102-105-family/102/side.png": "43867c954c02b378ab71eaa9e55d8e0af2fe01ac90887897818c45b94fe9f59d",
+          "docs/model-audit/renders/acro-riverview-102-105-family/102/roof.png": "1ea9f9a07508a889fe4ed919719c5cd9bf8a8a9762b9852afb8284062db47690",
+          "docs/model-audit/renders/acro-riverview-102-105-family/103/front.png": "33b84880198bf721056e35464ec84acaf936016e2caea3d6f1ec0970c0b19185",
+          "docs/model-audit/renders/acro-riverview-102-105-family/103/opposite.png": "6d825bc37286953075063c2be424d179c3a6a77c3175e522779c8c98dd28d254",
+          "docs/model-audit/renders/acro-riverview-102-105-family/103/side.png": "557141d3315785a4833d4567968595082107e2376d89755ba3cfe3198dd787be",
+          "docs/model-audit/renders/acro-riverview-102-105-family/103/roof.png": "3ee067230b006f1026541e3b778673500c9fc61d0317b1765c089717a0a76691",
+          "docs/model-audit/renders/acro-riverview-102-105-family/104/front.png": "1455499c2d980dae06cd5c5687d0dba9e7fa41c0686d787b8c63828b81997fa4",
+          "docs/model-audit/renders/acro-riverview-102-105-family/104/opposite.png": "5a57464a81234f9d95d4c37f6ee4ce2427995964ac76635d6f0721a20d6224f9",
+          "docs/model-audit/renders/acro-riverview-102-105-family/104/side.png": "c0842f8edbc7b723195297bd3e5a38c34e4ef854d7916667ca31ce14cd5a269f",
+          "docs/model-audit/renders/acro-riverview-102-105-family/104/roof.png": "270f94a487454271c65be6957a65d98b7037a6c1d0205a8ff69add65a1beefde",
+          "docs/model-audit/renders/acro-riverview-102-105-family/105/front.png": "9cac49e7b23b8bf21b2ec5e0ee07ae42bcc82a7fd475bbd9f25a14e7a125268c",
+          "docs/model-audit/renders/acro-riverview-102-105-family/105/opposite.png": "b06ef2a9a20cddbb9911318315f398886b394b2973ba5bdac9f1ebf2a096148a",
+          "docs/model-audit/renders/acro-riverview-102-105-family/105/side.png": "fab0b252d9ba11da0522752596847426fae3edba738ca18cf9540cc00a027b34",
+          "docs/model-audit/renders/acro-riverview-102-105-family/105/roof.png": "c5dbbe43e33698592ec6edb019d914e7e9a2d22920692d3cbb975d4e19b66602"
+        },
+        "reviewedInputs": {
+          "102/acro-riverview-102.glb": "538412e355d0d328d570a2472f935b5cf73c6eb3649e920b63673f1e06cd1c2e",
+          "102/acro-riverview-102-authored.blend": "ad7bf66a6dcf4b22b451a7ff01443f2af8337f7f38bda3f5d661a3e142f42f62",
+          "103/acro-riverview-103.glb": "b69056f716705141c12829d5eb5c629f11c847ec57da072ce184070019adce37",
+          "103/acro-riverview-103-authored.blend": "97b65b7d06f809f3071f04834435783be8a60f691eb7b1dcbd19bdb3ad2b6b42",
+          "104/acro-riverview-104.glb": "495ff65db53bf4ed71098193130dd8d1fc53d08977f9cad8c7251c7481a37e2f",
+          "104/acro-riverview-104-authored.blend": "394dbda51cc34470dd2aed4cd890c7b91ddef7f310ef2366acfb47052935db33",
+          "105/acro-riverview-105.glb": "2d9604dee637e5934adc2afa42f0ff98c59924b7010fb281a2372d42d481a83f",
+          "105/acro-riverview-105-authored.blend": "38374d1de3bc2766d29b72216924381cac93bf48f0b50199edf0e2b3ed21d11a"
+        }
+      },
+      "assets": [
+        {
+          "id": "bespoke-acro-riverview-102",
+          "sourceSha256": "538412e355d0d328d570a2472f935b5cf73c6eb3649e920b63673f1e06cd1c2e",
+          "sha256": "0ab49efb6b0e89027b9f4017cf873a8d11a892dd7f5b89c2f18f9ea7b06eb675",
+          "bytes": 3604700,
+          "dimensions": [
+            37.18918418884277,
+            99.3499984741211,
+            39.13084602355957
+          ],
+          "min": [
+            -19.378889083862305,
+            0,
+            -19.191526412963867
+          ],
+          "max": [
+            17.81029510498047,
+            99.3499984741211,
+            19.939319610595703
+          ],
+          "triangles": 62896,
+          "components": [
+            {
+              "name": "ARV102_editable_ARV102_light_grey_solid_wall",
+              "triangles": 56
+            },
+            {
+              "name": "ARV102_editable_ARV102_modest_grey_flat_roof_caps",
+              "triangles": 56
+            },
+            {
+              "name": "ARV102_editable_ARV102_muted_ground_wall",
+              "triangles": 144
+            },
+            {
+              "name": "ARV102_editable_ARV102_recessed_brown_vertical_seams",
+              "triangles": 144
+            },
+            {
+              "name": "ARV102_editable_ARV102_blue_grey_horizontal_glazing",
+              "triangles": 9504
+            },
+            {
+              "name": "ARV102_editable_ARV102_dark_horizontal_spandrels_and_mullions",
+              "triangles": 33264
+            },
+            {
+              "name": "ARV102_editable_ARV102_broad_white_facade_frames",
+              "triangles": 19728
+            }
+          ]
+        },
+        {
+          "id": "bespoke-acro-riverview-103",
+          "sourceSha256": "b69056f716705141c12829d5eb5c629f11c847ec57da072ce184070019adce37",
+          "sha256": "e517719bf0f0032568d0adfecf9dedae5a864d5c38b962f28e4fb385b26573e6",
+          "bytes": 3818980,
+          "dimensions": [
+            37.18892288208008,
+            105.1500015258789,
+            39.14188194274902
+          ],
+          "min": [
+            -19.374353408813477,
+            0,
+            -19.192453384399414
+          ],
+          "max": [
+            17.8145694732666,
+            105.1500015258789,
+            19.94942855834961
+          ],
+          "triangles": 66640,
+          "components": [
+            {
+              "name": "ARV103_editable_ARV103_light_grey_solid_wall",
+              "triangles": 56
+            },
+            {
+              "name": "ARV103_editable_ARV103_modest_grey_flat_roof_caps",
+              "triangles": 56
+            },
+            {
+              "name": "ARV103_editable_ARV103_muted_ground_wall",
+              "triangles": 144
+            },
+            {
+              "name": "ARV103_editable_ARV103_recessed_brown_vertical_seams",
+              "triangles": 144
+            },
+            {
+              "name": "ARV103_editable_ARV103_blue_grey_horizontal_glazing",
+              "triangles": 10080
+            },
+            {
+              "name": "ARV103_editable_ARV103_dark_horizontal_spandrels_and_mullions",
+              "triangles": 35280
+            },
+            {
+              "name": "ARV103_editable_ARV103_broad_white_facade_frames",
+              "triangles": 20880
+            }
+          ]
+        },
+        {
+          "id": "bespoke-acro-riverview-104",
+          "sourceSha256": "495ff65db53bf4ed71098193130dd8d1fc53d08977f9cad8c7251c7481a37e2f",
+          "sha256": "a8515de3fc18f80c2f98716c32f9863046131ad8a99d5e7f4208cd376c5528ff",
+          "bytes": 3304016,
+          "dimensions": [
+            37.17989540100098,
+            96.44999694824219,
+            39.13082504272461
+          ],
+          "min": [
+            -19.372066497802734,
+            0,
+            -19.18510627746582
+          ],
+          "max": [
+            17.807828903198242,
+            96.44999694824219,
+            19.94571876525879
+          ],
+          "triangles": 61024,
+          "components": [
+            {
+              "name": "ARV104_editable_ARV104_light_grey_solid_wall",
+              "triangles": 56
+            },
+            {
+              "name": "ARV104_editable_ARV104_modest_grey_flat_roof_caps",
+              "triangles": 56
+            },
+            {
+              "name": "ARV104_editable_ARV104_muted_ground_wall",
+              "triangles": 144
+            },
+            {
+              "name": "ARV104_editable_ARV104_recessed_brown_vertical_seams",
+              "triangles": 144
+            },
+            {
+              "name": "ARV104_editable_ARV104_blue_grey_horizontal_glazing",
+              "triangles": 9216
+            },
+            {
+              "name": "ARV104_editable_ARV104_dark_horizontal_spandrels_and_mullions",
+              "triangles": 32256
+            },
+            {
+              "name": "ARV104_editable_ARV104_broad_white_facade_frames",
+              "triangles": 19152
+            }
+          ]
+        },
+        {
+          "id": "bespoke-acro-riverview-105",
+          "sourceSha256": "2d9604dee637e5934adc2afa42f0ff98c59924b7010fb281a2372d42d481a83f",
+          "sha256": "f99b70827236794d33f349984852b11f64264783a7c7b056b0bd4614ece14e81",
+          "bytes": 2899668,
+          "dimensions": [
+            37.18845176696777,
+            84.8499984741211,
+            39.13077163696289
+          ],
+          "min": [
+            -19.377050399780273,
+            0,
+            -19.186887741088867
+          ],
+          "max": [
+            17.8114013671875,
+            84.8499984741211,
+            19.943883895874023
+          ],
+          "triangles": 53536,
+          "components": [
+            {
+              "name": "ARV105_editable_ARV105_light_grey_solid_wall",
+              "triangles": 56
+            },
+            {
+              "name": "ARV105_editable_ARV105_modest_grey_flat_roof_caps",
+              "triangles": 56
+            },
+            {
+              "name": "ARV105_editable_ARV105_muted_ground_wall",
+              "triangles": 144
+            },
+            {
+              "name": "ARV105_editable_ARV105_recessed_brown_vertical_seams",
+              "triangles": 144
+            },
+            {
+              "name": "ARV105_editable_ARV105_blue_grey_horizontal_glazing",
+              "triangles": 8064
+            },
+            {
+              "name": "ARV105_editable_ARV105_dark_horizontal_spandrels_and_mullions",
+              "triangles": 28224
+            },
+            {
+              "name": "ARV105_editable_ARV105_broad_white_facade_frames",
+              "triangles": 16848
+            }
+          ]
+        }
+      ],
+      "mcpEvidence": [
+        {
+          "path": "docs/model-audit/mcp/acro-riverview-102-105-family/mcp-batch-1.json",
+          "sha256": "f4efcd7056b45d55b12190544f364628fd7bcb9e8497f5b066bc0c2811127e75",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        },
+        {
+          "path": "docs/model-audit/mcp/acro-riverview-102-105-family/mcp-batch-2.json",
+          "sha256": "7e069295efad570ca54faf5dada2d042b2e313e983c6fbe08f2dceefa71b5da2",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        },
+        {
+          "path": "docs/model-audit/mcp/acro-riverview-102-105-family/mcp-final-bindings-reload.json",
+          "sha256": "9de28f7c01e47a855deac128201a8c41df248e99a9c26a9736ba48579200e3d3",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        },
+        {
+          "path": "docs/model-audit/mcp/acro-riverview-102-105-family/mcp-standalone.json",
+          "sha256": "b9ca541ebe3dade7f7d0ef1a67b0ae66f8d9cd6b4ea14bbc70965baf661e2537",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        }
+      ],
+      "recipeInputs": [
+        {
+          "path": "modeling/bespoke/acro-riverview-102-105-family/acro-riverview-source-identity.json",
+          "sha256": "708c5ccb3290059090e12b1a98fdbba28bb1118af3221e3d22f44df13ef1e54e"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverview-102-105-family/apply-final-bindings.py",
+          "sha256": "4a1710b97948a26f8807e962519616de30175a247b47d07db642201a1c58d608"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverview-102-105-family/batch-1.py",
+          "sha256": "e79d6e83fe968de384318254e51e544d7eb848cdadf3657b5a6a19c25cb54793"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverview-102-105-family/batch-2.py",
+          "sha256": "87e2696d383f0212a3ad89b3d95e002db6300b25f7ca04aff5741e7013f74bcc"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverview-102-105-family/check-all.py",
+          "sha256": "56e9038abe846fd0ea42c2a11abdc221a71ac777d2fff825b1a5ee0e20e81895"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverview-102-105-family/finalize.py",
+          "sha256": "4bcbafb19f2e5e03203fa7661338ea4a0814def7c31794412e1c55cf4359f7c4"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverview-102-105-family/prepare.py",
+          "sha256": "78ae02e79c6499e1c61fa066f09932bed43ecca5673ed4d353a963a226ac2ca3"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverview-102-105-family/binding-map-frozen.json",
+          "sha256": "90a0559bb3de4f0d76ebcf204b1428f130e47c4700869a2f7d773850c82adc54"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverview-102-105-family/final-binding-proof.json",
+          "sha256": "60bcd0eda33f5537502251c3c9d23b3912cf6293763ed2481666958fbd613f8a"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverview-102-105-family/102/build.py",
+          "sha256": "4e53287f215f259aa0d6c7f9253371b6192cdafba64bb13532ce760237f0ef59"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverview-102-105-family/102/source-data.json",
+          "sha256": "62a326fb48b7c0c810764262dcf010a1d67664701f590363062335a846844887"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverview-102-105-family/102/regions.json",
+          "sha256": "047fb396db59f25ab3f44c2eb13d4e36602a81907d5ad8c121633a7e5ec52971"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverview-102-105-family/102/validation.json",
+          "sha256": "15b25f2e890a3d27c49ef30ece79a97c7adb00d9fbbcbaeaf90a9a6c21911dd4"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverview-102-105-family/102/geometry-proof.json",
+          "sha256": "06c4afe3e689fda765097f66eceb33ca2a0ce2b74c533cbc9e517efeccd6659c"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverview-102-105-family/102/root-geometry-review.json",
+          "sha256": "e24d9991dae1cd720a181dc89d6fa7cbb3b934eb89afe854bea19ed8d2aacaee"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverview-102-105-family/102/standalone-validation.json",
+          "sha256": "1fb200bd9a0a935ed2a116b5d7b0744c3c12c625134ee2e440c5b9d532704b54"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverview-102-105-family/103/build.py",
+          "sha256": "7ac97e51da23c960485dadeca804c6c9865a3a5d509cc24049811597fca17655"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverview-102-105-family/103/source-data.json",
+          "sha256": "11c2018c9ef59e70749f553021e791aaf344c1ef1d3bf2e871f6cc091fc737e1"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverview-102-105-family/103/regions.json",
+          "sha256": "9dd81a051172a356571de4161cb8abedb9fd05684915c607ff1a6b0c0a08c0fb"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverview-102-105-family/103/validation.json",
+          "sha256": "f2fec0ac65767ea130953e096d838611c4f9fc4dee902de0980fe4ac92fb730c"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverview-102-105-family/103/geometry-proof.json",
+          "sha256": "c64270d411bce999d26c14e2ba302cb65378777045be278c7513ad72d4c64d88"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverview-102-105-family/103/root-geometry-review.json",
+          "sha256": "246932e094de70a79b854b40f97396e3aaa513e98528c76fd2d5d5e7f8c6d5b2"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverview-102-105-family/103/standalone-validation.json",
+          "sha256": "cc0d251a6f6253b10b61ecfd04e219c0a0d5537964144fdc7096a9014dc8dd8d"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverview-102-105-family/104/build.py",
+          "sha256": "38e0d49ce0d1cb5aef7d60a657a793752d15ddc6a525100b0ca0b2aa182f30a0"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverview-102-105-family/104/source-data.json",
+          "sha256": "b980bc7e50b64b2b9425c8c3f3dadedb2ce9577f98b8dc953ceee137c103fb79"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverview-102-105-family/104/regions.json",
+          "sha256": "51ca0e492b411901d62a87a5eca160ef3a1e45e18e6ed867b33c4a08f2c5bc4c"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverview-102-105-family/104/validation.json",
+          "sha256": "ce8022c19cd8520c0e411668a2c93c960119e318200f3d57f29c8ea5409fbc9d"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverview-102-105-family/104/geometry-proof.json",
+          "sha256": "ef846d72c931cff5dd70eaf2f12f6bb9c6c399f0fdcec3dd30bb5a8d931219cb"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverview-102-105-family/104/root-geometry-review.json",
+          "sha256": "77139c5dfa4b6d9b40213ec83e5e57156385978248504820d1a4035f5e38b6b1"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverview-102-105-family/104/standalone-validation.json",
+          "sha256": "a637caf391930a0418d572f51a37d0d8560d726e26b1603537dd34eae3b7d102"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverview-102-105-family/105/build.py",
+          "sha256": "63f4a65069a7bbee3d41fdc793298dc8138941441558aa936d3489f5ff9b05a0"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverview-102-105-family/105/source-data.json",
+          "sha256": "1bd57b69254ed3b3e89261d6a353913c12a72320c419160cfb403161d3e230b0"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverview-102-105-family/105/regions.json",
+          "sha256": "93e974dea3e2e668499595a6bc961b346335516e3c5275993a466d0a5ca383ef"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverview-102-105-family/105/validation.json",
+          "sha256": "ad1bb621577631b912368f9b7f4c16417b08a3853bfae79e0e3bde219300326d"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverview-102-105-family/105/geometry-proof.json",
+          "sha256": "0745017fa996ce4ce1c01b5700d11a56c0928746285e628f43b4a7bf1f4623a4"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverview-102-105-family/105/root-geometry-review.json",
+          "sha256": "c5efac2e53d8a095fecc7fc145111297f771d3df4050a19863bace756eb75086"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverview-102-105-family/105/standalone-validation.json",
+          "sha256": "7e881909cdaa55dc938e915cef98ecb8a68c3211ba0dfe37191253b095efe364"
+        }
+      ]
     }
   }
 }

@@ -25,16 +25,22 @@ def region(name, x0, x1, height):
 
 class HeightRegions(unittest.TestCase):
     def test_shinbanpo7_preserves_registered_envelopes_and_full_concave_roof_caps(self):
+        self.assert_registered_envelopes('shinbanpo-xi', range(101, 108), 607)
+
+    def test_acro_riverview5_preserves_registered_envelopes_and_full_concave_roof_caps(self):
+        self.assert_registered_envelopes('acro-riverview', range(101, 106), 595)
+
+    def assert_registered_envelopes(self, site, numbers, households):
         root = path.parents[2]
         assets = {a['id']: a for a in json.loads((root / 'public/models/bespoke-manifest.json').read_text())['assets']}
-        sources = json.loads((root / 'docs/model-audit/shinbanpo-xi-source-identity.json').read_text())['towers']
-        self.assertEqual([s['number'] for s in sources], list(range(101, 108)))
-        self.assertEqual(sum(int(s['register']['households']) for s in sources), 607)
+        sources = json.loads((root / f'docs/model-audit/{site}-source-identity.json').read_text())['towers']
+        self.assertEqual([s['number'] for s in sources], list(numbers))
+        self.assertEqual(sum(int(s['register']['households']) for s in sources), households)
         for source in sources:
             with self.subTest(number=source['number']):
-                asset = assets[f"bespoke-shinbanpo-xi-{source['number']}"]
+                asset = assets[f"bespoke-{site}-{source['number']}"]
                 self.assertEqual(asset['footprintIds'], [source['sourceId']])
-                self.assertEqual(asset['supersedes'], [f"fallback-shinbanpo-xi-{source['number']}"])
+                self.assertEqual(asset['supersedes'], [f"fallback-{site}-{source['number']}"])
                 self.assertEqual(source['sourceChildIds'], [])
                 facts = asset['sourceRecord']['buildingFacts']
                 self.assertEqual(facts['heightM'], float(source['register']['height']))
