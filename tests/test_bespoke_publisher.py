@@ -1,4 +1,5 @@
 import hashlib
+import copy
 import importlib.util
 import json
 from pathlib import Path
@@ -94,6 +95,42 @@ class RepresentativeInferenceTest(unittest.TestCase):
         self.asset['modelingBasis'] = 'individual-photo-review'
         with self.assertRaisesRegex(ValueError, 'must declare'):
             publisher.inference_record(self.asset, [self.source], self.review)
+
+
+class ComplexPhotoInferenceTest(unittest.TestCase):
+    def setUp(self):
+        self.photo = {'url': 'https://example.org/completed/photo.jpg', 'sha256': 'a' * 64, 'scope': 'complex'}
+        self.asset = {'id': 'bespoke-unidentified-photo-tower', 'modelingBasis': 'complex-photo-inference',
+                      'inferredFromPhotos': [self.photo], 'inferenceScope': 'Own numbered footprint; photograph identifies the complex only.'}
+        self.review = {'inferenceApprovedAssets': [self.asset['id']], 'reviewedSourcePhotos': [copy.deepcopy(self.photo)]}
+        self.sources = [copy.deepcopy(self.photo)]
+
+    def test_complex_photo_keeps_identity_limit_and_binds_reviewed_source(self):
+        result = publisher.inference_record(self.asset, [], self.review, self.sources)
+        self.assertEqual(result['modelingBasis'], 'complex-photo-inference')
+        self.assertEqual(result['inferredFromPhotos'], [self.photo])
+        self.assertIn('does not establish this numbered tower', result['accuracy'])
+        self.assertNotIn('inferredFrom', result)
+
+    def test_changed_photo_unreviewed_source_and_false_individual_claim_are_rejected(self):
+        for target in ['source', 'review', 'asset']:
+            asset, review, sources = copy.deepcopy((self.asset, self.review, self.sources))
+            photo = sources[0] if target == 'source' else review['reviewedSourcePhotos'][0] if target == 'review' else asset['inferredFromPhotos'][0]
+            photo['sha256'] = 'b' * 64
+            with self.subTest(target=target), self.assertRaisesRegex(ValueError, 'proof mismatch'):
+                publisher.inference_record(asset, [], review, sources)
+        for mutate in [
+            lambda a: a.update(modelingBasis='individual-photo-review'),
+            lambda a: a['inferredFromPhotos'][0].update(scope='numbered-tower'),
+            lambda a: a['inferredFromPhotos'][0].update(url='file:///private/photo.jpg'),
+            lambda a: a['inferredFromPhotos'].append(copy.deepcopy(a['inferredFromPhotos'][0])),
+            lambda a: a.update(inferredFromAssetIds=['bespoke-fake']),
+        ]:
+            asset = copy.deepcopy(self.asset); mutate(asset)
+            with self.assertRaises(ValueError):
+                publisher.inference_record(asset, [], self.review, self.sources)
+        with self.assertRaisesRegex(ValueError, 'acknowledgement'):
+            publisher.inference_record(self.asset, [], {}, self.sources)
 
 
 if __name__ == '__main__':

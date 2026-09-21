@@ -15,6 +15,7 @@ export interface CityModelAsset {
   quality?: 'reference';
   searchable?: boolean;
   groundOffsetM?: number;
+  genericCorrection?: { sourceId: string };
 }
 export interface DecorativeTree { coordinate: [number, number]; height_m: number; crown_radius_m: number }
 export interface CityModelState {
@@ -79,6 +80,7 @@ export class CityModels {
   private entryOrder = new Map<Entry, number>();
   private referenceUpgrades = new Set<string>();
   private replacementTargets = new Map<string, Set<string>>();
+  private retainedRemainders = new Map<string, Set<string>>();
   private replacementPeers = new Map<string, Entry[]>();
   private trackedEntries = new Set<Entry>();
   private nearbyCache?: { key: string; entries: Entry[]; candidates: Entry[] };
@@ -218,6 +220,7 @@ export class CityModels {
       && entry.asset.supersedes?.some(id => landmarks.has(id))).map(entry => entry.asset.id));
     const byId = new Map(this.entries.map(entry => [entry.asset.id, entry.asset]));
     this.replacementTargets.clear();
+    this.retainedRemainders.clear();
     this.replacementPeers.clear();
     const replacing = new Map<string, Entry[]>();
     for (const entry of this.entries) {
@@ -235,6 +238,12 @@ export class CityModels {
         targets.add(id); pending.push(...(byId.get(id)?.supersedes ?? []));
       }
       this.replacementTargets.set(entry.asset.id, targets);
+      const remainders = new Set<string>();
+      for (const id of targets) {
+        const sourceId = byId.get(id)?.genericCorrection?.sourceId;
+        if (sourceId && sourceId !== id && byId.get(sourceId)?.genericCorrection?.sourceId === sourceId) remainders.add(sourceId);
+      }
+      this.retainedRemainders.set(entry.asset.id, remainders);
     }
     for (const group of replacing.values()) for (const entry of group) {
       // An older reference and its upgrade are alternative generations, not
@@ -292,10 +301,29 @@ export class CityModels {
     if (this.nearbyCache?.key === key) return this.nearbyCache.entries;
     const scale = Math.cos(view.lat * Math.PI / 180);
     const distance = (entry: Entry) => ((entry.asset.coordinate.lon - view.lon) * scale) ** 2 + (entry.asset.coordinate.lat - view.lat) ** 2;
-    const candidates = this.entries.filter(entry => !entry.error && this.inView(entry.asset, view));
-    const priority = (entry: Entry) => Number(isLandmark(entry.asset)) + Number(this.referenceUpgrades.has(entry.asset.id));
-    candidates.sort((a, b) => priority(b) - priority(a)
-      || distance(a) - distance(b) || a.asset.id.localeCompare(b.asset.id));
+    const visible = this.entries.filter(entry => this.inView(entry.asset, view));
+    const rank = (entry: Entry) => ({ priority: Number(isLandmark(entry.asset)) + Number(this.referenceUpgrades.has(entry.asset.id)), distance: distance(entry) });
+    const compareRank = (a: ReturnType<typeof rank>, b: ReturnType<typeof rank>) => b.priority - a.priority || a.distance - b.distance;
+    const inherited = new Map<string, ReturnType<typeof rank>>();
+    // Keep a split compound's unreplaced remainder alongside its authored tower,
+    // and let a failed tower pass its place to its retained replacement. Dense
+    // landmark views would otherwise starve both; shared anchors may be remote.
+    for (const entry of visible) {
+      if (!isLandmark(entry.asset)) continue;
+      const inheritedIds = new Set(this.retainedRemainders.get(entry.asset.id));
+      if (entry.error) for (const id of this.replacementTargets.get(entry.asset.id) ?? []) inheritedIds.add(id);
+      const ownerRank = rank(entry);
+      for (const id of inheritedIds) {
+        const prior = inherited.get(id);
+        if (!prior || compareRank(ownerRank, prior) < 0) inherited.set(id, ownerRank);
+      }
+    }
+    const selectionRank = (entry: Entry) => {
+      const own = rank(entry), fallback = inherited.get(entry.asset.id);
+      return fallback && compareRank(fallback, own) < 0 ? fallback : own;
+    };
+    const candidates = visible.filter(entry => !entry.error);
+    candidates.sort((a, b) => compareRank(selectionRank(a), selectionRank(b)) || a.asset.id.localeCompare(b.asset.id));
     // A retained replacement is a fallback for the same place, not another
     // primary slot. Otherwise 31 towers plus two upgrades fill a 32-entry
     // selection with hidden old towers and leave a real tower unselected.

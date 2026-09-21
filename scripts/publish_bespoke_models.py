@@ -58,13 +58,43 @@ def validate_mcp_evidence(records, root=ROOT):
                 for c in call.get('content',[])) for call in calls):
             raise ValueError('MCP evidence has no successful Blender code execution')
 
-def inference_record(asset, existing, review):
+def complex_photo_inference(asset, review, sources):
+    """Bind a complex-level photograph without inventing a numbered tower match."""
+    photos = asset.get('inferredFromPhotos')
+    if asset.get('inferredFromAssetIds') or asset.get('inferredFrom'):
+        raise ValueError('Complex photo inference must cite photographs, not model ancestors')
+    if not isinstance(photos, list) or not photos:
+        raise ValueError('Complex photo inference requires source photographs')
+    if asset['id'] not in review.get('inferenceApprovedAssets', []) or not asset.get('inferenceScope'):
+        raise ValueError('Complex photo inference requires explicit visual-review acknowledgement')
+    seen = set()
+    proofs = []
+    for photo in photos:
+        if not isinstance(photo, dict):
+            raise ValueError('Invalid complex photo reference')
+        url, digest = photo.get('url'), photo.get('sha256')
+        if not isinstance(url, str) or not re.match(r'^https?://[^/\s]+/', url) or not isinstance(digest, str) or not re.fullmatch('[a-f0-9]{64}', digest):
+            raise ValueError('Complex photo reference requires a source URL and SHA256')
+        if url in seen or photo.get('scope') != 'complex':
+            raise ValueError('Complex photo references must be distinct and explicitly complex-scoped')
+        seen.add(url)
+        for records in [sources or [], review.get('reviewedSourcePhotos', [])]:
+            if not any(isinstance(p, dict) and p.get('url') == url and p.get('sha256') == digest for p in records):
+                raise ValueError('Complex photo source/review proof mismatch')
+        proofs.append({'url': url, 'sha256': digest, 'scope': 'complex'})
+    return {'modelingBasis': 'complex-photo-inference', 'inferredFromPhotos': proofs,
+            'inferenceScope': asset['inferenceScope'],
+            'accuracy': 'Complex-level photographed facade adapted to a separately identified building; the photograph does not establish this numbered tower or its orientation.'}
+
+def inference_record(asset, existing, review, sources=None):
     """Keep representative facade reuse explicit and tied to reviewed source bytes."""
     basis = asset.get('modelingBasis', 'individual-photo-review')
     if basis == 'individual-photo-review':
-        if asset.get('inferredFromAssetIds'):
-            raise ValueError('Inferred models must declare representative-photo-inference')
+        if asset.get('inferredFromAssetIds') or asset.get('inferredFromPhotos'):
+            raise ValueError('Inferred models must declare an explicit inference basis')
         return {}
+    if basis == 'complex-photo-inference':
+        return complex_photo_inference(asset, review, sources)
     if basis != 'representative-photo-inference':
         raise ValueError('Unknown modeling basis')
     references = asset.get('inferredFromAssetIds')
@@ -104,7 +134,7 @@ def publish(bundle_path, review_path):
     for asset in b['assets']:
         aid=safe_id(asset['id'])
         if aid in old_ids:raise ValueError('New asset must not overwrite a preserved ID')
-        inference = inference_record(asset, current['assets'], review)
+        inference = inference_record(asset, current['assets'], review, b['sources'])
         source=(bundle_path.parent/asset['file']).resolve()
         blend=(bundle_path.parent/asset['blendSource']).resolve()
         if not source.is_relative_to(bundle_path.parent) or not blend.is_relative_to(bundle_path.parent):raise ValueError('Source path outside site')

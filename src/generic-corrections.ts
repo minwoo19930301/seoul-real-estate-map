@@ -29,8 +29,11 @@ export function applyGenericCorrections(assets: CityModelAsset[], matches: Recor
           || (part.id !== original.id && byId.has(part.id)) || touched.has(part.id)) throw new Error('Invalid generic correction partition');
       partitionIds.push(part.id); footprints.push(...part.footprintIds);
     }
-    if (new Set(partitionIds).size !== partitionIds.length || !partitionIds.includes(original.id)
+    if (new Set(partitionIds).size !== partitionIds.length
         || new Set(footprints).size !== footprints.length || !same(footprints, correction.sourceFootprintIds)) throw new Error('Generic correction must exactly partition original ownership');
+    // Remove the compound only after every source footprint has a unique replacement.
+    if (!partitionIds.includes(original.id)) { byId.delete(original.id); delete effectiveMatches[original.id]; }
+    touched.add(original.id);
     for (const part of correction.assets) { byId.set(part.id, part); effectiveMatches[part.id] = [...part.footprintIds!]; touched.add(part.id); }
   }
   return { assets: [...byId.values()], matches: effectiveMatches };

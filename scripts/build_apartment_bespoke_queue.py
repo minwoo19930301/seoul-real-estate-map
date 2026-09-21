@@ -20,6 +20,11 @@ import sys
 import tempfile
 import os
 
+if __package__:
+    from .publish_bespoke_models import complex_photo_inference
+else:
+    from publish_bespoke_models import complex_photo_inference
+
 ROOT = Path(__file__).resolve().parents[1]
 AUDIT = Path('docs/model-audit')
 CLASSES = {'아파트', '주상복합', '도시형 생활주택(아파트)', '도시형 생활주택(주상복합)'}
@@ -182,6 +187,11 @@ def verify_asset(root, asset, published, building_identity=None):
     site = published.get('sites', {}).get(record.get('siteId'), {})
     review = site.get('review', {})
     errors = []
+    basis = record.get('modelingBasis', 'individual-photo-review')
+    if basis not in {'individual-photo-review', 'representative-photo-inference', 'complex-photo-inference'}:
+        errors.append('unknown_modeling_basis')
+    if basis == 'individual-photo-review' and (record.get('inferredFromPhotos') or record.get('inferredFrom')):
+        errors.append('undeclared_photo_inference')
     if review.get('status') != 'visually-reviewed' or not site.get('sources') or not review.get('comparisons'):
         errors.append('photo_comparison_review_missing')
     if record.get('modelingBasis') == 'representative-photo-inference':
@@ -193,6 +203,11 @@ def verify_asset(root, asset, published, building_identity=None):
             if not any(p['id'] == reference.get('id') and p.get('sha256') == reference.get('sha256')
                        for p in source_site.get('assets', [])):
                 errors.append('representative_source_proof_mismatch')
+    if basis == 'complex-photo-inference':
+        try:
+            complex_photo_inference({**record, 'id': asset['id']}, review, site.get('sources'))
+        except ValueError:
+            errors.append('complex_photo_inference_proof_mismatch')
     source_hash = record.get('sourceGlbSha256')
     # Publisher may rename the raw GLB to the public asset ID. Bind the source
     # hash through the explicit asset proof rather than assuming equal filenames.
@@ -276,7 +291,7 @@ def build(snapshot, coverage, bespoke, published, legacy, root):
                               'modelingBasis': a.get('sourceRecord', {}).get('modelingBasis', 'individual-photo-review') if a else None,
                               'publishedSha256': a.get('sha256') if a else None})
         verified = sum(c['evidenceVerified'] for c in buildings)
-        inferred = sum(c['evidenceVerified'] and c['modelingBasis'] == 'representative-photo-inference' for c in buildings)
+        inferred = sum(c['evidenceVerified'] and c['modelingBasis'] in {'representative-photo-inference', 'complex-photo-inference'} for c in buildings)
         expected = d.get('expectedResidentialBuildingCount')
         evidence_full = bool(expected and len(buildings) == expected and verified == expected)
         if eligibility != 'eligible':

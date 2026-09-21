@@ -119,6 +119,76 @@ test('a failed reference fetch loads the unloaded preserved replacement and rest
   } finally { globalThis.fetch = originalFetch; h.m.destroy(); }
 });
 
+test('a failed landmark retains its unloaded generic fallback among more than 32 nearby landmarks', async () => {
+  const h = cityHarness(), [generic, reference] = h.m.entries, originalFetch = globalThis.fetch, requested = [];
+  generic.scene = undefined;
+  generic.asset = { ...generic.asset, coordinate: { lon: 127.13, lat: 37.5 }, geoBounds: [127.0999, 37.4999, 127.1001, 37.5001] };
+  reference.scene = undefined; reference.asset = { ...reference.asset, model: 'unavailable.glb' };
+  const peers = Array.from({ length: 40 }, (_, i) => ({ ...reference, scene: new THREE.Scene(),
+    asset: { ...reference.asset, id: `nearby-${i}`, model: 'lotte.glb', coordinate: { lon: 127.1002 + i * .00002, lat: 37.5 }, supersedes: [`fallback-${i}`], footprintIds: [`peer-${i}`] } }));
+  const retainedPeers = peers.map((peer, i) => ({ ...generic, scene: new THREE.Scene(),
+    asset: { ...generic.asset, id: `fallback-${i}`, coordinate: peer.asset.coordinate, geoBounds: undefined } }));
+  h.m.entries = [generic, reference, ...peers, ...retainedPeers];
+  h.m.setFootprintMatches({ generic: ['preserved-solid'] });
+  assert.ok(!h.m.nearbyCandidates().includes(generic), 'remote shared anchor initially puts this fallback beyond the resident reserve');
+  globalThis.fetch = async url => {
+    requested.push(url);
+    return url.endsWith('/unavailable.glb') ? new Response('', { status: 404 })
+      : new Response(readFileSync(new URL('../public/models/lotte.glb', import.meta.url)));
+  };
+  try {
+    await h.m.loadNearby();
+    h.m.render({ defaultProjectionData: { mainMatrix: new THREE.Matrix4().elements }, shaderData: { variantName: 'mercator' } });
+    assert.deepEqual(requested, ['/models/unavailable.glb', '/models/lotte.glb']);
+    assert.equal(reference.error, 'HTTP 404');
+    assert.equal(generic.active, true);
+    assert.ok(h.m.getState().activeFootprintIds.includes('preserved-solid'));
+    assert.equal(h.m.nearbyEntries().length, 32);
+    assert.ok(h.m.nearbyCandidates().length <= 48);
+    assert.equal(h.m.getState().models.filter(m => m.active).length, 32);
+  } finally { globalThis.fetch = originalFetch; h.m.destroy(); }
+});
+
+test('a shared compound fallback remains drawable after one sibling fails in a dense landmark view', () => {
+  const h = cityHarness(), [generic, reference] = h.m.entries;
+  const sibling = { ...reference, asset: { ...reference.asset, id: 'failed-sibling', footprintIds: ['sibling-solid'] }, scene: undefined, error: 'HTTP 404' };
+  const peers = Array.from({ length: 40 }, (_, i) => ({ ...reference, scene: new THREE.Scene(),
+    asset: { ...reference.asset, id: `peer-${i}`, coordinate: { lon: 127.1002 + i * .00002, lat: 37.5 }, supersedes: [], footprintIds: [`peer-solid-${i}`] } }));
+  h.m.entries = [generic, reference, sibling, ...peers];
+  h.m.setFootprintMatches({ generic: ['fp-ref', 'sibling-solid'] });
+  h.m.render({ defaultProjectionData: { mainMatrix: new THREE.Matrix4().elements }, shaderData: { variantName: 'mercator' } });
+  assert.equal(reference.active, false, 'ready sibling must not overlap the retained compound');
+  assert.equal(generic.active, true);
+  assert.ok(h.m.getState().activeFootprintIds.includes('sibling-solid'));
+  assert.ok(h.m.nearbyCandidates().length <= 48);
+  assert.equal(h.m.getState().models.filter(m => m.active).length, 32);
+  h.m.destroy();
+});
+
+test('an authored split tower keeps the unmodeled compound remainder selectable in a dense view', async () => {
+  const h = cityHarness(), [remainder, reference] = h.m.entries, originalFetch = globalThis.fetch, requested = [];
+  remainder.scene = undefined;
+  remainder.asset = { ...remainder.asset, genericCorrection: { sourceId: 'generic' },
+    coordinate: { lon: 127.13, lat: 37.5 }, geoBounds: [127.0999, 37.4999, 127.1001, 37.5001] };
+  reference.asset = { ...reference.asset, supersedes: ['split-fallback'] };
+  const split = { ...remainder, scene: new THREE.Scene(), asset: { ...remainder.asset, id: 'split-fallback', coordinate: reference.asset.coordinate } };
+  const peers = Array.from({ length: 40 }, (_, i) => ({ ...reference, scene: new THREE.Scene(),
+    asset: { ...reference.asset, id: `peer-${i}`, coordinate: { lon: 127.1002 + i * .00002, lat: 37.5 }, supersedes: [], footprintIds: [`peer-solid-${i}`] } }));
+  h.m.entries = [remainder, split, reference, ...peers];
+  h.m.setFootprintMatches({ generic: ['preserved-neighbor'], 'split-fallback': ['fp-ref'] });
+  globalThis.fetch = async url => { requested.push(url); return new Response(readFileSync(new URL('../public/models/lotte.glb', import.meta.url))); };
+  try {
+    await h.m.loadNearby();
+    h.m.render({ defaultProjectionData: { mainMatrix: new THREE.Matrix4().elements }, shaderData: { variantName: 'mercator' } });
+    assert.deepEqual(requested, ['/models/lotte.glb']);
+    assert.equal(reference.active, true);assert.equal(split.active, false);assert.equal(remainder.active, true);
+    assert.ok(h.m.getState().activeFootprintIds.includes('preserved-neighbor'));
+    assert.equal(remainder.asset.quality, undefined, 'selection priority does not award authored-model status');
+    assert.equal(h.m.nearbyEntries().length, 32);assert.ok(h.m.nearbyCandidates().length <= 48);
+    assert.equal(h.m.getState().models.filter(m => m.active).length, 32);
+  } finally { globalThis.fetch = originalFetch; h.m.destroy(); }
+});
+
 test('a rebuilt reference replaces an older authored model only after a successful draw', () => {
   const h = cityHarness(), old = h.m.entries[1];
   const upgrade = { ...old, asset: { ...old.asset, id: 'rebuilt', supersedes: ['ref'], coordinate: { lon: 127.101, lat: 37.5 } }, scene: undefined, active: false };
