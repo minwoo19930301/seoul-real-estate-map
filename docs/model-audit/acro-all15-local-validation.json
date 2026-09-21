@@ -1,0 +1,91 @@
+{
+  "date": "2026-09-22",
+  "baseline": "5dbeced88d58af0d220266f4746f5dfd51ba0c79",
+  "publication": "local PR branch validation; remote publication and CI recorded separately",
+  "currentAcroTowers": 15,
+  "currentAcroSourceFootprints": 16,
+  "newBespokeRecords": 15,
+  "preservedHistoricalAcroRecords": 2,
+  "bespokeManifestTotal": 137,
+  "officialEligibleManagementCodes": 1417,
+  "reviewedCompleteManagementCodes": 17,
+  "parentHeights": "OSM estimates",
+  "childHeights": "floor-proportional estimates; not measured child metre heights",
+  "modeling": "Actual existing Blender MCP9876/9878; no new Blender process. Representative reviewed complex facade reused on individually sourced geometry.",
+  "regionChecks": {
+    "steppedModels": 14,
+    "uniformNoChildSourceModels": 1,
+    "allCurrentFourViewRenders": 60,
+    "independentTriangleClipping": true,
+    "boundaryFacadeAllowanceM": 0.6,
+    "strictRoofCoverageInsetM": 0.03,
+    "heightToleranceM": 0.02
+  },
+  "preservation": {
+    "reviewer": "independent onebailey_fallback_completion agent",
+    "previousBespokeMetadata": 122,
+    "previousReferenceMetadata": 125,
+    "previousGenericMetadata": 13607,
+    "gitBlobComparedAssetAndEditableFiles": 13944,
+    "previousDistinctBlendFiles": 54,
+    "changedPriorAssetBytes": 0,
+    "changedPriorMetadataRecords": 0,
+    "unchangedOtherGenericCorrectionEntries": 6,
+    "acroOriginalTrianglesConserved": 22153,
+    "acroFallbackGroups": 16,
+    "separateNeighbor": "Banpo Parkville",
+    "unchangedPrior100And109Fallbacks": true
+  },
+  "checks": {
+    "node": {
+      "passed": 13766,
+      "failed": 0
+    },
+    "python": {
+      "height_regions": 8,
+      "publisher": 10,
+      "queue": 18,
+      "passed": 36,
+      "failed": 0
+    },
+    "browser": {
+      "uniquePassingScenarios": 15,
+      "acro": 7,
+      "onebailey": 8,
+      "note": "Fourteen original scenarios passed. The remaining raw110 double-load-failure test was corrected to verify visible source footprints when raw part metre heights are absent, and passed on targeted rerun. No runtime behavior was changed to invent heights."
+    },
+    "build": "passed"
+  },
+  "logs": {
+    "node": {
+      "localPath": "/tmp/seoul-acro15-node.log",
+      "sha256": "baec3bd3fcc35d73ce28866b1f11e423734b6151316f4506039adbe0019f99bf"
+    },
+    "height_regions": {
+      "localPath": "/tmp/seoul-acro15-heights-final.log",
+      "sha256": "3281bcfed9267316792bc6fb27c37c0844510c1d9de2013c94f4b8b348081a16"
+    },
+    "publisher": {
+      "localPath": "/tmp/seoul-acro15-publisher.log",
+      "sha256": "e295fe0113f1441f51b5c10a90fe18f91bba7e25f27ef1e2f47ad2b956e13539"
+    },
+    "queue": {
+      "localPath": "/tmp/seoul-acro15-queue-tests-final.log",
+      "sha256": "9b957e70688621ff5eb734f270ac98282ec88571feb38f91143cdf17e8a7fa06"
+    },
+    "browser_full": {
+      "localPath": "/tmp/seoul-acro15-browser.log",
+      "sha256": "9a062e0f9b279d24ba3b824cd06b134d2b15d2c18b6396d4ed8440eb83b1d0de"
+    },
+    "browser_raw_restoration": {
+      "localPath": "/tmp/seoul-acro15-raw-footprint-browser.log",
+      "sha256": "9c86edf0fa7c90e32e0bd196470d63b1ec5482681acba111f55c946d231a1725"
+    },
+    "build": {
+      "localPath": "/tmp/seoul-acro15-build.log",
+      "sha256": "786b2bc43f5dd3718f9f87baab5139a050bf6fa3430e5fe7d31a6470ff91978a"
+    }
+  },
+  "publicReview": "docs/model-audit/acro-all15-review.md",
+  "mapScreenshot": "docs/model-audit/renders/acro-all15-map.png"
+}

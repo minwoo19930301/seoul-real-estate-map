@@ -31325,6 +31325,2087 @@
           "sha256": "d938477c3d1391745c7f90d78adaec8f99f3282a69c7eb3f3b8df10bb5fca005"
         }
       ]
+    },
+    "acro-source-parts-100-104-109-corrected": {
+      "sources": [
+        {
+          "url": "https://www.acro.co.kr/jsp/mobile/po/010366/static/img/main-complete/img-main6-9.jpg",
+          "sha256": "1011eab30d61ea086a622e89a7ec448b7048c1104fddea2bb52b34a53b02b960",
+          "scope": "complex",
+          "observations": "Official completed-complex photograph; the numbered tower and facade orientation are not independently identified."
+        },
+        {
+          "url": "https://www.acro.co.kr/MPosm_main.action?commonMap.CD_BIZ_LND=010366",
+          "observations": "Official completed complex gallery,1612 households,15 buildings."
+        },
+        {
+          "dataset": "reb_complex_identifier_dong",
+          "complexId": "11650120345416",
+          "snapshot": "reb-source-rows-root-verified.json",
+          "sha256": "d938477c3d1391745c7f90d78adaec8f99f3282a69c7eb3f3b8df10bb5fca005",
+          "observations": "Numbered floors; not a metre-height survey."
+        },
+        {
+          "dataset": "OpenStreetMap / local frozen building and building_part records",
+          "snapshot": "source-parts-all15.json",
+          "sha256": "e66dfeeda6b0212a874f3708f7d3c97e29b9161cf8b1dd097de8642256fbd844",
+          "observations": "Exact building and child outlines, parent OSM height estimates, child floor counts.100 missing19F and11020F connector recovered from unchanged historical way geometry."
+        },
+        {
+          "url": "https://api.openstreetmap.org/api/0.6/way/544771983/history",
+          "observations": "10019-floor historical part exactly covers the current source-parent remainder; latest way has no floor tag."
+        },
+        {
+          "url": "https://api.openstreetmap.org/api/0.6/relation/7766718/1",
+          "observations": "Named110 original relation includes20-floor connector543323180; modern parent excludes this unchanged part."
+        }
+      ],
+      "review": {
+        "siteId": "acro-source-parts-100-104-109-corrected",
+        "status": "visually-reviewed",
+        "reviewer": "root independent of Astra LOW Blender MCP author",
+        "date": "2026-09-22",
+        "inferenceApprovedAssets": [
+          "bespoke-acro-riverpark-100-corrected",
+          "bespoke-acro-riverpark-101",
+          "bespoke-acro-riverpark-103",
+          "bespoke-acro-riverpark-104",
+          "bespoke-acro-riverpark-109-corrected"
+        ],
+        "reviewedSourcePhotos": [
+          {
+            "url": "https://www.acro.co.kr/jsp/mobile/po/010366/static/img/main-complete/img-main6-9.jpg",
+            "sha256": "1011eab30d61ea086a622e89a7ec448b7048c1104fddea2bb52b34a53b02b960",
+            "scope": "complex"
+          }
+        ],
+        "comparisons": [
+          "Root independently reopened the actual official completed-complex photograph and all four final views of each asset. Pale gridded walls, denser blue-gray glazed strips, dark lower floors and subdued roof caps follow the earlier reviewed representative. Individual tower/photo-facing identity remains unresolved.",
+          "The source database and numbered REB rows were independently compared with every staged source record. Exact region geometry is checked against current child polygons, the parent remainder and documented historical10019F/11020F polygons. Official floor counts are kept separate from OSM parent floor discrepancies.",
+          "Independent GLB triangle clipping checks every lower-region interior for surfaces above its floor-derived height. A0.60m boundary allowance corresponds to the recipe maximum sill projection0.53m plus0.065m half-thickness and0.005m numeric margin. Roof coverage is also checked at a stricter0.03m inset, so whole-height bodies cannot conceal the lower roofs.",
+          "Root inspected the concave roof caps, separate low-wing silhouettes and retained notches in front, opposite, side and roof views. The grade triangle union reproduces the exact independently reconstructed footprint within0.001 square metres. All scene nodes are baked; no embedded photo textures.",
+          "Prior published100/109 asset bytes are retained under their old IDs. Corrected generations explicitly supersede them; other towers own their separately conserved fallback.110 includes its historically evidenced20F connector, while Banpo Parkville remains separate."
+        ],
+        "limits": [
+          "Source photograph does not establish the number or orientation of this tower.",
+          "Facade bay spacing, colors, sills, roof equipment and hidden faces are inferred from one reviewed representative.",
+          "Parent OSM heights are unverified estimates; child metre heights are derived from source floor counts.",
+          "Projecting facade details may extend up to0.60m across a region boundary; independently checked roof interiors do not exceed their region envelopes.",
+          "19-floor region uses historical way544771983 tags and exact unchanged geometry; current way has no floor count."
+        ],
+        "renders": [
+          "docs/model-audit/renders/acro-source-parts-100-104-109-corrected/100/front.png",
+          "docs/model-audit/renders/acro-source-parts-100-104-109-corrected/100/opposite.png",
+          "docs/model-audit/renders/acro-source-parts-100-104-109-corrected/100/side.png",
+          "docs/model-audit/renders/acro-source-parts-100-104-109-corrected/100/roof.png",
+          "docs/model-audit/renders/acro-source-parts-100-104-109-corrected/101/front.png",
+          "docs/model-audit/renders/acro-source-parts-100-104-109-corrected/101/opposite.png",
+          "docs/model-audit/renders/acro-source-parts-100-104-109-corrected/101/side.png",
+          "docs/model-audit/renders/acro-source-parts-100-104-109-corrected/101/roof.png",
+          "docs/model-audit/renders/acro-source-parts-100-104-109-corrected/103/front.png",
+          "docs/model-audit/renders/acro-source-parts-100-104-109-corrected/103/opposite.png",
+          "docs/model-audit/renders/acro-source-parts-100-104-109-corrected/103/side.png",
+          "docs/model-audit/renders/acro-source-parts-100-104-109-corrected/103/roof.png",
+          "docs/model-audit/renders/acro-source-parts-100-104-109-corrected/104/front.png",
+          "docs/model-audit/renders/acro-source-parts-100-104-109-corrected/104/opposite.png",
+          "docs/model-audit/renders/acro-source-parts-100-104-109-corrected/104/side.png",
+          "docs/model-audit/renders/acro-source-parts-100-104-109-corrected/104/roof.png",
+          "docs/model-audit/renders/acro-source-parts-100-104-109-corrected/109/front.png",
+          "docs/model-audit/renders/acro-source-parts-100-104-109-corrected/109/opposite.png",
+          "docs/model-audit/renders/acro-source-parts-100-104-109-corrected/109/side.png",
+          "docs/model-audit/renders/acro-source-parts-100-104-109-corrected/109/roof.png"
+        ],
+        "renderSha256": {
+          "docs/model-audit/renders/acro-source-parts-100-104-109-corrected/100/front.png": "ea957afcf7729b1ec536d01f3f1d3491bd4cdbbd04160ba3e73fe52f4c8a6212",
+          "docs/model-audit/renders/acro-source-parts-100-104-109-corrected/100/opposite.png": "fe308265e508595b52e8ed56c68cfd0b18dacc933f5c97669379d79aa6c8a9fc",
+          "docs/model-audit/renders/acro-source-parts-100-104-109-corrected/100/side.png": "b8b3c88106ab3398aa30d437366b6ca5643224cb8f9a35bb044e4d1b823a2e34",
+          "docs/model-audit/renders/acro-source-parts-100-104-109-corrected/100/roof.png": "e7a5a6dbbbb09b5e4b10737d207bb998ca3eb41153d4d1c696e0f80c2841744b",
+          "docs/model-audit/renders/acro-source-parts-100-104-109-corrected/101/front.png": "cf8fabacac12985087a36a8a60dfdb60fe6064db7887e2371c4e8513f4f8d524",
+          "docs/model-audit/renders/acro-source-parts-100-104-109-corrected/101/opposite.png": "42777d297294414aee73926ff5e6beeeb01bc122979ccf17f6165e440317d92c",
+          "docs/model-audit/renders/acro-source-parts-100-104-109-corrected/101/side.png": "62173dee99f82a2efdebcfecf2179eff31b0f27c55bcbe1628ff181357bc669c",
+          "docs/model-audit/renders/acro-source-parts-100-104-109-corrected/101/roof.png": "aefe41612e66b68ad3089865042105c4b62440f93c2d2f04d35196f329904402",
+          "docs/model-audit/renders/acro-source-parts-100-104-109-corrected/103/front.png": "219d2128142a15d80fc1d1c9a3fd9d1b384185f8a84556d7cee756e9df37566d",
+          "docs/model-audit/renders/acro-source-parts-100-104-109-corrected/103/opposite.png": "cf063d29d87dda465d9cf01e3714217c6ed99f92282c3b93cf6889cd3d547278",
+          "docs/model-audit/renders/acro-source-parts-100-104-109-corrected/103/side.png": "8bd56c7726aa0261784a538e365bdebffb3145bc5ab021a58f0357a65e13848b",
+          "docs/model-audit/renders/acro-source-parts-100-104-109-corrected/103/roof.png": "ec38aa131c17b6f1ec10061e0430a525b7aac6ef0c53d23c65e217640009f025",
+          "docs/model-audit/renders/acro-source-parts-100-104-109-corrected/104/front.png": "0dc53b97e139287b49f28c9c423fa086d467fd23663d755c8cf5aeb3ec9e128d",
+          "docs/model-audit/renders/acro-source-parts-100-104-109-corrected/104/opposite.png": "bafe096d1cce0e7bee281d81c50e350c6b90d2ec9ca98917b76fa9287b69e071",
+          "docs/model-audit/renders/acro-source-parts-100-104-109-corrected/104/side.png": "4260bf8fd0ddf7e93e5ffff3a07b32705bff7aaf2f65a6077e293eef9bf764b9",
+          "docs/model-audit/renders/acro-source-parts-100-104-109-corrected/104/roof.png": "b8edfa84499b35a5b81206b01099e3faa4d830fe02050797197a47a9e33381eb",
+          "docs/model-audit/renders/acro-source-parts-100-104-109-corrected/109/front.png": "b48b1a5dfb603d3e57784e05520d1fa9e17959255cca4cff3cf74562f728eff2",
+          "docs/model-audit/renders/acro-source-parts-100-104-109-corrected/109/opposite.png": "524b234bf3b49bb79c0840b7c78d39f2b82f752c730589e3803539c7447ef4a4",
+          "docs/model-audit/renders/acro-source-parts-100-104-109-corrected/109/side.png": "8fef36a7c205f9dfb5ed545fdd7cc76723708505b63a97119cd08da3b46203e2",
+          "docs/model-audit/renders/acro-source-parts-100-104-109-corrected/109/roof.png": "ea4ee56511e63ae7f55f2239af0db64249b05cb63fa9c8cc8cfc6818865e3302"
+        },
+        "reviewedInputs": {
+          "100/bespoke-acro-riverpark-100-corrected.glb": "35076ee03f1b187926a4508ea2d0ec58a88c5d4a5cfbfe8b37c3510040b05644",
+          "100/bespoke-acro-riverpark-100-corrected-authored.blend": "292ac15c91199f4b39b22a212ff48fcc3f601be5f8574daf5f253489d42b3748",
+          "101/bespoke-acro-riverpark-101.glb": "f78072a61359fa1601d217b12a978bf7354c22c1e0fbbc00fc3def7b79963f24",
+          "101/bespoke-acro-riverpark-101-authored.blend": "574c658f89bb01727ab9fc11f6f371c1ae2f240127fd13402e107f76f3c5c808",
+          "103/bespoke-acro-riverpark-103.glb": "c5d437c8eed84cf5b72de52e70f3bd610b9eae20573b33ee9b09d9839252ba5a",
+          "103/bespoke-acro-riverpark-103-authored.blend": "08a118b234bef37ae1731b7ba4366c2230fd35be64e42fdab5ead9246ac869a3",
+          "104/bespoke-acro-riverpark-104.glb": "b997a709bcab2e7296ab4159d24ba06864e0660fd49e8c8b4983cddbfff6fc5e",
+          "104/bespoke-acro-riverpark-104-authored.blend": "daf93f7a2d62ac725351940edf205cc26db956955ff16bf3991885a423900f34",
+          "109/bespoke-acro-riverpark-109-corrected.glb": "02a998b794f77a1389c83d4a8677b133238db1313fcc6387f9d5e7c6fdaa0f49",
+          "109/bespoke-acro-riverpark-109-corrected-authored.blend": "21ea0f743628c30c29193884475ba63b7800a63beaee13481873997b87080413"
+        }
+      },
+      "assets": [
+        {
+          "id": "bespoke-acro-riverpark-100-corrected",
+          "sourceSha256": "35076ee03f1b187926a4508ea2d0ec58a88c5d4a5cfbfe8b37c3510040b05644",
+          "sha256": "2770bb862f313ceabace4f8a1da2c415c9bcf3903054b1382d7666338a7075fa",
+          "bytes": 3639128,
+          "dimensions": [
+            69.50214195251465,
+            74,
+            45.63811683654785
+          ],
+          "min": [
+            -31.999929428100586,
+            0,
+            -19.02518653869629
+          ],
+          "max": [
+            37.50221252441406,
+            74,
+            26.612930297851562
+          ],
+          "triangles": 67096,
+          "components": [
+            {
+              "name": "100_region-0_100_Warm_pale_planes001",
+              "triangles": 13008
+            },
+            {
+              "name": "100_region-0_100_Charcoal_lower_storeys001",
+              "triangles": 1140
+            },
+            {
+              "name": "100_region-0_100_Blue_grey_glazing001",
+              "triangles": 7692
+            },
+            {
+              "name": "100_region-0_100_Silver_thin_mullions001",
+              "triangles": 15312
+            },
+            {
+              "name": "100_region-0_100_Roof_equipment001",
+              "triangles": 12
+            },
+            {
+              "name": "100_region-1_100_Warm_pale_planes001",
+              "triangles": 3044
+            },
+            {
+              "name": "100_region-1_100_Charcoal_lower_storeys001",
+              "triangles": 2076
+            },
+            {
+              "name": "100_region-1_100_Blue_grey_glazing001",
+              "triangles": 2124
+            },
+            {
+              "name": "100_region-1_100_Silver_thin_mullions001",
+              "triangles": 4080
+            },
+            {
+              "name": "100_region-1_100_Roof_equipment001",
+              "triangles": 12
+            },
+            {
+              "name": "100_region-2_100_Warm_pale_planes001",
+              "triangles": 5900
+            },
+            {
+              "name": "100_region-2_100_Charcoal_lower_storeys001",
+              "triangles": 3276
+            },
+            {
+              "name": "100_region-2_100_Blue_grey_glazing001",
+              "triangles": 3192
+            },
+            {
+              "name": "100_region-2_100_Silver_thin_mullions001",
+              "triangles": 6216
+            },
+            {
+              "name": "100_region-2_100_Roof_equipment001",
+              "triangles": 12
+            }
+          ]
+        },
+        {
+          "id": "bespoke-acro-riverpark-101",
+          "sourceSha256": "f78072a61359fa1601d217b12a978bf7354c22c1e0fbbc00fc3def7b79963f24",
+          "sha256": "a8d454b6145c513762d5f62b7db83a7bcc29da4da5bb48fde6f60032a3303c01",
+          "bytes": 3390028,
+          "dimensions": [
+            41.43570899963379,
+            90,
+            50.64410209655762
+          ],
+          "min": [
+            -21.6214599609375,
+            0,
+            -27.621593475341797
+          ],
+          "max": [
+            19.81424903869629,
+            90,
+            23.02250862121582
+          ],
+          "triangles": 62568,
+          "components": [
+            {
+              "name": "101_region-0_101_Warm_pale_planes001",
+              "triangles": 10176
+            },
+            {
+              "name": "101_region-0_101_Charcoal_lower_storeys001",
+              "triangles": 3624
+            },
+            {
+              "name": "101_region-0_101_Blue_grey_glazing001",
+              "triangles": 6288
+            },
+            {
+              "name": "101_region-0_101_Silver_thin_mullions001",
+              "triangles": 12480
+            },
+            {
+              "name": "101_region-0_101_Roof_equipment001",
+              "triangles": 12
+            },
+            {
+              "name": "101_region-1_101_Warm_pale_planes001",
+              "triangles": 9600
+            },
+            {
+              "name": "101_region-1_101_Charcoal_lower_storeys001",
+              "triangles": 2904
+            },
+            {
+              "name": "101_region-1_101_Blue_grey_glazing001",
+              "triangles": 5856
+            },
+            {
+              "name": "101_region-1_101_Silver_thin_mullions001",
+              "triangles": 11616
+            },
+            {
+              "name": "101_region-1_101_Roof_equipment001",
+              "triangles": 12
+            }
+          ]
+        },
+        {
+          "id": "bespoke-acro-riverpark-103",
+          "sourceSha256": "c5d437c8eed84cf5b72de52e70f3bd610b9eae20573b33ee9b09d9839252ba5a",
+          "sha256": "91b68b6261b99603e740c8d4fda571e8778dec86191d830825a0a994a9ee6bd6",
+          "bytes": 4907544,
+          "dimensions": [
+            41.34893989562988,
+            122,
+            47.1099853515625
+          ],
+          "min": [
+            -19.593305587768555,
+            0,
+            -29.757017135620117
+          ],
+          "max": [
+            21.755634307861328,
+            122,
+            17.352968215942383
+          ],
+          "triangles": 90456,
+          "components": [
+            {
+              "name": "103_region-0_103_Warm_pale_planes001",
+              "triangles": 1292
+            },
+            {
+              "name": "103_region-0_103_Charcoal_lower_storeys001",
+              "triangles": 24
+            },
+            {
+              "name": "103_region-0_103_Blue_grey_glazing001",
+              "triangles": 816
+            },
+            {
+              "name": "103_region-0_103_Silver_thin_mullions001",
+              "triangles": 1632
+            },
+            {
+              "name": "103_region-1_103_Warm_pale_planes001",
+              "triangles": 6336
+            },
+            {
+              "name": "103_region-1_103_Charcoal_lower_storeys001",
+              "triangles": 3744
+            },
+            {
+              "name": "103_region-1_103_Blue_grey_glazing001",
+              "triangles": 3720
+            },
+            {
+              "name": "103_region-1_103_Silver_thin_mullions001",
+              "triangles": 7344
+            },
+            {
+              "name": "103_region-1_103_Roof_equipment001",
+              "triangles": 12
+            },
+            {
+              "name": "103_region-2_103_Warm_pale_planes001",
+              "triangles": 2964
+            },
+            {
+              "name": "103_region-2_103_Charcoal_lower_storeys001",
+              "triangles": 1668
+            },
+            {
+              "name": "103_region-2_103_Blue_grey_glazing001",
+              "triangles": 1644
+            },
+            {
+              "name": "103_region-2_103_Silver_thin_mullions001",
+              "triangles": 3264
+            },
+            {
+              "name": "103_region-2_103_Roof_equipment001",
+              "triangles": 12
+            },
+            {
+              "name": "103_region-3_103_Warm_pale_planes001",
+              "triangles": 3004
+            },
+            {
+              "name": "103_region-3_103_Charcoal_lower_storeys001",
+              "triangles": 60
+            },
+            {
+              "name": "103_region-3_103_Blue_grey_glazing001",
+              "triangles": 1632
+            },
+            {
+              "name": "103_region-3_103_Silver_thin_mullions001",
+              "triangles": 3264
+            },
+            {
+              "name": "103_region-3_103_Roof_equipment001",
+              "triangles": 12
+            },
+            {
+              "name": "103_region-4_103_Warm_pale_planes001",
+              "triangles": 14160
+            },
+            {
+              "name": "103_region-4_103_Blue_grey_glazing001",
+              "triangles": 9516
+            },
+            {
+              "name": "103_region-4_103_Silver_thin_mullions001",
+              "triangles": 18720
+            },
+            {
+              "name": "103_region-4_103_Charcoal_lower_storeys001",
+              "triangles": 5604
+            },
+            {
+              "name": "103_region-4_103_Roof_equipment001",
+              "triangles": 12
+            }
+          ]
+        },
+        {
+          "id": "bespoke-acro-riverpark-104",
+          "sourceSha256": "b997a709bcab2e7296ab4159d24ba06864e0660fd49e8c8b4983cddbfff6fc5e",
+          "sha256": "39a34f584d196c7ee2398e847f53f8021b2d7fb46fee454a67b4702c1e6437e8",
+          "bytes": 4915120,
+          "dimensions": [
+            47.70681190490723,
+            110,
+            69.10391235351562
+          ],
+          "min": [
+            -23.460384368896484,
+            0,
+            -30.77081298828125
+          ],
+          "max": [
+            24.246427536010742,
+            110,
+            38.333099365234375
+          ],
+          "triangles": 90732,
+          "components": [
+            {
+              "name": "104_region-0_104_Warm_pale_planes001",
+              "triangles": 14360
+            },
+            {
+              "name": "104_region-0_104_Charcoal_lower_storeys001",
+              "triangles": 4008
+            },
+            {
+              "name": "104_region-0_104_Blue_grey_glazing001",
+              "triangles": 9672
+            },
+            {
+              "name": "104_region-0_104_Silver_thin_mullions001",
+              "triangles": 19200
+            },
+            {
+              "name": "104_region-0_104_Roof_equipment001",
+              "triangles": 12
+            },
+            {
+              "name": "104_region-1_104_Warm_pale_planes001",
+              "triangles": 7912
+            },
+            {
+              "name": "104_region-1_104_Charcoal_lower_storeys001",
+              "triangles": 2532
+            },
+            {
+              "name": "104_region-1_104_Blue_grey_glazing001",
+              "triangles": 4884
+            },
+            {
+              "name": "104_region-1_104_Silver_thin_mullions001",
+              "triangles": 9600
+            },
+            {
+              "name": "104_region-1_104_Roof_equipment001",
+              "triangles": 12
+            },
+            {
+              "name": "104_region-2_104_Warm_pale_planes001",
+              "triangles": 6168
+            },
+            {
+              "name": "104_region-2_104_Charcoal_lower_storeys001",
+              "triangles": 828
+            },
+            {
+              "name": "104_region-2_104_Blue_grey_glazing001",
+              "triangles": 3852
+            },
+            {
+              "name": "104_region-2_104_Silver_thin_mullions001",
+              "triangles": 7680
+            },
+            {
+              "name": "104_region-2_104_Roof_equipment001",
+              "triangles": 12
+            }
+          ]
+        },
+        {
+          "id": "bespoke-acro-riverpark-109-corrected",
+          "sourceSha256": "02a998b794f77a1389c83d4a8677b133238db1313fcc6387f9d5e7c6fdaa0f49",
+          "sha256": "90e41ec3e79f7a2429b7841b0cfeaf50ea2df2509d07b64fa5a49057dea61d3d",
+          "bytes": 5198928,
+          "dimensions": [
+            41.87692642211914,
+            132,
+            47.68745040893555
+          ],
+          "min": [
+            -19.742027282714844,
+            0,
+            -29.83833122253418
+          ],
+          "max": [
+            22.134899139404297,
+            132,
+            17.849119186401367
+          ],
+          "triangles": 95836,
+          "components": [
+            {
+              "name": "109_region-0_109_Warm_pale_planes001",
+              "triangles": 6876
+            },
+            {
+              "name": "109_region-0_109_Charcoal_lower_storeys001",
+              "triangles": 4068
+            },
+            {
+              "name": "109_region-0_109_Blue_grey_glazing001",
+              "triangles": 4044
+            },
+            {
+              "name": "109_region-0_109_Silver_thin_mullions001",
+              "triangles": 7992
+            },
+            {
+              "name": "109_region-0_109_Roof_equipment001",
+              "triangles": 12
+            },
+            {
+              "name": "109_region-1_109_Warm_pale_planes001",
+              "triangles": 3256
+            },
+            {
+              "name": "109_region-1_109_Charcoal_lower_storeys001",
+              "triangles": 60
+            },
+            {
+              "name": "109_region-1_109_Blue_grey_glazing001",
+              "triangles": 1776
+            },
+            {
+              "name": "109_region-1_109_Silver_thin_mullions001",
+              "triangles": 3552
+            },
+            {
+              "name": "109_region-1_109_Roof_equipment001",
+              "triangles": 12
+            },
+            {
+              "name": "109_region-2_109_Warm_pale_planes001",
+              "triangles": 1412
+            },
+            {
+              "name": "109_region-2_109_Charcoal_lower_storeys001",
+              "triangles": 24
+            },
+            {
+              "name": "109_region-2_109_Blue_grey_glazing001",
+              "triangles": 888
+            },
+            {
+              "name": "109_region-2_109_Silver_thin_mullions001",
+              "triangles": 1776
+            },
+            {
+              "name": "109_region-2_109_Roof_equipment001",
+              "triangles": 12
+            },
+            {
+              "name": "109_region-3_109_Warm_pale_planes001",
+              "triangles": 3216
+            },
+            {
+              "name": "109_region-3_109_Charcoal_lower_storeys001",
+              "triangles": 1812
+            },
+            {
+              "name": "109_region-3_109_Blue_grey_glazing001",
+              "triangles": 1788
+            },
+            {
+              "name": "109_region-3_109_Silver_thin_mullions001",
+              "triangles": 3552
+            },
+            {
+              "name": "109_region-3_109_Roof_equipment001",
+              "triangles": 12
+            },
+            {
+              "name": "109_region-4_109_Warm_pale_planes001",
+              "triangles": 15784
+            },
+            {
+              "name": "109_region-4_109_Blue_grey_glazing001",
+              "triangles": 10248
+            },
+            {
+              "name": "109_region-4_109_Silver_thin_mullions001",
+              "triangles": 20304
+            },
+            {
+              "name": "109_region-4_109_Charcoal_lower_storeys001",
+              "triangles": 3348
+            },
+            {
+              "name": "109_region-4_109_Roof_equipment001",
+              "triangles": 12
+            }
+          ]
+        }
+      ],
+      "mcpEvidence": [
+        {
+          "path": "docs/model-audit/mcp/acro-source-parts-100-104-109-corrected/100/mcp-build.json",
+          "sha256": "5750ca74b4d2299b753c418a664956d9690f017c30495be64944505c44258c6e",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        },
+        {
+          "path": "docs/model-audit/mcp/acro-source-parts-100-104-109-corrected/101/mcp-build.json",
+          "sha256": "c47dfd8f040ccee6009683f34d6281d49979ade9b4ca92439a8a15ba8785b19c",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        },
+        {
+          "path": "docs/model-audit/mcp/acro-source-parts-100-104-109-corrected/103/mcp-build.json",
+          "sha256": "d9fad1d39c61b0be7d2c3c81e145ef6ce0d6c99113a128fee3fbd48d6ae3fb7e",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        },
+        {
+          "path": "docs/model-audit/mcp/acro-source-parts-100-104-109-corrected/104/mcp-build.json",
+          "sha256": "2da8bfb8444a2cc82b05d04b0e97806095107c85b5a4b30548f2bfc8f1809659",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        },
+        {
+          "path": "docs/model-audit/mcp/acro-source-parts-100-104-109-corrected/109/mcp-build.json",
+          "sha256": "79cbcb0c55513b4479f0b4ae5f2789f7a8cfc025281e73a5848fb71bb1bbfe37",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        }
+      ],
+      "recipeInputs": [
+        {
+          "path": "modeling/bespoke/acro-source-parts-100-104-109-corrected/100/build.py",
+          "sha256": "fb446b1e79ca174becb60a087b175e1a36444a54f8eafa0491316b49a4300cb9"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-100-104-109-corrected/100/source-data.json",
+          "sha256": "c94d39f9de2f281ed54fc1c6abbc7586495f7cd1c15c561c4a816875f632900c"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-100-104-109-corrected/100/glb-region-validation.json",
+          "sha256": "58fe46ffe280b594a74a45768a142fca51a82b3d91219f01b0bbdc7edbeae896"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-100-104-109-corrected/100/mcp-authoring-validation.json",
+          "sha256": "12c6cc872b2863c688c1a4250557b9ba415f826aa7d4c17482048c285cf78b7c"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-100-104-109-corrected/100/standalone-validation.json",
+          "sha256": "d645dca391247365ead7b3602ae887d5fd607d1a9f1a9526a4cfe38eab0cb589"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-100-104-109-corrected/100/root-height-region-validation.json",
+          "sha256": "86c0aa2318f70fbc29ab84567bfe9d2697785b2963a8bd130e21962a67586f98"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-100-104-109-corrected/101/build.py",
+          "sha256": "fb446b1e79ca174becb60a087b175e1a36444a54f8eafa0491316b49a4300cb9"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-100-104-109-corrected/101/source-data.json",
+          "sha256": "185b90fa8348d3bf5e5183678b1803c053e8265b3b37e61b427f26db2172c6b3"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-100-104-109-corrected/101/glb-region-validation.json",
+          "sha256": "b2caf48b3430afc227f9061c6a7fe5cb8f1ab48857aae57d72572ccf2bd37e22"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-100-104-109-corrected/101/mcp-authoring-validation.json",
+          "sha256": "575c3c80ed25cc13fb6c30853dd57fe10665916e17c3f439a69fe7122a45949b"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-100-104-109-corrected/101/standalone-validation.json",
+          "sha256": "95bb33595949406fe379fb2cfc2a991be6418ada2e8da7dac1e99f25918965ea"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-100-104-109-corrected/101/root-height-region-validation.json",
+          "sha256": "64c3af9996fa27b7dae3e56bfe90c7058fafa8af8f4960ae97d154271a67e7c8"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-100-104-109-corrected/103/build.py",
+          "sha256": "fb446b1e79ca174becb60a087b175e1a36444a54f8eafa0491316b49a4300cb9"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-100-104-109-corrected/103/source-data.json",
+          "sha256": "69caec7ddc3ac23840a360576594ccbcef8aaebecf071a808449fb7dd7b25297"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-100-104-109-corrected/103/glb-region-validation.json",
+          "sha256": "b8c826efe9b1504b75a78d75d4a2f28d8203d550dc78f9d43d51df187fb65ed0"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-100-104-109-corrected/103/mcp-authoring-validation.json",
+          "sha256": "9a382c8c3707c73a00a41a85a846e38fb31019f4d43c2edb1397298bda12bb80"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-100-104-109-corrected/103/standalone-validation.json",
+          "sha256": "5510b4a5ccb499a9e8e4d1f0db2f4e10770f9386a26b32a33157c9ccae0d047a"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-100-104-109-corrected/103/root-height-region-validation.json",
+          "sha256": "edffc18737b0da4db749bcdc8678be48bfe0fd4987fa87e89dca7791eba8ea2a"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-100-104-109-corrected/104/build.py",
+          "sha256": "fb446b1e79ca174becb60a087b175e1a36444a54f8eafa0491316b49a4300cb9"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-100-104-109-corrected/104/source-data.json",
+          "sha256": "b377b9ffadff337965014e445fcc5667dd6ffa2bb6d416192f31ca98fdf56f6c"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-100-104-109-corrected/104/glb-region-validation.json",
+          "sha256": "49d93941be04676eb1c04c1422777b3a4199b64de9e1a4a834714c2579c9a40d"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-100-104-109-corrected/104/mcp-authoring-validation.json",
+          "sha256": "748e4a32c5f0065b7f2ce1e0049d1ccc2b5577492875440cf7779448ac312980"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-100-104-109-corrected/104/standalone-validation.json",
+          "sha256": "118e155b1e46467da2887de6075a5d2227e8f970556558244f2827a249819353"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-100-104-109-corrected/104/root-height-region-validation.json",
+          "sha256": "0a3f64629098517a5ff7c35dab967deab60a4e6889aa9250313aed1f129793bc"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-100-104-109-corrected/109/build.py",
+          "sha256": "fb446b1e79ca174becb60a087b175e1a36444a54f8eafa0491316b49a4300cb9"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-100-104-109-corrected/109/source-data.json",
+          "sha256": "f889c75b964de15f895f1a2ce26ef8a7151092e65ce0142855bacfa975d0163c"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-100-104-109-corrected/109/glb-region-validation.json",
+          "sha256": "d90c7cf79d7157830c4b56a016e198ad95484394eb67df83082bb2f81261f8d2"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-100-104-109-corrected/109/mcp-authoring-validation.json",
+          "sha256": "0d7c2ab168bd562f2fd8f16cec6397d1e5fe2f558ff84ff4b2e18c74c07a71e4"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-100-104-109-corrected/109/standalone-validation.json",
+          "sha256": "c5e4e1bca889ad4a8dd8c210d8de87a0705d479cad6c496c2cfd33aa671bacc4"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-100-104-109-corrected/109/root-height-region-validation.json",
+          "sha256": "708223a728cadaa37a0cc3057188263d5a6499881b4f70c92c0a44c56d334959"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-100-104-109-corrected/prepare.py",
+          "sha256": "2d9004dde806209a5f6b1688484d2e775cc14b3442abdab2e784ee9890e5ddeb"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-100-104-109-corrected/build_template.py",
+          "sha256": "fb446b1e79ca174becb60a087b175e1a36444a54f8eafa0491316b49a4300cb9"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-100-104-109-corrected/validate_blends.py",
+          "sha256": "0b66a72426255cb74df4f687145a1c56fc0bcab804a497510811d7fc6c2d6da3"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-100-104-109-corrected/validate_glbs.py",
+          "sha256": "a6960628593111b02b7cd84a0e9e0064fcb42179732561f27cf1b7944ddfe5b7"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-100-104-109-corrected/root-independent-source-validation.json",
+          "sha256": "80e9a3cd547856da9d5ce07b3213359ec9aa31a65d7aede77d84b707623e28b5"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-100-104-109-corrected/source-parts-all15.json",
+          "sha256": "e66dfeeda6b0212a874f3708f7d3c97e29b9161cf8b1dd097de8642256fbd844"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-100-104-109-corrected/historical-parts-geometry-proof.json",
+          "sha256": "0e9cc70d16fb9ae5e492a9fbf6d8e5db1b9398e8eb8f89be4d25347c12c846cd"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-100-104-109-corrected/reb-source-rows-root-verified.json",
+          "sha256": "d938477c3d1391745c7f90d78adaec8f99f3282a69c7eb3f3b8df10bb5fca005"
+        }
+      ]
+    },
+    "acro-riverpark-102-family": {
+      "sources": [
+        {
+          "url": "https://www.acro.co.kr/jsp/mobile/po/010366/static/img/main-complete/img-main6-9.jpg",
+          "sha256": "1011eab30d61ea086a622e89a7ec448b7048c1104fddea2bb52b34a53b02b960",
+          "scope": "complex",
+          "observations": "Official completed-complex photograph; the numbered tower and facade orientation are not independently identified."
+        },
+        {
+          "url": "https://www.acro.co.kr/MPosm_main.action?commonMap.CD_BIZ_LND=010366",
+          "observations": "Official completed complex gallery,1612 households,15 buildings."
+        },
+        {
+          "dataset": "reb_complex_identifier_dong",
+          "complexId": "11650120345416",
+          "snapshot": "reb-source-rows-root-verified.json",
+          "sha256": "d938477c3d1391745c7f90d78adaec8f99f3282a69c7eb3f3b8df10bb5fca005",
+          "observations": "Numbered floors; not a metre-height survey."
+        },
+        {
+          "dataset": "OpenStreetMap / local frozen building and building_part records",
+          "snapshot": "source-parts-all15.json",
+          "sha256": "e66dfeeda6b0212a874f3708f7d3c97e29b9161cf8b1dd097de8642256fbd844",
+          "observations": "Exact building and child outlines, parent OSM height estimates, child floor counts.100 missing19F and11020F connector recovered from unchanged historical way geometry."
+        },
+        {
+          "url": "https://api.openstreetmap.org/api/0.6/way/544771983/history",
+          "observations": "10019-floor historical part exactly covers the current source-parent remainder; latest way has no floor tag."
+        },
+        {
+          "url": "https://api.openstreetmap.org/api/0.6/relation/7766718/1",
+          "observations": "Named110 original relation includes20-floor connector543323180; modern parent excludes this unchanged part."
+        }
+      ],
+      "review": {
+        "siteId": "acro-riverpark-102-family",
+        "status": "visually-reviewed",
+        "reviewer": "root independent of Blender MCP author",
+        "inferenceApprovedAssets": [
+          "bespoke-acro-riverpark-102"
+        ],
+        "reviewedSourcePhotos": [
+          {
+            "url": "https://www.acro.co.kr/jsp/mobile/po/010366/static/img/main-complete/img-main6-9.jpg",
+            "sha256": "1011eab30d61ea086a622e89a7ec448b7048c1104fddea2bb52b34a53b02b960",
+            "scope": "complex",
+            "observations": "Official completed-complex photograph; the numbered tower and facade orientation are not independently identified."
+          }
+        ],
+        "comparisons": [
+          "Root independently reopened the actual official complex photo and four final102 views. Pale gridded end walls, dense glazed banks, dark base and restrained roof cap follow the previously reviewed109 vocabulary; numbered photo identity remains unresolved.",
+          "Independent source database verification confirms34-vertex102footprint,22OSM/REBfloors and77mOSMestimate. No child floor/height source regions are present for102; uniform height remains an explicit assumption.",
+          "Actual GLB triangles cover the entire source footprint at grade with missing area0.00001693m², and exterior grade details stay within0.90m of that footprint. Complete near-roof coverage and no geometry over77m are independently verified. All scene nodes are identity baked, and the GLB has no embedded images.",
+          "Individual retained102fallback owns the same source footprint; originals and prior published models remain untouched."
+        ],
+        "limits": [
+          "Photograph does not establish102 or its facade orientation.",
+          "No source child-height regions found; uniform full-height body is assumed.",
+          "77m parent height is an OSM estimate, not a legal or measured height.",
+          "Facade divisions, roof cap and projecting details are representative estimates; grade-level projections stay inside a0.90m band around the source footprint."
+        ],
+        "renders": [
+          "docs/model-audit/renders/acro-riverpark-102-family/102/front.png",
+          "docs/model-audit/renders/acro-riverpark-102-family/102/opposite.png",
+          "docs/model-audit/renders/acro-riverpark-102-family/102/side.png",
+          "docs/model-audit/renders/acro-riverpark-102-family/102/roof.png"
+        ],
+        "renderSha256": {
+          "docs/model-audit/renders/acro-riverpark-102-family/102/front.png": "5feb48524f364af0285524d205d4e39144a0e37e1fcacc7e595fbd0086e8ccc6",
+          "docs/model-audit/renders/acro-riverpark-102-family/102/opposite.png": "d3f948441dc6f6534fffd70b0fbbd423a67fb24f0e3037db5ffeb5ea752f7b55",
+          "docs/model-audit/renders/acro-riverpark-102-family/102/side.png": "929e57dc8f5b7a29f03ec9b6e2b54a6969030ce52305e45961a85dc22d9e55d8",
+          "docs/model-audit/renders/acro-riverpark-102-family/102/roof.png": "463bb7c890049e87d5cfd41ba2b4ab3da4af25a04520a0cebccdbd4cf82bb216"
+        },
+        "reviewedInputs": {
+          "102/acro-riverpark-102.glb": "1aee602e4e32eae49de008e5c4dcdd10ce50d38e2ccebd4284618a5a77670f1f",
+          "102/acro-riverpark-102-authored.blend": "a4711f3b60cae53ba6cfa64daab4fde84aa8f226190e4ce97a8ddfe869b42b55"
+        }
+      },
+      "assets": [
+        {
+          "id": "bespoke-acro-riverpark-102",
+          "sourceSha256": "1aee602e4e32eae49de008e5c4dcdd10ce50d38e2ccebd4284618a5a77670f1f",
+          "sha256": "2814366880c138710c3d9e45ee51ac0ebe82197ad67dc0d7d28a31ebec7ac679",
+          "bytes": 2796280,
+          "dimensions": [
+            42.083173751831055,
+            77,
+            51.33358573913574
+          ],
+          "min": [
+            -22.68889808654785,
+            0,
+            -27.98453140258789
+          ],
+          "max": [
+            19.394275665283203,
+            77,
+            23.34905433654785
+          ],
+          "triangles": 51708,
+          "components": [
+            {
+              "name": "editable_Warm_pale_architectural_planes006",
+              "triangles": 19248
+            },
+            {
+              "name": "editable_Charcoal_stone_lower_storeys006",
+              "triangles": 4632
+            },
+            {
+              "name": "editable_Blue_grey_glazing006",
+              "triangles": 9864
+            },
+            {
+              "name": "editable_Silver_glazing_mullions006",
+              "triangles": 17952
+            },
+            {
+              "name": "editable_Roof_equipment006",
+              "triangles": 12
+            }
+          ]
+        }
+      ],
+      "mcpEvidence": [
+        {
+          "path": "docs/model-audit/mcp/acro-riverpark-102-family/102/mcp-build.json",
+          "sha256": "cb94851ea1d11c2fca123095cf696c23d641d22ece8feaa85092b9ae85939831",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        }
+      ],
+      "recipeInputs": [
+        {
+          "path": "modeling/bespoke/acro-riverpark-102-family/source-parts-all15.json",
+          "sha256": "e66dfeeda6b0212a874f3708f7d3c97e29b9161cf8b1dd097de8642256fbd844"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverpark-102-family/historical-parts-geometry-proof.json",
+          "sha256": "0e9cc70d16fb9ae5e492a9fbf6d8e5db1b9398e8eb8f89be4d25347c12c846cd"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverpark-102-family/reb-source-rows-root-verified.json",
+          "sha256": "d938477c3d1391745c7f90d78adaec8f99f3282a69c7eb3f3b8df10bb5fca005"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverpark-102-family/102/build.py",
+          "sha256": "be85edce100f0f01ad50e4169555fd7cf1e3c330e0aa8d52edfffb7838f8c500"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverpark-102-family/102/source-data.json",
+          "sha256": "c0b8ec0167b2a61f63482a4ca6ea00c9bacaba00192fe2785d5b10ab8c646b60"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverpark-102-family/102/validate_glb.py",
+          "sha256": "c176e7ac1a7dbfa633cf0c341464a0a4b927354c42f1ca51eb30fb7688bc15b3"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverpark-102-family/102/glb-validation.json",
+          "sha256": "f7006e0f50cf619f7d3758965717d23f28f58df6f343e1a89df658cbd4a2c274"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverpark-102-family/102/standalone-validation.json",
+          "sha256": "6f6c7f052019e2d9e7563a614e60ec6cee1bba1be4bb69ef8bf3485a0f36be2a"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverpark-102-family/102/validation.json",
+          "sha256": "f82b33e865cfa9b0c6c23b93f557b1a173531740851c5cdb88daa00099ac8be5"
+        },
+        {
+          "path": "modeling/bespoke/acro-riverpark-102-family/102/root-height-region-validation.json",
+          "sha256": "cd3dc82ca7a2eeab3d6b237fe9bbea894222ef95121e8f17e98737290267bef9"
+        }
+      ]
+    },
+    "acro-source-parts-105-108-110-114-corrected": {
+      "sources": [
+        {
+          "url": "https://www.acro.co.kr/jsp/mobile/po/010366/static/img/main-complete/img-main6-9.jpg",
+          "sha256": "1011eab30d61ea086a622e89a7ec448b7048c1104fddea2bb52b34a53b02b960",
+          "scope": "complex",
+          "observations": "Official completed-complex photograph; the numbered tower and facade orientation are not independently identified."
+        },
+        {
+          "url": "https://www.acro.co.kr/MPosm_main.action?commonMap.CD_BIZ_LND=010366",
+          "observations": "Official completed complex gallery,1612 households,15 buildings."
+        },
+        {
+          "dataset": "reb_complex_identifier_dong",
+          "complexId": "11650120345416",
+          "snapshot": "reb-source-rows-root-verified.json",
+          "sha256": "d938477c3d1391745c7f90d78adaec8f99f3282a69c7eb3f3b8df10bb5fca005",
+          "observations": "Numbered floors; not a metre-height survey."
+        },
+        {
+          "dataset": "OpenStreetMap / local frozen building and building_part records",
+          "snapshot": "source-parts-all15.json",
+          "sha256": "e66dfeeda6b0212a874f3708f7d3c97e29b9161cf8b1dd097de8642256fbd844",
+          "observations": "Exact building and child outlines, parent OSM height estimates, child floor counts.100 missing19F and11020F connector recovered from unchanged historical way geometry."
+        },
+        {
+          "url": "https://api.openstreetmap.org/api/0.6/way/544771983/history",
+          "observations": "10019-floor historical part exactly covers the current source-parent remainder; latest way has no floor tag."
+        },
+        {
+          "url": "https://api.openstreetmap.org/api/0.6/relation/7766718/1",
+          "observations": "Named110 original relation includes20-floor connector543323180; modern parent excludes this unchanged part."
+        }
+      ],
+      "review": {
+        "siteId": "acro-source-parts-105-108-110-114-corrected",
+        "status": "visually-reviewed",
+        "reviewer": "root independent of Astra LOW Blender MCP author",
+        "date": "2026-09-22",
+        "inferenceApprovedAssets": [
+          "bespoke-acro-riverpark-105",
+          "bespoke-acro-riverpark-106",
+          "bespoke-acro-riverpark-107",
+          "bespoke-acro-riverpark-108",
+          "bespoke-acro-riverpark-110",
+          "bespoke-acro-riverpark-111",
+          "bespoke-acro-riverpark-112",
+          "bespoke-acro-riverpark-113",
+          "bespoke-acro-riverpark-114"
+        ],
+        "reviewedSourcePhotos": [
+          {
+            "url": "https://www.acro.co.kr/jsp/mobile/po/010366/static/img/main-complete/img-main6-9.jpg",
+            "sha256": "1011eab30d61ea086a622e89a7ec448b7048c1104fddea2bb52b34a53b02b960",
+            "scope": "complex"
+          }
+        ],
+        "comparisons": [
+          "Root independently reopened the actual official completed-complex photograph and all four final views of each asset. Pale gridded walls, denser blue-gray glazed strips, dark lower floors and subdued roof caps follow the earlier reviewed representative. Individual tower/photo-facing identity remains unresolved.",
+          "The source database and numbered REB rows were independently compared with every staged source record. Exact region geometry is checked against current child polygons, the parent remainder and documented historical10019F/11020F polygons. Official floor counts are kept separate from OSM parent floor discrepancies.",
+          "Independent GLB triangle clipping checks every lower-region interior for surfaces above its floor-derived height. A0.60m boundary allowance corresponds to the recipe maximum sill projection0.53m plus0.065m half-thickness and0.005m numeric margin. Roof coverage is also checked at a stricter0.03m inset, so whole-height bodies cannot conceal the lower roofs.",
+          "Root inspected the concave roof caps, separate low-wing silhouettes and retained notches in front, opposite, side and roof views. The grade triangle union retains the independently reconstructed footprint with less than0.001 square metres missing, and projected facade details stay within an explicit0.60m boundary band. All scene nodes are baked; no embedded photo textures.",
+          "Prior published100/109 asset bytes are retained under their old IDs. Corrected generations explicitly supersede them; other towers own their separately conserved fallback.110 includes its historically evidenced20F connector, while Banpo Parkville remains separate."
+        ],
+        "limits": [
+          "Source photograph does not establish the number or orientation of this tower.",
+          "Facade bay spacing, colors, sills, roof equipment and hidden faces are inferred from one reviewed representative.",
+          "Parent OSM heights are unverified estimates; child metre heights are derived from source floor counts.",
+          "Projecting facade details may extend up to0.60m across a region boundary; independently checked roof interiors do not exceed their region envelopes.",
+          "20-floor connector membership is a reviewed correction from historical relation7766718; current parent relation excludes the unchanged part."
+        ],
+        "renders": [
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/105/front.png",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/105/opposite.png",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/105/side.png",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/105/roof.png",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/106/front.png",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/106/opposite.png",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/106/side.png",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/106/roof.png",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/107/front.png",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/107/opposite.png",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/107/side.png",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/107/roof.png",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/108/front.png",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/108/opposite.png",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/108/side.png",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/108/roof.png",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/110/front.png",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/110/opposite.png",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/110/side.png",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/110/roof.png",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/111/front.png",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/111/opposite.png",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/111/side.png",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/111/roof.png",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/112/front.png",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/112/opposite.png",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/112/side.png",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/112/roof.png",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/113/front.png",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/113/opposite.png",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/113/side.png",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/113/roof.png",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/114/front.png",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/114/opposite.png",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/114/side.png",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/114/roof.png"
+        ],
+        "renderSha256": {
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/105/front.png": "3843ef3cce4435f52592fe1c06290e66346bccf82f22b65b033b2e9be296b0b1",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/105/opposite.png": "1b4974fb206f8087e86679b9623f20e09a1edafd542b0fb80e124fd85c903169",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/105/side.png": "ad80f30c3b6b5cde6fbff13c05892e0fdd5bd34f82dd6cf4686587469a34e73e",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/105/roof.png": "585e5f328a5445a3a5e2f7802ad84d5c5bf30311e81bd1bcd725f638997ccc2a",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/106/front.png": "5d8fb9ae8822488902633c4c8e7492b4d17358d2b109a2ce9c75c4bb2f8f2a8f",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/106/opposite.png": "bd404f40412aa669c421997ec59716ef94ba3503bc0ef2aaf1d4b8fedafc6ffd",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/106/side.png": "9697345d2d85f2efc830b5a32200ac65c7156874f8b67eceda9cbdd258fb07cf",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/106/roof.png": "2ecdba263f2b6b3b0022cacf773a406358b895dfa0ebf3621d61b1f79ff72cbc",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/107/front.png": "77bd389bd2f3b070c4107ab93f48fc427fa10e469979cf1e41cc8a3af59c15e6",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/107/opposite.png": "fa98dedd4494d9afa67114d3bea2f4b12a557a178f476f9d7e87afd8b22b1ba5",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/107/side.png": "152d55b1ac9bb1b1ca3c9c2518c64faef12afc5b25f61ab7d9776c9ab3acf501",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/107/roof.png": "cc7d3b0325ce515c0a8e1cc7de3026066f2ff1f6b5e51be0fcce22dd469811ec",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/108/front.png": "0db7ab651973cbfc2391998c7c809ab5a9a61a3e00153d5ecdb3e405df6a25c5",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/108/opposite.png": "9752175b445d8021187e313488171b027b001d5bfcc7dd876f2f2b00b6d59284",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/108/side.png": "33c0012471231e5ec3c846459c173a52816c5be1705569d50ce913c13b1a401b",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/108/roof.png": "c1ae08305c71a980775648221a051dcc81dc646e36e1995cd582b311ae531407",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/110/front.png": "e6295a34b1e27fb278e7edff157317813547311c6eca2abe6e560bec06d0b20b",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/110/opposite.png": "6f3e0397dbbcdd8b6a8f8f0d6acb828bb5ea1169eb34501bb533e08cac121c51",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/110/side.png": "0f15212c68e305704b6411f82f9373fba48ad279bcd137dc5ee1626626651e53",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/110/roof.png": "1475dfadd7690f4f47b132f9ddb07d7eaea2fdf2440e881ca64823fb24888da6",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/111/front.png": "b32a6e3dc42e9640b99172bf7686d31579413574b5d78092151f819aad3b4b56",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/111/opposite.png": "21c82d3814db961f69d149b16b4509a3da5001b1153f005ac4419435129160ad",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/111/side.png": "c3ddb7dfa165f1a1411ec119d2b08e30f92ed002c2c7d5b652fa56b4707a134a",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/111/roof.png": "ef81e8b63c5e708ed2edead8e860c4b1b4529ecb0e4c28277c767f4166d90bf9",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/112/front.png": "32f7e10685f9fd995b09088cd867a87f747e5b95f2aa5d2b8f1240a18e3b7a94",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/112/opposite.png": "ebceae883b06f1f1d9729784835c12b516d97dba76e6bcb073a2d797d493afe6",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/112/side.png": "98aebbabd883d312d7e0b8af34fad2aa7f89b78527ee3f54f2acd15a3d36f3c8",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/112/roof.png": "53692a0858fc0481c508b6b0fd8ca015cbca4c924119819cf914d5f2bbe63d06",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/113/front.png": "eaa072c04214c34aed4154da34767bea661cd87895ebeaec1ad4e227e64c63ee",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/113/opposite.png": "6ba3984a670836c1fd32da9fcf4de7505c19904af0e437c7cd334a5742fb476e",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/113/side.png": "5e30eabbf8fb2a2f2840dec97a9c2935758880fe799f9407bc5691b939c11307",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/113/roof.png": "fd3a09b454a5342f27c1e4283967cd83f13362b0275a92eb66542b63030fc98a",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/114/front.png": "ab5252c4409c8d6dde29486d3b483da4b4e0037d21c9b1ff0b18edd2c766f613",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/114/opposite.png": "48aca30008c4d662c485eb3d781a88f7a89f7820b65490b582b8991a803930f0",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/114/side.png": "9e77514f2ef26d22924fe4ef4fba7c433519fd55a99cafe2be48ba2bc20fd5a9",
+          "docs/model-audit/renders/acro-source-parts-105-108-110-114-corrected/114/roof.png": "74945c8687f9f11b54224b5453b3c56f3c696c4790bef81026ac568af62e1d06"
+        },
+        "reviewedInputs": {
+          "105/bespoke-acro-riverpark-105.glb": "898077616d52f4fd91ca31c4fdd47116b8b375afe2981d9666456740b3b19e1e",
+          "105/bespoke-acro-riverpark-105-authored.blend": "3e905263dadae024b30c95bedb0bfda85fc883fae3bf99911e188091470d6eea",
+          "106/bespoke-acro-riverpark-106.glb": "dddb7824d61792adb1b6b7faafebbc887e8afecd61d7b4eff7a74878ec92d529",
+          "106/bespoke-acro-riverpark-106-authored.blend": "a8d724266295f65a93642ee07510d3bf17c0c198ba0188df2ff2dd839dfd3fa7",
+          "107/bespoke-acro-riverpark-107.glb": "0910c481051add8a32631dfa1d4ecf8367dce482223495db86523fb467f8b7fc",
+          "107/bespoke-acro-riverpark-107-authored.blend": "75206720b259e28dbd97876fe2a4824fc4e910595ebe4a956c4c4753ed8d8b44",
+          "108/bespoke-acro-riverpark-108.glb": "437fb486f7a77dfd3cb864f6b18e03bcd69ded95dc698c29464a09425cba9652",
+          "108/bespoke-acro-riverpark-108-authored.blend": "0a0d6e1023525c00cfab30220d798fa2d01d3be1960fd8d61c383fd5740c98a4",
+          "110/bespoke-acro-riverpark-110.glb": "53f8551514fd903cff8bd554b472222f4fcc1e55e1b0e02d9a352575b2e5a543",
+          "110/bespoke-acro-riverpark-110-authored.blend": "145ca40f142dd49d3e91e89041a0bdcb8d1c357136e3b79db40bf0cecc9f1556",
+          "111/bespoke-acro-riverpark-111.glb": "ef8c450198d57bc23d9c1661ac076660c3f5f70acb48c87055cb0b1baad0075d",
+          "111/bespoke-acro-riverpark-111-authored.blend": "d68523425894ca3c86a057fd9b44041355499fbabc0833c1446ff1d7ccbdf444",
+          "112/bespoke-acro-riverpark-112.glb": "6ab8ac975441d61841bad88c286f6d75a1a452b5d225bb7a0724ea34760ba6a9",
+          "112/bespoke-acro-riverpark-112-authored.blend": "795d16046928623c38d7b15c4a4f7adb5e6d388ebe087d4c651958412690a5eb",
+          "113/bespoke-acro-riverpark-113.glb": "ea5ce44fa1f2e2c0c27f5efec73ec24e84f6ecb60e0cbf0e8c618144e8fed5f5",
+          "113/bespoke-acro-riverpark-113-authored.blend": "f7ff292a46aa7a0c2ed2bc7f7eeec7dd56837f8b639a83622bc27ca67e2d5034",
+          "114/bespoke-acro-riverpark-114.glb": "38f43d3e989932aa0edd419eb0a3de73a4777f80ade5b8a051dc51bb55ffb0ac",
+          "114/bespoke-acro-riverpark-114-authored.blend": "8b6952875f298917def6257b3a151ed3fca042d2abb974eb7264960c96ff95bc"
+        }
+      },
+      "assets": [
+        {
+          "id": "bespoke-acro-riverpark-105",
+          "sourceSha256": "898077616d52f4fd91ca31c4fdd47116b8b375afe2981d9666456740b3b19e1e",
+          "sha256": "332a9ea622f80a7468c9f43da8efe48873b3dfb7067a08249d32dba742f67a2f",
+          "bytes": 3683884,
+          "dimensions": [
+            41.71157646179199,
+            105,
+            61.99415969848633
+          ],
+          "min": [
+            -23.136964797973633,
+            0,
+            -30.334667205810547
+          ],
+          "max": [
+            18.57461166381836,
+            105,
+            31.65949249267578
+          ],
+          "triangles": 67909,
+          "components": [
+            {
+              "name": "105_R00_body",
+              "triangles": 42
+            },
+            {
+              "name": "105_R00_white",
+              "triangles": 12941
+            },
+            {
+              "name": "105_R00_dark",
+              "triangles": 132
+            },
+            {
+              "name": "105_R00_glass",
+              "triangles": 6120
+            },
+            {
+              "name": "105_R00_frame",
+              "triangles": 12240
+            },
+            {
+              "name": "105_R01_body",
+              "triangles": 18
+            },
+            {
+              "name": "105_R01_white",
+              "triangles": 1253
+            },
+            {
+              "name": "105_R01_dark",
+              "triangles": 672
+            },
+            {
+              "name": "105_R01_glass",
+              "triangles": 612
+            },
+            {
+              "name": "105_R01_frame",
+              "triangles": 1224
+            },
+            {
+              "name": "105_R02_body",
+              "triangles": 42
+            },
+            {
+              "name": "105_R02_white",
+              "triangles": 12741
+            },
+            {
+              "name": "105_R02_dark",
+              "triangles": 1812
+            },
+            {
+              "name": "105_R02_glass",
+              "triangles": 6036
+            },
+            {
+              "name": "105_R02_frame",
+              "triangles": 12024
+            }
+          ]
+        },
+        {
+          "id": "bespoke-acro-riverpark-106",
+          "sourceSha256": "dddb7824d61792adb1b6b7faafebbc887e8afecd61d7b4eff7a74878ec92d529",
+          "sha256": "88dbbcefb697355236a427b7b162fef04901684cdcfe966d7d53a2b66b1f8738",
+          "bytes": 6453248,
+          "dimensions": [
+            41.854713439941406,
+            115,
+            63.418495178222656
+          ],
+          "min": [
+            -18.81191062927246,
+            0,
+            -32.81117248535156
+          ],
+          "max": [
+            23.042802810668945,
+            115,
+            30.607322692871094
+          ],
+          "triangles": 119245,
+          "components": [
+            {
+              "name": "106_R00_body",
+              "triangles": 92
+            },
+            {
+              "name": "106_R00_white",
+              "triangles": 27985
+            },
+            {
+              "name": "106_R00_dark",
+              "triangles": 6228
+            },
+            {
+              "name": "106_R00_glass",
+              "triangles": 14748
+            },
+            {
+              "name": "106_R00_frame",
+              "triangles": 27720
+            },
+            {
+              "name": "106_R01_body",
+              "triangles": 52
+            },
+            {
+              "name": "106_R01_white",
+              "triangles": 14808
+            },
+            {
+              "name": "106_R01_dark",
+              "triangles": 5208
+            },
+            {
+              "name": "106_R01_glass",
+              "triangles": 8004
+            },
+            {
+              "name": "106_R01_frame",
+              "triangles": 14400
+            }
+          ]
+        },
+        {
+          "id": "bespoke-acro-riverpark-107",
+          "sourceSha256": "0910c481051add8a32631dfa1d4ecf8367dce482223495db86523fb467f8b7fc",
+          "sha256": "8f27c83e3d94c71e0feca2bc426174fa8e98e2246ed566a0a9360e48d95a6572",
+          "bytes": 3214160,
+          "dimensions": [
+            50.222015380859375,
+            68,
+            59.32662582397461
+          ],
+          "min": [
+            -26.214313507080078,
+            0,
+            -26.472000122070312
+          ],
+          "max": [
+            24.007701873779297,
+            68,
+            32.8546257019043
+          ],
+          "triangles": 59245,
+          "components": [
+            {
+              "name": "107_R00_body",
+              "triangles": 108
+            },
+            {
+              "name": "107_R00_white",
+              "triangles": 13898
+            },
+            {
+              "name": "107_R00_dark",
+              "triangles": 2832
+            },
+            {
+              "name": "107_R00_glass",
+              "triangles": 6168
+            },
+            {
+              "name": "107_R00_frame",
+              "triangles": 11856
+            },
+            {
+              "name": "107_R01_body",
+              "triangles": 60
+            },
+            {
+              "name": "107_R01_white",
+              "triangles": 9023
+            },
+            {
+              "name": "107_R01_dark",
+              "triangles": 3840
+            },
+            {
+              "name": "107_R01_glass",
+              "triangles": 4164
+            },
+            {
+              "name": "107_R01_frame",
+              "triangles": 7296
+            }
+          ]
+        },
+        {
+          "id": "bespoke-acro-riverpark-108",
+          "sourceSha256": "437fb486f7a77dfd3cb864f6b18e03bcd69ded95dc698c29464a09425cba9652",
+          "sha256": "d623256c6ec6613c5ac5b4bdeb4a5df3eb92321107062603e7eaeb309fc9108a",
+          "bytes": 2278660,
+          "dimensions": [
+            45.89302062988281,
+            68,
+            45.65204620361328
+          ],
+          "min": [
+            -17.4078311920166,
+            0,
+            -20.177814483642578
+          ],
+          "max": [
+            28.48518943786621,
+            68,
+            25.474231719970703
+          ],
+          "triangles": 41952,
+          "components": [
+            {
+              "name": "108_R00_body",
+              "triangles": 52
+            },
+            {
+              "name": "108_R00_white",
+              "triangles": 7777
+            },
+            {
+              "name": "108_R00_dark",
+              "triangles": 2040
+            },
+            {
+              "name": "108_R00_glass",
+              "triangles": 3996
+            },
+            {
+              "name": "108_R00_frame",
+              "triangles": 7800
+            },
+            {
+              "name": "108_R01_body",
+              "triangles": 68
+            },
+            {
+              "name": "108_R01_white",
+              "triangles": 7907
+            },
+            {
+              "name": "108_R01_dark",
+              "triangles": 1584
+            },
+            {
+              "name": "108_R01_glass",
+              "triangles": 3888
+            },
+            {
+              "name": "108_R01_frame",
+              "triangles": 6840
+            }
+          ]
+        },
+        {
+          "id": "bespoke-acro-riverpark-110",
+          "sourceSha256": "53f8551514fd903cff8bd554b472222f4fcc1e55e1b0e02d9a352575b2e5a543",
+          "sha256": "8539f18bbf103a780b63e9222619bf196d8aac0ea7c2a20d291300a2e7534a4c",
+          "bytes": 3159196,
+          "dimensions": [
+            41.711307525634766,
+            105,
+            61.98527908325195
+          ],
+          "min": [
+            -29.223217010498047,
+            0,
+            -35.907135009765625
+          ],
+          "max": [
+            12.488090515136719,
+            105,
+            26.078144073486328
+          ],
+          "triangles": 58191,
+          "components": [
+            {
+              "name": "110_R00_body",
+              "triangles": 44
+            },
+            {
+              "name": "110_R00_white",
+              "triangles": 13554
+            },
+            {
+              "name": "110_R00_dark",
+              "triangles": 132
+            },
+            {
+              "name": "110_R00_glass",
+              "triangles": 6480
+            },
+            {
+              "name": "110_R00_frame",
+              "triangles": 12960
+            },
+            {
+              "name": "110_R01_body",
+              "triangles": 18
+            },
+            {
+              "name": "110_R01_white",
+              "triangles": 1235
+            },
+            {
+              "name": "110_R01_dark",
+              "triangles": 672
+            },
+            {
+              "name": "110_R01_glass",
+              "triangles": 612
+            },
+            {
+              "name": "110_R01_frame",
+              "triangles": 1224
+            },
+            {
+              "name": "110_R02_body",
+              "triangles": 42
+            },
+            {
+              "name": "110_R02_white",
+              "triangles": 8546
+            },
+            {
+              "name": "110_R02_dark",
+              "triangles": 732
+            },
+            {
+              "name": "110_R02_glass",
+              "triangles": 3996
+            },
+            {
+              "name": "110_R02_frame",
+              "triangles": 7944
+            }
+          ]
+        },
+        {
+          "id": "bespoke-acro-riverpark-111",
+          "sourceSha256": "ef8c450198d57bc23d9c1661ac076660c3f5f70acb48c87055cb0b1baad0075d",
+          "sha256": "3576ae9da12a107d44a85d7534dcac5463a5aa1f554909f44af47631af537498",
+          "bytes": 4336528,
+          "dimensions": [
+            41.862815856933594,
+            79,
+            68.4359359741211
+          ],
+          "min": [
+            -20.347620010375977,
+            0,
+            -35.101314544677734
+          ],
+          "max": [
+            21.515195846557617,
+            79,
+            33.33462142944336
+          ],
+          "triangles": 79953,
+          "components": [
+            {
+              "name": "111_R00_body",
+              "triangles": 30
+            },
+            {
+              "name": "111_R00_white",
+              "triangles": 3549
+            },
+            {
+              "name": "111_R00_dark",
+              "triangles": 1764
+            },
+            {
+              "name": "111_R00_glass",
+              "triangles": 1752
+            },
+            {
+              "name": "111_R00_frame",
+              "triangles": 3360
+            },
+            {
+              "name": "111_R01_body",
+              "triangles": 94
+            },
+            {
+              "name": "111_R01_white",
+              "triangles": 17563
+            },
+            {
+              "name": "111_R01_dark",
+              "triangles": 3456
+            },
+            {
+              "name": "111_R01_glass",
+              "triangles": 9036
+            },
+            {
+              "name": "111_R01_frame",
+              "triangles": 16896
+            },
+            {
+              "name": "111_R02_body",
+              "triangles": 50
+            },
+            {
+              "name": "111_R02_white",
+              "triangles": 8183
+            },
+            {
+              "name": "111_R02_dark",
+              "triangles": 2088
+            },
+            {
+              "name": "111_R02_glass",
+              "triangles": 4500
+            },
+            {
+              "name": "111_R02_frame",
+              "triangles": 7632
+            }
+          ]
+        },
+        {
+          "id": "bespoke-acro-riverpark-112",
+          "sourceSha256": "6ab8ac975441d61841bad88c286f6d75a1a452b5d225bb7a0724ea34760ba6a9",
+          "sha256": "9ef39291e930aa2a093a533104d1c31b3aa9ad626ca3df04b4ed04f0e77be492",
+          "bytes": 3110776,
+          "dimensions": [
+            47.3378791809082,
+            68,
+            57.2993278503418
+          ],
+          "min": [
+            -27.404220581054688,
+            0,
+            -24.959918975830078
+          ],
+          "max": [
+            19.933658599853516,
+            68,
+            32.33940887451172
+          ],
+          "triangles": 57335,
+          "components": [
+            {
+              "name": "112_R00_body",
+              "triangles": 92
+            },
+            {
+              "name": "112_R00_white",
+              "triangles": 11742
+            },
+            {
+              "name": "112_R00_dark",
+              "triangles": 1296
+            },
+            {
+              "name": "112_R00_glass",
+              "triangles": 6240
+            },
+            {
+              "name": "112_R00_frame",
+              "triangles": 10752
+            },
+            {
+              "name": "112_R01_body",
+              "triangles": 60
+            },
+            {
+              "name": "112_R01_white",
+              "triangles": 10005
+            },
+            {
+              "name": "112_R01_dark",
+              "triangles": 4296
+            },
+            {
+              "name": "112_R01_glass",
+              "triangles": 4644
+            },
+            {
+              "name": "112_R01_frame",
+              "triangles": 8208
+            }
+          ]
+        },
+        {
+          "id": "bespoke-acro-riverpark-113",
+          "sourceSha256": "ea5ce44fa1f2e2c0c27f5efec73ec24e84f6ecb60e0cbf0e8c618144e8fed5f5",
+          "sha256": "6287618549ed153c82eeaacaa5e61bc87964621ca2c4fda62f8f6ef8c616e4ed",
+          "bytes": 2280112,
+          "dimensions": [
+            45.892818450927734,
+            68,
+            45.66317558288574
+          ],
+          "min": [
+            -17.40853500366211,
+            0,
+            -20.191728591918945
+          ],
+          "max": [
+            28.484283447265625,
+            68,
+            25.471446990966797
+          ],
+          "triangles": 41976,
+          "components": [
+            {
+              "name": "113_R00_body",
+              "triangles": 52
+            },
+            {
+              "name": "113_R00_white",
+              "triangles": 7804
+            },
+            {
+              "name": "113_R00_dark",
+              "triangles": 2040
+            },
+            {
+              "name": "113_R00_glass",
+              "triangles": 3996
+            },
+            {
+              "name": "113_R00_frame",
+              "triangles": 7800
+            },
+            {
+              "name": "113_R01_body",
+              "triangles": 68
+            },
+            {
+              "name": "113_R01_white",
+              "triangles": 7904
+            },
+            {
+              "name": "113_R01_dark",
+              "triangles": 1584
+            },
+            {
+              "name": "113_R01_glass",
+              "triangles": 3888
+            },
+            {
+              "name": "113_R01_frame",
+              "triangles": 6840
+            }
+          ]
+        },
+        {
+          "id": "bespoke-acro-riverpark-114",
+          "sourceSha256": "38f43d3e989932aa0edd419eb0a3de73a4777f80ade5b8a051dc51bb55ffb0ac",
+          "sha256": "be1f903e32aa432c386c6f37c75a2865c0df5adecb7b9ca406afc8186b40ed97",
+          "bytes": 5574184,
+          "dimensions": [
+            41.697879791259766,
+            132,
+            47.79269599914551
+          ],
+          "min": [
+            -20.120010375976562,
+            0,
+            -29.917890548706055
+          ],
+          "max": [
+            21.577869415283203,
+            132,
+            17.874805450439453
+          ],
+          "triangles": 102752,
+          "components": [
+            {
+              "name": "114_R00_body",
+              "triangles": 12
+            },
+            {
+              "name": "114_R00_white",
+              "triangles": 1825
+            },
+            {
+              "name": "114_R00_dark",
+              "triangles": 24
+            },
+            {
+              "name": "114_R00_glass",
+              "triangles": 888
+            },
+            {
+              "name": "114_R00_frame",
+              "triangles": 1776
+            },
+            {
+              "name": "114_R01_body",
+              "triangles": 22
+            },
+            {
+              "name": "114_R01_white",
+              "triangles": 8156
+            },
+            {
+              "name": "114_R01_dark",
+              "triangles": 3624
+            },
+            {
+              "name": "114_R01_glass",
+              "triangles": 4044
+            },
+            {
+              "name": "114_R01_frame",
+              "triangles": 7104
+            },
+            {
+              "name": "114_R02_body",
+              "triangles": 10
+            },
+            {
+              "name": "114_R02_white",
+              "triangles": 4522
+            },
+            {
+              "name": "114_R02_dark",
+              "triangles": 1812
+            },
+            {
+              "name": "114_R02_glass",
+              "triangles": 1788
+            },
+            {
+              "name": "114_R02_frame",
+              "triangles": 3552
+            },
+            {
+              "name": "114_R03_body",
+              "triangles": 22
+            },
+            {
+              "name": "114_R03_white",
+              "triangles": 4541
+            },
+            {
+              "name": "114_R03_dark",
+              "triangles": 60
+            },
+            {
+              "name": "114_R03_glass",
+              "triangles": 1776
+            },
+            {
+              "name": "114_R03_frame",
+              "triangles": 3552
+            },
+            {
+              "name": "114_R04_body",
+              "triangles": 60
+            },
+            {
+              "name": "114_R04_white",
+              "triangles": 19778
+            },
+            {
+              "name": "114_R04_dark",
+              "triangles": 3276
+            },
+            {
+              "name": "114_R04_glass",
+              "triangles": 10248
+            },
+            {
+              "name": "114_R04_frame",
+              "triangles": 20280
+            }
+          ]
+        }
+      ],
+      "mcpEvidence": [
+        {
+          "path": "docs/model-audit/mcp/acro-source-parts-105-108-110-114-corrected/105/mcp-build.json",
+          "sha256": "80f7688cd4c02f89753033b2b7412991a1f619d02304472a388fc86352322a0f",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        },
+        {
+          "path": "docs/model-audit/mcp/acro-source-parts-105-108-110-114-corrected/106/mcp-build.json",
+          "sha256": "6c5747c199e4a88f7fe0c7c93f428ae0ba84f8d5da4cde269b0a468886449e6d",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        },
+        {
+          "path": "docs/model-audit/mcp/acro-source-parts-105-108-110-114-corrected/107/mcp-build.json",
+          "sha256": "60d34ce3a85aeef3ad89bab59033fb7bd480a7cc8c199d8a71a10d3e9d219682",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        },
+        {
+          "path": "docs/model-audit/mcp/acro-source-parts-105-108-110-114-corrected/108/mcp-build.json",
+          "sha256": "11b27274370f8f9e813c52a9b5cdf95e51ab201486257482bb80e5577f98261c",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        },
+        {
+          "path": "docs/model-audit/mcp/acro-source-parts-105-108-110-114-corrected/110/mcp-build.json",
+          "sha256": "6a0594b98b91d27dcae7e6ec46ae878d90be1d40e0837edcd7e6cd6e8a3a33ad",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        },
+        {
+          "path": "docs/model-audit/mcp/acro-source-parts-105-108-110-114-corrected/111/mcp-build.json",
+          "sha256": "941ebe7e1ce38088b49fa6c91c773a5604b714947021eca9aad10e7674898e32",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        },
+        {
+          "path": "docs/model-audit/mcp/acro-source-parts-105-108-110-114-corrected/112/mcp-build.json",
+          "sha256": "a3074319adb47a265f4cfc4fbc31b8446298da7e5d535f2d687849f0a08ca624",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        },
+        {
+          "path": "docs/model-audit/mcp/acro-source-parts-105-108-110-114-corrected/113/mcp-build.json",
+          "sha256": "be4b66654c731c219add41976155d5149c384ff81cde26cf4691e6685ce545e3",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        },
+        {
+          "path": "docs/model-audit/mcp/acro-source-parts-105-108-110-114-corrected/114/mcp-build.json",
+          "sha256": "83d57d88f6541076f67bb0c21ef99be683b340b9793b6d3021d4bb25bf18f331",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        }
+      ],
+      "recipeInputs": [
+        {
+          "path": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/105/build.py",
+          "sha256": "26efffa7b1ef49ab569b37837e406ab8ffdaf2ba9d4d2ec05408c8f23d44c5dd"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/105/source-data.json",
+          "sha256": "6e5164630b41bdc0d6f3146c4b43de45823bc7db9d8b9795f0f47c3bb09f6aa9"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/105/standalone-validation.json",
+          "sha256": "57ff5dbc64a95dba114a5bedd4ecfdeb3a32db22eb47bb5bc290539c1ede62ef"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/105/root-height-region-validation.json",
+          "sha256": "4bded2546928e2a49b2fd0fa48d00c7530cde1470de9577412b2b2324b8391f9"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/106/build.py",
+          "sha256": "26efffa7b1ef49ab569b37837e406ab8ffdaf2ba9d4d2ec05408c8f23d44c5dd"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/106/source-data.json",
+          "sha256": "1869983f1c9fbaa82c962c72f19010299445dff66371a6c314edf21501981dbd"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/106/standalone-validation.json",
+          "sha256": "c0f2242fb167459fc3619f768479efe33d5fac702db051deed6ec589662da145"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/106/root-height-region-validation.json",
+          "sha256": "bd09875f6b9cf0f768b5df754490648285ec0815125700a169904bfc1a98a783"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/107/build.py",
+          "sha256": "26efffa7b1ef49ab569b37837e406ab8ffdaf2ba9d4d2ec05408c8f23d44c5dd"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/107/source-data.json",
+          "sha256": "6f96d2b34be5798868da99d89af179ec2b39a9a516783ff73cd784369c84b1a3"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/107/standalone-validation.json",
+          "sha256": "1666272c1fa158a4f1a98707c4be1919e5a710ce21c11f70aab42e9f2bbd19df"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/107/root-height-region-validation.json",
+          "sha256": "fee72b674bbcac4483dd22711914131afda93f3321b3e9ccf40a2bd82a1de3dd"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/108/build.py",
+          "sha256": "26efffa7b1ef49ab569b37837e406ab8ffdaf2ba9d4d2ec05408c8f23d44c5dd"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/108/source-data.json",
+          "sha256": "84070aa767a807bc8d1169dfa496aae8fbb5f13f3df8bfe4994344b08132ccf2"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/108/standalone-validation.json",
+          "sha256": "426ca400e5ca68adb380bad02f132f610474c40da063e22b543ab604d65b3052"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/108/root-height-region-validation.json",
+          "sha256": "fe4436ffcb9cc4a46ce338e3890d8518bb34280a5c903c3eaf4d4f68c39f92a4"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/110/build.py",
+          "sha256": "26efffa7b1ef49ab569b37837e406ab8ffdaf2ba9d4d2ec05408c8f23d44c5dd"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/110/source-data.json",
+          "sha256": "fd89d8637948449e957582b4d1d2165c2ddb8828036a027b1c76a99af3dc7ba8"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/110/standalone-validation.json",
+          "sha256": "0904b235e2ec3dc699d1b1e616be5308abbe9a2d069644f60f899893c62b9b47"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/110/root-height-region-validation.json",
+          "sha256": "3dba4153a6c586056a05b990e566338023377f7bc324ea09bf499e22d3f7ce6e"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/111/build.py",
+          "sha256": "26efffa7b1ef49ab569b37837e406ab8ffdaf2ba9d4d2ec05408c8f23d44c5dd"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/111/source-data.json",
+          "sha256": "06025fe379f89265cc7ce2dafe442747086f4f61613ee8b522793d0cbe3d180c"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/111/standalone-validation.json",
+          "sha256": "ddfc4a4423968cbcdd5efeeb762f7bbfde5f42438791b36c850eb0855124cf60"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/111/root-height-region-validation.json",
+          "sha256": "4b3cf2d94777f6218d1e2d4190603f83ef322c31f14ca1d4d45067cc565220c2"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/112/build.py",
+          "sha256": "26efffa7b1ef49ab569b37837e406ab8ffdaf2ba9d4d2ec05408c8f23d44c5dd"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/112/source-data.json",
+          "sha256": "03070cf64ce8dfdd74ef61752c90fa505d040eb3bfa9ac52d2299df81843dd89"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/112/standalone-validation.json",
+          "sha256": "36706a04f90e116e901fc0fa29bb678edef6d55aeb22912ba5e2f7d5a492a66c"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/112/root-height-region-validation.json",
+          "sha256": "eae00268df4669ecfe8b235c2870349ec16e281ec992119c8a445f2ceae0cd3a"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/113/build.py",
+          "sha256": "26efffa7b1ef49ab569b37837e406ab8ffdaf2ba9d4d2ec05408c8f23d44c5dd"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/113/source-data.json",
+          "sha256": "ed5bf5080ac232be7636345ca15711be9ca52fa38b53ca63a92195de9a81a937"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/113/standalone-validation.json",
+          "sha256": "3950870e8f7f7e643b356c0b86a94bd420ef463e25ae72f34451ce36f87aacf7"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/113/root-height-region-validation.json",
+          "sha256": "b4941e20ca10ea330de9149e35327283ab277a789001f42449f75709d30fec79"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/114/build.py",
+          "sha256": "26efffa7b1ef49ab569b37837e406ab8ffdaf2ba9d4d2ec05408c8f23d44c5dd"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/114/source-data.json",
+          "sha256": "3a70d3417fc8397aabe7a3be167a9cfef884d85d8ea55789d9dc4b941d39b015"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/114/standalone-validation.json",
+          "sha256": "9465b495f77a71f575ebe79a3f7e6b7dae40ed490a2283f6e8843d7ab88ec8d3"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/114/root-height-region-validation.json",
+          "sha256": "b8a9d9a4930b3463ee56bdbd2426745c2870ff30fa013ff26636027d17d19818"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/prepare.py",
+          "sha256": "0a484fa1d453cc92743e14aa6f9d3cd0be91eaf897cb9aa75e39742a7d3cc498"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/build_region_model.py",
+          "sha256": "2e3bf5c2b7d7011ba6169cbb3bc3149a275116a0b59bed17be65faceb632fc19"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/check_standalone.py",
+          "sha256": "f8545e4bca87837d70ec8d965a2dfe49c97e7c7edad3a085d381f3bab29c51c9"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/handoff.json",
+          "sha256": "0e2f7972ea6db46d0e651ce6d20751a0ab0eb9741a17fcbc7126a3841c2fe20b"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/root-independent-source-validation.json",
+          "sha256": "f35d2c84e85bdc969a1519d8c36f8644fefcc305c5cd11266b0aae8b9c450b08"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/source-parts-all15.json",
+          "sha256": "e66dfeeda6b0212a874f3708f7d3c97e29b9161cf8b1dd097de8642256fbd844"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/historical-parts-geometry-proof.json",
+          "sha256": "0e9cc70d16fb9ae5e492a9fbf6d8e5db1b9398e8eb8f89be4d25347c12c846cd"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/reb-source-rows-root-verified.json",
+          "sha256": "d938477c3d1391745c7f90d78adaec8f99f3282a69c7eb3f3b8df10bb5fca005"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/source-evidence/geometry-proof.json",
+          "sha256": "0e9cc70d16fb9ae5e492a9fbf6d8e5db1b9398e8eb8f89be4d25347c12c846cd"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/source-evidence/reb-source-rows-root-verified.json",
+          "sha256": "d938477c3d1391745c7f90d78adaec8f99f3282a69c7eb3f3b8df10bb5fca005"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/source-evidence/recovered-parts.geojson",
+          "sha256": "3fd1a377b68e6e4422ff9b4ce81c310729e115de45ea7b889f46ca5a327727aa"
+        },
+        {
+          "path": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/source-evidence/source-parts-all15.json",
+          "sha256": "e66dfeeda6b0212a874f3708f7d3c97e29b9161cf8b1dd097de8642256fbd844"
+        }
+      ]
     }
   }
 }

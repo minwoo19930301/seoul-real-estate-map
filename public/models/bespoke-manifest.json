@@ -27787,6 +27787,1598 @@
         ],
         "inferenceScope": "Completed complex-level appearance applied to a separately numbered source footprint. Photo tower and facing direction unresolved; hidden faces and window proportions inferred."
       }
+    },
+    {
+      "id": "bespoke-acro-riverpark-100-corrected",
+      "nameKo": "아크로리버파크 100동",
+      "model": "bespoke/acro-source-parts-100-104-109-corrected/bespoke-acro-riverpark-100-corrected.glb",
+      "coordinate": {
+        "lon": 126.99306099756097,
+        "lat": 37.504918921951216
+      },
+      "dimensions": [
+        69.50214195251465,
+        74,
+        45.63811683654785
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "metres; independent terrain anchor",
+      "quality": "reference",
+      "sha256": "2770bb862f313ceabace4f8a1da2c415c9bcf3903054b1382d7666338a7075fa",
+      "referenceUrl": "https://www.acro.co.kr/MPosm_main.action?commonMap.CD_BIZ_LND=010366",
+      "category": "apartment",
+      "district": "서초구",
+      "minZoom": 15,
+      "geoBounds": [
+        126.99269863796478,
+        37.504679853930796,
+        126.99348566370335,
+        37.505089828109725
+      ],
+      "footprintIds": [
+        "60227661-442c-454d-bb39-c5d658cf9e76"
+      ],
+      "supersedes": [
+        "bespoke-acro-riverpark-100"
+      ],
+      "searchable": false,
+      "groundOffsetM": 0,
+      "sourceRecord": {
+        "provider": "Individual Blender MCP reconstruction",
+        "siteId": "acro-source-parts-100-104-109-corrected",
+        "sources": [
+          {
+            "url": "https://www.acro.co.kr/jsp/mobile/po/010366/static/img/main-complete/img-main6-9.jpg",
+            "sha256": "1011eab30d61ea086a622e89a7ec448b7048c1104fddea2bb52b34a53b02b960",
+            "scope": "complex",
+            "observations": "Official completed-complex photograph; the numbered tower and facade orientation are not independently identified."
+          },
+          {
+            "url": "https://www.acro.co.kr/MPosm_main.action?commonMap.CD_BIZ_LND=010366",
+            "observations": "Official completed complex gallery,1612 households,15 buildings."
+          },
+          {
+            "dataset": "reb_complex_identifier_dong",
+            "complexId": "11650120345416",
+            "snapshot": "reb-source-rows-root-verified.json",
+            "sha256": "d938477c3d1391745c7f90d78adaec8f99f3282a69c7eb3f3b8df10bb5fca005",
+            "observations": "Numbered floors; not a metre-height survey."
+          },
+          {
+            "dataset": "OpenStreetMap / local frozen building and building_part records",
+            "snapshot": "source-parts-all15.json",
+            "sha256": "e66dfeeda6b0212a874f3708f7d3c97e29b9161cf8b1dd097de8642256fbd844",
+            "observations": "Exact building and child outlines, parent OSM height estimates, child floor counts.100 missing19F and11020F connector recovered from unchanged historical way geometry."
+          },
+          {
+            "url": "https://api.openstreetmap.org/api/0.6/way/544771983/history",
+            "observations": "10019-floor historical part exactly covers the current source-parent remainder; latest way has no floor tag."
+          },
+          {
+            "url": "https://api.openstreetmap.org/api/0.6/relation/7766718/1",
+            "observations": "Named110 original relation includes20-floor connector543323180; modern parent excludes this unchanged part."
+          }
+        ],
+        "blendSource": "modeling/bespoke/acro-source-parts-100-104-109-corrected/100/bespoke-acro-riverpark-100-corrected-authored.blend",
+        "blendSha256": "292ac15c91199f4b39b22a212ff48fcc3f601be5f8574daf5f253489d42b3748",
+        "sourceGlbSha256": "35076ee03f1b187926a4508ea2d0ec58a88c5d4a5cfbfe8b37c3510040b05644",
+        "components": [
+          "Exact individual source footprint and source-based stepped height regions",
+          "Separate lower-wing roofs with constrained concave triangulation",
+          "Pale wall fields, dense glazed banks and dark lower floors adapted from the reviewed representative",
+          "Thin mullions and inferred projecting sills",
+          "Roof caps and simplified plant bounded by each region height"
+        ],
+        "buildingFacts": {
+          "floors": 21,
+          "floorsBasis": "Individually numbered REB complex11650120345416 rows; child region floors use current OSM parts except historical10019F wing.",
+          "sourceHeightM": 74.0,
+          "heightM": 74.0,
+          "heightBasis": "Parent maximum is an unverified OSM metre estimate; region height = parentHeight * childFloors / max(officialMainFloors,maxChildFloors). Uncovered regions retain the parent maximum. Not measured child heights."
+        },
+        "uncertainties": [
+          "Source photograph does not establish the number or orientation of this tower.",
+          "Facade bay spacing, colors, sills, roof equipment and hidden faces are inferred from one reviewed representative.",
+          "Parent OSM heights are unverified estimates; child metre heights are derived from source floor counts.",
+          "Projecting facade details may extend up to0.60m across a region boundary; independently checked roof interiors do not exceed their region envelopes.",
+          "19-floor region uses historical way544771983 tags and exact unchanged geometry; current way has no floor count."
+        ],
+        "accuracy": "Representative photographed facade adapted to this numbered building; inferred faces are not independently photo-verified.",
+        "modelingBasis": "representative-photo-inference",
+        "inferredFrom": [
+          {
+            "id": "bespoke-acro-riverpark-109",
+            "sha256": "0f7430ea0134ec67ac4a8857a42dd3a55a2e0f971e57a90a1b9f84bfc99ee01d",
+            "siteId": "acro-riverpark-109-100"
+          }
+        ],
+        "inferenceScope": "Reuse only the previously reviewed complex-photo facade vocabulary; individual shape and stepped roof regions follow separate numbered geometry. Individual facade orientation and hidden faces remain inferred."
+      }
+    },
+    {
+      "id": "bespoke-acro-riverpark-101",
+      "nameKo": "아크로리버파크 101동",
+      "model": "bespoke/acro-source-parts-100-104-109-corrected/bespoke-acro-riverpark-101.glb",
+      "coordinate": {
+        "lon": 126.99324848157896,
+        "lat": 37.50546806578947
+      },
+      "dimensions": [
+        41.43570899963379,
+        90,
+        50.64410209655762
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "metres; independent terrain anchor",
+      "quality": "reference",
+      "sha256": "a8d454b6145c513762d5f62b7db83a7bcc29da4da5bb48fde6f60032a3303c01",
+      "referenceUrl": "https://www.acro.co.kr/MPosm_main.action?commonMap.CD_BIZ_LND=010366",
+      "category": "apartment",
+      "district": "서초구",
+      "minZoom": 15,
+      "geoBounds": [
+        126.99300364350366,
+        37.50526125107574,
+        126.99347285507672,
+        37.50571619478538
+      ],
+      "footprintIds": [
+        "0c8493ba-7cf2-44f4-a58a-2e2ccbbf8780"
+      ],
+      "supersedes": [
+        "fallback-acro-riverpark-101"
+      ],
+      "searchable": false,
+      "groundOffsetM": 0,
+      "sourceRecord": {
+        "provider": "Individual Blender MCP reconstruction",
+        "siteId": "acro-source-parts-100-104-109-corrected",
+        "sources": [
+          {
+            "url": "https://www.acro.co.kr/jsp/mobile/po/010366/static/img/main-complete/img-main6-9.jpg",
+            "sha256": "1011eab30d61ea086a622e89a7ec448b7048c1104fddea2bb52b34a53b02b960",
+            "scope": "complex",
+            "observations": "Official completed-complex photograph; the numbered tower and facade orientation are not independently identified."
+          },
+          {
+            "url": "https://www.acro.co.kr/MPosm_main.action?commonMap.CD_BIZ_LND=010366",
+            "observations": "Official completed complex gallery,1612 households,15 buildings."
+          },
+          {
+            "dataset": "reb_complex_identifier_dong",
+            "complexId": "11650120345416",
+            "snapshot": "reb-source-rows-root-verified.json",
+            "sha256": "d938477c3d1391745c7f90d78adaec8f99f3282a69c7eb3f3b8df10bb5fca005",
+            "observations": "Numbered floors; not a metre-height survey."
+          },
+          {
+            "dataset": "OpenStreetMap / local frozen building and building_part records",
+            "snapshot": "source-parts-all15.json",
+            "sha256": "e66dfeeda6b0212a874f3708f7d3c97e29b9161cf8b1dd097de8642256fbd844",
+            "observations": "Exact building and child outlines, parent OSM height estimates, child floor counts.100 missing19F and11020F connector recovered from unchanged historical way geometry."
+          },
+          {
+            "url": "https://api.openstreetmap.org/api/0.6/way/544771983/history",
+            "observations": "10019-floor historical part exactly covers the current source-parent remainder; latest way has no floor tag."
+          },
+          {
+            "url": "https://api.openstreetmap.org/api/0.6/relation/7766718/1",
+            "observations": "Named110 original relation includes20-floor connector543323180; modern parent excludes this unchanged part."
+          }
+        ],
+        "blendSource": "modeling/bespoke/acro-source-parts-100-104-109-corrected/101/bespoke-acro-riverpark-101-authored.blend",
+        "blendSha256": "574c658f89bb01727ab9fc11f6f371c1ae2f240127fd13402e107f76f3c5c808",
+        "sourceGlbSha256": "f78072a61359fa1601d217b12a978bf7354c22c1e0fbbc00fc3def7b79963f24",
+        "components": [
+          "Exact individual source footprint and source-based stepped height regions",
+          "Separate lower-wing roofs with constrained concave triangulation",
+          "Pale wall fields, dense glazed banks and dark lower floors adapted from the reviewed representative",
+          "Thin mullions and inferred projecting sills",
+          "Roof caps and simplified plant bounded by each region height"
+        ],
+        "buildingFacts": {
+          "floors": 26,
+          "floorsBasis": "Individually numbered REB complex11650120345416 rows; child region floors use current OSM parts except historical10019F wing.",
+          "sourceHeightM": 90.0,
+          "heightM": 90.0,
+          "heightBasis": "Parent maximum is an unverified OSM metre estimate; region height = parentHeight * childFloors / max(officialMainFloors,maxChildFloors). Uncovered regions retain the parent maximum. Not measured child heights."
+        },
+        "uncertainties": [
+          "Source photograph does not establish the number or orientation of this tower.",
+          "Facade bay spacing, colors, sills, roof equipment and hidden faces are inferred from one reviewed representative.",
+          "Parent OSM heights are unverified estimates; child metre heights are derived from source floor counts.",
+          "Projecting facade details may extend up to0.60m across a region boundary; independently checked roof interiors do not exceed their region envelopes."
+        ],
+        "accuracy": "Representative photographed facade adapted to this numbered building; inferred faces are not independently photo-verified.",
+        "modelingBasis": "representative-photo-inference",
+        "inferredFrom": [
+          {
+            "id": "bespoke-acro-riverpark-109",
+            "sha256": "0f7430ea0134ec67ac4a8857a42dd3a55a2e0f971e57a90a1b9f84bfc99ee01d",
+            "siteId": "acro-riverpark-109-100"
+          }
+        ],
+        "inferenceScope": "Reuse only the previously reviewed complex-photo facade vocabulary; individual shape and stepped roof regions follow separate numbered geometry. Individual facade orientation and hidden faces remain inferred."
+      }
+    },
+    {
+      "id": "bespoke-acro-riverpark-103",
+      "nameKo": "아크로리버파크 103동",
+      "model": "bespoke/acro-source-parts-100-104-109-corrected/bespoke-acro-riverpark-103.glb",
+      "coordinate": {
+        "lon": 126.99260776086956,
+        "lat": 37.50559534347826
+      },
+      "dimensions": [
+        41.34893989562988,
+        122,
+        47.1099853515625
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "metres; independent terrain anchor",
+      "quality": "reference",
+      "sha256": "91b68b6261b99603e740c8d4fda571e8778dec86191d830825a0a994a9ee6bd6",
+      "referenceUrl": "https://www.acro.co.kr/MPosm_main.action?commonMap.CD_BIZ_LND=010366",
+      "category": "apartment",
+      "district": "서초구",
+      "minZoom": 15,
+      "geoBounds": [
+        126.99238588892307,
+        37.50543945911253,
+        126.99285411873447,
+        37.50586265531129
+      ],
+      "footprintIds": [
+        "f829af9c-7a4e-41dc-a623-50e8643d5bf0"
+      ],
+      "supersedes": [
+        "fallback-acro-riverpark-103"
+      ],
+      "searchable": false,
+      "groundOffsetM": 0,
+      "sourceRecord": {
+        "provider": "Individual Blender MCP reconstruction",
+        "siteId": "acro-source-parts-100-104-109-corrected",
+        "sources": [
+          {
+            "url": "https://www.acro.co.kr/jsp/mobile/po/010366/static/img/main-complete/img-main6-9.jpg",
+            "sha256": "1011eab30d61ea086a622e89a7ec448b7048c1104fddea2bb52b34a53b02b960",
+            "scope": "complex",
+            "observations": "Official completed-complex photograph; the numbered tower and facade orientation are not independently identified."
+          },
+          {
+            "url": "https://www.acro.co.kr/MPosm_main.action?commonMap.CD_BIZ_LND=010366",
+            "observations": "Official completed complex gallery,1612 households,15 buildings."
+          },
+          {
+            "dataset": "reb_complex_identifier_dong",
+            "complexId": "11650120345416",
+            "snapshot": "reb-source-rows-root-verified.json",
+            "sha256": "d938477c3d1391745c7f90d78adaec8f99f3282a69c7eb3f3b8df10bb5fca005",
+            "observations": "Numbered floors; not a metre-height survey."
+          },
+          {
+            "dataset": "OpenStreetMap / local frozen building and building_part records",
+            "snapshot": "source-parts-all15.json",
+            "sha256": "e66dfeeda6b0212a874f3708f7d3c97e29b9161cf8b1dd097de8642256fbd844",
+            "observations": "Exact building and child outlines, parent OSM height estimates, child floor counts.100 missing19F and11020F connector recovered from unchanged historical way geometry."
+          },
+          {
+            "url": "https://api.openstreetmap.org/api/0.6/way/544771983/history",
+            "observations": "10019-floor historical part exactly covers the current source-parent remainder; latest way has no floor tag."
+          },
+          {
+            "url": "https://api.openstreetmap.org/api/0.6/relation/7766718/1",
+            "observations": "Named110 original relation includes20-floor connector543323180; modern parent excludes this unchanged part."
+          }
+        ],
+        "blendSource": "modeling/bespoke/acro-source-parts-100-104-109-corrected/103/bespoke-acro-riverpark-103-authored.blend",
+        "blendSha256": "08a118b234bef37ae1731b7ba4366c2230fd35be64e42fdab5ead9246ac869a3",
+        "sourceGlbSha256": "c5d437c8eed84cf5b72de52e70f3bd610b9eae20573b33ee9b09d9839252ba5a",
+        "components": [
+          "Exact individual source footprint and source-based stepped height regions",
+          "Separate lower-wing roofs with constrained concave triangulation",
+          "Pale wall fields, dense glazed banks and dark lower floors adapted from the reviewed representative",
+          "Thin mullions and inferred projecting sills",
+          "Roof caps and simplified plant bounded by each region height"
+        ],
+        "buildingFacts": {
+          "floors": 35,
+          "floorsBasis": "Individually numbered REB complex11650120345416 rows; child region floors use current OSM parts except historical10019F wing.",
+          "sourceHeightM": 122.0,
+          "heightM": 122.0,
+          "heightBasis": "Parent maximum is an unverified OSM metre estimate; region height = parentHeight * childFloors / max(officialMainFloors,maxChildFloors). Uncovered regions retain the parent maximum. Not measured child heights."
+        },
+        "uncertainties": [
+          "Source photograph does not establish the number or orientation of this tower.",
+          "Facade bay spacing, colors, sills, roof equipment and hidden faces are inferred from one reviewed representative.",
+          "Parent OSM heights are unverified estimates; child metre heights are derived from source floor counts.",
+          "Projecting facade details may extend up to0.60m across a region boundary; independently checked roof interiors do not exceed their region envelopes."
+        ],
+        "accuracy": "Representative photographed facade adapted to this numbered building; inferred faces are not independently photo-verified.",
+        "modelingBasis": "representative-photo-inference",
+        "inferredFrom": [
+          {
+            "id": "bespoke-acro-riverpark-109",
+            "sha256": "0f7430ea0134ec67ac4a8857a42dd3a55a2e0f971e57a90a1b9f84bfc99ee01d",
+            "siteId": "acro-riverpark-109-100"
+          }
+        ],
+        "inferenceScope": "Reuse only the previously reviewed complex-photo facade vocabulary; individual shape and stepped roof regions follow separate numbered geometry. Individual facade orientation and hidden faces remain inferred."
+      }
+    },
+    {
+      "id": "bespoke-acro-riverpark-104",
+      "nameKo": "아크로리버파크 104동",
+      "model": "bespoke/acro-source-parts-100-104-109-corrected/bespoke-acro-riverpark-104.glb",
+      "coordinate": {
+        "lon": 126.99268506578947,
+        "lat": 37.50628677368421
+      },
+      "dimensions": [
+        47.70681190490723,
+        110,
+        69.10391235351562
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "metres; independent terrain anchor",
+      "quality": "reference",
+      "sha256": "39a34f584d196c7ee2398e847f53f8021b2d7fb46fee454a67b4702c1e6437e8",
+      "referenceUrl": "https://www.acro.co.kr/MPosm_main.action?commonMap.CD_BIZ_LND=010366",
+      "category": "apartment",
+      "district": "서초구",
+      "minZoom": 15,
+      "geoBounds": [
+        126.99241940110456,
+        37.50594242159374,
+        126.99295963160351,
+        37.50656319260033
+      ],
+      "footprintIds": [
+        "bff8d9a4-e070-4c11-b4b3-d9524f7add37"
+      ],
+      "supersedes": [
+        "fallback-acro-riverpark-104"
+      ],
+      "searchable": false,
+      "groundOffsetM": 0,
+      "sourceRecord": {
+        "provider": "Individual Blender MCP reconstruction",
+        "siteId": "acro-source-parts-100-104-109-corrected",
+        "sources": [
+          {
+            "url": "https://www.acro.co.kr/jsp/mobile/po/010366/static/img/main-complete/img-main6-9.jpg",
+            "sha256": "1011eab30d61ea086a622e89a7ec448b7048c1104fddea2bb52b34a53b02b960",
+            "scope": "complex",
+            "observations": "Official completed-complex photograph; the numbered tower and facade orientation are not independently identified."
+          },
+          {
+            "url": "https://www.acro.co.kr/MPosm_main.action?commonMap.CD_BIZ_LND=010366",
+            "observations": "Official completed complex gallery,1612 households,15 buildings."
+          },
+          {
+            "dataset": "reb_complex_identifier_dong",
+            "complexId": "11650120345416",
+            "snapshot": "reb-source-rows-root-verified.json",
+            "sha256": "d938477c3d1391745c7f90d78adaec8f99f3282a69c7eb3f3b8df10bb5fca005",
+            "observations": "Numbered floors; not a metre-height survey."
+          },
+          {
+            "dataset": "OpenStreetMap / local frozen building and building_part records",
+            "snapshot": "source-parts-all15.json",
+            "sha256": "e66dfeeda6b0212a874f3708f7d3c97e29b9161cf8b1dd097de8642256fbd844",
+            "observations": "Exact building and child outlines, parent OSM height estimates, child floor counts.100 missing19F and11020F connector recovered from unchanged historical way geometry."
+          },
+          {
+            "url": "https://api.openstreetmap.org/api/0.6/way/544771983/history",
+            "observations": "10019-floor historical part exactly covers the current source-parent remainder; latest way has no floor tag."
+          },
+          {
+            "url": "https://api.openstreetmap.org/api/0.6/relation/7766718/1",
+            "observations": "Named110 original relation includes20-floor connector543323180; modern parent excludes this unchanged part."
+          }
+        ],
+        "blendSource": "modeling/bespoke/acro-source-parts-100-104-109-corrected/104/bespoke-acro-riverpark-104-authored.blend",
+        "blendSha256": "daf93f7a2d62ac725351940edf205cc26db956955ff16bf3991885a423900f34",
+        "sourceGlbSha256": "b997a709bcab2e7296ab4159d24ba06864e0660fd49e8c8b4983cddbfff6fc5e",
+        "components": [
+          "Exact individual source footprint and source-based stepped height regions",
+          "Separate lower-wing roofs with constrained concave triangulation",
+          "Pale wall fields, dense glazed banks and dark lower floors adapted from the reviewed representative",
+          "Thin mullions and inferred projecting sills",
+          "Roof caps and simplified plant bounded by each region height"
+        ],
+        "buildingFacts": {
+          "floors": 32,
+          "floorsBasis": "Individually numbered REB complex11650120345416 rows; child region floors use current OSM parts except historical10019F wing.",
+          "sourceHeightM": 110.0,
+          "heightM": 110.0,
+          "heightBasis": "Parent maximum is an unverified OSM metre estimate; region height = parentHeight * childFloors / max(officialMainFloors,maxChildFloors). Uncovered regions retain the parent maximum. Not measured child heights."
+        },
+        "uncertainties": [
+          "Source photograph does not establish the number or orientation of this tower.",
+          "Facade bay spacing, colors, sills, roof equipment and hidden faces are inferred from one reviewed representative.",
+          "Parent OSM heights are unverified estimates; child metre heights are derived from source floor counts.",
+          "Projecting facade details may extend up to0.60m across a region boundary; independently checked roof interiors do not exceed their region envelopes."
+        ],
+        "accuracy": "Representative photographed facade adapted to this numbered building; inferred faces are not independently photo-verified.",
+        "modelingBasis": "representative-photo-inference",
+        "inferredFrom": [
+          {
+            "id": "bespoke-acro-riverpark-109",
+            "sha256": "0f7430ea0134ec67ac4a8857a42dd3a55a2e0f971e57a90a1b9f84bfc99ee01d",
+            "siteId": "acro-riverpark-109-100"
+          }
+        ],
+        "inferenceScope": "Reuse only the previously reviewed complex-photo facade vocabulary; individual shape and stepped roof regions follow separate numbered geometry. Individual facade orientation and hidden faces remain inferred."
+      }
+    },
+    {
+      "id": "bespoke-acro-riverpark-109-corrected",
+      "nameKo": "아크로리버파크 109동",
+      "model": "bespoke/acro-source-parts-100-104-109-corrected/bespoke-acro-riverpark-109-corrected.glb",
+      "coordinate": {
+        "lon": 126.99387269166668,
+        "lat": 37.506168550000005
+      },
+      "dimensions": [
+        41.87692642211914,
+        132,
+        47.68745040893555
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "metres; independent terrain anchor",
+      "quality": "reference",
+      "sha256": "90e41ec3e79f7a2429b7841b0cfeaf50ea2df2509d07b64fa5a49057dea61d3d",
+      "referenceUrl": "https://www.acro.co.kr/MPosm_main.action?commonMap.CD_BIZ_LND=010366",
+      "category": "apartment",
+      "district": "서초구",
+      "minZoom": 15,
+      "geoBounds": [
+        126.99364913389928,
+        37.50600820863427,
+        126.9941233461999,
+        37.5064365922899
+      ],
+      "footprintIds": [
+        "aecd9e1e-1d74-4198-90bb-e3a40edeebeb"
+      ],
+      "supersedes": [
+        "bespoke-acro-riverpark-109"
+      ],
+      "searchable": false,
+      "groundOffsetM": 0,
+      "sourceRecord": {
+        "provider": "Individual Blender MCP reconstruction",
+        "siteId": "acro-source-parts-100-104-109-corrected",
+        "sources": [
+          {
+            "url": "https://www.acro.co.kr/jsp/mobile/po/010366/static/img/main-complete/img-main6-9.jpg",
+            "sha256": "1011eab30d61ea086a622e89a7ec448b7048c1104fddea2bb52b34a53b02b960",
+            "scope": "complex",
+            "observations": "Official completed-complex photograph; the numbered tower and facade orientation are not independently identified."
+          },
+          {
+            "url": "https://www.acro.co.kr/MPosm_main.action?commonMap.CD_BIZ_LND=010366",
+            "observations": "Official completed complex gallery,1612 households,15 buildings."
+          },
+          {
+            "dataset": "reb_complex_identifier_dong",
+            "complexId": "11650120345416",
+            "snapshot": "reb-source-rows-root-verified.json",
+            "sha256": "d938477c3d1391745c7f90d78adaec8f99f3282a69c7eb3f3b8df10bb5fca005",
+            "observations": "Numbered floors; not a metre-height survey."
+          },
+          {
+            "dataset": "OpenStreetMap / local frozen building and building_part records",
+            "snapshot": "source-parts-all15.json",
+            "sha256": "e66dfeeda6b0212a874f3708f7d3c97e29b9161cf8b1dd097de8642256fbd844",
+            "observations": "Exact building and child outlines, parent OSM height estimates, child floor counts.100 missing19F and11020F connector recovered from unchanged historical way geometry."
+          },
+          {
+            "url": "https://api.openstreetmap.org/api/0.6/way/544771983/history",
+            "observations": "10019-floor historical part exactly covers the current source-parent remainder; latest way has no floor tag."
+          },
+          {
+            "url": "https://api.openstreetmap.org/api/0.6/relation/7766718/1",
+            "observations": "Named110 original relation includes20-floor connector543323180; modern parent excludes this unchanged part."
+          }
+        ],
+        "blendSource": "modeling/bespoke/acro-source-parts-100-104-109-corrected/109/bespoke-acro-riverpark-109-corrected-authored.blend",
+        "blendSha256": "21ea0f743628c30c29193884475ba63b7800a63beaee13481873997b87080413",
+        "sourceGlbSha256": "02a998b794f77a1389c83d4a8677b133238db1313fcc6387f9d5e7c6fdaa0f49",
+        "components": [
+          "Exact individual source footprint and source-based stepped height regions",
+          "Separate lower-wing roofs with constrained concave triangulation",
+          "Pale wall fields, dense glazed banks and dark lower floors adapted from the reviewed representative",
+          "Thin mullions and inferred projecting sills",
+          "Roof caps and simplified plant bounded by each region height"
+        ],
+        "buildingFacts": {
+          "floors": 38,
+          "floorsBasis": "Individually numbered REB complex11650120345416 rows; child region floors use current OSM parts except historical10019F wing.",
+          "sourceHeightM": 132.0,
+          "heightM": 132.0,
+          "heightBasis": "Parent maximum is an unverified OSM metre estimate; region height = parentHeight * childFloors / max(officialMainFloors,maxChildFloors). Uncovered regions retain the parent maximum. Not measured child heights."
+        },
+        "uncertainties": [
+          "Source photograph does not establish the number or orientation of this tower.",
+          "Facade bay spacing, colors, sills, roof equipment and hidden faces are inferred from one reviewed representative.",
+          "Parent OSM heights are unverified estimates; child metre heights are derived from source floor counts.",
+          "Projecting facade details may extend up to0.60m across a region boundary; independently checked roof interiors do not exceed their region envelopes."
+        ],
+        "accuracy": "Representative photographed facade adapted to this numbered building; inferred faces are not independently photo-verified.",
+        "modelingBasis": "representative-photo-inference",
+        "inferredFrom": [
+          {
+            "id": "bespoke-acro-riverpark-109",
+            "sha256": "0f7430ea0134ec67ac4a8857a42dd3a55a2e0f971e57a90a1b9f84bfc99ee01d",
+            "siteId": "acro-riverpark-109-100"
+          }
+        ],
+        "inferenceScope": "Reuse only the previously reviewed complex-photo facade vocabulary; individual shape and stepped roof regions follow separate numbered geometry. Individual facade orientation and hidden faces remain inferred."
+      }
+    },
+    {
+      "id": "bespoke-acro-riverpark-102",
+      "nameKo": "아크로리버파크 102동",
+      "model": "bespoke/acro-riverpark-102-family/bespoke-acro-riverpark-102.glb",
+      "coordinate": {
+        "lon": 126.99243352941176,
+        "lat": 37.50514115882353
+      },
+      "dimensions": [
+        42.083173751831055,
+        77,
+        51.33358573913574
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "metres; independent terrain anchor",
+      "quality": "reference",
+      "sha256": "2814366880c138710c3d9e45ee51ac0ebe82197ad67dc0d7d28a31ebec7ac679",
+      "referenceUrl": "https://www.acro.co.kr/MPosm_main.action?commonMap.CD_BIZ_LND=010366",
+      "category": "apartment",
+      "district": "서초구",
+      "minZoom": 15,
+      "geoBounds": [
+        126.99217660495694,
+        37.504931410699726,
+        126.99265314623418,
+        37.505392548146304
+      ],
+      "footprintIds": [
+        "621b7234-768f-4d6c-aa4f-a13617070687"
+      ],
+      "supersedes": [
+        "fallback-acro-riverpark-102"
+      ],
+      "searchable": false,
+      "groundOffsetM": 0,
+      "sourceRecord": {
+        "provider": "Individual Blender MCP reconstruction",
+        "siteId": "acro-riverpark-102-family",
+        "sources": [
+          {
+            "url": "https://www.acro.co.kr/jsp/mobile/po/010366/static/img/main-complete/img-main6-9.jpg",
+            "sha256": "1011eab30d61ea086a622e89a7ec448b7048c1104fddea2bb52b34a53b02b960",
+            "scope": "complex",
+            "observations": "Official completed-complex photograph; the numbered tower and facade orientation are not independently identified."
+          },
+          {
+            "url": "https://www.acro.co.kr/MPosm_main.action?commonMap.CD_BIZ_LND=010366",
+            "observations": "Official completed complex gallery,1612 households,15 buildings."
+          },
+          {
+            "dataset": "reb_complex_identifier_dong",
+            "complexId": "11650120345416",
+            "snapshot": "reb-source-rows-root-verified.json",
+            "sha256": "d938477c3d1391745c7f90d78adaec8f99f3282a69c7eb3f3b8df10bb5fca005",
+            "observations": "Numbered floors; not a metre-height survey."
+          },
+          {
+            "dataset": "OpenStreetMap / local frozen building and building_part records",
+            "snapshot": "source-parts-all15.json",
+            "sha256": "e66dfeeda6b0212a874f3708f7d3c97e29b9161cf8b1dd097de8642256fbd844",
+            "observations": "Exact building and child outlines, parent OSM height estimates, child floor counts.100 missing19F and11020F connector recovered from unchanged historical way geometry."
+          },
+          {
+            "url": "https://api.openstreetmap.org/api/0.6/way/544771983/history",
+            "observations": "10019-floor historical part exactly covers the current source-parent remainder; latest way has no floor tag."
+          },
+          {
+            "url": "https://api.openstreetmap.org/api/0.6/relation/7766718/1",
+            "observations": "Named110 original relation includes20-floor connector543323180; modern parent excludes this unchanged part."
+          }
+        ],
+        "blendSource": "modeling/bespoke/acro-riverpark-102-family/102/acro-riverpark-102-authored.blend",
+        "blendSha256": "a4711f3b60cae53ba6cfa64daab4fde84aa8f226190e4ce97a8ddfe869b42b55",
+        "sourceGlbSha256": "1aee602e4e32eae49de008e5c4dcdd10ce50d38e2ccebd4284618a5a77670f1f",
+        "components": [
+          "Exact34-vertex individual source outline",
+          "Inferred pale wall fields and dense glazed banks adapted from representative109",
+          "Dark lower floors, silver transoms and projecting sills",
+          "Low roof cap inside77m source envelope"
+        ],
+        "buildingFacts": {
+          "floors": 22,
+          "floorsBasis": "Individually numbered REB complex11650120345416 rows; child region floors use current OSM parts except historical10019F wing.",
+          "sourceHeightM": 77,
+          "heightM": 77,
+          "heightBasis": "OSM77m reference estimate; no child part heights are present in the current source. Uniform source-body height is assumed."
+        },
+        "uncertainties": [
+          "Photograph does not establish102 or its facade orientation.",
+          "No source child-height regions found; uniform full-height body is assumed.",
+          "77m parent height is an OSM estimate, not a legal or measured height.",
+          "Facade divisions, roof cap and projecting details are representative estimates; grade-level projections stay inside a0.90m band around the source footprint."
+        ],
+        "accuracy": "Representative photographed facade adapted to this numbered building; inferred faces are not independently photo-verified.",
+        "modelingBasis": "representative-photo-inference",
+        "inferredFrom": [
+          {
+            "id": "bespoke-acro-riverpark-109",
+            "sha256": "0f7430ea0134ec67ac4a8857a42dd3a55a2e0f971e57a90a1b9f84bfc99ee01d",
+            "siteId": "acro-riverpark-109-100"
+          }
+        ],
+        "inferenceScope": "Reuse only the previously reviewed complex-photo facade vocabulary; individual shape and stepped roof regions follow separate numbered geometry. Individual facade orientation and hidden faces remain inferred."
+      }
+    },
+    {
+      "id": "bespoke-acro-riverpark-105",
+      "nameKo": "아크로리버파크 105동",
+      "model": "bespoke/acro-source-parts-105-108-110-114-corrected/bespoke-acro-riverpark-105.glb",
+      "coordinate": {
+        "lon": 126.99328133846153,
+        "lat": 37.50658266923077
+      },
+      "dimensions": [
+        41.71157646179199,
+        105,
+        61.99415969848633
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "metres; independent terrain anchor",
+      "quality": "reference",
+      "sha256": "332a9ea622f80a7468c9f43da8efe48873b3dfb7067a08249d32dba742f67a2f",
+      "referenceUrl": "https://www.acro.co.kr/MPosm_main.action?commonMap.CD_BIZ_LND=010366",
+      "category": "apartment",
+      "district": "서초구",
+      "minZoom": 15,
+      "geoBounds": [
+        126.99301933513158,
+        37.50629826717083,
+        126.99349167763744,
+        37.50685517018266
+      ],
+      "footprintIds": [
+        "3215cfd2-c848-447e-af64-a35af547beea"
+      ],
+      "supersedes": [
+        "fallback-acro-riverpark-105"
+      ],
+      "searchable": false,
+      "groundOffsetM": 0,
+      "sourceRecord": {
+        "provider": "Individual Blender MCP reconstruction",
+        "siteId": "acro-source-parts-105-108-110-114-corrected",
+        "sources": [
+          {
+            "url": "https://www.acro.co.kr/jsp/mobile/po/010366/static/img/main-complete/img-main6-9.jpg",
+            "sha256": "1011eab30d61ea086a622e89a7ec448b7048c1104fddea2bb52b34a53b02b960",
+            "scope": "complex",
+            "observations": "Official completed-complex photograph; the numbered tower and facade orientation are not independently identified."
+          },
+          {
+            "url": "https://www.acro.co.kr/MPosm_main.action?commonMap.CD_BIZ_LND=010366",
+            "observations": "Official completed complex gallery,1612 households,15 buildings."
+          },
+          {
+            "dataset": "reb_complex_identifier_dong",
+            "complexId": "11650120345416",
+            "snapshot": "reb-source-rows-root-verified.json",
+            "sha256": "d938477c3d1391745c7f90d78adaec8f99f3282a69c7eb3f3b8df10bb5fca005",
+            "observations": "Numbered floors; not a metre-height survey."
+          },
+          {
+            "dataset": "OpenStreetMap / local frozen building and building_part records",
+            "snapshot": "source-parts-all15.json",
+            "sha256": "e66dfeeda6b0212a874f3708f7d3c97e29b9161cf8b1dd097de8642256fbd844",
+            "observations": "Exact building and child outlines, parent OSM height estimates, child floor counts.100 missing19F and11020F connector recovered from unchanged historical way geometry."
+          },
+          {
+            "url": "https://api.openstreetmap.org/api/0.6/way/544771983/history",
+            "observations": "10019-floor historical part exactly covers the current source-parent remainder; latest way has no floor tag."
+          },
+          {
+            "url": "https://api.openstreetmap.org/api/0.6/relation/7766718/1",
+            "observations": "Named110 original relation includes20-floor connector543323180; modern parent excludes this unchanged part."
+          }
+        ],
+        "blendSource": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/105/bespoke-acro-riverpark-105-authored.blend",
+        "blendSha256": "3e905263dadae024b30c95bedb0bfda85fc883fae3bf99911e188091470d6eea",
+        "sourceGlbSha256": "898077616d52f4fd91ca31c4fdd47116b8b375afe2981d9666456740b3b19e1e",
+        "components": [
+          "Exact individual source footprint and source-based stepped height regions",
+          "Separate lower-wing roofs with constrained concave triangulation",
+          "Pale wall fields, dense glazed banks and dark lower floors adapted from the reviewed representative",
+          "Thin mullions and inferred projecting sills",
+          "Roof caps and simplified plant bounded by each region height"
+        ],
+        "buildingFacts": {
+          "floors": 30,
+          "floorsBasis": "Individually numbered REB complex11650120345416 rows; child region floors use current OSM parts except historical10019F wing.",
+          "sourceHeightM": 105.0,
+          "heightM": 105.0,
+          "heightBasis": "Parent maximum is an unverified OSM metre estimate; region height = parentHeight * childFloors / max(officialMainFloors,maxChildFloors). Uncovered regions retain the parent maximum. Not measured child heights."
+        },
+        "uncertainties": [
+          "Source photograph does not establish the number or orientation of this tower.",
+          "Facade bay spacing, colors, sills, roof equipment and hidden faces are inferred from one reviewed representative.",
+          "Parent OSM heights are unverified estimates; child metre heights are derived from source floor counts.",
+          "Projecting facade details may extend up to0.60m across a region boundary; independently checked roof interiors do not exceed their region envelopes."
+        ],
+        "accuracy": "Representative photographed facade adapted to this numbered building; inferred faces are not independently photo-verified.",
+        "modelingBasis": "representative-photo-inference",
+        "inferredFrom": [
+          {
+            "id": "bespoke-acro-riverpark-109",
+            "sha256": "0f7430ea0134ec67ac4a8857a42dd3a55a2e0f971e57a90a1b9f84bfc99ee01d",
+            "siteId": "acro-riverpark-109-100"
+          }
+        ],
+        "inferenceScope": "Reuse only the previously reviewed complex-photo facade vocabulary; individual shape and stepped roof regions follow separate numbered geometry. Individual facade orientation and hidden faces remain inferred."
+      }
+    },
+    {
+      "id": "bespoke-acro-riverpark-106",
+      "nameKo": "아크로리버파크 106동",
+      "model": "bespoke/acro-source-parts-105-108-110-114-corrected/bespoke-acro-riverpark-106.glb",
+      "coordinate": {
+        "lon": 126.99410250789474,
+        "lat": 37.50687010526316
+      },
+      "dimensions": [
+        41.854713439941406,
+        115,
+        63.418495178222656
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "metres; independent terrain anchor",
+      "quality": "reference",
+      "sha256": "88dbbcefb697355236a427b7b162fef04901684cdcfe966d7d53a2b66b1f8738",
+      "referenceUrl": "https://www.acro.co.kr/MPosm_main.action?commonMap.CD_BIZ_LND=010366",
+      "category": "apartment",
+      "district": "서초구",
+      "minZoom": 15,
+      "geoBounds": [
+        126.99388948072162,
+        37.50659515500535,
+        126.99436344593767,
+        37.50716485304049
+      ],
+      "footprintIds": [
+        "66bb84cf-890d-4b55-8779-a03872b28f23"
+      ],
+      "supersedes": [
+        "fallback-acro-riverpark-106"
+      ],
+      "searchable": false,
+      "groundOffsetM": 0,
+      "sourceRecord": {
+        "provider": "Individual Blender MCP reconstruction",
+        "siteId": "acro-source-parts-105-108-110-114-corrected",
+        "sources": [
+          {
+            "url": "https://www.acro.co.kr/jsp/mobile/po/010366/static/img/main-complete/img-main6-9.jpg",
+            "sha256": "1011eab30d61ea086a622e89a7ec448b7048c1104fddea2bb52b34a53b02b960",
+            "scope": "complex",
+            "observations": "Official completed-complex photograph; the numbered tower and facade orientation are not independently identified."
+          },
+          {
+            "url": "https://www.acro.co.kr/MPosm_main.action?commonMap.CD_BIZ_LND=010366",
+            "observations": "Official completed complex gallery,1612 households,15 buildings."
+          },
+          {
+            "dataset": "reb_complex_identifier_dong",
+            "complexId": "11650120345416",
+            "snapshot": "reb-source-rows-root-verified.json",
+            "sha256": "d938477c3d1391745c7f90d78adaec8f99f3282a69c7eb3f3b8df10bb5fca005",
+            "observations": "Numbered floors; not a metre-height survey."
+          },
+          {
+            "dataset": "OpenStreetMap / local frozen building and building_part records",
+            "snapshot": "source-parts-all15.json",
+            "sha256": "e66dfeeda6b0212a874f3708f7d3c97e29b9161cf8b1dd097de8642256fbd844",
+            "observations": "Exact building and child outlines, parent OSM height estimates, child floor counts.100 missing19F and11020F connector recovered from unchanged historical way geometry."
+          },
+          {
+            "url": "https://api.openstreetmap.org/api/0.6/way/544771983/history",
+            "observations": "10019-floor historical part exactly covers the current source-parent remainder; latest way has no floor tag."
+          },
+          {
+            "url": "https://api.openstreetmap.org/api/0.6/relation/7766718/1",
+            "observations": "Named110 original relation includes20-floor connector543323180; modern parent excludes this unchanged part."
+          }
+        ],
+        "blendSource": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/106/bespoke-acro-riverpark-106-authored.blend",
+        "blendSha256": "a8d724266295f65a93642ee07510d3bf17c0c198ba0188df2ff2dd839dfd3fa7",
+        "sourceGlbSha256": "dddb7824d61792adb1b6b7faafebbc887e8afecd61d7b4eff7a74878ec92d529",
+        "components": [
+          "Exact individual source footprint and source-based stepped height regions",
+          "Separate lower-wing roofs with constrained concave triangulation",
+          "Pale wall fields, dense glazed banks and dark lower floors adapted from the reviewed representative",
+          "Thin mullions and inferred projecting sills",
+          "Roof caps and simplified plant bounded by each region height"
+        ],
+        "buildingFacts": {
+          "floors": 33,
+          "floorsBasis": "Individually numbered REB complex11650120345416 rows; child region floors use current OSM parts except historical10019F wing.",
+          "sourceHeightM": 115.0,
+          "heightM": 115.0,
+          "heightBasis": "Parent maximum is an unverified OSM metre estimate; region height = parentHeight * childFloors / max(officialMainFloors,maxChildFloors). Uncovered regions retain the parent maximum. Not measured child heights."
+        },
+        "uncertainties": [
+          "Source photograph does not establish the number or orientation of this tower.",
+          "Facade bay spacing, colors, sills, roof equipment and hidden faces are inferred from one reviewed representative.",
+          "Parent OSM heights are unverified estimates; child metre heights are derived from source floor counts.",
+          "Projecting facade details may extend up to0.60m across a region boundary; independently checked roof interiors do not exceed their region envelopes."
+        ],
+        "accuracy": "Representative photographed facade adapted to this numbered building; inferred faces are not independently photo-verified.",
+        "modelingBasis": "representative-photo-inference",
+        "inferredFrom": [
+          {
+            "id": "bespoke-acro-riverpark-109",
+            "sha256": "0f7430ea0134ec67ac4a8857a42dd3a55a2e0f971e57a90a1b9f84bfc99ee01d",
+            "siteId": "acro-riverpark-109-100"
+          }
+        ],
+        "inferenceScope": "Reuse only the previously reviewed complex-photo facade vocabulary; individual shape and stepped roof regions follow separate numbered geometry. Individual facade orientation and hidden faces remain inferred."
+      }
+    },
+    {
+      "id": "bespoke-acro-riverpark-107",
+      "nameKo": "아크로리버파크 107동",
+      "model": "bespoke/acro-source-parts-105-108-110-114-corrected/bespoke-acro-riverpark-107.glb",
+      "coordinate": {
+        "lon": 126.99447082727274,
+        "lat": 37.506065206818185
+      },
+      "dimensions": [
+        50.222015380859375,
+        68,
+        59.32662582397461
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "metres; independent terrain anchor",
+      "quality": "reference",
+      "sha256": "8f27c83e3d94c71e0feca2bc426174fa8e98e2246ed566a0a9360e48d95a6572",
+      "referenceUrl": "https://www.acro.co.kr/MPosm_main.action?commonMap.CD_BIZ_LND=010366",
+      "category": "apartment",
+      "district": "서초구",
+      "minZoom": 15,
+      "geoBounds": [
+        126.99417397805836,
+        37.50577006869396,
+        126.9947426889577,
+        37.50630300884129
+      ],
+      "footprintIds": [
+        "60a7320d-708b-4cd0-a1e1-5df6edf8f936"
+      ],
+      "supersedes": [
+        "fallback-acro-riverpark-107"
+      ],
+      "searchable": false,
+      "groundOffsetM": 0,
+      "sourceRecord": {
+        "provider": "Individual Blender MCP reconstruction",
+        "siteId": "acro-source-parts-105-108-110-114-corrected",
+        "sources": [
+          {
+            "url": "https://www.acro.co.kr/jsp/mobile/po/010366/static/img/main-complete/img-main6-9.jpg",
+            "sha256": "1011eab30d61ea086a622e89a7ec448b7048c1104fddea2bb52b34a53b02b960",
+            "scope": "complex",
+            "observations": "Official completed-complex photograph; the numbered tower and facade orientation are not independently identified."
+          },
+          {
+            "url": "https://www.acro.co.kr/MPosm_main.action?commonMap.CD_BIZ_LND=010366",
+            "observations": "Official completed complex gallery,1612 households,15 buildings."
+          },
+          {
+            "dataset": "reb_complex_identifier_dong",
+            "complexId": "11650120345416",
+            "snapshot": "reb-source-rows-root-verified.json",
+            "sha256": "d938477c3d1391745c7f90d78adaec8f99f3282a69c7eb3f3b8df10bb5fca005",
+            "observations": "Numbered floors; not a metre-height survey."
+          },
+          {
+            "dataset": "OpenStreetMap / local frozen building and building_part records",
+            "snapshot": "source-parts-all15.json",
+            "sha256": "e66dfeeda6b0212a874f3708f7d3c97e29b9161cf8b1dd097de8642256fbd844",
+            "observations": "Exact building and child outlines, parent OSM height estimates, child floor counts.100 missing19F and11020F connector recovered from unchanged historical way geometry."
+          },
+          {
+            "url": "https://api.openstreetmap.org/api/0.6/way/544771983/history",
+            "observations": "10019-floor historical part exactly covers the current source-parent remainder; latest way has no floor tag."
+          },
+          {
+            "url": "https://api.openstreetmap.org/api/0.6/relation/7766718/1",
+            "observations": "Named110 original relation includes20-floor connector543323180; modern parent excludes this unchanged part."
+          }
+        ],
+        "blendSource": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/107/bespoke-acro-riverpark-107-authored.blend",
+        "blendSha256": "75206720b259e28dbd97876fe2a4824fc4e910595ebe4a956c4c4753ed8d8b44",
+        "sourceGlbSha256": "0910c481051add8a32631dfa1d4ecf8367dce482223495db86523fb467f8b7fc",
+        "components": [
+          "Exact individual source footprint and source-based stepped height regions",
+          "Separate lower-wing roofs with constrained concave triangulation",
+          "Pale wall fields, dense glazed banks and dark lower floors adapted from the reviewed representative",
+          "Thin mullions and inferred projecting sills",
+          "Roof caps and simplified plant bounded by each region height"
+        ],
+        "buildingFacts": {
+          "floors": 19,
+          "floorsBasis": "Individually numbered REB complex11650120345416 rows; child region floors use current OSM parts except historical10019F wing.",
+          "sourceHeightM": 68.0,
+          "heightM": 68.0,
+          "heightBasis": "Parent maximum is an unverified OSM metre estimate; region height = parentHeight * childFloors / max(officialMainFloors,maxChildFloors). Uncovered regions retain the parent maximum. Not measured child heights."
+        },
+        "uncertainties": [
+          "Source photograph does not establish the number or orientation of this tower.",
+          "Facade bay spacing, colors, sills, roof equipment and hidden faces are inferred from one reviewed representative.",
+          "Parent OSM heights are unverified estimates; child metre heights are derived from source floor counts.",
+          "Projecting facade details may extend up to0.60m across a region boundary; independently checked roof interiors do not exceed their region envelopes."
+        ],
+        "accuracy": "Representative photographed facade adapted to this numbered building; inferred faces are not independently photo-verified.",
+        "modelingBasis": "representative-photo-inference",
+        "inferredFrom": [
+          {
+            "id": "bespoke-acro-riverpark-109",
+            "sha256": "0f7430ea0134ec67ac4a8857a42dd3a55a2e0f971e57a90a1b9f84bfc99ee01d",
+            "siteId": "acro-riverpark-109-100"
+          }
+        ],
+        "inferenceScope": "Reuse only the previously reviewed complex-photo facade vocabulary; individual shape and stepped roof regions follow separate numbered geometry. Individual facade orientation and hidden faces remain inferred."
+      }
+    },
+    {
+      "id": "bespoke-acro-riverpark-108",
+      "nameKo": "아크로리버파크 108동",
+      "model": "bespoke/acro-source-parts-105-108-110-114-corrected/bespoke-acro-riverpark-108.glb",
+      "coordinate": {
+        "lon": 126.993756775,
+        "lat": 37.50580101875
+      },
+      "dimensions": [
+        45.89302062988281,
+        68,
+        45.65204620361328
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "metres; independent terrain anchor",
+      "quality": "reference",
+      "sha256": "d623256c6ec6613c5ac5b4bdeb4a5df3eb92321107062603e7eaeb309fc9108a",
+      "referenceUrl": "https://www.acro.co.kr/MPosm_main.action?commonMap.CD_BIZ_LND=010366",
+      "category": "apartment",
+      "district": "서초구",
+      "minZoom": 15,
+      "geoBounds": [
+        126.99355965052733,
+        37.505572179832946,
+        126.99407933832707,
+        37.505982279141506
+      ],
+      "footprintIds": [
+        "70fc9f5a-58df-4d0b-8352-f90e337735ff"
+      ],
+      "supersedes": [
+        "fallback-acro-riverpark-108"
+      ],
+      "searchable": false,
+      "groundOffsetM": 0,
+      "sourceRecord": {
+        "provider": "Individual Blender MCP reconstruction",
+        "siteId": "acro-source-parts-105-108-110-114-corrected",
+        "sources": [
+          {
+            "url": "https://www.acro.co.kr/jsp/mobile/po/010366/static/img/main-complete/img-main6-9.jpg",
+            "sha256": "1011eab30d61ea086a622e89a7ec448b7048c1104fddea2bb52b34a53b02b960",
+            "scope": "complex",
+            "observations": "Official completed-complex photograph; the numbered tower and facade orientation are not independently identified."
+          },
+          {
+            "url": "https://www.acro.co.kr/MPosm_main.action?commonMap.CD_BIZ_LND=010366",
+            "observations": "Official completed complex gallery,1612 households,15 buildings."
+          },
+          {
+            "dataset": "reb_complex_identifier_dong",
+            "complexId": "11650120345416",
+            "snapshot": "reb-source-rows-root-verified.json",
+            "sha256": "d938477c3d1391745c7f90d78adaec8f99f3282a69c7eb3f3b8df10bb5fca005",
+            "observations": "Numbered floors; not a metre-height survey."
+          },
+          {
+            "dataset": "OpenStreetMap / local frozen building and building_part records",
+            "snapshot": "source-parts-all15.json",
+            "sha256": "e66dfeeda6b0212a874f3708f7d3c97e29b9161cf8b1dd097de8642256fbd844",
+            "observations": "Exact building and child outlines, parent OSM height estimates, child floor counts.100 missing19F and11020F connector recovered from unchanged historical way geometry."
+          },
+          {
+            "url": "https://api.openstreetmap.org/api/0.6/way/544771983/history",
+            "observations": "10019-floor historical part exactly covers the current source-parent remainder; latest way has no floor tag."
+          },
+          {
+            "url": "https://api.openstreetmap.org/api/0.6/relation/7766718/1",
+            "observations": "Named110 original relation includes20-floor connector543323180; modern parent excludes this unchanged part."
+          }
+        ],
+        "blendSource": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/108/bespoke-acro-riverpark-108-authored.blend",
+        "blendSha256": "0a0d6e1023525c00cfab30220d798fa2d01d3be1960fd8d61c383fd5740c98a4",
+        "sourceGlbSha256": "437fb486f7a77dfd3cb864f6b18e03bcd69ded95dc698c29464a09425cba9652",
+        "components": [
+          "Exact individual source footprint and source-based stepped height regions",
+          "Separate lower-wing roofs with constrained concave triangulation",
+          "Pale wall fields, dense glazed banks and dark lower floors adapted from the reviewed representative",
+          "Thin mullions and inferred projecting sills",
+          "Roof caps and simplified plant bounded by each region height"
+        ],
+        "buildingFacts": {
+          "floors": 19,
+          "floorsBasis": "Individually numbered REB complex11650120345416 rows; child region floors use current OSM parts except historical10019F wing.",
+          "sourceHeightM": 68.0,
+          "heightM": 68.0,
+          "heightBasis": "Parent maximum is an unverified OSM metre estimate; region height = parentHeight * childFloors / max(officialMainFloors,maxChildFloors). Uncovered regions retain the parent maximum. Not measured child heights."
+        },
+        "uncertainties": [
+          "Source photograph does not establish the number or orientation of this tower.",
+          "Facade bay spacing, colors, sills, roof equipment and hidden faces are inferred from one reviewed representative.",
+          "Parent OSM heights are unverified estimates; child metre heights are derived from source floor counts.",
+          "Projecting facade details may extend up to0.60m across a region boundary; independently checked roof interiors do not exceed their region envelopes."
+        ],
+        "accuracy": "Representative photographed facade adapted to this numbered building; inferred faces are not independently photo-verified.",
+        "modelingBasis": "representative-photo-inference",
+        "inferredFrom": [
+          {
+            "id": "bespoke-acro-riverpark-109",
+            "sha256": "0f7430ea0134ec67ac4a8857a42dd3a55a2e0f971e57a90a1b9f84bfc99ee01d",
+            "siteId": "acro-riverpark-109-100"
+          }
+        ],
+        "inferenceScope": "Reuse only the previously reviewed complex-photo facade vocabulary; individual shape and stepped roof regions follow separate numbered geometry. Individual facade orientation and hidden faces remain inferred."
+      }
+    },
+    {
+      "id": "bespoke-acro-riverpark-110",
+      "nameKo": "아크로리버파크 110동",
+      "model": "bespoke/acro-source-parts-105-108-110-114-corrected/bespoke-acro-riverpark-110.glb",
+      "coordinate": {
+        "lon": 126.99453456111112,
+        "lat": 37.50708151111111
+      },
+      "dimensions": [
+        41.711307525634766,
+        105,
+        61.98527908325195
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "metres; independent terrain anchor",
+      "quality": "reference",
+      "sha256": "8539f18bbf103a780b63e9222619bf196d8aac0ea7c2a20d291300a2e7534a4c",
+      "referenceUrl": "https://www.acro.co.kr/MPosm_main.action?commonMap.CD_BIZ_LND=010366",
+      "category": "apartment",
+      "district": "서초구",
+      "minZoom": 15,
+      "geoBounds": [
+        126.99420363476017,
+        37.50684724715708,
+        126.99467597737693,
+        37.507404070392994
+      ],
+      "footprintIds": [
+        "534d7d9c-978e-43dc-a409-87cf4b185358",
+        "ce2823b4-6bb2-4b4a-b1f6-21f035384ce1"
+      ],
+      "supersedes": [
+        "fallback-acro-riverpark-110"
+      ],
+      "searchable": false,
+      "groundOffsetM": 0,
+      "sourceRecord": {
+        "provider": "Individual Blender MCP reconstruction",
+        "siteId": "acro-source-parts-105-108-110-114-corrected",
+        "sources": [
+          {
+            "url": "https://www.acro.co.kr/jsp/mobile/po/010366/static/img/main-complete/img-main6-9.jpg",
+            "sha256": "1011eab30d61ea086a622e89a7ec448b7048c1104fddea2bb52b34a53b02b960",
+            "scope": "complex",
+            "observations": "Official completed-complex photograph; the numbered tower and facade orientation are not independently identified."
+          },
+          {
+            "url": "https://www.acro.co.kr/MPosm_main.action?commonMap.CD_BIZ_LND=010366",
+            "observations": "Official completed complex gallery,1612 households,15 buildings."
+          },
+          {
+            "dataset": "reb_complex_identifier_dong",
+            "complexId": "11650120345416",
+            "snapshot": "reb-source-rows-root-verified.json",
+            "sha256": "d938477c3d1391745c7f90d78adaec8f99f3282a69c7eb3f3b8df10bb5fca005",
+            "observations": "Numbered floors; not a metre-height survey."
+          },
+          {
+            "dataset": "OpenStreetMap / local frozen building and building_part records",
+            "snapshot": "source-parts-all15.json",
+            "sha256": "e66dfeeda6b0212a874f3708f7d3c97e29b9161cf8b1dd097de8642256fbd844",
+            "observations": "Exact building and child outlines, parent OSM height estimates, child floor counts.100 missing19F and11020F connector recovered from unchanged historical way geometry."
+          },
+          {
+            "url": "https://api.openstreetmap.org/api/0.6/way/544771983/history",
+            "observations": "10019-floor historical part exactly covers the current source-parent remainder; latest way has no floor tag."
+          },
+          {
+            "url": "https://api.openstreetmap.org/api/0.6/relation/7766718/1",
+            "observations": "Named110 original relation includes20-floor connector543323180; modern parent excludes this unchanged part."
+          }
+        ],
+        "blendSource": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/110/bespoke-acro-riverpark-110-authored.blend",
+        "blendSha256": "145ca40f142dd49d3e91e89041a0bdcb8d1c357136e3b79db40bf0cecc9f1556",
+        "sourceGlbSha256": "53f8551514fd903cff8bd554b472222f4fcc1e55e1b0e02d9a352575b2e5a543",
+        "components": [
+          "Exact individual source footprint and source-based stepped height regions",
+          "Separate lower-wing roofs with constrained concave triangulation",
+          "Pale wall fields, dense glazed banks and dark lower floors adapted from the reviewed representative",
+          "Thin mullions and inferred projecting sills",
+          "Roof caps and simplified plant bounded by each region height"
+        ],
+        "buildingFacts": {
+          "floors": 30,
+          "floorsBasis": "Individually numbered REB complex11650120345416 rows; child region floors use current OSM parts except historical10019F wing.",
+          "sourceHeightM": 105.0,
+          "heightM": 105.0,
+          "heightBasis": "Parent maximum is an unverified OSM metre estimate; region height = parentHeight * childFloors / max(officialMainFloors,maxChildFloors). Uncovered regions retain the parent maximum. Not measured child heights."
+        },
+        "uncertainties": [
+          "Source photograph does not establish the number or orientation of this tower.",
+          "Facade bay spacing, colors, sills, roof equipment and hidden faces are inferred from one reviewed representative.",
+          "Parent OSM heights are unverified estimates; child metre heights are derived from source floor counts.",
+          "Projecting facade details may extend up to0.60m across a region boundary; independently checked roof interiors do not exceed their region envelopes.",
+          "20-floor connector membership is a reviewed correction from historical relation7766718; current parent relation excludes the unchanged part."
+        ],
+        "accuracy": "Representative photographed facade adapted to this numbered building; inferred faces are not independently photo-verified.",
+        "modelingBasis": "representative-photo-inference",
+        "inferredFrom": [
+          {
+            "id": "bespoke-acro-riverpark-109",
+            "sha256": "0f7430ea0134ec67ac4a8857a42dd3a55a2e0f971e57a90a1b9f84bfc99ee01d",
+            "siteId": "acro-riverpark-109-100"
+          }
+        ],
+        "inferenceScope": "Reuse only the previously reviewed complex-photo facade vocabulary; individual shape and stepped roof regions follow separate numbered geometry. Individual facade orientation and hidden faces remain inferred."
+      }
+    },
+    {
+      "id": "bespoke-acro-riverpark-111",
+      "nameKo": "아크로리버파크 111동",
+      "model": "bespoke/acro-source-parts-105-108-110-114-corrected/bespoke-acro-riverpark-111.glb",
+      "coordinate": {
+        "lon": 126.99520390487804,
+        "lat": 37.50738770487805
+      },
+      "dimensions": [
+        41.862815856933594,
+        79,
+        68.4359359741211
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "metres; independent terrain anchor",
+      "quality": "reference",
+      "sha256": "3576ae9da12a107d44a85d7534dcac5463a5aa1f554909f44af47631af537498",
+      "referenceUrl": "https://www.acro.co.kr/MPosm_main.action?commonMap.CD_BIZ_LND=010366",
+      "category": "apartment",
+      "district": "서초구",
+      "minZoom": 15,
+      "geoBounds": [
+        126.99497348564468,
+        37.507088254878845,
+        126.99544754589994,
+        37.50770302535153
+      ],
+      "footprintIds": [
+        "685bb7ca-aeb1-4942-ac11-4e5f59cca6b6"
+      ],
+      "supersedes": [
+        "fallback-acro-riverpark-111"
+      ],
+      "searchable": false,
+      "groundOffsetM": 0,
+      "sourceRecord": {
+        "provider": "Individual Blender MCP reconstruction",
+        "siteId": "acro-source-parts-105-108-110-114-corrected",
+        "sources": [
+          {
+            "url": "https://www.acro.co.kr/jsp/mobile/po/010366/static/img/main-complete/img-main6-9.jpg",
+            "sha256": "1011eab30d61ea086a622e89a7ec448b7048c1104fddea2bb52b34a53b02b960",
+            "scope": "complex",
+            "observations": "Official completed-complex photograph; the numbered tower and facade orientation are not independently identified."
+          },
+          {
+            "url": "https://www.acro.co.kr/MPosm_main.action?commonMap.CD_BIZ_LND=010366",
+            "observations": "Official completed complex gallery,1612 households,15 buildings."
+          },
+          {
+            "dataset": "reb_complex_identifier_dong",
+            "complexId": "11650120345416",
+            "snapshot": "reb-source-rows-root-verified.json",
+            "sha256": "d938477c3d1391745c7f90d78adaec8f99f3282a69c7eb3f3b8df10bb5fca005",
+            "observations": "Numbered floors; not a metre-height survey."
+          },
+          {
+            "dataset": "OpenStreetMap / local frozen building and building_part records",
+            "snapshot": "source-parts-all15.json",
+            "sha256": "e66dfeeda6b0212a874f3708f7d3c97e29b9161cf8b1dd097de8642256fbd844",
+            "observations": "Exact building and child outlines, parent OSM height estimates, child floor counts.100 missing19F and11020F connector recovered from unchanged historical way geometry."
+          },
+          {
+            "url": "https://api.openstreetmap.org/api/0.6/way/544771983/history",
+            "observations": "10019-floor historical part exactly covers the current source-parent remainder; latest way has no floor tag."
+          },
+          {
+            "url": "https://api.openstreetmap.org/api/0.6/relation/7766718/1",
+            "observations": "Named110 original relation includes20-floor connector543323180; modern parent excludes this unchanged part."
+          }
+        ],
+        "blendSource": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/111/bespoke-acro-riverpark-111-authored.blend",
+        "blendSha256": "d68523425894ca3c86a057fd9b44041355499fbabc0833c1446ff1d7ccbdf444",
+        "sourceGlbSha256": "ef8c450198d57bc23d9c1661ac076660c3f5f70acb48c87055cb0b1baad0075d",
+        "components": [
+          "Exact individual source footprint and source-based stepped height regions",
+          "Separate lower-wing roofs with constrained concave triangulation",
+          "Pale wall fields, dense glazed banks and dark lower floors adapted from the reviewed representative",
+          "Thin mullions and inferred projecting sills",
+          "Roof caps and simplified plant bounded by each region height"
+        ],
+        "buildingFacts": {
+          "floors": 22,
+          "floorsBasis": "Individually numbered REB complex11650120345416 rows; child region floors use current OSM parts except historical10019F wing.",
+          "sourceHeightM": 79.0,
+          "heightM": 79.0,
+          "heightBasis": "Parent maximum is an unverified OSM metre estimate; region height = parentHeight * childFloors / max(officialMainFloors,maxChildFloors). Uncovered regions retain the parent maximum. Not measured child heights."
+        },
+        "uncertainties": [
+          "Source photograph does not establish the number or orientation of this tower.",
+          "Facade bay spacing, colors, sills, roof equipment and hidden faces are inferred from one reviewed representative.",
+          "Parent OSM heights are unverified estimates; child metre heights are derived from source floor counts.",
+          "Projecting facade details may extend up to0.60m across a region boundary; independently checked roof interiors do not exceed their region envelopes."
+        ],
+        "accuracy": "Representative photographed facade adapted to this numbered building; inferred faces are not independently photo-verified.",
+        "modelingBasis": "representative-photo-inference",
+        "inferredFrom": [
+          {
+            "id": "bespoke-acro-riverpark-109",
+            "sha256": "0f7430ea0134ec67ac4a8857a42dd3a55a2e0f971e57a90a1b9f84bfc99ee01d",
+            "siteId": "acro-riverpark-109-100"
+          }
+        ],
+        "inferenceScope": "Reuse only the previously reviewed complex-photo facade vocabulary; individual shape and stepped roof regions follow separate numbered geometry. Individual facade orientation and hidden faces remain inferred."
+      }
+    },
+    {
+      "id": "bespoke-acro-riverpark-112",
+      "nameKo": "아크로리버파크 112동",
+      "model": "bespoke/acro-source-parts-105-108-110-114-corrected/bespoke-acro-riverpark-112.glb",
+      "coordinate": {
+        "lon": 126.99564705,
+        "lat": 37.50658879
+      },
+      "dimensions": [
+        47.3378791809082,
+        68,
+        57.2993278503418
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "metres; independent terrain anchor",
+      "quality": "reference",
+      "sha256": "9ef39291e930aa2a093a533104d1c31b3aa9ad626ca3df04b4ed04f0e77be492",
+      "referenceUrl": "https://www.acro.co.kr/MPosm_main.action?commonMap.CD_BIZ_LND=010366",
+      "category": "apartment",
+      "district": "서초구",
+      "minZoom": 15,
+      "geoBounds": [
+        126.9953367241773,
+        37.50629828014729,
+        126.99587277906193,
+        37.50681300876707
+      ],
+      "footprintIds": [
+        "977ad181-cc0b-49e6-9891-ef49c12ef42b"
+      ],
+      "supersedes": [
+        "fallback-acro-riverpark-112"
+      ],
+      "searchable": false,
+      "groundOffsetM": 0,
+      "sourceRecord": {
+        "provider": "Individual Blender MCP reconstruction",
+        "siteId": "acro-source-parts-105-108-110-114-corrected",
+        "sources": [
+          {
+            "url": "https://www.acro.co.kr/jsp/mobile/po/010366/static/img/main-complete/img-main6-9.jpg",
+            "sha256": "1011eab30d61ea086a622e89a7ec448b7048c1104fddea2bb52b34a53b02b960",
+            "scope": "complex",
+            "observations": "Official completed-complex photograph; the numbered tower and facade orientation are not independently identified."
+          },
+          {
+            "url": "https://www.acro.co.kr/MPosm_main.action?commonMap.CD_BIZ_LND=010366",
+            "observations": "Official completed complex gallery,1612 households,15 buildings."
+          },
+          {
+            "dataset": "reb_complex_identifier_dong",
+            "complexId": "11650120345416",
+            "snapshot": "reb-source-rows-root-verified.json",
+            "sha256": "d938477c3d1391745c7f90d78adaec8f99f3282a69c7eb3f3b8df10bb5fca005",
+            "observations": "Numbered floors; not a metre-height survey."
+          },
+          {
+            "dataset": "OpenStreetMap / local frozen building and building_part records",
+            "snapshot": "source-parts-all15.json",
+            "sha256": "e66dfeeda6b0212a874f3708f7d3c97e29b9161cf8b1dd097de8642256fbd844",
+            "observations": "Exact building and child outlines, parent OSM height estimates, child floor counts.100 missing19F and11020F connector recovered from unchanged historical way geometry."
+          },
+          {
+            "url": "https://api.openstreetmap.org/api/0.6/way/544771983/history",
+            "observations": "10019-floor historical part exactly covers the current source-parent remainder; latest way has no floor tag."
+          },
+          {
+            "url": "https://api.openstreetmap.org/api/0.6/relation/7766718/1",
+            "observations": "Named110 original relation includes20-floor connector543323180; modern parent excludes this unchanged part."
+          }
+        ],
+        "blendSource": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/112/bespoke-acro-riverpark-112-authored.blend",
+        "blendSha256": "795d16046928623c38d7b15c4a4f7adb5e6d388ebe087d4c651958412690a5eb",
+        "sourceGlbSha256": "6ab8ac975441d61841bad88c286f6d75a1a452b5d225bb7a0724ea34760ba6a9",
+        "components": [
+          "Exact individual source footprint and source-based stepped height regions",
+          "Separate lower-wing roofs with constrained concave triangulation",
+          "Pale wall fields, dense glazed banks and dark lower floors adapted from the reviewed representative",
+          "Thin mullions and inferred projecting sills",
+          "Roof caps and simplified plant bounded by each region height"
+        ],
+        "buildingFacts": {
+          "floors": 19,
+          "floorsBasis": "Individually numbered REB complex11650120345416 rows; child region floors use current OSM parts except historical10019F wing.",
+          "sourceHeightM": 68.0,
+          "heightM": 68.0,
+          "heightBasis": "Parent maximum is an unverified OSM metre estimate; region height = parentHeight * childFloors / max(officialMainFloors,maxChildFloors). Uncovered regions retain the parent maximum. Not measured child heights."
+        },
+        "uncertainties": [
+          "Source photograph does not establish the number or orientation of this tower.",
+          "Facade bay spacing, colors, sills, roof equipment and hidden faces are inferred from one reviewed representative.",
+          "Parent OSM heights are unverified estimates; child metre heights are derived from source floor counts.",
+          "Projecting facade details may extend up to0.60m across a region boundary; independently checked roof interiors do not exceed their region envelopes."
+        ],
+        "accuracy": "Representative photographed facade adapted to this numbered building; inferred faces are not independently photo-verified.",
+        "modelingBasis": "representative-photo-inference",
+        "inferredFrom": [
+          {
+            "id": "bespoke-acro-riverpark-109",
+            "sha256": "0f7430ea0134ec67ac4a8857a42dd3a55a2e0f971e57a90a1b9f84bfc99ee01d",
+            "siteId": "acro-riverpark-109-100"
+          }
+        ],
+        "inferenceScope": "Reuse only the previously reviewed complex-photo facade vocabulary; individual shape and stepped roof regions follow separate numbered geometry. Individual facade orientation and hidden faces remain inferred."
+      }
+    },
+    {
+      "id": "bespoke-acro-riverpark-113",
+      "nameKo": "아크로리버파크 113동",
+      "model": "bespoke/acro-source-parts-105-108-110-114-corrected/bespoke-acro-riverpark-113.glb",
+      "coordinate": {
+        "lon": 126.994949184375,
+        "lat": 37.50635039375
+      },
+      "dimensions": [
+        45.892818450927734,
+        68,
+        45.66317558288574
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "metres; independent terrain anchor",
+      "quality": "reference",
+      "sha256": "6287618549ed153c82eeaacaa5e61bc87964621ca2c4fda62f8f6ef8c616e4ed",
+      "referenceUrl": "https://www.acro.co.kr/MPosm_main.action?commonMap.CD_BIZ_LND=010366",
+      "category": "apartment",
+      "district": "서초구",
+      "minZoom": 15,
+      "geoBounds": [
+        126.99475205048174,
+        37.50612157984859,
+        126.99527173981643,
+        37.506531779134065
+      ],
+      "footprintIds": [
+        "028604ad-2a6b-46e7-87e7-129d5ca7b935"
+      ],
+      "supersedes": [
+        "fallback-acro-riverpark-113"
+      ],
+      "searchable": false,
+      "groundOffsetM": 0,
+      "sourceRecord": {
+        "provider": "Individual Blender MCP reconstruction",
+        "siteId": "acro-source-parts-105-108-110-114-corrected",
+        "sources": [
+          {
+            "url": "https://www.acro.co.kr/jsp/mobile/po/010366/static/img/main-complete/img-main6-9.jpg",
+            "sha256": "1011eab30d61ea086a622e89a7ec448b7048c1104fddea2bb52b34a53b02b960",
+            "scope": "complex",
+            "observations": "Official completed-complex photograph; the numbered tower and facade orientation are not independently identified."
+          },
+          {
+            "url": "https://www.acro.co.kr/MPosm_main.action?commonMap.CD_BIZ_LND=010366",
+            "observations": "Official completed complex gallery,1612 households,15 buildings."
+          },
+          {
+            "dataset": "reb_complex_identifier_dong",
+            "complexId": "11650120345416",
+            "snapshot": "reb-source-rows-root-verified.json",
+            "sha256": "d938477c3d1391745c7f90d78adaec8f99f3282a69c7eb3f3b8df10bb5fca005",
+            "observations": "Numbered floors; not a metre-height survey."
+          },
+          {
+            "dataset": "OpenStreetMap / local frozen building and building_part records",
+            "snapshot": "source-parts-all15.json",
+            "sha256": "e66dfeeda6b0212a874f3708f7d3c97e29b9161cf8b1dd097de8642256fbd844",
+            "observations": "Exact building and child outlines, parent OSM height estimates, child floor counts.100 missing19F and11020F connector recovered from unchanged historical way geometry."
+          },
+          {
+            "url": "https://api.openstreetmap.org/api/0.6/way/544771983/history",
+            "observations": "10019-floor historical part exactly covers the current source-parent remainder; latest way has no floor tag."
+          },
+          {
+            "url": "https://api.openstreetmap.org/api/0.6/relation/7766718/1",
+            "observations": "Named110 original relation includes20-floor connector543323180; modern parent excludes this unchanged part."
+          }
+        ],
+        "blendSource": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/113/bespoke-acro-riverpark-113-authored.blend",
+        "blendSha256": "f7ff292a46aa7a0c2ed2bc7f7eeec7dd56837f8b639a83622bc27ca67e2d5034",
+        "sourceGlbSha256": "ea5ce44fa1f2e2c0c27f5efec73ec24e84f6ecb60e0cbf0e8c618144e8fed5f5",
+        "components": [
+          "Exact individual source footprint and source-based stepped height regions",
+          "Separate lower-wing roofs with constrained concave triangulation",
+          "Pale wall fields, dense glazed banks and dark lower floors adapted from the reviewed representative",
+          "Thin mullions and inferred projecting sills",
+          "Roof caps and simplified plant bounded by each region height"
+        ],
+        "buildingFacts": {
+          "floors": 19,
+          "floorsBasis": "Individually numbered REB complex11650120345416 rows; child region floors use current OSM parts except historical10019F wing.",
+          "sourceHeightM": 68.0,
+          "heightM": 68.0,
+          "heightBasis": "Parent maximum is an unverified OSM metre estimate; region height = parentHeight * childFloors / max(officialMainFloors,maxChildFloors). Uncovered regions retain the parent maximum. Not measured child heights."
+        },
+        "uncertainties": [
+          "Source photograph does not establish the number or orientation of this tower.",
+          "Facade bay spacing, colors, sills, roof equipment and hidden faces are inferred from one reviewed representative.",
+          "Parent OSM heights are unverified estimates; child metre heights are derived from source floor counts.",
+          "Projecting facade details may extend up to0.60m across a region boundary; independently checked roof interiors do not exceed their region envelopes."
+        ],
+        "accuracy": "Representative photographed facade adapted to this numbered building; inferred faces are not independently photo-verified.",
+        "modelingBasis": "representative-photo-inference",
+        "inferredFrom": [
+          {
+            "id": "bespoke-acro-riverpark-109",
+            "sha256": "0f7430ea0134ec67ac4a8857a42dd3a55a2e0f971e57a90a1b9f84bfc99ee01d",
+            "siteId": "acro-riverpark-109-100"
+          }
+        ],
+        "inferenceScope": "Reuse only the previously reviewed complex-photo facade vocabulary; individual shape and stepped roof regions follow separate numbered geometry. Individual facade orientation and hidden faces remain inferred."
+      }
+    },
+    {
+      "id": "bespoke-acro-riverpark-114",
+      "nameKo": "아크로리버파크 114동",
+      "model": "bespoke/acro-source-parts-105-108-110-114-corrected/bespoke-acro-riverpark-114.glb",
+      "coordinate": {
+        "lon": 126.99511316086956,
+        "lat": 37.50673963043478
+      },
+      "dimensions": [
+        41.697879791259766,
+        132,
+        47.79269599914551
+      ],
+      "yawDegFromEast": 0,
+      "heightDatum": "metres; independent terrain anchor",
+      "quality": "reference",
+      "sha256": "be1f903e32aa432c386c6f37c75a2865c0df5adecb7b9ca406afc8186b40ed97",
+      "referenceUrl": "https://www.acro.co.kr/MPosm_main.action?commonMap.CD_BIZ_LND=010366",
+      "category": "apartment",
+      "district": "서초구",
+      "minZoom": 15,
+      "geoBounds": [
+        126.99488532109685,
+        37.506579058325414,
+        126.99535750949421,
+        37.50700838741827
+      ],
+      "footprintIds": [
+        "42cae3e1-e6dd-46b6-8ade-f511b0302155"
+      ],
+      "supersedes": [
+        "fallback-acro-riverpark-114"
+      ],
+      "searchable": false,
+      "groundOffsetM": 0,
+      "sourceRecord": {
+        "provider": "Individual Blender MCP reconstruction",
+        "siteId": "acro-source-parts-105-108-110-114-corrected",
+        "sources": [
+          {
+            "url": "https://www.acro.co.kr/jsp/mobile/po/010366/static/img/main-complete/img-main6-9.jpg",
+            "sha256": "1011eab30d61ea086a622e89a7ec448b7048c1104fddea2bb52b34a53b02b960",
+            "scope": "complex",
+            "observations": "Official completed-complex photograph; the numbered tower and facade orientation are not independently identified."
+          },
+          {
+            "url": "https://www.acro.co.kr/MPosm_main.action?commonMap.CD_BIZ_LND=010366",
+            "observations": "Official completed complex gallery,1612 households,15 buildings."
+          },
+          {
+            "dataset": "reb_complex_identifier_dong",
+            "complexId": "11650120345416",
+            "snapshot": "reb-source-rows-root-verified.json",
+            "sha256": "d938477c3d1391745c7f90d78adaec8f99f3282a69c7eb3f3b8df10bb5fca005",
+            "observations": "Numbered floors; not a metre-height survey."
+          },
+          {
+            "dataset": "OpenStreetMap / local frozen building and building_part records",
+            "snapshot": "source-parts-all15.json",
+            "sha256": "e66dfeeda6b0212a874f3708f7d3c97e29b9161cf8b1dd097de8642256fbd844",
+            "observations": "Exact building and child outlines, parent OSM height estimates, child floor counts.100 missing19F and11020F connector recovered from unchanged historical way geometry."
+          },
+          {
+            "url": "https://api.openstreetmap.org/api/0.6/way/544771983/history",
+            "observations": "10019-floor historical part exactly covers the current source-parent remainder; latest way has no floor tag."
+          },
+          {
+            "url": "https://api.openstreetmap.org/api/0.6/relation/7766718/1",
+            "observations": "Named110 original relation includes20-floor connector543323180; modern parent excludes this unchanged part."
+          }
+        ],
+        "blendSource": "modeling/bespoke/acro-source-parts-105-108-110-114-corrected/114/bespoke-acro-riverpark-114-authored.blend",
+        "blendSha256": "8b6952875f298917def6257b3a151ed3fca042d2abb974eb7264960c96ff95bc",
+        "sourceGlbSha256": "38f43d3e989932aa0edd419eb0a3de73a4777f80ade5b8a051dc51bb55ffb0ac",
+        "components": [
+          "Exact individual source footprint and source-based stepped height regions",
+          "Separate lower-wing roofs with constrained concave triangulation",
+          "Pale wall fields, dense glazed banks and dark lower floors adapted from the reviewed representative",
+          "Thin mullions and inferred projecting sills",
+          "Roof caps and simplified plant bounded by each region height"
+        ],
+        "buildingFacts": {
+          "floors": 38,
+          "floorsBasis": "Individually numbered REB complex11650120345416 rows; child region floors use current OSM parts except historical10019F wing.",
+          "sourceHeightM": 132.0,
+          "heightM": 132.0,
+          "heightBasis": "Parent maximum is an unverified OSM metre estimate; region height = parentHeight * childFloors / max(officialMainFloors,maxChildFloors). Uncovered regions retain the parent maximum. Not measured child heights."
+        },
+        "uncertainties": [
+          "Source photograph does not establish the number or orientation of this tower.",
+          "Facade bay spacing, colors, sills, roof equipment and hidden faces are inferred from one reviewed representative.",
+          "Parent OSM heights are unverified estimates; child metre heights are derived from source floor counts.",
+          "Projecting facade details may extend up to0.60m across a region boundary; independently checked roof interiors do not exceed their region envelopes."
+        ],
+        "accuracy": "Representative photographed facade adapted to this numbered building; inferred faces are not independently photo-verified.",
+        "modelingBasis": "representative-photo-inference",
+        "inferredFrom": [
+          {
+            "id": "bespoke-acro-riverpark-109",
+            "sha256": "0f7430ea0134ec67ac4a8857a42dd3a55a2e0f971e57a90a1b9f84bfc99ee01d",
+            "siteId": "acro-riverpark-109-100"
+          }
+        ],
+        "inferenceScope": "Reuse only the previously reviewed complex-photo facade vocabulary; individual shape and stepped roof regions follow separate numbered geometry. Individual facade orientation and hidden faces remain inferred."
+      }
     }
   ],
   "places": [

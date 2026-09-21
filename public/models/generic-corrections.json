@@ -3303,38 +3303,38 @@
         {
           "id": "apt-a10027205",
           "model": "generic-corrections/apt-a10027205.glb",
-          "name": "아크로리버파크 나머지13동과 이웃2개 도형 (기존 추정 모형)",
-          "nameKo": "아크로리버파크 나머지13동과 이웃2개 도형 (기존 추정 모형)",
+          "name": "반포파크빌 (기존 추정 모형)",
+          "nameKo": "반포파크빌 (기존 추정 모형)",
           "district": "서초구",
           "category": "major-apartment-complex",
           "minZoom": 14.5,
           "units": "metres",
           "dimensions": [
-            325.404296875,
-            132.0,
-            307.726318359375
+            31.95935821533203,
+            47.80875015258789,
+            44.12752151489258
           ],
           "measuredGlbDimensions": [
-            325.404296875,
-            132.0,
-            307.726318359375
+            31.95935821533203,
+            47.80875015258789,
+            44.12752151489258
           ],
           "bounds": {
             "min": [
-              -162.7021484375,
+              96.73465728759766,
               0.0,
-              -168.0953369140625
+              32.574283599853516
             ],
             "max": [
-              162.7021484375,
-              132.0,
-              139.6309814453125
+              128.6940155029297,
+              47.80875015258789,
+              76.7018051147461
             ]
           },
-          "triangles": 19314,
+          "triangles": 356,
           "drawCalls": 3,
-          "bytes": 1124048,
-          "sha256": "da6c8b4772a40cd2914f42a52b5f027306b1cc1c4d26936fe0b3c9bb8934a6fd",
+          "bytes": 25172,
+          "sha256": "8322a7fbc8ac5ced2a88b2c5de59b29a8669426953dbe2f5ab722cdcf646b183",
           "rootTransform": "identity",
           "coordinate": {
             "lon": 126.9940253,
@@ -3365,23 +3365,9 @@
             "storeyFallback": 15,
             "groundDatum": "shared floor plane, local terrain queried at model anchor"
           },
-          "buildingCount": 15,
+          "buildingCount": 1,
           "footprintIds": [
-            "60a7320d-708b-4cd0-a1e1-5df6edf8f936",
-            "70fc9f5a-58df-4d0b-8352-f90e337735ff",
-            "66bb84cf-890d-4b55-8779-a03872b28f23",
-            "028604ad-2a6b-46e7-87e7-129d5ca7b935",
-            "3215cfd2-c848-447e-af64-a35af547beea",
-            "0c8493ba-7cf2-44f4-a58a-2e2ccbbf8780",
-            "8be35ba6-cad9-427a-b6c9-21b83caf3501",
-            "ce2823b4-6bb2-4b4a-b1f6-21f035384ce1",
-            "42cae3e1-e6dd-46b6-8ade-f511b0302155",
-            "bff8d9a4-e070-4c11-b4b3-d9524f7add37",
-            "f829af9c-7a4e-41dc-a623-50e8643d5bf0",
-            "977ad181-cc0b-49e6-9891-ef49c12ef42b",
-            "534d7d9c-978e-43dc-a409-87cf4b185358",
-            "685bb7ca-aeb1-4942-ac11-4e5f59cca6b6",
-            "621b7234-768f-4d6c-aa4f-a13617070687"
+            "8be35ba6-cad9-427a-b6c9-21b83caf3501"
           ],
           "estimatedDetails": [
             "Footprint shape and placement follow the retained source geometry.",
@@ -3396,10 +3382,10 @@
           "searchable": true,
           "residentialCompletionCredit": false,
           "geoBounds": [
-            126.99218286814225,
-            37.504936678286015,
-            126.99586773185776,
-            37.507701026102765
+            126.99512071893606,
+            37.50550198805308,
+            126.99548262528023,
+            37.505898394929595
           ],
           "genericCorrection": {
             "sourceId": "apt-a10027205",
@@ -3501,6 +3487,750 @@
           }
         },
         {
+          "id": "fallback-acro-riverpark-101",
+          "model": "generic-corrections/fallback-acro-riverpark-101.glb",
+          "name": "아크로리버파크 101동 (기존 추정 모형)",
+          "nameKo": "아크로리버파크 101동 (기존 추정 모형)",
+          "district": "서초구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            40.86982345581055,
+            90.0,
+            50.11642837524414
+          ],
+          "measuredGlbDimensions": [
+            40.86982345581055,
+            90.0,
+            50.11642837524414
+          ],
+          "bounds": {
+            "min": [
+              -90.09375762939453,
+              0.0,
+              53.257694244384766
+            ],
+            "max": [
+              -49.223934173583984,
+              90.0,
+              103.3741226196289
+            ]
+          },
+          "triangles": 1263,
+          "drawCalls": 3,
+          "bytes": 74656,
+          "sha256": "ea8d5f44aa6b08b99d6cd26a28b5e65c839091f9c2c886486f0e291fcaa6fceb",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.9940253,
+            "lat": 37.506191015271376,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "0c8493ba-7cf2-44f4-a58a-2e2ccbbf8780"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            126.9930050823149,
+            37.50526238395236,
+            126.99346789036923,
+            37.505712591731005
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a10027205",
+            "sourceSha256": "e02dd03abb3fd65981303758bf47d491d3ff41df0c593ce87b9fb94d7ca38401",
+            "operation": "Exact triangle partition; unchanged vertex attributes, materials and original terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-acro-riverpark-102",
+          "model": "generic-corrections/fallback-acro-riverpark-102.glb",
+          "name": "아크로리버파크 102동 (기존 추정 모형)",
+          "nameKo": "아크로리버파크 102동 (기존 추정 모형)",
+          "district": "서초구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            40.87864685058594,
+            77.0,
+            50.1162109375
+          ],
+          "measuredGlbDimensions": [
+            40.87864685058594,
+            77.0,
+            50.1162109375
+          ],
+          "bounds": {
+            "min": [
+              -162.7021484375,
+              0.0,
+              89.5147705078125
+            ],
+            "max": [
+              -121.82350158691406,
+              77.0,
+              139.6309814453125
+            ]
+          },
+          "triangles": 1355,
+          "drawCalls": 3,
+          "bytes": 81356,
+          "sha256": "b863131392589e9d145d41e0f95903fa6113eedd26650a9dbda36d071b046295",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.9940253,
+            "lat": 37.506191015271376,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "621b7234-768f-4d6c-aa4f-a13617070687"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            126.99218286814225,
+            37.504936678286015,
+            126.99264577611231,
+            37.50538688607555
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a10027205",
+            "sourceSha256": "e02dd03abb3fd65981303758bf47d491d3ff41df0c593ce87b9fb94d7ca38401",
+            "operation": "Exact triangle partition; unchanged vertex attributes, materials and original terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-acro-riverpark-103",
+          "model": "generic-corrections/fallback-acro-riverpark-103.glb",
+          "name": "아크로리버파크 103동 (기존 추정 모형)",
+          "nameKo": "아크로리버파크 103동 (기존 추정 모형)",
+          "district": "서초구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            40.781517028808594,
+            122.0,
+            46.56541442871094
+          ],
+          "measuredGlbDimensions": [
+            40.781517028808594,
+            122.0,
+            46.56541442871094
+          ],
+          "bounds": {
+            "min": [
+              -144.6162872314453,
+              0.0,
+              36.84900665283203
+            ],
+            "max": [
+              -103.83477020263672,
+              122.0,
+              83.41442108154297
+            ]
+          },
+          "triangles": 980,
+          "drawCalls": 3,
+          "bytes": 60800,
+          "sha256": "8e0a92e9d20e61d4dda5c3d4aa5f8ca3a60ea27d1ecabd3869fad3af3788403b",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.9940253,
+            "lat": 37.506191015271376,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "f829af9c-7a4e-41dc-a623-50e8643d5bf0"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            126.99238767162629,
+            37.50544168701698,
+            126.9928494797026,
+            37.505859994278666
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a10027205",
+            "sourceSha256": "e02dd03abb3fd65981303758bf47d491d3ff41df0c593ce87b9fb94d7ca38401",
+            "operation": "Exact triangle partition; unchanged vertex attributes, materials and original terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-acro-riverpark-104",
+          "model": "generic-corrections/fallback-acro-riverpark-104.glb",
+          "name": "아크로리버파크 104동 (기존 추정 모형)",
+          "nameKo": "아크로리버파크 104동 (기존 추정 모형)",
+          "district": "서초구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            46.98970031738281,
+            110.0,
+            68.51838684082031
+          ],
+          "measuredGlbDimensions": [
+            46.98970031738281,
+            110.0,
+            68.51838684082031
+          ],
+          "bounds": {
+            "min": [
+              -141.53427124023438,
+              0.0,
+              -41.14279556274414
+            ],
+            "max": [
+              -94.54457092285156,
+              110.0,
+              27.375591278076172
+            ]
+          },
+          "triangles": 1446,
+          "drawCalls": 3,
+          "bytes": 87432,
+          "sha256": "7aa234dcf105e5341353e8c310f2acf6a3424ef6abfa0b0f7a73e360b6facb65",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.9940253,
+            "lat": 37.506191015271376,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "bff8d9a4-e070-4c11-b4b3-d9524f7add37"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            126.99242257223763,
+            37.505945095745766,
+            126.99295468150406,
+            37.50656060637732
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a10027205",
+            "sourceSha256": "e02dd03abb3fd65981303758bf47d491d3ff41df0c593ce87b9fb94d7ca38401",
+            "operation": "Exact triangle partition; unchanged vertex attributes, materials and original terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-acro-riverpark-105",
+          "model": "generic-corrections/fallback-acro-riverpark-105.glb",
+          "name": "아크로리버파크 105동 (기존 추정 모형)",
+          "nameKo": "아크로리버파크 105동 (기존 추정 모형)",
+          "district": "서초구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            41.00228500366211,
+            105.0,
+            61.48313522338867
+          ],
+          "measuredGlbDimensions": [
+            41.00228500366211,
+            105.0,
+            61.48313522338867
+          ],
+          "bounds": {
+            "min": [
+              -88.51300811767578,
+              0.0,
+              -73.71566772460938
+            ],
+            "max": [
+              -47.51072311401367,
+              105.0,
+              -12.232532501220703
+            ]
+          },
+          "triangles": 1208,
+          "drawCalls": 3,
+          "bytes": 74100,
+          "sha256": "08403b694a286dac3c9b3ab659feacd475628fc741ac4621e37490ae7b2c6b07",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.9940253,
+            "lat": 37.506191015271376,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "3215cfd2-c848-447e-af64-a35af547beea"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            126.99302298265172,
+            37.50630090189959,
+            126.99348729069472,
+            37.50685321144435
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a10027205",
+            "sourceSha256": "e02dd03abb3fd65981303758bf47d491d3ff41df0c593ce87b9fb94d7ca38401",
+            "operation": "Exact triangle partition; unchanged vertex attributes, materials and original terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-acro-riverpark-106",
+          "model": "generic-corrections/fallback-acro-riverpark-106.glb",
+          "name": "아크로리버파크 106동 (기존 추정 모형)",
+          "nameKo": "아크로리버파크 106동 (기존 추정 모형)",
+          "district": "서초구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            41.390846252441406,
+            115.0,
+            62.78586196899414
+          ],
+          "measuredGlbDimensions": [
+            41.390846252441406,
+            115.0,
+            62.78586196899414
+          ],
+          "bounds": {
+            "min": [
+              -11.701061248779297,
+              0.0,
+              -108.02530670166016
+            ],
+            "max": [
+              29.689786911010742,
+              115.0,
+              -45.239444732666016
+            ]
+          },
+          "triangles": 1557,
+          "drawCalls": 3,
+          "bytes": 92504,
+          "sha256": "0d17887b698889b3ea3fddebdbead1dff9586de860ae665f79b21f7daa6f732f",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.9940253,
+            "lat": 37.506191015271376,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "66bb84cf-890d-4b55-8779-a03872b28f23"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            126.99389279770534,
+            37.506597407011704,
+            126.99436150582015,
+            37.507161416805026
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a10027205",
+            "sourceSha256": "e02dd03abb3fd65981303758bf47d491d3ff41df0c593ce87b9fb94d7ca38401",
+            "operation": "Exact triangle partition; unchanged vertex attributes, materials and original terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-acro-riverpark-107",
+          "model": "generic-corrections/fallback-acro-riverpark-107.glb",
+          "name": "아크로리버파크 107동 (기존 추정 모형)",
+          "nameKo": "아크로리버파크 107동 (기존 추정 모형)",
+          "district": "서초구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            49.62133026123047,
+            68.0,
+            58.66626739501953
+          ],
+          "measuredGlbDimensions": [
+            49.62133026123047,
+            68.0,
+            58.66626739501953
+          ],
+          "bounds": {
+            "min": [
+              13.29063892364502,
+              0.0,
+              -12.065549850463867
+            ],
+            "max": [
+              62.91196823120117,
+              68.0,
+              46.60071563720703
+            ]
+          },
+          "triangles": 2128,
+          "drawCalls": 3,
+          "bytes": 126356,
+          "sha256": "a22cf0ff1698716f731fc2476d387d2b18a1a45b63b1ea913bd37d5e0c94ac54",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.9940253,
+            "lat": 37.506191015271376,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "60a7320d-708b-4cd0-a1e1-5df6edf8f936"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            126.99417580260122,
+            37.50577239274658,
+            126.99473771231672,
+            37.506299401871104
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a10027205",
+            "sourceSha256": "e02dd03abb3fd65981303758bf47d491d3ff41df0c593ce87b9fb94d7ca38401",
+            "operation": "Exact triangle partition; unchanged vertex attributes, materials and original terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-acro-riverpark-108",
+          "model": "generic-corrections/fallback-acro-riverpark-108.glb",
+          "name": "아크로리버파크 108동 (기존 추정 모형)",
+          "nameKo": "아크로리버파크 108동 (기존 추정 모형)",
+          "district": "서초구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            45.302978515625,
+            68.0,
+            45.02926254272461
+          ],
+          "measuredGlbDimensions": [
+            45.302978515625,
+            68.0,
+            45.02926254272461
+          ],
+          "bounds": {
+            "min": [
+              -40.92280578613281,
+              0.0,
+              23.657466888427734
+            ],
+            "max": [
+              4.380170822143555,
+              68.0,
+              68.68672943115234
+            ]
+          },
+          "triangles": 1381,
+          "drawCalls": 3,
+          "bytes": 82640,
+          "sha256": "90f1f061b1c57a5981bee75b5929be9f85e0ae6cc415a40be8511ed50620b1b2",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.9940253,
+            "lat": 37.506191015271376,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "70fc9f5a-58df-4d0b-8352-f90e337735ff"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            126.99356189197611,
+            37.50557398933282,
+            126.99407490085865,
+            37.505978496327984
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a10027205",
+            "sourceSha256": "e02dd03abb3fd65981303758bf47d491d3ff41df0c593ce87b9fb94d7ca38401",
+            "operation": "Exact triangle partition; unchanged vertex attributes, materials and original terrain anchor."
+          }
+        },
+        {
           "id": "fallback-acro-riverpark-109",
           "model": "generic-corrections/fallback-acro-riverpark-109.glb",
           "name": "아크로리버파크 109동 (기존 추정 모형)",
@@ -3586,6 +4316,472 @@
             37.50601009687812,
             126.99411900162211,
             37.50643410419541
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a10027205",
+            "sourceSha256": "e02dd03abb3fd65981303758bf47d491d3ff41df0c593ce87b9fb94d7ca38401",
+            "operation": "Exact triangle partition; unchanged vertex attributes, materials and original terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-acro-riverpark-110",
+          "model": "generic-corrections/fallback-acro-riverpark-110.glb",
+          "name": "아크로리버파크 110동 (기존 추정 모형)",
+          "nameKo": "아크로리버파크 110동 (기존 추정 모형)",
+          "district": "서초구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            41.002281188964844,
+            105.0,
+            61.472450256347656
+          ],
+          "measuredGlbDimensions": [
+            41.002281188964844,
+            105.0,
+            61.472450256347656
+          ],
+          "bounds": {
+            "min": [
+              16.07240104675293,
+              0.0,
+              -134.8207550048828
+            ],
+            "max": [
+              57.074684143066406,
+              105.0,
+              -73.34830474853516
+            ]
+          },
+          "triangles": 1470,
+          "drawCalls": 3,
+          "bytes": 89348,
+          "sha256": "b4c7e4750daf650901c0509fbb6ef9aa555c845ebc920fcca17cfa4a077e7979",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.9940253,
+            "lat": 37.506191015271376,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 2,
+          "footprintIds": [
+            "534d7d9c-978e-43dc-a409-87cf4b185358",
+            "ce2823b4-6bb2-4b4a-b1f6-21f035384ce1"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            126.99420730315119,
+            37.50684991139577,
+            126.99467161117258,
+            37.50740212089554
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a10027205",
+            "sourceSha256": "e02dd03abb3fd65981303758bf47d491d3ff41df0c593ce87b9fb94d7ca38401",
+            "operation": "Exact triangle partition; unchanged vertex attributes, materials and original terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-acro-riverpark-111",
+          "model": "generic-corrections/fallback-acro-riverpark-111.glb",
+          "name": "아크로리버파크 111동 (기존 추정 모형)",
+          "nameKo": "아크로리버파크 111동 (기존 추정 모형)",
+          "district": "서초구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            41.399681091308594,
+            79.0,
+            67.96282196044922
+          ],
+          "measuredGlbDimensions": [
+            41.399681091308594,
+            79.0,
+            67.96282196044922
+          ],
+          "bounds": {
+            "min": [
+              84.02686309814453,
+              0.0,
+              -168.0953369140625
+            ],
+            "max": [
+              125.42654418945312,
+              79.0,
+              -100.13251495361328
+            ]
+          },
+          "triangles": 1906,
+          "drawCalls": 3,
+          "bytes": 113660,
+          "sha256": "dd4759b59b4f2356a7ea94619b20c3058f385e601f67d4a19b76c26a048c3c90",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.9940253,
+            "lat": 37.506191015271376,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "685bb7ca-aeb1-4942-ac11-4e5f59cca6b6"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            126.99497681644257,
+            37.5070905155384,
+            126.99544562458111,
+            37.507701026102765
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a10027205",
+            "sourceSha256": "e02dd03abb3fd65981303758bf47d491d3ff41df0c593ce87b9fb94d7ca38401",
+            "operation": "Exact triangle partition; unchanged vertex attributes, materials and original terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-acro-riverpark-112",
+          "model": "generic-corrections/fallback-acro-riverpark-112.glb",
+          "name": "아크로리버파크 112동 (기존 추정 모형)",
+          "nameKo": "아크로리버파크 112동 (기존 추정 모형)",
+          "district": "서초구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            46.71593475341797,
+            68.0,
+            56.72967529296875
+          ],
+          "measuredGlbDimensions": [
+            46.71593475341797,
+            68.0,
+            56.72967529296875
+          ],
+          "bounds": {
+            "min": [
+              115.98621368408203,
+              0.0,
+              -68.83975219726562
+            ],
+            "max": [
+              162.7021484375,
+              68.0,
+              -12.110078811645508
+            ]
+          },
+          "triangles": 1831,
+          "drawCalls": 3,
+          "bytes": 109032,
+          "sha256": "cbbb60ef8ed16ba2c0f6d66f068aadd174d09e1e1aee0de45c7bd268ada2e835",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.9940253,
+            "lat": 37.506191015271376,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "977ad181-cc0b-49e6-9891-ef49c12ef42b"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            126.99533872270035,
+            37.50629980188099,
+            126.99586773185776,
+            37.506809410725594
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a10027205",
+            "sourceSha256": "e02dd03abb3fd65981303758bf47d491d3ff41df0c593ce87b9fb94d7ca38401",
+            "operation": "Exact triangle partition; unchanged vertex attributes, materials and original terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-acro-riverpark-113",
+          "model": "generic-corrections/fallback-acro-riverpark-113.glb",
+          "name": "아크로리버파크 113동 (기존 추정 모형)",
+          "nameKo": "아크로리버파크 113동 (기존 추정 모형)",
+          "district": "서초구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            45.30297088623047,
+            68.0,
+            45.04072570800781
+          ],
+          "measuredGlbDimensions": [
+            45.30297088623047,
+            68.0,
+            45.04072570800781
+          ],
+          "bounds": {
+            "min": [
+              64.37791442871094,
+              0.0,
+              -37.513702392578125
+            ],
+            "max": [
+              109.6808853149414,
+              68.0,
+              7.527024269104004
+            ]
+          },
+          "triangles": 1381,
+          "drawCalls": 3,
+          "bytes": 82640,
+          "sha256": "1ec574de33dc27318f024d7b3f976d1f09601e4550a8768a0ed02edb7511db9e",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.9940253,
+            "lat": 37.506191015271376,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "028604ad-2a6b-46e7-87e7-129d5ca7b935"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            126.99475431262596,
+            37.5061233988313,
+            126.99526732144368,
+            37.506528005833005
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a10027205",
+            "sourceSha256": "e02dd03abb3fd65981303758bf47d491d3ff41df0c593ce87b9fb94d7ca38401",
+            "operation": "Exact triangle partition; unchanged vertex attributes, materials and original terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-acro-riverpark-114",
+          "model": "generic-corrections/fallback-acro-riverpark-114.glb",
+          "name": "아크로리버파크 114동 (기존 추정 모형)",
+          "nameKo": "아크로리버파크 114동 (기존 추정 모형)",
+          "district": "서초구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            41.18773651123047,
+            132.0,
+            47.200660705566406
+          ],
+          "measuredGlbDimensions": [
+            41.18773651123047,
+            132.0,
+            47.200660705566406
+          ],
+          "bounds": {
+            "min": [
+              76.07014465332031,
+              0.0,
+              -90.61442565917969
+            ],
+            "max": [
+              117.25788116455078,
+              132.0,
+              -43.41376495361328
+            ]
+          },
+          "triangles": 1052,
+          "drawCalls": 3,
+          "bytes": 65264,
+          "sha256": "f5cf724460287f7673ea79b2ad7edd192185e063cb0a091074ee8323b942df41",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.9940253,
+            "lat": 37.506191015271376,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "42cae3e1-e6dd-46b6-8ade-f511b0302155"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            126.9948867149185,
+            37.50658100673868,
+            126.99535312300607,
+            37.50700501406879
           ],
           "genericCorrection": {
             "sourceId": "apt-a10027205",

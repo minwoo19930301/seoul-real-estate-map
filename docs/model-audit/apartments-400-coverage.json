@@ -901,85 +901,85 @@
       "code": "A10027205",
       "physicalSiteId": "acro-riverpark",
       "expectedResidentialBuildingCount": 15,
-      "coverageApproved": false,
-      "buildingIdentitySource": "Numbered REB complex11650120345416 records: modeling/bespoke/acro-riverpark-109-100/reb-source-rows-root-verified.json; exact local named source geometries retained in source-data.json.",
-      "photoCoverageBasis": "Two of15 residential buildings,100/109, use a reviewed official complex photograph. Photo tower identity and facing remain unresolved; these are explicitly complex-photo-inference models. No individual numbered-photo match is claimed.",
-      "limits": "Metre heights74/132 are OSM estimates; numbered floor counts21/38 agree with REB records. Hidden facades and roof dimensions inferred.13 other residential buildings and2 unrelated or unidentified archived neighbors remain separate.",
+      "coverageApproved": true,
+      "buildingIdentitySource": "Numbered REB complex11650120345416 rows, secondary numbered site plan and exact local OSM source geometries. Historical10019F and11020F parts independently recovered through OSM versioned geometry. Details: docs/model-audit/acro-all15-review.md and acro-riverpark-generic-split.json.",
+      "photoCoverageBasis": "All15 named residential buildings100–114 use representative-photo-inference from the previously reviewed109 complex-photo model. Actual official completed photograph and all60 current four-view renders independently reviewed. Each sibling retains its own source footprint and source-based stepped heights; numbered photograph and orientation remain unresolved.",
+      "limits": "Complete named residential tower coverage, not measured CAD or complete landscaping. Parent metre heights are unverified OSM estimates; child heights are floor-derived.102 has no child-height source and assumes uniform height.10019F and11020F are historical-source corrections; current source tags/relations differ.110 owns2sourceIDs; Banpo Parkville remains separate. Prior100/109bytes are preserved under superseded IDs.",
       "buildings": [
         {
           "label": "100",
-          "assetId": "bespoke-acro-riverpark-100",
-          "photoReviewSiteId": "acro-riverpark-109-100"
+          "assetId": "bespoke-acro-riverpark-100-corrected",
+          "photoReviewSiteId": "acro-source-parts-100-104-109-corrected"
         },
         {
           "label": "101",
-          "assetId": null,
-          "photoReviewSiteId": null
+          "assetId": "bespoke-acro-riverpark-101",
+          "photoReviewSiteId": "acro-source-parts-100-104-109-corrected"
         },
         {
           "label": "102",
-          "assetId": null,
-          "photoReviewSiteId": null
+          "assetId": "bespoke-acro-riverpark-102",
+          "photoReviewSiteId": "acro-riverpark-102-family"
         },
         {
           "label": "103",
-          "assetId": null,
-          "photoReviewSiteId": null
+          "assetId": "bespoke-acro-riverpark-103",
+          "photoReviewSiteId": "acro-source-parts-100-104-109-corrected"
         },
         {
           "label": "104",
-          "assetId": null,
-          "photoReviewSiteId": null
+          "assetId": "bespoke-acro-riverpark-104",
+          "photoReviewSiteId": "acro-source-parts-100-104-109-corrected"
         },
         {
           "label": "105",
-          "assetId": null,
-          "photoReviewSiteId": null
+          "assetId": "bespoke-acro-riverpark-105",
+          "photoReviewSiteId": "acro-source-parts-105-108-110-114-corrected"
         },
         {
           "label": "106",
-          "assetId": null,
-          "photoReviewSiteId": null
+          "assetId": "bespoke-acro-riverpark-106",
+          "photoReviewSiteId": "acro-source-parts-105-108-110-114-corrected"
         },
         {
           "label": "107",
-          "assetId": null,
-          "photoReviewSiteId": null
+          "assetId": "bespoke-acro-riverpark-107",
+          "photoReviewSiteId": "acro-source-parts-105-108-110-114-corrected"
         },
         {
           "label": "108",
-          "assetId": null,
-          "photoReviewSiteId": null
+          "assetId": "bespoke-acro-riverpark-108",
+          "photoReviewSiteId": "acro-source-parts-105-108-110-114-corrected"
         },
         {
           "label": "109",
-          "assetId": "bespoke-acro-riverpark-109",
-          "photoReviewSiteId": "acro-riverpark-109-100"
+          "assetId": "bespoke-acro-riverpark-109-corrected",
+          "photoReviewSiteId": "acro-source-parts-100-104-109-corrected"
         },
         {
           "label": "110",
-          "assetId": null,
-          "photoReviewSiteId": null
+          "assetId": "bespoke-acro-riverpark-110",
+          "photoReviewSiteId": "acro-source-parts-105-108-110-114-corrected"
         },
         {
           "label": "111",
-          "assetId": null,
-          "photoReviewSiteId": null
+          "assetId": "bespoke-acro-riverpark-111",
+          "photoReviewSiteId": "acro-source-parts-105-108-110-114-corrected"
         },
         {
           "label": "112",
-          "assetId": null,
-          "photoReviewSiteId": null
+          "assetId": "bespoke-acro-riverpark-112",
+          "photoReviewSiteId": "acro-source-parts-105-108-110-114-corrected"
         },
         {
           "label": "113",
-          "assetId": null,
-          "photoReviewSiteId": null
+          "assetId": "bespoke-acro-riverpark-113",
+          "photoReviewSiteId": "acro-source-parts-105-108-110-114-corrected"
         },
         {
           "label": "114",
-          "assetId": null,
-          "photoReviewSiteId": null
+          "assetId": "bespoke-acro-riverpark-114",
+          "photoReviewSiteId": "acro-source-parts-105-108-110-114-corrected"
         }
       ]
     }

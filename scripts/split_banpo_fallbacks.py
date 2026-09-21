@@ -49,15 +49,14 @@ CONFIGS = [
          ('fallback-onepentas-106','래미안원펜타스 106동','dad2c16e-28a1-4c1c-b786-91be69693ca6'),
          ('fallback-prestige-126','래미안퍼스티지 126동','b21842a2-9832-4a21-bcc5-1c571f309556')],
      'limits':['OfficialOnePentas641apartments/6buildings excludes theneighbor126. The126source23F65m matches officialregister10231100193383 atBanpodong18-1/Banpodaero275,23F65.3m44households:RaemianPrestige. OneBailey126is1Famenityandnotthisbuilding.','The sixOnePentassourcefallbackheights are estimated andnotcorrectedbythispartition; newphoto modelsreplaceindependently. No photomodelingcredit is claimed.']},
-    {'site':'acro-riverpark','source':'apt-a10027205','sha':'e02dd03abb3fd65981303758bf47d491d3ff41df0c593ce87b9fb94d7ca38401','count':17,
-     'remainingName':'아크로리버파크 나머지13동과 이웃2개 도형 (기존 추정 모형)',
-     'parts':[
-         ('fallback-acro-riverpark-100','아크로리버파크 100동','60227661-442c-454d-bb39-c5d658cf9e76'),
-         ('fallback-acro-riverpark-109','아크로리버파크 109동','aecd9e1e-1d74-4198-90bb-e3a40edeebeb')],
-     'limits':['The archived17-footprint compound includes15 numbered Acro buildings and2 neighboring or unidentified footprints. Only100 and109 are isolated here; all15 other footprints remain unchanged.','OSM source heights and meshes are preserved, not corrected or given photo completion credit. Banpo Parkville and the unnamed neighbor remain outside the15-tower residential coverage.']}
+    # Acro also verifies byte-exact source authoring and historical part identity.
+    {'site':'acro-riverpark','source':'apt-a10027205'}
 ]
 
 def partition(cfg, folder, base, matches):
+    if cfg['site']=='acro-riverpark':
+        from split_acro_fallbacks import partition as partition_acro
+        return partition_acro(folder,base,matches)
     source=cfg['source'];asset=next(a for a in base['assets'] if a['id']==source)
     original=(folder/asset['model']).read_bytes();assert sha(original)==cfg['sha']==asset['sha256']
     g,parts=decode(original);assert len(g['nodes'])==1 and set(g['nodes'][0])=={'mesh','name'}

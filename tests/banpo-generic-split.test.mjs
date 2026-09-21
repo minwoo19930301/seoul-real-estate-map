@@ -25,7 +25,7 @@ function convexHull(ring){
  const half=points=>{const h=[];for(const p of points){while(h.length>1&&cross(h.at(-2),h.at(-1),p)<=0)h.pop();h.push(p);}return h.slice(0,-1);};
  return [...half(points),...half([...points].reverse())];
 }
-function triangles(asset,sourceFootprints,partitionAssets) {
+function triangles(asset,sourceFootprints,partitionAssets,onTriangle) {
  const footprints=sourceFootprints?.map(f=>{
   const geometry=f.localFootprint;
   assert.ok(['Polygon','MultiPolygon'].includes(geometry.type));
@@ -58,7 +58,9 @@ function triangles(asset,sourceFootprints,partitionAssets) {
     assert.equal(owners.length,1,`${asset.id}: each triangle must have one source partition owner`);
     assert.equal(owners[0].id,asset.id,`${asset.id}: geometry must remain with its declared source partition`);
    }
-   out.push(JSON.stringify(g.materials[p.material])+':'+vertices.join('/'));
+   const signature=JSON.stringify(g.materials[p.material])+':'+vertices.join('/');
+   onTriangle?.({material:p.material,index:i/3,signature});
+   out.push(signature);
   }
  }
  assert.equal(out.length,asset.triangles);assert.deepEqual(bounds,[asset.bounds.min,asset.bounds.max]);return out.sort();
@@ -68,7 +70,7 @@ for(const site of [
  {key:'onebailey',id:'apt-a10023043',count:19,parts:Array(19).fill(1),triangles:[897,769,1423,1005,1059,1257,1369,1074,1257,596,1107,951,1323,1307,1005,1189,496,969,786],components:6321,convex:619,outsideMax:9.53},
  {key:'onebailey-113-116',id:'apt-a13780006',count:5,parts:Array(5).fill(1),triangles:[236,992,905,1028,1202],components:1332,convex:79,outsideMax:3.92},
  {key:'onepentas',id:'apt-a10022556',count:7,parts:[4,1,1,1],triangles:[2953,685,592,580],components:1620,convex:24,outsideMax:2.04},
- {key:'acro-riverpark',id:'apt-a10027205',count:17,parts:[15,1,1],triangles:[19314,1787,1052],components:6138,convex:362,outsideMax:4.63},
+ {key:'acro-riverpark',id:'apt-a10027205',count:17,parts:[1,1,1,1,1,1,1,1,1,1,1,2,1,1,1,1],triangles:[356,1787,1263,1355,980,1446,1208,1557,2128,1381,1052,1470,1906,1831,1381,1052],components:6138,convex:362,outsideMax:4.63},
 ]){
  const source=base.assets.find(a=>a.id===site.id);
  const correction=corrections.corrections.find(c=>c.sourceId===source.id);
@@ -101,6 +103,66 @@ for(const site of [
   }
  });
 }
+test('all 15 Acro fallbacks retain the exact source-feature triangle emissions, including the historical 110 part',()=>{
+ const source=base.assets.find(a=>a.id==='apt-a10027205');
+ const correction=corrections.corrections.find(c=>c.sourceId===source.id);
+ const proof=json('docs/model-audit/acro-riverpark-generic-split.json');
+ assert.equal(source.sha256,'e02dd03abb3fd65981303758bf47d491d3ff41df0c593ce87b9fb94d7ca38401');
+ assert.equal(hash(read('public/models/'+source.model)),source.sha256);
+ assert.equal(proof.sourceAuthoringReplay.byteExact,true);
+ assert.equal(proof.sourceAuthoringReplay.sha256,source.sha256);
+ const ranges=proof.sourceAuthoringReplay.triangleRangesBySource;
+ // Frozen during byte-exact authoring replay, before changing any public assets.
+ assert.equal(hash(JSON.stringify(ranges)),'082c5c443aed01fdeec0289c03f775fea8a6a3ff945ba3e2abda3d21d234550c');
+ const ordered=new Map();
+ triangles(source,undefined,undefined,({material,index,signature})=>{
+  if(!ordered.has(material))ordered.set(material,[]);
+  assert.equal(ordered.get(material).length,index);ordered.get(material).push(signature);
+ });
+ const bySource=new Map(ranges.map(r=>[r.sourceId,[]]));
+ for(const [material,signatures]of ordered){
+  const coverage=new Uint8Array(signatures.length);
+  for(const row of ranges){
+   const [start,end]=row.triangleRangesByMaterial[material];
+   assert.ok(Number.isInteger(start)&&start>=0&&start<=end&&end<=signatures.length);
+   bySource.get(row.sourceId).push(...signatures.slice(start,end));
+   for(let i=start;i<end;i++)coverage[i]++;
+  }
+  assert.ok(coverage.every(n=>n===1),'Every original indexed triangle has exactly one frozen source owner');
+ }
+ for(const asset of correction.assets){
+  assert.deepEqual(triangles(asset),asset.footprintIds.flatMap(id=>bySource.get(id)).sort(),`${asset.id} keeps its original source feature emissions`);
+ }
+ const fallbacks=correction.assets.filter(a=>a.id!==source.id);
+ assert.deepEqual(fallbacks.map(a=>a.id),Array.from({length:15},(_,i)=>`fallback-acro-riverpark-${100+i}`));
+ const tower110=fallbacks.find(a=>a.id==='fallback-acro-riverpark-110');
+ assert.deepEqual(tower110.footprintIds,['534d7d9c-978e-43dc-a409-87cf4b185358','ce2823b4-6bb2-4b4a-b1f6-21f035384ce1']);
+ assert.equal(bySource.get(tower110.footprintIds[0]).length,874);
+ assert.equal(bySource.get(tower110.footprintIds[1]).length,596);
+ assert.equal(tower110.triangles,1470);
+ const neighbor=correction.assets.find(a=>a.id===source.id);
+ assert.deepEqual(neighbor.footprintIds,['8be35ba6-cad9-427a-b6c9-21b83caf3501']);
+ assert.equal(neighbor.nameKo,'반포파크빌 (기존 추정 모형)');
+ assert.equal(neighbor.triangles,356);assert.equal(neighbor.apartmentCode,undefined);
+ assert.equal(neighbor.residentialCompletionCredit,false);
+ assert.ok(fallbacks.every(a=>!a.footprintIds.includes(neighbor.footprintIds[0])));
+ for(const id of correction.sourceFootprintIds)assert.equal(Object.values(effective.matches).filter(ids=>ids.includes(id)).length,1);
+ const identity=proof.reviewed110PartIdentity;
+ assert.equal(identity.sourceId,tower110.footprintIds[1]);
+ assert.deepEqual(identity.sources[0].outerWayIds,[543323179,543323180,543323181]);
+ assert.equal(identity.sources[0].url,'https://api.openstreetmap.org/api/0.6/relation/7766718/1');
+ assert.equal(identity.sources.at(-1).tags['building:part'],'yes');
+ assert.equal(identity.sources.at(-1).tags['building:levels'],'20');
+ for(const s of identity.sources){assert.match(s.sha256,/^[a-f0-9]{64}$/);assert.ok(s.url.startsWith('https://api.openstreetmap.org/api/0.6/'));}
+});
+test('the previously published Acro 100 and 109 fallback metadata and GLB bytes remain unchanged',()=>{
+ const frozen={100:'cbf6983d696ffd5366d3a4d67798940c4be1dc17ec4da723ed4c6a887906b7bd',109:'fdf57693b38cda34c3a4b94ed0ee5d7d1263b4f7624d9c321883cf01ac7c6a5e'};
+ for(const [number,digest]of Object.entries(frozen)){
+  const a=effective.assets.find(a=>a.id===`fallback-acro-riverpark-${number}`);
+  assert.equal(hash(JSON.stringify(a)),digest);
+  assert.equal(hash(read('public/models/'+a.model)),a.sha256);
+ }
+});
 test('One Bailey primary archive yields only its 19 existing footprints, excluding 113–116',()=>{
  const source=base.assets.find(a=>a.id==='apt-a10023043');
  const correction=corrections.corrections.find(c=>c.sourceId===source.id);

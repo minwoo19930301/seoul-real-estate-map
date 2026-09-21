@@ -128,7 +128,7 @@ def publish(bundle_path, review_path):
         source=(bundle_path.parent/filename).resolve()
         if not source.is_relative_to(bundle_path.parent) or not source.is_file() or source.suffix not in {'.json','.geojson','.py'}:
             raise ValueError('Recipe inputs must be local geometry or code, not embedded reference photographs')
-        recipe_copies.append((source,ROOT/'modeling/bespoke'/site/source.name))
+        recipe_copies.append((source,ROOT/'modeling/bespoke'/site/source.relative_to(bundle_path.parent)))
     old_ids={a['id'] for a in read(PUB/'manifest.json')['assets']+read(PUB/'reference-manifest.json')['assets']}
     old_ids.update(a['id'] for a in current['assets'] if a.get('sourceRecord',{}).get('siteId')!=site)
     for asset in b['assets']:
@@ -149,7 +149,7 @@ def publish(bundle_path, review_path):
         lon=asset['coordinate']['lon'];lat=asset['coordinate']['lat'];sx=111319.49079327358*math.cos(math.radians(lat));sy=111319.49079327358
         lo=geometry['min'];hi=geometry['max']
         model='bespoke/'+site+'/'+aid+'.glb'
-        blend_dest=ROOT/'modeling/bespoke'/site/blend.name;blends[blend]=blend_dest
+        blend_dest=ROOT/'modeling/bespoke'/site/blend.relative_to(bundle_path.parent);blends[blend]=blend_dest
         output={'id':aid,'nameKo':asset['nameKo'],'model':model,'coordinate':{'lon':lon,'lat':lat},
           'dimensions':geometry['dimensions'],'yawDegFromEast':0,'heightDatum':'metres; independent terrain anchor',
           'quality':'reference','sha256':geometry['sha256'],'referenceUrl':asset['referenceUrl'],
