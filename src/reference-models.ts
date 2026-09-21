@@ -66,3 +66,20 @@ export function referenceManifest(value: unknown, preserved: CityModelAsset[]): 
   }
   return data;
 }
+
+/** Coarse models never take ownership from existing authored reconstructions. */
+export function representativeManifest(value: unknown, preserved: CityModelAsset[], protectedModels: CityModelAsset[]): ReferenceManifest {
+  const manifest = referenceManifest(value, preserved);
+  const footprints = new Set(protectedModels.flatMap(asset => asset.footprintIds ?? []));
+  if (manifest.places.length) throw Error('Representative models cannot replace search places.');
+  for (const asset of manifest.assets) {
+    const record = (asset as CityModelAsset & { sourceRecord?: { method?: string; completionCredit?: boolean } }).sourceRecord;
+    if (record?.method !== 'representative-photo-informed' || record.completionCredit !== false
+      || asset.supersedes?.length || !asset.footprintIds?.length) throw Error('Invalid representative provenance.');
+    for (const id of asset.footprintIds) {
+      if (footprints.has(id)) throw Error('Representative footprint ownership overlaps a preserved model.');
+      footprints.add(id);
+    }
+  }
+  return manifest;
+}
