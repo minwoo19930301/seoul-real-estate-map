@@ -33,7 +33,7 @@ function triangles(asset) {
 }
 
 for(const site of [
- {key:'onebailey',id:'apt-a10023043',count:19,parts:[14,1,1,1,1,1],triangles:[15922,897,769,496,969,786],components:6321,convex:619,outsideMax:9.53},
+ {key:'onebailey',id:'apt-a10023043',count:19,parts:[8,1,1,1,1,1,1,1,1,1,1,1],triangles:[8735,897,769,1423,1005,1059,1257,1369,1074,496,969,786],components:6321,convex:619,outsideMax:9.53},
  {key:'onepentas',id:'apt-a10022556',count:7,parts:[4,1,1,1],triangles:[2953,685,592,580],components:1620,convex:24,outsideMax:2.04},
 ]){
  const source=base.assets.find(a=>a.id===site.id);

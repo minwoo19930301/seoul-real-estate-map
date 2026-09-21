@@ -12,14 +12,20 @@ from publish_bespoke_models import replace_batch
 
 CONFIGS = [
     {'site':'onebailey','source':'apt-a10023043','sha':'b50af817af714ec3027f9fa240a0a17d72fc896987180699ae47a50f9fd393ca','count':19,
-     'remainingName':'래미안원베일리 나머지14동 (기존 추정 모형)',
+     'remainingName':'래미안원베일리 나머지8동 (기존 추정 모형)',
      'parts':[
          ('fallback-onebailey-101','래미안원베일리 101동','4348b83d-8074-41db-b6fd-2a0220302d25'),
          ('fallback-onebailey-102','래미안원베일리 102동','18482853-b439-4fbc-a964-bbeb2c81c7cc'),
+         ('fallback-onebailey-103','래미안원베일리 103동','b1f87321-a5d0-497d-8863-c7b45dc7422c'),
+         ('fallback-onebailey-104','래미안원베일리 104동','ccf8cdd2-6388-489d-924f-b26563a9fe1c'),
+         ('fallback-onebailey-105','래미안원베일리 105동','6b129b5e-2708-4c00-8152-0e87487a5466'),
+         ('fallback-onebailey-106','래미안원베일리 106동','90d15512-c437-4358-bfe6-28c2b9fab0c8'),
+         ('fallback-onebailey-107','래미안원베일리 107동','e3e75971-1068-44f0-9ce7-54aa836baf61'),
+         ('fallback-onebailey-108','래미안원베일리 108동','54767758-a6b2-42dc-a87c-6d692a530b8c'),
          ('fallback-onebailey-121','래미안원베일리 121동','37167a22-89d6-41be-9768-691ce24bfc6b'),
          ('fallback-onebailey-122','래미안원베일리 122동','1035924e-30e1-4e29-b8d8-894e48fd550e'),
          ('fallback-onebailey-123','래미안원베일리 123동','9bf33339-8503-4c4d-a4a2-e34b800eb8a7')],
-     'limits':['The archived compound contains19of23officialresidentialbuildings. This operation preservesonlythose19; it does not claim the entirecomplex is modeled.','Officialnumberplan andexactbuildingregister identify101,102,121,122,123. Sourcefallbackgeometry/heights remain unchanged; no photo-completion credit.']},
+     'limits':['The archived compound contains19of23officialresidentialbuildings. This operation preservesonlythose19; it does not claim the entirecomplex is modeled.','Official numbered plan and exact building register identify101–108 and121–123. Sourcefallbackgeometry/heights remain unchanged; no photo-completion credit.']},
     {'site':'onepentas','source':'apt-a10022556','sha':'4f301eb1e259da07a9580dc86256b044a0e55fcfe654ad5401ad3eacdf8e00f7','count':7,
      'remainingName':'래미안원펜타스 101–104동 (기존 추정 모형)',
      'parts':[
