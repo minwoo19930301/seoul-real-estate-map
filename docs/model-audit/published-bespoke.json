@@ -42966,6 +42966,1129 @@
           "sha256": "7e881909cdaa55dc938e915cef98ecb8a68c3211ba0dfe37191253b095efe364"
         }
       ]
+    },
+    "banpo-riche-101-representative": {
+      "sources": [
+        {
+          "url": "https://file.kbland.kr/image/kbstar/land/img/alian/kms/complex/photo/objctidnfr/28215/MjgyMTUxMDAzNzk1MDMx.jpg",
+          "sha256": "fc46a4b8b46f460ea5798c9339286ef1ed449b45456649d885f5dcfe625df166",
+          "scope": "complex",
+          "observations": "Root directly viewed1920x1080completed exterior photo. Numbered tower and compassorientation unconfirmed."
+        },
+        {
+          "url": "https://kbland.kr/se/c/23387",
+          "observations": "Root independently parsed primarydata.detail identity23387 BanpoRiche and siblingdata.photoList[0] containing this1920URL; notrecommendation."
+        },
+        {
+          "url": "https://api.openstreetmap.org/api/0.6/way/333075749/full",
+          "observations": "Root independently reconstructed named BanpoRiche residential boundary; not cadastral/site-plan survey."
+        },
+        {
+          "dataset": "Exact numbered building-register rows and OSM source polygons",
+          "snapshot": "banpo-riche-source-identity.json",
+          "sha256": "6e5f57b9e639cde1baf0d609b34aec87a0f10a40233fccb1f5fe27ed3bc39a27",
+          "observations": "Nine unique full numbered polygons inside namedboundary; exact Banpo-dong30-26/Gomurae-ro35 registered main residential rows;1119households. Nochildparts;uniformheightassumption."
+        }
+      ],
+      "review": {
+        "siteId": "banpo-riche-101-representative",
+        "status": "visually-reviewed",
+        "reviewer": "root independently viewed source original and every final front/opposite/side/roof render",
+        "inferenceApprovedAssets": [
+          "bespoke-banpo-riche-101"
+        ],
+        "reviewedSourcePhotos": [
+          {
+            "url": "https://file.kbland.kr/image/kbstar/land/img/alian/kms/complex/photo/objctidnfr/28215/MjgyMTUxMDAzNzk1MDMx.jpg",
+            "sha256": "fc46a4b8b46f460ea5798c9339286ef1ed449b45456649d885f5dcfe625df166",
+            "scope": "complex",
+            "observations": "Root directly viewed1920x1080completed exterior photo. Numbered tower and compassorientation unconfirmed."
+          }
+        ],
+        "comparisons": [
+          "Root compared1920completedphoto with allfouractualMCPviews permodel; distinctive broadblankwall/windowgrid balance, whitepiers/spandrels, tealwindows andsquaredroofgrille retained.",
+          "Root independently decodedGLBtriangles and verifiedoriginalfullgrade/fullroofdeck,registeredmaxheight/floors,allprojectionsbelow.5m androofstructurecontainment.",
+          "Nine exactnumbered sourcepolygons/liveDBregisterrows matched independently insideOSMnamedboundary.",
+          "ActualfinalMCPmetadata save/reload binds each cleanBlender file toverifiedfallback;106retainsoriginalstandalonefallback."
+        ],
+        "limits": [
+          "Numbered photographedtower and compassorientation unconfirmed.",
+          "No sourcechildparts; own fullfootprint uniformmaximumheightassumption.",
+          "Window layout, hiddenfaces, roofgrille placement/dimensions and colors are unmeasured.",
+          "Representative101facade adapted to siblings using each own edge orientation/length/concavity; not identicalvertex-index assignment.",
+          "Registered maximum envelopeincludesroofdetail; legal roofdatum unconfirmed.",
+          "Eighttower archived compound splitexactly; original106singleton preserved byte-for-byte."
+        ],
+        "renders": [
+          "docs/model-audit/renders/banpo-riche-101-representative/front.png",
+          "docs/model-audit/renders/banpo-riche-101-representative/opposite.png",
+          "docs/model-audit/renders/banpo-riche-101-representative/side.png",
+          "docs/model-audit/renders/banpo-riche-101-representative/roof.png"
+        ],
+        "renderSha256": {
+          "docs/model-audit/renders/banpo-riche-101-representative/front.png": "abd58689436197e0f8f855d65fc6b6754686de02a70f87e0ee3f0ec76139cdf3",
+          "docs/model-audit/renders/banpo-riche-101-representative/opposite.png": "03f6a81650e1fd2583571da107081587a8c17ec6b22f1749448d3e265de57e53",
+          "docs/model-audit/renders/banpo-riche-101-representative/side.png": "56f9f6cee512e274d8c9c64ecfec093376655e166faa83a974a7a81732057b0b",
+          "docs/model-audit/renders/banpo-riche-101-representative/roof.png": "ca2fe3add3dee9500c8fe8f2b4b4c35884f70347e2fd27e9767260cd3a33f4d4"
+        },
+        "reviewedInputs": {
+          "banpo-riche-101.glb": "baba160b199891e02bb41427537cd81dd0e0072418d9eba0b2de3eef9506cd66",
+          "banpo-riche-101-authored.blend": "55d6267bc1579fdd9312cbf512505a7dd333ee9152a77e20f97c6a4394172199"
+        }
+      },
+      "assets": [
+        {
+          "id": "bespoke-banpo-riche-101",
+          "sourceSha256": "baba160b199891e02bb41427537cd81dd0e0072418d9eba0b2de3eef9506cd66",
+          "sha256": "7aeb258c7fe79b7334c8682a9a77d75fc490bd13a5fe61c3fd6483061e557d90",
+          "bytes": 2566096,
+          "dimensions": [
+            39.51608467102051,
+            92.5,
+            39.0485725402832
+          ],
+          "min": [
+            -19.061464309692383,
+            0,
+            -18.922595977783203
+          ],
+          "max": [
+            20.454620361328125,
+            92.5,
+            20.1259765625
+          ],
+          "triangles": 47340,
+          "components": [
+            {
+              "name": "Riche101_editable_Riche101_light_grey_solid_wall",
+              "triangles": 96
+            },
+            {
+              "name": "Riche101_editable_Riche101_modest_grey_flat_roof_caps",
+              "triangles": 12936
+            },
+            {
+              "name": "Riche101_editable_Riche101_muted_ground_wall",
+              "triangles": 264
+            },
+            {
+              "name": "Riche101_editable_Riche101_broad_white_facade_frames",
+              "triangles": 4896
+            },
+            {
+              "name": "Riche101_editable_Riche101_dark_recessed_service_strip",
+              "triangles": 348
+            },
+            {
+              "name": "Riche101_editable_Riche101_teal_rectangular_grouped_windows",
+              "triangles": 7296
+            },
+            {
+              "name": "Riche101_editable_Riche101_dark_horizontal_spandrels_and_mullio",
+              "triangles": 21504
+            }
+          ]
+        }
+      ],
+      "mcpEvidence": [
+        {
+          "path": "docs/model-audit/mcp/banpo-riche-101-representative/mcp-build.json",
+          "sha256": "5afe5c740e29cbe53c3f9d54c3ab355b7721dc09c4b6fe2762a117bb0c77c6c7",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        },
+        {
+          "path": "docs/model-audit/mcp/banpo-riche-101-representative/mcp-final-bindings-reload.json",
+          "sha256": "48960a0e389e492d712c6ba9a5d35e57c23d249ab10cb0b13856053b79fd9cff",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        },
+        {
+          "path": "docs/model-audit/mcp/banpo-riche-101-representative/mcp-standalone.json",
+          "sha256": "816aa256c3694479e787c552c248fec0bba42b0d2a1319d7257f159f3f0d2dfa",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        }
+      ],
+      "recipeInputs": [
+        {
+          "path": "modeling/bespoke/banpo-riche-101-representative/banpo-riche-source-identity.json",
+          "sha256": "6e5f57b9e639cde1baf0d609b34aec87a0f10a40233fccb1f5fe27ed3bc39a27"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-101-representative/build.py",
+          "sha256": "cef25f5f80d3c45eea8c6addc96ca22dae2cd952ceeb62eb24c79ff8e4851132"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-101-representative/check-standalone.py",
+          "sha256": "fba81f4db0cfae7af1e43f10942c9b70785f7080c8f8974d0112603b9fc7b2de"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-101-representative/finalize.py",
+          "sha256": "75d6db81f86ad92df6740f4c28e581732c46754a19989d8c7c8a2dc50e6124b6"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-101-representative/prepare.py",
+          "sha256": "46d3d386a29dcf3b5106b6cf9638268e6e3afb147ed0e622700ee29da0de4669"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-101-representative/validate.py",
+          "sha256": "360576641e6a0fd446bb211c812a75d4e40f2623025b87b9bed0e851ca06e4f5"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-101-representative/source-provenance.json",
+          "sha256": "a9006e1a07633a948fe6969129b2d310ea7aeba8b732bd1c18071dff362eb256"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-101-representative/binding-map-frozen.json",
+          "sha256": "80cb8f9ce0f1be8b201911e4060d18bda6bc4e7cf493c737d61e2169b203c585"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-101-representative/source-data.json",
+          "sha256": "abd8055da7e322df005f43d87fba5bedb5727845f1fa30ef6820ad0d634ea8e8"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-101-representative/regions.json",
+          "sha256": "b3136ad06596b8809ca1d877fc4adfcc7517fa230afed7ddb225ef14f68e49f4"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-101-representative/geometry-proof.json",
+          "sha256": "31abeefc34248e5b027b5c89d3143fbafe942ee8067e6f051fef06a7ec3a6cb6"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-101-representative/standalone-validation.json",
+          "sha256": "2230e14e8087770104600355b6215c140971cc852c2d77d2616ef66c469c72eb"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-101-representative/root-geometry-review.json",
+          "sha256": "af168209213d8075392d8b3c5bdee5e3c88acfb4a816f06bd8ff56f02b8fcb50"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-101-representative/final-binding-proof.json",
+          "sha256": "3b990a2fd634d3ead7ef925830120a89b7cfd6d98b9d611619e476e56b3f49ae"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-101-representative/binding-byte-preservation-proof.json",
+          "sha256": "0efb3f69ae9ac6568d7661e87cddbfe59a9f81030ec9126983ae10ebaedd0216"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-101-representative/facade-regions.json",
+          "sha256": "e724b064811c53d043220db41a2988023815b46ae0e5f46cd022ec1e0e910831"
+        }
+      ]
+    },
+    "banpo-riche-102-109-family": {
+      "sources": [
+        {
+          "url": "https://file.kbland.kr/image/kbstar/land/img/alian/kms/complex/photo/objctidnfr/28215/MjgyMTUxMDAzNzk1MDMx.jpg",
+          "sha256": "fc46a4b8b46f460ea5798c9339286ef1ed449b45456649d885f5dcfe625df166",
+          "scope": "complex",
+          "observations": "Root directly viewed1920x1080completed exterior photo. Numbered tower and compassorientation unconfirmed."
+        },
+        {
+          "url": "https://kbland.kr/se/c/23387",
+          "observations": "Root independently parsed primarydata.detail identity23387 BanpoRiche and siblingdata.photoList[0] containing this1920URL; notrecommendation."
+        },
+        {
+          "url": "https://api.openstreetmap.org/api/0.6/way/333075749/full",
+          "observations": "Root independently reconstructed named BanpoRiche residential boundary; not cadastral/site-plan survey."
+        },
+        {
+          "dataset": "Exact numbered building-register rows and OSM source polygons",
+          "snapshot": "banpo-riche-source-identity.json",
+          "sha256": "6e5f57b9e639cde1baf0d609b34aec87a0f10a40233fccb1f5fe27ed3bc39a27",
+          "observations": "Nine unique full numbered polygons inside namedboundary; exact Banpo-dong30-26/Gomurae-ro35 registered main residential rows;1119households. Nochildparts;uniformheightassumption."
+        }
+      ],
+      "review": {
+        "siteId": "banpo-riche-102-109-family",
+        "status": "visually-reviewed",
+        "reviewer": "root independently viewed source original and every final front/opposite/side/roof render",
+        "inferenceApprovedAssets": [
+          "bespoke-banpo-riche-102",
+          "bespoke-banpo-riche-103",
+          "bespoke-banpo-riche-104",
+          "bespoke-banpo-riche-105",
+          "bespoke-banpo-riche-106",
+          "bespoke-banpo-riche-107",
+          "bespoke-banpo-riche-108",
+          "bespoke-banpo-riche-109"
+        ],
+        "reviewedSourcePhotos": [
+          {
+            "url": "https://file.kbland.kr/image/kbstar/land/img/alian/kms/complex/photo/objctidnfr/28215/MjgyMTUxMDAzNzk1MDMx.jpg",
+            "sha256": "fc46a4b8b46f460ea5798c9339286ef1ed449b45456649d885f5dcfe625df166",
+            "scope": "complex",
+            "observations": "Root directly viewed1920x1080completed exterior photo. Numbered tower and compassorientation unconfirmed."
+          }
+        ],
+        "comparisons": [
+          "Root compared1920completedphoto with allfouractualMCPviews permodel; distinctive broadblankwall/windowgrid balance, whitepiers/spandrels, tealwindows andsquaredroofgrille retained.",
+          "Root independently decodedGLBtriangles and verifiedoriginalfullgrade/fullroofdeck,registeredmaxheight/floors,allprojectionsbelow.5m androofstructurecontainment.",
+          "Nine exactnumbered sourcepolygons/liveDBregisterrows matched independently insideOSMnamedboundary.",
+          "ActualfinalMCPmetadata save/reload binds each cleanBlender file toverifiedfallback;106retainsoriginalstandalonefallback."
+        ],
+        "limits": [
+          "Numbered photographedtower and compassorientation unconfirmed.",
+          "No sourcechildparts; own fullfootprint uniformmaximumheightassumption.",
+          "Window layout, hiddenfaces, roofgrille placement/dimensions and colors are unmeasured.",
+          "Representative101facade adapted to siblings using each own edge orientation/length/concavity; not identicalvertex-index assignment.",
+          "Registered maximum envelopeincludesroofdetail; legal roofdatum unconfirmed.",
+          "Eighttower archived compound splitexactly; original106singleton preserved byte-for-byte."
+        ],
+        "renders": [
+          "docs/model-audit/renders/banpo-riche-102-109-family/102/front.png",
+          "docs/model-audit/renders/banpo-riche-102-109-family/102/opposite.png",
+          "docs/model-audit/renders/banpo-riche-102-109-family/102/side.png",
+          "docs/model-audit/renders/banpo-riche-102-109-family/102/roof.png",
+          "docs/model-audit/renders/banpo-riche-102-109-family/103/front.png",
+          "docs/model-audit/renders/banpo-riche-102-109-family/103/opposite.png",
+          "docs/model-audit/renders/banpo-riche-102-109-family/103/side.png",
+          "docs/model-audit/renders/banpo-riche-102-109-family/103/roof.png",
+          "docs/model-audit/renders/banpo-riche-102-109-family/104/front.png",
+          "docs/model-audit/renders/banpo-riche-102-109-family/104/opposite.png",
+          "docs/model-audit/renders/banpo-riche-102-109-family/104/side.png",
+          "docs/model-audit/renders/banpo-riche-102-109-family/104/roof.png",
+          "docs/model-audit/renders/banpo-riche-102-109-family/105/front.png",
+          "docs/model-audit/renders/banpo-riche-102-109-family/105/opposite.png",
+          "docs/model-audit/renders/banpo-riche-102-109-family/105/side.png",
+          "docs/model-audit/renders/banpo-riche-102-109-family/105/roof.png",
+          "docs/model-audit/renders/banpo-riche-102-109-family/106/front.png",
+          "docs/model-audit/renders/banpo-riche-102-109-family/106/opposite.png",
+          "docs/model-audit/renders/banpo-riche-102-109-family/106/side.png",
+          "docs/model-audit/renders/banpo-riche-102-109-family/106/roof.png",
+          "docs/model-audit/renders/banpo-riche-102-109-family/107/front.png",
+          "docs/model-audit/renders/banpo-riche-102-109-family/107/opposite.png",
+          "docs/model-audit/renders/banpo-riche-102-109-family/107/side.png",
+          "docs/model-audit/renders/banpo-riche-102-109-family/107/roof.png",
+          "docs/model-audit/renders/banpo-riche-102-109-family/108/front.png",
+          "docs/model-audit/renders/banpo-riche-102-109-family/108/opposite.png",
+          "docs/model-audit/renders/banpo-riche-102-109-family/108/side.png",
+          "docs/model-audit/renders/banpo-riche-102-109-family/108/roof.png",
+          "docs/model-audit/renders/banpo-riche-102-109-family/109/front.png",
+          "docs/model-audit/renders/banpo-riche-102-109-family/109/opposite.png",
+          "docs/model-audit/renders/banpo-riche-102-109-family/109/side.png",
+          "docs/model-audit/renders/banpo-riche-102-109-family/109/roof.png"
+        ],
+        "renderSha256": {
+          "docs/model-audit/renders/banpo-riche-102-109-family/102/front.png": "96c1cb6b786e5f673fce12ea5cb421d78974ef4e050b1d08a6b077f24c3f3c4a",
+          "docs/model-audit/renders/banpo-riche-102-109-family/102/opposite.png": "e244710ee9f60eec8aea831fea80e6cbe01c3ae5b45c638ca7f7432497f1c7fd",
+          "docs/model-audit/renders/banpo-riche-102-109-family/102/side.png": "3ea1e45aa1eea6c4ea43b2c9aafca1917be9f37919f6393c8501c2602615ab9e",
+          "docs/model-audit/renders/banpo-riche-102-109-family/102/roof.png": "47b997b8d362cc321a059d2a34468d83bf8cfa9c00593c7603e3182a23613238",
+          "docs/model-audit/renders/banpo-riche-102-109-family/103/front.png": "5f10fd85e2bc1191ef48b4ea4b875abf7dbde84498c5316c2340b6d5102faf81",
+          "docs/model-audit/renders/banpo-riche-102-109-family/103/opposite.png": "52eb15e663e73cb217638e2d94d416960f001bc96bc2b49edef4c7fd4ab8586a",
+          "docs/model-audit/renders/banpo-riche-102-109-family/103/side.png": "7633b0a56506b58fc7da21112dec9203bab2563813d5ca25c0c9369523eb71d4",
+          "docs/model-audit/renders/banpo-riche-102-109-family/103/roof.png": "d520cad722258063a12f45cb52cdc0bec63931d690785b753a687e0aa1bb6ada",
+          "docs/model-audit/renders/banpo-riche-102-109-family/104/front.png": "5951f66a63460c661e87c93470346d668697d71d4bd43557f402eac5e5853b6b",
+          "docs/model-audit/renders/banpo-riche-102-109-family/104/opposite.png": "118be817c13359c976eb61bea5b176543ce411e73c88b8d15bbb71f8a4ba190c",
+          "docs/model-audit/renders/banpo-riche-102-109-family/104/side.png": "cf05d86119bf3c74af844d3803a60a1737f5450206f8a4c43b4bd6bf1241f10a",
+          "docs/model-audit/renders/banpo-riche-102-109-family/104/roof.png": "7b45e3666d4a91c1ae494bd07ddfe8e46102f92732dbd93a4d6f4f629623981b",
+          "docs/model-audit/renders/banpo-riche-102-109-family/105/front.png": "795c33eb7a8900cf220142fe23a884ad6167703a4534273c1f9866d36bbc4c87",
+          "docs/model-audit/renders/banpo-riche-102-109-family/105/opposite.png": "c5abe215e51ac714761041baf8efff486372e348572d22e35a1caa639916371a",
+          "docs/model-audit/renders/banpo-riche-102-109-family/105/side.png": "823971ccf313726ed0b48fcfb537f791f6376ec7495357b217099f72dc9d2756",
+          "docs/model-audit/renders/banpo-riche-102-109-family/105/roof.png": "24b12e50b2c890fd72dafaf0ed001393b027cedf0235d5d764803e7f2cad3a32",
+          "docs/model-audit/renders/banpo-riche-102-109-family/106/front.png": "219032b949932f17b01d9423a8492ef3da238463e0cd623351cd542f2183e907",
+          "docs/model-audit/renders/banpo-riche-102-109-family/106/opposite.png": "afebd0e23b2226ede6edfbc48b72d3308c899909c2af12f3556f3424f57539d9",
+          "docs/model-audit/renders/banpo-riche-102-109-family/106/side.png": "eda7a2e8c2a1140d4debe4cf66ae3ed60d8b749e01cb9f61ddc236ba54f5de9c",
+          "docs/model-audit/renders/banpo-riche-102-109-family/106/roof.png": "2b9e08255f056de89372484281854caa23ae4f1df31636ed5f843ffd84dbab85",
+          "docs/model-audit/renders/banpo-riche-102-109-family/107/front.png": "726277395ce38d3efe8db43ffe538251d3701ee266b5399ef8a820f94d9cbe8e",
+          "docs/model-audit/renders/banpo-riche-102-109-family/107/opposite.png": "c6565aba8a0f6a21bf3e1916fa68eec6803c670d922585f54f0138a70327c2d6",
+          "docs/model-audit/renders/banpo-riche-102-109-family/107/side.png": "dc39c6aa9ee5564d43769a57c5e8829f2b9ceb0df6c26ac767b0919aaad5f98c",
+          "docs/model-audit/renders/banpo-riche-102-109-family/107/roof.png": "01d95b40e659611a7aa7f3a6ff1da813c64861815177eb31377022a1f5b44828",
+          "docs/model-audit/renders/banpo-riche-102-109-family/108/front.png": "959c911128557c253dcb1f74f839b6bae45bebbdcb74475ce4b5a80755852b4c",
+          "docs/model-audit/renders/banpo-riche-102-109-family/108/opposite.png": "51d9dc6331bd512e2668a246e762e35a138853c2473653fd3c80e8f910e54029",
+          "docs/model-audit/renders/banpo-riche-102-109-family/108/side.png": "008fcb6b9e5f9c2629c19a71aed046d48f15b090671928e8cfb98b3423f26213",
+          "docs/model-audit/renders/banpo-riche-102-109-family/108/roof.png": "0b7229b987a385d58026849815923d78ce49cc679d9772359063394c5ef2d7bf",
+          "docs/model-audit/renders/banpo-riche-102-109-family/109/front.png": "13e205b5dd66dfd1a94bd2101eb9f8b143780c9f1a9713456e4b006567f2c815",
+          "docs/model-audit/renders/banpo-riche-102-109-family/109/opposite.png": "2f43e444b6a57cb076326146fc03298d61be8c3f7f4e484153102067ed133eec",
+          "docs/model-audit/renders/banpo-riche-102-109-family/109/side.png": "452f26b050f51e9d5d17c45b786ad94e8f8c0618fb613ed59c6ddfcf3c513495",
+          "docs/model-audit/renders/banpo-riche-102-109-family/109/roof.png": "baf4abb9581bfe95b79e96fa87d5e226dae1f778022981e69fb33c74705dc60e"
+        },
+        "reviewedInputs": {
+          "102/banpo-riche-102.glb": "b24a5bf1ba7ea7709e471d4ddf3b62aaf964cf9387b75165ef4abeb792c39810",
+          "102/banpo-riche-102-authored.blend": "529c0d0f18738aaed7d347e108e9474cef0f6ab4f2e7d505d4f07975e174dbec",
+          "103/banpo-riche-103.glb": "1d1265e76502d38f7408e56d42c86306166b1d1b8f437460bb91d50be294d1cf",
+          "103/banpo-riche-103-authored.blend": "e4bc5ccf9f360b1e864774953c3b2479e7fd0d850312914c346bc28c1e5c9b2c",
+          "104/banpo-riche-104.glb": "bac36e51051d4cfcccb6ccc9e0b625bf89000f019dbdc422219785f9bc277cb2",
+          "104/banpo-riche-104-authored.blend": "9b4b02af07da42a93be4d034a17ace054212517a47858751a753f43247548381",
+          "105/banpo-riche-105.glb": "3e47e01159939c04bae9c1ef2f307b8039a89cbdcfbf9664320a7d479ff0844b",
+          "105/banpo-riche-105-authored.blend": "fa8df605bc8d41479d0679765e21317935529f09a146b59fe8c7000fccc63384",
+          "106/banpo-riche-106.glb": "58aeff4dd9df8ced0e259b497668f1c65dbdb947e610e15c2a04e04d58471e73",
+          "106/banpo-riche-106-authored.blend": "7094d97e01c67fa973f1c0d9ac744da5562b321eada63657068cdb522e23b1b8",
+          "107/banpo-riche-107.glb": "ff25c0e5f01b74acfc1b604c1205680282a167216a2decfbd81bd37300b54a26",
+          "107/banpo-riche-107-authored.blend": "03843c165636f93e389c034d1eddc60174d865a80e6e275b726ee30c527d3828",
+          "108/banpo-riche-108.glb": "d90157f6d33e7b6482db46bb7d2bc8edab7c553cb0a983c3699c27f9aac9faca",
+          "108/banpo-riche-108-authored.blend": "110bc8aa5f7e37ad9996f72fc98a374c9a5b88c9e979c22f22efebbef0f02a8a",
+          "109/banpo-riche-109.glb": "02d1c7340b15eef0ff507c8bd0d010118981a36555a2c5060412902759555042",
+          "109/banpo-riche-109-authored.blend": "be7a1f9786c436010c31f31025b6f5dbc971c28839e13cad0cf1be8bdede7ce1"
+        }
+      },
+      "assets": [
+        {
+          "id": "bespoke-banpo-riche-102",
+          "sourceSha256": "b24a5bf1ba7ea7709e471d4ddf3b62aaf964cf9387b75165ef4abeb792c39810",
+          "sha256": "983c80f718fe9f58cc298f12d511042f845fd3f48723604034c91cb507036e96",
+          "bytes": 2654060,
+          "dimensions": [
+            41.15511131286621,
+            100.80000305175781,
+            23.455081939697266
+          ],
+          "min": [
+            -20.476369857788086,
+            0,
+            -13.481409072875977
+          ],
+          "max": [
+            20.678741455078125,
+            100.80000305175781,
+            9.973672866821289
+          ],
+          "triangles": 48976,
+          "components": [
+            {
+              "name": "Riche102_editable_Riche102_light_grey_solid_wall",
+              "triangles": 80
+            },
+            {
+              "name": "Riche102_editable_Riche102_modest_grey_flat_roof_caps",
+              "triangles": 9176
+            },
+            {
+              "name": "Riche102_editable_Riche102_muted_ground_wall",
+              "triangles": 216
+            },
+            {
+              "name": "Riche102_editable_Riche102_dark_recessed_service_strip",
+              "triangles": 372
+            },
+            {
+              "name": "Riche102_editable_Riche102_teal_rectangular_grouped_windows",
+              "triangles": 8820
+            },
+            {
+              "name": "Riche102_editable_Riche102_broad_white_facade_frames",
+              "triangles": 6792
+            },
+            {
+              "name": "Riche102_editable_Riche102_dark_horizontal_spandrels_and_mullio",
+              "triangles": 23520
+            }
+          ]
+        },
+        {
+          "id": "bespoke-banpo-riche-103",
+          "sourceSha256": "1d1265e76502d38f7408e56d42c86306166b1d1b8f437460bb91d50be294d1cf",
+          "sha256": "a4292688887159d31b11810480c55199c20377683dbdce0c125565f6148a5cb7",
+          "bytes": 2835040,
+          "dimensions": [
+            34.12680530548096,
+            89.5999984741211,
+            32.36975288391113
+          ],
+          "min": [
+            -15.92189884185791,
+            0,
+            -16.31810188293457
+          ],
+          "max": [
+            18.204906463623047,
+            89.5999984741211,
+            16.051651000976562
+          ],
+          "triangles": 52320,
+          "components": [
+            {
+              "name": "Riche103_editable_Riche103_light_grey_solid_wall",
+              "triangles": 96
+            },
+            {
+              "name": "Riche103_editable_Riche103_modest_grey_flat_roof_caps",
+              "triangles": 11064
+            },
+            {
+              "name": "Riche103_editable_Riche103_muted_ground_wall",
+              "triangles": 264
+            },
+            {
+              "name": "Riche103_editable_Riche103_dark_recessed_service_strip",
+              "triangles": 372
+            },
+            {
+              "name": "Riche103_editable_Riche103_teal_rectangular_grouped_windows",
+              "triangles": 8928
+            },
+            {
+              "name": "Riche103_editable_Riche103_broad_white_facade_frames",
+              "triangles": 6300
+            },
+            {
+              "name": "Riche103_editable_Riche103_dark_horizontal_spandrels_and_mullio",
+              "triangles": 25296
+            }
+          ]
+        },
+        {
+          "id": "bespoke-banpo-riche-104",
+          "sourceSha256": "bac36e51051d4cfcccb6ccc9e0b625bf89000f019dbdc422219785f9bc277cb2",
+          "sha256": "29f0720931800075bafc05dad71f34b9d1deb49a5aceea32eae1d6957edab075",
+          "bytes": 3301600,
+          "dimensions": [
+            40.592994689941406,
+            100.9000015258789,
+            39.83601951599121
+          ],
+          "min": [
+            -20.015249252319336,
+            0,
+            -19.13843536376953
+          ],
+          "max": [
+            20.57774543762207,
+            100.9000015258789,
+            20.69758415222168
+          ],
+          "triangles": 60960,
+          "components": [
+            {
+              "name": "Riche104_editable_Riche104_light_grey_solid_wall",
+              "triangles": 96
+            },
+            {
+              "name": "Riche104_editable_Riche104_modest_grey_flat_roof_caps",
+              "triangles": 12504
+            },
+            {
+              "name": "Riche104_editable_Riche104_muted_ground_wall",
+              "triangles": 264
+            },
+            {
+              "name": "Riche104_editable_Riche104_dark_recessed_service_strip",
+              "triangles": 372
+            },
+            {
+              "name": "Riche104_editable_Riche104_teal_rectangular_grouped_windows",
+              "triangles": 10500
+            },
+            {
+              "name": "Riche104_editable_Riche104_broad_white_facade_frames",
+              "triangles": 6984
+            },
+            {
+              "name": "Riche104_editable_Riche104_dark_horizontal_spandrels_and_mullio",
+              "triangles": 30240
+            }
+          ]
+        },
+        {
+          "id": "bespoke-banpo-riche-105",
+          "sourceSha256": "3e47e01159939c04bae9c1ef2f307b8039a89cbdcfbf9664320a7d479ff0844b",
+          "sha256": "aa4072abb8863eee74d6ba61aee74274962c8c5b16f9b0e270202f72d9a4c72f",
+          "bytes": 3301596,
+          "dimensions": [
+            35.7077751159668,
+            100.9000015258789,
+            32.83981704711914
+          ],
+          "min": [
+            -17.524660110473633,
+            0,
+            -16.30194854736328
+          ],
+          "max": [
+            18.183115005493164,
+            100.9000015258789,
+            16.53786849975586
+          ],
+          "triangles": 60960,
+          "components": [
+            {
+              "name": "Riche105_editable_Riche105_light_grey_solid_wall",
+              "triangles": 96
+            },
+            {
+              "name": "Riche105_editable_Riche105_modest_grey_flat_roof_caps",
+              "triangles": 12504
+            },
+            {
+              "name": "Riche105_editable_Riche105_muted_ground_wall",
+              "triangles": 264
+            },
+            {
+              "name": "Riche105_editable_Riche105_dark_recessed_service_strip",
+              "triangles": 372
+            },
+            {
+              "name": "Riche105_editable_Riche105_teal_rectangular_grouped_windows",
+              "triangles": 10500
+            },
+            {
+              "name": "Riche105_editable_Riche105_broad_white_facade_frames",
+              "triangles": 6984
+            },
+            {
+              "name": "Riche105_editable_Riche105_dark_horizontal_spandrels_and_mullio",
+              "triangles": 30240
+            }
+          ]
+        },
+        {
+          "id": "bespoke-banpo-riche-106",
+          "sourceSha256": "58aeff4dd9df8ced0e259b497668f1c65dbdb947e610e15c2a04e04d58471e73",
+          "sha256": "49d897a992e367ba1f227ce2338eff6121496fe4e68a97365a0f498abbc57aa0",
+          "bytes": 2041368,
+          "dimensions": [
+            36.232547760009766,
+            100.69999694824219,
+            32.22693634033203
+          ],
+          "min": [
+            -18.791427612304688,
+            0,
+            -16.046106338500977
+          ],
+          "max": [
+            17.441120147705078,
+            100.69999694824219,
+            16.180830001831055
+          ],
+          "triangles": 37624,
+          "components": [
+            {
+              "name": "Riche106_editable_Riche106_light_grey_solid_wall",
+              "triangles": 92
+            },
+            {
+              "name": "Riche106_editable_Riche106_modest_grey_flat_roof_caps",
+              "triangles": 14156
+            },
+            {
+              "name": "Riche106_editable_Riche106_muted_ground_wall",
+              "triangles": 252
+            },
+            {
+              "name": "Riche106_editable_Riche106_broad_white_facade_frames",
+              "triangles": 4308
+            },
+            {
+              "name": "Riche106_editable_Riche106_dark_recessed_service_strip",
+              "triangles": 336
+            },
+            {
+              "name": "Riche106_editable_Riche106_teal_rectangular_grouped_windows",
+              "triangles": 5040
+            },
+            {
+              "name": "Riche106_editable_Riche106_dark_horizontal_spandrels_and_mullio",
+              "triangles": 13440
+            }
+          ]
+        },
+        {
+          "id": "bespoke-banpo-riche-107",
+          "sourceSha256": "ff25c0e5f01b74acfc1b604c1205680282a167216a2decfbd81bd37300b54a26",
+          "sha256": "1feb8e5eaa7a6a57942c78a34c6e11c208f28e325823930f7f098a364472f5b3",
+          "bytes": 2245596,
+          "dimensions": [
+            41.531856536865234,
+            100.69999694824219,
+            35.856234550476074
+          ],
+          "min": [
+            -17.945714950561523,
+            0,
+            -20.59583854675293
+          ],
+          "max": [
+            23.58614158630371,
+            100.69999694824219,
+            15.260396003723145
+          ],
+          "triangles": 41408,
+          "components": [
+            {
+              "name": "Riche107_editable_Riche107_light_grey_solid_wall",
+              "triangles": 88
+            },
+            {
+              "name": "Riche107_editable_Riche107_modest_grey_flat_roof_caps",
+              "triangles": 12496
+            },
+            {
+              "name": "Riche107_editable_Riche107_muted_ground_wall",
+              "triangles": 240
+            },
+            {
+              "name": "Riche107_editable_Riche107_broad_white_facade_frames",
+              "triangles": 5136
+            },
+            {
+              "name": "Riche107_editable_Riche107_dark_recessed_service_strip",
+              "triangles": 348
+            },
+            {
+              "name": "Riche107_editable_Riche107_teal_rectangular_grouped_windows",
+              "triangles": 6300
+            },
+            {
+              "name": "Riche107_editable_Riche107_dark_horizontal_spandrels_and_mullio",
+              "triangles": 16800
+            }
+          ]
+        },
+        {
+          "id": "bespoke-banpo-riche-108",
+          "sourceSha256": "d90157f6d33e7b6482db46bb7d2bc8edab7c553cb0a983c3699c27f9aac9faca",
+          "sha256": "01d3c2d1c9bb8247022896c2819f5d7ac7f0bc7718b7424d175425c906a2004a",
+          "bytes": 2245600,
+          "dimensions": [
+            40.93703651428223,
+            100.69999694824219,
+            34.06990718841553
+          ],
+          "min": [
+            -18.169776916503906,
+            0,
+            -19.414981842041016
+          ],
+          "max": [
+            22.76725959777832,
+            100.69999694824219,
+            14.654925346374512
+          ],
+          "triangles": 41408,
+          "components": [
+            {
+              "name": "Riche108_editable_Riche108_light_grey_solid_wall",
+              "triangles": 88
+            },
+            {
+              "name": "Riche108_editable_Riche108_modest_grey_flat_roof_caps",
+              "triangles": 12496
+            },
+            {
+              "name": "Riche108_editable_Riche108_muted_ground_wall",
+              "triangles": 240
+            },
+            {
+              "name": "Riche108_editable_Riche108_broad_white_facade_frames",
+              "triangles": 5136
+            },
+            {
+              "name": "Riche108_editable_Riche108_dark_recessed_service_strip",
+              "triangles": 348
+            },
+            {
+              "name": "Riche108_editable_Riche108_teal_rectangular_grouped_windows",
+              "triangles": 6300
+            },
+            {
+              "name": "Riche108_editable_Riche108_dark_horizontal_spandrels_and_mullio",
+              "triangles": 16800
+            }
+          ]
+        },
+        {
+          "id": "bespoke-banpo-riche-109",
+          "sourceSha256": "02d1c7340b15eef0ff507c8bd0d010118981a36555a2c5060412902759555042",
+          "sha256": "fc4ca57ecba092cae0508ced7ecfb9ae9a572a9ced008405df7bfc422fe30704",
+          "bytes": 1951296,
+          "dimensions": [
+            31.77367401123047,
+            100.80000305175781,
+            31.360894203186035
+          ],
+          "min": [
+            -15.00164794921875,
+            0,
+            -16.708852767944336
+          ],
+          "max": [
+            16.77202606201172,
+            100.80000305175781,
+            14.6520414352417
+          ],
+          "triangles": 35956,
+          "components": [
+            {
+              "name": "Riche109_editable_Riche109_light_grey_solid_wall",
+              "triangles": 92
+            },
+            {
+              "name": "Riche109_editable_Riche109_modest_grey_flat_roof_caps",
+              "triangles": 13328
+            },
+            {
+              "name": "Riche109_editable_Riche109_muted_ground_wall",
+              "triangles": 252
+            },
+            {
+              "name": "Riche109_editable_Riche109_broad_white_facade_frames",
+              "triangles": 5136
+            },
+            {
+              "name": "Riche109_editable_Riche109_dark_recessed_service_strip",
+              "triangles": 348
+            },
+            {
+              "name": "Riche109_editable_Riche109_teal_rectangular_grouped_windows",
+              "triangles": 5040
+            },
+            {
+              "name": "Riche109_editable_Riche109_dark_horizontal_spandrels_and_mullio",
+              "triangles": 11760
+            }
+          ]
+        }
+      ],
+      "mcpEvidence": [
+        {
+          "path": "docs/model-audit/mcp/banpo-riche-102-109-family/mcp-batch-1.json",
+          "sha256": "ea07371772f5602cf923b76df79359fad3d205c141d86fd2931f6d7df5f31cd0",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        },
+        {
+          "path": "docs/model-audit/mcp/banpo-riche-102-109-family/mcp-batch-2.json",
+          "sha256": "9267fd3537393c400fb6acf083ca1acc06a1c4ff827a5040cf9368224908d943",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        },
+        {
+          "path": "docs/model-audit/mcp/banpo-riche-102-109-family/mcp-batch-3.json",
+          "sha256": "e26e59bc0fd5676cefde8871dec2101a90e6ff226aa1616e826dbea4e1f48c3d",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        },
+        {
+          "path": "docs/model-audit/mcp/banpo-riche-102-109-family/mcp-batch-4.json",
+          "sha256": "47cc94746468173813aff806fa156b28d99060424fc5ef08ac242717a9a44743",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        },
+        {
+          "path": "docs/model-audit/mcp/banpo-riche-102-109-family/mcp-final-bindings-reload.json",
+          "sha256": "48960a0e389e492d712c6ba9a5d35e57c23d249ab10cb0b13856053b79fd9cff",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        },
+        {
+          "path": "docs/model-audit/mcp/banpo-riche-102-109-family/mcp-standalone.json",
+          "sha256": "c36c3bd4c6b9244e6900ab73c5f8a3e223f21531a9b770220ee972ca3ae2803d",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        }
+      ],
+      "recipeInputs": [
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/banpo-riche-source-identity.json",
+          "sha256": "6e5f57b9e639cde1baf0d609b34aec87a0f10a40233fccb1f5fe27ed3bc39a27"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/apply-final-bindings.py",
+          "sha256": "ed0086d1de128cddec45884472495e8d3fc2caef13b7689a529ef71bde8cffae"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/batch-1.py",
+          "sha256": "e79d6e83fe968de384318254e51e544d7eb848cdadf3657b5a6a19c25cb54793"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/batch-2.py",
+          "sha256": "87e2696d383f0212a3ad89b3d95e002db6300b25f7ca04aff5741e7013f74bcc"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/batch-3.py",
+          "sha256": "7f22569169052a80818954d14a34704d8ad9c00c4bc9e1816a2ec1452560c187"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/batch-4.py",
+          "sha256": "403ee3e5e3d4ff7253659614162e0b5db7bf625e7548a8f5f3042f03e99a6865"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/check-all.py",
+          "sha256": "d05b61c6260687d9d5b410d54c51ba159895c56a6cf37e1b019cbc996637d0e8"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/finalize.py",
+          "sha256": "440c8746c157b477fc2ebfb29a0088e4112fe65ec3de54f93412b6ed2f77c031"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/freeze-final-bindings.py",
+          "sha256": "375392c9eec669e2e84e6e5d895dca9cb2d5f6f22846217214fd164ccdb8901f"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/prepare.py",
+          "sha256": "06c828985ab4b1f0ff761aba109cc5cef066216c987b3b1d58ff44e0af6ee6e2"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/binding-map-frozen.json",
+          "sha256": "80cb8f9ce0f1be8b201911e4060d18bda6bc4e7cf493c737d61e2169b203c585"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/final-binding-proof.json",
+          "sha256": "3b990a2fd634d3ead7ef925830120a89b7cfd6d98b9d611619e476e56b3f49ae"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/binding-byte-preservation-proof.json",
+          "sha256": "0efb3f69ae9ac6568d7661e87cddbfe59a9f81030ec9126983ae10ebaedd0216"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/102/build.py",
+          "sha256": "e6a05b837ffc03dd4445a92d72fc3457d573bcea2bfbd53733b1cd4b60a09290"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/102/source-data.json",
+          "sha256": "29039e05b0c4d30b55c86a9aea6c85dd3f5ad22d28a208d84b1de53af2a089a4"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/102/regions.json",
+          "sha256": "b93db1ee349c0544a4e75f06c27f857cf9fca0d8a4d542e5a0e1f2e4c7cb822c"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/102/validation.json",
+          "sha256": "ca5c037d141de09d18cd6e6463d4835b4a45b64c13cb3744cef6edf642e18ac6"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/102/geometry-proof.json",
+          "sha256": "a81e5f2abc23a7591baec7bb3e0195542399aea37785ad2fee0dd4513028a195"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/102/root-geometry-review.json",
+          "sha256": "d3d167544c6e40eb59b50b53d3ce1b91ee2542c495f1bc56d73ea4c6ec082406"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/102/standalone-validation.json",
+          "sha256": "c28159941227a82d98ad222d24bbc74bb79e22cca9c4b09cd4385a2b55d1f936"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/102/facade-regions.json",
+          "sha256": "a42a508335f2d76d1b1665e73454d5d1b3b12d781311fbc4160a37c075d56655"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/103/build.py",
+          "sha256": "d8601d0c5c284c5cb84016ac9e4be553b93d32cce4b2f7fba5e67b0f501dda50"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/103/source-data.json",
+          "sha256": "dbd2eacfb7989089d6af75b98feee560036ee6103508db356f413cc6e5744a5b"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/103/regions.json",
+          "sha256": "7e8757b6d2e4c0198e281e617808737686b248f113ff784263ecaddbd875f0ee"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/103/validation.json",
+          "sha256": "7d3356f2e9cff85c4b19838b83626016d94bcbc3f49a633f1cab9870ba5f0d4f"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/103/geometry-proof.json",
+          "sha256": "7940f4750e3ede89840e2df1fe23fc90cfee5e133c1d3242553d7e2a59fc2b55"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/103/root-geometry-review.json",
+          "sha256": "bd4164b18e3acf1101bffdb73997975fb88daa79b289a41933239bece743a2ad"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/103/standalone-validation.json",
+          "sha256": "e0e7417d8aee987ccba2125fe9a2e8596b63521a1836ce5d3fb34a738df91cc0"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/103/facade-regions.json",
+          "sha256": "a2785a56642ae63c685122d05903520bb2b8d0bd089f771fa30525a23f21e270"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/104/build.py",
+          "sha256": "12c28971c57181aaf81445d55cb2cd44fe3567d7dfc2f84e8d150221072b5a93"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/104/source-data.json",
+          "sha256": "0d114ee966d83933741536efdc61096066d079f21abd88e6384a55e32f4e5c4f"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/104/regions.json",
+          "sha256": "0a54601a80f4c5f9cf9904e35fad4b13e75f3dcdaaf92e21b1d7e34a02f2a07c"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/104/validation.json",
+          "sha256": "fa3a79bae1375b0933339af226460a53d183768b2658ce453f4ae0faeb2a093d"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/104/geometry-proof.json",
+          "sha256": "9fc680ac8fec36bbfba2663618e4d179ec6f22ac2c12decd96b21df35cc84a82"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/104/root-geometry-review.json",
+          "sha256": "ed0aeadb2e8c87157ae9a8776642b490e1754a88072db4249dd92ba5f2569d4f"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/104/standalone-validation.json",
+          "sha256": "411fc51b31102519019e414e278f98657cb21b2b9b20ecb0643b0a3f33ee4437"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/104/facade-regions.json",
+          "sha256": "4858ce4c75218a7c759599bbbf348c6f71e51f068942578a2577e7e99fa2506a"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/105/build.py",
+          "sha256": "8c7e1687d4f49d100cdc2df013f839607febd0b00e1d70d8397754199f4e1ca9"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/105/source-data.json",
+          "sha256": "b4425598addb765aa6baef47601a11a22dc61bf0c2f99b5935b578b2ce50756a"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/105/regions.json",
+          "sha256": "07c1d8da3e71453de8e7d5c1551afd7a0d4e9592d26fbd459af90f3696b49a01"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/105/validation.json",
+          "sha256": "c39a31cf9506b77001126195f65f5a298694bfa421c4090ee76945e0514793a9"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/105/geometry-proof.json",
+          "sha256": "650849ae37f74e23dea531a596e2857dd04479f000c523ad215b2e088ca0b3e4"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/105/root-geometry-review.json",
+          "sha256": "ae9c9764e734b6a3c80a44273cd29c4cb992a0010d5cc1282c64a86a674ba65b"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/105/standalone-validation.json",
+          "sha256": "4a80e2e7aacdbde9ab9d566316029b9061ceb2aea2f7baeccb33667c691b870f"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/105/facade-regions.json",
+          "sha256": "9f81b5b358bdc674702fb3abb9bd9551681da615bc07847cf6de9a90bba83a52"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/106/build.py",
+          "sha256": "6adb3f5133158cb444a07c822eb40f0e8640fe22d13dce06d265f007ab79453c"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/106/source-data.json",
+          "sha256": "0b0408402b6823937a30b024213c59b99719ff87414729c5cd5d6090f1322de7"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/106/regions.json",
+          "sha256": "1099234a98ad79de85e5f2a474248e1e1eee446ebc262b95101ba1fc8fae35de"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/106/validation.json",
+          "sha256": "524998b53eae7fa0a4c334b147df7425e4ad0056414a2b973cd2a5341d93ba45"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/106/geometry-proof.json",
+          "sha256": "665f44a21e413694ca0f11641aa1024c496b83e423e91500ce03656e0ad6a604"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/106/root-geometry-review.json",
+          "sha256": "874ea27bfc8e908393d980c0cbee92898b7fe4c6e37b3d337fa90c8acb859dac"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/106/standalone-validation.json",
+          "sha256": "dcdc7baf865f7e65782aab91262c737a1003dfbe2a83df61628767cb0b337708"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/106/facade-regions.json",
+          "sha256": "e33d866e993ed56f15053fd45eed91f8ef6c0955cf746f6f1fb0161e7c47ddc4"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/107/build.py",
+          "sha256": "b7f51f8469b6e38b293defaf0118f9efb3b78ee78b2170a9823dc56d12fb2c27"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/107/source-data.json",
+          "sha256": "4ae6c58e4410160ca098b4f08d27917e245b0de6bbfa13d06db975f1c2eb3e2b"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/107/regions.json",
+          "sha256": "054045525d5cf707d9777b5d4de32eb48c8900a06a5ad2c0698fad8d6d8b5076"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/107/validation.json",
+          "sha256": "e3d22c21886dd31a29d98d9fa697b05e51866337182ec49965b5419286c4690e"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/107/geometry-proof.json",
+          "sha256": "3670f69f0959bbd058055502c9ff30e0433e5747d5ef8217ffc864e3785e707a"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/107/root-geometry-review.json",
+          "sha256": "e0f9d27285dacb5b1d308513de2cd77e26fb06f228d7bb09f6b5b481049121fb"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/107/standalone-validation.json",
+          "sha256": "75ce1a7ae8702abb229957a430a552c8c4d1553725576619fd3e9a8878b7e113"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/107/facade-regions.json",
+          "sha256": "1e867809569ee6ffed110e8e33d79bb8bd552c8be43f0f14cb6444b6fb81de03"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/108/build.py",
+          "sha256": "36bfe63878e95bf3bc015fbbd67a5e96dcb025911dabfd504b471c36cae462e7"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/108/source-data.json",
+          "sha256": "fb590d8e27c9408883026a863d26b52edb37e536db49abb523fea3be6b434631"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/108/regions.json",
+          "sha256": "25fd5f532954efacd5371dcf92d6d12141e88b446beb5b970810eac95a322c3a"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/108/validation.json",
+          "sha256": "6e166b108598c4acb87d647e7ece23abb00906f9194e81df43e420d84ee52283"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/108/geometry-proof.json",
+          "sha256": "0d1e57b4266b2f89d13430ac536980e4e0de3eea06f7374d51955260efd9ec18"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/108/root-geometry-review.json",
+          "sha256": "9e3d244d82f2e1f10370ce0fefc554cdbf560f686adc0832691a7915915eae73"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/108/standalone-validation.json",
+          "sha256": "067a2f108ae3329aa7b914c551ade832ff105bdb3d6a0ccf1076a4dd83600a15"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/108/facade-regions.json",
+          "sha256": "836bafb98f30ed2976d5b5cea6ee0720ede9dbfb06fe6b3ec4992a3060c4d109"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/109/build.py",
+          "sha256": "f42c00a650c38d6b7611eadc1a1ef7520c83a1e3b5f2e9afd50efb27ee48dcc1"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/109/source-data.json",
+          "sha256": "86af74d085720745222c4692e358fdde637494949fde51205c89facd6fda9688"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/109/regions.json",
+          "sha256": "1a1823a3c6a9208a7528c6dd16f144074ef47c11681876bdd0d4def856a93c45"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/109/validation.json",
+          "sha256": "bca96b0eb43f962306eb993ed45a639e23532c0fa93154455bb0d1c87664adb2"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/109/geometry-proof.json",
+          "sha256": "bf8180fda9c4f23686cadaa56eb3c04973ee5f11055e2dccf9a65aa6beff3a42"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/109/root-geometry-review.json",
+          "sha256": "1b02f7a6c03634eb935f54c91b0f1b36d0622ef58235ecfce65d09b4eca77051"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/109/standalone-validation.json",
+          "sha256": "a8f498f9314ab3aaafbc54ffc1b6ea066b70ab2c9f318311434cc5149db94d7d"
+        },
+        {
+          "path": "modeling/bespoke/banpo-riche-102-109-family/109/facade-regions.json",
+          "sha256": "8e5a15252cd1d95cc472ea588f7b397e4f9d2687e3d7fec16f714a04276d5017"
+        }
+      ]
     }
   }
 }

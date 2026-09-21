@@ -30,7 +30,10 @@ class HeightRegions(unittest.TestCase):
     def test_acro_riverview5_preserves_registered_envelopes_and_full_concave_roof_caps(self):
         self.assert_registered_envelopes('acro-riverview', range(101, 106), 595)
 
-    def assert_registered_envelopes(self, site, numbers, households):
+    def test_banpo_riche9_preserves_registered_envelopes_and_full_concave_roof_caps(self):
+        self.assert_registered_envelopes('banpo-riche', range(101, 110), 1119, {106: 'residential-025a7bbd-1c33-4f47-90fd-1f874b5ba0d8'})
+
+    def assert_registered_envelopes(self, site, numbers, households, fallback_ids=None):
         root = path.parents[2]
         assets = {a['id']: a for a in json.loads((root / 'public/models/bespoke-manifest.json').read_text())['assets']}
         sources = json.loads((root / f'docs/model-audit/{site}-source-identity.json').read_text())['towers']
@@ -40,7 +43,7 @@ class HeightRegions(unittest.TestCase):
             with self.subTest(number=source['number']):
                 asset = assets[f"bespoke-{site}-{source['number']}"]
                 self.assertEqual(asset['footprintIds'], [source['sourceId']])
-                self.assertEqual(asset['supersedes'], [f"fallback-{site}-{source['number']}"])
+                self.assertEqual(asset['supersedes'], [(fallback_ids or {}).get(source['number'], f"fallback-{site}-{source['number']}")])
                 self.assertEqual(source['sourceChildIds'], [])
                 facts = asset['sourceRecord']['buildingFacts']
                 self.assertEqual(facts['heightM'], float(source['register']['height']))
