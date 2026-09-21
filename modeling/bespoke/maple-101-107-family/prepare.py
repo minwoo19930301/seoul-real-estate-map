@@ -1,0 +1,9 @@
+from pathlib import Path
+import json,math,hashlib
+O=Path(__file__).parent;ROOT=O.parents[3]
+assets=json.loads((ROOT/'public/models/reference-manifest.json').read_text())['assets'];rows=json.loads((O.parent/'maple-next-research/register-rows.json').read_text());dossier=json.loads((O.parent/'maple-remaining-family-research/family-dossier.json').read_text())
+for family in dossier['towers'][:7]:
+ n=family['dong'];a=next(x for x in assets if x['id']==f'maple-xi-{n}');r=next(x for x in rows if str(x['id'])==family['registerId']);assert int(r['floors'])==family['floors'] and float(r['height'])==family['heightM'];sr=a['sourceRecord'];p=sr['recipe']['groundFootprintPixelTrace'];m=sr['georeference']['pixelToLonLatAffine'];ll=[[x*m[0][0]+y*m[1][0]+m[2][0],x*m[0][1]+y*m[1][1]+m[2][1]]for x,y in p];co=a['coordinate'];sx=111319.49079327358*math.cos(math.radians(co['lat']));ring=[[(x-co['lon'])*sx,(y-co['lat'])*111319.49079327358]for x,y in ll]
+ d=dict(family,id=f'bespoke-maple-xi-{n}',number=n,originalId=a['id'],coordinate=co,groundFootprint={'type':'Polygon','coordinates':[ll+[ll[0]]]},ringEN=ring,planPixelTrace=p,register=r,rows=family['floors']-1,baseM=4.8,bodyRoofM=family['heightM']-4.3,modelingBasis='representative-photo-inference',inferredFromAssetIds=[f'bespoke-maple-xi-{v}'if v!=213 else'bespoke-maple-xi-213-corrected'for v in family['representatives']],sources=sr['sources'][:5])
+ d['inferenceScope']='Family facade grammar only: recessed dark glazing, unequal pale and metal window banks, pale service returns, stone base, open fin roof screens, paired unequal plant rooms and modest supported PV. Bay dimensions and roof locations adapted to this original numbered plan. No tower-specific photograph association or face-by-face evidence.'
+ (O/f'input-{n}.json').write_text(json.dumps(d,ensure_ascii=False,indent=2));(O/f'source-anchor-{n}.json').write_text(json.dumps(a,ensure_ascii=False,indent=2))
