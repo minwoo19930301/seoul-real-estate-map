@@ -36,6 +36,9 @@ class HeightRegions(unittest.TestCase):
     def test_seoulforest7_preserves_registered_envelopes_and_full_concave_roof_caps(self):
         self.assert_registered_envelopes('seoulforest-riverview-xi', range(101, 108), 1034)
 
+    def test_ricenz63_preserves_registered_envelopes_and_excludes_boundary_conflicts(self):
+        self.assert_registered_envelopes('jamsil-ricenz', [n for n in range(201, 266) if n not in [263, 265]], 5456)
+
     def assert_registered_envelopes(self, site, numbers, households, fallback_ids=None):
         root = path.parents[2]
         assets = {a['id']: a for a in json.loads((root / 'public/models/bespoke-manifest.json').read_text())['assets']}

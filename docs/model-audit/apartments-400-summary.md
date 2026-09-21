@@ -36,6 +36,7 @@ K-apt 서울 자료의 123코드에는 복수 주소 등에 따른 추가 147행
 | A13704104 | 반포자이 | partial | 43 / 44 | 43 |
 | A13776301 | 반포리체 | complete_residential_buildings | 9 / 9 | 9 |
 | A13776509 | 래미안퍼스티지 | complete_residential_buildings | 28 / 28 | 28 |
+| A13822003 | 잠실리센츠 | partial | 63 / 65 | 63 |
 | A13822301 | 갤러리아팰리스 | complete_residential_buildings | 3 / 3 | 0 |
 | A15088614 | 롯데캐슬엠파이어 | complete_residential_buildings | 2 / 2 | 0 |
 | A15088915 | 롯데캐슬아이비 | complete_residential_buildings | 2 / 2 | 0 |
