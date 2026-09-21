@@ -78,7 +78,6 @@ export class CityModels {
   private indexedLength = -1;
   private catalogRevision = 0;
   private entryOrder = new Map<Entry, number>();
-  private referenceUpgrades = new Set<string>();
   private replacementTargets = new Map<string, Set<string>>();
   private retainedRemainders = new Map<string, Set<string>>();
   private replacementPeers = new Map<string, Entry[]>();
@@ -215,9 +214,6 @@ export class CityModels {
     this.indexedEntries = this.entries; this.indexedLength = this.entries.length;
     this.catalogRevision++; this.nearbyCache = undefined;
     this.entryOrder.clear(); this.trackedEntries.clear();
-    const landmarks = new Set(this.entries.filter(entry => isLandmark(entry.asset)).map(entry => entry.asset.id));
-    this.referenceUpgrades = new Set(this.entries.filter(entry => isLandmark(entry.asset)
-      && entry.asset.supersedes?.some(id => landmarks.has(id))).map(entry => entry.asset.id));
     const byId = new Map(this.entries.map(entry => [entry.asset.id, entry.asset]));
     this.replacementTargets.clear();
     this.retainedRemainders.clear();
@@ -302,7 +298,7 @@ export class CityModels {
     const scale = Math.cos(view.lat * Math.PI / 180);
     const distance = (entry: Entry) => ((entry.asset.coordinate.lon - view.lon) * scale) ** 2 + (entry.asset.coordinate.lat - view.lat) ** 2;
     const visible = this.entries.filter(entry => this.inView(entry.asset, view));
-    const rank = (entry: Entry) => ({ priority: Number(isLandmark(entry.asset)) + Number(this.referenceUpgrades.has(entry.asset.id)), distance: distance(entry) });
+    const rank = (entry: Entry) => ({ priority: Number(isLandmark(entry.asset)), distance: distance(entry) });
     const compareRank = (a: ReturnType<typeof rank>, b: ReturnType<typeof rank>) => b.priority - a.priority || a.distance - b.distance;
     const inherited = new Map<string, ReturnType<typeof rank>>();
     // Keep a split compound's unreplaced remainder alongside its authored tower,

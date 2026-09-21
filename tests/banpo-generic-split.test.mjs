@@ -172,8 +172,9 @@ test('Prestige125 changes identity metadata only and all prior corrections remai
  assert.deepEqual(preserved(part),preserved(source));
  assert.equal(part.model,'apt-a13780001.glb');assert.equal(part.sha256,'32e80cf8af229081e9202cce7440826203288ee94dc63169f8fd62297b502dbe');
  assert.equal(hash(read('public/models/'+part.model)),part.sha256);
- const added=new Set(['apt-a13776509','apt-a13776508','apt-a13780001']);
- const prior=corrections.corrections.filter(c=>!added.has(c.sourceId));
+ const previousIds=new Set(['apt-a14003002','apt-a15088614','apt-a15805111','apt-a10022556','apt-a10023043','apt-a13780006','apt-a10027205']);
+ const prior=corrections.corrections.filter(c=>previousIds.has(c.sourceId));
+ assert.equal(prior.length,previousIds.size);
  assert.equal(hash(JSON.stringify(prior)),'4d7ced8a5b0e37548e95b9a6bd21eea8da072d3ce4cb5b9e6189cc45cfe09731');
  for(const c of prior)for(const a of c.assets)assert.equal(hash(read('public/models/'+a.model)),a.sha256);
 });

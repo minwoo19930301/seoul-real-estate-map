@@ -1,0 +1,141 @@
+{
+  "number": 101,
+  "passed": true,
+  "glbSha256": "b90310c2fe4f015abd1c58405b926afb9bad8e3cdf2dfbd645ea1d6cc280fd00",
+  "heightM": 81.3,
+  "floors": 29,
+  "missingGradeAreaM2": 1.4545219128188668e-05,
+  "extraGradeDecorationAreaM2": 13.576000851058653,
+  "maximumProjectionBeyondSourceM": 0.4802085976318327,
+  "heightRegions": [
+    {
+      "id": "inferred-lower",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -16.399458841830604,
+              -7.19365742930222
+            ],
+            [
+              -15.136651941122315,
+              -4.555373428528071
+            ],
+            [
+              -18.050821711408403,
+              -3.1638734288773662
+            ],
+            [
+              -13.600089698311212,
+              6.120214571253655
+            ],
+            [
+              -5.113732609171968,
+              2.0559540518692834
+            ],
+            [
+              -10.828273950696836,
+              -9.864439020783543
+            ],
+            [
+              -16.399458841830604,
+              -7.19365742930222
+            ]
+          ]
+        ]
+      },
+      "height_m": 67.80191570881226
+    },
+    {
+      "id": "inferred-upper",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -3.047262803793971,
+              1.0662865707251967
+            ],
+            [
+              -0.3538634713352793,
+              6.676814571430327
+            ],
+            [
+              1.3151610334193,
+              5.875310570764611
+            ],
+            [
+              4.635548407751675,
+              12.788282570870706
+            ],
+            [
+              12.93651684421008,
+              8.80302657096621
+            ],
+            [
+              11.67370994350179,
+              6.164742570983037
+            ],
+            [
+              14.428924999706691,
+              4.840034571321894
+            ],
+            [
+              7.496733273762345,
+              -9.59816942892644
+            ],
+            [
+              8.812525078746054,
+              -10.232693429222763
+            ],
+            [
+              5.289028901763067,
+              -17.59094542899561
+            ],
+            [
+              -10.828273950696836,
+              -9.864439020783543
+            ],
+            [
+              -5.113732609171968,
+              2.0559540518692834
+            ],
+            [
+              -3.047262803793971,
+              1.0662865707251967
+            ]
+          ]
+        ]
+      },
+      "height_m": 81.3
+    }
+  ],
+  "checks": [
+    {
+      "id": "inferred-lower",
+      "heightM": 67.80191570881226,
+      "areaM2": 114.9289633509641,
+      "interiorAreaM2": 87.29325001209085,
+      "overHeightTriangles": 0,
+      "exampleTriangleIndices": [],
+      "uncoveredNearRoofAreaM2": 75.71970418298699,
+      "roofCoverageRatio": 0.13258236836755222,
+      "deckHeightM": 64.79080459770115,
+      "deckCoverageRatio": 1.0
+    },
+    {
+      "id": "inferred-upper",
+      "heightM": 81.3,
+      "areaM2": 401.8438407184276,
+      "interiorAreaM2": 345.4277772757684,
+      "overHeightTriangles": 0,
+      "exampleTriangleIndices": [],
+      "uncoveredNearRoofAreaM2": 308.8129901061998,
+      "roofCoverageRatio": 0.10599838686492669,
+      "deckHeightM": 78.28888888888889,
+      "deckCoverageRatio": 1.0
+    }
+  ],
+  "limitation": "Both wing geometry and24/29-floor stepping are explicitly complex-photo inference, not sourced child heights. Roof deck and3m ornament envelope are checked separately."
+}

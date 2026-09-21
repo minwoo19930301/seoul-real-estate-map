@@ -64,6 +64,23 @@ test('reference load failure restores superseded generic visibility',async()=>{c
 test('reference replacement recovers after toggle and view changes',()=>{const h=cityHarness(),a={defaultProjectionData:{mainMatrix:new THREE.Matrix4().elements},shaderData:{variantName:'mercator'}};h.m.render(a);h.m.setVisible(false);h.m.setVisible(true);h.setCenter([126.8,37.7]);h.m.render(a);assert.deepEqual(h.m.getState().activeFootprintIds,[]);h.setCenter([127.1,37.5]);h.m.render(a);assert.deepEqual(h.m.getState().activeFootprintIds,['fp-ref']);h.m.destroy()});
 test('reference priority remains selected with 32 nearby generic catalog entries',()=>{const h=cityHarness();const g=h.m.entries[0];h.m.entries=[h.m.entries[1],...Array.from({length:32},(_,i)=>({...g,asset:{...g.asset,id:'g'+i,coordinate:{lon:127.1,lat:37.5}}}))];h.m.render({defaultProjectionData:{mainMatrix:new THREE.Matrix4().elements},shaderData:{variantName:'mercator'}});assert.ok(h.m.getState().models.find(x=>x.id==='ref').active);assert.equal(h.m.getState().activeFootprintIds.includes('fp-ref'),true);h.m.destroy()});
 
+test('nearby authored towers are not displaced by another complex with many historical upgrades', () => {
+  const h = cityHarness(), template = h.m.entries[1];
+  const entry = (id, coordinate, supersedes = []) => ({ ...template,
+    asset: asset(id, { coordinate, supersedes }), scene: new THREE.Scene(), active: false, draws: 0 });
+  const nearby = Array.from({ length: 13 }, (_, i) => entry(`near-${i}`, { lon: 127.1 + i * .00001, lat: 37.5 }));
+  const distant = Array.from({ length: 24 }, (_, i) => {
+    const coordinate = { lon: 127.101 + i * .00001, lat: 37.501 };
+    return [entry(`old-${i}`, coordinate), entry(`upgrade-${i}`, coordinate, [`old-${i}`])];
+  }).flat();
+  h.m.entries = [...distant, ...nearby];
+  const selected = h.m.nearbyEntries();
+  assert.equal(selected.length, 32, 'keep the existing primary model budget');
+  for (const tower of nearby) assert.ok(selected.includes(tower), `${tower.asset.id} must stay selected near the camera`);
+  assert.ok(selected.every(e => !e.asset.id.startsWith('old-')), 'older generations remain fallbacks, not extra primary slots');
+  h.m.destroy();
+});
+
 test('a partly overlapping compound GLB yields to the landmark without hiding its unrelated source solids', () => {
   const h = cityHarness(), [generic, reference] = h.m.entries;
   reference.asset.supersedes = [];

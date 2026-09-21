@@ -30,6 +30,7 @@ K-apt 서울 자료의 123코드에는 복수 주소 등에 따른 추가 147행
 | A13527017 | 타워팰리스1차 | complete_residential_buildings | 4 / 4 | 0 |
 | A13585402 | 타워팰리스2차 | complete_residential_buildings | 2 / 2 | 0 |
 | A13585403 | 타워팰리스G동 | complete_residential_buildings | 1 / 1 | 0 |
+| A13704104 | 반포자이 | partial | 43 / 44 | 43 |
 | A13776509 | 래미안퍼스티지 | complete_residential_buildings | 28 / 28 | 28 |
 | A13822301 | 갤러리아팰리스 | complete_residential_buildings | 3 / 3 | 0 |
 | A15088614 | 롯데캐슬엠파이어 | complete_residential_buildings | 2 / 2 | 0 |

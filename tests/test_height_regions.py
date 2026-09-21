@@ -24,6 +24,49 @@ def region(name, x0, x1, height):
 
 
 class HeightRegions(unittest.TestCase):
+    def test_banpo_xi_numbered_models_keep_source_footprints_roof_decks_and_registered_maxima(self):
+        root = path.parents[2]
+        assets = json.loads((root / 'public/models/bespoke-manifest.json').read_text())['assets']
+        sources = {s['number']: s for s in json.loads((root / 'docs/model-audit/banpo-xi-source-identity.json').read_text())['towers']}
+        family = [a for a in assets if a['id'].startswith('bespoke-banpo-xi-')]
+        self.assertGreaterEqual(len(family), 13)
+        self.assertEqual(sum(int(s['register']['households']) for s in sources.values()), 3410)
+        for asset in family:
+            with self.subTest(asset=asset['id']):
+                number = int(asset['id'].removeprefix('bespoke-banpo-xi-'))
+                source = sources[number]
+                self.assertNotIn('unresolvedHeightConflict', source)
+                self.assertEqual(asset['footprintIds'], [source['sourceId']])
+                facts = asset['sourceRecord']['buildingFacts']
+                self.assertEqual(facts['heightM'], float(source['register']['height']))
+                self.assertEqual(facts['floors'], int(source['register']['floors']))
+                self.assertEqual(facts['sourceHeightM'], source['osmHeightM'])
+                lon, lat = asset['coordinate']['lon'], asset['coordinate']['lat']
+                footprint = transform(lambda x, y: ((x-lon)*111320*math.cos(math.radians(lat)), (y-lat)*111320), shape(source['geometry']))
+                triangles = module.read_triangles(root / 'public/models' / asset['model'])
+                self.assertAlmostEqual(float(triangles[:, :, 1].min()), 0, places=5)
+                self.assertAlmostEqual(float(triangles[:, :, 1].max()), facts['heightM'], places=4)
+                horizontal = triangles[:, :, [0, 2]] * [1, -1]
+                projection = module.shapely.distance(module.shapely.points(horizontal.reshape(-1, 2)), footprint)
+                self.assertLess(float(projection.max()), .65 if number in [101, 102, 104] else .35)
+                ground = triangles[np.max(np.abs(triangles[:, :, 1]), axis=1) < 1e-5]
+                grade = unary_union([Polygon(t[:, [0, 2]] * [1, -1]) for t in ground])
+                self.assertLess(footprint.difference(grade).area, .001)
+                recipe = (root / asset['sourceRecord']['blendSource']).parent
+                evidence = json.loads((recipe / 'root-geometry-review.json').read_text())
+                regions = evidence.get('heightRegions') or json.loads((recipe / 'regions.json').read_text())
+                polygons = [shape(r['geometry']) for r in regions]
+                self.assertLess(footprint.symmetric_difference(unary_union(polygons)).area, 1e-8)
+                self.assertLess(polygons[0].intersection(polygons[1]).area, 1e-8)
+                checks = module.inspect_regions(triangles, regions, boundary_tolerance=.65 if number in [101, 102, 104] else .35)
+                for region, polygon, check, original in zip(regions, polygons, checks, evidence['checks']):
+                    self.assertEqual(check['overHeightTriangles'], 0)
+                    deck = region.get('body_height_m', original['deckHeightM'])
+                    roof = triangles[np.max(np.abs(triangles[:, :, 1] - deck), axis=1) < 1e-4]
+                    cap = unary_union([Polygon(t[:, [0, 2]] * [1, -1]) for t in roof])
+                    interior = polygon.buffer(-.03)
+                    self.assertLess(interior.difference(cap).area / interior.area, 1e-6)
+
     def test_prestige28_preserves_numbered_source_footprints_and_register_heights(self):
         root = path.parents[2]
         manifest = json.loads((root / 'public/models/bespoke-manifest.json').read_text())

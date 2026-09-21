@@ -1,0 +1,89 @@
+{
+  "date": "2026-09-22",
+  "baseline": "2c926f2c3086e127f6c616262c7dcedb6918a5ed",
+  "publication": "Local PR branch verification; GitHub push/CI tracked separately",
+  "banpoXiAuthoredResidentialTowers": 43,
+  "expectedResidentialTowers": 44,
+  "excludedHeightConflictTower": 103,
+  "bespokeManifestTotal": 208,
+  "officialEligibleManagementCodes": 1417,
+  "reviewedCompleteManagementCodes": 18,
+  "representativeInferredBuildingCount": 130,
+  "modeling": "Actual existing Blender MCP9878. Root reviewed172final renders and the complex photograph.101iscomplex-photo-inference;42siblingsuseexplicitrepresentative-photo-inference. No new Blender process.",
+  "sourceIdentity": "44unique full numbered source polygons inside named OSM165196918; exact register rows forBanpo-dong20-43/Shinbanpo-ro270;3410households. KB15891 detail identifies Banpo Xi/address and its sibling photoList directly contains the reviewed1920photo.",
+  "heightBasis": "Exact numbered official maximum heights/floors preserved; lower-wing regions/floorcounts inferred because allsourcechildpartsempty.10357.7m/27F unresolved;originalfallbackpreserved. Roof datum unconfirmed.",
+  "checks": {
+    "node": {
+      "passed": 13784,
+      "failed": 0
+    },
+    "python": {
+      "height_regions": 10,
+      "publisher": 11,
+      "queue": 18,
+      "passed": 39,
+      "failed": 0
+    },
+    "browser": {
+      "finalBanpo43Scenarios": 10,
+      "existingAcro": 7,
+      "existingOneBailey": 8,
+      "existingPrestige": 5,
+      "totalDistinctScenariosPassed": 30,
+      "failed": 0,
+      "earlierBanpo28ScenariosPassed": 7
+    },
+    "build": "passed",
+    "directReviewedViews": 172,
+    "roofDeckCoverageMinimum": 0.999999,
+    "sourceGroundMissingAreaToleranceM2": 0.001,
+    "heightToleranceM": 0.0001,
+    "maximumSurfaceProjectionM": 0.480208599
+  },
+  "runtimeFix": "Newer generations of other landmarks no longer receive a second global rank. All landmark candidates rank by distance after landmark priority; older replacement generations do not consume separate primary slots. Existing32primary/48residentbudgetsunchanged.",
+  "preservation": {
+    "baseline": "2c926f2c3086e127f6c616262c7dcedb6918a5ed",
+    "public/models/manifest.json": 13607,
+    "public/models/reference-manifest.json": 125,
+    "public/models/bespoke-manifest.json": 165,
+    "priorCorrections": 10,
+    "unchangedPriorGLBAndBlendFiles": 113586
+  },
+  "fallbacks": {
+    "compoundSourceTriangles": 22551,
+    "retainedOtherBuildings": 16,
+    "retainedOtherBuildingTriangles": 2956,
+    "splitResidentialTowers": 29,
+    "metadataOnly116OriginalGeometryPreserved": true,
+    "sharedBoundaryTriangleEmissionsPreserved": 2088,
+    "sourceHullApproximationTrianglesPreserved": 86,
+    "maximumInheritedHullProjectionM": 0.9007086827488612
+  },
+  "screenshots": [
+    "docs/model-audit/renders/banpo-xi43-normal.png",
+    "docs/model-audit/renders/banpo-xi43-east15-normal.png",
+    "docs/model-audit/renders/banpo-xi43-south15-normal.png"
+  ],
+  "logs": {
+    "node": {
+      "localPath": "/tmp/banpo43-node.log",
+      "sha256": "63d6f2e615c79d5abf50538c7cebab6591fbd011de9ed6070dd490f8789df0f0"
+    },
+    "python": {
+      "localPath": "/tmp/banpo43-python.log",
+      "sha256": "10cd5609aa232cf1e18b35e305834eeb7258f492bd08a5cec36233a47d6b5e14"
+    },
+    "browser": {
+      "localPath": "/tmp/banpo43-browser.log",
+      "sha256": "85f9e721a3f25ea9f1e59bfe063292f9df2897c9ba09f85da775a4e2216d627c"
+    },
+    "build": {
+      "localPath": "/tmp/banpo43-build.log",
+      "sha256": "a19a08aaaf409988f00564320da9f933c71f02ef865686cd136e7d9127b98736"
+    },
+    "existingBrowser": {
+      "localPath": "/tmp/banpo28-browser.log",
+      "sha256": "4c88eead78f17e6e8c1fd393efc5ca31a5b677a30438ea890de6ec6dca1e68fa"
+    }
+  }
+}
