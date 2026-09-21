@@ -2307,6 +2307,93 @@
         "representative-a13509009",
         "representative-a13293505"
       ]
+    },
+    "representative-batch16": {
+      "constructionMethod": "representative-photo-informed",
+      "completionCredit": false,
+      "review": {
+        "siteId": "representative-batch16",
+        "status": "coarse-visually-reviewed",
+        "comparisons": [
+          {
+            "sourceId": "A13778209-source-1",
+            "observation": "Photo shows pale gray towers, narrow dark vertical stacks, small individual windows, broad sparse side walls and open roof frames. Both elevated renders retain these distinctions after reducing window density. Night lighting prevents exact daytime color matching; repetitive facade and roof frames are representative, gate omitted."
+          },
+          {
+            "sourceId": "A11087602-source-1",
+            "observation": "Photo shows beige blank 102 end wall, gray balcony/window panels, repeated rectangular glazing and raised flat roof canopies. Both elevated renders retain beige ends, gray framed glazing and rooftop frames on bent retained slabs. Density reduced after first render; canopy placement, rails, enclosed balcony depth and unseen walls remain approximate."
+          }
+        ],
+        "views": [
+          {
+            "file": "docs/model-audit/renders/representative/representative-batch16/A13778209-overview.png",
+            "description": "Southeast elevated overview",
+            "sha256": "65cf65a079eedfa42e14975ac24437aaa6b8e5c669fcf0a0838c5fca6f1586d6"
+          },
+          {
+            "file": "docs/model-audit/renders/representative/representative-batch16/A13778209-reverse.png",
+            "description": "Northwest reverse elevated overview",
+            "sha256": "254d679ac90bd841e590adafdaf54aafb0a1ea525d365cf1515a3f0635f93b1e"
+          },
+          {
+            "file": "docs/model-audit/renders/representative/representative-batch16/A11087602-overview.png",
+            "description": "Southeast elevated overview",
+            "sha256": "f38a98b0e2e31487041c23538a74a3cd958df3fb6caa7a7ef579ae4dd12a08c5"
+          },
+          {
+            "file": "docs/model-audit/renders/representative/representative-batch16/A11087602-reverse.png",
+            "description": "Northwest reverse elevated overview",
+            "sha256": "e3af7631d525b75e88e6a742786014fc83d2706eae8484a7a2de1554178a405f"
+          }
+        ],
+        "limitations": [
+          "Coarse photo-informed repeated profile; individual source tower identities are not verified by count matching.",
+          "Retained source placement, orientation and heights; roof plant and unseen elevations are approximate.",
+          "No surveyed facade, exact window count, terrain, entrance gate or landscaping reconstruction.",
+          "주간 색감과 전체 동 배치는 사진 범위 밖",
+          "사진의 역광으로 세부 재료와 전체 배치 미확인"
+        ],
+        "reviewedInputs": {
+          "outputs/A13778209.glb": "04dd57aba1c0b9db6a67c4bd8dad602ec893acc967e834209768230ec212921d",
+          "outputs/representative-batch16.blend": "3d34c4093943c08a5cfbe27b750804220d1e7a7345f09562e179ac08a4f8c658",
+          "selected-input.json": "ca420e34fc8646e3d8687585258805b3f9b04c4ff809d90a431a4667195b1803",
+          "design-recipes.json": "2e8a59641f17be0aef26da186d868a1bc0708d77fc3b7f97800e1b2cdfec2e40",
+          "build.py": "10aa7ca7436a88090e1695d6888310bb79dd24c2580a51beeb309abd6fb66fd6",
+          "export-compact.py": "9819e048f509c3136db7eed89fee5f4e619ae0619ae793cd4e258cc2ece872c5",
+          "references/localimage/A13778209.jpg": "e46fd88383b2bbc52f3713110d9bfe920ead205c56a83a99196a54975afc53d5",
+          "outputs/A11087602.glb": "69f229b227bac3e76ce58ef26cada126e1d487236989336c36cc8559d2e0dd76",
+          "references/localimage/A11087602.jpg": "8a81f9611ea6aa69148a06cbc40c9303a496dd4efd7719ce83ba69670ceae95b"
+        },
+        "completionCredit": false
+      },
+      "sources": [
+        {
+          "id": "A13778209-source-1",
+          "url": "https://hogangnono.com/apt/1FRc5/0/5/review",
+          "inputFile": "references/localimage/A13778209.jpg",
+          "sha256": "e46fd88383b2bbc52f3713110d9bfe920ead205c56a83a99196a54975afc53d5"
+        },
+        {
+          "id": "A11087602-source-1",
+          "url": "https://kbland.kr/se/c/15562",
+          "inputFile": "references/localimage/A11087602.jpg",
+          "sha256": "8a81f9611ea6aa69148a06cbc40c9303a496dd4efd7719ce83ba69670ceae95b"
+        }
+      ],
+      "mcpEvidence": [
+        {
+          "path": "docs/model-audit/mcp/representative-batch16-mcp-build-evidence.json",
+          "sha256": "6ce1aa25aed4485e2c5c385407183655f54002747277bd1bff14b94e06a892b0"
+        },
+        {
+          "path": "docs/model-audit/mcp/representative-batch16-mcp-validation-evidence.json",
+          "sha256": "b67391174a3a84c1c12f40d9cfde6b9a708016b4de5550cacdbee703842a7e1b"
+        }
+      ],
+      "assets": [
+        "representative-a13778209",
+        "representative-a11087602"
+      ]
     }
   }
 }
