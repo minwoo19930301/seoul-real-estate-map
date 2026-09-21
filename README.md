@@ -1,5 +1,11 @@
 # Seoul Real Estate Map
 
+<!-- PROJECT-PRESENTATION:START -->
+<a href="https://seoul-elevation.vercel.app"><img src=".github/project-cover.svg" alt="Seoul Real Estate Map" width="960"></a>
+
+[![OPEN APP](https://img.shields.io/badge/OPEN%20APP-2C6049?style=for-the-badge)](https://seoul-elevation.vercel.app) [![QUICK START](https://img.shields.io/badge/QUICK%20START-374151?style=for-the-badge)](#이-컴퓨터에서-실행) [![SOURCE](https://img.shields.io/badge/SOURCE-444444?style=for-the-badge)](https://github.com/minwoo19930301/seoul-real-estate-map)
+<!-- PROJECT-PRESENTATION:END -->
+
 운영 사이트는 [Seoul Real Estate Map](https://seoul-elevation.vercel.app)입니다. `main`에 병합하면 검증 후 기존 Vercel 계정으로 자동 배포됩니다. 계정·환경변수·실패 확인 방법은 [자동 배포 문서](docs/DEPLOYMENT.md)를 참고하세요.
 
 단지·실거래·관리비·정비사업 자료와 지형·건물을 함께 탐색하는 서울 부동산 지도입니다. 구축 과정에서 정리한 [부동산 데이터 지식 노트](docs/knowledge/README.md)에는 식별자와 연결 기준, 지도 숫자 해석, 출처·검증·갱신 방법을 담았습니다.
