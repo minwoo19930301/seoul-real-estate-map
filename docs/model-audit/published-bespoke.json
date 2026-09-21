@@ -41410,6 +41410,869 @@
           "sha256": "4461288e457c5759680f5b6fe55f7f1750c778ab130f68bdc8bcb32bcf9221bc"
         }
       ]
+    },
+    "shinbanpo-xi-101-representative": {
+      "sources": [
+        {
+          "url": "https://t1.daumcdn.net/news/201807/05/mk/20180705173601332dodb.jpg",
+          "sha256": "ef17b3643765a6b6db27c47bb0579ec97ef59a194bed67dfcbf3235729b7bac2",
+          "scope": "complex",
+          "observations": "Root directly inspected the article exterior photograph. Numbered tower and camera orientation are not confirmed."
+        },
+        {
+          "url": "https://v.daum.net/v/20180705173607240",
+          "observations": "Article identifies Shinbanpo Xi7towers607households2018 and embeds the reviewed first exterior photo. The other two images are service diagrams and are excluded. Roadside3towersfeaturemetalpanels; numbered attribution unconfirmed."
+        },
+        {
+          "url": "https://api.openstreetmap.org/api/0.6/way/414371716/full",
+          "observations": "Named Shinbanpo Xi residential boundary, independently reconstructed. Not cadastral/site-plan evidence."
+        },
+        {
+          "dataset": "Exact numbered building-register rows and OSM source polygons",
+          "snapshot": "shinbanpo-xi-source-identity.json",
+          "sha256": "ef577045c70e9da6423cbc757138750260d2b4819c1123684d65ec50d8e98a05",
+          "observations": "Seven unique full numbered polygons inside named complex boundary, exact Jamwon-dong160/Jamwon-ro60 register rows,607households. No source childparts. Uniform-height assumption."
+        }
+      ],
+      "review": {
+        "siteId": "shinbanpo-xi-101-representative",
+        "status": "visually-reviewed",
+        "reviewer": "root independently viewed actual source photograph and every final front/opposite/side/roof render",
+        "inferenceApprovedAssets": [
+          "bespoke-shinbanpo-xi-101"
+        ],
+        "reviewedSourcePhotos": [
+          {
+            "url": "https://t1.daumcdn.net/news/201807/05/mk/20180705173601332dodb.jpg",
+            "sha256": "ef17b3643765a6b6db27c47bb0579ec97ef59a194bed67dfcbf3235729b7bac2",
+            "scope": "complex",
+            "observations": "Root directly inspected the article exterior photograph. Numbered tower and camera orientation are not confirmed."
+          }
+        ],
+        "comparisons": [
+          "Root compared the actual article exterior photo to all four final views per model. Broad white frame, gray-lavender metal panels, smaller teal window bays, darker lowerbase and dark rectangular roof accent are retained as complex-photo inference.",
+          "Root independently decoded actual GLB triangles and checked registeredmaximumheight/zero-base, full originalgradefootprint, fullroofdeckcoverage, whole-surfaceprojectionbelow0.5m and rooftopstructurecontainment. No childpartheightdata.",
+          "Root independently matched live source DB/register rows to seven unique named full polygons inside the reconstructed OSM boundary. Wrong nearby initial candidates and unrelated KB recommendation photographs are excluded.",
+          "101firstunpublishedversionwasrevisedafterrootcomparison: enlargedwhitepiers,morevisiblemetalspandrels,smallerwindowsandcontainedraisedroofdetail. Earlierunpublishedversionretainedlocallyonly."
+        ],
+        "limits": [
+          "No numbered tower photograph or camera orientation confirmed.",
+          "Photo describes three distinctive roadside towers but individual tower attribution is unconfirmed.",
+          "No child source parts; uniform maximum height across each own full footprint is an explicit assumption.",
+          "Window layout, colors, hidden elevations and roof details are unmeasured approximations.",
+          "Maximum whole-surface projection checked below0.5m; raised roof structure fully contained in source polygon.",
+          "OSM complex boundary is not cadastral or surveyed numbered site-plan evidence."
+        ],
+        "renders": [
+          "docs/model-audit/renders/shinbanpo-xi-101-representative/front.png",
+          "docs/model-audit/renders/shinbanpo-xi-101-representative/opposite.png",
+          "docs/model-audit/renders/shinbanpo-xi-101-representative/side.png",
+          "docs/model-audit/renders/shinbanpo-xi-101-representative/roof.png"
+        ],
+        "renderSha256": {
+          "docs/model-audit/renders/shinbanpo-xi-101-representative/front.png": "2f24ccec473b127c6cd84df9774e4928f4bee1956932a48afaac91babf7dab55",
+          "docs/model-audit/renders/shinbanpo-xi-101-representative/opposite.png": "335599569b0b8ed92889739cfb174ad4d9ee4a0d6c11efad70700ccf6fae2f5d",
+          "docs/model-audit/renders/shinbanpo-xi-101-representative/side.png": "3ad76e00650ea419041cee1cfd5c283001eb102975ba4bc70aef49bb0715d405",
+          "docs/model-audit/renders/shinbanpo-xi-101-representative/roof.png": "ecb5d89beeaa540114d3f72e22a87e2e2fab3986177c1b4d5a270661083170f1"
+        },
+        "reviewedInputs": {
+          "shinbanpo-xi-101.glb": "5560473e7db4ea7d9834fbf4a3ae07df952f638e3064dce85eb0ae2a17f63c38",
+          "shinbanpo-xi-101-authored.blend": "2208c51f01bf82b5ba68e210d30d2a3c07f2593dd4f441629e6852129ec598f9"
+        }
+      },
+      "assets": [
+        {
+          "id": "bespoke-shinbanpo-xi-101",
+          "sourceSha256": "5560473e7db4ea7d9834fbf4a3ae07df952f638e3064dce85eb0ae2a17f63c38",
+          "sha256": "2f43d6fa95988cdc284fc61c9c35d6aba4383ce81d2398db6913ce8660641d51",
+          "bytes": 3977780,
+          "dimensions": [
+            32.126450538635254,
+            82.25,
+            25.976067543029785
+          ],
+          "min": [
+            -14.02662181854248,
+            0,
+            -9.298209190368652
+          ],
+          "max": [
+            18.099828720092773,
+            82.25,
+            16.677858352661133
+          ],
+          "triangles": 67796,
+          "components": [
+            {
+              "name": "SBX101_editable_SBX101_lavender_grey_metallic_panels002",
+              "triangles": 5080
+            },
+            {
+              "name": "SBX101_editable_SBX101_grey_inset_service_walls002",
+              "triangles": 124
+            },
+            {
+              "name": "SBX101_editable_SBX101_dark_glazed_base002",
+              "triangles": 924
+            },
+            {
+              "name": "SBX101_editable_SBX101_thin_grey_window_mullions002",
+              "triangles": 51408
+            },
+            {
+              "name": "SBX101_editable_SBX101_pale_teal_glazing002",
+              "triangles": 6900
+            },
+            {
+              "name": "SBX101_editable_SBX101_white_vertical_frame002",
+              "triangles": 3312
+            },
+            {
+              "name": "SBX101_editable_SBX101_broad_charcoal_roof_caps002",
+              "triangles": 48
+            }
+          ]
+        }
+      ],
+      "mcpEvidence": [
+        {
+          "path": "docs/model-audit/mcp/shinbanpo-xi-101-representative/mcp-build.json",
+          "sha256": "fceadd1950b69d6d81f5ea079027bb8030a64df75dd5262d5a0061e9fb637bd2",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        },
+        {
+          "path": "docs/model-audit/mcp/shinbanpo-xi-101-representative/mcp-final-bindings-reload.json",
+          "sha256": "20e7701868b4fb62c6c2e8391d43ced195a4fb76ececb3cdefb68f90e4cc8b42",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        },
+        {
+          "path": "docs/model-audit/mcp/shinbanpo-xi-101-representative/mcp-standalone.json",
+          "sha256": "e4e5516b3c4fe28e6c59dd6d71b845e94ccb8e4c6a6c332c3fdc2ad9e3f2d533",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        }
+      ],
+      "recipeInputs": [
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-101-representative/shinbanpo-xi-source-identity.json",
+          "sha256": "ef577045c70e9da6423cbc757138750260d2b4819c1123684d65ec50d8e98a05"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-101-representative/apply-final-bindings.py",
+          "sha256": "4dd38bfca7939a35a2f5801ffb65aa9a58bac832071563bb51a2adfc5cce6f60"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-101-representative/build.py",
+          "sha256": "05d766d5c2a41fe330383d0183b8de18ea543791f9f7dde0715ede4e25fc3cec"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-101-representative/check-standalone.py",
+          "sha256": "9c28239721f241aa91bdb8a7588473dacb0f4f720a530b1b66a6520d14912f91"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-101-representative/finalize.py",
+          "sha256": "02f213fc03b62222e9aa612a1eddf4fa296d3cdd2a8221fd9e445618d4cee326"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-101-representative/prepare.py",
+          "sha256": "ac25e3ca1287f8d7cb89f3955945ff1afd8d4f3539e85d8ffad6290d45c321ce"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-101-representative/validate.py",
+          "sha256": "2106f5afcaf39ae2f2a5dd101f106ce130b21564b6307085ca1f5203e9b18b4e"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-101-representative/source-provenance.json",
+          "sha256": "2b8ba2dcf731a6fb1a3b5bbccf10c894d4b51362c527e77b71f51b38ace2e49d"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-101-representative/binding-map-frozen.json",
+          "sha256": "bf3c903eb8810b78fb75e11a8c1356d4bd400d879e01ce72a53e34a8b2bf7392"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-101-representative/source-data.json",
+          "sha256": "62589e7c6616be92a4ded2626322b346087d1bb6b59d2999653e072132b90446"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-101-representative/regions.json",
+          "sha256": "16c6c4cd8e5bc4767d6525986a22c752bb838742f4a5ecb279989adf933e2d36"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-101-representative/geometry-proof.json",
+          "sha256": "9668571b1a89f1b28fb676a8ba10e1aa2df36377b05ae82223311d951c08f676"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-101-representative/standalone-validation.json",
+          "sha256": "a4db4e8b0df7c48c8b1ad6757feb9a015029f2901bfe941e0994902ded9604a4"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-101-representative/root-geometry-review.json",
+          "sha256": "97b600680e509265fd19812c9fa3977ff9c16bc4e4bacd4922ffa689a0cc72b4"
+        }
+      ]
+    },
+    "shinbanpo-xi-102-107-family": {
+      "sources": [
+        {
+          "url": "https://t1.daumcdn.net/news/201807/05/mk/20180705173601332dodb.jpg",
+          "sha256": "ef17b3643765a6b6db27c47bb0579ec97ef59a194bed67dfcbf3235729b7bac2",
+          "scope": "complex",
+          "observations": "Root directly inspected the article exterior photograph. Numbered tower and camera orientation are not confirmed."
+        },
+        {
+          "url": "https://v.daum.net/v/20180705173607240",
+          "observations": "Article identifies Shinbanpo Xi7towers607households2018 and embeds the reviewed first exterior photo. The other two images are service diagrams and are excluded. Roadside3towersfeaturemetalpanels; numbered attribution unconfirmed."
+        },
+        {
+          "url": "https://api.openstreetmap.org/api/0.6/way/414371716/full",
+          "observations": "Named Shinbanpo Xi residential boundary, independently reconstructed. Not cadastral/site-plan evidence."
+        },
+        {
+          "dataset": "Exact numbered building-register rows and OSM source polygons",
+          "snapshot": "shinbanpo-xi-source-identity.json",
+          "sha256": "ef577045c70e9da6423cbc757138750260d2b4819c1123684d65ec50d8e98a05",
+          "observations": "Seven unique full numbered polygons inside named complex boundary, exact Jamwon-dong160/Jamwon-ro60 register rows,607households. No source childparts. Uniform-height assumption."
+        }
+      ],
+      "review": {
+        "siteId": "shinbanpo-xi-102-107-family",
+        "status": "visually-reviewed",
+        "reviewer": "root independently viewed actual source photograph and every final front/opposite/side/roof render",
+        "inferenceApprovedAssets": [
+          "bespoke-shinbanpo-xi-102",
+          "bespoke-shinbanpo-xi-103",
+          "bespoke-shinbanpo-xi-104",
+          "bespoke-shinbanpo-xi-105",
+          "bespoke-shinbanpo-xi-106",
+          "bespoke-shinbanpo-xi-107"
+        ],
+        "reviewedSourcePhotos": [
+          {
+            "url": "https://t1.daumcdn.net/news/201807/05/mk/20180705173601332dodb.jpg",
+            "sha256": "ef17b3643765a6b6db27c47bb0579ec97ef59a194bed67dfcbf3235729b7bac2",
+            "scope": "complex",
+            "observations": "Root directly inspected the article exterior photograph. Numbered tower and camera orientation are not confirmed."
+          }
+        ],
+        "comparisons": [
+          "Root compared the actual article exterior photo to all four final views per model. Broad white frame, gray-lavender metal panels, smaller teal window bays, darker lowerbase and dark rectangular roof accent are retained as complex-photo inference.",
+          "Root independently decoded actual GLB triangles and checked registeredmaximumheight/zero-base, full originalgradefootprint, fullroofdeckcoverage, whole-surfaceprojectionbelow0.5m and rooftopstructurecontainment. No childpartheightdata.",
+          "Root independently matched live source DB/register rows to seven unique named full polygons inside the reconstructed OSM boundary. Wrong nearby initial candidates and unrelated KB recommendation photographs are excluded.",
+          "Six siblings use the reviewed101facade, preserving each own numbered polygon, maximumheight andfloorcount. Individual photos or surveyed orientation are not claimed."
+        ],
+        "limits": [
+          "No numbered tower photograph or camera orientation confirmed.",
+          "Photo describes three distinctive roadside towers but individual tower attribution is unconfirmed.",
+          "No child source parts; uniform maximum height across each own full footprint is an explicit assumption.",
+          "Window layout, colors, hidden elevations and roof details are unmeasured approximations.",
+          "Maximum whole-surface projection checked below0.5m; raised roof structure fully contained in source polygon.",
+          "OSM complex boundary is not cadastral or surveyed numbered site-plan evidence."
+        ],
+        "renders": [
+          "docs/model-audit/renders/shinbanpo-xi-102-107-family/102/front.png",
+          "docs/model-audit/renders/shinbanpo-xi-102-107-family/102/opposite.png",
+          "docs/model-audit/renders/shinbanpo-xi-102-107-family/102/side.png",
+          "docs/model-audit/renders/shinbanpo-xi-102-107-family/102/roof.png",
+          "docs/model-audit/renders/shinbanpo-xi-102-107-family/103/front.png",
+          "docs/model-audit/renders/shinbanpo-xi-102-107-family/103/opposite.png",
+          "docs/model-audit/renders/shinbanpo-xi-102-107-family/103/side.png",
+          "docs/model-audit/renders/shinbanpo-xi-102-107-family/103/roof.png",
+          "docs/model-audit/renders/shinbanpo-xi-102-107-family/104/front.png",
+          "docs/model-audit/renders/shinbanpo-xi-102-107-family/104/opposite.png",
+          "docs/model-audit/renders/shinbanpo-xi-102-107-family/104/side.png",
+          "docs/model-audit/renders/shinbanpo-xi-102-107-family/104/roof.png",
+          "docs/model-audit/renders/shinbanpo-xi-102-107-family/105/front.png",
+          "docs/model-audit/renders/shinbanpo-xi-102-107-family/105/opposite.png",
+          "docs/model-audit/renders/shinbanpo-xi-102-107-family/105/side.png",
+          "docs/model-audit/renders/shinbanpo-xi-102-107-family/105/roof.png",
+          "docs/model-audit/renders/shinbanpo-xi-102-107-family/106/front.png",
+          "docs/model-audit/renders/shinbanpo-xi-102-107-family/106/opposite.png",
+          "docs/model-audit/renders/shinbanpo-xi-102-107-family/106/side.png",
+          "docs/model-audit/renders/shinbanpo-xi-102-107-family/106/roof.png",
+          "docs/model-audit/renders/shinbanpo-xi-102-107-family/107/front.png",
+          "docs/model-audit/renders/shinbanpo-xi-102-107-family/107/opposite.png",
+          "docs/model-audit/renders/shinbanpo-xi-102-107-family/107/side.png",
+          "docs/model-audit/renders/shinbanpo-xi-102-107-family/107/roof.png"
+        ],
+        "renderSha256": {
+          "docs/model-audit/renders/shinbanpo-xi-102-107-family/102/front.png": "c4f2cc18f29dd546014e2b908c41a194e761650b388ff59925251b7745220f8d",
+          "docs/model-audit/renders/shinbanpo-xi-102-107-family/102/opposite.png": "515f4941f4b3ed4188ef7aad3b8d90712906da8e842d3aa047530a8bb4b0e752",
+          "docs/model-audit/renders/shinbanpo-xi-102-107-family/102/side.png": "dc5cc5cfb6376d6a62af74d36b2b609a5fb6e6658a33a0746fbc4f7460cbcf91",
+          "docs/model-audit/renders/shinbanpo-xi-102-107-family/102/roof.png": "ee2559fe5e7852b355c860c86b635adc4e5ddd4ed147e2580852ec9fbc20ca41",
+          "docs/model-audit/renders/shinbanpo-xi-102-107-family/103/front.png": "66335e3e3a2602d68e9d85da5bddf88d4600507d537bfb603c76efba4c0a434d",
+          "docs/model-audit/renders/shinbanpo-xi-102-107-family/103/opposite.png": "b43eccc415ec82f811c6b3244a2152a45fa5b3fa5ed1bbd89453f3a135ff821a",
+          "docs/model-audit/renders/shinbanpo-xi-102-107-family/103/side.png": "65661476fad1a61b7506a604a5f66b2ce07d00cef46bf821660c041815469815",
+          "docs/model-audit/renders/shinbanpo-xi-102-107-family/103/roof.png": "3432509ecd1804c74d3c6167511ed608aadfdea5e8b09a9ff04323ca7134d0b5",
+          "docs/model-audit/renders/shinbanpo-xi-102-107-family/104/front.png": "dad5ce4c9c679ce56c2258557ad6b82d93487b7e3ddb932f1b0cc8c8c43e8290",
+          "docs/model-audit/renders/shinbanpo-xi-102-107-family/104/opposite.png": "9b0a2cd8c5643fb728dd6c4fd1f23626371920ac59b227622141d45e7bff89fa",
+          "docs/model-audit/renders/shinbanpo-xi-102-107-family/104/side.png": "507bd5165c6522475714b353a3a68495ef8405c4b90f963ec1ca9955e7bd7e5c",
+          "docs/model-audit/renders/shinbanpo-xi-102-107-family/104/roof.png": "e923753659cb6ad819fba22dd4ab5c8cb4fcce9cac4ddcc14c3212093d2b5edb",
+          "docs/model-audit/renders/shinbanpo-xi-102-107-family/105/front.png": "8537a66f8dba8e42f78e6203326bc13d5bf8e9596fe7ded498bd9d3949bc4814",
+          "docs/model-audit/renders/shinbanpo-xi-102-107-family/105/opposite.png": "0c376f73ccfad4b565760dd7c020b66045698b340945463d37c95901849217e5",
+          "docs/model-audit/renders/shinbanpo-xi-102-107-family/105/side.png": "3b21f7596f1de0cc3a9db873558c283853a87c639dd1a73b9cf18028522c62d2",
+          "docs/model-audit/renders/shinbanpo-xi-102-107-family/105/roof.png": "a8f35453aa325db26563a065f4a2e7e568f6988bd08f3d91fe0b344d4d3be9fe",
+          "docs/model-audit/renders/shinbanpo-xi-102-107-family/106/front.png": "988f026332985d5b89fddd928742c55554c52f80667e0f798747c08c619d0c39",
+          "docs/model-audit/renders/shinbanpo-xi-102-107-family/106/opposite.png": "2a78a6eed270c806af85ecbe03d71abb8bd357a8b53ec900f4da7bb0a36202b0",
+          "docs/model-audit/renders/shinbanpo-xi-102-107-family/106/side.png": "2c2fcd516aa02355305d758881ec1a27d3ae3ae10ce847be9573b0bf741213b4",
+          "docs/model-audit/renders/shinbanpo-xi-102-107-family/106/roof.png": "4d8d8b34516a3a366972b735b5fe7694b5331b78dbb99eef397cfc9087746134",
+          "docs/model-audit/renders/shinbanpo-xi-102-107-family/107/front.png": "f04f178aaac912905826f05bb4c3437f278cc9054079de931e92d18157f120d0",
+          "docs/model-audit/renders/shinbanpo-xi-102-107-family/107/opposite.png": "88374fc7cede01aa5460242b678984b639fdc255970dfefcf582f33ba1ac1eac",
+          "docs/model-audit/renders/shinbanpo-xi-102-107-family/107/side.png": "437e8498e38aee5a2501a4a2bea239517d287e9932b2e61cbfedd18256fbb5c8",
+          "docs/model-audit/renders/shinbanpo-xi-102-107-family/107/roof.png": "56b315fb8e36582dd1b315cdc26ab575c5f5ffd56c6579f785c8de4ece0ef8ef"
+        },
+        "reviewedInputs": {
+          "102/shinbanpo-xi-102.glb": "440d86bd35ad2cfeaf39293ca0ce47515237bef2939bb59e61bccfe483f9d996",
+          "102/shinbanpo-xi-102-authored.blend": "376b19b6f9fa337d2f64d3f1fb7ff8dd29bffc85092b838530dbb443d07a4865",
+          "103/shinbanpo-xi-103.glb": "036f355e49f9a7091932d873457d17c78e3a436ab8ef890a9b40ead9ca7408a6",
+          "103/shinbanpo-xi-103-authored.blend": "91d3d5c2cff9c4847f3722dfde929a3d975ea1eee127ab0d1e280cca4bc5ff4d",
+          "104/shinbanpo-xi-104.glb": "f3b4337e9a8f50561554c47e0949c9b72d14eb51b0628ec92800c7b80f9a29af",
+          "104/shinbanpo-xi-104-authored.blend": "9c4ddf8b7fe24d6f2df1eea86a4a55635fd677183c52c73960be832202464e9b",
+          "105/shinbanpo-xi-105.glb": "53871db8a60611d7d232a88c265283eb23f674655f09a8efcedad137e0ee7780",
+          "105/shinbanpo-xi-105-authored.blend": "e6b31acc1f2f0e539221d8388173a55616024eab22fc571e9f0b97e31f17af07",
+          "106/shinbanpo-xi-106.glb": "be76b80f6a90fce70fc17697457daab08062f060616ed4fdd79c534176d2e7d3",
+          "106/shinbanpo-xi-106-authored.blend": "ee60a9fc641bc918409c43e9a2b6e4277624dc07e4b6a27e5ebd5bfdaf3e4a4a",
+          "107/shinbanpo-xi-107.glb": "192a2d3ac4539602c1fdb5e05550c21696df1dbf96bee87dc3ff1a1da7850006",
+          "107/shinbanpo-xi-107-authored.blend": "dda2534fe9c8495bbd42f16dbe214acf28a4602b2df4b4ea552ab57651680be1"
+        }
+      },
+      "assets": [
+        {
+          "id": "bespoke-shinbanpo-xi-102",
+          "sourceSha256": "440d86bd35ad2cfeaf39293ca0ce47515237bef2939bb59e61bccfe483f9d996",
+          "sha256": "c7273a96f70c918d94aadf96660a09d31f7efd84419e03ee8a71a704c5fa5c0b",
+          "bytes": 3977736,
+          "dimensions": [
+            32.07663059234619,
+            82.25,
+            25.82202911376953
+          ],
+          "min": [
+            -13.99518871307373,
+            0,
+            -9.142793655395508
+          ],
+          "max": [
+            18.08144187927246,
+            82.25,
+            16.679235458374023
+          ],
+          "triangles": 67796,
+          "components": [
+            {
+              "name": "SBX102_editable_SBX102_lavender_grey_metallic_panels",
+              "triangles": 5080
+            },
+            {
+              "name": "SBX102_editable_SBX102_grey_inset_service_walls",
+              "triangles": 124
+            },
+            {
+              "name": "SBX102_editable_SBX102_dark_glazed_base",
+              "triangles": 924
+            },
+            {
+              "name": "SBX102_editable_SBX102_thin_grey_window_mullions",
+              "triangles": 51408
+            },
+            {
+              "name": "SBX102_editable_SBX102_pale_teal_glazing",
+              "triangles": 6900
+            },
+            {
+              "name": "SBX102_editable_SBX102_white_vertical_frame",
+              "triangles": 3312
+            },
+            {
+              "name": "SBX102_editable_SBX102_broad_charcoal_roof_caps",
+              "triangles": 48
+            }
+          ]
+        },
+        {
+          "id": "bespoke-shinbanpo-xi-103",
+          "sourceSha256": "036f355e49f9a7091932d873457d17c78e3a436ab8ef890a9b40ead9ca7408a6",
+          "sha256": "3695701c9bfc3598bdc4640e8061fe308d081276ac7d942ea10665479859f0d8",
+          "bytes": 4697024,
+          "dimensions": [
+            38.591819763183594,
+            79.19999694824219,
+            31.773127555847168
+          ],
+          "min": [
+            -19.016742706298828,
+            0,
+            -16.195907592773438
+          ],
+          "max": [
+            19.575077056884766,
+            79.19999694824219,
+            15.57721996307373
+          ],
+          "triangles": 80060,
+          "components": [
+            {
+              "name": "SBX103_editable_SBX103_lavender_grey_metallic_panels",
+              "triangles": 5872
+            },
+            {
+              "name": "SBX103_editable_SBX103_grey_inset_service_walls",
+              "triangles": 124
+            },
+            {
+              "name": "SBX103_editable_SBX103_dark_glazed_base",
+              "triangles": 1104
+            },
+            {
+              "name": "SBX103_editable_SBX103_thin_grey_window_mullions",
+              "triangles": 60912
+            },
+            {
+              "name": "SBX103_editable_SBX103_pale_teal_glazing",
+              "triangles": 8064
+            },
+            {
+              "name": "SBX103_editable_SBX103_white_vertical_frame",
+              "triangles": 3936
+            },
+            {
+              "name": "SBX103_editable_SBX103_broad_charcoal_roof_caps",
+              "triangles": 48
+            }
+          ]
+        },
+        {
+          "id": "bespoke-shinbanpo-xi-104",
+          "sourceSha256": "f3b4337e9a8f50561554c47e0949c9b72d14eb51b0628ec92800c7b80f9a29af",
+          "sha256": "ba932cb30fed79bd900b154552a33b05d70d77e42097d5ce17c2fec96117be3b",
+          "bytes": 3977708,
+          "dimensions": [
+            25.4368314743042,
+            82,
+            32.07631969451904
+          ],
+          "min": [
+            -16.33782386779785,
+            0,
+            -14.17491626739502
+          ],
+          "max": [
+            9.099007606506348,
+            82,
+            17.901403427124023
+          ],
+          "triangles": 67796,
+          "components": [
+            {
+              "name": "SBX104_editable_SBX104_lavender_grey_metallic_panels",
+              "triangles": 5080
+            },
+            {
+              "name": "SBX104_editable_SBX104_grey_inset_service_walls",
+              "triangles": 124
+            },
+            {
+              "name": "SBX104_editable_SBX104_dark_glazed_base",
+              "triangles": 924
+            },
+            {
+              "name": "SBX104_editable_SBX104_thin_grey_window_mullions",
+              "triangles": 51408
+            },
+            {
+              "name": "SBX104_editable_SBX104_pale_teal_glazing",
+              "triangles": 6900
+            },
+            {
+              "name": "SBX104_editable_SBX104_white_vertical_frame",
+              "triangles": 3312
+            },
+            {
+              "name": "SBX104_editable_SBX104_broad_charcoal_roof_caps",
+              "triangles": 48
+            }
+          ]
+        },
+        {
+          "id": "bespoke-shinbanpo-xi-105",
+          "sourceSha256": "53871db8a60611d7d232a88c265283eb23f674655f09a8efcedad137e0ee7780",
+          "sha256": "a3c5df9cf1c9f8994b466d3b87a81726df96060b123831e378c482caafb862ba",
+          "bytes": 5884676,
+          "dimensions": [
+            38.86115264892578,
+            73.5999984741211,
+            44.88541221618652
+          ],
+          "min": [
+            -18.313026428222656,
+            0,
+            -23.630565643310547
+          ],
+          "max": [
+            20.548126220703125,
+            73.5999984741211,
+            21.254846572875977
+          ],
+          "triangles": 100348,
+          "components": [
+            {
+              "name": "SBX105_editable_SBX105_lavender_grey_metallic_panels",
+              "triangles": 7856
+            },
+            {
+              "name": "SBX105_editable_SBX105_grey_inset_service_walls",
+              "triangles": 188
+            },
+            {
+              "name": "SBX105_editable_SBX105_dark_glazed_base",
+              "triangles": 1512
+            },
+            {
+              "name": "SBX105_editable_SBX105_thin_grey_window_mullions",
+              "triangles": 76200
+            },
+            {
+              "name": "SBX105_editable_SBX105_pale_teal_glazing",
+              "triangles": 10032
+            },
+            {
+              "name": "SBX105_editable_SBX105_white_vertical_frame",
+              "triangles": 4512
+            },
+            {
+              "name": "SBX105_editable_SBX105_broad_charcoal_roof_caps",
+              "triangles": 48
+            }
+          ]
+        },
+        {
+          "id": "bespoke-shinbanpo-xi-106",
+          "sourceSha256": "be76b80f6a90fce70fc17697457daab08062f060616ed4fdd79c534176d2e7d3",
+          "sha256": "3e3a26ad6b79ae68ba910abd21c2f553cdd850db850b8bde5a221d396b13226a",
+          "bytes": 7697180,
+          "dimensions": [
+            54.02485656738281,
+            76.4000015258789,
+            42.98295783996582
+          ],
+          "min": [
+            -24.939733505249023,
+            0,
+            -16.252113342285156
+          ],
+          "max": [
+            29.08512306213379,
+            76.4000015258789,
+            26.730844497680664
+          ],
+          "triangles": 131312,
+          "components": [
+            {
+              "name": "SBX106_editable_SBX106_lavender_grey_metallic_panels",
+              "triangles": 10060
+            },
+            {
+              "name": "SBX106_editable_SBX106_grey_inset_service_walls",
+              "triangles": 268
+            },
+            {
+              "name": "SBX106_editable_SBX106_dark_glazed_base",
+              "triangles": 1932
+            },
+            {
+              "name": "SBX106_editable_SBX106_thin_grey_window_mullions",
+              "triangles": 99528
+            },
+            {
+              "name": "SBX106_editable_SBX106_pale_teal_glazing",
+              "triangles": 13248
+            },
+            {
+              "name": "SBX106_editable_SBX106_white_vertical_frame",
+              "triangles": 6228
+            },
+            {
+              "name": "SBX106_editable_SBX106_broad_charcoal_roof_caps",
+              "triangles": 48
+            }
+          ]
+        },
+        {
+          "id": "bespoke-shinbanpo-xi-107",
+          "sourceSha256": "192a2d3ac4539602c1fdb5e05550c21696df1dbf96bee87dc3ff1a1da7850006",
+          "sha256": "ee96524aeb6ebf292665c16ad33978503b98415e66ff502f3da5bcd0d9f933ba",
+          "bytes": 6958536,
+          "dimensions": [
+            47.230661392211914,
+            73.5999984741211,
+            38.72883892059326
+          ],
+          "min": [
+            -21.117677688598633,
+            0,
+            -13.893174171447754
+          ],
+          "max": [
+            26.11298370361328,
+            73.5999984741211,
+            24.835664749145508
+          ],
+          "triangles": 118696,
+          "components": [
+            {
+              "name": "SBX107_editable_SBX107_lavender_grey_metallic_panels",
+              "triangles": 8768
+            },
+            {
+              "name": "SBX107_editable_SBX107_grey_inset_service_walls",
+              "triangles": 236
+            },
+            {
+              "name": "SBX107_editable_SBX107_dark_glazed_base",
+              "triangles": 1800
+            },
+            {
+              "name": "SBX107_editable_SBX107_thin_grey_window_mullions",
+              "triangles": 90000
+            },
+            {
+              "name": "SBX107_editable_SBX107_pale_teal_glazing",
+              "triangles": 11880
+            },
+            {
+              "name": "SBX107_editable_SBX107_white_vertical_frame",
+              "triangles": 5964
+            },
+            {
+              "name": "SBX107_editable_SBX107_broad_charcoal_roof_caps",
+              "triangles": 48
+            }
+          ]
+        }
+      ],
+      "mcpEvidence": [
+        {
+          "path": "docs/model-audit/mcp/shinbanpo-xi-102-107-family/mcp-batch-1.json",
+          "sha256": "d81c045758ffb0e82dfd2c78a37c5cc635fa129ec4cb0c86bf1c8f3a63dd3afe",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        },
+        {
+          "path": "docs/model-audit/mcp/shinbanpo-xi-102-107-family/mcp-batch-2.json",
+          "sha256": "3d1e8b35703a2474d0aebf64e213fc0aa15eef1f2e7067cdce5050a286095e41",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        },
+        {
+          "path": "docs/model-audit/mcp/shinbanpo-xi-102-107-family/mcp-standalone.json",
+          "sha256": "72e31589054ed7cc3c7ab80d9b01b2d5b037b1a7d1325e871bcf0e522a2cd0d6",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        }
+      ],
+      "recipeInputs": [
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-102-107-family/shinbanpo-xi-source-identity.json",
+          "sha256": "ef577045c70e9da6423cbc757138750260d2b4819c1123684d65ec50d8e98a05"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-102-107-family/batch-1.py",
+          "sha256": "5e17655ab1ae941b70dc9e62c3f156c97e559bf790c9b64c009dff9ff31dcae3"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-102-107-family/batch-2.py",
+          "sha256": "b20a78760b98f99b08661c44b8dd719eadb3f4515e7b87bacf518c97b7367018"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-102-107-family/check-all.py",
+          "sha256": "f659aedbc4bfe5e2ac2fd49d86feee2e0442546222ac3592f24ef507d4347a9f"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-102-107-family/finalize.py",
+          "sha256": "a4123b664029a6a1d51efff01e327c21a8b40270d68f82b172729d0d0cdd32db"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-102-107-family/make-review.py",
+          "sha256": "9311f354833b94a2d8e26c42b1483470e1354c0e46171e2145d14c4b3a4d1c69"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-102-107-family/prepare.py",
+          "sha256": "4c4cb5457e7f734e70921052ba0532a909fd42b72efef3970685d6a3c14feea3"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-102-107-family/binding-map-frozen.json",
+          "sha256": "bf3c903eb8810b78fb75e11a8c1356d4bd400d879e01ce72a53e34a8b2bf7392"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-102-107-family/102/build.py",
+          "sha256": "fcdfb307d820f3f0983c2512230c98eaca176a5f3f2e0d8ab0d6eb53cfbae2d7"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-102-107-family/102/source-data.json",
+          "sha256": "a047e220bc86fdd3aae246c66f0fb329cad94ff1978a403a401bdaf912931c84"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-102-107-family/102/regions.json",
+          "sha256": "4327e711cd50f8edaafcd49b65769b402db646bd94a633e56601f48714658f41"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-102-107-family/102/validation.json",
+          "sha256": "6c1a3d18cc6fd28348b03ca399b9e7e4237d7ffa315a1258671c2eee04a282e6"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-102-107-family/102/geometry-proof.json",
+          "sha256": "a99762d2d1f1f5d47c27d2a2e0c7c47f596b23155ca372f5c86eea290f04d6e4"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-102-107-family/102/root-geometry-review.json",
+          "sha256": "4ef1b07a06cae67d0c659b7797a3a64ee368f1b88028cc45fccc73ce68610999"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-102-107-family/102/standalone-validation.json",
+          "sha256": "55cdeb51d4b73e31f99049e1d6b54dd4bf2d4fda2f42724956b13b414ce709f5"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-102-107-family/103/build.py",
+          "sha256": "c79ac43ccc50fbe1ff3785dde4f43aea3470e80c5103af2106dbd4945bd9af65"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-102-107-family/103/source-data.json",
+          "sha256": "6a1361b9fe7f39f9b0e53619162d1c0aa807640f4abc4ee2d2e93e6b9ef52d77"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-102-107-family/103/regions.json",
+          "sha256": "d45e52e4e9b968c298c03e08463887ba96495d900577727247419962574337ee"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-102-107-family/103/validation.json",
+          "sha256": "bd5c1f6f653560c8dcc87de5ef1d3ff07a8f792a7bc3939fa2c99662789563b4"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-102-107-family/103/geometry-proof.json",
+          "sha256": "d11874a6997979d97d105f7d7f2a81c1992be06ba8d85fe97181411bbba4e800"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-102-107-family/103/root-geometry-review.json",
+          "sha256": "b6c616cb17df846fbb5c204d36cf5718e4db30b6787090566e59575f95a883eb"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-102-107-family/103/standalone-validation.json",
+          "sha256": "23dd91db2faf2d1258d2f681a624885942da1f307a5d64cba03d7b154f4e0baf"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-102-107-family/104/build.py",
+          "sha256": "1b4926c2fe096d6e7a9b88c667bb970fcf3eddfda63a2c9d1a1fda26a4eccee9"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-102-107-family/104/source-data.json",
+          "sha256": "b62e16b6c3ce005e56a66db263fb2e44fa031b5b3bec10590d64e6de6dac7bee"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-102-107-family/104/regions.json",
+          "sha256": "a673dd6acb060007783e79eef94525b3efb2fdd70bce8d7381d1356d7f6756bd"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-102-107-family/104/validation.json",
+          "sha256": "f278446d2a1b76d2a12fe4df72020e4c9707db6d314713dff836e52a2259ad6b"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-102-107-family/104/geometry-proof.json",
+          "sha256": "e50ab200e293ac0870b562f3f04b810616f26d36d9fe72ac05a0aa43af0ed52e"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-102-107-family/104/root-geometry-review.json",
+          "sha256": "eb7bc4b747413959e1e3280ec6fd887b52112a77799b8b0415afdb2ef3e41221"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-102-107-family/104/standalone-validation.json",
+          "sha256": "14a0da0fe2ae18365c573c63b25ef633e0affd101453882a2a3f558bc1497e8c"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-102-107-family/105/build.py",
+          "sha256": "8cdb86390f3915ca07594ddfd2b202e38336aed66ad0bc685db1ba1bb848f4df"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-102-107-family/105/source-data.json",
+          "sha256": "0a7158e38ff6bb7584879faa0b0416a93dac001d52202c081bdb408b2263eb69"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-102-107-family/105/regions.json",
+          "sha256": "7629a63c59af963d53f2abda5b541c77e9aeeb1e23b8457f44ca81a2f7dc4914"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-102-107-family/105/validation.json",
+          "sha256": "aecfd09f2348de2744a710f40b0167b1b1e406a9e71080be80a0023eabdc969b"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-102-107-family/105/geometry-proof.json",
+          "sha256": "d52c9a99b7a66b10f4f5707b8c10ee52b399e815596c189ac200e5c469193795"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-102-107-family/105/root-geometry-review.json",
+          "sha256": "72293a2d0b71316fbd53bae520a2ca76730742862f762f240612d8f1a8c065df"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-102-107-family/105/standalone-validation.json",
+          "sha256": "966e0fe3f298991bdcab9cd47bbbdd54779cc6124dfcba6de7ce175419dc878f"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-102-107-family/106/build.py",
+          "sha256": "e600efe6a25cebd590dadb8388eb3bcd3d40b22267259597a482dcfdf14f8104"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-102-107-family/106/source-data.json",
+          "sha256": "82591548d4744745ffbf9529872c6dee58dbc78be3c5030f20f6a0cec68e94a9"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-102-107-family/106/regions.json",
+          "sha256": "4e2e76424f51e2ff5aa556cc15ab2478e02da8ed62260e672aa93bf51a396c55"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-102-107-family/106/validation.json",
+          "sha256": "9d0ab5ac7fccb31fccf5f528161b59e792df21453655e8a288aeed056b8997e6"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-102-107-family/106/geometry-proof.json",
+          "sha256": "f6299784528426c3566869ed3335d79c37217c5e8c476fa251a7348445954321"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-102-107-family/106/root-geometry-review.json",
+          "sha256": "73a852d73ac75cb18b2848bf184b481335482746ccaf64b0f64ac2c135652b78"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-102-107-family/106/standalone-validation.json",
+          "sha256": "05bb35a9ce48880e4264dbbe1a808f974cc084aa5cb3d9d21b4f34ceaaf6f7d6"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-102-107-family/107/build.py",
+          "sha256": "19e9bc38aed70f5bfc05156236df6b8f366a7b583926a361e0b6ca8a7a45c67b"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-102-107-family/107/source-data.json",
+          "sha256": "4c3098234f1b772a040e9f26aac06bf6a83bcf67ca4209730845323b6225acf9"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-102-107-family/107/regions.json",
+          "sha256": "303f31df7cc09a22b5f3a67f0d911788607965d4817804132c1393957580c5fa"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-102-107-family/107/validation.json",
+          "sha256": "d37ffe3b37af512755d7da57c738b8a028df7f15b5a6f9fe2bdbbc52e713e15e"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-102-107-family/107/geometry-proof.json",
+          "sha256": "6a826828a7de487d0ae5e4c776f17d1d3d43e835eaad69150da0d97b5da34e90"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-102-107-family/107/root-geometry-review.json",
+          "sha256": "c899dffe6cdb3b6f21ec1dce4c60d5d53eace9d52d9d691de0980a1dce0bd85f"
+        },
+        {
+          "path": "modeling/bespoke/shinbanpo-xi-102-107-family/107/standalone-validation.json",
+          "sha256": "e5cb1312dc6fc7517dfbf1d54b92d9f677baf1a6a2a057727bb290ffdbbe6bfc"
+        }
+      ]
     }
   }
 }

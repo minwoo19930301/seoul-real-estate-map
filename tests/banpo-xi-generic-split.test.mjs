@@ -151,7 +151,8 @@ test('all 10 historical correction records and GLBs remain exact, and catalog sh
  assert.deepEqual(prior.map(c=>c.sourceId),priorIds);
  assert.equal(hash(JSON.stringify(prior)),'5ba808b75e43fb417752c5126867fc9017acbfa80ed2bd492feb3d0929cb3a68');
  for(const c of prior)for(const a of c.assets)assert.equal(hash(read('public/models/'+a.model)),a.sha256);
- assert.deepEqual(corrections.corrections.map(c=>c.sourceId),[...priorIds,'apt-a13704104','apt-a10020044']);
+ const historicalIds=[...priorIds,'apt-a13704104','apt-a10020044'];
+ assert.deepEqual(corrections.corrections.filter(c=>historicalIds.includes(c.sourceId)).map(c=>c.sourceId),historicalIds);
  const audit=bindingDocument.catalogOwnershipAudit;
  assert.equal(audit.checkedTiles.length,3);assert.equal(audit.additionalOwners,0);
  assert.equal(hash(read('public/models/'+audit.catalogIndex)),audit.catalogIndexSha256);

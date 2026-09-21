@@ -24,6 +24,43 @@ def region(name, x0, x1, height):
 
 
 class HeightRegions(unittest.TestCase):
+    def test_shinbanpo7_preserves_registered_envelopes_and_full_concave_roof_caps(self):
+        root = path.parents[2]
+        assets = {a['id']: a for a in json.loads((root / 'public/models/bespoke-manifest.json').read_text())['assets']}
+        sources = json.loads((root / 'docs/model-audit/shinbanpo-xi-source-identity.json').read_text())['towers']
+        self.assertEqual([s['number'] for s in sources], list(range(101, 108)))
+        self.assertEqual(sum(int(s['register']['households']) for s in sources), 607)
+        for source in sources:
+            with self.subTest(number=source['number']):
+                asset = assets[f"bespoke-shinbanpo-xi-{source['number']}"]
+                self.assertEqual(asset['footprintIds'], [source['sourceId']])
+                self.assertEqual(asset['supersedes'], [f"fallback-shinbanpo-xi-{source['number']}"])
+                self.assertEqual(source['sourceChildIds'], [])
+                facts = asset['sourceRecord']['buildingFacts']
+                self.assertEqual(facts['heightM'], float(source['register']['height']))
+                self.assertEqual(facts['floors'], int(source['register']['floors']))
+                self.assertEqual(facts['sourceHeightM'], source['sourceHeightM'])
+                lon, lat = asset['coordinate']['lon'], asset['coordinate']['lat']
+                footprint = transform(lambda x, y: ((x-lon)*111320*math.cos(math.radians(lat)), (y-lat)*111320), shape(source['geometry']))
+                triangles = module.read_triangles(root / 'public/models' / asset['model'])
+                self.assertTrue(np.isfinite(triangles).all())
+                self.assertAlmostEqual(float(triangles[:, :, 1].min()), 0, places=5)
+                self.assertAlmostEqual(float(triangles[:, :, 1].max()), facts['heightM'], places=4)
+                points = module.shapely.points((triangles[:, :, [0, 2]] * [1, -1]).reshape(-1, 2))
+                self.assertLess(float(module.shapely.distance(points, footprint).max()), .5)
+                recipe = (root / asset['sourceRecord']['blendSource']).parent
+                regions = json.loads((recipe / 'regions.json').read_text())
+                self.assertEqual(len(regions), 1)
+                self.assertLess(footprint.symmetric_difference(shape(regions[0]['geometry'])).area, 1e-8)
+                deck_height = regions[0]['roof_deck_height_m']
+                for height in [0, deck_height]:
+                    cap = triangles[np.max(np.abs(triangles[:, :, 1] - height), axis=1) < 1e-4]
+                    union = unary_union([Polygon(t[:, [0, 2]] * [1, -1]) for t in cap])
+                    self.assertLess(footprint.buffer(-.03).difference(union).area, .001)
+                raised = triangles[np.min(triangles[:, :, 1], axis=1) > deck_height + .01]
+                raised_points = module.shapely.points((raised[:, :, [0, 2]] * [1, -1]).reshape(-1, 2))
+                self.assertLess(float(module.shapely.distance(raised_points, footprint).max()), 1e-5)
+
     def test_banpo_xi_numbered_models_keep_source_footprints_roof_decks_and_registered_maxima(self):
         root = path.parents[2]
         assets = json.loads((root / 'public/models/bespoke-manifest.json').read_text())['assets']
