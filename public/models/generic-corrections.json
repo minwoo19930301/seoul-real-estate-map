@@ -12136,6 +12136,672 @@
           }
         }
       ]
+    },
+    {
+      "sourceId": "apt-a10026207",
+      "sourceSha256": "2a69f3a385c791e290f0fce9a7b093aefb8015e3b8240d3c080dd0b5f422ab63",
+      "sourceFootprintIds": [
+        "ab038c15-50fa-4d38-bf11-ea288737dbb2",
+        "1d3196a7-aab7-45d5-a974-0956a2fe372c",
+        "1ee5f9ec-4214-4bd7-801e-b61d23800da5",
+        "2af14837-dd2d-4068-8276-74d113de5300",
+        "5ba4e7cc-86ba-43c7-ab34-7d4148cca4c9",
+        "163abb07-dfb6-4a06-aef2-472dc5d9b6c3",
+        "37b58195-d459-4e87-9c35-5ecac8af5ea7"
+      ],
+      "assets": [
+        {
+          "id": "fallback-seoulforest-riverview-xi-101",
+          "model": "generic-corrections/fallback-seoulforest-riverview-xi-101.glb",
+          "name": "서울숲리버뷰자이 101동 (기존 추정 모형)",
+          "nameKo": "서울숲리버뷰자이 101동 (기존 추정 모형)",
+          "district": "성동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            46.649234771728516,
+            97.0,
+            41.11028289794922
+          ],
+          "measuredGlbDimensions": [
+            46.649234771728516,
+            97.0,
+            41.11028289794922
+          ],
+          "bounds": {
+            "min": [
+              -9.618929862976074,
+              0.0,
+              88.16670989990234
+            ],
+            "max": [
+              37.030303955078125,
+              97.0,
+              129.27699279785156
+            ]
+          },
+          "triangles": 1207,
+          "drawCalls": 3,
+          "bytes": 73252,
+          "sha256": "9342c7be96de5bc22b87be3d9f38e4dff4289461718b013bc05727ff4a2edb0f",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.0382811,
+            "lat": 37.55524370904864,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "5ba4e7cc-86ba-43c7-ab34-7d4148cca4c9"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.03817210400915,
+            37.55408238501463,
+            127.03870070537491,
+            37.554451689809284
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a10026207",
+            "sourceSha256": "2a69f3a385c791e290f0fce9a7b093aefb8015e3b8240d3c080dd0b5f422ab63",
+            "operation": "Exact triangle partition; unchanged vertex attributes, materials and original terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-seoulforest-riverview-xi-102",
+          "model": "generic-corrections/fallback-seoulforest-riverview-xi-102.glb",
+          "name": "서울숲리버뷰자이 102동 (기존 추정 모형)",
+          "nameKo": "서울숲리버뷰자이 102동 (기존 추정 모형)",
+          "district": "성동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            38.07167053222656,
+            114.0,
+            33.9971923828125
+          ],
+          "measuredGlbDimensions": [
+            38.07167053222656,
+            114.0,
+            33.9971923828125
+          ],
+          "bounds": {
+            "min": [
+              16.776599884033203,
+              0.0,
+              35.5234375
+            ],
+            "max": [
+              54.848270416259766,
+              114.0,
+              69.5206298828125
+            ]
+          },
+          "triangles": 1224,
+          "drawCalls": 3,
+          "bytes": 74884,
+          "sha256": "dc1745f181db8e69d011b5cd5f00a193212a19445e96b77fa9926072a9b38193",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.0382811,
+            "lat": 37.55524370904864,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "1ee5f9ec-4214-4bd7-801e-b61d23800da5"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.03847120244941,
+            37.554619191987925,
+            127.03890260797085,
+            37.55492459589688
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a10026207",
+            "sourceSha256": "2a69f3a385c791e290f0fce9a7b093aefb8015e3b8240d3c080dd0b5f422ab63",
+            "operation": "Exact triangle partition; unchanged vertex attributes, materials and original terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-seoulforest-riverview-xi-103",
+          "model": "generic-corrections/fallback-seoulforest-riverview-xi-103.glb",
+          "name": "서울숲리버뷰자이 103동 (기존 추정 모형)",
+          "nameKo": "서울숲리버뷰자이 103동 (기존 추정 모형)",
+          "district": "성동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            38.062843322753906,
+            114.0,
+            33.986270904541016
+          ],
+          "measuredGlbDimensions": [
+            38.062843322753906,
+            114.0,
+            33.986270904541016
+          ],
+          "bounds": {
+            "min": [
+              24.36622428894043,
+              0.0,
+              -15.24997329711914
+            ],
+            "max": [
+              62.42906951904297,
+              114.0,
+              18.736297607421875
+            ]
+          },
+          "triangles": 1224,
+          "drawCalls": 3,
+          "bytes": 74900,
+          "sha256": "81e965ef925f3de06904975b28477f371502864eae8a401f5361346f0e1fd5c4",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.0382811,
+            "lat": 37.55524370904864,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "1d3196a7-aab7-45d5-a974-0956a2fe372c"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.03855720355806,
+            37.5550753978335,
+            127.03898850907643,
+            37.555380701763674
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a10026207",
+            "sourceSha256": "2a69f3a385c791e290f0fce9a7b093aefb8015e3b8240d3c080dd0b5f422ab63",
+            "operation": "Exact triangle partition; unchanged vertex attributes, materials and original terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-seoulforest-riverview-xi-104",
+          "model": "generic-corrections/fallback-seoulforest-riverview-xi-104.glb",
+          "name": "서울숲리버뷰자이 104동 (기존 추정 모형)",
+          "nameKo": "서울숲리버뷰자이 104동 (기존 추정 모형)",
+          "district": "성동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            38.06285095214844,
+            114.0,
+            33.986473083496094
+          ],
+          "measuredGlbDimensions": [
+            38.06285095214844,
+            114.0,
+            33.986473083496094
+          ],
+          "bounds": {
+            "min": [
+              31.982322692871094,
+              0.0,
+              -64.60990905761719
+            ],
+            "max": [
+              70.04517364501953,
+              114.0,
+              -30.62343406677246
+            ]
+          },
+          "triangles": 1224,
+          "drawCalls": 3,
+          "bytes": 74896,
+          "sha256": "ca88a71526aba336c03cefc3d5fe0bffc1412832014b79f4ab74f34be00e739a",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.0382811,
+            "lat": 37.55524370904864,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "2af14837-dd2d-4068-8276-74d113de5300"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.03864350465432,
+            37.55551880352963,
+            127.03907481023752,
+            37.55582410747652
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a10026207",
+            "sourceSha256": "2a69f3a385c791e290f0fce9a7b093aefb8015e3b8240d3c080dd0b5f422ab63",
+            "operation": "Exact triangle partition; unchanged vertex attributes, materials and original terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-seoulforest-riverview-xi-105",
+          "model": "generic-corrections/fallback-seoulforest-riverview-xi-105.glb",
+          "name": "서울숲리버뷰자이 105동 (기존 추정 모형)",
+          "nameKo": "서울숲리버뷰자이 105동 (기존 추정 모형)",
+          "district": "성동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            38.44232940673828,
+            103.0,
+            42.41382598876953
+          ],
+          "measuredGlbDimensions": [
+            38.44232940673828,
+            103.0,
+            42.41382598876953
+          ],
+          "bounds": {
+            "min": [
+              35.27410125732422,
+              0.0,
+              -129.27699279785156
+            ],
+            "max": [
+              73.7164306640625,
+              103.0,
+              -86.86316680908203
+            ]
+          },
+          "triangles": 984,
+          "drawCalls": 3,
+          "bytes": 61196,
+          "sha256": "7bf70968058661ed54f99fadb6bd69d10d81e2535412c8979668fece40daed1d",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.0382811,
+            "lat": 37.55524370904864,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "37b58195-d459-4e87-9c35-5ecac8af5ea7"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.03868080513071,
+            37.55602401006705,
+            127.03911641073802,
+            37.556405014984875
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a10026207",
+            "sourceSha256": "2a69f3a385c791e290f0fce9a7b093aefb8015e3b8240d3c080dd0b5f422ab63",
+            "operation": "Exact triangle partition; unchanged vertex attributes, materials and original terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-seoulforest-riverview-xi-106",
+          "model": "generic-corrections/fallback-seoulforest-riverview-xi-106.glb",
+          "name": "서울숲리버뷰자이 106동 (기존 추정 모형)",
+          "nameKo": "서울숲리버뷰자이 106동 (기존 추정 모형)",
+          "district": "성동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            65.0589599609375,
+            88.0,
+            49.994720458984375
+          ],
+          "measuredGlbDimensions": [
+            65.0589599609375,
+            88.0,
+            49.994720458984375
+          ],
+          "bounds": {
+            "min": [
+              -32.49418258666992,
+              0.0,
+              -107.14607238769531
+            ],
+            "max": [
+              32.564781188964844,
+              88.0,
+              -57.15135192871094
+            ]
+          },
+          "triangles": 1079,
+          "drawCalls": 3,
+          "bytes": 66608,
+          "sha256": "648f0e28f9c1015a0a847edaddac1b2046820a5fbeac0e5ebb1e163d91d1444e",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.0382811,
+            "lat": 37.55524370904864,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "163abb07-dfb6-4a06-aef2-472dc5d9b6c3"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.03791289525388,
+            37.55575710660959,
+            127.0386501047275,
+            37.556206212377305
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a10026207",
+            "sourceSha256": "2a69f3a385c791e290f0fce9a7b093aefb8015e3b8240d3c080dd0b5f422ab63",
+            "operation": "Exact triangle partition; unchanged vertex attributes, materials and original terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-seoulforest-riverview-xi-107",
+          "model": "generic-corrections/fallback-seoulforest-riverview-xi-107.glb",
+          "name": "서울숲리버뷰자이 107동 (기존 추정 모형)",
+          "nameKo": "서울숲리버뷰자이 107동 (기존 추정 모형)",
+          "district": "성동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            48.71479797363281,
+            62.0,
+            36.045875549316406
+          ],
+          "measuredGlbDimensions": [
+            48.71479797363281,
+            62.0,
+            36.045875549316406
+          ],
+          "bounds": {
+            "min": [
+              -73.7164306640625,
+              0.0,
+              -54.95831298828125
+            ],
+            "max": [
+              -25.00163459777832,
+              62.0,
+              -18.912439346313477
+            ]
+          },
+          "triangles": 1075,
+          "drawCalls": 3,
+          "bytes": 66312,
+          "sha256": "881fb4a3ebd64c87472f9449f15fa28f5bd14a3b76ffaea3b9633d87f3f52e71",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.0382811,
+            "lat": 37.55524370904864,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "ab038c15-50fa-4d38-bf11-ea288737dbb2"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.037445789262,
+            37.55541360218822,
+            127.03799779635034,
+            37.55573740633873
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a10026207",
+            "sourceSha256": "2a69f3a385c791e290f0fce9a7b093aefb8015e3b8240d3c080dd0b5f422ab63",
+            "operation": "Exact triangle partition; unchanged vertex attributes, materials and original terrain anchor."
+          }
+        }
+      ]
     }
   ]
 }

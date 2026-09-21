@@ -33,6 +33,9 @@ class HeightRegions(unittest.TestCase):
     def test_banpo_riche9_preserves_registered_envelopes_and_full_concave_roof_caps(self):
         self.assert_registered_envelopes('banpo-riche', range(101, 110), 1119, {106: 'residential-025a7bbd-1c33-4f47-90fd-1f874b5ba0d8'})
 
+    def test_seoulforest7_preserves_registered_envelopes_and_full_concave_roof_caps(self):
+        self.assert_registered_envelopes('seoulforest-riverview-xi', range(101, 108), 1034)
+
     def assert_registered_envelopes(self, site, numbers, households, fallback_ids=None):
         root = path.parents[2]
         assets = {a['id']: a for a in json.loads((root / 'public/models/bespoke-manifest.json').read_text())['assets']}

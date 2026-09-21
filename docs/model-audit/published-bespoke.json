@@ -44089,6 +44089,941 @@
           "sha256": "8e5a15252cd1d95cc472ea588f7b397e4f9d2687e3d7fec16f714a04276d5017"
         }
       ]
+    },
+    "seoulforest-riverview-xi-104-representative": {
+      "sources": [
+        {
+          "url": "https://file.kbland.kr/image/kbstar/land/img/alian/kms/complex/photo/objctidnfr/39274/MzkyNzQxMDAyOTE0MjMx.jpg",
+          "sha256": "f5a908ff4383025877fcb419d202977a3f4bc8198592ad0ba13fbe531c965349",
+          "scope": "complex",
+          "observedTowerNumber": 104,
+          "observations": "Root directly viewed1920x1080completed exterior photo. Number104 visibly identified; compassorientation unconfirmed."
+        },
+        {
+          "url": "https://kbland.kr/se/c/31867",
+          "observations": "Root independently parsed primarydata.detail identity31867 SeoulForestRiverviewXi and siblingdata.photoList[0] containing this1920URL; notrecommendation."
+        },
+        {
+          "url": "https://api.openstreetmap.org/api/0.6/way/472826085/full",
+          "observations": "Root independently reconstructed named SeoulForestRiverviewXi residential boundary; not cadastral/site-plan survey."
+        },
+        {
+          "dataset": "Exact numbered building-register rows and OSM source polygons",
+          "snapshot": "seoulforest-riverview-xi-source-identity.json",
+          "sha256": "5ef7d14fc22896662efab67d23dfc9cc619eb7c93a5443431c4df829d15a1725",
+          "observations": "Seven unique full numbered polygons inside namedboundary; exact Haengdang-dong380/Gosanja-ro2-gil65 registered main residential rows;1034households. Nochildparts;uniformheightassumption."
+        }
+      ],
+      "review": {
+        "siteId": "seoulforest-riverview-xi-104-representative",
+        "status": "visually-reviewed",
+        "reviewer": "root independently viewed source original and every final front/opposite/side/roof render",
+        "inferenceApprovedAssets": [
+          "bespoke-seoulforest-riverview-xi-104"
+        ],
+        "reviewedSourcePhotos": [
+          {
+            "url": "https://file.kbland.kr/image/kbstar/land/img/alian/kms/complex/photo/objctidnfr/39274/MzkyNzQxMDAyOTE0MjMx.jpg",
+            "sha256": "f5a908ff4383025877fcb419d202977a3f4bc8198592ad0ba13fbe531c965349",
+            "scope": "complex",
+            "observedTowerNumber": 104,
+            "observations": "Root directly viewed1920x1080completed exterior photo. Number104 visibly identified; compassorientation unconfirmed."
+          }
+        ],
+        "comparisons": [
+          "Root compared1920completedphoto with allfouractualMCPviews permodel; distinctive broadblankwall/windowgrid balance, whitepiers/spandrels, tealwindows andcentralrecess and four boxbands retained.",
+          "Root independently decodedGLBtriangles and verifiedoriginalfullgrade/fullroofdeck,registeredmaxheight/floors,allprojectionsbelow.5m androofstructurecontainment.",
+          "Seven exactnumbered sourcepolygons/liveDBregisterrows matched independently insideOSMnamedboundary.",
+          "ActualfinalMCPmetadata save/reload binds each cleanBlender file toverifiedfallback;allsevenoriginaltrianglepartitionspreserved."
+        ],
+        "limits": [
+          "Photoidentifies104; sibling facade/orientation inferred.",
+          "No sourcechildparts; own fullfootprint uniformmaximumheightassumption.",
+          "Window layout, hiddenfaces, recess,boxbands and roofcap dimensions and colors are unmeasured.",
+          "Representative104v2facade adapted to siblings using each own edge orientation/length/concavity; not identicalvertex-index assignment.",
+          "Registered maximum envelopeincludesroofdetail; legal roofdatum unconfirmed.",
+          "All seven original source triangle partitions preserved exactly."
+        ],
+        "renders": [
+          "docs/model-audit/renders/seoulforest-riverview-xi-104-representative/front.png",
+          "docs/model-audit/renders/seoulforest-riverview-xi-104-representative/opposite.png",
+          "docs/model-audit/renders/seoulforest-riverview-xi-104-representative/side.png",
+          "docs/model-audit/renders/seoulforest-riverview-xi-104-representative/roof.png"
+        ],
+        "renderSha256": {
+          "docs/model-audit/renders/seoulforest-riverview-xi-104-representative/front.png": "a5baf19b0deaf8782db917095d2dce9e48b6a176db047a299b5e77cb7206b3af",
+          "docs/model-audit/renders/seoulforest-riverview-xi-104-representative/opposite.png": "eb754076f7bd52356ffe7e78ad19971bec6351b5dc7a236da64a0f6c5fa75eea",
+          "docs/model-audit/renders/seoulforest-riverview-xi-104-representative/side.png": "51ba6da9f6271f43f768b42a2232712d42eacb17a337a2d1ec5629b5674fe4f5",
+          "docs/model-audit/renders/seoulforest-riverview-xi-104-representative/roof.png": "cd421f1f2a08e9b407509f2913cc94895f50c60c7497d529afc53ebef5ade530"
+        },
+        "reviewedInputs": {
+          "seoulforest-riverview-xi-104.glb": "ecaae1d9619467ff5a6296b434d4a4e2d3d7db25df6347a7feed3308da9e9d77",
+          "seoulforest-riverview-xi-104-authored.blend": "9b5e85acfa0d3c5b756ba1155043229b8447f3a9427ba5785b36aec58f8b7e01"
+        }
+      },
+      "assets": [
+        {
+          "id": "bespoke-seoulforest-riverview-xi-104",
+          "sourceSha256": "ecaae1d9619467ff5a6296b434d4a4e2d3d7db25df6347a7feed3308da9e9d77",
+          "sha256": "ab63c44d3c393ac2d4e53626e218db7fe5559435b6472c6a30b130923bd6da81",
+          "bytes": 1359116,
+          "dimensions": [
+            38.42629432678223,
+            114.30000305175781,
+            34.349979400634766
+          ],
+          "min": [
+            -16.13692855834961,
+            0,
+            -17.182889938354492
+          ],
+          "max": [
+            22.289365768432617,
+            114.30000305175781,
+            17.167089462280273
+          ],
+          "triangles": 24972,
+          "components": [
+            {
+              "name": "SFRX104_editable_SFRX104_light_grey_solid_wall006",
+              "triangles": 316
+            },
+            {
+              "name": "SFRX104_editable_SFRX104_modest_grey_flat_roof_caps006",
+              "triangles": 2828
+            },
+            {
+              "name": "SFRX104_editable_SFRX104_deep_gray_recessed_service_wall006",
+              "triangles": 252
+            },
+            {
+              "name": "SFRX104_editable_SFRX104_broad_white_facade_frames006",
+              "triangles": 7308
+            },
+            {
+              "name": "SFRX104_editable_SFRX104_blue_grey_horizontal_glazing006",
+              "triangles": 9552
+            },
+            {
+              "name": "SFRX104_editable_SFRX104_dark_horizontal_spandrels_and_mullions",
+              "triangles": 4716
+            }
+          ]
+        }
+      ],
+      "mcpEvidence": [
+        {
+          "path": "docs/model-audit/mcp/seoulforest-riverview-xi-104-representative/mcp-build-v2.json",
+          "sha256": "b4fc3a10803a7720ea23b355d80a1d1155a03440d176ec9ec70ebe130e9b7c88",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        },
+        {
+          "path": "docs/model-audit/mcp/seoulforest-riverview-xi-104-representative/mcp-final-bindings-reload-v2.json",
+          "sha256": "a469c74d42b282ffd49a82ece64b3ba02ddd335efca5bd355d7929e9293e8011",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        }
+      ],
+      "recipeInputs": [
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-104-representative/seoulforest-riverview-xi-source-identity.json",
+          "sha256": "5ef7d14fc22896662efab67d23dfc9cc619eb7c93a5443431c4df829d15a1725"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-104-representative/apply-final-bindings.py",
+          "sha256": "ba9ac39ed6f443314cb015d4ce0a9b8577f04889b350bda5646a0627bc60d254"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-104-representative/build.py",
+          "sha256": "da3318e465f92c21bcab8b50f70503b028d2f6d5856d8495d56747fbe1c207bd"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-104-representative/check-standalone.py",
+          "sha256": "e5579af05e6e520bda29e6d3c8b41d8bb03860feb90c14aee506c5262a22e2bf"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-104-representative/finalize.py",
+          "sha256": "4cc1d38f4612d784b1a0937a71fa2c4219339a957138f654499ffcf71db54d56"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-104-representative/prepare-recess.py",
+          "sha256": "fdbdc5bcf91d52d181b1ff8ca02b02149cec92d5209adc04b651fda843dc3478"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-104-representative/prepare.py",
+          "sha256": "601cccdb82ac748a3dc090f0b2f64892447b04f3744f349f68dd86266ab177fe"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-104-representative/rebuild-v2.py",
+          "sha256": "42b96e7aae6303a79db0406a4f1a90898a0552c549e1e45675c666f979fdf27f"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-104-representative/validate-recess.py",
+          "sha256": "5398811462082093965f31f5e354bb04539418662c6c1d5ef194181151f1dc7b"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-104-representative/validate.py",
+          "sha256": "5d8ed2b582a203bf03536bc9772bb3aedf54ce18a20d5578fa5ab38141dfed79"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-104-representative/source-provenance.json",
+          "sha256": "c532158b5e28c0f5d6c352c32c08f26e914728c4a4215a3028559cfaa62d79eb"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-104-representative/binding-map-frozen.json",
+          "sha256": "5d8ebd84a4522cf2970cb13a830029f4f6fefb27ccf1b9e112fe657e56e9cd87"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-104-representative/source-data.json",
+          "sha256": "d8c6af9a9e39cad4d9d88a1c12b072c006a1db3d39873fd1a7679ce35627af5b"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-104-representative/regions.json",
+          "sha256": "1a00a78e0afe883eb864b54291bfc306d68d584323a31502a74afadcfe4acb07"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-104-representative/geometry-proof.json",
+          "sha256": "1edd7487379f11c1c09bd191a2fcd4a0da9505f49464c30e1a62d38ad4d26712"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-104-representative/standalone-validation.json",
+          "sha256": "68df8cdea786c323d24f17236ed382426d31829305995c94dbc7b17d1329203c"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-104-representative/root-geometry-review.json",
+          "sha256": "cb7cc6bb1100da911301f1d5f695bf2dfa57b57ad5fce88e2b5d83204ab481c1"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-104-representative/final-binding-proof.json",
+          "sha256": "a54bb8f2ff5ac7ee558f0d29dcb7935616f07bc5d5a2d28fd98619692d48def6"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-104-representative/facade-regions.json",
+          "sha256": "e7f69ce33ab6533a9ea2821efa8651e0b0f87c1d327c2b04b4d21e085182d737"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-104-representative/recess-geometry-proof.json",
+          "sha256": "b91f21a13769030ed4b46b5672b8bad44367b5f88a0d1a933a88624cf4436c60"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-104-representative/binding-preserved-bytes.json",
+          "sha256": "3584aa6aae4c13faceaa08660f85c642723e6b4f47d7595dd1d8cac1b8ea5f7a"
+        }
+      ]
+    },
+    "seoulforest-riverview-xi-family": {
+      "sources": [
+        {
+          "url": "https://file.kbland.kr/image/kbstar/land/img/alian/kms/complex/photo/objctidnfr/39274/MzkyNzQxMDAyOTE0MjMx.jpg",
+          "sha256": "f5a908ff4383025877fcb419d202977a3f4bc8198592ad0ba13fbe531c965349",
+          "scope": "complex",
+          "observedTowerNumber": 104,
+          "observations": "Root directly viewed1920x1080completed exterior photo. Number104 visibly identified; compassorientation unconfirmed."
+        },
+        {
+          "url": "https://kbland.kr/se/c/31867",
+          "observations": "Root independently parsed primarydata.detail identity31867 SeoulForestRiverviewXi and siblingdata.photoList[0] containing this1920URL; notrecommendation."
+        },
+        {
+          "url": "https://api.openstreetmap.org/api/0.6/way/472826085/full",
+          "observations": "Root independently reconstructed named SeoulForestRiverviewXi residential boundary; not cadastral/site-plan survey."
+        },
+        {
+          "dataset": "Exact numbered building-register rows and OSM source polygons",
+          "snapshot": "seoulforest-riverview-xi-source-identity.json",
+          "sha256": "5ef7d14fc22896662efab67d23dfc9cc619eb7c93a5443431c4df829d15a1725",
+          "observations": "Seven unique full numbered polygons inside namedboundary; exact Haengdang-dong380/Gosanja-ro2-gil65 registered main residential rows;1034households. Nochildparts;uniformheightassumption."
+        }
+      ],
+      "review": {
+        "siteId": "seoulforest-riverview-xi-family",
+        "status": "visually-reviewed",
+        "reviewer": "root independently viewed source original and every final front/opposite/side/roof render",
+        "inferenceApprovedAssets": [
+          "bespoke-seoulforest-riverview-xi-101",
+          "bespoke-seoulforest-riverview-xi-102",
+          "bespoke-seoulforest-riverview-xi-103",
+          "bespoke-seoulforest-riverview-xi-105",
+          "bespoke-seoulforest-riverview-xi-106",
+          "bespoke-seoulforest-riverview-xi-107"
+        ],
+        "reviewedSourcePhotos": [
+          {
+            "url": "https://file.kbland.kr/image/kbstar/land/img/alian/kms/complex/photo/objctidnfr/39274/MzkyNzQxMDAyOTE0MjMx.jpg",
+            "sha256": "f5a908ff4383025877fcb419d202977a3f4bc8198592ad0ba13fbe531c965349",
+            "scope": "complex",
+            "observedTowerNumber": 104,
+            "observations": "Root directly viewed1920x1080completed exterior photo. Number104 visibly identified; compassorientation unconfirmed."
+          }
+        ],
+        "comparisons": [
+          "Root compared1920completedphoto with allfouractualMCPviews permodel; distinctive broadblankwall/windowgrid balance, whitepiers/spandrels, tealwindows andcentralrecess and four boxbands retained.",
+          "Root independently decodedGLBtriangles and verifiedoriginalfullgrade/fullroofdeck,registeredmaxheight/floors,allprojectionsbelow.5m androofstructurecontainment.",
+          "Seven exactnumbered sourcepolygons/liveDBregisterrows matched independently insideOSMnamedboundary.",
+          "ActualfinalMCPmetadata save/reload binds each cleanBlender file toverifiedfallback;allsevenoriginaltrianglepartitionspreserved."
+        ],
+        "limits": [
+          "Photoidentifies104; sibling facade/orientation inferred.",
+          "No sourcechildparts; own fullfootprint uniformmaximumheightassumption.",
+          "Window layout, hiddenfaces, recess,boxbands and roofcap dimensions and colors are unmeasured.",
+          "Representative104v2facade adapted to siblings using each own edge orientation/length/concavity; not identicalvertex-index assignment.",
+          "Registered maximum envelopeincludesroofdetail; legal roofdatum unconfirmed.",
+          "All seven original source triangle partitions preserved exactly."
+        ],
+        "renders": [
+          "docs/model-audit/renders/seoulforest-riverview-xi-family/101/front.png",
+          "docs/model-audit/renders/seoulforest-riverview-xi-family/101/opposite.png",
+          "docs/model-audit/renders/seoulforest-riverview-xi-family/101/side.png",
+          "docs/model-audit/renders/seoulforest-riverview-xi-family/101/roof.png",
+          "docs/model-audit/renders/seoulforest-riverview-xi-family/102/front.png",
+          "docs/model-audit/renders/seoulforest-riverview-xi-family/102/opposite.png",
+          "docs/model-audit/renders/seoulforest-riverview-xi-family/102/side.png",
+          "docs/model-audit/renders/seoulforest-riverview-xi-family/102/roof.png",
+          "docs/model-audit/renders/seoulforest-riverview-xi-family/103/front.png",
+          "docs/model-audit/renders/seoulforest-riverview-xi-family/103/opposite.png",
+          "docs/model-audit/renders/seoulforest-riverview-xi-family/103/side.png",
+          "docs/model-audit/renders/seoulforest-riverview-xi-family/103/roof.png",
+          "docs/model-audit/renders/seoulforest-riverview-xi-family/105/front.png",
+          "docs/model-audit/renders/seoulforest-riverview-xi-family/105/opposite.png",
+          "docs/model-audit/renders/seoulforest-riverview-xi-family/105/side.png",
+          "docs/model-audit/renders/seoulforest-riverview-xi-family/105/roof.png",
+          "docs/model-audit/renders/seoulforest-riverview-xi-family/106/front.png",
+          "docs/model-audit/renders/seoulforest-riverview-xi-family/106/opposite.png",
+          "docs/model-audit/renders/seoulforest-riverview-xi-family/106/side.png",
+          "docs/model-audit/renders/seoulforest-riverview-xi-family/106/roof.png",
+          "docs/model-audit/renders/seoulforest-riverview-xi-family/107/front.png",
+          "docs/model-audit/renders/seoulforest-riverview-xi-family/107/opposite.png",
+          "docs/model-audit/renders/seoulforest-riverview-xi-family/107/side.png",
+          "docs/model-audit/renders/seoulforest-riverview-xi-family/107/roof.png"
+        ],
+        "renderSha256": {
+          "docs/model-audit/renders/seoulforest-riverview-xi-family/101/front.png": "a84c66615071a4b8f88d497d403df72137fe27935a3be9f1ebdc1fd165156b33",
+          "docs/model-audit/renders/seoulforest-riverview-xi-family/101/opposite.png": "6c8cc92696c49db44691eca3c8ce2dabbc52709743bbecf86c6a960e0e687969",
+          "docs/model-audit/renders/seoulforest-riverview-xi-family/101/side.png": "4284a40960e5b89334f849d86088f624d90c435f1739fd3533b786df94e319e4",
+          "docs/model-audit/renders/seoulforest-riverview-xi-family/101/roof.png": "98df254c46d1d338da65767417476864c500a4cf607a13bf04b095c87d29e735",
+          "docs/model-audit/renders/seoulforest-riverview-xi-family/102/front.png": "d327fdc00eb03dcc4a66bd7cf0cb29db7fd9615471850e98c2a9a5f04e9a2144",
+          "docs/model-audit/renders/seoulforest-riverview-xi-family/102/opposite.png": "be03b0c6215389f18b7a33be1f09760fb662be5acdd806ffea099283babcf752",
+          "docs/model-audit/renders/seoulforest-riverview-xi-family/102/side.png": "0b60d0be1868655998f4c7e2ae7e00991c7304af59a6d8a7b0eb16268ed00263",
+          "docs/model-audit/renders/seoulforest-riverview-xi-family/102/roof.png": "022b2f30a778737686e2e89b753131617bd06408990ea2bf9bb05b52a7aa176d",
+          "docs/model-audit/renders/seoulforest-riverview-xi-family/103/front.png": "c46708f14ce85b0ee3edee0e0a64fabcc8ce028d7a89c1c4501785b8d20dc34f",
+          "docs/model-audit/renders/seoulforest-riverview-xi-family/103/opposite.png": "d020b8237d387415a250a9614057bc7802908f6cd2cf81c39411f92a10f71a2d",
+          "docs/model-audit/renders/seoulforest-riverview-xi-family/103/side.png": "f8479ffcf9f5a3223480ac4e82739de18fad105a074f0923b3fc7d3e369cca29",
+          "docs/model-audit/renders/seoulforest-riverview-xi-family/103/roof.png": "bfcc35315febb5809be3442ff70b34167a98e251aaa6a849cebf1092c2096782",
+          "docs/model-audit/renders/seoulforest-riverview-xi-family/105/front.png": "fab83d9d5d2f92962ed93a02432750f07ca142528332eae0dda356ae8d6b1c83",
+          "docs/model-audit/renders/seoulforest-riverview-xi-family/105/opposite.png": "80d88c3c9c40bfe27fb71297eb32ff6e07d86485323f221444ad00700d8bf073",
+          "docs/model-audit/renders/seoulforest-riverview-xi-family/105/side.png": "0396ade86ab304941c1e705bc5108e5cd8f0506adfe0416aa60d461a542cd326",
+          "docs/model-audit/renders/seoulforest-riverview-xi-family/105/roof.png": "3ead4f66322fb4cb16ec4563e71af7b748a1cea5a689d988b934200b3598ccd6",
+          "docs/model-audit/renders/seoulforest-riverview-xi-family/106/front.png": "27d9258816cca87f054f87a9245f57106517d6ab9ecbad2bdb7517e0db04e1af",
+          "docs/model-audit/renders/seoulforest-riverview-xi-family/106/opposite.png": "266fe2c5b030055e002d7cc4359ab268e0d54f920671cac9dd2084e66897358f",
+          "docs/model-audit/renders/seoulforest-riverview-xi-family/106/side.png": "de2288d12a9b46de0340941ee590535a737c64b756d0adb66811ec60474792eb",
+          "docs/model-audit/renders/seoulforest-riverview-xi-family/106/roof.png": "40f85f598bf3f0d016f2e6956315a06536cd32d95abd503187b703d73bb1934d",
+          "docs/model-audit/renders/seoulforest-riverview-xi-family/107/front.png": "d3117f23bc2811d5b16bab4b23fd2facbef24dd7dc07126d646b5c98bf676981",
+          "docs/model-audit/renders/seoulforest-riverview-xi-family/107/opposite.png": "999479229abef9f83a480d5c41e0a96ee49924f41917d19613b00e0651d28adc",
+          "docs/model-audit/renders/seoulforest-riverview-xi-family/107/side.png": "52e2ced44eb77d45fe40d3c019d24025da996c35df72dc5205b800fb13fb4627",
+          "docs/model-audit/renders/seoulforest-riverview-xi-family/107/roof.png": "726cb2ce0b11ce3852f8f550e4977f2ae7f27a3827cbbd005b33d1d70f1d5e59"
+        },
+        "reviewedInputs": {
+          "101/seoulforest-riverview-xi-101.glb": "ff012b6fd24bb55f653907421ff9d06bcd8c0adf661c20e47d0a28fe3aad333d",
+          "101/seoulforest-riverview-xi-101-authored.blend": "baa0ff00cee3a3aaac14c98cfaf9cafcf7fbe866a326a7acbcc5d6dfc6fc15a1",
+          "102/seoulforest-riverview-xi-102.glb": "e00b681ed8d77cd5007c997a55e24731f83a26a28d20f1f574ccbb1e87c90bb1",
+          "102/seoulforest-riverview-xi-102-authored.blend": "07b48035e1cc84cd642562c29780e24344f01cb7e00fe744f55c7be92aa8becb",
+          "103/seoulforest-riverview-xi-103.glb": "b42768ed6cc33f785801ac150b6a115bfa2152eb82a6f494726a992926c79f17",
+          "103/seoulforest-riverview-xi-103-authored.blend": "43681c43110e7c6bbaf4fa0eb859740eaf893fcb309e3b46112f06f95e5e46db",
+          "105/seoulforest-riverview-xi-105.glb": "0b49ccc1f2bac6459b8cf22f8ce5dfdefbad47a56f73858599feb5d551560290",
+          "105/seoulforest-riverview-xi-105-authored.blend": "d0b633fb22ebc0150b9118d5db7f4d11ad2e94999a8ad3c6497b27be97629c13",
+          "106/seoulforest-riverview-xi-106.glb": "7b99f648594e79abdb89f34ce661143264f806793ace0828119bf70e97fb5f48",
+          "106/seoulforest-riverview-xi-106-authored.blend": "c5b484ff888070275f28ec2471a2fa658755f748eb47d9d7507922d4d5ffae96",
+          "107/seoulforest-riverview-xi-107.glb": "3a2b9c9996479fe720d8d94fef021aa7c75562d1d9711dc6c0ad47943b8fc799",
+          "107/seoulforest-riverview-xi-107-authored.blend": "2cedb609acad0b5f72231c0867256d9e8554c972097f3d3fac75c9f6e3c6f77c"
+        }
+      },
+      "assets": [
+        {
+          "id": "bespoke-seoulforest-riverview-xi-101",
+          "sourceSha256": "ff012b6fd24bb55f653907421ff9d06bcd8c0adf661c20e47d0a28fe3aad333d",
+          "sha256": "b981d34af271c255a0e1ef22f6bbf8bf81289bf9b9541b160248aa133d737165",
+          "bytes": 1602176,
+          "dimensions": [
+            47.05705642700195,
+            97,
+            41.494781494140625
+          ],
+          "min": [
+            -29.55201530456543,
+            0,
+            -19.12657356262207
+          ],
+          "max": [
+            17.505041122436523,
+            97,
+            22.368207931518555
+          ],
+          "triangles": 29468,
+          "components": [
+            {
+              "name": "SFRX101_editable_SFRX101_light_grey_solid_wall",
+              "triangles": 340
+            },
+            {
+              "name": "SFRX101_editable_SFRX101_modest_grey_flat_roof_caps",
+              "triangles": 3268
+            },
+            {
+              "name": "SFRX101_editable_SFRX101_deep_gray_recessed_service_wall",
+              "triangles": 276
+            },
+            {
+              "name": "SFRX101_editable_SFRX101_broad_white_facade_frames",
+              "triangles": 9468
+            },
+            {
+              "name": "SFRX101_editable_SFRX101_blue_grey_horizontal_glazing",
+              "triangles": 9144
+            },
+            {
+              "name": "SFRX101_editable_SFRX101_dark_horizontal_spandrels_and_mullions",
+              "triangles": 6972
+            }
+          ]
+        },
+        {
+          "id": "bespoke-seoulforest-riverview-xi-102",
+          "sourceSha256": "e00b681ed8d77cd5007c997a55e24731f83a26a28d20f1f574ccbb1e87c90bb1",
+          "sha256": "921835b67105d909644e6a18e42fe0529cbc3394c44bc61a26c787c00db32ad6",
+          "bytes": 1359076,
+          "dimensions": [
+            38.43548774719238,
+            114.30000305175781,
+            34.360984802246094
+          ],
+          "min": [
+            -16.143003463745117,
+            0,
+            -17.1933650970459
+          ],
+          "max": [
+            22.292484283447266,
+            114.30000305175781,
+            17.167619705200195
+          ],
+          "triangles": 24972,
+          "components": [
+            {
+              "name": "SFRX102_editable_SFRX102_light_grey_solid_wall",
+              "triangles": 316
+            },
+            {
+              "name": "SFRX102_editable_SFRX102_modest_grey_flat_roof_caps",
+              "triangles": 2828
+            },
+            {
+              "name": "SFRX102_editable_SFRX102_deep_gray_recessed_service_wall",
+              "triangles": 252
+            },
+            {
+              "name": "SFRX102_editable_SFRX102_broad_white_facade_frames",
+              "triangles": 7308
+            },
+            {
+              "name": "SFRX102_editable_SFRX102_blue_grey_horizontal_glazing",
+              "triangles": 9552
+            },
+            {
+              "name": "SFRX102_editable_SFRX102_dark_horizontal_spandrels_and_mullions",
+              "triangles": 4716
+            }
+          ]
+        },
+        {
+          "id": "bespoke-seoulforest-riverview-xi-103",
+          "sourceSha256": "b42768ed6cc33f785801ac150b6a115bfa2152eb82a6f494726a992926c79f17",
+          "sha256": "29aef8cacd5382859bee8512876ee849ab74fd32292d61c80e733848485ca20b",
+          "bytes": 1359072,
+          "dimensions": [
+            38.42665481567383,
+            114.30000305175781,
+            34.34997367858887
+          ],
+          "min": [
+            -16.13547706604004,
+            0,
+            -17.189712524414062
+          ],
+          "max": [
+            22.29117774963379,
+            114.30000305175781,
+            17.160261154174805
+          ],
+          "triangles": 24972,
+          "components": [
+            {
+              "name": "SFRX103_editable_SFRX103_light_grey_solid_wall",
+              "triangles": 316
+            },
+            {
+              "name": "SFRX103_editable_SFRX103_modest_grey_flat_roof_caps",
+              "triangles": 2828
+            },
+            {
+              "name": "SFRX103_editable_SFRX103_deep_gray_recessed_service_wall",
+              "triangles": 252
+            },
+            {
+              "name": "SFRX103_editable_SFRX103_broad_white_facade_frames",
+              "triangles": 7308
+            },
+            {
+              "name": "SFRX103_editable_SFRX103_blue_grey_horizontal_glazing",
+              "triangles": 9552
+            },
+            {
+              "name": "SFRX103_editable_SFRX103_dark_horizontal_spandrels_and_mullions",
+              "triangles": 4716
+            }
+          ]
+        },
+        {
+          "id": "bespoke-seoulforest-riverview-xi-105",
+          "sourceSha256": "0b49ccc1f2bac6459b8cf22f8ce5dfdefbad47a56f73858599feb5d551560290",
+          "sha256": "eae44e23e4de8b01c3bdb863869fefa23cf3718f4ce9e7b2e0c66629618fc044",
+          "bytes": 1419660,
+          "dimensions": [
+            38.80649375915527,
+            102.5999984741211,
+            42.77142906188965
+          ],
+          "min": [
+            -21.06576156616211,
+            0,
+            -15.357952117919922
+          ],
+          "max": [
+            17.740732192993164,
+            102.5999984741211,
+            27.413476943969727
+          ],
+          "triangles": 26108,
+          "components": [
+            {
+              "name": "SFRX105_editable_SFRX105_light_grey_solid_wall",
+              "triangles": 268
+            },
+            {
+              "name": "SFRX105_editable_SFRX105_modest_grey_flat_roof_caps",
+              "triangles": 2524
+            },
+            {
+              "name": "SFRX105_editable_SFRX105_deep_gray_recessed_service_wall",
+              "triangles": 204
+            },
+            {
+              "name": "SFRX105_editable_SFRX105_broad_white_facade_frames",
+              "triangles": 8652
+            },
+            {
+              "name": "SFRX105_editable_SFRX105_blue_grey_horizontal_glazing",
+              "triangles": 8544
+            },
+            {
+              "name": "SFRX105_editable_SFRX105_dark_horizontal_spandrels_and_mullions",
+              "triangles": 5916
+            }
+          ]
+        },
+        {
+          "id": "bespoke-seoulforest-riverview-xi-106",
+          "sourceSha256": "7b99f648594e79abdb89f34ce661143264f806793ace0828119bf70e97fb5f48",
+          "sha256": "2c023156fcc10b0f13715aeb9c4f2432ee64d9d1a2c81fd26d5970737feeab6b",
+          "bytes": 2220740,
+          "dimensions": [
+            65.4649543762207,
+            88.0999984741211,
+            50.405229568481445
+          ],
+          "min": [
+            -28.880046844482422,
+            0,
+            -20.2108097076416
+          ],
+          "max": [
+            36.58490753173828,
+            88.0999984741211,
+            30.194419860839844
+          ],
+          "triangles": 40936,
+          "components": [
+            {
+              "name": "SFRX106_editable_SFRX106_light_grey_solid_wall",
+              "triangles": 292
+            },
+            {
+              "name": "SFRX106_editable_SFRX106_modest_grey_flat_roof_caps",
+              "triangles": 2172
+            },
+            {
+              "name": "SFRX106_editable_SFRX106_deep_gray_recessed_service_wall",
+              "triangles": 228
+            },
+            {
+              "name": "SFRX106_editable_SFRX106_broad_white_facade_frames",
+              "triangles": 14664
+            },
+            {
+              "name": "SFRX106_editable_SFRX106_blue_grey_horizontal_glazing",
+              "triangles": 12744
+            },
+            {
+              "name": "SFRX106_editable_SFRX106_dark_horizontal_spandrels_and_mullions",
+              "triangles": 10836
+            }
+          ]
+        },
+        {
+          "id": "bespoke-seoulforest-riverview-xi-107",
+          "sourceSha256": "3a2b9c9996479fe720d8d94fef021aa7c75562d1d9711dc6c0ad47943b8fc799",
+          "sha256": "387b08c5c7d1fc08369a88c8aafb0f3012dbc1a156e5de83a8dd855bdc968531",
+          "bytes": 1104344,
+          "dimensions": [
+            49.13827896118164,
+            62,
+            36.49345397949219
+          ],
+          "min": [
+            -30.782320022583008,
+            0,
+            -19.874677658081055
+          ],
+          "max": [
+            18.355958938598633,
+            62,
+            16.618776321411133
+          ],
+          "triangles": 20256,
+          "components": [
+            {
+              "name": "SFRX107_editable_SFRX107_light_grey_solid_wall",
+              "triangles": 316
+            },
+            {
+              "name": "SFRX107_editable_SFRX107_modest_grey_flat_roof_caps",
+              "triangles": 2012
+            },
+            {
+              "name": "SFRX107_editable_SFRX107_deep_gray_recessed_service_wall",
+              "triangles": 252
+            },
+            {
+              "name": "SFRX107_editable_SFRX107_blue_grey_horizontal_glazing",
+              "triangles": 5652
+            },
+            {
+              "name": "SFRX107_editable_SFRX107_broad_white_facade_frames",
+              "triangles": 7200
+            },
+            {
+              "name": "SFRX107_editable_SFRX107_dark_horizontal_spandrels_and_mullions",
+              "triangles": 4824
+            }
+          ]
+        }
+      ],
+      "mcpEvidence": [
+        {
+          "path": "docs/model-audit/mcp/seoulforest-riverview-xi-family/mcp-batch-1.json",
+          "sha256": "b01c7f34f18b6fe2b8efd6f820b3a073873b678755640c4097928e9c8b2d8829",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        },
+        {
+          "path": "docs/model-audit/mcp/seoulforest-riverview-xi-family/mcp-batch-2.json",
+          "sha256": "2804f3eb74c21b86965eba48bcc9d22e8d37d9254480c44e2280c09abba79fe4",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        },
+        {
+          "path": "docs/model-audit/mcp/seoulforest-riverview-xi-family/mcp-batch-3.json",
+          "sha256": "600af8043a00725adcd946bafed0634081b7daaa5f0625d0a233e9b065c131b7",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        },
+        {
+          "path": "docs/model-audit/mcp/seoulforest-riverview-xi-family/mcp-final-standalone.json",
+          "sha256": "7bc8277db83d738cecc56d6d0ef48a8beedf3dabb6a3577952127944ee312e5e",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        },
+        {
+          "path": "docs/model-audit/mcp/seoulforest-riverview-xi-family/mcp-standalone.json",
+          "sha256": "7bc8277db83d738cecc56d6d0ef48a8beedf3dabb6a3577952127944ee312e5e",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        },
+        {
+          "path": "docs/model-audit/mcp/seoulforest-riverview-xi-family/mcp-view-refit.json",
+          "sha256": "f58c1e54aae19663543545922d7fb984f1cc21b1fab75080b25210dc29dce691",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        }
+      ],
+      "recipeInputs": [
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/seoulforest-riverview-xi-source-identity.json",
+          "sha256": "5ef7d14fc22896662efab67d23dfc9cc619eb7c93a5443431c4df829d15a1725"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/batch-1.py",
+          "sha256": "7af189c1a486b2d3a4e7e344bbf533c0e3762012a92676d9ddd49473b8ff3ca8"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/batch-2.py",
+          "sha256": "11cab05dbd2dd0ec54ac899b93b52f79d20478e22f6f50f55e6148fe7cbe1d29"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/batch-3.py",
+          "sha256": "e5ee75bc18ed68a2d9e2f5e2f26c6e84528e1e045ee8bd578520ed9782a903fd"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/check-all.py",
+          "sha256": "58860696bd0b4e598b9cdd71a8de4ed90938a736d90a6ac53b77077530df782d"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/finalize.py",
+          "sha256": "49bc2a45959c2e4bcccccdc98522f01d02a740188992986af5ea196b1ae532f9"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/prepare.py",
+          "sha256": "d1f32abce10b7658a57d3b0d9ff5af6bab4da24d3326f8a974bd86034857472e"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/refit-wide-views.py",
+          "sha256": "b9901cc0305e01825782b1f6b42e4ae392bd9c0e568aa9ea167a51d39d5f6887"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/binding-map-frozen.json",
+          "sha256": "5d8ebd84a4522cf2970cb13a830029f4f6fefb27ccf1b9e112fe657e56e9cd87"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/view-refit-proof.json",
+          "sha256": "adaed6c8616a6c1fc90467058081935000e3fad0634954898304f75045e93fac"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/101/build.py",
+          "sha256": "b6af92231b51004776ce4beb5d37f8f7e41627a7d5a8cfe64ce24e9658a93471"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/101/source-data.json",
+          "sha256": "a7f19ad1622fa4ea57bfd05f83eb1ba6776980bce82aa64df7847ec3025e3fbb"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/101/regions.json",
+          "sha256": "bb4f54ba903d54300580376b595f6815034e3b65ee8486800cef99e9758d9b24"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/101/validation.json",
+          "sha256": "b7bf2a2d5e83b879f9123728fd3eff10f4471b328535a3139299006e3a1d9603"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/101/geometry-proof.json",
+          "sha256": "cddeebdcf197c66fea0d8bec9cb12ddd066d903eba54b6eaffafe9fee8d479d3"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/101/root-geometry-review.json",
+          "sha256": "5f6e9e972d20b26112d81a773059030466bd2e1479cbf91a3d2fd63a765fa5b5"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/101/standalone-validation.json",
+          "sha256": "1f376061bb64c2b8fc0a6b3a273079ebfdd5ebcc796a992cea252995d732e5b2"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/101/facade-regions.json",
+          "sha256": "1184bf81b40b70f376cefaf78da15cada313c144487838faa7620bafe3537618"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/101/recess-geometry-proof.json",
+          "sha256": "20eb2f815b06fb6825bab594d3a43e8a346d94f0a43cbe0a991f0bf28f457595"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/102/build.py",
+          "sha256": "69cb7223032b1ae99e221835b334194ffe6e3f5519823922cdce5c42ccad13db"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/102/source-data.json",
+          "sha256": "2336828e7bb2c13a4816a36b5a95fc2433043cab39bdc50c17303d3b07df855e"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/102/regions.json",
+          "sha256": "767aa23a02222f761b55220ba6f8b67085074c2ef114e4f6c46acca15070516a"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/102/validation.json",
+          "sha256": "0e9c2c548f876e59abf77b4b94d6fe03598dd70ff1f6d68117c1a2b8a01f24b4"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/102/geometry-proof.json",
+          "sha256": "393c229ef5f5d2250bbe026ddb727929ebcb4da7a775ec1e6db818ff07971750"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/102/root-geometry-review.json",
+          "sha256": "15c324fece45dd8c4bed1acf1123e3feb71e71860fa8f090ef37d6e4a76c90cd"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/102/standalone-validation.json",
+          "sha256": "c6dbe567a335033d6c7a0718c461e02d309e01fe72b6a829e1b5d366cdfaf0af"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/102/facade-regions.json",
+          "sha256": "ecd4d6c22b1caba018a2852d9900eac2cca4eadf8687ddf7082f23554afdec45"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/102/recess-geometry-proof.json",
+          "sha256": "b91f21a13769030ed4b46b5672b8bad44367b5f88a0d1a933a88624cf4436c60"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/103/build.py",
+          "sha256": "1bddacd83b52bd5aadd3df94ed1f43f003ccdcb714c83ddf4b525dc81d1e346c"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/103/source-data.json",
+          "sha256": "8a4969c18959db0da4b70b02f053908ba72472b0c02eee2fad47bd48aa8321ee"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/103/regions.json",
+          "sha256": "fa7cacc7b59d6e942bf4b912e78ab9ff444c8b3397bf75a52081a4d4596f21d6"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/103/validation.json",
+          "sha256": "70f3d2590aff832fb025719520bfb1654b8e7f497474cbe16bcd9024d29bf614"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/103/geometry-proof.json",
+          "sha256": "4556c12eeb7f7f7572e6c989c9f43e348cbeccd4a2d05938fb524945e799388b"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/103/root-geometry-review.json",
+          "sha256": "c105edfaae66870c6ddf598d01de15ce79d9813bb3932005459d36e86a80f66b"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/103/standalone-validation.json",
+          "sha256": "a9abda4fdb5036bc76944bf16bd24bef28e119bdcb3849322204f4496c375cc3"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/103/facade-regions.json",
+          "sha256": "5b8af7b4c6b24a53fd4ba9601d5f0be0e98f69e728068f15fed14eb7395ea278"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/103/recess-geometry-proof.json",
+          "sha256": "b91f21a13769030ed4b46b5672b8bad44367b5f88a0d1a933a88624cf4436c60"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/105/build.py",
+          "sha256": "47e2cdf87a7037287677d59feddc249140c8e1bdd52675299e51568581918de1"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/105/source-data.json",
+          "sha256": "bdaafba9ae20462b82af7562a42afd07dfd2d5987c8850d2cfcddd2e1147c804"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/105/regions.json",
+          "sha256": "9f213f5eda5d038ebb3858ab769386e6e5fddc3d2e8860f8dd39fd5c58fd247b"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/105/validation.json",
+          "sha256": "510760160f72e618b701863e7c202bc39a1e650116de6ea8fc5e0ef2fbb43f3b"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/105/geometry-proof.json",
+          "sha256": "5fca31e4c85cf8f9f7c98f73ed00b205c246d4b41e831ab52a81c13bb42ffa85"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/105/root-geometry-review.json",
+          "sha256": "322d115bdc38a3d06b9566d4ea4341bccf6ab46732fcfc4cf16f9081996fcb9c"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/105/standalone-validation.json",
+          "sha256": "3ffa3434b656d17d3196100132436dffde321ae7edd29f572d9952d62e4ca197"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/105/facade-regions.json",
+          "sha256": "b08f1ccd0d41cf7a8cd0afa98647ea08133a1d1da62bee631575da833f64b777"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/105/recess-geometry-proof.json",
+          "sha256": "48ceb7a4b609c94fbc91219405143588ab3a15efff816def3e88aab976af955c"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/106/build.py",
+          "sha256": "878592cd2abaf62e5f84aa6c22d774e4120df14767f5ad451da1996743480b14"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/106/source-data.json",
+          "sha256": "1095ff81b124b9c864af14a5a48723f3d05321f5e3e14e1bdf45c6c8ff4fdda2"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/106/regions.json",
+          "sha256": "56df02a77851c406b1e624b29fbabcfd934aa6cc83d0b2b5e410a2cc0acb78b2"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/106/validation.json",
+          "sha256": "e328c216098f112cf715205f2c0c4ca9c4e196497e49fc8ff11aabe9fb789c9f"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/106/geometry-proof.json",
+          "sha256": "b963312fbcf28ce9a3637abe37ef334da5caabdf69f208255e6b08907d71e02a"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/106/root-geometry-review.json",
+          "sha256": "cabc6a6261f30921d8a0260298084d6ce85cf1b2b1169707012476977e6e85a2"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/106/standalone-validation.json",
+          "sha256": "c5a6a1d3011e919fadc71b029dfcb86dd8fbde8c1635ff5d46902917ef24b3f7"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/106/facade-regions.json",
+          "sha256": "dffaf9430039e3494d465ecd1b88e9c82d6aab7c84f08cfabc0403934dadfaa7"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/106/recess-geometry-proof.json",
+          "sha256": "b3ebf1e6aeae57acacb9961ffbd79121c0839d855aafc984e143a852fe06a86d"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/107/build.py",
+          "sha256": "92b722ba696b6b49f710f7832b6bd428835b012db2d1fe661efb9c8af93763ed"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/107/source-data.json",
+          "sha256": "639c90030d264e6e038b31d9785f14e1a5f621b706a83515256deee9e64d60bd"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/107/regions.json",
+          "sha256": "59db8135d6add8dd33b2601112e9180084c597974a065e06e26c251f6515c717"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/107/validation.json",
+          "sha256": "99a1d12a1b8aa9f71321b3362f0220f396a57764e5b1cb0dcac34553862d26c7"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/107/geometry-proof.json",
+          "sha256": "85fac09986d00a9360fdad606a4660a0def82708397e78fe962c605fbca3c68e"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/107/root-geometry-review.json",
+          "sha256": "b0a5f1497e0dc8ff853d38d209117afec1cd840fedac8d0a38c9d5b7348d572e"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/107/standalone-validation.json",
+          "sha256": "ebffc89671d48516635ceecb4f4d8f291a108bfe4bbe1e72beddf23048a4f66c"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/107/facade-regions.json",
+          "sha256": "4ed9469df663dd7d2bbef8990783bc0a81ea1f3e9718d7afd7124cf075674ef7"
+        },
+        {
+          "path": "modeling/bespoke/seoulforest-riverview-xi-family/107/recess-geometry-proof.json",
+          "sha256": "bc7af1aef5ade3ce839815c74f2dbf4a004842a9dde79abd06b17b82a405eb57"
+        }
+      ]
     }
   }
 }
