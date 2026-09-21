@@ -4790,6 +4790,2385 @@
           }
         }
       ]
+    },
+    {
+      "sourceId": "apt-a13776509",
+      "sourceSha256": "e9510f9a7d8a6ad3e82a29bcfa89f707ce44923e72eaef4cc580204047d916ff",
+      "sourceFootprintIds": [
+        "697147a0-de7d-4fa2-ab82-758800796ded",
+        "5bc96bb1-8a13-4115-b4db-f5ad97d1e2bf",
+        "ae891078-f1d8-463f-b7ae-ecb6387c3e48",
+        "f8b46fce-7de9-4fed-9ab2-43cb981bd3bb",
+        "cd628397-c01c-4bd0-b67f-b29dc7c88923",
+        "8d6ab8b4-1c90-44ea-894d-85f51054c107",
+        "5c068973-bfc6-4148-b5a4-be1a8e87eb94",
+        "48c7ac76-ad32-45db-af1d-51dcc23ad52c",
+        "7220e8e0-ce7f-490b-92ba-57f09aa09d8c",
+        "45ef175c-213d-48cc-8d7d-cfff01202638",
+        "867da145-5d02-42d1-9d26-ef381dd0b7d6",
+        "97eb6fd0-2c0b-45cc-81d2-a66441aecb85",
+        "7dca6e17-aa57-4e45-8cba-d79383ec82bf",
+        "eef0c80b-2e4b-4820-b6cb-fbce636fb4ea",
+        "6ab4af87-98a4-423b-95b9-9534220c15da",
+        "d7b8c3be-2a27-4e31-ae90-f805747aa664",
+        "b85eaa33-701e-4c04-9394-7aead423be08",
+        "76147cfe-8510-4d14-9736-6dfaee75bb1b",
+        "862e6d08-7acc-4e9b-bd17-56745a737e83",
+        "af87fb1a-62e3-4208-9f31-8162551b7cac",
+        "0f40242b-1f64-427c-b5dd-fafdd2ba2ecd",
+        "2922e743-4d1e-4765-b0aa-d89f904d3bea",
+        "94e5374f-559d-4fb3-ac52-5d8258334774"
+      ],
+      "assets": [
+        {
+          "id": "apt-a13776509",
+          "model": "generic-corrections/apt-a13776509.glb",
+          "name": "래미안퍼스티지 상가 2동 (기존 추정 모형)",
+          "nameKo": "래미안퍼스티지 상가 2동 (기존 추정 모형)",
+          "district": "서초구",
+          "category": "commercial",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            526.4552001953125,
+            47.80875015258789,
+            185.67169189453125
+          ],
+          "measuredGlbDimensions": [
+            526.4552001953125,
+            47.80875015258789,
+            185.67169189453125
+          ],
+          "bounds": {
+            "min": [
+              -291.6376037597656,
+              0.0,
+              -171.8440399169922
+            ],
+            "max": [
+              234.81756591796875,
+              47.80875015258789,
+              13.827656745910645
+            ]
+          },
+          "triangles": 1254,
+          "drawCalls": 3,
+          "bytes": 80268,
+          "sha256": "01f9c09b5f5f90b98adeda64425d8cbf9741aed14e08650b1b08610a40d0fa75",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.99874755,
+            "lat": 37.50305941595884,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 2,
+          "footprintIds": [
+            "af87fb1a-62e3-4208-9f31-8162551b7cac",
+            "2922e743-4d1e-4765-b0aa-d89f904d3bea"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": true,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            126.99544519733361,
+            37.50293519990151,
+            127.00140650208618,
+            37.504603101275286
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13776509",
+            "sourceSha256": "e9510f9a7d8a6ad3e82a29bcfa89f707ce44923e72eaef4cc580204047d916ff",
+            "operation": "Exact triangle partition; unchanged vertex attributes, materials and original terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-prestige-102",
+          "model": "generic-corrections/fallback-prestige-102.glb",
+          "name": "래미안퍼스티지 102동 (기존 추정 모형)",
+          "nameKo": "래미안퍼스티지 102동 (기존 추정 모형)",
+          "district": "서초구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            33.929534912109375,
+            88.0,
+            26.326881408691406
+          ],
+          "measuredGlbDimensions": [
+            33.929534912109375,
+            88.0,
+            26.326881408691406
+          ],
+          "bounds": {
+            "min": [
+              -214.1790313720703,
+              0.0,
+              50.05091094970703
+            ],
+            "max": [
+              -180.24949645996094,
+              88.0,
+              76.37779235839844
+            ]
+          },
+          "triangles": 440,
+          "drawCalls": 3,
+          "bytes": 29280,
+          "sha256": "fe3b8cafff46e7281e1f828ab1f6ce482ede0a26da2402fc08d910f8c06c9a3b",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.99874755,
+            "lat": 37.50305941595884,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "eef0c80b-2e4b-4820-b6cb-fbce636fb4ea"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            126.99632229795357,
+            37.50237329942383,
+            126.99670649837437,
+            37.50260979962213
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13776509",
+            "sourceSha256": "e9510f9a7d8a6ad3e82a29bcfa89f707ce44923e72eaef4cc580204047d916ff",
+            "operation": "Exact triangle partition; unchanged vertex attributes, materials and original terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-prestige-104",
+          "model": "generic-corrections/fallback-prestige-104.glb",
+          "name": "래미안퍼스티지 104동 (기존 추정 모형)",
+          "nameKo": "래미안퍼스티지 104동 (기존 추정 모형)",
+          "district": "서초구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            31.40380096435547,
+            85.0,
+            31.202964782714844
+          ],
+          "measuredGlbDimensions": [
+            31.40380096435547,
+            85.0,
+            31.202964782714844
+          ],
+          "bounds": {
+            "min": [
+              -154.19741821289062,
+              0.0,
+              -38.77092361450195
+            ],
+            "max": [
+              -122.79361724853516,
+              85.0,
+              -7.567958354949951
+            ]
+          },
+          "triangles": 620,
+          "drawCalls": 3,
+          "bytes": 39336,
+          "sha256": "a2173af2bfb889e166ac1cd193dfef48b7a6e8700d1579780f17be95cca7a708",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.99874755,
+            "lat": 37.50305941595884,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "7220e8e0-ce7f-490b-92ba-57f09aa09d8c"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            126.99700149856966,
+            37.503127400054474,
+            126.99735709889183,
+            37.503407700279105
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13776509",
+            "sourceSha256": "e9510f9a7d8a6ad3e82a29bcfa89f707ce44923e72eaef4cc580204047d916ff",
+            "operation": "Exact triangle partition; unchanged vertex attributes, materials and original terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-prestige-105",
+          "model": "generic-corrections/fallback-prestige-105.glb",
+          "name": "래미안퍼스티지 105동 (기존 추정 모형)",
+          "nameKo": "래미안퍼스티지 105동 (기존 추정 모형)",
+          "district": "서초구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            31.403793334960938,
+            85.0,
+            31.20303726196289
+          ],
+          "measuredGlbDimensions": [
+            31.403793334960938,
+            85.0,
+            31.20303726196289
+          ],
+          "bounds": {
+            "min": [
+              -104.53949737548828,
+              0.0,
+              -57.91800308227539
+            ],
+            "max": [
+              -73.13570404052734,
+              85.0,
+              -26.7149658203125
+            ]
+          },
+          "triangles": 620,
+          "drawCalls": 3,
+          "bytes": 39328,
+          "sha256": "c895983ce4ce5132a5e4c741c568a3e2f5d49a8450c8c0e54f1a1bf982f0c869",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.99874755,
+            "lat": 37.50305941595884,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "8d6ab8b4-1c90-44ea-894d-85f51054c107"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            126.99756379905894,
+            37.50329940019426,
+            126.9979193992947,
+            37.503579700419934
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13776509",
+            "sourceSha256": "e9510f9a7d8a6ad3e82a29bcfa89f707ce44923e72eaef4cc580204047d916ff",
+            "operation": "Exact triangle partition; unchanged vertex attributes, materials and original terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-prestige-106",
+          "model": "generic-corrections/fallback-prestige-106.glb",
+          "name": "래미안퍼스티지 106동 (기존 추정 모형)",
+          "nameKo": "래미안퍼스티지 106동 (기존 추정 모형)",
+          "district": "서초구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            31.403797149658203,
+            85.0,
+            31.20309829711914
+          ],
+          "measuredGlbDimensions": [
+            31.403797149658203,
+            85.0,
+            31.20309829711914
+          ],
+          "bounds": {
+            "min": [
+              -64.6489028930664,
+              0.0,
+              -73.95928192138672
+            ],
+            "max": [
+              -33.2451057434082,
+              85.0,
+              -42.75618362426758
+            ]
+          },
+          "triangles": 620,
+          "drawCalls": 3,
+          "bytes": 39328,
+          "sha256": "0bf4b0064ab838a8df0649291b4a740242fef3e2672bf51d7d516db7b256da43",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.99874755,
+            "lat": 37.50305941595884,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "cd628397-c01c-4bd0-b67f-b29dc7c88923"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            126.99801549942046,
+            37.5034435003033,
+            126.99837109969943,
+            37.50372380053625
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13776509",
+            "sourceSha256": "e9510f9a7d8a6ad3e82a29bcfa89f707ce44923e72eaef4cc580204047d916ff",
+            "operation": "Exact triangle partition; unchanged vertex attributes, materials and original terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-prestige-107",
+          "model": "generic-corrections/fallback-prestige-107.glb",
+          "name": "래미안퍼스티지 107동 (기존 추정 모형)",
+          "nameKo": "래미안퍼스티지 107동 (기존 추정 모형)",
+          "district": "서초구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            33.929527282714844,
+            85.0,
+            26.327312469482422
+          ],
+          "measuredGlbDimensions": [
+            33.929527282714844,
+            85.0,
+            26.327312469482422
+          ],
+          "bounds": {
+            "min": [
+              -15.512027740478516,
+              0.0,
+              -86.27134704589844
+            ],
+            "max": [
+              18.417497634887695,
+              85.0,
+              -59.944034576416016
+            ]
+          },
+          "triangles": 440,
+          "drawCalls": 3,
+          "bytes": 29288,
+          "sha256": "6f63df53e44753d26e04eacab2effa5ca41b064e20cff031c849be3b73c0e892",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.99874755,
+            "lat": 37.50305941595884,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "48c7ac76-ad32-45db-af1d-51dcc23ad52c"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            126.99857189985919,
+            37.50359790044145,
+            126.998956100172,
+            37.503834400632925
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13776509",
+            "sourceSha256": "e9510f9a7d8a6ad3e82a29bcfa89f707ce44923e72eaef4cc580204047d916ff",
+            "operation": "Exact triangle partition; unchanged vertex attributes, materials and original terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-prestige-108",
+          "model": "generic-corrections/fallback-prestige-108.glb",
+          "name": "래미안퍼스티지 108동 (기존 추정 모형)",
+          "nameKo": "래미안퍼스티지 108동 (기존 추정 모형)",
+          "district": "서초구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            33.92951965332031,
+            88.0,
+            26.327362060546875
+          ],
+          "measuredGlbDimensions": [
+            33.92951965332031,
+            88.0,
+            26.327362060546875
+          ],
+          "bounds": {
+            "min": [
+              31.885099411010742,
+              0.0,
+              -102.0677719116211
+            ],
+            "max": [
+              65.81462097167969,
+              88.0,
+              -75.74040985107422
+            ]
+          },
+          "triangles": 440,
+          "drawCalls": 3,
+          "bytes": 29276,
+          "sha256": "f6d3b8d730102472ac0a7866e25ad803c1f525af10e8f5bac62d5547e0f6e12e",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.99874755,
+            "lat": 37.50305941595884,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "45ef175c-213d-48cc-8d7d-cfff01202638"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            126.99910860029564,
+            37.503739800536565,
+            126.99949280056526,
+            37.50397630072402
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13776509",
+            "sourceSha256": "e9510f9a7d8a6ad3e82a29bcfa89f707ce44923e72eaef4cc580204047d916ff",
+            "operation": "Exact triangle partition; unchanged vertex attributes, materials and original terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-prestige-109",
+          "model": "generic-corrections/fallback-prestige-109.glb",
+          "name": "래미안퍼스티지 109동 (기존 추정 모형)",
+          "nameKo": "래미안퍼스티지 109동 (기존 추정 모형)",
+          "district": "서초구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            33.929527282714844,
+            88.0,
+            26.327415466308594
+          ],
+          "measuredGlbDimensions": [
+            33.929527282714844,
+            88.0,
+            26.327415466308594
+          ],
+          "bounds": {
+            "min": [
+              79.98872375488281,
+              0.0,
+              -118.94404602050781
+            ],
+            "max": [
+              113.91825103759766,
+              88.0,
+              -92.61663055419922
+            ]
+          },
+          "triangles": 440,
+          "drawCalls": 3,
+          "bytes": 29280,
+          "sha256": "6d4ac4253e39a14fc1cc640bd8f5a7060ace3daba03ac99050792e9b4854ef7f",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.99874755,
+            "lat": 37.50305941595884,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "d7b8c3be-2a27-4e31-ae90-f805747aa664"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            126.99965330073917,
+            37.503891400671066,
+            127.00003750107358,
+            37.50412790085804
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13776509",
+            "sourceSha256": "e9510f9a7d8a6ad3e82a29bcfa89f707ce44923e72eaef4cc580204047d916ff",
+            "operation": "Exact triangle partition; unchanged vertex attributes, materials and original terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-prestige-110",
+          "model": "generic-corrections/fallback-prestige-110.glb",
+          "name": "래미안퍼스티지 110동 (기존 추정 모형)",
+          "nameKo": "래미안퍼스티지 110동 (기존 추정 모형)",
+          "district": "서초구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            36.923309326171875,
+            79.0,
+            35.37715148925781
+          ],
+          "measuredGlbDimensions": [
+            36.923309326171875,
+            79.0,
+            35.37715148925781
+          ],
+          "bounds": {
+            "min": [
+              -149.51687622070312,
+              0.0,
+              32.85211944580078
+            ],
+            "max": [
+              -112.59356689453125,
+              79.0,
+              68.2292709350586
+            ]
+          },
+          "triangles": 448,
+          "drawCalls": 3,
+          "bytes": 29780,
+          "sha256": "4f2f6bb9268c85797d50e461b0eb165225cdcc42e4f73dbcf8171b919c05d2a3",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.99874755,
+            "lat": 37.50305941595884,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "5c068973-bfc6-4148-b5a4-be1a8e87eb94"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            126.99705449859479,
+            37.50244649947399,
+            126.99747259896125,
+            37.502764299765445
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13776509",
+            "sourceSha256": "e9510f9a7d8a6ad3e82a29bcfa89f707ce44923e72eaef4cc580204047d916ff",
+            "operation": "Exact triangle partition; unchanged vertex attributes, materials and original terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-prestige-111",
+          "model": "generic-corrections/fallback-prestige-111.glb",
+          "name": "래미안퍼스티지 111동 (기존 추정 모형)",
+          "nameKo": "래미안퍼스티지 111동 (기존 추정 모형)",
+          "district": "서초구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            33.929527282714844,
+            90.0,
+            26.326955795288086
+          ],
+          "measuredGlbDimensions": [
+            33.929527282714844,
+            90.0,
+            26.326955795288086
+          ],
+          "bounds": {
+            "min": [
+              -106.34989929199219,
+              0.0,
+              26.82975196838379
+            ],
+            "max": [
+              -72.42037200927734,
+              90.0,
+              53.156707763671875
+            ]
+          },
+          "triangles": 460,
+          "drawCalls": 3,
+          "bytes": 30520,
+          "sha256": "bb23e9973dcb5266b73b26dbf52cdc8ece3bcccd09ef787a82e7c443002195bd",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.99874755,
+            "lat": 37.50305941595884,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "5bc96bb1-8a13-4115-b4db-f5ad97d1e2bf"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            126.99754329900847,
+            37.50258189960143,
+            126.99792749934288,
+            37.50281839980718
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13776509",
+            "sourceSha256": "e9510f9a7d8a6ad3e82a29bcfa89f707ce44923e72eaef4cc580204047d916ff",
+            "operation": "Exact triangle partition; unchanged vertex attributes, materials and original terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-prestige-112",
+          "model": "generic-corrections/fallback-prestige-112.glb",
+          "name": "래미안퍼스티지 112동 (기존 추정 모형)",
+          "nameKo": "래미안퍼스티지 112동 (기존 추정 모형)",
+          "district": "서초구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            32.78146743774414,
+            88.0,
+            34.14162826538086
+          ],
+          "measuredGlbDimensions": [
+            32.78146743774414,
+            88.0,
+            34.14162826538086
+          ],
+          "bounds": {
+            "min": [
+              -55.57041549682617,
+              0.0,
+              4.020412445068359
+            ],
+            "max": [
+              -22.78894805908203,
+              88.0,
+              38.16204071044922
+            ]
+          },
+          "triangles": 440,
+          "drawCalls": 3,
+          "bytes": 29280,
+          "sha256": "da8723f1595abf4ca919ba49d6002cf5908a32f5a2a5dec3e11a5bbb0852e51a",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.99874755,
+            "lat": 37.50305941595884,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "697147a0-de7d-4fa2-ab82-758800796ded"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            126.99811829949383,
+            37.50271659972736,
+            126.99848949979517,
+            37.50302329997061
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13776509",
+            "sourceSha256": "e9510f9a7d8a6ad3e82a29bcfa89f707ce44923e72eaef4cc580204047d916ff",
+            "operation": "Exact triangle partition; unchanged vertex attributes, materials and original terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-prestige-113",
+          "model": "generic-corrections/fallback-prestige-113.glb",
+          "name": "래미안퍼스티지 113동 (기존 추정 모형)",
+          "nameKo": "래미안퍼스티지 113동 (기존 추정 모형)",
+          "district": "서초구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            42.09839630126953,
+            88.0,
+            43.88218688964844
+          ],
+          "measuredGlbDimensions": [
+            42.09839630126953,
+            88.0,
+            43.88218688964844
+          ],
+          "bounds": {
+            "min": [
+              12.924482345581055,
+              0.0,
+              -22.97461700439453
+            ],
+            "max": [
+              55.02288055419922,
+              88.0,
+              20.907567977905273
+            ]
+          },
+          "triangles": 530,
+          "drawCalls": 3,
+          "bytes": 34864,
+          "sha256": "a0fd0af7e97bafa3c96fd2bd07a19325da31dd351ec79570f80c1b91b3e9c284",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.99874755,
+            "lat": 37.50305941595884,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "ae891078-f1d8-463f-b7ae-ecb6387c3e48"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            126.99889390012147,
+            37.50287159984392,
+            126.99937060050505,
+            37.503265800169586
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13776509",
+            "sourceSha256": "e9510f9a7d8a6ad3e82a29bcfa89f707ce44923e72eaef4cc580204047d916ff",
+            "operation": "Exact triangle partition; unchanged vertex attributes, materials and original terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-prestige-114",
+          "model": "generic-corrections/fallback-prestige-114.glb",
+          "name": "래미안퍼스티지 114동 (기존 추정 모형)",
+          "nameKo": "래미안퍼스티지 114동 (기존 추정 모형)",
+          "district": "서초구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            38.90149688720703,
+            88.0,
+            33.551849365234375
+          ],
+          "measuredGlbDimensions": [
+            38.90149688720703,
+            88.0,
+            33.551849365234375
+          ],
+          "bounds": {
+            "min": [
+              85.93212890625,
+              0.0,
+              -47.88804626464844
+            ],
+            "max": [
+              124.83362579345703,
+              88.0,
+              -14.336197853088379
+            ]
+          },
+          "triangles": 470,
+          "drawCalls": 3,
+          "bytes": 31136,
+          "sha256": "05470524de51f4a445b97d15723485884f9843c0972e091974e2a7b9921f4928",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.99874755,
+            "lat": 37.50305941595884,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "97eb6fd0-2c0b-45cc-81d2-a66441aecb85"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            126.99972060077043,
+            37.50318820010423,
+            127.0001611011048,
+            37.50348960035836
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13776509",
+            "sourceSha256": "e9510f9a7d8a6ad3e82a29bcfa89f707ce44923e72eaef4cc580204047d916ff",
+            "operation": "Exact triangle partition; unchanged vertex attributes, materials and original terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-prestige-115",
+          "model": "generic-corrections/fallback-prestige-115.glb",
+          "name": "래미안퍼스티지 115동 (기존 추정 모형)",
+          "nameKo": "래미안퍼스티지 115동 (기존 추정 모형)",
+          "district": "서초구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            38.90150451660156,
+            82.0,
+            33.55195236206055
+          ],
+          "measuredGlbDimensions": [
+            38.90150451660156,
+            82.0,
+            33.55195236206055
+          ],
+          "bounds": {
+            "min": [
+              157.39431762695312,
+              0.0,
+              -73.58079528808594
+            ],
+            "max": [
+              196.2958221435547,
+              82.0,
+              -40.02884292602539
+            ]
+          },
+          "triangles": 448,
+          "drawCalls": 3,
+          "bytes": 29780,
+          "sha256": "007ab2c6add5eb2d2dfccfc898a71a2ba2181165ae7fc18f29ac078f701eff64",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.99874755,
+            "lat": 37.50305941595884,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "76147cfe-8510-4d14-9736-6dfaee75bb1b"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.00052980145794,
+            37.50341900030698,
+            127.00097030187871,
+            37.50372040056316
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13776509",
+            "sourceSha256": "e9510f9a7d8a6ad3e82a29bcfa89f707ce44923e72eaef4cc580204047d916ff",
+            "operation": "Exact triangle partition; unchanged vertex attributes, materials and original terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-prestige-116",
+          "model": "generic-corrections/fallback-prestige-116.glb",
+          "name": "래미안퍼스티지 116동 (기존 추정 모형)",
+          "nameKo": "래미안퍼스티지 116동 (기존 추정 모형)",
+          "district": "서초구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            33.929534912109375,
+            88.0,
+            26.327232360839844
+          ],
+          "measuredGlbDimensions": [
+            33.929534912109375,
+            88.0,
+            26.327232360839844
+          ],
+          "bounds": {
+            "min": [
+              230.78170776367188,
+              0.0,
+              -60.77893829345703
+            ],
+            "max": [
+              264.71124267578125,
+              88.0,
+              -34.45170593261719
+            ]
+          },
+          "triangles": 440,
+          "drawCalls": 3,
+          "bytes": 29284,
+          "sha256": "c16b160679e05e749ef25fbeec53dcd66a9a78831f75244f96ce8ade2ae4eba5",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.99874755,
+            "lat": 37.50305941595884,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "0f40242b-1f64-427c-b5dd-fafdd2ba2ecd"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.0013608021258,
+            37.50336890025742,
+            127.0017450025466,
+            37.503605400454674
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13776509",
+            "sourceSha256": "e9510f9a7d8a6ad3e82a29bcfa89f707ce44923e72eaef4cc580204047d916ff",
+            "operation": "Exact triangle partition; unchanged vertex attributes, materials and original terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-prestige-117",
+          "model": "generic-corrections/fallback-prestige-117.glb",
+          "name": "래미안퍼스티지 117동 (기존 추정 모형)",
+          "nameKo": "래미안퍼스티지 117동 (기존 추정 모형)",
+          "district": "서초구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            45.25114440917969,
+            79.0,
+            48.0340461730957
+          ],
+          "measuredGlbDimensions": [
+            45.25114440917969,
+            79.0,
+            48.0340461730957
+          ],
+          "bounds": {
+            "min": [
+              22.9920654296875,
+              0.0,
+              37.83921432495117
+            ],
+            "max": [
+              68.24320983886719,
+              79.0,
+              85.87326049804688
+            ]
+          },
+          "triangles": 753,
+          "drawCalls": 3,
+          "bytes": 47928,
+          "sha256": "1b8905d5fba4e150f61b2282e6200c0f2e97ab511cbddd3235f1e1ccc28afe0a",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.99874755,
+            "lat": 37.50305941595884,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "f8b46fce-7de9-4fed-9ab2-43cb981bd3bb"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            126.99900790020038,
+            37.50228799934961,
+            126.99952030064351,
+            37.502719499739385
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13776509",
+            "sourceSha256": "e9510f9a7d8a6ad3e82a29bcfa89f707ce44923e72eaef4cc580204047d916ff",
+            "operation": "Exact triangle partition; unchanged vertex attributes, materials and original terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-prestige-118",
+          "model": "generic-corrections/fallback-prestige-118.glb",
+          "name": "래미안퍼스티지 118동 (기존 추정 모형)",
+          "nameKo": "래미안퍼스티지 118동 (기존 추정 모형)",
+          "district": "서초구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            45.25114440917969,
+            82.0,
+            48.0341796875
+          ],
+          "measuredGlbDimensions": [
+            45.25114440917969,
+            82.0,
+            48.0341796875
+          ],
+          "bounds": {
+            "min": [
+              91.29267883300781,
+              0.0,
+              13.605018615722656
+            ],
+            "max": [
+              136.5438232421875,
+              82.0,
+              61.639198303222656
+            ]
+          },
+          "triangles": 753,
+          "drawCalls": 3,
+          "bytes": 47936,
+          "sha256": "b3f5fa53200dc59acaf4f034dba5549fe4f073332184875cf1492a70459c58d8",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.99874755,
+            "lat": 37.50305941595884,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "7dca6e17-aa57-4e45-8cba-d79383ec82bf"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            126.99978130085202,
+            37.5025056995662,
+            127.00029370129513,
+            37.50293719989717
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13776509",
+            "sourceSha256": "e9510f9a7d8a6ad3e82a29bcfa89f707ce44923e72eaef4cc580204047d916ff",
+            "operation": "Exact triangle partition; unchanged vertex attributes, materials and original terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-prestige-119",
+          "model": "generic-corrections/fallback-prestige-119.glb",
+          "name": "래미안퍼스티지 119동 (기존 추정 모형)",
+          "nameKo": "래미안퍼스티지 119동 (기존 추정 모형)",
+          "district": "서초구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            40.70306396484375,
+            85.0,
+            44.82832336425781
+          ],
+          "measuredGlbDimensions": [
+            40.70306396484375,
+            85.0,
+            44.82832336425781
+          ],
+          "bounds": {
+            "min": [
+              161.56265258789062,
+              0.0,
+              -9.05964183807373
+            ],
+            "max": [
+              202.26571655273438,
+              85.0,
+              35.768680572509766
+            ]
+          },
+          "triangles": 530,
+          "drawCalls": 3,
+          "bytes": 34860,
+          "sha256": "c182a10f236382dbd2fd2f81d9455f7059b3fe50c28fe57d41044874a143f714",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.99874755,
+            "lat": 37.50305941595884,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "b85eaa33-701e-4c04-9394-7aead423be08"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.00057700151683,
+            37.5027380997429,
+            127.00103790186056,
+            37.50314080006179
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13776509",
+            "sourceSha256": "e9510f9a7d8a6ad3e82a29bcfa89f707ce44923e72eaef4cc580204047d916ff",
+            "operation": "Exact triangle partition; unchanged vertex attributes, materials and original terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-prestige-120",
+          "model": "generic-corrections/fallback-prestige-120.glb",
+          "name": "래미안퍼스티지 120동 (기존 추정 모형)",
+          "nameKo": "래미안퍼스티지 120동 (기존 추정 모형)",
+          "district": "서초구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            33.929534912109375,
+            90.0,
+            26.327102661132812
+          ],
+          "measuredGlbDimensions": [
+            33.929534912109375,
+            90.0,
+            26.327102661132812
+          ],
+          "bounds": {
+            "min": [
+              257.70806884765625,
+              0.0,
+              -19.846529006958008
+            ],
+            "max": [
+              291.6376037597656,
+              90.0,
+              6.480573654174805
+            ]
+          },
+          "triangles": 460,
+          "drawCalls": 3,
+          "bytes": 30520,
+          "sha256": "314d6483e6fa01423754217df112129b67c7b671bce755e286d2d3795d75ea37",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.99874755,
+            "lat": 37.50305941595884,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "94e5374f-559d-4fb3-ac52-5d8258334774"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.00166570224559,
+            37.50300119995251,
+            127.0020499026664,
+            37.503237700149405
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13776509",
+            "sourceSha256": "e9510f9a7d8a6ad3e82a29bcfa89f707ce44923e72eaef4cc580204047d916ff",
+            "operation": "Exact triangle partition; unchanged vertex attributes, materials and original terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-prestige-121",
+          "model": "generic-corrections/fallback-prestige-121.glb",
+          "name": "래미안퍼스티지 121동 (기존 추정 모형)",
+          "nameKo": "래미안퍼스티지 121동 (기존 추정 모형)",
+          "district": "서초구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            46.655303955078125,
+            74.0,
+            49.21351623535156
+          ],
+          "measuredGlbDimensions": [
+            46.655303955078125,
+            74.0,
+            49.21351623535156
+          ],
+          "bounds": {
+            "min": [
+              43.242042541503906,
+              0.0,
+              122.63052368164062
+            ],
+            "max": [
+              89.89734649658203,
+              74.0,
+              171.8440399169922
+            ]
+          },
+          "triangles": 783,
+          "drawCalls": 3,
+          "bytes": 49408,
+          "sha256": "60de442bb69633749336c0ffe31fde73176922151d11ac6b92acd2387acf91f2",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.99874755,
+            "lat": 37.50305941595884,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "867da145-5d02-42d1-9d26-ef381dd0b7d6"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            126.99923720041767,
+            37.501515698724624,
+            126.99976550083377,
+            37.50195779909463
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13776509",
+            "sourceSha256": "e9510f9a7d8a6ad3e82a29bcfa89f707ce44923e72eaef4cc580204047d916ff",
+            "operation": "Exact triangle partition; unchanged vertex attributes, materials and original terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-prestige-122",
+          "model": "generic-corrections/fallback-prestige-122.glb",
+          "name": "래미안퍼스티지 122동 (기존 추정 모형)",
+          "nameKo": "래미안퍼스티지 122동 (기존 추정 모형)",
+          "district": "서초구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            46.858428955078125,
+            74.0,
+            48.85749053955078
+          ],
+          "measuredGlbDimensions": [
+            46.858428955078125,
+            74.0,
+            48.85749053955078
+          ],
+          "bounds": {
+            "min": [
+              114.74838256835938,
+              0.0,
+              89.60242462158203
+            ],
+            "max": [
+              161.6068115234375,
+              74.0,
+              138.4599151611328
+            ]
+          },
+          "triangles": 783,
+          "drawCalls": 3,
+          "bytes": 49408,
+          "sha256": "f4ebaa99c71608b4950dfaa802722fad787322687b78473f4caf544655453912",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.99874755,
+            "lat": 37.50305941595884,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "6ab4af87-98a4-423b-95b9-9534220c15da"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.00004690105163,
+            37.50181559901807,
+            127.00057750154967,
+            37.50225449934468
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13776509",
+            "sourceSha256": "e9510f9a7d8a6ad3e82a29bcfa89f707ce44923e72eaef4cc580204047d916ff",
+            "operation": "Exact triangle partition; unchanged vertex attributes, materials and original terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-prestige-123",
+          "model": "generic-corrections/fallback-prestige-123.glb",
+          "name": "래미안퍼스티지 123동 (기존 추정 모형)",
+          "nameKo": "래미안퍼스티지 123동 (기존 추정 모형)",
+          "district": "서초구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            46.84075927734375,
+            74.0,
+            48.83541488647461
+          ],
+          "measuredGlbDimensions": [
+            46.84075927734375,
+            74.0,
+            48.83541488647461
+          ],
+          "bounds": {
+            "min": [
+              183.41990661621094,
+              0.0,
+              57.19758224487305
+            ],
+            "max": [
+              230.2606658935547,
+              74.0,
+              106.03299713134766
+            ]
+          },
+          "triangles": 785,
+          "drawCalls": 3,
+          "bytes": 49476,
+          "sha256": "b90c5c070f5c6450e15f8b609012507ad8a122169eb93a295e1d5b49c8a1f08b",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.99874755,
+            "lat": 37.50305941595884,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "862e6d08-7acc-4e9b-bd17-56745a737e83"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.00082450170264,
+            37.50210689926343,
+            127.00135490211844,
+            37.50254559956735
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13776509",
+            "sourceSha256": "e9510f9a7d8a6ad3e82a29bcfa89f707ce44923e72eaef4cc580204047d916ff",
+            "operation": "Exact triangle partition; unchanged vertex attributes, materials and original terrain anchor."
+          }
+        }
+      ]
+    },
+    {
+      "sourceId": "apt-a13776508",
+      "sourceSha256": "25ce92589d5735e5ed311c96d2a805ac1ae71198510ec2cffead33cc8fadbb0c",
+      "sourceFootprintIds": [
+        "e3069b86-ce0d-40bc-bae0-ce992d17b840",
+        "02fc7e0f-5c24-41ce-9707-1c697a10762d",
+        "02ce4ed4-d5a5-4972-8cbb-65493c52d1af",
+        "9f08c45e-b1cc-40ae-b963-05e5968996ea"
+      ],
+      "assets": [
+        {
+          "id": "apt-a13776508",
+          "model": "generic-corrections/apt-a13776508.glb",
+          "name": "반포푸르지오 3동 (기존 추정 모형)",
+          "nameKo": "반포푸르지오 3동 (기존 추정 모형)",
+          "district": "서초구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            228.3100128173828,
+            34.0,
+            87.75282287597656
+          ],
+          "measuredGlbDimensions": [
+            228.3100128173828,
+            34.0,
+            87.75282287597656
+          ],
+          "bounds": {
+            "min": [
+              -114.1550064086914,
+              0.0,
+              -67.92113494873047
+            ],
+            "max": [
+              114.1550064086914,
+              34.0,
+              19.831687927246094
+            ]
+          },
+          "triangles": 1160,
+          "drawCalls": 3,
+          "bytes": 75032,
+          "sha256": "fcad7e4865ac555a9e2e4025b423444ec798e26fa5f64b7321510287c843b4bd",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.99646845000001,
+            "lat": 37.50359995249322,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 3,
+          "footprintIds": [
+            "e3069b86-ce0d-40bc-bae0-ce992d17b840",
+            "02ce4ed4-d5a5-4972-8cbb-65493c52d1af",
+            "9f08c45e-b1cc-40ae-b963-05e5968996ea"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/APARTMENT_100_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "apartmentCode": "A13776508",
+          "searchable": true,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            126.99517580867304,
+            37.503421801196914,
+            126.99776109132698,
+            37.504210095936436
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13776508",
+            "sourceSha256": "25ce92589d5735e5ed311c96d2a805ac1ae71198510ec2cffead33cc8fadbb0c",
+            "operation": "Exact triangle partition; unchanged vertex attributes, materials and original terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-prestige-103",
+          "model": "generic-corrections/fallback-prestige-103.glb",
+          "name": "래미안퍼스티지 103동 (기존 추정 모형)",
+          "nameKo": "래미안퍼스티지 103동 (기존 추정 모형)",
+          "district": "서초구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            31.39450454711914,
+            74.0,
+            31.213581085205078
+          ],
+          "measuredGlbDimensions": [
+            31.39450454711914,
+            74.0,
+            31.213581085205078
+          ],
+          "bounds": {
+            "min": [
+              -17.057239532470703,
+              0.0,
+              36.70755386352539
+            ],
+            "max": [
+              14.337265014648438,
+              74.0,
+              67.92113494873047
+            ]
+          },
+          "triangles": 572,
+          "drawCalls": 3,
+          "bytes": 36348,
+          "sha256": "818dbf51002859ffcc0fb9fccf21b65e0e722ff1c74abd7461b2b741ce459c1f",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.99646845000001,
+            "lat": 37.50359995249322,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "02fc7e0f-5c24-41ce-9707-1c697a10762d"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/APARTMENT_100_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            126.9962753012855,
+            37.50298980406366,
+            126.99663079891361,
+            37.50327020219823
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13776508",
+            "sourceSha256": "25ce92589d5735e5ed311c96d2a805ac1ae71198510ec2cffead33cc8fadbb0c",
+            "operation": "Exact triangle partition; unchanged vertex attributes, materials and original terrain anchor."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "metadata-only",
+      "sourceId": "apt-a13780001",
+      "sourceSha256": "32e80cf8af229081e9202cce7440826203288ee94dc63169f8fd62297b502dbe",
+      "sourceFootprintIds": [
+        "e5b827c0-047d-47e7-8bd9-9f2613e45148"
+      ],
+      "assets": [
+        {
+          "id": "apt-a13780001",
+          "model": "apt-a13780001.glb",
+          "name": "래미안퍼스티지 125동 (기존 추정 모형)",
+          "nameKo": "래미안퍼스티지 125동 (기존 추정 모형)",
+          "district": "서초구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            25.645559310913086,
+            82.0,
+            24.28953742980957
+          ],
+          "measuredGlbDimensions": [
+            25.645559310913086,
+            82.0,
+            24.28953742980957
+          ],
+          "bounds": {
+            "min": [
+              -12.822779655456543,
+              0.0,
+              -12.144768714904785
+            ],
+            "max": [
+              12.822779655456543,
+              82.0,
+              12.144768714904785
+            ]
+          },
+          "triangles": 596,
+          "drawCalls": 3,
+          "bytes": 37840,
+          "sha256": "32e80cf8af229081e9202cce7440826203288ee94dc63169f8fd62297b502dbe",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.9949089,
+            "lat": 37.50267500007972,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "e5b827c0-047d-47e7-8bd9-9f2613e45148"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/APARTMENT_100_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "sourceIdentity": {
+            "sourceFootprintId": "e5b827c0-047d-47e7-8bd9-9f2613e45148",
+            "correctedNumber": 125,
+            "basis": "Exact numbered source footprint is125동 within the reviewed Prestige site boundary; the old nearest-complex label was Shinbanpo15.",
+            "archivedSourceName": "신반포15차아파트",
+            "removedApartmentCode": "A13780001",
+            "removedHouseholdCount": 180,
+            "geometryChanged": false,
+            "sourceProvenance": "docs/APARTMENT_100_PROVENANCE.json"
+          }
+        }
+      ]
     }
   ]
 }

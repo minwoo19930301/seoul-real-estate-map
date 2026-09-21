@@ -1,9 +1,12 @@
 import importlib.util
 import json
+import math
 import unittest
 from pathlib import Path
 
 import numpy as np
+from shapely.geometry import Polygon, shape, mapping
+from shapely.ops import transform, unary_union
 
 path = Path(__file__).resolve().parents[1] / 'scripts/bespoke/validate_height_regions.py'
 spec = importlib.util.spec_from_file_location('height_regions', path)
@@ -21,6 +24,35 @@ def region(name, x0, x1, height):
 
 
 class HeightRegions(unittest.TestCase):
+    def test_prestige28_preserves_numbered_source_footprints_and_register_heights(self):
+        root = path.parents[2]
+        manifest = json.loads((root / 'public/models/bespoke-manifest.json').read_text())
+        assets = {a['id']: a for a in manifest['assets']}
+        sources = json.loads((root / 'docs/model-audit/raemian-prestige-source-identity.json').read_text())
+        self.assertEqual([r['number'] for r in sources['towers']], list(range(101, 129)))
+        self.assertEqual(sum(int(r['register']['households']) for r in sources['towers']), 2444)
+        for record in sources['towers']:
+            with self.subTest(number=record['number']):
+                asset = assets[f'bespoke-raemian-prestige-{record["number"]}']
+                self.assertEqual(asset['footprintIds'], [record['sourceId']])
+                self.assertEqual(record['sourceChildIds'], [])
+                facts = asset['sourceRecord']['buildingFacts']
+                self.assertEqual(facts['floors'], int(record['register']['floors']))
+                self.assertEqual(facts['heightM'], float(record['register']['height']))
+                self.assertEqual(facts['sourceHeightM'], record['osmHeightM'])
+                lon, lat = asset['coordinate']['lon'], asset['coordinate']['lat']
+                footprint = transform(lambda x, y: ((x-lon)*111320*math.cos(math.radians(lat)), (y-lat)*111320), shape(record['geometry']))
+                triangles = module.read_triangles(root / 'public/models' / asset['model'])
+                self.assertAlmostEqual(float(triangles[:, :, 1].min()), 0, places=5)
+                self.assertAlmostEqual(float(triangles[:, :, 1].max()), facts['heightM'], places=4)
+                ground = triangles[np.max(np.abs(triangles[:, :, 1]), axis=1) < 1e-5]
+                union = unary_union([Polygon(t[:, [0, 2]] * [1, -1]) for t in ground])
+                self.assertLess(union.symmetric_difference(footprint).area, .001)
+                regions = [{'id': str(record['number']), 'geometry': mapping(footprint), 'height_m': facts['heightM']}]
+                inspected = module.inspect_regions(triangles, regions)[0]
+                self.assertEqual(inspected['overHeightTriangles'], 0)
+                self.assertGreater(inspected['roofCoverageRatio'], .999999)
+
     def test_empty_or_duplicated_region_specifications_are_rejected(self):
         for regions in [[], None, {}, [region('same', 0, 10, 10), region('same', 10, 20, 30)]]:
             with self.subTest(regions=regions), self.assertRaises(ValueError):

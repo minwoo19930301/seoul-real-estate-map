@@ -2,9 +2,20 @@ import type { CityModelAsset } from './city-models.ts';
 
 /** A partition corrects source ownership without changing the archived base catalog. */
 export interface GenericCorrection {
+  kind?: 'metadata-only';
   sourceId: string; sourceSha256: string; sourceFootprintIds: string[]; assets: CityModelAsset[];
 }
 const same = (a: string[], b: string[]) => a.length === b.length && [...a].sort().every((id, i) => id === [...b].sort()[i]);
+const identityFields = new Set(['name', 'nameKo', 'apartmentCode', 'householdCount', 'sourceIdentity']);
+function stable(value: unknown): string {
+  if (Array.isArray(value)) return '[' + value.map(stable).join(',') + ']';
+  if (value && typeof value === 'object') return '{' + Object.entries(value).sort(([a], [b]) => a.localeCompare(b)).map(([k, v]) => JSON.stringify(k) + ':' + stable(v)).join(',') + '}';
+  return JSON.stringify(value) ?? 'undefined';
+}
+function unchangedRendering(original: CityModelAsset, part: CityModelAsset) {
+  const preserved = (asset: CityModelAsset) => Object.fromEntries(Object.entries(asset).filter(([key]) => !identityFields.has(key)));
+  return stable(preserved(original)) === stable(preserved(part));
+}
 export function applyGenericCorrections(assets: CityModelAsset[], matches: Record<string, string[]>, raw: unknown) {
   const document = raw as { version?: number; corrections?: GenericCorrection[] };
   if (document?.version !== 1 || !Array.isArray(document.corrections)) throw new Error('Invalid generic correction document');
@@ -15,7 +26,19 @@ export function applyGenericCorrections(assets: CityModelAsset[], matches: Recor
     const original = byId.get(correction.sourceId);
     if (!original || original.quality || touched.has(original.id) || original.sha256 !== correction.sourceSha256
         || !Array.isArray(correction.sourceFootprintIds) || !same(matches[original.id] ?? [], correction.sourceFootprintIds)
-        || !Array.isArray(correction.assets) || correction.assets.length < 2) throw new Error('Generic correction source mismatch');
+        || !Array.isArray(correction.assets)) throw new Error('Generic correction source mismatch');
+    if (correction.kind === 'metadata-only') {
+      const part = correction.assets[0];
+      if (correction.assets.length !== 1 || correction.sourceFootprintIds.length !== 1 || !part
+          || part.id !== original.id || !Array.isArray(part.footprintIds) || !same(part.footprintIds, correction.sourceFootprintIds)
+          || typeof part.nameKo !== 'string' || !part.nameKo.trim() || !unchangedRendering(original, part)) {
+        throw new Error('Metadata-only correction must preserve the exact singleton asset and rendering properties');
+      }
+      byId.set(original.id, part);
+      touched.add(original.id);
+      continue;
+    }
+    if (correction.kind !== undefined || correction.assets.length < 2) throw new Error('Generic correction source mismatch');
     const partitionIds: string[] = [], footprints: string[] = [];
     for (const part of correction.assets) {
       if (!part || !/^[a-z0-9_-]+$/.test(part.id) || part.quality || part.supersedes?.length

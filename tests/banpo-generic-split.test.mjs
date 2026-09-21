@@ -71,6 +71,8 @@ for(const site of [
  {key:'onebailey-113-116',id:'apt-a13780006',count:5,parts:Array(5).fill(1),triangles:[236,992,905,1028,1202],components:1332,convex:79,outsideMax:3.92},
  {key:'onepentas',id:'apt-a10022556',count:7,parts:[4,1,1,1],triangles:[2953,685,592,580],components:1620,convex:24,outsideMax:2.04},
  {key:'acro-riverpark',id:'apt-a10027205',count:17,parts:[1,1,1,1,1,1,1,1,1,1,1,2,1,1,1,1],triangles:[356,1787,1263,1355,980,1446,1208,1557,2128,1381,1052,1470,1906,1831,1381,1052],components:6138,convex:362,outsideMax:4.63},
+ {key:'prestige-main',id:'apt-a13776509',count:23,parts:[2,...Array(21).fill(1)],triangles:[1254,440,620,620,620,440,440,440,448,460,440,530,470,448,440,753,753,530,460,783,783,785],components:4555,convex:242,outsideMax:12.30},
+ {key:'prestige-103',id:'apt-a13776508',count:4,parts:[3,1],triangles:[1160,572],components:714,convex:0,outsideMin:0,outsideMax:.046},
 ]){
  const source=base.assets.find(a=>a.id===site.id);
  const correction=corrections.corrections.find(c=>c.sourceId===source.id);
@@ -81,7 +83,7 @@ for(const site of [
   assert.deepEqual(correction.assets.map(a=>a.triangles),site.triangles);
   assert.equal(proof.crossGroupComponents,0);assert.equal(proof.vertexConnectedComponents,site.components);
   assert.equal(proof.trianglesAssignedWithinUniqueSourceConvexHull,site.convex);
-  assert.ok(proof.maximumVertexDistanceOutsideSourceFootprintM>.15);
+  assert.ok(proof.maximumVertexDistanceOutsideSourceFootprintM>(site.outsideMin??.15));
   assert.ok(proof.maximumVertexDistanceOutsideSourceFootprintM<site.outsideMax);
   assert.match(proof.ownershipMethod,/uniquely covering union/);
   for(const a of correction.assets){assert.deepEqual(a.coordinate,source.coordinate);assert.equal(a.yawDegFromEast,source.yawDegFromEast);}
@@ -103,6 +105,78 @@ for(const site of [
   }
  });
 }
+for(const [site,sourceId,rangeHash]of [
+ ['prestige-main','apt-a13776509','2d0c78b984681b309ef8394865bfb20a5ed33ec696e961a5b4b039fd8b5e3c29'],
+ ['prestige-103','apt-a13776508','a753d2d8a030c7b23dba04cff4846938b5df54acb68096459eb95508041b0cba'],
+])test(`${site} independent triangle records agree with byte-exact source authoring ranges`,()=>{
+ const source=base.assets.find(a=>a.id===sourceId);
+ const parts=corrections.corrections.find(c=>c.sourceId===sourceId).assets;
+ const replay=json(`docs/model-audit/${site}-generic-split.json`).sourceAuthoringReplay;
+ assert.equal(replay.byteExact,true);assert.equal(replay.sha256,source.sha256);
+ assert.equal(hash(JSON.stringify(replay.triangleRangesBySource)),rangeHash);
+ const ordered=new Map();
+ triangles(source,undefined,undefined,({material,index,signature})=>{
+  if(!ordered.has(material))ordered.set(material,[]);
+  assert.equal(ordered.get(material).length,index);ordered.get(material).push(signature);
+ });
+ const bySource=new Map(replay.triangleRangesBySource.map(row=>[row.sourceId,[]]));
+ for(const [material,signatures]of ordered){
+  const coverage=new Uint8Array(signatures.length);
+  for(const row of replay.triangleRangesBySource){
+   const [start,end]=row.triangleRangesByMaterial[material];
+   assert.ok(Number.isInteger(start)&&start>=0&&start<=end&&end<=signatures.length);
+   bySource.get(row.sourceId).push(...signatures.slice(start,end));
+   for(let i=start;i<end;i++)coverage[i]++;
+  }
+  assert.ok(coverage.every(n=>n===1));
+ }
+ for(const part of parts)assert.deepEqual(triangles(part),part.footprintIds.flatMap(id=>bySource.get(id)).sort(),part.id);
+});
+test('Prestige bindings cover exactly28 numbered sources while shops and Prugio neighbors remain separate',()=>{
+ const bindings=json('docs/model-audit/prestige-fallback-bindings.json').bindings;
+ assert.deepEqual(bindings.map(b=>b.number),Array.from({length:28},(_,i)=>101+i));
+ assert.equal(hash(JSON.stringify(bindings.map(b=>[b.number,b.sourceFootprintId]))),'2687f9aa4e0636f0cb18124729bea5d8c86dbfb977c17af6bdfd4f1dc9b89c7a');
+ assert.equal(new Set(bindings.map(b=>b.sourceFootprintId)).size,28);
+ assert.equal(new Set(bindings.map(b=>b.fallbackAssetId)).size,28);
+ for(const binding of bindings){
+  const a=effective.assets.find(a=>a.id===binding.fallbackAssetId);
+  assert.ok(a);assert.deepEqual(a.footprintIds,[binding.sourceFootprintId]);
+  assert.deepEqual(effective.matches[a.id],a.footprintIds);
+  assert.deepEqual(binding.supersedes,[a.id]);assert.equal(binding.fallbackModel,a.model);
+  assert.equal(binding.fallbackSha256,a.sha256);assert.equal(hash(read('public/models/'+a.model)),a.sha256);
+  assert.equal(a.householdCount,undefined,'No household total is transferred to a singleton');
+  assert.equal(Object.values(effective.matches).filter(ids=>ids.includes(binding.sourceFootprintId)).length,1);
+ }
+ const shops=effective.assets.find(a=>a.id==='apt-a13776509');
+ assert.equal(shops.nameKo,'래미안퍼스티지 상가 2동 (기존 추정 모형)');assert.equal(shops.category,'commercial');
+ assert.deepEqual(shops.footprintIds,['af87fb1a-62e3-4208-9f31-8162551b7cac','2922e743-4d1e-4765-b0aa-d89f904d3bea']);
+ assert.equal(shops.triangles,1254);assert.equal(shops.residentialCompletionCredit,false);
+ const prugio=effective.assets.find(a=>a.id==='apt-a13776508');
+ assert.equal(prugio.triangles,1160);assert.equal(prugio.footprintIds.length,3);
+ assert.equal(prugio.nameKo,'반포푸르지오 3동 (기존 추정 모형)');assert.equal(prugio.residentialCompletionCredit,false);
+ const tower103=effective.assets.find(a=>a.id==='fallback-prestige-103');
+ assert.equal(tower103.apartmentCode,undefined);assert.equal(tower103.householdCount,undefined);
+ for(const residual of [shops,prugio])assert.ok(residual.footprintIds.every(id=>!bindings.some(b=>b.sourceFootprintId===id)));
+ for(const n of [101,124,127,128])assert.equal(bindings.find(b=>b.number===n).fallbackAssetId,`residential-${bindings.find(b=>b.number===n).sourceFootprintId}`);
+ assert.equal(bindings.find(b=>b.number===126).fallbackAssetId,'fallback-prestige-126');
+});
+test('Prestige125 changes identity metadata only and all prior corrections remain untouched',()=>{
+ const source=base.assets.find(a=>a.id==='apt-a13780001'),part=effective.assets.find(a=>a.id===source.id);
+ const correction=corrections.corrections.find(c=>c.sourceId===source.id);
+ assert.equal(correction.kind,'metadata-only');assert.equal(correction.assets.length,1);
+ assert.equal(part.nameKo,'래미안퍼스티지 125동 (기존 추정 모형)');
+ assert.equal(source.nameKo,'신반포15차아파트');assert.equal(source.householdCount,180);assert.equal(source.apartmentCode,'A13780001');
+ assert.equal(part.householdCount,undefined);assert.equal(part.apartmentCode,undefined);
+ const identity=new Set(['name','nameKo','apartmentCode','householdCount','sourceIdentity']);
+ const preserved=a=>Object.fromEntries(Object.entries(a).filter(([k])=>!identity.has(k)));
+ assert.deepEqual(preserved(part),preserved(source));
+ assert.equal(part.model,'apt-a13780001.glb');assert.equal(part.sha256,'32e80cf8af229081e9202cce7440826203288ee94dc63169f8fd62297b502dbe');
+ assert.equal(hash(read('public/models/'+part.model)),part.sha256);
+ const added=new Set(['apt-a13776509','apt-a13776508','apt-a13780001']);
+ const prior=corrections.corrections.filter(c=>!added.has(c.sourceId));
+ assert.equal(hash(JSON.stringify(prior)),'4d7ced8a5b0e37548e95b9a6bd21eea8da072d3ce4cb5b9e6189cc45cfe09731');
+ for(const c of prior)for(const a of c.assets)assert.equal(hash(read('public/models/'+a.model)),a.sha256);
+});
 test('all 15 Acro fallbacks retain the exact source-feature triangle emissions, including the historical 110 part',()=>{
  const source=base.assets.find(a=>a.id==='apt-a10027205');
  const correction=corrections.corrections.find(c=>c.sourceId===source.id);
