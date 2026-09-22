@@ -35,6 +35,7 @@ function triangles(asset, onTriangle) {
 for (const batch of [
  {name:'godeok-laclassy', bindings:52, residuals:65, prior:27, triangles:93135},
  {name:'godeok-central-hillstate', bindings:46, residuals:4, prior:33, triangles:32489},
+ {name:'geumho-oksu-dmc', bindings:37, residuals:6, prior:35, triangles:33787},
 ]) {
 const audit=json(`docs/model-audit/${batch.name}-generic-split.json`);
 const frozen=json(`docs/model-audit/${batch.name}-fallback-inputs.json`);

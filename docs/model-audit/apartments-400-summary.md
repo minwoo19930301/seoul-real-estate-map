@@ -1,6 +1,6 @@
 # 서울 400세대 이상 아파트 모델 적용 현황
 
-공식 자료 확인일: 2026-09-21. `scripts/build_apartment_bespoke_queue.py`로 생성합니다. **대상 1,417 관리코드, 주거동 전체 적용 완료 25, 미완료 1,392**입니다. 분류 보강 검토 2건과 명시적 비아파트 제외 1건은 큐에 별도로 남깁니다.
+공식 자료 확인일: 2026-09-21. `scripts/build_apartment_bespoke_queue.py`로 생성합니다. **대상 1,417 관리코드, 주거동 전체 적용 완료 26, 미완료 1,391**입니다. 분류 보강 검토 2건과 명시적 비아파트 제외 1건은 큐에 별도로 남깁니다.
 
 ## 모수와 중복
 
@@ -31,11 +31,14 @@ K-apt 서울 자료의 123코드에는 복수 주소 등에 따른 추가 147행
 | A10026004 | 신반포자이아파트 | complete_residential_buildings | 7 / 7 | 7 |
 | A10026207 | 서울숲리버뷰자이아파트 | complete_residential_buildings | 7 / 7 | 7 |
 | A10026227 | 아크로리버뷰 신반포 | complete_residential_buildings | 5 / 5 | 5 |
+| A10026418 | e편한세상금호파크힐스 | partial | 16 / 17 | 16 |
 | A10026988 | 트리마제 | complete_residential_buildings | 4 / 4 | 0 |
 | A10027205 | 아크로리버파크 | complete_residential_buildings | 15 / 15 | 15 |
 | A10027207 | 래미안힐스테이트 고덕 | partial | 28 / 51 | 28 |
+| A10027817 | DMC파크뷰자이아파트 | partial | 6 / 61 | 6 |
 | A10027908 | 래미안첼리투스 | complete_residential_buildings | 3 / 3 | 0 |
 | A12174601 | 메세나폴리스 | complete_residential_buildings | 3 / 3 | 0 |
+| A13375907 | 래미안옥수리버젠 | complete_residential_buildings | 15 / 15 | 15 |
 | A13527017 | 타워팰리스1차 | complete_residential_buildings | 4 / 4 | 0 |
 | A13583507 | 은마 | complete_residential_buildings | 28 / 28 | 28 |
 | A13585402 | 타워팰리스2차 | complete_residential_buildings | 2 / 2 | 0 |

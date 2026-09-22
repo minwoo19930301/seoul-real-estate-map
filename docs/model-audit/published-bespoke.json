@@ -84209,6 +84209,2411 @@
         }
       ],
       "placementMethod": "Long-axis oriented rectangle mapping with positive plan scales and registered overall height; actual concave target shapes are not reconstructed."
+    },
+    "geumho-park-hills-101-representative-v2": {
+      "sources": [
+        {
+          "url": "https://file.kbland.kr/image/kbstar/land/img/revw/userseq/1474905/20220211/MjE2YzU1MGZlNGZkZjQzZjcy.jpg",
+          "sha256": "06876c49c0e6f87482a377b06ee37a27dabe114827dc93449e091ee37aec619d",
+          "scope": "complex",
+          "observedTowerNumber": null,
+          "observations": "Root directly viewed original completed-complex photograph and final V2 four-view sheet. The central photographed tower has a full-height ochre/terracotta endwall, pale window-bank frames and gray service bands. V2 adds the broad opaque terracotta endwall with a pale outer frame to one Y-wing. No101number or compassface established; edge assignment and hidden faces are inferred. Photographed school, gate, adjacent structures and terrain excluded."
+        },
+        {
+          "url": "https://kbland.kr/se/c/31450",
+          "observations": "Primary complex photograph; representative only."
+        },
+        {
+          "dataset": "Previously identified numbered source inventory",
+          "snapshot": "geumho-park-hills-source-identity.json",
+          "sha256": "152fa5e375a7724807343ffeb5a2566707ffd0ac54aceaea472ebeee9e0d3695",
+          "observations": "16existing numbered source polygons matched by normalized number, exact registered road and parcel, equal floors and height difference<=1m, and source proximity. Root verified actual DB geometry/properties/raw register. Official17buildings;OA1467households versus Kapt1330disagreement preserved. Missing17thsource remains unchanged."
+        }
+      ],
+      "review": {
+        "siteId": "geumho-park-hills-101-representative-v2",
+        "status": "visually-reviewed",
+        "reviewer": "Root independently viewed original photograph and final four-view representative sheet",
+        "inferenceApprovedAssets": [
+          "bespoke-geumho-park-hills-101"
+        ],
+        "reviewedSourcePhotos": [
+          {
+            "url": "https://file.kbland.kr/image/kbstar/land/img/revw/userseq/1474905/20220211/MjE2YzU1MGZlNGZkZjQzZjcy.jpg",
+            "sha256": "06876c49c0e6f87482a377b06ee37a27dabe114827dc93449e091ee37aec619d",
+            "scope": "complex",
+            "observedTowerNumber": null,
+            "observations": "Root directly viewed original completed-complex photograph and final V2 four-view sheet. The central photographed tower has a full-height ochre/terracotta endwall, pale window-bank frames and gray service bands. V2 adds the broad opaque terracotta endwall with a pale outer frame to one Y-wing. No101number or compassface established; edge assignment and hidden faces are inferred. Photographed school, gate, adjacent structures and terrain excluded."
+          }
+        ],
+        "comparisons": [
+          "Root directly viewed original completed-complex photograph and final V2 four-view sheet. The central photographed tower has a full-height ochre/terracotta endwall, pale window-bank frames and gray service bands. V2 adds the broad opaque terracotta endwall with a pale outer frame to one Y-wing. No101number or compassface established; edge assignment and hidden faces are inferred. Photographed school, gate, adjacent structures and terrain excluded.",
+          "Compared original with front/opposite/side/roof representative renders. Hidden faces and precise facade measurements remain inferred.",
+          "One representative only; sibling geometry/materials shared with independent placements. Actual MCP clean reload and source hashes recorded."
+        ],
+        "limits": [
+          "Photo tower number and compass face unknown; representative exterior inferred from complex photograph.",
+          "Terracotta endwall placement, hidden facade and roof dimensions are unmeasured.",
+          "OSM54m versus registered54.25m retained; legal roofdatum unconfirmed.",
+          "Copies repeat representative geometry/window/floor pattern; individual shape and floor details not reconstructed.",
+          "16of17 official buildings mapped. OA1467households differs from Kapt1330; both400+."
+        ],
+        "renders": [
+          "docs/model-audit/renders/geumho-park-hills-101-representative-v2/front.png",
+          "docs/model-audit/renders/geumho-park-hills-101-representative-v2/opposite.png",
+          "docs/model-audit/renders/geumho-park-hills-101-representative-v2/side.png",
+          "docs/model-audit/renders/geumho-park-hills-101-representative-v2/roof.png"
+        ],
+        "renderSha256": {
+          "docs/model-audit/renders/geumho-park-hills-101-representative-v2/front.png": "d014d519a6364a7728cf5f69f35f5ec7dccd69579b604b7da621a5de6c6e030e",
+          "docs/model-audit/renders/geumho-park-hills-101-representative-v2/opposite.png": "c8ec6b87a386f7ac1e4602cc51032d71571238a2ae69852cb65b36c2a5b86f50",
+          "docs/model-audit/renders/geumho-park-hills-101-representative-v2/side.png": "6afb2574d99539778cd4494b296c7e0c040e8171768ee16ae4d62c67330b775c",
+          "docs/model-audit/renders/geumho-park-hills-101-representative-v2/roof.png": "ea243269094f6ff21c7f38dec647de11f290a79a13bc522e5dca7d9a5124177f"
+        },
+        "reviewedInputs": {
+          "geumho-park-hills-101.glb": "a0b35344c871cd2376f86e9a23eee588fb3779133d5a89dfe462167e30a08232",
+          "geumho-park-hills-101-authored.blend": "34530fb456a002d006e0caff3885f075abbcc0720d6cf325d3465761dfb42cb8"
+        }
+      },
+      "assets": [
+        {
+          "id": "bespoke-geumho-park-hills-101",
+          "sourceSha256": "a0b35344c871cd2376f86e9a23eee588fb3779133d5a89dfe462167e30a08232",
+          "sha256": "11409debb92880b9f922de861a50c42f00694bdea381736255c43bc181bebf0c",
+          "bytes": 1077584,
+          "dimensions": [
+            41.45437240600586,
+            54.25,
+            41.466609954833984
+          ],
+          "min": [
+            -24.366262435913086,
+            0,
+            -24.560802459716797
+          ],
+          "max": [
+            17.088109970092773,
+            54.25,
+            16.905807495117188
+          ],
+          "triangles": 19800,
+          "components": [
+            {
+              "name": "Geumho101_editable_Geumho101_light_grey_solid_wall002",
+              "triangles": 7200
+            },
+            {
+              "name": "Geumho101_editable_Geumho101_broad_white_facade_frames002",
+              "triangles": 6468
+            },
+            {
+              "name": "Geumho101_editable_Geumho101_grey_service_pier002",
+              "triangles": 144
+            },
+            {
+              "name": "Geumho101_editable_Geumho101_turquoise_balcony_glazing002",
+              "triangles": 5928
+            },
+            {
+              "name": "Geumho101_editable_Geumho101_muted_terracotta_accents002",
+              "triangles": 60
+            }
+          ]
+        }
+      ],
+      "mcpEvidence": [
+        {
+          "path": "docs/model-audit/mcp/geumho-park-hills-101-representative-v2/mcp-build-reload-final.json",
+          "sha256": "bfbc72aee54d8ad7c0743c698eb1db6891dd0bba4a726801724305317931cfb2",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        }
+      ],
+      "recipeInputs": [
+        {
+          "path": "modeling/bespoke/geumho-park-hills-101-representative-v2/build.py",
+          "sha256": "c939f16b15b6d21fe5d4062aaf57c96aabd9913d11c3fd688ab2b123cd8a9277"
+        },
+        {
+          "path": "modeling/bespoke/geumho-park-hills-101-representative-v2/source-data.json",
+          "sha256": "12fba412347d73b3c1016d0c59841150b74571fc04c4fae6457f806b7bce831c"
+        },
+        {
+          "path": "modeling/bespoke/geumho-park-hills-101-representative-v2/regions.json",
+          "sha256": "80e027f44d57c2f28feaa8545160e71b1b1e5ad7b0ce3a95aa49eb6bcaa20e01"
+        },
+        {
+          "path": "modeling/bespoke/geumho-park-hills-101-representative-v2/geometry-proof.json",
+          "sha256": "7e858404010b3b0d54b6785a184d34e43deb05604edf821b7e1dd0c1553ab54c"
+        },
+        {
+          "path": "modeling/bespoke/geumho-park-hills-101-representative-v2/standalone-validation.json",
+          "sha256": "a593c4e0c5a857e8f4115442ffcf582a152b79bc223844f075a2c2579e84cac3"
+        },
+        {
+          "path": "modeling/bespoke/geumho-park-hills-101-representative-v2/validation.json",
+          "sha256": "4e9e06d5c1a497102bd56d0b16a121d51e6f89f467fad2cf44715e937c3cf868"
+        },
+        {
+          "path": "modeling/bespoke/geumho-park-hills-101-representative-v2/facade-regions.json",
+          "sha256": "1a2cabaf857104dc905e52f0e0b6459da64a41e15c075bff44834a8de675ebe9"
+        },
+        {
+          "path": "modeling/bespoke/geumho-park-hills-101-representative-v2/geumho-park-hills-source-identity.json",
+          "sha256": "152fa5e375a7724807343ffeb5a2566707ffd0ac54aceaea472ebeee9e0d3695"
+        }
+      ]
+    },
+    "geumho-park-hills-shared": {
+      "sources": [
+        {
+          "url": "https://file.kbland.kr/image/kbstar/land/img/revw/userseq/1474905/20220211/MjE2YzU1MGZlNGZkZjQzZjcy.jpg",
+          "sha256": "06876c49c0e6f87482a377b06ee37a27dabe114827dc93449e091ee37aec619d",
+          "scope": "complex",
+          "observedTowerNumber": null,
+          "observations": "Root directly viewed original completed-complex photograph and final V2 four-view sheet. The central photographed tower has a full-height ochre/terracotta endwall, pale window-bank frames and gray service bands. V2 adds the broad opaque terracotta endwall with a pale outer frame to one Y-wing. No101number or compassface established; edge assignment and hidden faces are inferred. Photographed school, gate, adjacent structures and terrain excluded."
+        },
+        {
+          "url": "https://kbland.kr/se/c/31450",
+          "observations": "Primary complex photograph; representative only."
+        },
+        {
+          "dataset": "Previously identified numbered source inventory",
+          "snapshot": "geumho-park-hills-source-identity.json",
+          "sha256": "152fa5e375a7724807343ffeb5a2566707ffd0ac54aceaea472ebeee9e0d3695",
+          "observations": "16existing numbered source polygons matched by normalized number, exact registered road and parcel, equal floors and height difference<=1m, and source proximity. Root verified actual DB geometry/properties/raw register. Official17buildings;OA1467households versus Kapt1330disagreement preserved. Missing17thsource remains unchanged."
+        }
+      ],
+      "review": {
+        "siteId": "geumho-park-hills-shared",
+        "status": "visually-reviewed",
+        "reviewer": "Root independently viewed original photograph and final four-view representative sheet",
+        "inferenceApprovedAssets": [
+          "bespoke-geumho-park-hills-102",
+          "bespoke-geumho-park-hills-103",
+          "bespoke-geumho-park-hills-104",
+          "bespoke-geumho-park-hills-105",
+          "bespoke-geumho-park-hills-106",
+          "bespoke-geumho-park-hills-107",
+          "bespoke-geumho-park-hills-108",
+          "bespoke-geumho-park-hills-109",
+          "bespoke-geumho-park-hills-110",
+          "bespoke-geumho-park-hills-111",
+          "bespoke-geumho-park-hills-112",
+          "bespoke-geumho-park-hills-113",
+          "bespoke-geumho-park-hills-114",
+          "bespoke-geumho-park-hills-115",
+          "bespoke-geumho-park-hills-116"
+        ],
+        "reviewedSourcePhotos": [
+          {
+            "url": "https://file.kbland.kr/image/kbstar/land/img/revw/userseq/1474905/20220211/MjE2YzU1MGZlNGZkZjQzZjcy.jpg",
+            "sha256": "06876c49c0e6f87482a377b06ee37a27dabe114827dc93449e091ee37aec619d",
+            "scope": "complex",
+            "observedTowerNumber": null,
+            "observations": "Root directly viewed original completed-complex photograph and final V2 four-view sheet. The central photographed tower has a full-height ochre/terracotta endwall, pale window-bank frames and gray service bands. V2 adds the broad opaque terracotta endwall with a pale outer frame to one Y-wing. No101number or compassface established; edge assignment and hidden faces are inferred. Photographed school, gate, adjacent structures and terrain excluded."
+          }
+        ],
+        "comparisons": [
+          "Root directly viewed original completed-complex photograph and final V2 four-view sheet. The central photographed tower has a full-height ochre/terracotta endwall, pale window-bank frames and gray service bands. V2 adds the broad opaque terracotta endwall with a pale outer frame to one Y-wing. No101number or compassface established; edge assignment and hidden faces are inferred. Photographed school, gate, adjacent structures and terrain excluded.",
+          "Compared original with front/opposite/side/roof representative renders. Hidden faces and precise facade measurements remain inferred.",
+          "One representative only; sibling geometry/materials shared with independent placements. Actual MCP clean reload and source hashes recorded.",
+          "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+          "All copy transforms, bounds, source identities and independent fallback bindings checked automatically."
+        ],
+        "limits": [
+          "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+          "Representative has no number label; no node needs hiding.",
+          "Existing authored assets remain unchanged."
+        ],
+        "renders": [
+          "docs/model-audit/renders/geumho-park-hills-101-representative-v2/front.png",
+          "docs/model-audit/renders/geumho-park-hills-101-representative-v2/opposite.png",
+          "docs/model-audit/renders/geumho-park-hills-101-representative-v2/side.png",
+          "docs/model-audit/renders/geumho-park-hills-101-representative-v2/roof.png"
+        ],
+        "renderSha256": {
+          "docs/model-audit/renders/geumho-park-hills-101-representative-v2/front.png": "d014d519a6364a7728cf5f69f35f5ec7dccd69579b604b7da621a5de6c6e030e",
+          "docs/model-audit/renders/geumho-park-hills-101-representative-v2/opposite.png": "c8ec6b87a386f7ac1e4602cc51032d71571238a2ae69852cb65b36c2a5b86f50",
+          "docs/model-audit/renders/geumho-park-hills-101-representative-v2/side.png": "6afb2574d99539778cd4494b296c7e0c040e8171768ee16ae4d62c67330b775c",
+          "docs/model-audit/renders/geumho-park-hills-101-representative-v2/roof.png": "ea243269094f6ff21c7f38dec647de11f290a79a13bc522e5dca7d9a5124177f"
+        },
+        "reviewedInputs": {
+          "geumho-park-hills-101.glb": "a0b35344c871cd2376f86e9a23eee588fb3779133d5a89dfe462167e30a08232",
+          "geumho-park-hills-101-authored.blend": "34530fb456a002d006e0caff3885f075abbcc0720d6cf325d3465761dfb42cb8"
+        },
+        "reviewScope": "One representative visually reviewed; batch placement checks and sample map review for shared copies"
+      },
+      "assets": [
+        {
+          "id": "bespoke-geumho-park-hills-102",
+          "dimensions": [
+            47.107060110427895,
+            59.85,
+            33.44104758354418
+          ],
+          "min": [
+            -20.543838917027742,
+            0,
+            -17.999022321981904
+          ],
+          "max": [
+            26.563221193400157,
+            59.85,
+            15.44202526156228
+          ],
+          "sha256": "11409debb92880b9f922de861a50c42f00694bdea381736255c43bc181bebf0c",
+          "sourceSha256": "a0b35344c871cd2376f86e9a23eee588fb3779133d5a89dfe462167e30a08232",
+          "sharedModel": "bespoke/geumho-park-hills-101-representative-v2/bespoke-geumho-park-hills-101.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-geumho-park-hills-101",
+            "sourceDimensions": [
+              41.45437240600586,
+              54.25,
+              41.466609954833984
+            ],
+            "matrix": [
+              0.6883792092529435,
+              0.0,
+              -0.7437230974332625,
+              0.0,
+              0.0,
+              1.103225806451613,
+              0.0,
+              0.0,
+              0.7282627272432659,
+              0.0,
+              0.7583025078678783,
+              0.0,
+              8.873021910453769,
+              0.0,
+              -1.9055301208298001,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-geumho-park-hills-103",
+          "dimensions": [
+            47.10598103569438,
+            57.05,
+            33.43312314673197
+          ],
+          "min": [
+            -20.54523346822885,
+            0,
+            -17.995804237652756
+          ],
+          "max": [
+            26.560747567465526,
+            57.05,
+            15.437318909079218
+          ],
+          "sha256": "11409debb92880b9f922de861a50c42f00694bdea381736255c43bc181bebf0c",
+          "sourceSha256": "a0b35344c871cd2376f86e9a23eee588fb3779133d5a89dfe462167e30a08232",
+          "sharedModel": "bespoke/geumho-park-hills-101-representative-v2/bespoke-geumho-park-hills-101.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-geumho-park-hills-101",
+            "sourceDimensions": [
+              41.45437240600586,
+              54.25,
+              41.466609954833984
+            ],
+            "matrix": [
+              0.6884103201101521,
+              0.0,
+              -0.7436025446177629,
+              0.0,
+              0.0,
+              1.0516129032258064,
+              0.0,
+              0.0,
+              0.7281972248964687,
+              0.0,
+              0.7580850394460535,
+              0.0,
+              8.871237420989576,
+              0.0,
+              -1.9059106933515775,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-geumho-park-hills-104",
+          "dimensions": [
+            42.73237689910387,
+            57.05,
+            38.01865817946917
+          ],
+          "min": [
+            -22.765545279534876,
+            0,
+            -18.248990474397782
+          ],
+          "max": [
+            19.966831619568993,
+            57.05,
+            19.769667705071388
+          ],
+          "sha256": "11409debb92880b9f922de861a50c42f00694bdea381736255c43bc181bebf0c",
+          "sourceSha256": "a0b35344c871cd2376f86e9a23eee588fb3779133d5a89dfe462167e30a08232",
+          "sharedModel": "bespoke/geumho-park-hills-101-representative-v2/bespoke-geumho-park-hills-101.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-geumho-park-hills-101",
+            "sourceDimensions": [
+              41.45437240600586,
+              54.25,
+              41.466609954833984
+            ],
+            "matrix": [
+              0.9389882510581782,
+              0.0,
+              -0.3386412827242314,
+              0.0,
+              0.0,
+              1.0516129032258064,
+              0.0,
+              0.0,
+              0.274497634279104,
+              0.0,
+              1.0139983613656396,
+              0.0,
+              4.833639335658462,
+              0.0,
+              1.1556918024304386,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-geumho-park-hills-105",
+          "dimensions": [
+            34.449776184282726,
+            57.05,
+            31.38899183812371
+          ],
+          "min": [
+            -18.046982603924576,
+            0,
+            -14.974685846299778
+          ],
+          "max": [
+            16.402793580358153,
+            57.05,
+            16.414305991823934
+          ],
+          "sha256": "11409debb92880b9f922de861a50c42f00694bdea381736255c43bc181bebf0c",
+          "sourceSha256": "a0b35344c871cd2376f86e9a23eee588fb3779133d5a89dfe462167e30a08232",
+          "sharedModel": "bespoke/geumho-park-hills-101-representative-v2/bespoke-geumho-park-hills-101.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-geumho-park-hills-101",
+            "sourceDimensions": [
+              41.45437240600586,
+              54.25,
+              41.466609954833984
+            ],
+            "matrix": [
+              0.7428926594879411,
+              0.0,
+              -0.3451277091311168,
+              0.0,
+              0.0,
+              1.0516129032258064,
+              0.0,
+              0.0,
+              0.26335702266193844,
+              0.0,
+              0.8511261187220405,
+              0.0,
+              4.583476505333179,
+              0.0,
+              0.3710307854429229,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-geumho-park-hills-106",
+          "dimensions": [
+            44.30491795962018,
+            59.85,
+            39.34817627653832
+          ],
+          "min": [
+            -23.571475523075588,
+            0,
+            -18.822472914030826
+          ],
+          "max": [
+            20.73344243654459,
+            59.85,
+            20.525703362507492
+          ],
+          "sha256": "11409debb92880b9f922de861a50c42f00694bdea381736255c43bc181bebf0c",
+          "sourceSha256": "a0b35344c871cd2376f86e9a23eee588fb3779133d5a89dfe462167e30a08232",
+          "sharedModel": "bespoke/geumho-park-hills-101-representative-v2/bespoke-geumho-park-hills-101.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-geumho-park-hills-101",
+            "sourceDimensions": [
+              41.45437240600586,
+              54.25,
+              41.466609954833984
+            ],
+            "matrix": [
+              1.010711813411713,
+              0.0,
+              -0.16913514102246952,
+              0.0,
+              0.0,
+              1.103225806451613,
+              0.0,
+              0.0,
+              0.17368489782640256,
+              0.0,
+              1.0066609959075465,
+              0.0,
+              4.039560787493197,
+              0.0,
+              3.1520155703559345,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-geumho-park-hills-107",
+          "dimensions": [
+            46.2074748885497,
+            59.85,
+            42.551584899557824
+          ],
+          "min": [
+            -24.648735627886754,
+            0,
+            -20.688490106789274
+          ],
+          "max": [
+            21.558739260662946,
+            59.85,
+            21.863094792768553
+          ],
+          "sha256": "11409debb92880b9f922de861a50c42f00694bdea381736255c43bc181bebf0c",
+          "sourceSha256": "a0b35344c871cd2376f86e9a23eee588fb3779133d5a89dfe462167e30a08232",
+          "sharedModel": "bespoke/geumho-park-hills-101-representative-v2/bespoke-geumho-park-hills-101.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-geumho-park-hills-101",
+            "sourceDimensions": [
+              41.45437240600586,
+              54.25,
+              41.466609954833984
+            ],
+            "matrix": [
+              1.039245369432875,
+              0.0,
+              -0.3006730722113049,
+              0.0,
+              0.0,
+              1.103225806451613,
+              0.0,
+              0.0,
+              0.22551248862426368,
+              0.0,
+              1.116407693583175,
+              0.0,
+              4.5495313791721985,
+              0.0,
+              1.8468167924675272,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-geumho-park-hills-108",
+          "dimensions": [
+            46.20768330082352,
+            59.85,
+            42.55160955463445
+          ],
+          "min": [
+            -24.64662927208443,
+            0,
+            -20.691048133490384
+          ],
+          "max": [
+            21.56105402873909,
+            59.85,
+            21.860561421144073
+          ],
+          "sha256": "11409debb92880b9f922de861a50c42f00694bdea381736255c43bc181bebf0c",
+          "sourceSha256": "a0b35344c871cd2376f86e9a23eee588fb3779133d5a89dfe462167e30a08232",
+          "sharedModel": "bespoke/geumho-park-hills-101-representative-v2/bespoke-geumho-park-hills-101.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-geumho-park-hills-101",
+            "sourceDimensions": [
+              41.45437240600586,
+              54.25,
+              41.466609954833984
+            ],
+            "matrix": [
+              1.0392492030460165,
+              0.0,
+              -0.3006733814356944,
+              0.0,
+              0.0,
+              1.103225806451613,
+              0.0,
+              0.0,
+              0.22551605341595649,
+              0.0,
+              1.1164083723092102,
+              0.0,
+              4.551792486271128,
+              0.0,
+              1.8442704151191243,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-geumho-park-hills-109",
+          "dimensions": [
+            22.067738101370928,
+            48.65,
+            15.108748766884636
+          ],
+          "min": [
+            -10.91262143932935,
+            0,
+            -7.823192034090628
+          ],
+          "max": [
+            11.155116662041577,
+            48.65,
+            7.285556732794008
+          ],
+          "sha256": "11409debb92880b9f922de861a50c42f00694bdea381736255c43bc181bebf0c",
+          "sourceSha256": "a0b35344c871cd2376f86e9a23eee588fb3779133d5a89dfe462167e30a08232",
+          "sharedModel": "bespoke/geumho-park-hills-101-representative-v2/bespoke-geumho-park-hills-101.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-geumho-park-hills-101",
+            "sourceDimensions": [
+              41.45437240600586,
+              54.25,
+              41.466609954833984
+            ],
+            "matrix": [
+              0.44237341275773523,
+              0.0,
+              -0.19777299031864012,
+              0.0,
+              0.0,
+              0.896774193548387,
+              0.0,
+              0.0,
+              0.21630226872116728,
+              0.0,
+              0.4128696000647177,
+              0.0,
+              3.594087495459434,
+              0.0,
+              -0.7093314986981022,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-geumho-park-hills-110",
+          "dimensions": [
+            44.149591967237846,
+            48.65,
+            15.72405839799187
+          ],
+          "min": [
+            -21.95755282862738,
+            0,
+            -8.246015207102436
+          ],
+          "max": [
+            22.192039138610465,
+            48.65,
+            7.478043190889434
+          ],
+          "sha256": "11409debb92880b9f922de861a50c42f00694bdea381736255c43bc181bebf0c",
+          "sourceSha256": "a0b35344c871cd2376f86e9a23eee588fb3779133d5a89dfe462167e30a08232",
+          "sharedModel": "bespoke/geumho-park-hills-101-representative-v2/bespoke-geumho-park-hills-101.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-geumho-park-hills-101",
+            "sourceDimensions": [
+              41.45437240600586,
+              54.25,
+              41.466609954833984
+            ],
+            "matrix": [
+              0.8671520703874191,
+              0.0,
+              -0.1744072164243946,
+              0.0,
+              0.0,
+              0.896774193548387,
+              0.0,
+              0.0,
+              0.4513607044590816,
+              0.0,
+              0.42651765984293016,
+              0.0,
+              6.956873976407483,
+              0.0,
+              -0.5717830942269501,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-geumho-park-hills-111",
+          "dimensions": [
+            24.221960475573084,
+            51.45,
+            13.34877966789677
+          ],
+          "min": [
+            -12.03530433267761,
+            0,
+            -6.933027518244703
+          ],
+          "max": [
+            12.186656142895474,
+            51.45,
+            6.415752149652066
+          ],
+          "sha256": "11409debb92880b9f922de861a50c42f00694bdea381736255c43bc181bebf0c",
+          "sourceSha256": "a0b35344c871cd2376f86e9a23eee588fb3779133d5a89dfe462167e30a08232",
+          "sharedModel": "bespoke/geumho-park-hills-101-representative-v2/bespoke-geumho-park-hills-101.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-geumho-park-hills-101",
+            "sourceDimensions": [
+              41.45437240600586,
+              54.25,
+              41.466609954833984
+            ],
+            "matrix": [
+              0.4801362048592538,
+              0.0,
+              -0.17121838656829025,
+              0.0,
+              0.0,
+              0.9483870967741936,
+              0.0,
+              0.0,
+              0.24306291228969176,
+              0.0,
+              0.36442138515600725,
+              0.0,
+              3.8546986386587085,
+              0.0,
+              -0.6175445004158033,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-geumho-park-hills-112",
+          "dimensions": [
+            41.420714108133296,
+            59.85,
+            41.5124482436824
+          ],
+          "min": [
+            -20.660422403104597,
+            0,
+            -20.693024797193154
+          ],
+          "max": [
+            20.760291705028703,
+            59.85,
+            20.819423446489246
+          ],
+          "sha256": "11409debb92880b9f922de861a50c42f00694bdea381736255c43bc181bebf0c",
+          "sourceSha256": "a0b35344c871cd2376f86e9a23eee588fb3779133d5a89dfe462167e30a08232",
+          "sharedModel": "bespoke/geumho-park-hills-101-representative-v2/bespoke-geumho-park-hills-101.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-geumho-park-hills-101",
+            "sourceDimensions": [
+              41.45437240600586,
+              54.25,
+              41.466609954833984
+            ],
+            "matrix": [
+              0.9998856894967438,
+              0.0,
+              0.0017193135302587784,
+              0.0,
+              0.0,
+              1.103225806451613,
+              0.0,
+              0.0,
+              -0.002103451175529504,
+              0.0,
+              1.0001250358745628,
+              0.0,
+              3.6671438874445643,
+              0.0,
+              3.898984684775474,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-geumho-park-hills-113",
+          "dimensions": [
+            27.031747424885758,
+            59.85,
+            47.39516973761274
+          ],
+          "min": [
+            -12.739372850171781,
+            0,
+            -23.242869291568606
+          ],
+          "max": [
+            14.292374574713975,
+            59.85,
+            24.152300446044134
+          ],
+          "sha256": "11409debb92880b9f922de861a50c42f00694bdea381736255c43bc181bebf0c",
+          "sourceSha256": "a0b35344c871cd2376f86e9a23eee588fb3779133d5a89dfe462167e30a08232",
+          "sharedModel": "bespoke/geumho-park-hills-101-representative-v2/bespoke-geumho-park-hills-101.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-geumho-park-hills-101",
+            "sourceDimensions": [
+              41.45437240600586,
+              54.25,
+              41.466609954833984
+            ],
+            "matrix": [
+              0.6305562855892379,
+              0.0,
+              0.7521812959421555,
+              0.0,
+              0.0,
+              1.103225806451613,
+              0.0,
+              0.0,
+              -0.5894028908511822,
+              0.0,
+              0.6706579753912908,
+              0.0,
+              1.2080274493609324,
+              0.0,
+              6.71480510839272,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-geumho-park-hills-114",
+          "dimensions": [
+            20.632101594724116,
+            59.85,
+            47.069858068478545
+          ],
+          "min": [
+            -7.120293468945745,
+            0,
+            -23.488994985567377
+          ],
+          "max": [
+            13.511808125778371,
+            59.85,
+            23.58086308291117
+          ],
+          "sha256": "11409debb92880b9f922de861a50c42f00694bdea381736255c43bc181bebf0c",
+          "sourceSha256": "a0b35344c871cd2376f86e9a23eee588fb3779133d5a89dfe462167e30a08232",
+          "sharedModel": "bespoke/geumho-park-hills-101-representative-v2/bespoke-geumho-park-hills-101.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-geumho-park-hills-101",
+            "sourceDimensions": [
+              41.45437240600586,
+              54.25,
+              41.466609954833984
+            ],
+            "matrix": [
+              0.5817333960413179,
+              0.0,
+              0.7603782517579935,
+              0.0,
+              0.0,
+              1.103225806451613,
+              0.0,
+              0.0,
+              -0.30714061310999896,
+              0.0,
+              0.6521418576914162,
+              0.0,
+              2.5502468645346226,
+              0.0,
+              6.34396452281324,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-geumho-park-hills-115",
+          "dimensions": [
+            24.213614170396482,
+            40.25,
+            13.338930138018148
+          ],
+          "min": [
+            -12.031709033046644,
+            0,
+            -6.923220558058159
+          ],
+          "max": [
+            12.181905137349837,
+            40.25,
+            6.415709579959988
+          ],
+          "sha256": "11409debb92880b9f922de861a50c42f00694bdea381736255c43bc181bebf0c",
+          "sourceSha256": "a0b35344c871cd2376f86e9a23eee588fb3779133d5a89dfe462167e30a08232",
+          "sharedModel": "bespoke/geumho-park-hills-101-representative-v2/bespoke-geumho-park-hills-101.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-geumho-park-hills-101",
+            "sourceDimensions": [
+              41.45437240600586,
+              54.25,
+              41.466609954833984
+            ],
+            "matrix": [
+              0.479970105313255,
+              0.0,
+              -0.17106685745826541,
+              0.0,
+              0.0,
+              0.7419354838709677,
+              0.0,
+              0.0,
+              0.24297984197172587,
+              0.0,
+              0.36414995441605297,
+              0.0,
+              3.8528146515548456,
+              0.0,
+              -0.6121804588566453,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-geumho-park-hills-116",
+          "dimensions": [
+            14.926447945500831,
+            23.45,
+            20.365810442012933
+          ],
+          "min": [
+            -7.708724423851615,
+            0,
+            -10.2733558757684
+          ],
+          "max": [
+            7.217723521649216,
+            23.45,
+            10.092454566244532
+          ],
+          "sha256": "11409debb92880b9f922de861a50c42f00694bdea381736255c43bc181bebf0c",
+          "sourceSha256": "a0b35344c871cd2376f86e9a23eee588fb3779133d5a89dfe462167e30a08232",
+          "sharedModel": "bespoke/geumho-park-hills-101-representative-v2/bespoke-geumho-park-hills-101.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-geumho-park-hills-101",
+            "sourceDimensions": [
+              41.45437240600586,
+              54.25,
+              41.466609954833984
+            ],
+            "matrix": [
+              -0.20059504967702474,
+              0.0,
+              -0.40772818748971845,
+              0.0,
+              0.0,
+              0.432258064516129,
+              0.0,
+              0.0,
+              0.408412800491376,
+              0.0,
+              -0.2001703864704034,
+              0.0,
+              -0.7255646068693413,
+              0.0,
+              -3.2922567786667156,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        }
+      ],
+      "mcpEvidence": [
+        {
+          "path": "docs/model-audit/mcp/geumho-park-hills-101-representative-v2/mcp-build-reload-final.json",
+          "sha256": "bfbc72aee54d8ad7c0743c698eb1db6891dd0bba4a726801724305317931cfb2",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        }
+      ],
+      "recipeInputs": [],
+      "sharedRepresentative": "bespoke-geumho-park-hills-101",
+      "newGlbFiles": 0,
+      "newBlendFiles": 0,
+      "placementInputs": [
+        {
+          "path": "docs/model-audit/geumho-park-hills-source-identity.json",
+          "sha256": "152fa5e375a7724807343ffeb5a2566707ffd0ac54aceaea472ebeee9e0d3695"
+        },
+        {
+          "path": "docs/model-audit/geumho-park-hills-fallback-bindings.json",
+          "sha256": "744c19304d628cd12f3712d8700342269af302aa71c37d61e47621e519aac104"
+        }
+      ],
+      "placementMethod": "Long-axis oriented rectangle mapping with positive plan scales and registered overall height; actual concave target shapes are not reconstructed."
+    },
+    "dmc-parkview-xi-301-representative-v2": {
+      "sources": [
+        {
+          "url": "https://file.kbland.kr/image/kbstar/land/img/alian/kms/complex/photo/objctidnfr/35380/MzUzODAxMDAyMDY3Njcy.jpg",
+          "sha256": "7f9559aeecf8dae5ede7c228402b6e7aa1fa67dc2f5842e5517d4321f2b61dc2",
+          "scope": "complex",
+          "observedTowerNumber": null,
+          "observations": "Root directly viewed actual completed-complex photo and final V2 four views. Orange rectangular frames surround multi-floor window groups against pale beige opaque walls and white window piers. The upper facade now has a broad recessed gray louver opening and pale structural sides/cap rather than a small separate rooftop box. Number and compass face unconfirmed; facade layout and dimensions are complex-level inference."
+        },
+        {
+          "url": "https://kbland.kr/se/c/28216",
+          "observations": "Primary complex photograph; representative only."
+        },
+        {
+          "dataset": "Previously identified numbered source inventory",
+          "snapshot": "dmc-parkview-xi-source-identity.json",
+          "sha256": "a8c30c48f56677b703b5f5287db6eee1513deb3969a7e819d37bc6fe23246b07",
+          "observations": "6existing sources127,301-305 linked by normalized source number, exact GajaeulMiraero2/Namgajwadong385 register, equal floors and height differences<=1m, official point proximity. Root actual SQLite geometry/properties/register validation; official61buildings4300households. No full boundary proof."
+        }
+      ],
+      "review": {
+        "siteId": "dmc-parkview-xi-301-representative-v2",
+        "status": "visually-reviewed",
+        "reviewer": "Root independently viewed original photograph and final four-view representative sheet",
+        "inferenceApprovedAssets": [
+          "bespoke-dmc-parkview-xi-301"
+        ],
+        "reviewedSourcePhotos": [
+          {
+            "url": "https://file.kbland.kr/image/kbstar/land/img/alian/kms/complex/photo/objctidnfr/35380/MzUzODAxMDAyMDY3Njcy.jpg",
+            "sha256": "7f9559aeecf8dae5ede7c228402b6e7aa1fa67dc2f5842e5517d4321f2b61dc2",
+            "scope": "complex",
+            "observedTowerNumber": null,
+            "observations": "Root directly viewed actual completed-complex photo and final V2 four views. Orange rectangular frames surround multi-floor window groups against pale beige opaque walls and white window piers. The upper facade now has a broad recessed gray louver opening and pale structural sides/cap rather than a small separate rooftop box. Number and compass face unconfirmed; facade layout and dimensions are complex-level inference."
+          }
+        ],
+        "comparisons": [
+          "Root directly viewed actual completed-complex photo and final V2 four views. Orange rectangular frames surround multi-floor window groups against pale beige opaque walls and white window piers. The upper facade now has a broad recessed gray louver opening and pale structural sides/cap rather than a small separate rooftop box. Number and compass face unconfirmed; facade layout and dimensions are complex-level inference.",
+          "Compared original with front/opposite/side/roof representative renders. Hidden faces and precise facade measurements remain inferred.",
+          "One representative only; sibling geometry/materials shared with independent placements. Actual MCP clean reload and source hashes recorded."
+        ],
+        "limits": [
+          "Photo number and orientation unconfirmed; exterior inferred from complex photo.",
+          "Recess and frame dimensions, hidden facade and roof datum are not measured.",
+          "OSM58m versus registered57.6m retained.",
+          "Copies repeat representative geometry/window/floor pattern; individual shapes are not reconstructed.",
+          "Only6of61official residential buildings currently identified."
+        ],
+        "renders": [
+          "docs/model-audit/renders/dmc-parkview-xi-301-representative-v2/front.png",
+          "docs/model-audit/renders/dmc-parkview-xi-301-representative-v2/opposite.png",
+          "docs/model-audit/renders/dmc-parkview-xi-301-representative-v2/side.png",
+          "docs/model-audit/renders/dmc-parkview-xi-301-representative-v2/roof.png"
+        ],
+        "renderSha256": {
+          "docs/model-audit/renders/dmc-parkview-xi-301-representative-v2/front.png": "38d3668fb97bd6ddf53e46b0575033575d06552820ffecb422a30f35599fd250",
+          "docs/model-audit/renders/dmc-parkview-xi-301-representative-v2/opposite.png": "cf611eabcc0ce1150ba11db83ee4b00befc7d2f09e093a86c6bbc8395d6c3b07",
+          "docs/model-audit/renders/dmc-parkview-xi-301-representative-v2/side.png": "64c3b5f3f7bbd56e0dafbc0b12fa889945eaad5eef5ccba678e3e874d1c4b430",
+          "docs/model-audit/renders/dmc-parkview-xi-301-representative-v2/roof.png": "22b8bfc6df0943f108d9fa29b849b9e1ceaadd670f039c95418296fc87111710"
+        },
+        "reviewedInputs": {
+          "dmc-parkview-xi-301.glb": "18249cde4215e62670ebbc6b5eb78e84dffc3c0d2b2645bb9aa33dbba26ab755",
+          "dmc-parkview-xi-301-authored.blend": "e4c7df081596a675a389a6738f0489f98e255fb68cb008408a972f59d7742e6c"
+        }
+      },
+      "assets": [
+        {
+          "id": "bespoke-dmc-parkview-xi-301",
+          "sourceSha256": "18249cde4215e62670ebbc6b5eb78e84dffc3c0d2b2645bb9aa33dbba26ab755",
+          "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+          "bytes": 1319864,
+          "dimensions": [
+            37.24368190765381,
+            57.599998474121094,
+            26.963677406311035
+          ],
+          "min": [
+            -15.87210750579834,
+            0,
+            -12.534171104431152
+          ],
+          "max": [
+            21.37157440185547,
+            57.599998474121094,
+            14.429506301879883
+          ],
+          "triangles": 24280,
+          "components": [
+            {
+              "name": "DMC301_editable_DMC301_light_grey_solid_wall004",
+              "triangles": 392
+            },
+            {
+              "name": "DMC301_editable_DMC301_broad_white_facade_frames004",
+              "triangles": 14612
+            },
+            {
+              "name": "DMC301_editable_DMC301_warm_beige_opaque_wall004",
+              "triangles": 180
+            },
+            {
+              "name": "DMC301_editable_DMC301_turquoise_balcony_glazing004",
+              "triangles": 8064
+            },
+            {
+              "name": "DMC301_editable_DMC301_orange_multi-storey_frames004",
+              "triangles": 864
+            },
+            {
+              "name": "DMC301_editable_DMC301_grey_service_and_roof_louvers004",
+              "triangles": 168
+            }
+          ]
+        }
+      ],
+      "mcpEvidence": [
+        {
+          "path": "docs/model-audit/mcp/dmc-parkview-xi-301-representative-v2/mcp-build-reload-final.json",
+          "sha256": "7a9015c46ad43b5e9534265e1939c0791171cc870fc6efa6745b5685f7aa56da",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        }
+      ],
+      "recipeInputs": [
+        {
+          "path": "modeling/bespoke/dmc-parkview-xi-301-representative-v2/build.py",
+          "sha256": "17f94d7c98c8ab148462bdea423e6f5a114815c2f4f1b49ff09460932956e4a5"
+        },
+        {
+          "path": "modeling/bespoke/dmc-parkview-xi-301-representative-v2/source-data.json",
+          "sha256": "6c247379edfe21f03c6372964ab10cf0d6164b1b806b28ec301105f6a3c3e866"
+        },
+        {
+          "path": "modeling/bespoke/dmc-parkview-xi-301-representative-v2/regions.json",
+          "sha256": "1d57c03f1878266f7a6cd6071ff62ae6020e1d413b30c61aef35cb20eaebec96"
+        },
+        {
+          "path": "modeling/bespoke/dmc-parkview-xi-301-representative-v2/geometry-proof.json",
+          "sha256": "edb9d1d0556a16e5af9b2bbe9e6c9b5dad0cb50e39bee0cb0c6b29290796c858"
+        },
+        {
+          "path": "modeling/bespoke/dmc-parkview-xi-301-representative-v2/standalone-validation.json",
+          "sha256": "99eb6d30da5a0c84c0f9206a459d4cc42dccc1b7e648e6816d189f83769e6326"
+        },
+        {
+          "path": "modeling/bespoke/dmc-parkview-xi-301-representative-v2/validation.json",
+          "sha256": "8c2c5a5b9b30986fcd5e7fbf8b95d2cad0609dc9262c3f08063bd861ae4e69dc"
+        },
+        {
+          "path": "modeling/bespoke/dmc-parkview-xi-301-representative-v2/facade-regions.json",
+          "sha256": "fbf2643d30296b5819e53f379024fdda82166449b21061537e33203c4c5f9db1"
+        },
+        {
+          "path": "modeling/bespoke/dmc-parkview-xi-301-representative-v2/dmc-parkview-xi-source-identity.json",
+          "sha256": "a8c30c48f56677b703b5f5287db6eee1513deb3969a7e819d37bc6fe23246b07"
+        }
+      ]
+    },
+    "dmc-parkview-xi-shared": {
+      "sources": [
+        {
+          "url": "https://file.kbland.kr/image/kbstar/land/img/alian/kms/complex/photo/objctidnfr/35380/MzUzODAxMDAyMDY3Njcy.jpg",
+          "sha256": "7f9559aeecf8dae5ede7c228402b6e7aa1fa67dc2f5842e5517d4321f2b61dc2",
+          "scope": "complex",
+          "observedTowerNumber": null,
+          "observations": "Root directly viewed actual completed-complex photo and final V2 four views. Orange rectangular frames surround multi-floor window groups against pale beige opaque walls and white window piers. The upper facade now has a broad recessed gray louver opening and pale structural sides/cap rather than a small separate rooftop box. Number and compass face unconfirmed; facade layout and dimensions are complex-level inference."
+        },
+        {
+          "url": "https://kbland.kr/se/c/28216",
+          "observations": "Primary complex photograph; representative only."
+        },
+        {
+          "dataset": "Previously identified numbered source inventory",
+          "snapshot": "dmc-parkview-xi-source-identity.json",
+          "sha256": "a8c30c48f56677b703b5f5287db6eee1513deb3969a7e819d37bc6fe23246b07",
+          "observations": "6existing sources127,301-305 linked by normalized source number, exact GajaeulMiraero2/Namgajwadong385 register, equal floors and height differences<=1m, official point proximity. Root actual SQLite geometry/properties/register validation; official61buildings4300households. No full boundary proof."
+        }
+      ],
+      "review": {
+        "siteId": "dmc-parkview-xi-shared",
+        "status": "visually-reviewed",
+        "reviewer": "Root independently viewed original photograph and final four-view representative sheet",
+        "inferenceApprovedAssets": [
+          "bespoke-dmc-parkview-xi-127",
+          "bespoke-dmc-parkview-xi-302",
+          "bespoke-dmc-parkview-xi-303",
+          "bespoke-dmc-parkview-xi-304",
+          "bespoke-dmc-parkview-xi-305"
+        ],
+        "reviewedSourcePhotos": [
+          {
+            "url": "https://file.kbland.kr/image/kbstar/land/img/alian/kms/complex/photo/objctidnfr/35380/MzUzODAxMDAyMDY3Njcy.jpg",
+            "sha256": "7f9559aeecf8dae5ede7c228402b6e7aa1fa67dc2f5842e5517d4321f2b61dc2",
+            "scope": "complex",
+            "observedTowerNumber": null,
+            "observations": "Root directly viewed actual completed-complex photo and final V2 four views. Orange rectangular frames surround multi-floor window groups against pale beige opaque walls and white window piers. The upper facade now has a broad recessed gray louver opening and pale structural sides/cap rather than a small separate rooftop box. Number and compass face unconfirmed; facade layout and dimensions are complex-level inference."
+          }
+        ],
+        "comparisons": [
+          "Root directly viewed actual completed-complex photo and final V2 four views. Orange rectangular frames surround multi-floor window groups against pale beige opaque walls and white window piers. The upper facade now has a broad recessed gray louver opening and pale structural sides/cap rather than a small separate rooftop box. Number and compass face unconfirmed; facade layout and dimensions are complex-level inference.",
+          "Compared original with front/opposite/side/roof representative renders. Hidden faces and precise facade measurements remain inferred.",
+          "One representative only; sibling geometry/materials shared with independent placements. Actual MCP clean reload and source hashes recorded.",
+          "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+          "All copy transforms, bounds, source identities and independent fallback bindings checked automatically."
+        ],
+        "limits": [
+          "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+          "Representative has no number label; no node needs hiding.",
+          "Existing authored assets remain unchanged."
+        ],
+        "renders": [
+          "docs/model-audit/renders/dmc-parkview-xi-301-representative-v2/front.png",
+          "docs/model-audit/renders/dmc-parkview-xi-301-representative-v2/opposite.png",
+          "docs/model-audit/renders/dmc-parkview-xi-301-representative-v2/side.png",
+          "docs/model-audit/renders/dmc-parkview-xi-301-representative-v2/roof.png"
+        ],
+        "renderSha256": {
+          "docs/model-audit/renders/dmc-parkview-xi-301-representative-v2/front.png": "38d3668fb97bd6ddf53e46b0575033575d06552820ffecb422a30f35599fd250",
+          "docs/model-audit/renders/dmc-parkview-xi-301-representative-v2/opposite.png": "cf611eabcc0ce1150ba11db83ee4b00befc7d2f09e093a86c6bbc8395d6c3b07",
+          "docs/model-audit/renders/dmc-parkview-xi-301-representative-v2/side.png": "64c3b5f3f7bbd56e0dafbc0b12fa889945eaad5eef5ccba678e3e874d1c4b430",
+          "docs/model-audit/renders/dmc-parkview-xi-301-representative-v2/roof.png": "22b8bfc6df0943f108d9fa29b849b9e1ceaadd670f039c95418296fc87111710"
+        },
+        "reviewedInputs": {
+          "dmc-parkview-xi-301.glb": "18249cde4215e62670ebbc6b5eb78e84dffc3c0d2b2645bb9aa33dbba26ab755",
+          "dmc-parkview-xi-301-authored.blend": "e4c7df081596a675a389a6738f0489f98e255fb68cb008408a972f59d7742e6c"
+        },
+        "reviewScope": "One representative visually reviewed; batch placement checks and sample map review for shared copies"
+      },
+      "assets": [
+        {
+          "id": "bespoke-dmc-parkview-xi-127",
+          "dimensions": [
+            36.40027087510225,
+            62.60000000000001,
+            36.110330123502415
+          ],
+          "min": [
+            -16.238246584218057,
+            0,
+            -20.43956673187669
+          ],
+          "max": [
+            20.162024290884197,
+            62.60000000000001,
+            15.670763391625725
+          ],
+          "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+          "sourceSha256": "18249cde4215e62670ebbc6b5eb78e84dffc3c0d2b2645bb9aa33dbba26ab755",
+          "sharedModel": "bespoke/dmc-parkview-xi-301-representative-v2/bespoke-dmc-parkview-xi-301.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-dmc-parkview-xi-301",
+            "sourceDimensions": [
+              37.24368190765381,
+              57.599998474121094,
+              26.963677406311035
+            ],
+            "matrix": [
+              0.9440975749085769,
+              0.0,
+              0.9679566307551144,
+              0.0,
+              0.0,
+              1.0868055843460716,
+              0.0,
+              0.0,
+              -0.32564996283158043,
+              0.0,
+              0.2773030959304797,
+              0.0,
+              -2.3822962101118548,
+              0.0,
+              -3.1531517308224384,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-dmc-parkview-xi-302",
+          "dimensions": [
+            34.92624900694923,
+            51.4,
+            34.860000815195804
+          ],
+          "min": [
+            -21.93277185628095,
+            0,
+            -20.474051541883043
+          ],
+          "max": [
+            12.993477150668275,
+            51.4,
+            14.385949273312763
+          ],
+          "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+          "sourceSha256": "18249cde4215e62670ebbc6b5eb78e84dffc3c0d2b2645bb9aa33dbba26ab755",
+          "sharedModel": "bespoke/dmc-parkview-xi-301-representative-v2/bespoke-dmc-parkview-xi-301.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-dmc-parkview-xi-301",
+            "sourceDimensions": [
+              37.24368190765381,
+              57.599998474121094,
+              26.963677406311035
+            ],
+            "matrix": [
+              0.9337720243372267,
+              0.0,
+              -0.8715414507442094,
+              0.0,
+              0.0,
+              0.8923611347506082,
+              0.0,
+              0.0,
+              0.32787283581425053,
+              0.0,
+              0.3886517327285561,
+              0.0,
+              -4.76049023366488,
+              0.0,
+              0.9785223407373547,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-dmc-parkview-xi-303",
+          "dimensions": [
+            30.566108683165318,
+            57.599999999999994,
+            28.7129118389989
+          ],
+          "min": [
+            -13.753530265168886,
+            0,
+            -15.945809844935344
+          ],
+          "max": [
+            16.81257841799643,
+            57.599999999999994,
+            12.767101994063557
+          ],
+          "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+          "sourceSha256": "18249cde4215e62670ebbc6b5eb78e84dffc3c0d2b2645bb9aa33dbba26ab755",
+          "sharedModel": "bespoke/dmc-parkview-xi-301-representative-v2/bespoke-dmc-parkview-xi-301.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-dmc-parkview-xi-301",
+            "sourceDimensions": [
+              37.24368190765381,
+              57.599998474121094,
+              26.963677406311035
+            ],
+            "matrix": [
+              0.8028166529338822,
+              0.0,
+              0.7699841831560075,
+              0.0,
+              0.0,
+              1.0000000264909539,
+              0.0,
+              0.0,
+              -0.23756140309962637,
+              0.0,
+              0.21270360362867227,
+              0.0,
+              -2.0715551070965184,
+              0.0,
+              -2.2597460182391154,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-dmc-parkview-xi-304",
+          "dimensions": [
+            15.874977272820907,
+            43.6,
+            15.77821142197881
+          ],
+          "min": [
+            -7.029114122368269,
+            0,
+            -9.252205748520874
+          ],
+          "max": [
+            8.845863150452637,
+            43.6,
+            6.526005673457936
+          ],
+          "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+          "sourceSha256": "18249cde4215e62670ebbc6b5eb78e84dffc3c0d2b2645bb9aa33dbba26ab755",
+          "sharedModel": "bespoke/dmc-parkview-xi-301-representative-v2/bespoke-dmc-parkview-xi-301.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-dmc-parkview-xi-301",
+            "sourceDimensions": [
+              37.24368190765381,
+              57.599998474121094,
+              26.963677406311035
+            ],
+            "matrix": [
+              0.3750251065984105,
+              0.0,
+              0.3989525843307825,
+              0.0,
+              0.0,
+              0.7569444644966249,
+              0.0,
+              0.0,
+              -0.2284835865360904,
+              0.0,
+              0.2024963766674885,
+              0.0,
+              -0.8310651248682313,
+              0.0,
+              -1.402159654793404,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-dmc-parkview-xi-305",
+          "dimensions": [
+            29.488001314177836,
+            29.6,
+            29.59456848223416
+          ],
+          "min": [
+            -18.429759945870813,
+            0,
+            -17.57358096334322
+          ],
+          "max": [
+            11.058241368307025,
+            29.6,
+            12.020987518890943
+          ],
+          "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+          "sourceSha256": "18249cde4215e62670ebbc6b5eb78e84dffc3c0d2b2645bb9aa33dbba26ab755",
+          "sharedModel": "bespoke/dmc-parkview-xi-301-representative-v2/bespoke-dmc-parkview-xi-301.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-dmc-parkview-xi-301",
+            "sourceDimensions": [
+              37.24368190765381,
+              57.599998474121094,
+              26.963677406311035
+            ],
+            "matrix": [
+              0.7648119578416279,
+              0.0,
+              -0.7168016805060264,
+              0.0,
+              0.0,
+              0.5138889025022958,
+              0.0,
+              0.0,
+              0.33417868384955557,
+              0.0,
+              0.38433757548774145,
+              0.0,
+              -3.8250058262029842,
+              0.0,
+              0.541081628103687,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        }
+      ],
+      "mcpEvidence": [
+        {
+          "path": "docs/model-audit/mcp/dmc-parkview-xi-301-representative-v2/mcp-build-reload-final.json",
+          "sha256": "7a9015c46ad43b5e9534265e1939c0791171cc870fc6efa6745b5685f7aa56da",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        }
+      ],
+      "recipeInputs": [],
+      "sharedRepresentative": "bespoke-dmc-parkview-xi-301",
+      "newGlbFiles": 0,
+      "newBlendFiles": 0,
+      "placementInputs": [
+        {
+          "path": "docs/model-audit/dmc-parkview-xi-source-identity.json",
+          "sha256": "a8c30c48f56677b703b5f5287db6eee1513deb3969a7e819d37bc6fe23246b07"
+        },
+        {
+          "path": "docs/model-audit/dmc-parkview-xi-fallback-bindings.json",
+          "sha256": "df6993fb6f51599a337a491942ed03faeb009ea1ab42ec9955c740b4c78c9545"
+        }
+      ],
+      "placementMethod": "Long-axis oriented rectangle mapping with positive plan scales and registered overall height; actual concave target shapes are not reconstructed."
+    },
+    "raemian-oksu-riverzen-101-representative": {
+      "sources": [
+        {
+          "url": "https://file.kbland.kr/image/kbstar/land/img/alian/kms/complex/photo/objctidnfr/27239/MjcyMzkxMDAwMjE4NDcy.jpg",
+          "sha256": "046792194d589c30c66aad0d784a3501808990561334f6d797fe72700f0951ba",
+          "scope": "complex",
+          "observedTowerNumber": null,
+          "observations": "Root directly viewed original completed-complex photograph and final four views. Long pale ivory window grids, wide opaque blank endwalls, two dark upper horizontal bands and gray stone base are reflected. Photo does not establish101number or compassface. The left neighbor marked Geukdong2 is excluded. Hidden facades and dimensions remain inferred."
+        },
+        {
+          "url": "https://kbland.kr/se/c/22566",
+          "observations": "Primary complex photograph; representative only."
+        },
+        {
+          "dataset": "Previously identified numbered source inventory",
+          "snapshot": "raemian-oksu-riverzen-source-identity.json",
+          "sha256": "1ed2dab6250e5489e324e38759a39673ad22721c65aefd4faeee71455071ac5c",
+          "observations": "All15official residential buildings identified by normalized source number, exact Maebonggil15/Oksudong561 register, equal floors and height difference<=1m, official point proximity. Root verified SQLite geometry/properties/raw register. Official1511households15buildings; no full boundary proof."
+        }
+      ],
+      "review": {
+        "siteId": "raemian-oksu-riverzen-101-representative",
+        "status": "visually-reviewed",
+        "reviewer": "Root independently viewed original photograph and final four-view representative sheet",
+        "inferenceApprovedAssets": [
+          "bespoke-raemian-oksu-riverzen-101"
+        ],
+        "reviewedSourcePhotos": [
+          {
+            "url": "https://file.kbland.kr/image/kbstar/land/img/alian/kms/complex/photo/objctidnfr/27239/MjcyMzkxMDAwMjE4NDcy.jpg",
+            "sha256": "046792194d589c30c66aad0d784a3501808990561334f6d797fe72700f0951ba",
+            "scope": "complex",
+            "observedTowerNumber": null,
+            "observations": "Root directly viewed original completed-complex photograph and final four views. Long pale ivory window grids, wide opaque blank endwalls, two dark upper horizontal bands and gray stone base are reflected. Photo does not establish101number or compassface. The left neighbor marked Geukdong2 is excluded. Hidden facades and dimensions remain inferred."
+          }
+        ],
+        "comparisons": [
+          "Root directly viewed original completed-complex photograph and final four views. Long pale ivory window grids, wide opaque blank endwalls, two dark upper horizontal bands and gray stone base are reflected. Photo does not establish101number or compassface. The left neighbor marked Geukdong2 is excluded. Hidden facades and dimensions remain inferred.",
+          "Compared original with front/opposite/side/roof representative renders. Hidden faces and precise facade measurements remain inferred.",
+          "One representative only; sibling geometry/materials shared with independent placements. Actual MCP clean reload and source hashes recorded."
+        ],
+        "limits": [
+          "Photo number and compass face unknown;101exterior inferred from complex photograph.",
+          "Hidden facade, band dimensions and roofdatum unmeasured.",
+          "OSM35m and registered35m agree.",
+          "Copies repeat representative geometry/window/floor pattern; target concavity and individual floor counts are not reconstructed.",
+          "15of15official residential buildings linked; sharedpodium and landscape not certified."
+        ],
+        "renders": [
+          "docs/model-audit/renders/raemian-oksu-riverzen-101-representative/front.png",
+          "docs/model-audit/renders/raemian-oksu-riverzen-101-representative/opposite.png",
+          "docs/model-audit/renders/raemian-oksu-riverzen-101-representative/side.png",
+          "docs/model-audit/renders/raemian-oksu-riverzen-101-representative/roof.png"
+        ],
+        "renderSha256": {
+          "docs/model-audit/renders/raemian-oksu-riverzen-101-representative/front.png": "722c986f1bbaa1ce7ffba7244532f9c9dbf467f27207f8c8085f8366acdfab36",
+          "docs/model-audit/renders/raemian-oksu-riverzen-101-representative/opposite.png": "630d0c70c7f79c76e0c4da8aec4b3de130b06bb8e0b2e15fb00bebb784e6d6ca",
+          "docs/model-audit/renders/raemian-oksu-riverzen-101-representative/side.png": "05ff41198b0d7d661c7826481907a72e596220308076ae5a291bce37eec45ac6",
+          "docs/model-audit/renders/raemian-oksu-riverzen-101-representative/roof.png": "ba1ddc1fedfbd74b738bfea10f4d28769799e00323718d2a4fd6e83dfd656ff6"
+        },
+        "reviewedInputs": {
+          "raemian-oksu-riverzen-101.glb": "8b6f5ba92df3b85216fb96b22ae0767a9338883b041a7de86845fe6302b87129",
+          "raemian-oksu-riverzen-101-authored.blend": "e0c628204c04a99e95838e28eb77364a4eabd9cd3f9c8941eedccf7697b3b7e3"
+        }
+      },
+      "assets": [
+        {
+          "id": "bespoke-raemian-oksu-riverzen-101",
+          "sourceSha256": "8b6f5ba92df3b85216fb96b22ae0767a9338883b041a7de86845fe6302b87129",
+          "sha256": "08dd08af1bb2e44bf867e46508b216ab39f1f311773d82530da9bd7d1eb9b8f1",
+          "bytes": 1254652,
+          "dimensions": [
+            53.61490440368652,
+            35,
+            40.09946250915527
+          ],
+          "min": [
+            -24.425363540649414,
+            0,
+            -24.882999420166016
+          ],
+          "max": [
+            29.18954086303711,
+            35,
+            15.216463088989258
+          ],
+          "triangles": 23112,
+          "components": [
+            {
+              "name": "Oksu101_editable_Oksu101_light_grey_solid_wall",
+              "triangles": 3648
+            },
+            {
+              "name": "Oksu101_editable_Oksu101_broad_white_facade_frames",
+              "triangles": 12516
+            },
+            {
+              "name": "Oksu101_editable_Oksu101_grey_stone_base",
+              "triangles": 156
+            },
+            {
+              "name": "Oksu101_editable_Oksu101_turquoise_balcony_glazing",
+              "triangles": 6480
+            },
+            {
+              "name": "Oksu101_editable_Oksu101_two_charcoal_upper_wall_bands",
+              "triangles": 312
+            }
+          ]
+        }
+      ],
+      "mcpEvidence": [
+        {
+          "path": "docs/model-audit/mcp/raemian-oksu-riverzen-101-representative/mcp-build-reload-final.json",
+          "sha256": "7519df557ffcc1c0caf9a41fd24daeee474b8f5fc439e4874aa0ce6e8ccbb5fd",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        }
+      ],
+      "recipeInputs": [
+        {
+          "path": "modeling/bespoke/raemian-oksu-riverzen-101-representative/build.py",
+          "sha256": "1c31a8e02ac8744002065ce09a3ca294ce71f8628e51db4e30e45549418b1c70"
+        },
+        {
+          "path": "modeling/bespoke/raemian-oksu-riverzen-101-representative/source-data.json",
+          "sha256": "bf056449a8996b7f8e5a185d37d796db68dc83fbe7562f50a37aeb38557f23c5"
+        },
+        {
+          "path": "modeling/bespoke/raemian-oksu-riverzen-101-representative/regions.json",
+          "sha256": "7b806ee2bb4dfa34cb3380939c95e154cdc19547b365d55b8fb394c930278058"
+        },
+        {
+          "path": "modeling/bespoke/raemian-oksu-riverzen-101-representative/geometry-proof.json",
+          "sha256": "8f330280c6c86312a87486234c27af898a723d617195ecae8fa41a2bf373e1b7"
+        },
+        {
+          "path": "modeling/bespoke/raemian-oksu-riverzen-101-representative/standalone-validation.json",
+          "sha256": "d11a86ba1f6ef6e9cbcbcd4261eb45dd45291bbfaf29ec5848ac342da40ab1df"
+        },
+        {
+          "path": "modeling/bespoke/raemian-oksu-riverzen-101-representative/validation.json",
+          "sha256": "716a9a52f1b6ee6e74fc643aa064055857ad3c260884f20a24fe128e80757aa4"
+        },
+        {
+          "path": "modeling/bespoke/raemian-oksu-riverzen-101-representative/facade-regions.json",
+          "sha256": "6d97d82f9dfa6d79b2a77d9d5fac105b3f1b94265275ea7d4702f901ac372615"
+        },
+        {
+          "path": "modeling/bespoke/raemian-oksu-riverzen-101-representative/raemian-oksu-riverzen-source-identity.json",
+          "sha256": "1ed2dab6250e5489e324e38759a39673ad22721c65aefd4faeee71455071ac5c"
+        }
+      ]
+    },
+    "raemian-oksu-riverzen-shared": {
+      "sources": [
+        {
+          "url": "https://file.kbland.kr/image/kbstar/land/img/alian/kms/complex/photo/objctidnfr/27239/MjcyMzkxMDAwMjE4NDcy.jpg",
+          "sha256": "046792194d589c30c66aad0d784a3501808990561334f6d797fe72700f0951ba",
+          "scope": "complex",
+          "observedTowerNumber": null,
+          "observations": "Root directly viewed original completed-complex photograph and final four views. Long pale ivory window grids, wide opaque blank endwalls, two dark upper horizontal bands and gray stone base are reflected. Photo does not establish101number or compassface. The left neighbor marked Geukdong2 is excluded. Hidden facades and dimensions remain inferred."
+        },
+        {
+          "url": "https://kbland.kr/se/c/22566",
+          "observations": "Primary complex photograph; representative only."
+        },
+        {
+          "dataset": "Previously identified numbered source inventory",
+          "snapshot": "raemian-oksu-riverzen-source-identity.json",
+          "sha256": "1ed2dab6250e5489e324e38759a39673ad22721c65aefd4faeee71455071ac5c",
+          "observations": "All15official residential buildings identified by normalized source number, exact Maebonggil15/Oksudong561 register, equal floors and height difference<=1m, official point proximity. Root verified SQLite geometry/properties/raw register. Official1511households15buildings; no full boundary proof."
+        }
+      ],
+      "review": {
+        "siteId": "raemian-oksu-riverzen-shared",
+        "status": "visually-reviewed",
+        "reviewer": "Root independently viewed original photograph and final four-view representative sheet",
+        "inferenceApprovedAssets": [
+          "bespoke-raemian-oksu-riverzen-102",
+          "bespoke-raemian-oksu-riverzen-103",
+          "bespoke-raemian-oksu-riverzen-104",
+          "bespoke-raemian-oksu-riverzen-105",
+          "bespoke-raemian-oksu-riverzen-106",
+          "bespoke-raemian-oksu-riverzen-107",
+          "bespoke-raemian-oksu-riverzen-108",
+          "bespoke-raemian-oksu-riverzen-109",
+          "bespoke-raemian-oksu-riverzen-110",
+          "bespoke-raemian-oksu-riverzen-111",
+          "bespoke-raemian-oksu-riverzen-112",
+          "bespoke-raemian-oksu-riverzen-113",
+          "bespoke-raemian-oksu-riverzen-114",
+          "bespoke-raemian-oksu-riverzen-115"
+        ],
+        "reviewedSourcePhotos": [
+          {
+            "url": "https://file.kbland.kr/image/kbstar/land/img/alian/kms/complex/photo/objctidnfr/27239/MjcyMzkxMDAwMjE4NDcy.jpg",
+            "sha256": "046792194d589c30c66aad0d784a3501808990561334f6d797fe72700f0951ba",
+            "scope": "complex",
+            "observedTowerNumber": null,
+            "observations": "Root directly viewed original completed-complex photograph and final four views. Long pale ivory window grids, wide opaque blank endwalls, two dark upper horizontal bands and gray stone base are reflected. Photo does not establish101number or compassface. The left neighbor marked Geukdong2 is excluded. Hidden facades and dimensions remain inferred."
+          }
+        ],
+        "comparisons": [
+          "Root directly viewed original completed-complex photograph and final four views. Long pale ivory window grids, wide opaque blank endwalls, two dark upper horizontal bands and gray stone base are reflected. Photo does not establish101number or compassface. The left neighbor marked Geukdong2 is excluded. Hidden facades and dimensions remain inferred.",
+          "Compared original with front/opposite/side/roof representative renders. Hidden faces and precise facade measurements remain inferred.",
+          "One representative only; sibling geometry/materials shared with independent placements. Actual MCP clean reload and source hashes recorded.",
+          "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+          "All copy transforms, bounds, source identities and independent fallback bindings checked automatically."
+        ],
+        "limits": [
+          "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+          "Representative has no number label; no node needs hiding.",
+          "Existing authored assets remain unchanged."
+        ],
+        "renders": [
+          "docs/model-audit/renders/raemian-oksu-riverzen-101-representative/front.png",
+          "docs/model-audit/renders/raemian-oksu-riverzen-101-representative/opposite.png",
+          "docs/model-audit/renders/raemian-oksu-riverzen-101-representative/side.png",
+          "docs/model-audit/renders/raemian-oksu-riverzen-101-representative/roof.png"
+        ],
+        "renderSha256": {
+          "docs/model-audit/renders/raemian-oksu-riverzen-101-representative/front.png": "722c986f1bbaa1ce7ffba7244532f9c9dbf467f27207f8c8085f8366acdfab36",
+          "docs/model-audit/renders/raemian-oksu-riverzen-101-representative/opposite.png": "630d0c70c7f79c76e0c4da8aec4b3de130b06bb8e0b2e15fb00bebb784e6d6ca",
+          "docs/model-audit/renders/raemian-oksu-riverzen-101-representative/side.png": "05ff41198b0d7d661c7826481907a72e596220308076ae5a291bce37eec45ac6",
+          "docs/model-audit/renders/raemian-oksu-riverzen-101-representative/roof.png": "ba1ddc1fedfbd74b738bfea10f4d28769799e00323718d2a4fd6e83dfd656ff6"
+        },
+        "reviewedInputs": {
+          "raemian-oksu-riverzen-101.glb": "8b6f5ba92df3b85216fb96b22ae0767a9338883b041a7de86845fe6302b87129",
+          "raemian-oksu-riverzen-101-authored.blend": "e0c628204c04a99e95838e28eb77364a4eabd9cd3f9c8941eedccf7697b3b7e3"
+        },
+        "reviewScope": "One representative visually reviewed; batch placement checks and sample map review for shared copies"
+      },
+      "assets": [
+        {
+          "id": "bespoke-raemian-oksu-riverzen-102",
+          "dimensions": [
+            51.943459489801555,
+            43.49,
+            36.42624843537566
+          ],
+          "min": [
+            -25.957514622445107,
+            0,
+            -17.692849472573048
+          ],
+          "max": [
+            25.98594486735645,
+            43.49,
+            18.733398962802614
+          ],
+          "sha256": "08dd08af1bb2e44bf867e46508b216ab39f1f311773d82530da9bd7d1eb9b8f1",
+          "sourceSha256": "8b6f5ba92df3b85216fb96b22ae0767a9338883b041a7de86845fe6302b87129",
+          "sharedModel": "bespoke/raemian-oksu-riverzen-101-representative/bespoke-raemian-oksu-riverzen-101.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-raemian-oksu-riverzen-101",
+            "sourceDimensions": [
+              53.61490440368652,
+              35,
+              40.09946250915527
+            ],
+            "matrix": [
+              0.9049316897869016,
+              0.0,
+              0.31594349807171684,
+              0.0,
+              0.0,
+              1.2425714285714287,
+              0.0,
+              0.0,
+              -0.3087070603501495,
+              0.0,
+              0.9515116581561436,
+              0.0,
+              -6.187890256857919,
+              0.0,
+              2.319371171906045,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-raemian-oksu-riverzen-103",
+          "dimensions": [
+            37.25673524674592,
+            43.49,
+            52.57087657047629
+          ],
+          "min": [
+            -15.141417644448156,
+            0,
+            -29.467772605081656
+          ],
+          "max": [
+            22.115317602297765,
+            43.49,
+            23.10310396539463
+          ],
+          "sha256": "08dd08af1bb2e44bf867e46508b216ab39f1f311773d82530da9bd7d1eb9b8f1",
+          "sourceSha256": "8b6f5ba92df3b85216fb96b22ae0767a9338883b041a7de86845fe6302b87129",
+          "sharedModel": "bespoke/raemian-oksu-riverzen-101-representative/bespoke-raemian-oksu-riverzen-101.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-raemian-oksu-riverzen-101",
+            "sourceDimensions": [
+              53.61490440368652,
+              35,
+              40.09946250915527
+            ],
+            "matrix": [
+              -0.09262281706772722,
+              0.0,
+              0.9648953925916806,
+              0.0,
+              0.0,
+              1.2425714285714287,
+              0.0,
+              0.0,
+              -1.0020949574684164,
+              0.0,
+              -0.07721999109818063,
+              0.0,
+              -0.7586074230552513,
+              0.0,
+              -6.492950133425572,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-raemian-oksu-riverzen-104",
+          "dimensions": [
+            38.74195074758896,
+            40.66,
+            57.67531076479936
+          ],
+          "min": [
+            -19.136606413411645,
+            0,
+            -28.866209580409873
+          ],
+          "max": [
+            19.605344334177317,
+            40.66,
+            28.80910118438949
+          ],
+          "sha256": "08dd08af1bb2e44bf867e46508b216ab39f1f311773d82530da9bd7d1eb9b8f1",
+          "sourceSha256": "8b6f5ba92df3b85216fb96b22ae0767a9338883b041a7de86845fe6302b87129",
+          "sharedModel": "bespoke/raemian-oksu-riverzen-101-representative/bespoke-raemian-oksu-riverzen-101.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-raemian-oksu-riverzen-101",
+            "sourceDimensions": [
+              53.61490440368652,
+              35,
+              40.09946250915527
+            ],
+            "matrix": [
+              0.291321168661247,
+              0.0,
+              -1.0173536477021445,
+              0.0,
+              0.0,
+              1.1617142857142857,
+              0.0,
+              0.0,
+              1.0589374273719983,
+              0.0,
+              0.28249862618996,
+              0.0,
+              2.0673054321518824,
+              0.0,
+              6.0978053211943655,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-raemian-oksu-riverzen-105",
+          "dimensions": [
+            53.47440062185039,
+            40.66,
+            35.313643807707905
+          ],
+          "min": [
+            -26.812420418146896,
+            0,
+            -17.027448600633306
+          ],
+          "max": [
+            26.6619802037035,
+            40.66,
+            18.2861952070746
+          ],
+          "sha256": "08dd08af1bb2e44bf867e46508b216ab39f1f311773d82530da9bd7d1eb9b8f1",
+          "sourceSha256": "8b6f5ba92df3b85216fb96b22ae0767a9338883b041a7de86845fe6302b87129",
+          "sharedModel": "bespoke/raemian-oksu-riverzen-101-representative/bespoke-raemian-oksu-riverzen-101.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-raemian-oksu-riverzen-101",
+            "sourceDimensions": [
+              53.61490440368652,
+              35,
+              40.09946250915527
+            ],
+            "matrix": [
+              0.9268826213916751,
+              0.0,
+              0.3360573030566347,
+              0.0,
+              0.0,
+              1.1617142857142857,
+              0.0,
+              0.0,
+              -0.34044939644430355,
+              0.0,
+              0.8912011492307482,
+              0.0,
+              -6.74569103733797,
+              0.0,
+              2.427132577774378,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-raemian-oksu-riverzen-106",
+          "dimensions": [
+            53.88503035188629,
+            51.98,
+            37.45293667057673
+          ],
+          "min": [
+            -26.942438611880057,
+            0,
+            -18.03798209219052
+          ],
+          "max": [
+            26.942591740006236,
+            51.98,
+            19.414954578386208
+          ],
+          "sha256": "08dd08af1bb2e44bf867e46508b216ab39f1f311773d82530da9bd7d1eb9b8f1",
+          "sourceSha256": "8b6f5ba92df3b85216fb96b22ae0767a9338883b041a7de86845fe6302b87129",
+          "sharedModel": "bespoke/raemian-oksu-riverzen-101-representative/bespoke-raemian-oksu-riverzen-101.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-raemian-oksu-riverzen-101",
+            "sourceDimensions": [
+              53.61490440368652,
+              35,
+              40.09946250915527
+            ],
+            "matrix": [
+              0.9277893746557707,
+              0.0,
+              0.3728695284798837,
+              0.0,
+              0.0,
+              1.485142857142857,
+              0.0,
+              0.0,
+              -0.37285727155707066,
+              0.0,
+              0.9279158699554806,
+              0.0,
+              -7.097355727021585,
+              0.0,
+              2.6247922266414934,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-raemian-oksu-riverzen-107",
+          "dimensions": [
+            45.56808997943358,
+            57.64,
+            55.27359035692946
+          ],
+          "min": [
+            -17.997410081073436,
+            0,
+            -33.565111830461774
+          ],
+          "max": [
+            27.57067989836014,
+            57.64,
+            21.708478526467687
+          ],
+          "sha256": "08dd08af1bb2e44bf867e46508b216ab39f1f311773d82530da9bd7d1eb9b8f1",
+          "sourceSha256": "8b6f5ba92df3b85216fb96b22ae0767a9338883b041a7de86845fe6302b87129",
+          "sharedModel": "bespoke/raemian-oksu-riverzen-101-representative/bespoke-raemian-oksu-riverzen-101.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-raemian-oksu-riverzen-101",
+            "sourceDimensions": [
+              53.61490440368652,
+              35,
+              40.09946250915527
+            ],
+            "matrix": [
+              0.014210989549563464,
+              0.0,
+              1.042765199548089,
+              0.0,
+              0.0,
+              1.6468571428571428,
+              0.0,
+              0.0,
+              -1.1237128809266301,
+              0.0,
+              0.05979267292226481,
+              0.0,
+              -0.7089673139816575,
+              0.0,
+              -7.628517157545955,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-raemian-oksu-riverzen-108",
+          "dimensions": [
+            47.18214901866688,
+            57.64,
+            66.66096562999816
+          ],
+          "min": [
+            -18.887700427898647,
+            0,
+            -37.78030327501635
+          ],
+          "max": [
+            28.29444859076823,
+            57.64,
+            28.88066235498181
+          ],
+          "sha256": "08dd08af1bb2e44bf867e46508b216ab39f1f311773d82530da9bd7d1eb9b8f1",
+          "sourceSha256": "8b6f5ba92df3b85216fb96b22ae0767a9338883b041a7de86845fe6302b87129",
+          "sharedModel": "bespoke/raemian-oksu-riverzen-101-representative/bespoke-raemian-oksu-riverzen-101.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-raemian-oksu-riverzen-101",
+            "sourceDimensions": [
+              53.61490440368652,
+              35,
+              40.09946250915527
+            ],
+            "matrix": [
+              -0.09272739576895793,
+              0.0,
+              1.2274465547331594,
+              0.0,
+              0.0,
+              1.6468571428571428,
+              0.0,
+              0.0,
+              -1.2590065619059274,
+              0.0,
+              -0.07902031880123007,
+              0.0,
+              -0.9666171641150809,
+              0.0,
+              -8.409442040390251,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-raemian-oksu-riverzen-109",
+          "dimensions": [
+            43.20748328113683,
+            26.51,
+            23.94189876852117
+          ],
+          "min": [
+            -22.31018730153953,
+            0,
+            -11.679372252905202
+          ],
+          "max": [
+            20.897295979597306,
+            26.51,
+            12.262526515615967
+          ],
+          "sha256": "08dd08af1bb2e44bf867e46508b216ab39f1f311773d82530da9bd7d1eb9b8f1",
+          "sourceSha256": "8b6f5ba92df3b85216fb96b22ae0767a9338883b041a7de86845fe6302b87129",
+          "sharedModel": "bespoke/raemian-oksu-riverzen-101-representative/bespoke-raemian-oksu-riverzen-101.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-raemian-oksu-riverzen-101",
+            "sourceDimensions": [
+              53.61490440368652,
+              35,
+              40.09946250915527
+            ],
+            "matrix": [
+              0.7860785586578607,
+              0.0,
+              0.03064973489890007,
+              0.0,
+              0.0,
+              0.7574285714285715,
+              0.0,
+              0.0,
+              -0.09685120588308663,
+              0.0,
+              0.6243581653721187,
+              0.0,
+              -3.848438154815704,
+              0.0,
+              3.170725616801777,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-raemian-oksu-riverzen-110",
+          "dimensions": [
+            53.89366721133909,
+            51.98,
+            37.454650405880926
+          ],
+          "min": [
+            -26.94678243536238,
+            0,
+            -18.038918866346275
+          ],
+          "max": [
+            26.946884775976713,
+            51.98,
+            19.41573153953465
+          ],
+          "sha256": "08dd08af1bb2e44bf867e46508b216ab39f1f311773d82530da9bd7d1eb9b8f1",
+          "sourceSha256": "8b6f5ba92df3b85216fb96b22ae0767a9338883b041a7de86845fe6302b87129",
+          "sharedModel": "bespoke/raemian-oksu-riverzen-101-representative/bespoke-raemian-oksu-riverzen-101.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-raemian-oksu-riverzen-101",
+            "sourceDimensions": [
+              53.61490440368652,
+              35,
+              40.09946250915527
+            ],
+            "matrix": [
+              0.927936124945365,
+              0.0,
+              0.3729247048480553,
+              0.0,
+              0.0,
+              1.485142857142857,
+              0.0,
+              0.0,
+              -0.3729264301322256,
+              0.0,
+              0.9279183139284115,
+              0.0,
+              -7.098637214196225,
+              0.0,
+              2.6248695770488943,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-raemian-oksu-riverzen-111",
+          "dimensions": [
+            45.5673364261731,
+            57.64,
+            55.26187713813613
+          ],
+          "min": [
+            -17.9979619112541,
+            0,
+            -33.560708922481304
+          ],
+          "max": [
+            27.569374514919,
+            57.64,
+            21.701168215654825
+          ],
+          "sha256": "08dd08af1bb2e44bf867e46508b216ab39f1f311773d82530da9bd7d1eb9b8f1",
+          "sourceSha256": "8b6f5ba92df3b85216fb96b22ae0767a9338883b041a7de86845fe6302b87129",
+          "sharedModel": "bespoke/raemian-oksu-riverzen-101-representative/bespoke-raemian-oksu-riverzen-101.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-raemian-oksu-riverzen-101",
+            "sourceDimensions": [
+              53.61490440368652,
+              35,
+              40.09946250915527
+            ],
+            "matrix": [
+              0.014251755306663033,
+              0.0,
+              1.042571905542922,
+              0.0,
+              0.0,
+              1.6468571428571428,
+              0.0,
+              0.0,
+              -1.1236577616416623,
+              0.0,
+              0.05991993753193154,
+              0.0,
+              -0.7098142428970671,
+              0.0,
+              -7.627842238884542,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-raemian-oksu-riverzen-112",
+          "dimensions": [
+            47.19107591626895,
+            57.64,
+            66.6482771168828
+          ],
+          "min": [
+            -18.886677570527343,
+            0,
+            -37.77561037227857
+          ],
+          "max": [
+            28.304398345741607,
+            57.64,
+            28.872666744604224
+          ],
+          "sha256": "08dd08af1bb2e44bf867e46508b216ab39f1f311773d82530da9bd7d1eb9b8f1",
+          "sourceSha256": "8b6f5ba92df3b85216fb96b22ae0767a9338883b041a7de86845fe6302b87129",
+          "sharedModel": "bespoke/raemian-oksu-riverzen-101-representative/bespoke-raemian-oksu-riverzen-101.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-raemian-oksu-riverzen-101",
+            "sourceDimensions": [
+              53.61490440368652,
+              35,
+              40.09946250915527
+            ],
+            "matrix": [
+              -0.09278557102649965,
+              0.0,
+              1.2272413640969886,
+              0.0,
+              0.0,
+              1.6468571428571428,
+              0.0,
+              0.0,
+              -1.2592806993340604,
+              0.0,
+              -0.078868818100493,
+              0.0,
+              -0.9621986866730046,
+              0.0,
+              -8.40861875553007,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-raemian-oksu-riverzen-113",
+          "dimensions": [
+            43.79519898799177,
+            35,
+            32.09061795914462
+          ],
+          "min": [
+            -22.03622302889306,
+            0,
+            -15.00485448023398
+          ],
+          "max": [
+            21.758975959098713,
+            35,
+            17.085763478910646
+          ],
+          "sha256": "08dd08af1bb2e44bf867e46508b216ab39f1f311773d82530da9bd7d1eb9b8f1",
+          "sourceSha256": "8b6f5ba92df3b85216fb96b22ae0767a9338883b041a7de86845fe6302b87129",
+          "sharedModel": "bespoke/raemian-oksu-riverzen-101-representative/bespoke-raemian-oksu-riverzen-101.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-raemian-oksu-riverzen-101",
+            "sourceDimensions": [
+              53.61490440368652,
+              35,
+              40.09946250915527
+            ],
+            "matrix": [
+              0.72807306219348,
+              0.0,
+              0.3762000838856354,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              -0.37617127298129294,
+              0.0,
+              0.7355186903629513,
+              0.0,
+              -6.515844621898738,
+              0.0,
+              2.801694060726727,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-raemian-oksu-riverzen-114",
+          "dimensions": [
+            41.72341452433789,
+            46.32,
+            62.04512859316093
+          ],
+          "min": [
+            -19.092994020033142,
+            0,
+            -32.72861673493943
+          ],
+          "max": [
+            22.630420504304748,
+            46.32,
+            29.316511858221503
+          ],
+          "sha256": "08dd08af1bb2e44bf867e46508b216ab39f1f311773d82530da9bd7d1eb9b8f1",
+          "sourceSha256": "8b6f5ba92df3b85216fb96b22ae0767a9338883b041a7de86845fe6302b87129",
+          "sharedModel": "bespoke/raemian-oksu-riverzen-101-representative/bespoke-raemian-oksu-riverzen-101.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-raemian-oksu-riverzen-101",
+            "sourceDimensions": [
+              53.61490440368652,
+              35,
+              40.09946250915527
+            ],
+            "matrix": [
+              -0.19599232114100562,
+              0.0,
+              1.1187874776493671,
+              0.0,
+              0.0,
+              1.3234285714285714,
+              0.0,
+              0.0,
+              -1.1465027413969264,
+              0.0,
+              -0.18707826484371687,
+              0.0,
+              -1.5488722133799335,
+              0.0,
+              -6.823264115180443,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-raemian-oksu-riverzen-115",
+          "dimensions": [
+            41.7211885779508,
+            46.32,
+            62.04625026441738
+          ],
+          "min": [
+            -19.093778457550677,
+            0,
+            -32.724584567062024
+          ],
+          "max": [
+            22.627410120400118,
+            46.32,
+            29.321665697355357
+          ],
+          "sha256": "08dd08af1bb2e44bf867e46508b216ab39f1f311773d82530da9bd7d1eb9b8f1",
+          "sourceSha256": "8b6f5ba92df3b85216fb96b22ae0767a9338883b041a7de86845fe6302b87129",
+          "sharedModel": "bespoke/raemian-oksu-riverzen-101-representative/bespoke-raemian-oksu-riverzen-101.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-raemian-oksu-riverzen-101",
+            "sourceDimensions": [
+              53.61490440368652,
+              35,
+              40.09946250915527
+            ],
+            "matrix": [
+              -0.19622129869992383,
+              0.0,
+              1.1187612952258552,
+              0.0,
+              0.0,
+              1.3234285714285714,
+              0.0,
+              0.0,
+              -1.1465045510150307,
+              0.0,
+              -0.1873042706724441,
+              0.0,
+              -1.5468636044133102,
+              0.0,
+              -6.821571221633916,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        }
+      ],
+      "mcpEvidence": [
+        {
+          "path": "docs/model-audit/mcp/raemian-oksu-riverzen-101-representative/mcp-build-reload-final.json",
+          "sha256": "7519df557ffcc1c0caf9a41fd24daeee474b8f5fc439e4874aa0ce6e8ccbb5fd",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        }
+      ],
+      "recipeInputs": [],
+      "sharedRepresentative": "bespoke-raemian-oksu-riverzen-101",
+      "newGlbFiles": 0,
+      "newBlendFiles": 0,
+      "placementInputs": [
+        {
+          "path": "docs/model-audit/raemian-oksu-riverzen-source-identity.json",
+          "sha256": "1ed2dab6250e5489e324e38759a39673ad22721c65aefd4faeee71455071ac5c"
+        },
+        {
+          "path": "docs/model-audit/raemian-oksu-riverzen-fallback-bindings.json",
+          "sha256": "953ebe4ee8186afc5d1e71db79a58f8a741d8938d95737293f0a96be4b21ef27"
+        }
+      ],
+      "placementMethod": "Long-axis oriented rectangle mapping with positive plan scales and registered overall height; actual concave target shapes are not reconstructed."
     }
   }
 }
