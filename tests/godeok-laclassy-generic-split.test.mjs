@@ -36,6 +36,8 @@ for (const batch of [
  {name:'godeok-laclassy', bindings:52, residuals:65, prior:27, triangles:93135},
  {name:'godeok-central-hillstate', bindings:46, residuals:4, prior:33, triangles:32489},
  {name:'geumho-oksu-dmc', bindings:37, residuals:6, prior:35, triangles:33787},
+ {name:'seocho-gaepo-blesstige-honor', bindings:78, residuals:17, prior:38, triangles:61407},
+ {name:'dmc-extension', bindings:33, residuals:25, prior:42, triangles:18080},
 ]) {
 const audit=json(`docs/model-audit/${batch.name}-generic-split.json`);
 const frozen=json(`docs/model-audit/${batch.name}-fallback-inputs.json`);

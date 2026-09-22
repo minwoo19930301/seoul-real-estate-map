@@ -16,13 +16,18 @@ const families = [
   {site: 'geumho-park-hills', number: 104, count: 15, label: null},
   {site: 'raemian-oksu-riverzen', number: 102, count: 14, label: null},
   {site: 'dmc-parkview-xi', number: 302, count: 5, label: null},
+  {site: 'seocho-grand-xi', number: 108, count: 8, label: null},
+  {site: 'gaepo-raemian-forest', number: 101, count: 26, label: null},
+  {site: 'raemian-blesstige', number: 202, count: 20, label: null},
+  {site: 'dh-honor-hills', number: 301, count: 20, label: null},
+  {site: 'dmc-parkview-xi-extension', assetSite: 'dmc-parkview-xi', number: 103, count: 33, label: null},
 ];
 for (const family of families) for (const failure of ['none', 'shared-model', 'shared-and-fallback']) {
   test(`${family.site} shared copies: ${failure}`, async ({page}) => {
     test.setTimeout(240_000);
     const siblings = assets.filter((a: any) => a.sourceRecord.siteId === `${family.site}-shared`);
     expect(siblings.length).toBe(family.count);
-    const target = siblings.find((a: any) => a.id === `bespoke-${family.site}-${family.number}`);
+    const target = siblings.find((a: any) => a.id === `bespoke-${family.assetSite ?? family.site}-${family.number}`);
     const binding = read(`docs/model-audit/${family.site}-fallback-bindings.json`).bindings.find((b: any) => b.number === family.number);
     const errors: string[] = [], requests: string[] = [];
     page.on('pageerror', e => errors.push(e.message));

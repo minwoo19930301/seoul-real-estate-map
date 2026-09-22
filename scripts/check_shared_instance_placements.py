@@ -14,11 +14,21 @@ def check():
     published=read('docs/model-audit/published-bespoke.json')['sites'];reports=[];groups={}
     superseded={aid for a in assets for aid in a.get('supersedes',[])}
     for site,proof in published.items():
-        if proof.get('sharedRepresentative'):groups.setdefault(proof['placementInputs'][0]['path'],[]).append(site)
-    for identity_path,sites in groups.items():
-        identity=read(identity_path);rows={r['sourceId']:r for r in identity['towers']}
+        if not proof.get('sharedRepresentative'):continue
+        identity_path=proof['placementInputs'][0]['path'];identity=read(identity_path)
+        key=identity.get('complex',{}).get('managementCode') or identity_path
+        group=groups.setdefault(key,{'paths':[],'sites':[],'rows':{}})
+        if identity_path not in group['paths']:group['paths'].append(identity_path)
+        group['sites'].append(site)
+        for row in identity['towers']:
+            prior=group['rows'].get(row['sourceId'])
+            if prior is not None and (prior['number']!=row['number'] or prior['geometry']!=row['geometry']):
+                raise ValueError('Conflicting source identity across shared batches: '+row['sourceId'])
+            group['rows'][row['sourceId']]=row
+    for group in groups.values():
+        sites=group['sites'];rows=group['rows'];identity_path=group['paths'][0]
         copies=[a for a in assets if a['sourceRecord']['siteId'] in sites and a['id'] not in superseded]
-        origin=identity['towers'][0]['geometry']['coordinates'][0][0];sy=111319.49079327358;sx=sy*math.cos(math.radians(origin[1]))
+        origin=next(iter(rows.values()))['geometry']['coordinates'][0][0];sy=111319.49079327358;sx=sy*math.cos(math.radians(origin[1]))
         def world(coords):return Polygon([((x-origin[0])*sx,(y-origin[1])*sy) for x,y in coords]).buffer(0)
         originals={fid:world(r['geometry']['coordinates'][0]) for fid,r in rows.items()};plans={};hits=[]
         for a in copies:
@@ -35,7 +45,7 @@ def check():
             for other in keys[i+1:]:
                 area=plans[fid].intersection(plans[other]).area
                 if area>.01:pairs.append({'a':rows[fid]['number'],'b':rows[other]['number'],'overlapM2':area})
-        reports.append({'identity':identity_path,'sites':sites,'copies':len(copies),'bodyPlanNeighborOverlaps':hits,'copyToCopyOverlaps':pairs,
+        reports.append({'identity':identity_path,'identityPaths':group['paths'],'sourceBodies':len(rows),'sites':sites,'copies':len(copies),'bodyPlanNeighborOverlaps':hits,'copyToCopyOverlaps':pairs,
                         'scope':'Transformed representative source-body plans; ornamental projection and exact target-shape fidelity are not certified.'})
     return reports
 

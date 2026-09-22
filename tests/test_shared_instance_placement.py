@@ -6,6 +6,7 @@ from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 from publish_shared_instances import target_height, effective_fallback_assets, publish
+from check_shared_instance_placements import check as check_placements
 
 
 class SharedHeight(unittest.TestCase):
@@ -74,6 +75,52 @@ class SharedFallbackCorrections(unittest.TestCase):
                 publish(args)
             placement_mock.assert_not_called()
             writes.assert_not_called()
+
+
+class SharedPlacementBatches(unittest.TestCase):
+    def fixtures(self):
+        metre = 1 / 111319.49079327358
+        def row(fid, number, x):
+            return {'sourceId': fid, 'number': number, 'geometry': {
+                'type': 'Polygon', 'coordinates': [[
+                    [x * metre, 0], [(x + 1) * metre, 0],
+                    [(x + 1) * metre, metre], [x * metre, metre], [x * metre, 0]]]}}
+        representative = {'id': 'representative', 'coordinate': {'lon': 0, 'lat': 0},
+                          'footprintIds': ['rep-source'], 'sourceRecord': {'siteId': 'reviewed'}}
+        def asset(fid, site, x):
+            return {'id': fid, 'coordinate': {'lon': x * metre, 'lat': 0},
+                    'footprintIds': [fid], 'sourceRecord': {'siteId': site},
+                    'modelInstance': {'sourceAssetId': 'representative',
+                        'matrix': [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1]}}
+        return {
+            'public/models/bespoke-manifest.json': {'assets': [representative,
+                asset('a', 'first', 10), asset('b', 'extension', 10.5)]},
+            'docs/model-audit/published-bespoke.json': {'sites': {
+                'first': {'sharedRepresentative': 'representative', 'placementInputs': [{'path': 'first.json'}]},
+                'extension': {'sharedRepresentative': 'representative', 'placementInputs': [{'path': 'extension.json'}]}}},
+            'first.json': {'complex': {'managementCode': 'same-complex'},
+                           'towers': [row('rep-source', 1, 0), row('a', 2, 100)]},
+            'extension.json': {'complex': {'managementCode': 'same-complex'},
+                               'towers': [row('rep-source', 1, 0), row('b', 3, 200)]},
+        }
+
+    def test_overlap_between_separate_publication_batches_is_detected(self):
+        documents = self.fixtures()
+        with patch('check_shared_instance_placements.read', side_effect=documents.__getitem__):
+            reports = check_placements()
+        self.assertEqual(len(reports), 1)
+        self.assertEqual(reports[0]['copies'], 2)
+        self.assertEqual(reports[0]['sourceBodies'], 3)
+        self.assertEqual(reports[0]['bodyPlanNeighborOverlaps'], [])
+        self.assertEqual(len(reports[0]['copyToCopyOverlaps']), 1)
+        self.assertAlmostEqual(reports[0]['copyToCopyOverlaps'][0]['overlapM2'], .5, places=5)
+
+    def test_conflicting_source_geometry_in_extension_is_rejected(self):
+        documents = self.fixtures()
+        documents['extension.json']['towers'][0]['geometry']['coordinates'][0][0][0] = .001
+        with patch('check_shared_instance_placements.read', side_effect=documents.__getitem__):
+            with self.assertRaisesRegex(ValueError, 'Conflicting source identity'):
+                check_placements()
 
 
 if __name__ == '__main__':

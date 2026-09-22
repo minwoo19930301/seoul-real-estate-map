@@ -1,6 +1,6 @@
 # 서울 400세대 이상 아파트 모델 적용 현황
 
-공식 자료 확인일: 2026-09-21. `scripts/build_apartment_bespoke_queue.py`로 생성합니다. **대상 1,417 관리코드, 주거동 전체 적용 완료 26, 미완료 1,391**입니다. 분류 보강 검토 2건과 명시적 비아파트 제외 1건은 큐에 별도로 남깁니다.
+공식 자료 확인일: 2026-09-21. `scripts/build_apartment_bespoke_queue.py`로 생성합니다. **대상 1,417 관리코드, 주거동 전체 적용 완료 27, 미완료 1,390**입니다. 분류 보강 검토 2건과 명시적 비아파트 제외 1건은 큐에 별도로 남깁니다.
 
 ## 모수와 중복
 
@@ -24,9 +24,13 @@ K-apt 서울 자료의 123코드에는 복수 주소 등에 따른 추가 147행
 | A10023083 | 청량리역 롯데캐슬 SKY-L65 | complete_residential_buildings | 4 / 4 | 0 |
 | A10023188 | 청량리역 한양수자인 그라시엘 | complete_residential_buildings | 4 / 4 | 0 |
 | A10024131 | 래미안 라클래시 | partial | 5 / 7 | 5 |
+| A10024240 | 서초그랑자이 | complete_residential_buildings | 9 / 9 | 9 |
+| A10024564 | 개포래미안포레스트 | partial | 27 / 31 | 27 |
 | A10025010 | 고덕 아르테온 아파트 | partial | 25 / 41 | 25 |
 | A10025104 | 고덕센트럴 아이파크 | partial | 18 / 19 | 18 |
+| A10025203 | 디에이치 아너힐즈 | partial | 21 / 23 | 21 |
 | A10025263 | 고덕 그라시움 아파트 | partial | 22 / 53 | 22 |
+| A10025675 | 래미안블레스티지 | partial | 21 / 23 | 21 |
 | A10025850 | 헬리오시티아파트 | complete_residential_buildings | 84 / 84 | 84 |
 | A10026004 | 신반포자이아파트 | complete_residential_buildings | 7 / 7 | 7 |
 | A10026207 | 서울숲리버뷰자이아파트 | complete_residential_buildings | 7 / 7 | 7 |
@@ -35,7 +39,7 @@ K-apt 서울 자료의 123코드에는 복수 주소 등에 따른 추가 147행
 | A10026988 | 트리마제 | complete_residential_buildings | 4 / 4 | 0 |
 | A10027205 | 아크로리버파크 | complete_residential_buildings | 15 / 15 | 15 |
 | A10027207 | 래미안힐스테이트 고덕 | partial | 28 / 51 | 28 |
-| A10027817 | DMC파크뷰자이아파트 | partial | 6 / 61 | 6 |
+| A10027817 | DMC파크뷰자이아파트 | partial | 39 / 61 | 39 |
 | A10027908 | 래미안첼리투스 | complete_residential_buildings | 3 / 3 | 0 |
 | A12174601 | 메세나폴리스 | complete_residential_buildings | 3 / 3 | 0 |
 | A13375907 | 래미안옥수리버젠 | complete_residential_buildings | 15 / 15 | 15 |

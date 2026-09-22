@@ -1,0 +1,1430 @@
+{
+  "version": 1,
+  "complex": {
+    "managementCode": "A10024240",
+    "name": "서초그랑자이",
+    "address": "서울특별시 서초구 효령로 391",
+    "households": 1446,
+    "officialBuildingCount": 9
+  },
+  "officialRecords": [
+    {
+      "address": "서울특별시 서초구 효령로 391",
+      "buildingCount": 9,
+      "classification": "아파트",
+      "code": "A10024240",
+      "district": "서초구",
+      "households": 1446,
+      "nameKo": "서초그랑자이",
+      "sourceCoordinate": [
+        127.025992,
+        37.489133
+      ],
+      "sourceId": "oa-15818",
+      "sourceRow": 2670
+    },
+    {
+      "address": "서울특별시 서초구 효령로 391",
+      "buildingCount": 9,
+      "classification": "아파트",
+      "code": "A10024240",
+      "district": "서초구",
+      "households": 1446,
+      "nameKo": "서초그랑자이",
+      "sourceCoordinate": null,
+      "sourceId": "kapt-weekly",
+      "sourceRow": 2752
+    }
+  ],
+  "officialSnapshotSha256": "0430f2d2f803c8c9d1b2d6f2763d2b24021f675f1699e2514f05cf8457c3d308",
+  "sourceSha256": "6219d411fad7284fddc656a44e84b25134e55c8e8ed1c16044196abe4b25a9da",
+  "membershipBasis": "Numeric source names normalized to registered dong suffix, exact registered road and parcel, equal floors and height difference <=1m, within1000m of official point. Root verified actual SQLite geometry/properties and raw register rows. Complex membership is inference; no cadastral or named-complex polygon boundary proof. Generic compound grouping is not membership evidence.",
+  "confirmedBuildingCount": 9,
+  "unmappedOfficialBuildingCount": 0,
+  "limitations": [
+    "Only identified source buildings receive copies; unmatched or unnamed sources remain unchanged.",
+    "Representative photograph does not establish tower number or compass face; exterior is complex-photo inference.",
+    "Clones repeat representative shape and facade/floor pattern; exact target concavity and per-floor differences are not reconstructed."
+  ],
+  "towers": [
+    {
+      "number": 101,
+      "sourceId": "037c1552-30ad-46a1-9dc0-daa396777327",
+      "sourceName": "101동",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              127.0257942,
+              37.488479
+            ],
+            [
+              127.0257527,
+              37.488406
+            ],
+            [
+              127.0262162,
+              37.4882397
+            ],
+            [
+              127.0263391,
+              37.4884552
+            ],
+            [
+              127.0262454,
+              37.4884888
+            ],
+            [
+              127.0261956,
+              37.4884013
+            ],
+            [
+              127.0261335,
+              37.4884235
+            ],
+            [
+              127.0261062,
+              37.4883755
+            ],
+            [
+              127.0259966,
+              37.4884148
+            ],
+            [
+              127.0260245,
+              37.4884639
+            ],
+            [
+              127.0259305,
+              37.4884976
+            ],
+            [
+              127.0258986,
+              37.4884415
+            ],
+            [
+              127.0257942,
+              37.488479
+            ]
+          ]
+        ]
+      },
+      "sourceProperties": {
+        "names": {
+          "primary": "101동",
+          "common": [
+            [
+              "en",
+              "101"
+            ],
+            [
+              "ko",
+              "101동"
+            ]
+          ]
+        },
+        "sources": [
+          {
+            "property": "",
+            "dataset": "OpenStreetMap",
+            "license": "ODbL-1.0",
+            "record_id": "w906267360@4",
+            "update_time": "2025-09-22T12:38:33.000Z",
+            "provider": "osm",
+            "resource": "planet",
+            "version": "2026-08-02T00:00:00.000Z"
+          }
+        ],
+        "height": 110.0,
+        "is_underground": false,
+        "num_floors": 35,
+        "subtype": "residential",
+        "class": "apartments",
+        "has_parts": false,
+        "version": 2,
+        "bbox": {
+          "xmin": 127.02574920654297,
+          "xmax": 127.02635192871094,
+          "ymin": 37.48823928833008,
+          "ymax": 37.48849868774414
+        },
+        "min_height": null,
+        "feature_type": "building",
+        "_seoul": {
+          "district_id": "5056ad90-b154-46b1-a3b1-88140d162432",
+          "height_status": "source-reported-unverified",
+          "height_source_indices": [
+            0
+          ],
+          "boundary_crossing": false,
+          "original_geometry_valid": true
+        }
+      },
+      "sourceHeightM": 110.0,
+      "sourceChildIds": [],
+      "register": {
+        "row_number": 293726,
+        "id": "1000000000000001359548",
+        "district": "서초구",
+        "dong": "서초동",
+        "parcel_key": "서초구|서초동|land|1757|0",
+        "road_key": "서초구|효령로|391|0|지상",
+        "building_dong": "101동",
+        "main_aux": "주건축물",
+        "main_use": "공동주택",
+        "other_use": "공동주택(아파트)",
+        "floors": "35",
+        "basement": "0",
+        "height": "109.65",
+        "households": "134",
+        "approval_year": "2021",
+        "roof": "(철근)콘크리트",
+        "structure": "철근콘크리트구조",
+        "source_hash": "d636a5789e32a2580a97a370e604c609a9f3cb5011510756db4badef49dbf70f",
+        "raw_json": "{\"\\ub300\\uc9c0\\uc704\\uce58\":\"\\uc11c\\uc6b8\\ud2b9\\ubcc4\\uc2dc \\uc11c\\ucd08\\uad6c \\uc11c\\ucd08\\ub3d9 1757\",\"\\uc2dc\\uad70\\uad6c\\ucf54\\ub4dc\\uba85\":\"\\uc11c\\uc6b8\\ud2b9\\ubcc4\\uc2dc \\uc11c\\ucd08\\uad6c\",\"\\ubc95\\uc815\\ub3d9\\ucf54\\ub4dc\\uba85\":\"\\uc11c\\ucd08\\ub3d9\",\"\\ub300\\uc9c0\\uad6c\\ubd84\\ucf54\\ub4dc\\uba85\":\"\\ub300\\uc9c0\",\"\\uc8fc\\uc9c0\\ubc88\":\"1757\",\"\\ubd80\\uc9c0\\ubc88\":\"0000\",\"\\ud2b9\\uc218\\uc9c0\\uba85\":\"\",\"\\ube14\\ub85d\\ubc88\\ud638\":\"\",\"\\ub85c\\ud2b8\\ubc88\\ud638\":\"\",\"\\uc0c8\\uc8fc\\uc18c\\ub3c4\\ub85c\\ucf54\\ub4dc\\uba85\":\"\\ud6a8\\ub839\\ub85c\",\"\\uc0c8\\uc8fc\\uc18c\\ubc95\\uc815\\ub3d9\\ucf54\\ub4dc\\uba85\":\"\\uc11c\\ucd08\\ub3d9\",\"\\uc0c8\\uc8fc\\uc18c\\uc9c0\\uc0c1\\uc9c0\\ud558\\uad6c\\ubd84\\ucf54\\ub4dc\\uba85\":\"\\uc9c0\\uc0c1\",\"\\uc0c8\\uc8fc\\uc18c\\uc8fc\\uc9c0\\ubc88\":\"391\",\"\\uc0c8\\uc8fc\\uc18c\\ubd80\\uc9c0\\ubc88\":\"\",\"\\uac74\\ucd95\\ubb3c\\ub300\\uc7a5\\uc77c\\ub828\\ubc88\\ud638\":\"1000000000000001359548\",\"\\ub300\\uc7a5\\uad6c\\ubd84\\ucf54\\ub4dc\\uba85\":\"\\uc9d1\\ud569\",\"\\ub300\\uc7a5\\uc885\\ub958\\ucf54\\ub4dc\\uba85\":\"\\ud45c\\uc81c\\ubd80\",\"\\ub3d9\\uba85\":\"101\\ub3d9\",\"\\uc8fc\\ubd80\\uc18d\\uad6c\\ubd84\\ucf54\\ub4dc\\uba85\":\"\\uc8fc\\uac74\\ucd95\\ubb3c\",\"\\ub300\\uc9c0\\uba74\\uc801\":\"53923.1\",\"\\uac74\\ucd95\\uba74\\uc801\":\"691.791\",\"\\uac74\\ud3d0\\uc728\":\"1.28\",\"\\uc5f0\\uba74\\uc801\":\"15370.42\",\"\\uc6a9\\uc801\\ub960\\uc0b0\\uc815\\uc5f0\\uba74\\uc801\":\"15370.42\",\"\\uc6a9\\uc801\\ub960\":\"28.5\",\"\\uad6c\\uc870\\ucf54\\ub4dc\\uba85\":\"\\ucca0\\uadfc\\ucf58\\ud06c\\ub9ac\\ud2b8\\uad6c\\uc870\",\"\\uae30\\ud0c0\\uad6c\\uc870\\uc815\\ubcf4\":\"\\ucca0\\uadfc\\ucf58\\ud06c\\ub9ac\\ud2b8\\uad6c\\uc870\",\"\\uc8fc\\uc6a9\\ub3c4\\ucf54\\ub4dc\\uba85\":\"\\uacf5\\ub3d9\\uc8fc\\ud0dd\",\"\\uae30\\ud0c0\\uc6a9\\ub3c4\\ub0b4\\uc6a9\":\"\\uacf5\\ub3d9\\uc8fc\\ud0dd(\\uc544\\ud30c\\ud2b8)\",\"\\uc9c0\\ubd95\\ucf54\\ub4dc\\uba85\":\"(\\ucca0\\uadfc)\\ucf58\\ud06c\\ub9ac\\ud2b8\",\"\\uae30\\ud0c0\\uc9c0\\ubd95\\uba85\":\"(\\ucca0\\uadfc)\\ucf58\\ud06c\\ub9ac\\ud2b8\",\"\\uc138\\ub300\\uc218\":\"134\",\"\\uac00\\uad6c\\uc218\":\"\",\"\\ud638\\uc218\":\"\",\"\\uc9c0\\uc0c1\\uce35\\uc218\":\"35\",\"\\uc9c0\\ud558\\uce35\\uc218\":\"0\",\"\\ub192\\uc774\":\"109.65\",\"\\uc2b9\\uc6a9\\uc2b9\\uac15\\uae30\\uc218\":\"\",\"\\ube44\\uc0c1\\uc6a9\\uc2b9\\uac15\\uae30\\uc218\":\"4\",\"\\ubd80\\uc18d\\uac74\\ucd95\\ubb3c\\uc218\":\"\",\"\\ubd80\\uc18d\\uac74\\ucd95\\ubb3c\\uba74\\uc801\":\"\",\"\\ucd1d\\ub3d9\\uc5f0\\uba74\\uc801\":\"15370.42\",\"\\uc625\\ub0b4\\uae30\\uacc4\\uc2dd\\ub300\\uc218\":\"\",\"\\uc625\\ub0b4\\uae30\\uacc4\\uc2dd\\uba74\\uc801\":\"\",\"\\uc625\\uc678\\uae30\\uacc4\\uc2dd\\ub300\\uc218\":\"\",\"\\uc625\\uc678\\uae30\\uacc4\\uc2dd\\uba74\\uc801\":\"\",\"\\uc625\\ub0b4\\uc790\\uc8fc\\uc2dd\\ub300\\uc218\":\"2892\",\"\\uc625\\ub0b4\\uc790\\uc8fc\\uc2dd\\uba74\\uc801\":\"112788.978\",\"\\uc625\\uc678\\uc790\\uc8fc\\uc2dd\\ub300\\uc218\":\"\",\"\\uc625\\uc678\\uc790\\uc8fc\\uc2dd\\uba74\\uc801\":\"\",\"\\ud5c8\\uac00\\uc77c\\uc790\":\"2015-07-24\",\"\\ucc29\\uacf5\\uc77c\\uc790\":\"2018-07-16\",\"\\uc0ac\\uc6a9\\uc2b9\\uc778\\uc77c\\uc790\":\"2021-06-29\",\"\\uc5d0\\ub108\\uc9c0\\ud6a8\\uc728\\ub4f1\\uae09\\uac12\":\"\",\"\\uc5d0\\ub108\\uc9c0\\uc808\\uac10\\ub960\":\"\",\"EPI\\uc810\\uc218\":\"\",\"\\uce5c\\ud658\\uacbd\\uac74\\ucd95\\ubb3c\\ub4f1\\uae09\\uac12\":\"\",\"\\uce5c\\ud658\\uacbd\\uac74\\ucd95\\ubb3c\\uc778\\uc99d\\uc810\\uc218\":\"\",\"\\uc9c0\\ub2a5\\ud615\\uac74\\ucd95\\ubb3c\\ub4f1\\uae09\\uac12\":\"\",\"\\uc9c0\\ub2a5\\ud615\\uac74\\ucd95\\ubb3c\\uc778\\uc99d\\uc810\\uc218\":\"\",\"\\ub0b4\\uc9c4\\uc124\\uacc4\\uc801\\uc6a9\\uc5ec\\ubd80\":\"1\",\"\\ub0b4\\uc9c4\\ub2a5\\ub825\\ub0b4\\uc6a9\":\"\\u2166-0.168g\"}"
+      },
+      "identityComparison": {
+        "floorsEqual": true,
+        "heightDifferenceM": 0.35,
+        "distanceFromOfficialPointM": 78.55
+      }
+    },
+    {
+      "number": 102,
+      "sourceId": "dccec1a5-dd71-4267-a270-67110441d473",
+      "sourceName": "102동",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              127.0250782,
+              37.4882627
+            ],
+            [
+              127.0250146,
+              37.48815
+            ],
+            [
+              127.0254817,
+              37.4879842
+            ],
+            [
+              127.0255733,
+              37.4881467
+            ],
+            [
+              127.0255917,
+              37.4881401
+            ],
+            [
+              127.0256832,
+              37.4883026
+            ],
+            [
+              127.0255079,
+              37.4883648
+            ],
+            [
+              127.0254488,
+              37.4882598
+            ],
+            [
+              127.0255226,
+              37.4882336
+            ],
+            [
+              127.0254867,
+              37.4881699
+            ],
+            [
+              127.0254128,
+              37.4881961
+            ],
+            [
+              127.0253754,
+              37.4881297
+            ],
+            [
+              127.0252753,
+              37.4881652
+            ],
+            [
+              127.0252645,
+              37.4881461
+            ],
+            [
+              127.0252171,
+              37.4881629
+            ],
+            [
+              127.0252597,
+              37.4882386
+            ],
+            [
+              127.0251352,
+              37.4882828
+            ],
+            [
+              127.0251163,
+              37.4882492
+            ],
+            [
+              127.0250782,
+              37.4882627
+            ]
+          ]
+        ]
+      },
+      "sourceProperties": {
+        "names": {
+          "primary": "102동",
+          "common": [
+            [
+              "en",
+              "102"
+            ],
+            [
+              "ko",
+              "102동"
+            ]
+          ]
+        },
+        "sources": [
+          {
+            "property": "",
+            "dataset": "OpenStreetMap",
+            "license": "ODbL-1.0",
+            "record_id": "w906267359@4",
+            "update_time": "2025-09-22T12:38:33.000Z",
+            "provider": "osm",
+            "resource": "planet",
+            "version": "2026-08-02T00:00:00.000Z"
+          }
+        ],
+        "height": 110.0,
+        "is_underground": false,
+        "num_floors": 35,
+        "subtype": "residential",
+        "class": "apartments",
+        "has_parts": false,
+        "version": 2,
+        "bbox": {
+          "xmin": 127.0250015258789,
+          "xmax": 127.02569580078125,
+          "ymin": 37.48798370361328,
+          "ymax": 37.488365173339844
+        },
+        "min_height": null,
+        "feature_type": "building",
+        "_seoul": {
+          "district_id": "5056ad90-b154-46b1-a3b1-88140d162432",
+          "height_status": "source-reported-unverified",
+          "height_source_indices": [
+            0
+          ],
+          "boundary_crossing": false,
+          "original_geometry_valid": true
+        }
+      },
+      "sourceHeightM": 110.0,
+      "sourceChildIds": [],
+      "register": {
+        "row_number": 233369,
+        "id": "1000000000000001360160",
+        "district": "서초구",
+        "dong": "서초동",
+        "parcel_key": "서초구|서초동|land|1757|0",
+        "road_key": "서초구|효령로|391|0|지상",
+        "building_dong": "102동",
+        "main_aux": "주건축물",
+        "main_use": "공동주택",
+        "other_use": "공동주택(아파트)",
+        "floors": "35",
+        "basement": "0",
+        "height": "109.65",
+        "households": "199",
+        "approval_year": "2021",
+        "roof": "(철근)콘크리트",
+        "structure": "철근콘크리트구조",
+        "source_hash": "a0dbae4284fafb3c150109a27b7aa1f439b19828bac0d714c3ad98a47f240170",
+        "raw_json": "{\"\\ub300\\uc9c0\\uc704\\uce58\":\"\\uc11c\\uc6b8\\ud2b9\\ubcc4\\uc2dc \\uc11c\\ucd08\\uad6c \\uc11c\\ucd08\\ub3d9 1757\",\"\\uc2dc\\uad70\\uad6c\\ucf54\\ub4dc\\uba85\":\"\\uc11c\\uc6b8\\ud2b9\\ubcc4\\uc2dc \\uc11c\\ucd08\\uad6c\",\"\\ubc95\\uc815\\ub3d9\\ucf54\\ub4dc\\uba85\":\"\\uc11c\\ucd08\\ub3d9\",\"\\ub300\\uc9c0\\uad6c\\ubd84\\ucf54\\ub4dc\\uba85\":\"\\ub300\\uc9c0\",\"\\uc8fc\\uc9c0\\ubc88\":\"1757\",\"\\ubd80\\uc9c0\\ubc88\":\"0000\",\"\\ud2b9\\uc218\\uc9c0\\uba85\":\"\",\"\\ube14\\ub85d\\ubc88\\ud638\":\"\",\"\\ub85c\\ud2b8\\ubc88\\ud638\":\"\",\"\\uc0c8\\uc8fc\\uc18c\\ub3c4\\ub85c\\ucf54\\ub4dc\\uba85\":\"\\ud6a8\\ub839\\ub85c\",\"\\uc0c8\\uc8fc\\uc18c\\ubc95\\uc815\\ub3d9\\ucf54\\ub4dc\\uba85\":\"\\uc11c\\ucd08\\ub3d9\",\"\\uc0c8\\uc8fc\\uc18c\\uc9c0\\uc0c1\\uc9c0\\ud558\\uad6c\\ubd84\\ucf54\\ub4dc\\uba85\":\"\\uc9c0\\uc0c1\",\"\\uc0c8\\uc8fc\\uc18c\\uc8fc\\uc9c0\\ubc88\":\"391\",\"\\uc0c8\\uc8fc\\uc18c\\ubd80\\uc9c0\\ubc88\":\"\",\"\\uac74\\ucd95\\ubb3c\\ub300\\uc7a5\\uc77c\\ub828\\ubc88\\ud638\":\"1000000000000001360160\",\"\\ub300\\uc7a5\\uad6c\\ubd84\\ucf54\\ub4dc\\uba85\":\"\\uc9d1\\ud569\",\"\\ub300\\uc7a5\\uc885\\ub958\\ucf54\\ub4dc\\uba85\":\"\\ud45c\\uc81c\\ubd80\",\"\\ub3d9\\uba85\":\"102\\ub3d9\",\"\\uc8fc\\ubd80\\uc18d\\uad6c\\ubd84\\ucf54\\ub4dc\\uba85\":\"\\uc8fc\\uac74\\ucd95\\ubb3c\",\"\\ub300\\uc9c0\\uba74\\uc801\":\"53923.1\",\"\\uac74\\ucd95\\uba74\\uc801\":\"893.654\",\"\\uac74\\ud3d0\\uc728\":\"1.66\",\"\\uc5f0\\uba74\\uc801\":\"20512.467\",\"\\uc6a9\\uc801\\ub960\\uc0b0\\uc815\\uc5f0\\uba74\\uc801\":\"20512.467\",\"\\uc6a9\\uc801\\ub960\":\"38.04\",\"\\uad6c\\uc870\\ucf54\\ub4dc\\uba85\":\"\\ucca0\\uadfc\\ucf58\\ud06c\\ub9ac\\ud2b8\\uad6c\\uc870\",\"\\uae30\\ud0c0\\uad6c\\uc870\\uc815\\ubcf4\":\"\\ucca0\\uadfc\\ucf58\\ud06c\\ub9ac\\ud2b8\\uad6c\\uc870\",\"\\uc8fc\\uc6a9\\ub3c4\\ucf54\\ub4dc\\uba85\":\"\\uacf5\\ub3d9\\uc8fc\\ud0dd\",\"\\uae30\\ud0c0\\uc6a9\\ub3c4\\ub0b4\\uc6a9\":\"\\uacf5\\ub3d9\\uc8fc\\ud0dd(\\uc544\\ud30c\\ud2b8)\",\"\\uc9c0\\ubd95\\ucf54\\ub4dc\\uba85\":\"(\\ucca0\\uadfc)\\ucf58\\ud06c\\ub9ac\\ud2b8\",\"\\uae30\\ud0c0\\uc9c0\\ubd95\\uba85\":\"(\\ucca0\\uadfc)\\ucf58\\ud06c\\ub9ac\\ud2b8\",\"\\uc138\\ub300\\uc218\":\"199\",\"\\uac00\\uad6c\\uc218\":\"\",\"\\ud638\\uc218\":\"\",\"\\uc9c0\\uc0c1\\uce35\\uc218\":\"35\",\"\\uc9c0\\ud558\\uce35\\uc218\":\"0\",\"\\ub192\\uc774\":\"109.65\",\"\\uc2b9\\uc6a9\\uc2b9\\uac15\\uae30\\uc218\":\"\",\"\\ube44\\uc0c1\\uc6a9\\uc2b9\\uac15\\uae30\\uc218\":\"6\",\"\\ubd80\\uc18d\\uac74\\ucd95\\ubb3c\\uc218\":\"\",\"\\ubd80\\uc18d\\uac74\\ucd95\\ubb3c\\uba74\\uc801\":\"\",\"\\ucd1d\\ub3d9\\uc5f0\\uba74\\uc801\":\"20512.467\",\"\\uc625\\ub0b4\\uae30\\uacc4\\uc2dd\\ub300\\uc218\":\"\",\"\\uc625\\ub0b4\\uae30\\uacc4\\uc2dd\\uba74\\uc801\":\"\",\"\\uc625\\uc678\\uae30\\uacc4\\uc2dd\\ub300\\uc218\":\"\",\"\\uc625\\uc678\\uae30\\uacc4\\uc2dd\\uba74\\uc801\":\"\",\"\\uc625\\ub0b4\\uc790\\uc8fc\\uc2dd\\ub300\\uc218\":\"2892\",\"\\uc625\\ub0b4\\uc790\\uc8fc\\uc2dd\\uba74\\uc801\":\"112788.978\",\"\\uc625\\uc678\\uc790\\uc8fc\\uc2dd\\ub300\\uc218\":\"\",\"\\uc625\\uc678\\uc790\\uc8fc\\uc2dd\\uba74\\uc801\":\"\",\"\\ud5c8\\uac00\\uc77c\\uc790\":\"2015-07-24\",\"\\ucc29\\uacf5\\uc77c\\uc790\":\"2018-07-16\",\"\\uc0ac\\uc6a9\\uc2b9\\uc778\\uc77c\\uc790\":\"2021-06-29\",\"\\uc5d0\\ub108\\uc9c0\\ud6a8\\uc728\\ub4f1\\uae09\\uac12\":\"\",\"\\uc5d0\\ub108\\uc9c0\\uc808\\uac10\\ub960\":\"\",\"EPI\\uc810\\uc218\":\"\",\"\\uce5c\\ud658\\uacbd\\uac74\\ucd95\\ubb3c\\ub4f1\\uae09\\uac12\":\"\",\"\\uce5c\\ud658\\uacbd\\uac74\\ucd95\\ubb3c\\uc778\\uc99d\\uc810\\uc218\":\"\",\"\\uc9c0\\ub2a5\\ud615\\uac74\\ucd95\\ubb3c\\ub4f1\\uae09\\uac12\":\"\",\"\\uc9c0\\ub2a5\\ud615\\uac74\\ucd95\\ubb3c\\uc778\\uc99d\\uc810\\uc218\":\"\",\"\\ub0b4\\uc9c4\\uc124\\uacc4\\uc801\\uc6a9\\uc5ec\\ubd80\":\"1\",\"\\ub0b4\\uc9c4\\ub2a5\\ub825\\ub0b4\\uc6a9\":\"\\u2166-0.168  \"}"
+      },
+      "identityComparison": {
+        "floorsEqual": true,
+        "heightDifferenceM": 0.35,
+        "distanceFromOfficialPointM": 118.37
+      }
+    },
+    {
+      "number": 103,
+      "sourceId": "78aa7a01-b43d-4270-b19f-35eb7b62ecf1",
+      "sourceName": "103동",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              127.0248033,
+              37.488799
+            ],
+            [
+              127.0247306,
+              37.488674
+            ],
+            [
+              127.0252078,
+              37.4884993
+            ],
+            [
+              127.0254328,
+              37.4888861
+            ],
+            [
+              127.025322,
+              37.4889267
+            ],
+            [
+              127.0252794,
+              37.4888534
+            ],
+            [
+              127.0252173,
+              37.4888761
+            ],
+            [
+              127.025165,
+              37.4887863
+            ],
+            [
+              127.025238,
+              37.4887596
+            ],
+            [
+              127.0251959,
+              37.4886871
+            ],
+            [
+              127.0251369,
+              37.4887087
+            ],
+            [
+              127.0251055,
+              37.4886548
+            ],
+            [
+              127.0249365,
+              37.4887166
+            ],
+            [
+              127.0249683,
+              37.4887713
+            ],
+            [
+              127.0248521,
+              37.4888138
+            ],
+            [
+              127.0248365,
+              37.4887869
+            ],
+            [
+              127.0248033,
+              37.488799
+            ]
+          ]
+        ]
+      },
+      "sourceProperties": {
+        "names": {
+          "primary": "103동",
+          "common": [
+            [
+              "en",
+              "103"
+            ],
+            [
+              "ko",
+              "103동"
+            ]
+          ]
+        },
+        "sources": [
+          {
+            "property": "",
+            "dataset": "OpenStreetMap",
+            "license": "ODbL-1.0",
+            "record_id": "w906267366@4",
+            "update_time": "2025-09-22T12:38:33.000Z",
+            "provider": "osm",
+            "resource": "planet",
+            "version": "2026-08-02T00:00:00.000Z"
+          }
+        ],
+        "height": 110.0,
+        "is_underground": false,
+        "num_floors": 35,
+        "subtype": "residential",
+        "class": "apartments",
+        "has_parts": false,
+        "version": 2,
+        "bbox": {
+          "xmin": 127.02472686767578,
+          "xmax": 127.02543640136719,
+          "ymin": 37.48849868774414,
+          "ymax": 37.488929748535156
+        },
+        "min_height": null,
+        "feature_type": "building",
+        "_seoul": {
+          "district_id": "5056ad90-b154-46b1-a3b1-88140d162432",
+          "height_status": "source-reported-unverified",
+          "height_source_indices": [
+            0
+          ],
+          "boundary_crossing": false,
+          "original_geometry_valid": true
+        }
+      },
+      "sourceHeightM": 110.0,
+      "sourceChildIds": [],
+      "register": {
+        "row_number": 423230,
+        "id": "1000000000000001359100",
+        "district": "서초구",
+        "dong": "서초동",
+        "parcel_key": "서초구|서초동|land|1757|0",
+        "road_key": "서초구|효령로|391|0|지상",
+        "building_dong": "103동",
+        "main_aux": "주건축물",
+        "main_use": "공동주택",
+        "other_use": "공동주택(아파트)",
+        "floors": "35",
+        "basement": "0",
+        "height": "110.15",
+        "households": "201",
+        "approval_year": "2021",
+        "roof": "(철근)콘크리트",
+        "structure": "철근콘크리트구조",
+        "source_hash": "7bfebf58c8a2a7d6610c3d0d463da55ce451c766fc021c7dfff67633711b7784",
+        "raw_json": "{\"\\ub300\\uc9c0\\uc704\\uce58\":\"\\uc11c\\uc6b8\\ud2b9\\ubcc4\\uc2dc \\uc11c\\ucd08\\uad6c \\uc11c\\ucd08\\ub3d9 1757\",\"\\uc2dc\\uad70\\uad6c\\ucf54\\ub4dc\\uba85\":\"\\uc11c\\uc6b8\\ud2b9\\ubcc4\\uc2dc \\uc11c\\ucd08\\uad6c\",\"\\ubc95\\uc815\\ub3d9\\ucf54\\ub4dc\\uba85\":\"\\uc11c\\ucd08\\ub3d9\",\"\\ub300\\uc9c0\\uad6c\\ubd84\\ucf54\\ub4dc\\uba85\":\"\\ub300\\uc9c0\",\"\\uc8fc\\uc9c0\\ubc88\":\"1757\",\"\\ubd80\\uc9c0\\ubc88\":\"0000\",\"\\ud2b9\\uc218\\uc9c0\\uba85\":\"\",\"\\ube14\\ub85d\\ubc88\\ud638\":\"\",\"\\ub85c\\ud2b8\\ubc88\\ud638\":\"\",\"\\uc0c8\\uc8fc\\uc18c\\ub3c4\\ub85c\\ucf54\\ub4dc\\uba85\":\"\\ud6a8\\ub839\\ub85c\",\"\\uc0c8\\uc8fc\\uc18c\\ubc95\\uc815\\ub3d9\\ucf54\\ub4dc\\uba85\":\"\\uc11c\\ucd08\\ub3d9\",\"\\uc0c8\\uc8fc\\uc18c\\uc9c0\\uc0c1\\uc9c0\\ud558\\uad6c\\ubd84\\ucf54\\ub4dc\\uba85\":\"\\uc9c0\\uc0c1\",\"\\uc0c8\\uc8fc\\uc18c\\uc8fc\\uc9c0\\ubc88\":\"391\",\"\\uc0c8\\uc8fc\\uc18c\\ubd80\\uc9c0\\ubc88\":\"\",\"\\uac74\\ucd95\\ubb3c\\ub300\\uc7a5\\uc77c\\ub828\\ubc88\\ud638\":\"1000000000000001359100\",\"\\ub300\\uc7a5\\uad6c\\ubd84\\ucf54\\ub4dc\\uba85\":\"\\uc9d1\\ud569\",\"\\ub300\\uc7a5\\uc885\\ub958\\ucf54\\ub4dc\\uba85\":\"\\ud45c\\uc81c\\ubd80\",\"\\ub3d9\\uba85\":\"103\\ub3d9\",\"\\uc8fc\\ubd80\\uc18d\\uad6c\\ubd84\\ucf54\\ub4dc\\uba85\":\"\\uc8fc\\uac74\\ucd95\\ubb3c\",\"\\ub300\\uc9c0\\uba74\\uc801\":\"53923.1\",\"\\uac74\\ucd95\\uba74\\uc801\":\"937.943\",\"\\uac74\\ud3d0\\uc728\":\"1.74\",\"\\uc5f0\\uba74\\uc801\":\"22131.017\",\"\\uc6a9\\uc801\\ub960\\uc0b0\\uc815\\uc5f0\\uba74\\uc801\":\"22131.017\",\"\\uc6a9\\uc801\\ub960\":\"41.04\",\"\\uad6c\\uc870\\ucf54\\ub4dc\\uba85\":\"\\ucca0\\uadfc\\ucf58\\ud06c\\ub9ac\\ud2b8\\uad6c\\uc870\",\"\\uae30\\ud0c0\\uad6c\\uc870\\uc815\\ubcf4\":\"\\ucca0\\uadfc\\ucf58\\ud06c\\ub9ac\\ud2b8\\uad6c\\uc870\",\"\\uc8fc\\uc6a9\\ub3c4\\ucf54\\ub4dc\\uba85\":\"\\uacf5\\ub3d9\\uc8fc\\ud0dd\",\"\\uae30\\ud0c0\\uc6a9\\ub3c4\\ub0b4\\uc6a9\":\"\\uacf5\\ub3d9\\uc8fc\\ud0dd(\\uc544\\ud30c\\ud2b8)\",\"\\uc9c0\\ubd95\\ucf54\\ub4dc\\uba85\":\"(\\ucca0\\uadfc)\\ucf58\\ud06c\\ub9ac\\ud2b8\",\"\\uae30\\ud0c0\\uc9c0\\ubd95\\uba85\":\"(\\ucca0\\uadfc)\\ucf58\\ud06c\\ub9ac\\ud2b8\",\"\\uc138\\ub300\\uc218\":\"201\",\"\\uac00\\uad6c\\uc218\":\"\",\"\\ud638\\uc218\":\"\",\"\\uc9c0\\uc0c1\\uce35\\uc218\":\"35\",\"\\uc9c0\\ud558\\uce35\\uc218\":\"0\",\"\\ub192\\uc774\":\"110.15\",\"\\uc2b9\\uc6a9\\uc2b9\\uac15\\uae30\\uc218\":\"\",\"\\ube44\\uc0c1\\uc6a9\\uc2b9\\uac15\\uae30\\uc218\":\"6\",\"\\ubd80\\uc18d\\uac74\\ucd95\\ubb3c\\uc218\":\"\",\"\\ubd80\\uc18d\\uac74\\ucd95\\ubb3c\\uba74\\uc801\":\"\",\"\\ucd1d\\ub3d9\\uc5f0\\uba74\\uc801\":\"22131.017\",\"\\uc625\\ub0b4\\uae30\\uacc4\\uc2dd\\ub300\\uc218\":\"\",\"\\uc625\\ub0b4\\uae30\\uacc4\\uc2dd\\uba74\\uc801\":\"\",\"\\uc625\\uc678\\uae30\\uacc4\\uc2dd\\ub300\\uc218\":\"\",\"\\uc625\\uc678\\uae30\\uacc4\\uc2dd\\uba74\\uc801\":\"\",\"\\uc625\\ub0b4\\uc790\\uc8fc\\uc2dd\\ub300\\uc218\":\"2892\",\"\\uc625\\ub0b4\\uc790\\uc8fc\\uc2dd\\uba74\\uc801\":\"112788.978\",\"\\uc625\\uc678\\uc790\\uc8fc\\uc2dd\\ub300\\uc218\":\"\",\"\\uc625\\uc678\\uc790\\uc8fc\\uc2dd\\uba74\\uc801\":\"\",\"\\ud5c8\\uac00\\uc77c\\uc790\":\"2015-07-24\",\"\\ucc29\\uacf5\\uc77c\\uc790\":\"2018-07-16\",\"\\uc0ac\\uc6a9\\uc2b9\\uc778\\uc77c\\uc790\":\"2021-06-29\",\"\\uc5d0\\ub108\\uc9c0\\ud6a8\\uc728\\ub4f1\\uae09\\uac12\":\"\",\"\\uc5d0\\ub108\\uc9c0\\uc808\\uac10\\ub960\":\"\",\"EPI\\uc810\\uc218\":\"\",\"\\uce5c\\ud658\\uacbd\\uac74\\ucd95\\ubb3c\\ub4f1\\uae09\\uac12\":\"\",\"\\uce5c\\ud658\\uacbd\\uac74\\ucd95\\ubb3c\\uc778\\uc99d\\uc810\\uc218\":\"\",\"\\uc9c0\\ub2a5\\ud615\\uac74\\ucd95\\ubb3c\\ub4f1\\uae09\\uac12\":\"\",\"\\uc9c0\\ub2a5\\ud615\\uac74\\ucd95\\ubb3c\\uc778\\uc99d\\uc810\\uc218\":\"\",\"\\ub0b4\\uc9c4\\uc124\\uacc4\\uc801\\uc6a9\\uc5ec\\ubd80\":\"1\",\"\\ub0b4\\uc9c4\\ub2a5\\ub825\\ub0b4\\uc6a9\":\"\\u2166-0.168\"}"
+      },
+      "identityComparison": {
+        "floorsEqual": true,
+        "heightDifferenceM": 0.15,
+        "distanceFromOfficialPointM": 90.99
+      }
+    },
+    {
+      "number": 104,
+      "sourceId": "d0d8af05-f3a4-4946-aa9d-3d66530445eb",
+      "sourceName": "104동",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              127.0245345,
+              37.4893619
+            ],
+            [
+              127.0244741,
+              37.489255
+            ],
+            [
+              127.0249542,
+              37.4890842
+            ],
+            [
+              127.0251624,
+              37.4894528
+            ],
+            [
+              127.025052,
+              37.4894921
+            ],
+            [
+              127.0249994,
+              37.4893988
+            ],
+            [
+              127.0249294,
+              37.4894237
+            ],
+            [
+              127.0248884,
+              37.4893511
+            ],
+            [
+              127.0249625,
+              37.4893247
+            ],
+            [
+              127.0249239,
+              37.4892566
+            ],
+            [
+              127.0248653,
+              37.4892774
+            ],
+            [
+              127.0248343,
+              37.4892227
+            ],
+            [
+              127.0246649,
+              37.489283
+            ],
+            [
+              127.0246957,
+              37.4893374
+            ],
+            [
+              127.0245829,
+              37.4893775
+            ],
+            [
+              127.0245675,
+              37.4893501
+            ],
+            [
+              127.0245345,
+              37.4893619
+            ]
+          ]
+        ]
+      },
+      "sourceProperties": {
+        "names": {
+          "primary": "104동",
+          "common": [
+            [
+              "en",
+              "104"
+            ],
+            [
+              "ko",
+              "104동"
+            ]
+          ]
+        },
+        "sources": [
+          {
+            "property": "",
+            "dataset": "OpenStreetMap",
+            "license": "ODbL-1.0",
+            "record_id": "w906267367@4",
+            "update_time": "2025-09-22T12:38:33.000Z",
+            "provider": "osm",
+            "resource": "planet",
+            "version": "2026-08-02T00:00:00.000Z"
+          }
+        ],
+        "height": 110.0,
+        "is_underground": false,
+        "num_floors": 35,
+        "subtype": "residential",
+        "class": "apartments",
+        "has_parts": false,
+        "version": 2,
+        "bbox": {
+          "xmin": 127.02445983886719,
+          "xmax": 127.02517700195312,
+          "ymin": 37.48908233642578,
+          "ymax": 37.489498138427734
+        },
+        "min_height": null,
+        "feature_type": "building",
+        "_seoul": {
+          "district_id": "5056ad90-b154-46b1-a3b1-88140d162432",
+          "height_status": "source-reported-unverified",
+          "height_source_indices": [
+            0
+          ],
+          "boundary_crossing": false,
+          "original_geometry_valid": true
+        }
+      },
+      "sourceHeightM": 110.0,
+      "sourceChildIds": [],
+      "register": {
+        "row_number": 392941,
+        "id": "1000000000000001359696",
+        "district": "서초구",
+        "dong": "서초동",
+        "parcel_key": "서초구|서초동|land|1757|0",
+        "road_key": "서초구|효령로|391|0|지상",
+        "building_dong": "104동",
+        "main_aux": "주건축물",
+        "main_use": "공동주택",
+        "other_use": "공동주택(아파트)",
+        "floors": "35",
+        "basement": "0",
+        "height": "109.65",
+        "households": "192",
+        "approval_year": "2021",
+        "roof": "(철근)콘크리트",
+        "structure": "철근콘크리트구조",
+        "source_hash": "bcaebb1d5849116d50469bfa345f2af7c58857ad38b7e3655136c92f976d1034",
+        "raw_json": "{\"\\ub300\\uc9c0\\uc704\\uce58\":\"\\uc11c\\uc6b8\\ud2b9\\ubcc4\\uc2dc \\uc11c\\ucd08\\uad6c \\uc11c\\ucd08\\ub3d9 1757\",\"\\uc2dc\\uad70\\uad6c\\ucf54\\ub4dc\\uba85\":\"\\uc11c\\uc6b8\\ud2b9\\ubcc4\\uc2dc \\uc11c\\ucd08\\uad6c\",\"\\ubc95\\uc815\\ub3d9\\ucf54\\ub4dc\\uba85\":\"\\uc11c\\ucd08\\ub3d9\",\"\\ub300\\uc9c0\\uad6c\\ubd84\\ucf54\\ub4dc\\uba85\":\"\\ub300\\uc9c0\",\"\\uc8fc\\uc9c0\\ubc88\":\"1757\",\"\\ubd80\\uc9c0\\ubc88\":\"0000\",\"\\ud2b9\\uc218\\uc9c0\\uba85\":\"\",\"\\ube14\\ub85d\\ubc88\\ud638\":\"\",\"\\ub85c\\ud2b8\\ubc88\\ud638\":\"\",\"\\uc0c8\\uc8fc\\uc18c\\ub3c4\\ub85c\\ucf54\\ub4dc\\uba85\":\"\\ud6a8\\ub839\\ub85c\",\"\\uc0c8\\uc8fc\\uc18c\\ubc95\\uc815\\ub3d9\\ucf54\\ub4dc\\uba85\":\"\\uc11c\\ucd08\\ub3d9\",\"\\uc0c8\\uc8fc\\uc18c\\uc9c0\\uc0c1\\uc9c0\\ud558\\uad6c\\ubd84\\ucf54\\ub4dc\\uba85\":\"\\uc9c0\\uc0c1\",\"\\uc0c8\\uc8fc\\uc18c\\uc8fc\\uc9c0\\ubc88\":\"391\",\"\\uc0c8\\uc8fc\\uc18c\\ubd80\\uc9c0\\ubc88\":\"\",\"\\uac74\\ucd95\\ubb3c\\ub300\\uc7a5\\uc77c\\ub828\\ubc88\\ud638\":\"1000000000000001359696\",\"\\ub300\\uc7a5\\uad6c\\ubd84\\ucf54\\ub4dc\\uba85\":\"\\uc9d1\\ud569\",\"\\ub300\\uc7a5\\uc885\\ub958\\ucf54\\ub4dc\\uba85\":\"\\ud45c\\uc81c\\ubd80\",\"\\ub3d9\\uba85\":\"104\\ub3d9\",\"\\uc8fc\\ubd80\\uc18d\\uad6c\\ubd84\\ucf54\\ub4dc\\uba85\":\"\\uc8fc\\uac74\\ucd95\\ubb3c\",\"\\ub300\\uc9c0\\uba74\\uc801\":\"53923.1\",\"\\uac74\\ucd95\\uba74\\uc801\":\"944.379\",\"\\uac74\\ud3d0\\uc728\":\"1.75\",\"\\uc5f0\\uba74\\uc801\":\"20997.583\",\"\\uc6a9\\uc801\\ub960\\uc0b0\\uc815\\uc5f0\\uba74\\uc801\":\"20997.583\",\"\\uc6a9\\uc801\\ub960\":\"38.94\",\"\\uad6c\\uc870\\ucf54\\ub4dc\\uba85\":\"\\ucca0\\uadfc\\ucf58\\ud06c\\ub9ac\\ud2b8\\uad6c\\uc870\",\"\\uae30\\ud0c0\\uad6c\\uc870\\uc815\\ubcf4\":\"\\ucca0\\uadfc\\ucf58\\ud06c\\ub9ac\\ud2b8\\uad6c\\uc870\",\"\\uc8fc\\uc6a9\\ub3c4\\ucf54\\ub4dc\\uba85\":\"\\uacf5\\ub3d9\\uc8fc\\ud0dd\",\"\\uae30\\ud0c0\\uc6a9\\ub3c4\\ub0b4\\uc6a9\":\"\\uacf5\\ub3d9\\uc8fc\\ud0dd(\\uc544\\ud30c\\ud2b8)\",\"\\uc9c0\\ubd95\\ucf54\\ub4dc\\uba85\":\"(\\ucca0\\uadfc)\\ucf58\\ud06c\\ub9ac\\ud2b8\",\"\\uae30\\ud0c0\\uc9c0\\ubd95\\uba85\":\"(\\ucca0\\uadfc)\\ucf58\\ud06c\\ub9ac\\ud2b8\",\"\\uc138\\ub300\\uc218\":\"192\",\"\\uac00\\uad6c\\uc218\":\"\",\"\\ud638\\uc218\":\"\",\"\\uc9c0\\uc0c1\\uce35\\uc218\":\"35\",\"\\uc9c0\\ud558\\uce35\\uc218\":\"0\",\"\\ub192\\uc774\":\"109.65\",\"\\uc2b9\\uc6a9\\uc2b9\\uac15\\uae30\\uc218\":\"\",\"\\ube44\\uc0c1\\uc6a9\\uc2b9\\uac15\\uae30\\uc218\":\"6\",\"\\ubd80\\uc18d\\uac74\\ucd95\\ubb3c\\uc218\":\"\",\"\\ubd80\\uc18d\\uac74\\ucd95\\ubb3c\\uba74\\uc801\":\"\",\"\\ucd1d\\ub3d9\\uc5f0\\uba74\\uc801\":\"20997.583\",\"\\uc625\\ub0b4\\uae30\\uacc4\\uc2dd\\ub300\\uc218\":\"\",\"\\uc625\\ub0b4\\uae30\\uacc4\\uc2dd\\uba74\\uc801\":\"\",\"\\uc625\\uc678\\uae30\\uacc4\\uc2dd\\ub300\\uc218\":\"\",\"\\uc625\\uc678\\uae30\\uacc4\\uc2dd\\uba74\\uc801\":\"\",\"\\uc625\\ub0b4\\uc790\\uc8fc\\uc2dd\\ub300\\uc218\":\"2892\",\"\\uc625\\ub0b4\\uc790\\uc8fc\\uc2dd\\uba74\\uc801\":\"112788.978\",\"\\uc625\\uc678\\uc790\\uc8fc\\uc2dd\\ub300\\uc218\":\"\",\"\\uc625\\uc678\\uc790\\uc8fc\\uc2dd\\uba74\\uc801\":\"\",\"\\ud5c8\\uac00\\uc77c\\uc790\":\"2015-07-24\",\"\\ucc29\\uacf5\\uc77c\\uc790\":\"2018-07-16\",\"\\uc0ac\\uc6a9\\uc2b9\\uc778\\uc77c\\uc790\":\"2021-06-29\",\"\\uc5d0\\ub108\\uc9c0\\ud6a8\\uc728\\ub4f1\\uae09\\uac12\":\"\",\"\\uc5d0\\ub108\\uc9c0\\uc808\\uac10\\ub960\":\"\",\"EPI\\uc810\\uc218\":\"\",\"\\uce5c\\ud658\\uacbd\\uac74\\ucd95\\ubb3c\\ub4f1\\uae09\\uac12\":\"\",\"\\uce5c\\ud658\\uacbd\\uac74\\ucd95\\ubb3c\\uc778\\uc99d\\uc810\\uc218\":\"\",\"\\uc9c0\\ub2a5\\ud615\\uac74\\ucd95\\ubb3c\\ub4f1\\uae09\\uac12\":\"\",\"\\uc9c0\\ub2a5\\ud615\\uac74\\ucd95\\ubb3c\\uc778\\uc99d\\uc810\\uc218\":\"\",\"\\ub0b4\\uc9c4\\uc124\\uacc4\\uc801\\uc6a9\\uc5ec\\ubd80\":\"1\",\"\\ub0b4\\uc9c4\\ub2a5\\ub825\\ub0b4\\uc6a9\":\"\\u2166-0.168\"}"
+      },
+      "identityComparison": {
+        "floorsEqual": true,
+        "heightDifferenceM": 0.35,
+        "distanceFromOfficialPointM": 107.42
+      }
+    },
+    {
+      "number": 105,
+      "sourceId": "fbe541b9-f718-4f57-aa6e-310a69419657",
+      "sourceName": "105동",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              127.0253134,
+              37.4895483
+            ],
+            [
+              127.025262,
+              37.4894556
+            ],
+            [
+              127.0257141,
+              37.489298
+            ],
+            [
+              127.0258666,
+              37.4895734
+            ],
+            [
+              127.0257266,
+              37.4896221
+            ],
+            [
+              127.0256693,
+              37.4895185
+            ],
+            [
+              127.0257391,
+              37.4894942
+            ],
+            [
+              127.0257214,
+              37.4894623
+            ],
+            [
+              127.0256551,
+              37.4894854
+            ],
+            [
+              127.0256249,
+              37.4894308
+            ],
+            [
+              127.0254534,
+              37.4894905
+            ],
+            [
+              127.0254767,
+              37.4895325
+            ],
+            [
+              127.0253582,
+              37.4895738
+            ],
+            [
+              127.0253392,
+              37.4895393
+            ],
+            [
+              127.0253134,
+              37.4895483
+            ]
+          ]
+        ]
+      },
+      "sourceProperties": {
+        "names": {
+          "primary": "105동",
+          "common": [
+            [
+              "en",
+              "105"
+            ],
+            [
+              "ko",
+              "105동"
+            ]
+          ]
+        },
+        "sources": [
+          {
+            "property": "",
+            "dataset": "OpenStreetMap",
+            "license": "ODbL-1.0",
+            "record_id": "w906267365@4",
+            "update_time": "2025-09-22T12:38:33.000Z",
+            "provider": "osm",
+            "resource": "planet",
+            "version": "2026-08-02T00:00:00.000Z"
+          }
+        ],
+        "height": 110.0,
+        "is_underground": false,
+        "num_floors": 35,
+        "subtype": "residential",
+        "class": "apartments",
+        "has_parts": false,
+        "version": 2,
+        "bbox": {
+          "xmin": 127.02526092529297,
+          "xmax": 127.02587890625,
+          "ymin": 37.48929214477539,
+          "ymax": 37.489627838134766
+        },
+        "min_height": null,
+        "feature_type": "building",
+        "_seoul": {
+          "district_id": "5056ad90-b154-46b1-a3b1-88140d162432",
+          "height_status": "source-reported-unverified",
+          "height_source_indices": [
+            0
+          ],
+          "boundary_crossing": false,
+          "original_geometry_valid": true
+        }
+      },
+      "sourceHeightM": 110.0,
+      "sourceChildIds": [],
+      "register": {
+        "row_number": 95088,
+        "id": "1000000000000001360946",
+        "district": "서초구",
+        "dong": "서초동",
+        "parcel_key": "서초구|서초동|land|1757|0",
+        "road_key": "서초구|효령로|391|0|지상",
+        "building_dong": "105동",
+        "main_aux": "주건축물",
+        "main_use": "공동주택",
+        "other_use": "공동주택(아파트)",
+        "floors": "35",
+        "basement": "0",
+        "height": "109.4",
+        "households": "198",
+        "approval_year": "2021",
+        "roof": "(철근)콘크리트",
+        "structure": "철근콘크리트구조",
+        "source_hash": "b91046d10b4b82b1f1e1640aff725a5b008300104f499bd0a1b698fc13f532fe",
+        "raw_json": "{\"\\ub300\\uc9c0\\uc704\\uce58\":\"\\uc11c\\uc6b8\\ud2b9\\ubcc4\\uc2dc \\uc11c\\ucd08\\uad6c \\uc11c\\ucd08\\ub3d9 1757\",\"\\uc2dc\\uad70\\uad6c\\ucf54\\ub4dc\\uba85\":\"\\uc11c\\uc6b8\\ud2b9\\ubcc4\\uc2dc \\uc11c\\ucd08\\uad6c\",\"\\ubc95\\uc815\\ub3d9\\ucf54\\ub4dc\\uba85\":\"\\uc11c\\ucd08\\ub3d9\",\"\\ub300\\uc9c0\\uad6c\\ubd84\\ucf54\\ub4dc\\uba85\":\"\\ub300\\uc9c0\",\"\\uc8fc\\uc9c0\\ubc88\":\"1757\",\"\\ubd80\\uc9c0\\ubc88\":\"0000\",\"\\ud2b9\\uc218\\uc9c0\\uba85\":\"\",\"\\ube14\\ub85d\\ubc88\\ud638\":\"\",\"\\ub85c\\ud2b8\\ubc88\\ud638\":\"\",\"\\uc0c8\\uc8fc\\uc18c\\ub3c4\\ub85c\\ucf54\\ub4dc\\uba85\":\"\\ud6a8\\ub839\\ub85c\",\"\\uc0c8\\uc8fc\\uc18c\\ubc95\\uc815\\ub3d9\\ucf54\\ub4dc\\uba85\":\"\\uc11c\\ucd08\\ub3d9\",\"\\uc0c8\\uc8fc\\uc18c\\uc9c0\\uc0c1\\uc9c0\\ud558\\uad6c\\ubd84\\ucf54\\ub4dc\\uba85\":\"\\uc9c0\\uc0c1\",\"\\uc0c8\\uc8fc\\uc18c\\uc8fc\\uc9c0\\ubc88\":\"391\",\"\\uc0c8\\uc8fc\\uc18c\\ubd80\\uc9c0\\ubc88\":\"\",\"\\uac74\\ucd95\\ubb3c\\ub300\\uc7a5\\uc77c\\ub828\\ubc88\\ud638\":\"1000000000000001360946\",\"\\ub300\\uc7a5\\uad6c\\ubd84\\ucf54\\ub4dc\\uba85\":\"\\uc9d1\\ud569\",\"\\ub300\\uc7a5\\uc885\\ub958\\ucf54\\ub4dc\\uba85\":\"\\ud45c\\uc81c\\ubd80\",\"\\ub3d9\\uba85\":\"105\\ub3d9\",\"\\uc8fc\\ubd80\\uc18d\\uad6c\\ubd84\\ucf54\\ub4dc\\uba85\":\"\\uc8fc\\uac74\\ucd95\\ubb3c\",\"\\ub300\\uc9c0\\uba74\\uc801\":\"53923.1\",\"\\uac74\\ucd95\\uba74\\uc801\":\"770.192\",\"\\uac74\\ud3d0\\uc728\":\"1.43\",\"\\uc5f0\\uba74\\uc801\":\"17405.217\",\"\\uc6a9\\uc801\\ub960\\uc0b0\\uc815\\uc5f0\\uba74\\uc801\":\"17405.217\",\"\\uc6a9\\uc801\\ub960\":\"32.28\",\"\\uad6c\\uc870\\ucf54\\ub4dc\\uba85\":\"\\ucca0\\uadfc\\ucf58\\ud06c\\ub9ac\\ud2b8\\uad6c\\uc870\",\"\\uae30\\ud0c0\\uad6c\\uc870\\uc815\\ubcf4\":\"\\ucca0\\uadfc\\ucf58\\ud06c\\ub9ac\\ud2b8\\uad6c\\uc870\",\"\\uc8fc\\uc6a9\\ub3c4\\ucf54\\ub4dc\\uba85\":\"\\uacf5\\ub3d9\\uc8fc\\ud0dd\",\"\\uae30\\ud0c0\\uc6a9\\ub3c4\\ub0b4\\uc6a9\":\"\\uacf5\\ub3d9\\uc8fc\\ud0dd(\\uc544\\ud30c\\ud2b8)\",\"\\uc9c0\\ubd95\\ucf54\\ub4dc\\uba85\":\"(\\ucca0\\uadfc)\\ucf58\\ud06c\\ub9ac\\ud2b8\",\"\\uae30\\ud0c0\\uc9c0\\ubd95\\uba85\":\"(\\ucca0\\uadfc)\\ucf58\\ud06c\\ub9ac\\ud2b8\",\"\\uc138\\ub300\\uc218\":\"198\",\"\\uac00\\uad6c\\uc218\":\"\",\"\\ud638\\uc218\":\"\",\"\\uc9c0\\uc0c1\\uce35\\uc218\":\"35\",\"\\uc9c0\\ud558\\uce35\\uc218\":\"0\",\"\\ub192\\uc774\":\"109.4\",\"\\uc2b9\\uc6a9\\uc2b9\\uac15\\uae30\\uc218\":\"\",\"\\ube44\\uc0c1\\uc6a9\\uc2b9\\uac15\\uae30\\uc218\":\"6\",\"\\ubd80\\uc18d\\uac74\\ucd95\\ubb3c\\uc218\":\"\",\"\\ubd80\\uc18d\\uac74\\ucd95\\ubb3c\\uba74\\uc801\":\"\",\"\\ucd1d\\ub3d9\\uc5f0\\uba74\\uc801\":\"17405.217\",\"\\uc625\\ub0b4\\uae30\\uacc4\\uc2dd\\ub300\\uc218\":\"\",\"\\uc625\\ub0b4\\uae30\\uacc4\\uc2dd\\uba74\\uc801\":\"\",\"\\uc625\\uc678\\uae30\\uacc4\\uc2dd\\ub300\\uc218\":\"\",\"\\uc625\\uc678\\uae30\\uacc4\\uc2dd\\uba74\\uc801\":\"\",\"\\uc625\\ub0b4\\uc790\\uc8fc\\uc2dd\\ub300\\uc218\":\"2892\",\"\\uc625\\ub0b4\\uc790\\uc8fc\\uc2dd\\uba74\\uc801\":\"112788.978\",\"\\uc625\\uc678\\uc790\\uc8fc\\uc2dd\\ub300\\uc218\":\"\",\"\\uc625\\uc678\\uc790\\uc8fc\\uc2dd\\uba74\\uc801\":\"\",\"\\ud5c8\\uac00\\uc77c\\uc790\":\"2015-07-24\",\"\\ucc29\\uacf5\\uc77c\\uc790\":\"2018-07-16\",\"\\uc0ac\\uc6a9\\uc2b9\\uc778\\uc77c\\uc790\":\"2021-06-29\",\"\\uc5d0\\ub108\\uc9c0\\ud6a8\\uc728\\ub4f1\\uae09\\uac12\":\"\",\"\\uc5d0\\ub108\\uc9c0\\uc808\\uac10\\ub960\":\"\",\"EPI\\uc810\\uc218\":\"\",\"\\uce5c\\ud658\\uacbd\\uac74\\ucd95\\ubb3c\\ub4f1\\uae09\\uac12\":\"\",\"\\uce5c\\ud658\\uacbd\\uac74\\ucd95\\ubb3c\\uc778\\uc99d\\uc810\\uc218\":\"\",\"\\uc9c0\\ub2a5\\ud615\\uac74\\ucd95\\ubb3c\\ub4f1\\uae09\\uac12\":\"\",\"\\uc9c0\\ub2a5\\ud615\\uac74\\ucd95\\ubb3c\\uc778\\uc99d\\uc810\\uc218\":\"\",\"\\ub0b4\\uc9c4\\uc124\\uacc4\\uc801\\uc6a9\\uc5ec\\ubd80\":\"1\",\"\\ub0b4\\uc9c4\\ub2a5\\ub825\\ub0b4\\uc6a9\":\"\\u2166-0.168\"}"
+      },
+      "identityComparison": {
+        "floorsEqual": true,
+        "heightDifferenceM": 0.6,
+        "distanceFromOfficialPointM": 56.97
+      }
+    },
+    {
+      "number": 106,
+      "sourceId": "de5f60b8-9e41-4106-931d-db6bf1574b99",
+      "sourceName": "106동",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              127.0259847,
+              37.4897066
+            ],
+            [
+              127.0259407,
+              37.4896262
+            ],
+            [
+              127.0263015,
+              37.4895019
+            ],
+            [
+              127.0263108,
+              37.489519
+            ],
+            [
+              127.0263268,
+              37.4895135
+            ],
+            [
+              127.026342,
+              37.4894829
+            ],
+            [
+              127.0266798,
+              37.4895883
+            ],
+            [
+              127.0266358,
+              37.4896772
+            ],
+            [
+              127.026518,
+              37.4896405
+            ],
+            [
+              127.0264934,
+              37.4896899
+            ],
+            [
+              127.0263942,
+              37.489659
+            ],
+            [
+              127.0264192,
+              37.4896086
+            ],
+            [
+              127.0263392,
+              37.4895837
+            ],
+            [
+              127.0262046,
+              37.48963
+            ],
+            [
+              127.0262337,
+              37.4896833
+            ],
+            [
+              127.0261494,
+              37.4897123
+            ],
+            [
+              127.0261207,
+              37.4896598
+            ],
+            [
+              127.0259847,
+              37.4897066
+            ]
+          ]
+        ]
+      },
+      "sourceProperties": {
+        "names": {
+          "primary": "106동",
+          "common": [
+            [
+              "en",
+              "106"
+            ],
+            [
+              "ko",
+              "106동"
+            ]
+          ]
+        },
+        "sources": [
+          {
+            "property": "",
+            "dataset": "OpenStreetMap",
+            "license": "ODbL-1.0",
+            "record_id": "w906267364@4",
+            "update_time": "2025-09-22T12:38:33.000Z",
+            "provider": "osm",
+            "resource": "planet",
+            "version": "2026-08-02T00:00:00.000Z"
+          }
+        ],
+        "height": 107.0,
+        "is_underground": false,
+        "num_floors": 34,
+        "subtype": "residential",
+        "class": "apartments",
+        "has_parts": false,
+        "version": 2,
+        "bbox": {
+          "xmin": 127.02593994140625,
+          "xmax": 127.02667999267578,
+          "ymin": 37.48948287963867,
+          "ymax": 37.489715576171875
+        },
+        "min_height": null,
+        "feature_type": "building",
+        "_seoul": {
+          "district_id": "5056ad90-b154-46b1-a3b1-88140d162432",
+          "height_status": "source-reported-unverified",
+          "height_source_indices": [
+            0
+          ],
+          "boundary_crossing": false,
+          "original_geometry_valid": true
+        }
+      },
+      "sourceHeightM": 107.0,
+      "sourceChildIds": [],
+      "register": {
+        "row_number": 180657,
+        "id": "1000000000000001359415",
+        "district": "서초구",
+        "dong": "서초동",
+        "parcel_key": "서초구|서초동|land|1757|0",
+        "road_key": "서초구|효령로|391|0|지상",
+        "building_dong": "106동",
+        "main_aux": "주건축물",
+        "main_use": "공동주택",
+        "other_use": "공동주택(아파트)",
+        "floors": "34",
+        "basement": "0",
+        "height": "106.95",
+        "households": "131",
+        "approval_year": "2021",
+        "roof": "(철근)콘크리트",
+        "structure": "철근콘크리트구조",
+        "source_hash": "771ddaa4aaf6b69f6e4520ca004553011c69caa8cbaf375d9c4f53410e0a55c8",
+        "raw_json": "{\"\\ub300\\uc9c0\\uc704\\uce58\":\"\\uc11c\\uc6b8\\ud2b9\\ubcc4\\uc2dc \\uc11c\\ucd08\\uad6c \\uc11c\\ucd08\\ub3d9 1757\",\"\\uc2dc\\uad70\\uad6c\\ucf54\\ub4dc\\uba85\":\"\\uc11c\\uc6b8\\ud2b9\\ubcc4\\uc2dc \\uc11c\\ucd08\\uad6c\",\"\\ubc95\\uc815\\ub3d9\\ucf54\\ub4dc\\uba85\":\"\\uc11c\\ucd08\\ub3d9\",\"\\ub300\\uc9c0\\uad6c\\ubd84\\ucf54\\ub4dc\\uba85\":\"\\ub300\\uc9c0\",\"\\uc8fc\\uc9c0\\ubc88\":\"1757\",\"\\ubd80\\uc9c0\\ubc88\":\"0000\",\"\\ud2b9\\uc218\\uc9c0\\uba85\":\"\",\"\\ube14\\ub85d\\ubc88\\ud638\":\"\",\"\\ub85c\\ud2b8\\ubc88\\ud638\":\"\",\"\\uc0c8\\uc8fc\\uc18c\\ub3c4\\ub85c\\ucf54\\ub4dc\\uba85\":\"\\ud6a8\\ub839\\ub85c\",\"\\uc0c8\\uc8fc\\uc18c\\ubc95\\uc815\\ub3d9\\ucf54\\ub4dc\\uba85\":\"\\uc11c\\ucd08\\ub3d9\",\"\\uc0c8\\uc8fc\\uc18c\\uc9c0\\uc0c1\\uc9c0\\ud558\\uad6c\\ubd84\\ucf54\\ub4dc\\uba85\":\"\\uc9c0\\uc0c1\",\"\\uc0c8\\uc8fc\\uc18c\\uc8fc\\uc9c0\\ubc88\":\"391\",\"\\uc0c8\\uc8fc\\uc18c\\ubd80\\uc9c0\\ubc88\":\"\",\"\\uac74\\ucd95\\ubb3c\\ub300\\uc7a5\\uc77c\\ub828\\ubc88\\ud638\":\"1000000000000001359415\",\"\\ub300\\uc7a5\\uad6c\\ubd84\\ucf54\\ub4dc\\uba85\":\"\\uc9d1\\ud569\",\"\\ub300\\uc7a5\\uc885\\ub958\\ucf54\\ub4dc\\uba85\":\"\\ud45c\\uc81c\\ubd80\",\"\\ub3d9\\uba85\":\"106\\ub3d9\",\"\\uc8fc\\ubd80\\uc18d\\uad6c\\ubd84\\ucf54\\ub4dc\\uba85\":\"\\uc8fc\\uac74\\ucd95\\ubb3c\",\"\\ub300\\uc9c0\\uba74\\uc801\":\"53923.1\",\"\\uac74\\ucd95\\uba74\\uc801\":\"754.503\",\"\\uac74\\ud3d0\\uc728\":\"1.4\",\"\\uc5f0\\uba74\\uc801\":\"18162.321\",\"\\uc6a9\\uc801\\ub960\\uc0b0\\uc815\\uc5f0\\uba74\\uc801\":\"18162.321\",\"\\uc6a9\\uc801\\ub960\":\"33.68\",\"\\uad6c\\uc870\\ucf54\\ub4dc\\uba85\":\"\\ucca0\\uadfc\\ucf58\\ud06c\\ub9ac\\ud2b8\\uad6c\\uc870\",\"\\uae30\\ud0c0\\uad6c\\uc870\\uc815\\ubcf4\":\"\\ucca0\\uadfc\\ucf58\\ud06c\\ub9ac\\ud2b8\\uad6c\\uc870\",\"\\uc8fc\\uc6a9\\ub3c4\\ucf54\\ub4dc\\uba85\":\"\\uacf5\\ub3d9\\uc8fc\\ud0dd\",\"\\uae30\\ud0c0\\uc6a9\\ub3c4\\ub0b4\\uc6a9\":\"\\uacf5\\ub3d9\\uc8fc\\ud0dd(\\uc544\\ud30c\\ud2b8)\",\"\\uc9c0\\ubd95\\ucf54\\ub4dc\\uba85\":\"(\\ucca0\\uadfc)\\ucf58\\ud06c\\ub9ac\\ud2b8\",\"\\uae30\\ud0c0\\uc9c0\\ubd95\\uba85\":\"(\\ucca0\\uadfc)\\ucf58\\ud06c\\ub9ac\\ud2b8\",\"\\uc138\\ub300\\uc218\":\"131\",\"\\uac00\\uad6c\\uc218\":\"\",\"\\ud638\\uc218\":\"\",\"\\uc9c0\\uc0c1\\uce35\\uc218\":\"34\",\"\\uc9c0\\ud558\\uce35\\uc218\":\"0\",\"\\ub192\\uc774\":\"106.95\",\"\\uc2b9\\uc6a9\\uc2b9\\uac15\\uae30\\uc218\":\"\",\"\\ube44\\uc0c1\\uc6a9\\uc2b9\\uac15\\uae30\\uc218\":\"4\",\"\\ubd80\\uc18d\\uac74\\ucd95\\ubb3c\\uc218\":\"\",\"\\ubd80\\uc18d\\uac74\\ucd95\\ubb3c\\uba74\\uc801\":\"\",\"\\ucd1d\\ub3d9\\uc5f0\\uba74\\uc801\":\"18162.321\",\"\\uc625\\ub0b4\\uae30\\uacc4\\uc2dd\\ub300\\uc218\":\"\",\"\\uc625\\ub0b4\\uae30\\uacc4\\uc2dd\\uba74\\uc801\":\"\",\"\\uc625\\uc678\\uae30\\uacc4\\uc2dd\\ub300\\uc218\":\"\",\"\\uc625\\uc678\\uae30\\uacc4\\uc2dd\\uba74\\uc801\":\"\",\"\\uc625\\ub0b4\\uc790\\uc8fc\\uc2dd\\ub300\\uc218\":\"2892\",\"\\uc625\\ub0b4\\uc790\\uc8fc\\uc2dd\\uba74\\uc801\":\"112788.978\",\"\\uc625\\uc678\\uc790\\uc8fc\\uc2dd\\ub300\\uc218\":\"\",\"\\uc625\\uc678\\uc790\\uc8fc\\uc2dd\\uba74\\uc801\":\"\",\"\\ud5c8\\uac00\\uc77c\\uc790\":\"2015-07-24\",\"\\ucc29\\uacf5\\uc77c\\uc790\":\"2018-07-16\",\"\\uc0ac\\uc6a9\\uc2b9\\uc778\\uc77c\\uc790\":\"2021-06-29\",\"\\uc5d0\\ub108\\uc9c0\\ud6a8\\uc728\\ub4f1\\uae09\\uac12\":\"\",\"\\uc5d0\\ub108\\uc9c0\\uc808\\uac10\\ub960\":\"\",\"EPI\\uc810\\uc218\":\"\",\"\\uce5c\\ud658\\uacbd\\uac74\\ucd95\\ubb3c\\ub4f1\\uae09\\uac12\":\"\",\"\\uce5c\\ud658\\uacbd\\uac74\\ucd95\\ubb3c\\uc778\\uc99d\\uc810\\uc218\":\"\",\"\\uc9c0\\ub2a5\\ud615\\uac74\\ucd95\\ubb3c\\ub4f1\\uae09\\uac12\":\"\",\"\\uc9c0\\ub2a5\\ud615\\uac74\\ucd95\\ubb3c\\uc778\\uc99d\\uc810\\uc218\":\"\",\"\\ub0b4\\uc9c4\\uc124\\uacc4\\uc801\\uc6a9\\uc5ec\\ubd80\":\"1\",\"\\ub0b4\\uc9c4\\ub2a5\\ub825\\ub0b4\\uc6a9\":\"\\u2166-0.168\"}"
+      },
+      "identityComparison": {
+        "floorsEqual": true,
+        "heightDifferenceM": 0.05,
+        "distanceFromOfficialPointM": 60.77
+      }
+    },
+    {
+      "number": 107,
+      "sourceId": "92123118-0709-410c-a22a-16e6cc870a06",
+      "sourceName": "107동",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              127.0268466,
+              37.4897007
+            ],
+            [
+              127.0267017,
+              37.4896558
+            ],
+            [
+              127.0267413,
+              37.4895753
+            ],
+            [
+              127.0271158,
+              37.4896913
+            ],
+            [
+              127.0271331,
+              37.4896562
+            ],
+            [
+              127.0274914,
+              37.4897672
+            ],
+            [
+              127.027448,
+              37.4898553
+            ],
+            [
+              127.0273067,
+              37.4898116
+            ],
+            [
+              127.0272745,
+              37.489877
+            ],
+            [
+              127.0272093,
+              37.4898568
+            ],
+            [
+              127.0272161,
+              37.489843
+            ],
+            [
+              127.0271847,
+              37.4898333
+            ],
+            [
+              127.027211,
+              37.48978
+            ],
+            [
+              127.0270936,
+              37.4897436
+            ],
+            [
+              127.0270795,
+              37.4897721
+            ],
+            [
+              127.0269395,
+              37.4897288
+            ],
+            [
+              127.026911,
+              37.4897866
+            ],
+            [
+              127.0268185,
+              37.4897579
+            ],
+            [
+              127.0268466,
+              37.4897007
+            ]
+          ]
+        ]
+      },
+      "sourceProperties": {
+        "names": {
+          "primary": "107동",
+          "common": [
+            [
+              "en",
+              "107"
+            ],
+            [
+              "ko",
+              "107동"
+            ]
+          ]
+        },
+        "sources": [
+          {
+            "property": "",
+            "dataset": "OpenStreetMap",
+            "license": "ODbL-1.0",
+            "record_id": "w906267368@4",
+            "update_time": "2025-09-22T12:38:33.000Z",
+            "provider": "osm",
+            "resource": "planet",
+            "version": "2026-08-02T00:00:00.000Z"
+          }
+        ],
+        "height": 101.0,
+        "is_underground": false,
+        "num_floors": 32,
+        "subtype": "residential",
+        "class": "apartments",
+        "has_parts": false,
+        "version": 2,
+        "bbox": {
+          "xmin": 127.02668762207031,
+          "xmax": 127.02750396728516,
+          "ymin": 37.48957443237305,
+          "ymax": 37.4898796081543
+        },
+        "min_height": null,
+        "feature_type": "building",
+        "_seoul": {
+          "district_id": "5056ad90-b154-46b1-a3b1-88140d162432",
+          "height_status": "source-reported-unverified",
+          "height_source_indices": [
+            0
+          ],
+          "boundary_crossing": false,
+          "original_geometry_valid": true
+        }
+      },
+      "sourceHeightM": 101.0,
+      "sourceChildIds": [],
+      "register": {
+        "row_number": 180658,
+        "id": "1000000000000001359989",
+        "district": "서초구",
+        "dong": "서초동",
+        "parcel_key": "서초구|서초동|land|1757|0",
+        "road_key": "서초구|효령로|391|0|지상",
+        "building_dong": "107동",
+        "main_aux": "주건축물",
+        "main_use": "공동주택",
+        "other_use": "공동주택(아파트)",
+        "floors": "32",
+        "basement": "0",
+        "height": "100.55",
+        "households": "120",
+        "approval_year": "2021",
+        "roof": "(철근)콘크리트",
+        "structure": "철근콘크리트구조",
+        "source_hash": "a9a7cf99562127519f288b7003a2849e0906a6177f34247806881798fb5c33e4",
+        "raw_json": "{\"\\ub300\\uc9c0\\uc704\\uce58\":\"\\uc11c\\uc6b8\\ud2b9\\ubcc4\\uc2dc \\uc11c\\ucd08\\uad6c \\uc11c\\ucd08\\ub3d9 1757\",\"\\uc2dc\\uad70\\uad6c\\ucf54\\ub4dc\\uba85\":\"\\uc11c\\uc6b8\\ud2b9\\ubcc4\\uc2dc \\uc11c\\ucd08\\uad6c\",\"\\ubc95\\uc815\\ub3d9\\ucf54\\ub4dc\\uba85\":\"\\uc11c\\ucd08\\ub3d9\",\"\\ub300\\uc9c0\\uad6c\\ubd84\\ucf54\\ub4dc\\uba85\":\"\\ub300\\uc9c0\",\"\\uc8fc\\uc9c0\\ubc88\":\"1757\",\"\\ubd80\\uc9c0\\ubc88\":\"0000\",\"\\ud2b9\\uc218\\uc9c0\\uba85\":\"\",\"\\ube14\\ub85d\\ubc88\\ud638\":\"\",\"\\ub85c\\ud2b8\\ubc88\\ud638\":\"\",\"\\uc0c8\\uc8fc\\uc18c\\ub3c4\\ub85c\\ucf54\\ub4dc\\uba85\":\"\\ud6a8\\ub839\\ub85c\",\"\\uc0c8\\uc8fc\\uc18c\\ubc95\\uc815\\ub3d9\\ucf54\\ub4dc\\uba85\":\"\\uc11c\\ucd08\\ub3d9\",\"\\uc0c8\\uc8fc\\uc18c\\uc9c0\\uc0c1\\uc9c0\\ud558\\uad6c\\ubd84\\ucf54\\ub4dc\\uba85\":\"\\uc9c0\\uc0c1\",\"\\uc0c8\\uc8fc\\uc18c\\uc8fc\\uc9c0\\ubc88\":\"391\",\"\\uc0c8\\uc8fc\\uc18c\\ubd80\\uc9c0\\ubc88\":\"\",\"\\uac74\\ucd95\\ubb3c\\ub300\\uc7a5\\uc77c\\ub828\\ubc88\\ud638\":\"1000000000000001359989\",\"\\ub300\\uc7a5\\uad6c\\ubd84\\ucf54\\ub4dc\\uba85\":\"\\uc9d1\\ud569\",\"\\ub300\\uc7a5\\uc885\\ub958\\ucf54\\ub4dc\\uba85\":\"\\ud45c\\uc81c\\ubd80\",\"\\ub3d9\\uba85\":\"107\\ub3d9\",\"\\uc8fc\\ubd80\\uc18d\\uad6c\\ubd84\\ucf54\\ub4dc\\uba85\":\"\\uc8fc\\uac74\\ucd95\\ubb3c\",\"\\ub300\\uc9c0\\uba74\\uc801\":\"53923.1\",\"\\uac74\\ucd95\\uba74\\uc801\":\"816.951\",\"\\uac74\\ud3d0\\uc728\":\"1.52\",\"\\uc5f0\\uba74\\uc801\":\"17831.877\",\"\\uc6a9\\uc801\\ub960\\uc0b0\\uc815\\uc5f0\\uba74\\uc801\":\"17831.877\",\"\\uc6a9\\uc801\\ub960\":\"33.07\",\"\\uad6c\\uc870\\ucf54\\ub4dc\\uba85\":\"\\ucca0\\uadfc\\ucf58\\ud06c\\ub9ac\\ud2b8\\uad6c\\uc870\",\"\\uae30\\ud0c0\\uad6c\\uc870\\uc815\\ubcf4\":\"\\ucca0\\uadfc\\ucf58\\ud06c\\ub9ac\\ud2b8\\uad6c\\uc870\",\"\\uc8fc\\uc6a9\\ub3c4\\ucf54\\ub4dc\\uba85\":\"\\uacf5\\ub3d9\\uc8fc\\ud0dd\",\"\\uae30\\ud0c0\\uc6a9\\ub3c4\\ub0b4\\uc6a9\":\"\\uacf5\\ub3d9\\uc8fc\\ud0dd(\\uc544\\ud30c\\ud2b8)\",\"\\uc9c0\\ubd95\\ucf54\\ub4dc\\uba85\":\"(\\ucca0\\uadfc)\\ucf58\\ud06c\\ub9ac\\ud2b8\",\"\\uae30\\ud0c0\\uc9c0\\ubd95\\uba85\":\"(\\ucca0\\uadfc)\\ucf58\\ud06c\\ub9ac\\ud2b8\",\"\\uc138\\ub300\\uc218\":\"120\",\"\\uac00\\uad6c\\uc218\":\"\",\"\\ud638\\uc218\":\"\",\"\\uc9c0\\uc0c1\\uce35\\uc218\":\"32\",\"\\uc9c0\\ud558\\uce35\\uc218\":\"0\",\"\\ub192\\uc774\":\"100.55\",\"\\uc2b9\\uc6a9\\uc2b9\\uac15\\uae30\\uc218\":\"\",\"\\ube44\\uc0c1\\uc6a9\\uc2b9\\uac15\\uae30\\uc218\":\"4\",\"\\ubd80\\uc18d\\uac74\\ucd95\\ubb3c\\uc218\":\"\",\"\\ubd80\\uc18d\\uac74\\ucd95\\ubb3c\\uba74\\uc801\":\"\",\"\\ucd1d\\ub3d9\\uc5f0\\uba74\\uc801\":\"17831.877\",\"\\uc625\\ub0b4\\uae30\\uacc4\\uc2dd\\ub300\\uc218\":\"\",\"\\uc625\\ub0b4\\uae30\\uacc4\\uc2dd\\uba74\\uc801\":\"\",\"\\uc625\\uc678\\uae30\\uacc4\\uc2dd\\ub300\\uc218\":\"\",\"\\uc625\\uc678\\uae30\\uacc4\\uc2dd\\uba74\\uc801\":\"\",\"\\uc625\\ub0b4\\uc790\\uc8fc\\uc2dd\\ub300\\uc218\":\"2892\",\"\\uc625\\ub0b4\\uc790\\uc8fc\\uc2dd\\uba74\\uc801\":\"112788.978\",\"\\uc625\\uc678\\uc790\\uc8fc\\uc2dd\\ub300\\uc218\":\"\",\"\\uc625\\uc678\\uc790\\uc8fc\\uc2dd\\uba74\\uc801\":\"\",\"\\ud5c8\\uac00\\uc77c\\uc790\":\"2015-07-24\",\"\\ucc29\\uacf5\\uc77c\\uc790\":\"2018-07-16\",\"\\uc0ac\\uc6a9\\uc2b9\\uc778\\uc77c\\uc790\":\"2021-06-29\",\"\\uc5d0\\ub108\\uc9c0\\ud6a8\\uc728\\ub4f1\\uae09\\uac12\":\"\",\"\\uc5d0\\ub108\\uc9c0\\uc808\\uac10\\ub960\":\"\",\"EPI\\uc810\\uc218\":\"\",\"\\uce5c\\ud658\\uacbd\\uac74\\ucd95\\ubb3c\\ub4f1\\uae09\\uac12\":\"\",\"\\uce5c\\ud658\\uacbd\\uac74\\ucd95\\ubb3c\\uc778\\uc99d\\uc810\\uc218\":\"\",\"\\uc9c0\\ub2a5\\ud615\\uac74\\ucd95\\ubb3c\\ub4f1\\uae09\\uac12\":\"\",\"\\uc9c0\\ub2a5\\ud615\\uac74\\ucd95\\ubb3c\\uc778\\uc99d\\uc810\\uc218\":\"\",\"\\ub0b4\\uc9c4\\uc124\\uacc4\\uc801\\uc6a9\\uc5ec\\ubd80\":\"1\",\"\\ub0b4\\uc9c4\\ub2a5\\ub825\\ub0b4\\uc6a9\":\"\\u2166-0.168\"}"
+      },
+      "identityComparison": {
+        "floorsEqual": true,
+        "heightDifferenceM": 0.45,
+        "distanceFromOfficialPointM": 118.8
+      }
+    },
+    {
+      "number": 108,
+      "sourceId": "a979e4b6-bdbc-49c1-a746-27d4c85970e1",
+      "sourceName": "108동",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              127.0268034,
+              37.4889309
+            ],
+            [
+              127.026851,
+              37.4888373
+            ],
+            [
+              127.0275003,
+              37.4890449
+            ],
+            [
+              127.0274613,
+              37.4891217
+            ],
+            [
+              127.0273522,
+              37.4890869
+            ],
+            [
+              127.0272738,
+              37.4892414
+            ],
+            [
+              127.0271878,
+              37.4892139
+            ],
+            [
+              127.0272604,
+              37.4890709
+            ],
+            [
+              127.0270515,
+              37.4890042
+            ],
+            [
+              127.0270224,
+              37.4890616
+            ],
+            [
+              127.0269103,
+              37.4890258
+            ],
+            [
+              127.0269368,
+              37.4889736
+            ],
+            [
+              127.0268034,
+              37.4889309
+            ]
+          ]
+        ]
+      },
+      "sourceProperties": {
+        "names": {
+          "primary": "108동",
+          "common": [
+            [
+              "en",
+              "108"
+            ],
+            [
+              "ko",
+              "108동"
+            ]
+          ]
+        },
+        "sources": [
+          {
+            "property": "",
+            "dataset": "OpenStreetMap",
+            "license": "ODbL-1.0",
+            "record_id": "w906267363@4",
+            "update_time": "2025-09-22T12:38:33.000Z",
+            "provider": "osm",
+            "resource": "planet",
+            "version": "2026-08-02T00:00:00.000Z"
+          }
+        ],
+        "height": 110.0,
+        "is_underground": false,
+        "num_floors": 35,
+        "subtype": "residential",
+        "class": "apartments",
+        "has_parts": false,
+        "version": 2,
+        "bbox": {
+          "xmin": 127.02680206298828,
+          "xmax": 127.02750396728516,
+          "ymin": 37.488834381103516,
+          "ymax": 37.48924255371094
+        },
+        "min_height": null,
+        "feature_type": "building",
+        "_seoul": {
+          "district_id": "5056ad90-b154-46b1-a3b1-88140d162432",
+          "height_status": "source-reported-unverified",
+          "height_source_indices": [
+            0
+          ],
+          "boundary_crossing": false,
+          "original_geometry_valid": true
+        }
+      },
+      "sourceHeightM": 110.0,
+      "sourceChildIds": [],
+      "register": {
+        "row_number": 32519,
+        "id": "1000000000000001360575",
+        "district": "서초구",
+        "dong": "서초동",
+        "parcel_key": "서초구|서초동|land|1757|0",
+        "road_key": "서초구|효령로|391|0|지상",
+        "building_dong": "108동",
+        "main_aux": "주건축물",
+        "main_use": "공동주택",
+        "other_use": "공동주택(아파트)",
+        "floors": "35",
+        "basement": "0",
+        "height": "109.9",
+        "households": "169",
+        "approval_year": "2021",
+        "roof": "(철근)콘크리트",
+        "structure": "철근콘크리트구조",
+        "source_hash": "2cd3a5bc370abc75bce749e1cfc73f482a0bbc67da10a8c715bdc80910260d35",
+        "raw_json": "{\"\\ub300\\uc9c0\\uc704\\uce58\":\"\\uc11c\\uc6b8\\ud2b9\\ubcc4\\uc2dc \\uc11c\\ucd08\\uad6c \\uc11c\\ucd08\\ub3d9 1757\",\"\\uc2dc\\uad70\\uad6c\\ucf54\\ub4dc\\uba85\":\"\\uc11c\\uc6b8\\ud2b9\\ubcc4\\uc2dc \\uc11c\\ucd08\\uad6c\",\"\\ubc95\\uc815\\ub3d9\\ucf54\\ub4dc\\uba85\":\"\\uc11c\\ucd08\\ub3d9\",\"\\ub300\\uc9c0\\uad6c\\ubd84\\ucf54\\ub4dc\\uba85\":\"\\ub300\\uc9c0\",\"\\uc8fc\\uc9c0\\ubc88\":\"1757\",\"\\ubd80\\uc9c0\\ubc88\":\"0000\",\"\\ud2b9\\uc218\\uc9c0\\uba85\":\"\",\"\\ube14\\ub85d\\ubc88\\ud638\":\"\",\"\\ub85c\\ud2b8\\ubc88\\ud638\":\"\",\"\\uc0c8\\uc8fc\\uc18c\\ub3c4\\ub85c\\ucf54\\ub4dc\\uba85\":\"\\ud6a8\\ub839\\ub85c\",\"\\uc0c8\\uc8fc\\uc18c\\ubc95\\uc815\\ub3d9\\ucf54\\ub4dc\\uba85\":\"\\uc11c\\ucd08\\ub3d9\",\"\\uc0c8\\uc8fc\\uc18c\\uc9c0\\uc0c1\\uc9c0\\ud558\\uad6c\\ubd84\\ucf54\\ub4dc\\uba85\":\"\\uc9c0\\uc0c1\",\"\\uc0c8\\uc8fc\\uc18c\\uc8fc\\uc9c0\\ubc88\":\"391\",\"\\uc0c8\\uc8fc\\uc18c\\ubd80\\uc9c0\\ubc88\":\"\",\"\\uac74\\ucd95\\ubb3c\\ub300\\uc7a5\\uc77c\\ub828\\ubc88\\ud638\":\"1000000000000001360575\",\"\\ub300\\uc7a5\\uad6c\\ubd84\\ucf54\\ub4dc\\uba85\":\"\\uc9d1\\ud569\",\"\\ub300\\uc7a5\\uc885\\ub958\\ucf54\\ub4dc\\uba85\":\"\\ud45c\\uc81c\\ubd80\",\"\\ub3d9\\uba85\":\"108\\ub3d9\",\"\\uc8fc\\ubd80\\uc18d\\uad6c\\ubd84\\ucf54\\ub4dc\\uba85\":\"\\uc8fc\\uac74\\ucd95\\ubb3c\",\"\\ub300\\uc9c0\\uba74\\uc801\":\"53923.1\",\"\\uac74\\ucd95\\uba74\\uc801\":\"775.687\",\"\\uac74\\ud3d0\\uc728\":\"1.44\",\"\\uc5f0\\uba74\\uc801\":\"18928.611\",\"\\uc6a9\\uc801\\ub960\\uc0b0\\uc815\\uc5f0\\uba74\\uc801\":\"18928.611\",\"\\uc6a9\\uc801\\ub960\":\"35.1\",\"\\uad6c\\uc870\\ucf54\\ub4dc\\uba85\":\"\\ucca0\\uadfc\\ucf58\\ud06c\\ub9ac\\ud2b8\\uad6c\\uc870\",\"\\uae30\\ud0c0\\uad6c\\uc870\\uc815\\ubcf4\":\"\\ucca0\\uadfc\\ucf58\\ud06c\\ub9ac\\ud2b8\\uad6c\\uc870\",\"\\uc8fc\\uc6a9\\ub3c4\\ucf54\\ub4dc\\uba85\":\"\\uacf5\\ub3d9\\uc8fc\\ud0dd\",\"\\uae30\\ud0c0\\uc6a9\\ub3c4\\ub0b4\\uc6a9\":\"\\uacf5\\ub3d9\\uc8fc\\ud0dd(\\uc544\\ud30c\\ud2b8)\",\"\\uc9c0\\ubd95\\ucf54\\ub4dc\\uba85\":\"(\\ucca0\\uadfc)\\ucf58\\ud06c\\ub9ac\\ud2b8\",\"\\uae30\\ud0c0\\uc9c0\\ubd95\\uba85\":\"(\\ucca0\\uadfc)\\ucf58\\ud06c\\ub9ac\\ud2b8\",\"\\uc138\\ub300\\uc218\":\"169\",\"\\uac00\\uad6c\\uc218\":\"\",\"\\ud638\\uc218\":\"\",\"\\uc9c0\\uc0c1\\uce35\\uc218\":\"35\",\"\\uc9c0\\ud558\\uce35\\uc218\":\"0\",\"\\ub192\\uc774\":\"109.9\",\"\\uc2b9\\uc6a9\\uc2b9\\uac15\\uae30\\uc218\":\"\",\"\\ube44\\uc0c1\\uc6a9\\uc2b9\\uac15\\uae30\\uc218\":\"4\",\"\\ubd80\\uc18d\\uac74\\ucd95\\ubb3c\\uc218\":\"\",\"\\ubd80\\uc18d\\uac74\\ucd95\\ubb3c\\uba74\\uc801\":\"\",\"\\ucd1d\\ub3d9\\uc5f0\\uba74\\uc801\":\"18928.611\",\"\\uc625\\ub0b4\\uae30\\uacc4\\uc2dd\\ub300\\uc218\":\"\",\"\\uc625\\ub0b4\\uae30\\uacc4\\uc2dd\\uba74\\uc801\":\"\",\"\\uc625\\uc678\\uae30\\uacc4\\uc2dd\\ub300\\uc218\":\"\",\"\\uc625\\uc678\\uae30\\uacc4\\uc2dd\\uba74\\uc801\":\"\",\"\\uc625\\ub0b4\\uc790\\uc8fc\\uc2dd\\ub300\\uc218\":\"2892\",\"\\uc625\\ub0b4\\uc790\\uc8fc\\uc2dd\\uba74\\uc801\":\"112788.978\",\"\\uc625\\uc678\\uc790\\uc8fc\\uc2dd\\ub300\\uc218\":\"\",\"\\uc625\\uc678\\uc790\\uc8fc\\uc2dd\\uba74\\uc801\":\"\",\"\\ud5c8\\uac00\\uc77c\\uc790\":\"2015-07-24\",\"\\ucc29\\uacf5\\uc77c\\uc790\":\"2018-07-16\",\"\\uc0ac\\uc6a9\\uc2b9\\uc778\\uc77c\\uc790\":\"2021-06-29\",\"\\uc5d0\\ub108\\uc9c0\\ud6a8\\uc728\\ub4f1\\uae09\\uac12\":\"\",\"\\uc5d0\\ub108\\uc9c0\\uc808\\uac10\\ub960\":\"\",\"EPI\\uc810\\uc218\":\"\",\"\\uce5c\\ud658\\uacbd\\uac74\\ucd95\\ubb3c\\ub4f1\\uae09\\uac12\":\"\",\"\\uce5c\\ud658\\uacbd\\uac74\\ucd95\\ubb3c\\uc778\\uc99d\\uc810\\uc218\":\"\",\"\\uc9c0\\ub2a5\\ud615\\uac74\\ucd95\\ubb3c\\ub4f1\\uae09\\uac12\":\"\",\"\\uc9c0\\ub2a5\\ud615\\uac74\\ucd95\\ubb3c\\uc778\\uc99d\\uc810\\uc218\":\"\",\"\\ub0b4\\uc9c4\\uc124\\uacc4\\uc801\\uc6a9\\uc5ec\\ubd80\":\"1\",\"\\ub0b4\\uc9c4\\ub2a5\\ub825\\ub0b4\\uc6a9\":\"\\u2166-0.168\"}"
+      },
+      "identityComparison": {
+        "floorsEqual": true,
+        "heightDifferenceM": 0.1,
+        "distanceFromOfficialPointM": 99.17
+      }
+    },
+    {
+      "number": 109,
+      "sourceId": "888c2a9b-7ee4-4877-9af8-1be0720d632f",
+      "sourceName": "109동",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              127.0266396,
+              37.4888266
+            ],
+            [
+              127.0265329,
+              37.4887936
+            ],
+            [
+              127.0266254,
+              37.4886054
+            ],
+            [
+              127.0268639,
+              37.4886792
+            ],
+            [
+              127.0268308,
+              37.4887465
+            ],
+            [
+              127.0267401,
+              37.4887185
+            ],
+            [
+              127.0267025,
+              37.4887949
+            ],
+            [
+              127.0266614,
+              37.4887822
+            ],
+            [
+              127.0266396,
+              37.4888266
+            ]
+          ]
+        ]
+      },
+      "sourceProperties": {
+        "names": {
+          "primary": "109동",
+          "common": [
+            [
+              "en",
+              "109"
+            ],
+            [
+              "ko",
+              "109동"
+            ]
+          ]
+        },
+        "sources": [
+          {
+            "property": "",
+            "dataset": "OpenStreetMap",
+            "license": "ODbL-1.0",
+            "record_id": "w906267361@4",
+            "update_time": "2025-09-22T12:38:33.000Z",
+            "provider": "osm",
+            "resource": "planet",
+            "version": "2026-08-02T00:00:00.000Z"
+          }
+        ],
+        "height": 109.0,
+        "is_underground": false,
+        "num_floors": 35,
+        "subtype": "residential",
+        "class": "apartments",
+        "has_parts": false,
+        "version": 2,
+        "bbox": {
+          "xmin": 127.02651977539062,
+          "xmax": 127.0268783569336,
+          "ymin": 37.48860168457031,
+          "ymax": 37.488826751708984
+        },
+        "min_height": null,
+        "feature_type": "building",
+        "_seoul": {
+          "district_id": "5056ad90-b154-46b1-a3b1-88140d162432",
+          "height_status": "source-reported-unverified",
+          "height_source_indices": [
+            0
+          ],
+          "boundary_crossing": false,
+          "original_geometry_valid": true
+        }
+      },
+      "sourceHeightM": 109.0,
+      "sourceChildIds": [],
+      "register": {
+        "row_number": 152588,
+        "id": "1000000000000001359312",
+        "district": "서초구",
+        "dong": "서초동",
+        "parcel_key": "서초구|서초동|land|1757|0",
+        "road_key": "서초구|효령로|391|0|지상",
+        "building_dong": "109동",
+        "main_aux": "주건축물",
+        "main_use": "공동주택",
+        "other_use": "공동주택(아파트)",
+        "floors": "35",
+        "basement": "0",
+        "height": "109.4",
+        "households": "102",
+        "approval_year": "2021",
+        "roof": "(철근)콘크리트",
+        "structure": "철근콘크리트구조",
+        "source_hash": "8387a70689b364d7ed5595ae21f547504aaf940fa755dde14b7d7b1a7163adba",
+        "raw_json": "{\"\\ub300\\uc9c0\\uc704\\uce58\":\"\\uc11c\\uc6b8\\ud2b9\\ubcc4\\uc2dc \\uc11c\\ucd08\\uad6c \\uc11c\\ucd08\\ub3d9 1757\",\"\\uc2dc\\uad70\\uad6c\\ucf54\\ub4dc\\uba85\":\"\\uc11c\\uc6b8\\ud2b9\\ubcc4\\uc2dc \\uc11c\\ucd08\\uad6c\",\"\\ubc95\\uc815\\ub3d9\\ucf54\\ub4dc\\uba85\":\"\\uc11c\\ucd08\\ub3d9\",\"\\ub300\\uc9c0\\uad6c\\ubd84\\ucf54\\ub4dc\\uba85\":\"\\ub300\\uc9c0\",\"\\uc8fc\\uc9c0\\ubc88\":\"1757\",\"\\ubd80\\uc9c0\\ubc88\":\"0000\",\"\\ud2b9\\uc218\\uc9c0\\uba85\":\"\",\"\\ube14\\ub85d\\ubc88\\ud638\":\"\",\"\\ub85c\\ud2b8\\ubc88\\ud638\":\"\",\"\\uc0c8\\uc8fc\\uc18c\\ub3c4\\ub85c\\ucf54\\ub4dc\\uba85\":\"\\ud6a8\\ub839\\ub85c\",\"\\uc0c8\\uc8fc\\uc18c\\ubc95\\uc815\\ub3d9\\ucf54\\ub4dc\\uba85\":\"\\uc11c\\ucd08\\ub3d9\",\"\\uc0c8\\uc8fc\\uc18c\\uc9c0\\uc0c1\\uc9c0\\ud558\\uad6c\\ubd84\\ucf54\\ub4dc\\uba85\":\"\\uc9c0\\uc0c1\",\"\\uc0c8\\uc8fc\\uc18c\\uc8fc\\uc9c0\\ubc88\":\"391\",\"\\uc0c8\\uc8fc\\uc18c\\ubd80\\uc9c0\\ubc88\":\"\",\"\\uac74\\ucd95\\ubb3c\\ub300\\uc7a5\\uc77c\\ub828\\ubc88\\ud638\":\"1000000000000001359312\",\"\\ub300\\uc7a5\\uad6c\\ubd84\\ucf54\\ub4dc\\uba85\":\"\\uc9d1\\ud569\",\"\\ub300\\uc7a5\\uc885\\ub958\\ucf54\\ub4dc\\uba85\":\"\\ud45c\\uc81c\\ubd80\",\"\\ub3d9\\uba85\":\"109\\ub3d9\",\"\\uc8fc\\ubd80\\uc18d\\uad6c\\ubd84\\ucf54\\ub4dc\\uba85\":\"\\uc8fc\\uac74\\ucd95\\ubb3c\",\"\\ub300\\uc9c0\\uba74\\uc801\":\"53923.1\",\"\\uac74\\ucd95\\uba74\\uc801\":\"417.326\",\"\\uac74\\ud3d0\\uc728\":\"0.77\",\"\\uc5f0\\uba74\\uc801\":\"9944.721\",\"\\uc6a9\\uc801\\ub960\\uc0b0\\uc815\\uc5f0\\uba74\\uc801\":\"9944.721\",\"\\uc6a9\\uc801\\ub960\":\"18.44\",\"\\uad6c\\uc870\\ucf54\\ub4dc\\uba85\":\"\\ucca0\\uadfc\\ucf58\\ud06c\\ub9ac\\ud2b8\\uad6c\\uc870\",\"\\uae30\\ud0c0\\uad6c\\uc870\\uc815\\ubcf4\":\"\\ucca0\\uadfc\\ucf58\\ud06c\\ub9ac\\ud2b8\\uad6c\\uc870\",\"\\uc8fc\\uc6a9\\ub3c4\\ucf54\\ub4dc\\uba85\":\"\\uacf5\\ub3d9\\uc8fc\\ud0dd\",\"\\uae30\\ud0c0\\uc6a9\\ub3c4\\ub0b4\\uc6a9\":\"\\uacf5\\ub3d9\\uc8fc\\ud0dd(\\uc544\\ud30c\\ud2b8)\",\"\\uc9c0\\ubd95\\ucf54\\ub4dc\\uba85\":\"(\\ucca0\\uadfc)\\ucf58\\ud06c\\ub9ac\\ud2b8\",\"\\uae30\\ud0c0\\uc9c0\\ubd95\\uba85\":\"(\\ucca0\\uadfc)\\ucf58\\ud06c\\ub9ac\\ud2b8\",\"\\uc138\\ub300\\uc218\":\"102\",\"\\uac00\\uad6c\\uc218\":\"\",\"\\ud638\\uc218\":\"\",\"\\uc9c0\\uc0c1\\uce35\\uc218\":\"35\",\"\\uc9c0\\ud558\\uce35\\uc218\":\"0\",\"\\ub192\\uc774\":\"109.4\",\"\\uc2b9\\uc6a9\\uc2b9\\uac15\\uae30\\uc218\":\"\",\"\\ube44\\uc0c1\\uc6a9\\uc2b9\\uac15\\uae30\\uc218\":\"2\",\"\\ubd80\\uc18d\\uac74\\ucd95\\ubb3c\\uc218\":\"\",\"\\ubd80\\uc18d\\uac74\\ucd95\\ubb3c\\uba74\\uc801\":\"\",\"\\ucd1d\\ub3d9\\uc5f0\\uba74\\uc801\":\"9944.721\",\"\\uc625\\ub0b4\\uae30\\uacc4\\uc2dd\\ub300\\uc218\":\"\",\"\\uc625\\ub0b4\\uae30\\uacc4\\uc2dd\\uba74\\uc801\":\"\",\"\\uc625\\uc678\\uae30\\uacc4\\uc2dd\\ub300\\uc218\":\"\",\"\\uc625\\uc678\\uae30\\uacc4\\uc2dd\\uba74\\uc801\":\"\",\"\\uc625\\ub0b4\\uc790\\uc8fc\\uc2dd\\ub300\\uc218\":\"2892\",\"\\uc625\\ub0b4\\uc790\\uc8fc\\uc2dd\\uba74\\uc801\":\"112788.978\",\"\\uc625\\uc678\\uc790\\uc8fc\\uc2dd\\ub300\\uc218\":\"\",\"\\uc625\\uc678\\uc790\\uc8fc\\uc2dd\\uba74\\uc801\":\"\",\"\\ud5c8\\uac00\\uc77c\\uc790\":\"2015-07-24\",\"\\ucc29\\uacf5\\uc77c\\uc790\":\"2018-07-16\",\"\\uc0ac\\uc6a9\\uc2b9\\uc778\\uc77c\\uc790\":\"2021-06-29\",\"\\uc5d0\\ub108\\uc9c0\\ud6a8\\uc728\\ub4f1\\uae09\\uac12\":\"\",\"\\uc5d0\\ub108\\uc9c0\\uc808\\uac10\\ub960\":\"\",\"EPI\\uc810\\uc218\":\"\",\"\\uce5c\\ud658\\uacbd\\uac74\\ucd95\\ubb3c\\ub4f1\\uae09\\uac12\":\"\",\"\\uce5c\\ud658\\uacbd\\uac74\\ucd95\\ubb3c\\uc778\\uc99d\\uc810\\uc218\":\"\",\"\\uc9c0\\ub2a5\\ud615\\uac74\\ucd95\\ubb3c\\ub4f1\\uae09\\uac12\":\"\",\"\\uc9c0\\ub2a5\\ud615\\uac74\\ucd95\\ubb3c\\uc778\\uc99d\\uc810\\uc218\":\"\",\"\\ub0b4\\uc9c4\\uc124\\uacc4\\uc801\\uc6a9\\uc5ec\\ubd80\":\"1\",\"\\ub0b4\\uc9c4\\ub2a5\\ub825\\ub0b4\\uc6a9\":\"\\u2166-0.168 \"}"
+      },
+      "identityComparison": {
+        "floorsEqual": true,
+        "heightDifferenceM": 0.4,
+        "distanceFromOfficialPointM": 75.01
+      }
+    }
+  ]
+}
