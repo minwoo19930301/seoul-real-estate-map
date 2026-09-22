@@ -26,6 +26,7 @@ K-apt 서울 자료의 123코드에는 복수 주소 등에 따른 추가 147행
 | A10024131 | 래미안 라클래시 | partial | 5 / 7 | 5 |
 | A10024240 | 서초그랑자이 | complete_residential_buildings | 9 / 9 | 9 |
 | A10024564 | 개포래미안포레스트 | partial | 27 / 31 | 27 |
+| A10025003 | 마포그랑자이아파트 | partial | 15 / 18 | 15 |
 | A10025010 | 고덕 아르테온 아파트 | partial | 25 / 41 | 25 |
 | A10025104 | 고덕센트럴 아이파크 | partial | 18 / 19 | 18 |
 | A10025203 | 디에이치 아너힐즈 | partial | 21 / 23 | 21 |
@@ -42,6 +43,7 @@ K-apt 서울 자료의 123코드에는 복수 주소 등에 따른 추가 147행
 | A10027817 | DMC파크뷰자이아파트 | partial | 39 / 61 | 39 |
 | A10027908 | 래미안첼리투스 | complete_residential_buildings | 3 / 3 | 0 |
 | A12174601 | 메세나폴리스 | complete_residential_buildings | 3 / 3 | 0 |
+| A12175203 | 마포래미안푸르지오 | partial | 34 / 51 | 34 |
 | A13375907 | 래미안옥수리버젠 | complete_residential_buildings | 15 / 15 | 15 |
 | A13527017 | 타워팰리스1차 | complete_residential_buildings | 4 / 4 | 0 |
 | A13583507 | 은마 | complete_residential_buildings | 28 / 28 | 28 |

@@ -2,7 +2,7 @@
 
 기존 주거·공공기관 생성기는 원천 외곽선에 반복 입면과 추정 색상을 입혔다. 파일별 해시나 색상이 달라도 실물에 맞춘 개별 모델이라는 뜻은 아니다. 기존 PR/소스 조사 결과는 [template-provenance.json](template-provenance.json)에 기록했다.
 
-현재 자산에는 이전 버전 보존 파일과 같은 GLB를 공유하는 복제 동도 포함한다. 최신 변경은 [서초·개포 대표 공유와 DMC 확장](seocho-gaepo-dmc-shared-review.md)에 기록했다. [금호·옥수·DMC 대표 공유](geumho-oksu-dmc-shared-review.md)도 보존한다. [센트럴아이파크·래미안힐스테이트 대표 공유](godeok-central-hillstate-shared-review.md)도 보존한다. [그라시움·아르테온·라클래시 대표 공유](godeok-laclassy-shared-review.md)도 보존한다. [트리지움·은마 공유와 파크리오 배치 수정](trizium-eunma-shared-review.md)도 보존한다. [앞선 공유 런타임 적용](shared-apartment-instances-review.md)도 함께 보존한다. 유효한 주거동별 검증과 단지 완료 여부는 [전수 현황](apartments-400-summary.md), 파일별 출처·렌더·해시는 [개별 대조 기록](published-bespoke.json)을 기준으로 확인한다. 서울 전수 작업 완료를 뜻하지 않는다. 실제 Blender 4.5.11 LTS와 `mcp-for-blender`의 `execute_blender_code`를 사용했고, 작성자와 별도로 사진과 최종 렌더를 대조했다.
+현재 자산에는 이전 버전 보존 파일과 같은 GLB를 공유하는 복제 동도 포함한다. 최신 변경은 [마포 대표 공유](mapo-two-shared-review.md)에 기록했다. [서초·개포 대표 공유와 DMC 확장](seocho-gaepo-dmc-shared-review.md)도 보존한다. [금호·옥수·DMC 대표 공유](geumho-oksu-dmc-shared-review.md)도 보존한다. [센트럴아이파크·래미안힐스테이트 대표 공유](godeok-central-hillstate-shared-review.md)도 보존한다. [그라시움·아르테온·라클래시 대표 공유](godeok-laclassy-shared-review.md)도 보존한다. [트리지움·은마 공유와 파크리오 배치 수정](trizium-eunma-shared-review.md)도 보존한다. [앞선 공유 런타임 적용](shared-apartment-instances-review.md)도 함께 보존한다. 유효한 주거동별 검증과 단지 완료 여부는 [전수 현황](apartments-400-summary.md), 파일별 출처·렌더·해시는 [개별 대조 기록](published-bespoke.json)을 기준으로 확인한다. 서울 전수 작업 완료를 뜻하지 않는다. 실제 Blender 4.5.11 LTS와 `mcp-for-blender`의 `execute_blender_code`를 사용했고, 작성자와 별도로 사진과 최종 렌더를 대조했다.
 
 | 현장 | 모델 | 개별 수정과 남은 한계 |
 | --- | ---: | --- |

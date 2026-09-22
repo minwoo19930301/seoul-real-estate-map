@@ -20,6 +20,8 @@ const families = [
   {site: 'gaepo-raemian-forest', number: 101, count: 26, label: null},
   {site: 'raemian-blesstige', number: 202, count: 20, label: null},
   {site: 'dh-honor-hills', number: 301, count: 20, label: null},
+  {site: 'mapo-raemian-prugio', number: 403, count: 33, label: null},
+  {site: 'mapo-grang-xi', number: 101, count: 14, label: null},
   {site: 'dmc-parkview-xi-extension', assetSite: 'dmc-parkview-xi', number: 103, count: 33, label: null},
 ];
 for (const family of families) for (const failure of ['none', 'shared-model', 'shared-and-fallback']) {

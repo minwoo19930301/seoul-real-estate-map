@@ -38,6 +38,7 @@ for (const batch of [
  {name:'geumho-oksu-dmc', bindings:37, residuals:6, prior:35, triangles:33787},
  {name:'seocho-gaepo-blesstige-honor', bindings:78, residuals:17, prior:38, triangles:61407},
  {name:'dmc-extension', bindings:33, residuals:25, prior:42, triangles:18080},
+ {name:'mapo-two', bindings:49, residuals:8, prior:46, triangles:61489},
 ]) {
 const audit=json(`docs/model-audit/${batch.name}-generic-split.json`);
 const frozen=json(`docs/model-audit/${batch.name}-fallback-inputs.json`);
