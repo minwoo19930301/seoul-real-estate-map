@@ -86,7 +86,7 @@ test('Els72 independent bindings retain two residual sources and untouched121/12
 });
 test('Els preserves all nineteen prior correction records and bytes',()=>{
  const ids=audit.preservedPriorCorrectionIds;assert.equal(ids.length,19);
- const prior=corrections.corrections.filter(c=>ids.includes(c.sourceId));assert.deepEqual(prior.map(c=>c.sourceId),ids);
+ const prior=corrections.corrections.filter(c=>c.kind!=='repartition'&&ids.includes(c.sourceId));assert.deepEqual(prior.map(c=>c.sourceId),ids);
  const sort=v=>Array.isArray(v)?v.map(sort):v&&typeof v==='object'?Object.fromEntries(Object.keys(v).sort().map(k=>[k,sort(v[k])])):v;
  assert.equal(hash(JSON.stringify(sort(prior))),'f9338ea4f02e9d57a76641f54b8293b30fdb4eae1136c2decbff7bad907ccdf4');
  for(const c of prior)for(const a of c.assets)assert.equal(hash(read('public/models/'+a.model)),a.sha256);

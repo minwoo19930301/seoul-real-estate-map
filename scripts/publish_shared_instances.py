@@ -38,7 +38,17 @@ def frame(polygon):
     return basis, projected.max(axis=0) - projected.min(axis=0), corners.mean(axis=0)
 
 
-def placement(source_row, target_row, source_asset):
+def target_height(row, estimated_storey_height=None):
+    registered = float(row['register']['height'] or 0)
+    if math.isfinite(registered) and registered > 0:
+        return registered, 'Overall cloned envelope scaled to existing registered height; not individual floor reconstruction'
+    floors = int(row['register']['floors'])
+    if estimated_storey_height is None or not 2 <= estimated_storey_height <= 6 or floors <= 0:
+        raise ValueError('Missing target height requires an explicitly reviewed estimate')
+    return floors * estimated_storey_height, f'Estimated {floors} floors x {estimated_storey_height}m; registered height missing/zero, not measured; cloned floor pattern unchanged'
+
+
+def placement(source_row, target_row, source_asset, estimated_storey_height=None):
     source_anchor = [source_asset['coordinate'][k] for k in ['lon', 'lat']]
     ring = target_row['geometry']['coordinates'][0]
     anchor = [(min(p[i] for p in ring) + max(p[i] for p in ring)) / 2 for i in [0, 1]]
@@ -46,9 +56,7 @@ def placement(source_row, target_row, source_asset):
     tb, ts, tc = frame(local_polygon(target_row, anchor))
     horizontal = tb @ np.diag(ts / ss) @ sb.T
     offset = tc - horizontal @ sc
-    height = float(target_row['register']['height'])
-    if not math.isfinite(height) or height <= 0:
-        raise ValueError('Missing target height requires an explicitly reviewed estimate')
+    height, _ = target_height(target_row, estimated_storey_height)
     sy = height / source_asset['dimensions'][1]
     matrix = [horizontal[0, 0], 0, -horizontal[1, 0], 0,
               0, sy, 0, 0, -horizontal[0, 1], 0, horizontal[1, 1], 0,
@@ -98,7 +106,8 @@ def publish(args):
             raise ValueError('Target fallback ownership/hash differs')
         if any(row['sourceId'] in a.get('footprintIds', []) for a in by_id.values()):
             raise ValueError('Target already has a reviewed model under another identity')
-        anchor, matrix = placement(source_row, row, source)
+        anchor, matrix = placement(source_row, row, source, args.estimated_storey_height)
+        height, height_basis = target_height(row, args.estimated_storey_height)
         asset = {k: copy.deepcopy(source[k]) for k in ['model', 'sha256', 'heightDatum', 'quality', 'referenceUrl', 'category', 'district', 'minZoom'] if k in source}
         asset.update(id=aid, nameKo=f'{args.name} {number}동', coordinate=dict(zip(['lon', 'lat'], anchor)),
                      yawDegFromEast=0, footprintIds=[row['sourceId']], supersedes=binding['supersedes'],
@@ -114,8 +123,8 @@ def publish(args):
                       inferenceScope=LIMITS, accuracy=LIMITS, components=['Shared representative geometry/materials', 'Inventory-based placement/size transform'],
                       uncertainties=[LIMITS, *source_record.get('uncertainties', [])],
                       buildingFacts={'floors': int(row['register']['floors']), 'floorsBasis': 'Existing register metadata; the cloned floor pattern is unchanged',
-                                     'heightM': float(row['register']['height']), 'sourceHeightM': row['sourceHeightM'],
-                                     'heightBasis': 'Overall cloned envelope scaled to existing registered height; not individual floor reconstruction'})
+                                     'heightM': height, 'registeredHeightM': float(row['register']['height'] or 0), 'sourceHeightM': row['sourceHeightM'],
+                                     'heightBasis': height_basis})
         asset['sourceRecord'] = record
         new.append(asset)
     if not new:
@@ -161,4 +170,5 @@ if __name__ == '__main__':
         parser.add_argument('--' + option, required=True)
     parser.add_argument('--representative-number', type=int, required=True)
     parser.add_argument('--hidden-node', action='append', required=True)
+    parser.add_argument('--estimated-storey-height', type=float, help='Explicit estimate used only where the register height is missing/zero')
     publish(parser.parse_args())

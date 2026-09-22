@@ -6,6 +6,8 @@ const assets = read('public/models/bespoke-manifest.json').assets;
 const families = [
   {site: 'songpa-helio-city', number: 503, count: 33, label: '416_verified_number_mesh'},
   {site: 'jamsil-parkrio', number: 208, count: 59, label: 'building-number-label'},
+  {site: 'jamsil-trizium', number: 305, count: 44, label: 'building-number-label'},
+  {site: 'daechi-eunma', number: 12, count: 27, label: 'building-number-label'},
 ];
 for (const family of families) for (const failure of ['none', 'shared-model', 'shared-and-fallback']) {
   test(`${family.site} shared copies: ${failure}`, async ({page}) => {
@@ -27,7 +29,8 @@ for (const family of families) for (const failure of ['none', 'shared-model', 's
     await page.waitForFunction(({target,binding,failure}) => {
       const api = (window as any).__SEOUL_MAP__, state = api.cityModels.getState();
       const model = state.models.find((m: any) => m.id === target.id), fallback = state.models.find((m: any) => m.id === binding.fallbackAssetId);
-      const raw = api.map.queryRenderedFeatures(undefined,{layers:['building-solids']}).some((f: any)=>f.properties.id===binding.sourceFootprintId || f.properties.parent_id===binding.sourceFootprintId);
+      const layer = failure === 'shared-and-fallback' && target.sourceRecord.buildingFacts.sourceHeightM === null ? 'building-footprints' : 'building-solids';
+      const raw = api.map.queryRenderedFeatures(undefined,{layers:[layer]}).some((f: any)=>f.properties.id===binding.sourceFootprintId || f.properties.parent_id===binding.sourceFootprintId);
       if (failure === 'none') return model?.active && model.drawCount>0 && !raw && state.activeFootprintIds.includes(binding.sourceFootprintId);
       if (failure === 'shared-model') return model?.error && !model.active && fallback?.active && !raw && state.activeFootprintIds.includes(binding.sourceFootprintId);
       return model?.error && !model.active && fallback?.error && !fallback.active && raw && !state.activeFootprintIds.includes(binding.sourceFootprintId);
@@ -53,6 +56,6 @@ for (const family of families) for (const failure of ['none', 'shared-model', 's
     expect(errors).toEqual([]);
     const dir='tests/screenshots/shared-apartment-instances';mkdirSync(dir,{recursive:true});
     await page.screenshot({path:`${dir}/${family.site}-${failure}.png`});
-    writeFileSync(`${dir}/${family.site}-${failure}.json`,JSON.stringify({family,failure,proof,requests,errors},null,2)+'\n');
+    writeFileSync(`${dir}/${family.site}-${failure}.json`,JSON.stringify({family,failure,rawFallbackPrimitive:target.sourceRecord.buildingFacts.sourceHeightM===null?'original 2D footprint; height missing':'original height-reported solid',proof,requests,errors},null,2)+'\n');
   });
 }

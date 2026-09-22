@@ -2,7 +2,7 @@ import type { CityModelAsset } from './city-models.ts';
 
 /** A partition corrects source ownership without changing the archived base catalog. */
 export interface GenericCorrection {
-  kind?: 'metadata-only';
+  kind?: 'metadata-only' | 'repartition';
   sourceId: string; sourceSha256: string; sourceFootprintIds: string[]; assets: CityModelAsset[];
 }
 const same = (a: string[], b: string[]) => a.length === b.length && [...a].sort().every((id, i) => id === [...b].sort()[i]);
@@ -24,8 +24,9 @@ export function applyGenericCorrections(assets: CityModelAsset[], matches: Recor
   const touched = new Set<string>();
   for (const correction of document.corrections) {
     const original = byId.get(correction.sourceId);
-    if (!original || original.quality || touched.has(original.id) || original.sha256 !== correction.sourceSha256
-        || !Array.isArray(correction.sourceFootprintIds) || !same(matches[original.id] ?? [], correction.sourceFootprintIds)
+    const repartition = correction.kind === 'repartition';
+    if (!original || original.quality || (repartition ? !touched.has(original.id) || !original.genericCorrection : touched.has(original.id)) || original.sha256 !== correction.sourceSha256
+        || !Array.isArray(correction.sourceFootprintIds) || !same(effectiveMatches[original.id] ?? [], correction.sourceFootprintIds)
         || !Array.isArray(correction.assets)) throw new Error('Generic correction source mismatch');
     if (correction.kind === 'metadata-only') {
       const part = correction.assets[0];
@@ -38,7 +39,7 @@ export function applyGenericCorrections(assets: CityModelAsset[], matches: Recor
       touched.add(original.id);
       continue;
     }
-    if (correction.kind !== undefined || correction.assets.length < 2) throw new Error('Generic correction source mismatch');
+    if (correction.kind !== undefined && !repartition || correction.assets.length < 2) throw new Error('Generic correction source mismatch');
     const partitionIds: string[] = [], footprints: string[] = [];
     for (const part of correction.assets) {
       if (!part || !/^[a-z0-9_-]+$/.test(part.id) || part.quality || part.supersedes?.length
@@ -49,6 +50,7 @@ export function applyGenericCorrections(assets: CityModelAsset[], matches: Recor
           || !Array.isArray(part.geoBounds) || part.geoBounds.length !== 4 || !part.geoBounds.every(Number.isFinite)
           || part.geoBounds[0] >= part.geoBounds[2] || part.geoBounds[1] >= part.geoBounds[3]
           || !Array.isArray(part.dimensions) || part.dimensions.length !== 3 || !part.dimensions.every(n => Number.isFinite(n) && n > 0)
+          || repartition && part.id === original.id
           || (part.id !== original.id && byId.has(part.id)) || touched.has(part.id)) throw new Error('Invalid generic correction partition');
       partitionIds.push(part.id); footprints.push(...part.footprintIds);
     }

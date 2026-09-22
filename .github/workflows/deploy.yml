@@ -35,6 +35,7 @@ jobs:
       - run: python -m unittest discover -s tests -p 'test_residential_survey*.py' -v
       - run: python -m unittest discover -s tests -p 'test_bespoke_publisher.py' -v
       - run: python -m unittest discover -s tests -p 'test_height_regions.py' -v
+      - run: python -m unittest discover -s tests -p 'test_shared_instance_placement.py' -v
       - run: python -m unittest discover -s tests -p 'test_apartment_bespoke_queue.py' -v
       - run: node --test tests/*.test.mjs
       - run: python scripts/prepare_hosted_assets.py

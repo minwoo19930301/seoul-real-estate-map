@@ -1,5 +1,6 @@
 import { test, expect, type Page } from '@playwright/test';
 import { readFileSync, mkdirSync, writeFileSync } from 'node:fs';
+import { applyGenericCorrections } from '../src/generic-corrections.ts';
 
 const read = (path: string) => JSON.parse(readFileSync(path, 'utf8'));
 const authored = read('public/models/bespoke-manifest.json').assets;
@@ -7,7 +8,8 @@ const base = read('public/models/manifest.json').assets;
 const corrections = read('public/models/generic-corrections.json').corrections;
 const identity = read('docs/model-audit/jamsil-ricenz-source-identity.json');
 const bindings = read('docs/model-audit/jamsil-ricenz-fallback-bindings.json').bindings;
-const byId = new Map<string, any>([...base, ...corrections.flatMap((c: any) => c.assets), ...authored].map((a: any) => [a.id, a]));
+const effective = applyGenericCorrections(base, read('public/models/footprint-matches.json'), {version:1,corrections});
+const byId = new Map<string, any>([...effective.assets, ...authored].map((a: any) => [a.id, a]));
 const numbers = Array.from({length: 65}, (_, i) => 201 + i).filter(n => ![263, 265].includes(n));
 const directory = 'tests/screenshots/jamsil-ricenz63';
 
@@ -118,17 +120,21 @@ for (const scenario of [
 test('Ricenz withheld263/265 remain visible in the preserved residual', async ({page}) => {
   test.setTimeout(180_000);
   const errors = await boot(page), checks: any[] = [];
-  const residual = byId.get('apt-a13822003');
+  const residuals = identity.excludedTowers.map((excluded: any) => effective.assets.find(a => a.footprintIds?.includes(excluded.sourceId)));
   for (const excluded of identity.excludedTowers) {
-    expect(residual.footprintIds).toContain(excluded.sourceId);
+    expect(residuals.some((a: any) => a.footprintIds.includes(excluded.sourceId))).toBe(true);
     expect(authored.some((a: any) => a.id === `bespoke-jamsil-ricenz-${excluded.number}`)).toBe(false);
   }
-  await focus(page, byId.get('bespoke-jamsil-ricenz-264').coordinate);
-  await awaitModel(page, residual.id);
-  const state = await page.evaluate(() => {
+  const bounds = residuals.map((a: any) => a.geoBounds);
+  await page.evaluate(bounds => (window as any).__SEOUL_MAP__.map.fitBounds([
+    [Math.min(...bounds.map((b: number[])=>b[0])),Math.min(...bounds.map((b: number[])=>b[1]))],
+    [Math.max(...bounds.map((b: number[])=>b[2])),Math.max(...bounds.map((b: number[])=>b[3]))],
+  ],{padding:100,maxZoom:18,pitch:35,bearing:0,duration:0}),bounds);
+  for (const residual of residuals) await awaitModel(page, residual.id);
+  const state = await page.evaluate(ids => {
     const s = (window as any).__SEOUL_MAP__.cityModels.getState();
-    return {activeFootprintIds: s.activeFootprintIds, residuals: s.models.filter((m: any) => ['apt-a13822003', 'apt-a13879102'].includes(m.id)).map((m: any) => ({id:m.id,active:m.active,drawCount:m.drawCount}))};
-  });
+    return {activeFootprintIds: s.activeFootprintIds, residuals: s.models.filter((m: any) => ids.includes(m.id)).map((m: any) => ({id:m.id,active:m.active,drawCount:m.drawCount}))};
+  }, residuals.map((a: any)=>a.id));
   for (const excluded of identity.excludedTowers) expect(state.activeFootprintIds).toContain(excluded.sourceId);
   expect(errors).toEqual([]);
   checks.push({withheld: identity.excludedTowers.map((e: any) => e.number), ...state});

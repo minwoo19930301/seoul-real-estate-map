@@ -1,0 +1,220 @@
+{
+  "version": 1,
+  "sourceId": "apt-a13822003",
+  "sourceSha256": "08e7245fc08dd4b90b563daf9402e8456d8d2b56c2f31a306950e64fee84751e",
+  "sourceTriangles": 794,
+  "sourceCoordinate": {
+    "lon": 127.08775495,
+    "lat": 37.51384165428346,
+    "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+    "confidence": "source_footprint_unsurveyed"
+  },
+  "sourceFootprints": [
+    {
+      "id": "a0e6ef76-5b7f-4161-af3b-c5ce51b7c9d0",
+      "sourceName": "263동",
+      "sourceHeightM": 83.0,
+      "localFootprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              131.24368828119037,
+              -221.17759759072342
+            ],
+            [
+              142.37823202438628,
+              -216.91394867999773
+            ],
+            [
+              158.00721094929796,
+              -240.5922563395839
+            ],
+            [
+              148.05587804128686,
+              -245.81329329485973
+            ],
+            [
+              131.24368828119037,
+              -221.17759759072342
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "cdbf28b1-f5fe-4436-a4c0-86a3f79be762",
+      "sourceName": "265동",
+      "sourceHeightM": 86.0,
+      "localFootprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              64.63068431940393,
+              -264.3262930033413
+            ],
+            [
+              74.44956825380474,
+              -257.479929314187
+            ],
+            [
+              90.81143150161859,
+              -280.935706081383
+            ],
+            [
+              80.99254756721778,
+              -287.78208910080974
+            ],
+            [
+              64.63068431940393,
+              -264.3262930033413
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "b3b2a783-c22a-4b06-ad9d-aa2042c6feaf",
+      "sourceName": null,
+      "sourceHeightM": 74.0,
+      "localFootprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -10.785761445771216,
+              303.1346179818867
+            ],
+            [
+              -16.28680882993663,
+              310.2810654676699
+            ],
+            [
+              -7.730605112879105,
+              316.8709305985481
+            ],
+            [
+              5.39067323949018,
+              299.8062859785663
+            ],
+            [
+              -3.2803195890334282,
+              293.13848642065716
+            ],
+            [
+              -6.980060927832731,
+              297.9473173577491
+            ],
+            [
+              -9.152224099558573,
+              296.277584710839
+            ],
+            [
+              -13.063883796636242,
+              301.3758340118085
+            ],
+            [
+              -10.785761445771216,
+              303.1346179818867
+            ]
+          ]
+        ]
+      }
+    }
+  ],
+  "triangleCountsByGroup": {
+    "fallback-jamsil-trizium-305": 322,
+    "fallback-trizium-preserved-1": 228,
+    "fallback-trizium-preserved-2": 244
+  },
+  "groupFootprints": {
+    "fallback-jamsil-trizium-305": [
+      "b3b2a783-c22a-4b06-ad9d-aa2042c6feaf"
+    ],
+    "fallback-trizium-preserved-1": [
+      "a0e6ef76-5b7f-4161-af3b-c5ce51b7c9d0"
+    ],
+    "fallback-trizium-preserved-2": [
+      "cdbf28b1-f5fe-4436-a4c0-86a3f79be762"
+    ]
+  },
+  "vertexConnectedComponents": 313,
+  "crossGroupComponents": 0,
+  "ownershipToleranceM": 0.15,
+  "ownershipMethod": "Full source polygon first; otherwise a uniquely covering union of individual source convex hulls. Legacy roofplant shrinking about an interior point can leave concave footprint bounds; original geometry is preserved, not repaired. Vertex-connected components cannot cross groups.",
+  "trianglesAssignedWithinUniqueSourceConvexHull": 0,
+  "maximumVertexDistanceOutsideSourceFootprintM": 0.04672605639135315,
+  "outputs": [
+    {
+      "id": "fallback-jamsil-trizium-305",
+      "model": "generic-corrections/fallback-jamsil-trizium-305.glb",
+      "sha256": "13ad0c07b16fa740e6f2aaa99aa2072648aa8e3ed57ed62d4a7ee8f580b9f958",
+      "bytes": 21968,
+      "triangles": 322,
+      "bounds": {
+        "min": [
+          -16.286699295043945,
+          0.0,
+          293.1365051269531
+        ],
+        "max": [
+          5.390636920928955,
+          74.0,
+          316.8687744140625
+        ]
+      },
+      "footprintIds": [
+        "b3b2a783-c22a-4b06-ad9d-aa2042c6feaf"
+      ]
+    },
+    {
+      "id": "fallback-trizium-preserved-1",
+      "model": "generic-corrections/fallback-trizium-preserved-1.glb",
+      "sha256": "3898c1736ef53c839baab596ea2c0be5141de00fcd1514add510b9edefc15ee5",
+      "bytes": 17244,
+      "triangles": 228,
+      "bounds": {
+        "min": [
+          131.2427978515625,
+          0.0,
+          -245.81163024902344
+        ],
+        "max": [
+          158.0061492919922,
+          83.0,
+          -216.9124755859375
+        ]
+      },
+      "footprintIds": [
+        "a0e6ef76-5b7f-4161-af3b-c5ce51b7c9d0"
+      ]
+    },
+    {
+      "id": "fallback-trizium-preserved-2",
+      "model": "generic-corrections/fallback-trizium-preserved-2.glb",
+      "sha256": "f2378ea8b8e69238192a72c822b13ef11fa688639c58d44601f52f0a8372db13",
+      "bytes": 18232,
+      "triangles": 244,
+      "bounds": {
+        "min": [
+          64.6302490234375,
+          0.0,
+          -287.7801513671875
+        ],
+        "max": [
+          90.81082153320312,
+          86.0,
+          -257.4781799316406
+        ]
+      },
+      "footprintIds": [
+        "cdbf28b1-f5fe-4436-a4c0-86a3f79be762"
+      ]
+    }
+  ],
+  "limits": [
+    "Second-stage partition of the immutable published Ricenz residual. Both the original compound and previous correction files remain archived unchanged.",
+    "305 source belongs to Trizium; the two other source buildings remain separate generic fallbacks without photo-completion credit."
+  ]
+}

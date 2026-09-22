@@ -69,8 +69,9 @@ test('Ricenz 63 independent bindings retain 22 residual sources including withhe
   assert.equal(b.sourceFootprintId,original.sourceId);assert.deepEqual(asset.footprintIds,[original.sourceId]);assert.equal(asset.sha256,b.fallbackSha256);
   assert.deepEqual(b.supersedes,[asset.id]);assert.equal(Object.values(effective.matches).filter(ids=>ids.includes(original.sourceId)).length,1);
  }
- const residuals=['apt-a13822003','apt-a13879102'].map(id=>effective.assets.find(a=>a.id===id));
- assert.deepEqual(residuals.map(a=>a.footprintIds.length),[3,19]);
+ const retained=new Set(bindingDocument.preservedResidualSourceIds);
+ const residuals=effective.assets.filter(a=>a.footprintIds?.some(id=>retained.has(id)));
+ assert.ok(residuals.every(a=>a.footprintIds.every(id=>retained.has(id))), 'subsequent partitions preserve only the same residual sources');
  const residualIds=residuals.flatMap(a=>a.footprintIds);
  assert.deepEqual(new Set(residualIds),new Set(bindingDocument.preservedResidualSourceIds));
  assert.equal(residualIds.length,22);

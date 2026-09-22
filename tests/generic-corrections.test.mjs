@@ -123,6 +123,27 @@ test('complete partition with missing or duplicate ownership fails closed withou
     assert.equal(matches[source.id].length,7);
   }
 });
+test('explicit second partition uses current hash/ownership and new IDs while preserving prior records',()=>{
+  const first=structuredClone(correction.corrections.find(c=>c.sourceId===source.id));
+  const residual=first.assets.find(a=>a.id===source.id);
+  const second={kind:'repartition',sourceId:residual.id,sourceSha256:residual.sha256,sourceFootprintIds:[...residual.footprintIds],assets:[
+    {...structuredClone(residual),id:'next-first',model:'generic-corrections/next-first.glb',footprintIds:residual.footprintIds.slice(0,1)},
+    {...structuredClone(residual),id:'next-rest',model:'generic-corrections/next-rest.glb',footprintIds:residual.footprintIds.slice(1)},
+  ]};
+  const document={version:1,corrections:[first,second]},before=structuredClone({base,matches,document});
+  const result=applyGenericCorrections(base.assets,matches,document);
+  assert.ok(!result.assets.some(a=>a.id===source.id));assert.ok(!Object.hasOwn(result.matches,source.id));
+  for(const fid of matches[source.id])assert.equal(Object.values(result.matches).filter(ids=>ids.includes(fid)).length,1);
+  assert.deepEqual({base,matches,document},before);
+  for(const corrupt of [
+    d=>delete d.corrections[1].kind,
+    d=>d.corrections[1].sourceSha256=source.sha256,
+    d=>d.corrections[1].sourceFootprintIds=[...matches[source.id]],
+    d=>d.corrections[1].assets[0].id=source.id,
+    d=>d.corrections[1].assets[0].footprintIds.push(fp),
+    d=>d.corrections.reverse(),
+  ]){const bad=structuredClone(document);corrupt(bad);assert.throws(()=>applyGenericCorrections(base.assets,matches,bad));}
+});
 const frame={defaultProjectionData:{mainMatrix:new THREE.Matrix4().elements},shaderData:{variantName:'mercator'}};
 function harness(state,neighborFailed=false) {
   const replacement={...parts[1],id:'bespoke-raemian-caelitus-101',quality:'reference',supersedes:['fallback-caelitus-101']};
