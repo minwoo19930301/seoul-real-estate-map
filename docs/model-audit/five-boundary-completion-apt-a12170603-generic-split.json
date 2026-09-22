@@ -1,0 +1,313 @@
+{
+  "version": 1,
+  "sourceId": "apt-a12170603",
+  "sourceSha256": "0fb98b44d2bfb3af147108a2327db6a4c9553d47cd390b0f17f8bbce299c88ed",
+  "sourceTriangles": 5818,
+  "sourceCoordinate": {
+    "lon": 126.95317935,
+    "lat": 37.55045721298931,
+    "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+    "confidence": "source_footprint_unsurveyed"
+  },
+  "groupFootprints": {
+    "apt-a12170603": [
+      "7a213013-b001-4a04-9816-485eb1559033",
+      "7f63961c-ee23-45ef-8956-dc3143ec6d7b",
+      "88eaef09-dfb8-4027-ba54-a82975446acb",
+      "36cbdcd0-d0d8-43ac-9616-223e3f92b7e1",
+      "239911c1-988d-4e7d-aa5d-6e79665dd907",
+      "3a8dae1f-04bf-47b7-b231-9f5670fbab30",
+      "424c91b8-92d6-471d-8d8b-4db24f6d7aef",
+      "73ced547-a570-499b-980a-604b57aa052b",
+      "35e20d6a-f4dc-4bd5-9009-9e33cf373a84",
+      "acd7f545-7cd4-44d2-888b-a324ab90fcb3",
+      "fe8ca385-90b4-4c70-a53b-1dcaf4ebac85"
+    ],
+    "fallback-mapo-raemian-prugio-completion-414": [
+      "346fcc76-44b7-45e4-baaf-15c80a7cda56"
+    ]
+  },
+  "ownershipMethod": "Original source-emission indices from byte-exact authoring replay; overlapping historical plans cannot change ownership. Byte-exact archived authoring replay and per-source triangle-signature multiplicity independently checked.",
+  "legacyTrianglesOutsideSourcePolygonInsideItsHull": 13,
+  "legacyTrianglesOutsideSourceConvexHull": 0,
+  "limits": [
+    "Only archived indexed triangles, material attributes and terrain anchors are partitioned; no photo-modeling credit.",
+    "Add35 identified buildings acrossfivecomplexes using their published single representative. All priorpublishedmodels retained; residual fallback files repartitioned only with independent triangle provenance.",
+    "All unnamed, unmatched and unrelated source buildings remain in unchanged-shape residuals. Original convex-hull approximations remain archived."
+  ],
+  "outputs": [
+    {
+      "id": "apt-a12170603",
+      "model": "generic-corrections/apt-a12170603.glb",
+      "sha256": "c50bd9a7a67166b83fb9062973634a7d39a5965798cbef1e8d18914f0e14c4b0",
+      "bytes": 329836,
+      "triangles": 5442,
+      "bounds": {
+        "min": [
+          -135.1325225830078,
+          0.0,
+          -154.90036010742188
+        ],
+        "max": [
+          135.1325225830078,
+          76.0,
+          154.90036010742188
+        ]
+      },
+      "footprintIds": [
+        "7a213013-b001-4a04-9816-485eb1559033",
+        "7f63961c-ee23-45ef-8956-dc3143ec6d7b",
+        "88eaef09-dfb8-4027-ba54-a82975446acb",
+        "36cbdcd0-d0d8-43ac-9616-223e3f92b7e1",
+        "239911c1-988d-4e7d-aa5d-6e79665dd907",
+        "3a8dae1f-04bf-47b7-b231-9f5670fbab30",
+        "424c91b8-92d6-471d-8d8b-4db24f6d7aef",
+        "73ced547-a570-499b-980a-604b57aa052b",
+        "35e20d6a-f4dc-4bd5-9009-9e33cf373a84",
+        "acd7f545-7cd4-44d2-888b-a324ab90fcb3",
+        "fe8ca385-90b4-4c70-a53b-1dcaf4ebac85"
+      ]
+    },
+    {
+      "id": "fallback-mapo-raemian-prugio-completion-414",
+      "model": "generic-corrections/fallback-mapo-raemian-prugio-completion-414.glb",
+      "sha256": "5ab89916eb04cf150df7197dca45d320131bdc79d45552150f17aa3af2456737",
+      "bytes": 24784,
+      "triangles": 376,
+      "bounds": {
+        "min": [
+          -6.817742824554443,
+          0.0,
+          -105.02867889404297
+        ],
+        "max": [
+          11.574718475341797,
+          35.0,
+          -82.67557525634766
+        ]
+      },
+      "footprintIds": [
+        "346fcc76-44b7-45e4-baaf-15c80a7cda56"
+      ]
+    }
+  ],
+  "sourceAuthoringReplay": {
+    "byteExact": true,
+    "sha256": "0fb98b44d2bfb3af147108a2327db6a4c9553d47cd390b0f17f8bbce299c88ed",
+    "provenancePath": "docs/LANDMARK_EXPANSION_PROVENANCE.json",
+    "frozenAssetProvenanceSha256": "1a7a945e271d6bb3a19f0ee156004f9d213856504d7c455a25118c7c53f57013",
+    "authoringAnchor": [
+      126.9521365,
+      37.5507992
+    ],
+    "generator": "scripts/build_district_landmarks.py",
+    "generatorSha256": "35dce09a4a4c71a871d4d2e03a8d2ae32e68a5fd0701ce1a0be643ef7d0e4712",
+    "triangleRangesBySource": [
+      {
+        "sourceId": "239911c1-988d-4e7d-aa5d-6e79665dd907",
+        "triangleRangesByMaterial": [
+          [
+            0,
+            16
+          ],
+          [
+            0,
+            224
+          ],
+          [
+            0,
+            4
+          ]
+        ]
+      },
+      {
+        "sourceId": "346fcc76-44b7-45e4-baaf-15c80a7cda56",
+        "triangleRangesByMaterial": [
+          [
+            16,
+            152
+          ],
+          [
+            224,
+            400
+          ],
+          [
+            4,
+            68
+          ]
+        ]
+      },
+      {
+        "sourceId": "35e20d6a-f4dc-4bd5-9009-9e33cf373a84",
+        "triangleRangesByMaterial": [
+          [
+            152,
+            288
+          ],
+          [
+            400,
+            712
+          ],
+          [
+            68,
+            132
+          ]
+        ]
+      },
+      {
+        "sourceId": "36cbdcd0-d0d8-43ac-9616-223e3f92b7e1",
+        "triangleRangesByMaterial": [
+          [
+            288,
+            304
+          ],
+          [
+            712,
+            796
+          ],
+          [
+            132,
+            136
+          ]
+        ]
+      },
+      {
+        "sourceId": "3a8dae1f-04bf-47b7-b231-9f5670fbab30",
+        "triangleRangesByMaterial": [
+          [
+            304,
+            484
+          ],
+          [
+            796,
+            1306
+          ],
+          [
+            136,
+            219
+          ]
+        ]
+      },
+      {
+        "sourceId": "424c91b8-92d6-471d-8d8b-4db24f6d7aef",
+        "triangleRangesByMaterial": [
+          [
+            484,
+            500
+          ],
+          [
+            1306,
+            1562
+          ],
+          [
+            219,
+            223
+          ]
+        ]
+      },
+      {
+        "sourceId": "73ced547-a570-499b-980a-604b57aa052b",
+        "triangleRangesByMaterial": [
+          [
+            500,
+            552
+          ],
+          [
+            1562,
+            2170
+          ],
+          [
+            223,
+            245
+          ]
+        ]
+      },
+      {
+        "sourceId": "7a213013-b001-4a04-9816-485eb1559033",
+        "triangleRangesByMaterial": [
+          [
+            552,
+            696
+          ],
+          [
+            2170,
+            2714
+          ],
+          [
+            245,
+            313
+          ]
+        ]
+      },
+      {
+        "sourceId": "7f63961c-ee23-45ef-8956-dc3143ec6d7b",
+        "triangleRangesByMaterial": [
+          [
+            696,
+            792
+          ],
+          [
+            2714,
+            2922
+          ],
+          [
+            313,
+            357
+          ]
+        ]
+      },
+      {
+        "sourceId": "88eaef09-dfb8-4027-ba54-a82975446acb",
+        "triangleRangesByMaterial": [
+          [
+            792,
+            902
+          ],
+          [
+            2922,
+            3530
+          ],
+          [
+            357,
+            407
+          ]
+        ]
+      },
+      {
+        "sourceId": "acd7f545-7cd4-44d2-888b-a324ab90fcb3",
+        "triangleRangesByMaterial": [
+          [
+            902,
+            918
+          ],
+          [
+            3530,
+            4178
+          ],
+          [
+            407,
+            411
+          ]
+        ]
+      },
+      {
+        "sourceId": "fe8ca385-90b4-4c70-a53b-1dcaf4ebac85",
+        "triangleRangesByMaterial": [
+          [
+            918,
+            1098
+          ],
+          [
+            4178,
+            4226
+          ],
+          [
+            411,
+            494
+          ]
+        ]
+      }
+    ],
+    "rangeConvention": "Half-open [start,end) original indexed triangle ranges, one range per material; original vertex packing retains emission order."
+  }
+}

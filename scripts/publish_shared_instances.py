@@ -10,7 +10,8 @@ import tempfile
 from pathlib import Path
 
 import numpy as np
-from shapely.geometry import Polygon
+from shapely.geometry import Polygon, shape
+from shapely.ops import transform
 
 from bespoke.validate_height_regions import read_triangles
 
@@ -25,7 +26,10 @@ LIMITS = ('Shared copy of one representative: only placement, horizontal dimensi
 def local_polygon(row, anchor):
     lon, lat = anchor
     sx = METRES * math.cos(math.radians(lat))
-    return Polygon([((x - lon) * sx, (y - lat) * METRES) for x, y in row['geometry']['coordinates'][0]])
+    geometry = shape(row['geometry'])
+    if geometry.geom_type not in ('Polygon', 'MultiPolygon') or geometry.is_empty or not geometry.is_valid:
+        raise ValueError('Placement requires valid nonempty Polygon or MultiPolygon')
+    return transform(lambda x, y, z=None: ((np.asarray(x) - lon) * sx, (np.asarray(y) - lat) * METRES), geometry)
 
 
 def frame(polygon):
@@ -52,8 +56,8 @@ def target_height(row, estimated_storey_height=None):
 
 def placement(source_row, target_row, source_asset, estimated_storey_height=None, *, height_override=None, anchor_override=None):
     source_anchor = [source_asset['coordinate'][k] for k in ['lon', 'lat']]
-    ring = target_row['geometry']['coordinates'][0]
-    anchor = [(min(p[i] for p in ring) + max(p[i] for p in ring)) / 2 for i in [0, 1]]
+    bounds = shape(target_row['geometry']).bounds
+    anchor = [(bounds[i] + bounds[i + 2]) / 2 for i in [0, 1]]
     if anchor_override is not None:
         anchor = list(anchor_override)
     sb, ss, sc = frame(local_polygon(source_row, source_anchor))

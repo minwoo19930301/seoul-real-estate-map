@@ -1,0 +1,347 @@
+{
+  "revision": {
+    "priorAssetId": "bespoke-godeok-arteon-326",
+    "horizontalScale": 0.987784365,
+    "minimumGapM": 0.20010002746556446,
+    "requiredGapM": 0.2,
+    "scaleOrigin": "unchanged target geographic anchor; XZ linear coefficients and XZ translation uniformly scaled; Y unchanged",
+    "reason": "Remove inherited representative body-plan intersection with newly identified source327; smallest uniform horizontal reduction to .2001m clearance along bisection path. Ornament clearance not certified.",
+    "beforeOverlapM2": 0.08122629453728006
+  },
+  "assetId": "bespoke-godeok-arteon-placement-v2-326",
+  "oldAsset": {
+    "model": "bespoke/godeok-arteon-323-representative/bespoke-godeok-arteon-323.glb",
+    "sha256": "ee7735ce72f30fee05d83cb7bfb635a62518e4170f884fa8b864065e934057a4",
+    "heightDatum": "metres; independent terrain anchor",
+    "quality": "reference",
+    "referenceUrl": "https://kbland.kr/se/c/39634",
+    "category": "apartment",
+    "district": "강동구",
+    "minZoom": 15,
+    "id": "bespoke-godeok-arteon-326",
+    "nameKo": "고덕아르테온 326동",
+    "coordinate": {
+      "lon": 127.16950315,
+      "lat": 37.55607675
+    },
+    "yawDegFromEast": 0,
+    "footprintIds": [
+      "d50d77cb-c778-4bec-8cfd-6ea747ae22e2"
+    ],
+    "supersedes": [
+      "fallback-godeok-arteon-326"
+    ],
+    "searchable": false,
+    "groundOffsetM": 0,
+    "modelInstance": {
+      "sourceAssetId": "bespoke-godeok-arteon-323",
+      "sourceDimensions": [
+        61.4205265045166,
+        66.25,
+        36.94108009338379
+      ],
+      "matrix": [
+        1.1569346856316505,
+        0.0,
+        -0.30333406249451395,
+        0.0,
+        0.0,
+        1.4377358490566037,
+        0.0,
+        0.0,
+        0.3108849920880489,
+        0.0,
+        0.959967525207751,
+        0.0,
+        1.4851204411231205,
+        0.0,
+        5.974720290489971,
+        1.0
+      ],
+      "hiddenNodes": []
+    },
+    "sourceRecord": {
+      "provider": "Shared representative instance",
+      "siteId": "godeok-arteon-shared",
+      "sources": [
+        {
+          "url": "https://file.kbland.kr/image/kbstar/land/img/revw/userseq/57041/20210127/ODIwMDk3YjlmYTUzYjA2Mjcy.jpg",
+          "sha256": "79c51cf9072d3825d4a8d5a185489eaa1b267d6bca7c290a8a145e5617027a58",
+          "scope": "complex",
+          "observedTowerNumber": null,
+          "observations": "Root directly viewed actual KB completed courtyard photograph and final four-view representative renders. Broad pale service piers, narrow punched service windows, white framed dark glazing strips, gray stone low floors and restrained flat upper edges match the complex-level visible vocabulary. Source323 has its own long irregular52-vertex body; photograph number and exactdirection unidentifiable, so no claim that photographed towers are323."
+        },
+        {
+          "url": "https://kbland.kr/se/c/39634",
+          "observations": "Primary complex photograph; representative only."
+        },
+        {
+          "dataset": "Previously identified numbered source inventory",
+          "snapshot": "godeok-arteon-source-identity.json",
+          "sha256": "71d14201b7183bc92fda95cef86ca90d0a94990a886e1e138913b8015d0809c6",
+          "observations": "25existing numbered3xx sourcepolygons independently linked to exactGodeokro360/Sangildong519 registerrows. Root verifiedDBgeometry/properties and registeredfacts. Official4066households41buildings;16remainunmapped. NeighborGracium142143149 excluded from Arteonownership."
+        }
+      ],
+      "blendSource": "modeling/bespoke/godeok-arteon-323-representative/godeok-arteon-323-authored.blend",
+      "blendSha256": "692cf66c9f846da3dc54cbea827c00f6061d649cf84d04a0d007b2a139ccd1a8",
+      "sourceGlbSha256": "4940ef70831ae319d2ae3689dc70b80e21986e5f8f1bd422a5f973ff06a8b4fa",
+      "components": [
+        "Shared representative geometry/materials",
+        "Inventory-based placement/size transform"
+      ],
+      "buildingFacts": {
+        "floors": 32,
+        "floorsBasis": "Existing register metadata; the cloned floor pattern is unchanged",
+        "heightM": 95.25,
+        "registeredHeightM": 95.25,
+        "sourceHeightM": 95.0,
+        "heightBasis": "Overall cloned envelope scaled to existing registered height; not individual floor reconstruction"
+      },
+      "uncertainties": [
+        "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+        "Number,compassface,hiddenfacades and exactfacadedimensionsunconfirmed in primaryphoto.",
+        "Uniformregisteredmaximumheightapplied to ownfootprint; actualpartheightdifferencesandlegalroofdatumnotconfirmed.",
+        "Only25of41identified residentialsourcesmayreceivecopies; actualtargetconcavityandfloorpatternsdifferfromrepresentative."
+      ],
+      "accuracy": "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+      "modelingBasis": "representative-photo-inference",
+      "inferenceScope": "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+      "delivery": "shared-instance",
+      "inferredFrom": [
+        {
+          "id": "bespoke-godeok-arteon-323",
+          "sha256": "ee7735ce72f30fee05d83cb7bfb635a62518e4170f884fa8b864065e934057a4",
+          "siteId": "godeok-arteon-323-representative"
+        }
+      ]
+    },
+    "dimensions": [
+      72.51552995229937,
+      95.25,
+      41.66939719928573
+    ],
+    "geoBounds": [
+      127.16910772177296,
+      37.555858049239774,
+      127.16992943380428,
+      37.55623237180362
+    ]
+  },
+  "newAsset": {
+    "model": "bespoke/godeok-arteon-323-representative/bespoke-godeok-arteon-323.glb",
+    "sha256": "ee7735ce72f30fee05d83cb7bfb635a62518e4170f884fa8b864065e934057a4",
+    "heightDatum": "metres; independent terrain anchor",
+    "quality": "reference",
+    "referenceUrl": "https://kbland.kr/se/c/39634",
+    "category": "apartment",
+    "district": "강동구",
+    "minZoom": 15,
+    "id": "bespoke-godeok-arteon-placement-v2-326",
+    "nameKo": "고덕아르테온 326동",
+    "coordinate": {
+      "lon": 127.16950315,
+      "lat": 37.55607675
+    },
+    "yawDegFromEast": 0,
+    "footprintIds": [
+      "d50d77cb-c778-4bec-8cfd-6ea747ae22e2"
+    ],
+    "supersedes": [
+      "bespoke-godeok-arteon-326",
+      "fallback-godeok-arteon-326"
+    ],
+    "searchable": false,
+    "groundOffsetM": 0,
+    "modelInstance": {
+      "sourceAssetId": "bespoke-godeok-arteon-323",
+      "sourceDimensions": [
+        61.4205265045166,
+        66.25,
+        36.94108009338379
+      ],
+      "matrix": [
+        1.1428019937931344,
+        0.0,
+        -0.29962864430401376,
+        0.0,
+        0.0,
+        1.4377358490566037,
+        0.0,
+        0.0,
+        0.30708733449772335,
+        0.0,
+        0.9482409123079598,
+        0.0,
+        1.4669787518833215,
+        0.0,
+        5.901735288194252,
+        1.0
+      ],
+      "hiddenNodes": []
+    },
+    "sourceRecord": {
+      "provider": "Shared representative instance",
+      "siteId": "godeok-arteon-placement-v2",
+      "sources": [
+        {
+          "url": "https://file.kbland.kr/image/kbstar/land/img/revw/userseq/57041/20210127/ODIwMDk3YjlmYTUzYjA2Mjcy.jpg",
+          "sha256": "79c51cf9072d3825d4a8d5a185489eaa1b267d6bca7c290a8a145e5617027a58",
+          "scope": "complex",
+          "observedTowerNumber": null,
+          "observations": "Root directly viewed actual KB completed courtyard photograph and final four-view representative renders. Broad pale service piers, narrow punched service windows, white framed dark glazing strips, gray stone low floors and restrained flat upper edges match the complex-level visible vocabulary. Source323 has its own long irregular52-vertex body; photograph number and exactdirection unidentifiable, so no claim that photographed towers are323."
+        },
+        {
+          "url": "https://kbland.kr/se/c/39634",
+          "observations": "Primary complex photograph; representative only."
+        },
+        {
+          "dataset": "Previously identified numbered source inventory",
+          "snapshot": "godeok-arteon-source-identity.json",
+          "sha256": "71d14201b7183bc92fda95cef86ca90d0a94990a886e1e138913b8015d0809c6",
+          "observations": "25existing numbered3xx sourcepolygons independently linked to exactGodeokro360/Sangildong519 registerrows. Root verifiedDBgeometry/properties and registeredfacts. Official4066households41buildings;16remainunmapped. NeighborGracium142143149 excluded from Arteonownership."
+        }
+      ],
+      "blendSource": "modeling/bespoke/godeok-arteon-323-representative/godeok-arteon-323-authored.blend",
+      "blendSha256": "692cf66c9f846da3dc54cbea827c00f6061d649cf84d04a0d007b2a139ccd1a8",
+      "sourceGlbSha256": "4940ef70831ae319d2ae3689dc70b80e21986e5f8f1bd422a5f973ff06a8b4fa",
+      "components": [
+        "Shared representative geometry/materials",
+        "Inventory-based placement/size transform"
+      ],
+      "buildingFacts": {
+        "floors": 32,
+        "floorsBasis": "Existing register metadata; the cloned floor pattern is unchanged",
+        "heightM": 95.25,
+        "registeredHeightM": 95.25,
+        "sourceHeightM": 95.0,
+        "heightBasis": "Overall cloned envelope scaled to existing registered height; not individual floor reconstruction"
+      },
+      "uncertainties": [
+        "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+        "Number,compassface,hiddenfacades and exactfacadedimensionsunconfirmed in primaryphoto.",
+        "Uniformregisteredmaximumheightapplied to ownfootprint; actualpartheightdifferencesandlegalroofdatumnotconfirmed.",
+        "Only25of41identified residentialsourcesmayreceivecopies; actualtargetconcavityandfloorpatternsdifferfromrepresentative."
+      ],
+      "accuracy": "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+      "modelingBasis": "representative-photo-inference",
+      "inferenceScope": "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+      "delivery": "shared-instance",
+      "inferredFrom": [
+        {
+          "id": "bespoke-godeok-arteon-323",
+          "sha256": "ee7735ce72f30fee05d83cb7bfb635a62518e4170f884fa8b864065e934057a4",
+          "siteId": "godeok-arteon-323-representative"
+        }
+      ],
+      "placementRevision": {
+        "priorAssetId": "bespoke-godeok-arteon-326",
+        "horizontalScale": 0.987784365,
+        "minimumGapM": 0.20010002746556446,
+        "requiredGapM": 0.2,
+        "scaleOrigin": "unchanged target geographic anchor; XZ linear coefficients and XZ translation uniformly scaled; Y unchanged",
+        "reason": "Remove inherited representative body-plan intersection with newly identified source327; smallest uniform horizontal reduction to .2001m clearance along bisection path. Ornament clearance not certified.",
+        "beforeOverlapM2": 0.08122629453728006
+      }
+    },
+    "dimensions": [
+      71.62970670657052,
+      95.25,
+      41.16037905242924
+    ],
+    "geoBounds": [
+      127.16911255217985,
+      37.55586072080843,
+      127.16992422647692,
+      37.55623047078446
+    ]
+  },
+  "fileHashes": {
+    "public/models/bespoke/godeok-arteon-323-representative/bespoke-godeok-arteon-323.glb": "ee7735ce72f30fee05d83cb7bfb635a62518e4170f884fa8b864065e934057a4",
+    "modeling/bespoke/godeok-arteon-323-representative/godeok-arteon-323-authored.blend": "692cf66c9f846da3dc54cbea827c00f6061d649cf84d04a0d007b2a139ccd1a8"
+  },
+  "clearancesM": {
+    "source-301": 235.20241030952172,
+    "source-302": 214.1108540227165,
+    "source-303": 200.13280406284926,
+    "source-304": 189.13577982298042,
+    "source-305": 184.15679282750108,
+    "source-306": 217.03418422107288,
+    "source-307": 236.17571202047597,
+    "source-308": 289.0337620264091,
+    "source-309": 218.67380827598697,
+    "source-310": 152.22773244925193,
+    "source-311": 114.02180050023934,
+    "source-312": 111.65423284085252,
+    "source-313": 140.6067965772943,
+    "source-314": 163.1221827495765,
+    "source-315": 77.09236489079221,
+    "source-316": 61.96194213039203,
+    "source-317": 36.787073897310286,
+    "source-318": 45.374457802305436,
+    "source-319": 101.14618281753546,
+    "source-320": 187.599312920298,
+    "source-321": 242.69358337786375,
+    "source-322": 229.92837160229823,
+    "source-323": 146.5526892878266,
+    "source-324": 84.57593046565047,
+    "source-325": 15.231815696683816,
+    "source-327": 0.20010002746556446,
+    "source-328": 52.2513238863252,
+    "source-329": 82.04923362971292,
+    "source-330": 47.78464221229728,
+    "source-331": 32.36467066539749,
+    "source-332": 32.78546192442929,
+    "source-333": 113.89135358523944,
+    "source-334": 156.4431874465474,
+    "source-335": 211.03519423631624,
+    "source-336": 350.2007837094143,
+    "source-337": 376.9798642071364,
+    "source-338": 429.4879971674952,
+    "source-339": 477.5204251197552,
+    "source-340": 408.3661858670431,
+    "source-341": 366.61257360441925,
+    "bespoke-godeok-arteon-305": 183.99509307825667,
+    "bespoke-godeok-arteon-306": 216.85754785217483,
+    "bespoke-godeok-arteon-307": 238.65165201139686,
+    "bespoke-godeok-arteon-308": 289.880340757711,
+    "bespoke-godeok-arteon-309": 218.875163042807,
+    "bespoke-godeok-arteon-310": 155.19896202462806,
+    "bespoke-godeok-arteon-311": 113.85303218749145,
+    "bespoke-godeok-arteon-312": 111.49610936508701,
+    "bespoke-godeok-arteon-315": 66.7951434609034,
+    "bespoke-godeok-arteon-316": 53.36770321087456,
+    "bespoke-godeok-arteon-317": 36.131667968318716,
+    "bespoke-godeok-arteon-318": 45.28191177082773,
+    "bespoke-godeok-arteon-319": 105.76779952793075,
+    "bespoke-godeok-arteon-320": 188.19607290954607,
+    "bespoke-godeok-arteon-321": 242.1345827014708,
+    "bespoke-godeok-arteon-322": 229.67759121289913,
+    "bespoke-godeok-arteon-324": 84.4368524884196,
+    "bespoke-godeok-arteon-325": 21.179670748546016,
+    "bespoke-godeok-arteon-332": 33.45750539504021,
+    "bespoke-godeok-arteon-333": 114.93181517634684,
+    "bespoke-godeok-arteon-334": 159.26697069974344,
+    "bespoke-godeok-arteon-335": 214.56491277432676,
+    "bespoke-godeok-arteon-336": 349.88357296676895,
+    "bespoke-godeok-arteon-301": 227.3990935373397,
+    "bespoke-godeok-arteon-302": 220.2399495326951,
+    "bespoke-godeok-arteon-303": 190.5613209209868,
+    "bespoke-godeok-arteon-304": 188.48871190340896,
+    "bespoke-godeok-arteon-313": 130.92807476945984,
+    "bespoke-godeok-arteon-314": 168.41998884223716,
+    "bespoke-godeok-arteon-327": 12.449557629229451,
+    "bespoke-godeok-arteon-328": 53.041525475716966,
+    "bespoke-godeok-arteon-329": 78.29134333427832,
+    "bespoke-godeok-arteon-330": 48.4753061036592,
+    "bespoke-godeok-arteon-331": 32.09902901907158,
+    "bespoke-godeok-arteon-337": 380.17822146468126,
+    "bespoke-godeok-arteon-338": 433.2620555868391,
+    "bespoke-godeok-arteon-339": 478.7882020656414,
+    "bespoke-godeok-arteon-340": 413.5765442710994,
+    "bespoke-godeok-arteon-341": 366.4783181801027
+  },
+  "sourceIdentity": {
+    "path": "docs/model-audit/godeok-arteon-completion-source-identity.json",
+    "sha256": "c4dcebf0d9aafb4457afe8edc8ea18c338b9a56fcc123de31db539d71acb18a3"
+  }
+}

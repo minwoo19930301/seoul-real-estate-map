@@ -3,11 +3,18 @@
 import json
 import math
 from pathlib import Path
-from shapely.geometry import Polygon
+from shapely.geometry import shape
+from shapely.ops import transform
 from shapely.affinity import affine_transform
 
 ROOT=Path(__file__).resolve().parents[1]
 read=lambda p:json.loads((ROOT/p).read_text())
+
+def projected_geometry(geometry, origin, sx, sy):
+    polygon = shape(geometry)
+    if polygon.geom_type not in ('Polygon', 'MultiPolygon') or polygon.is_empty or not polygon.is_valid:
+        raise ValueError('Placement check requires valid nonempty Polygon or MultiPolygon')
+    return transform(lambda x, y, z=None: ((x-origin[0])*sx, (y-origin[1])*sy), polygon)
 
 def check():
     assets=read('public/models/bespoke-manifest.json')['assets'];by_id={a['id']:a for a in assets}
@@ -28,12 +35,12 @@ def check():
     for group in groups.values():
         sites=group['sites'];rows=group['rows'];identity_path=group['paths'][0]
         copies=[a for a in assets if a['sourceRecord']['siteId'] in sites and a['id'] not in superseded]
-        origin=next(iter(rows.values()))['geometry']['coordinates'][0][0];sy=111319.49079327358;sx=sy*math.cos(math.radians(origin[1]))
-        def world(coords):return Polygon([((x-origin[0])*sx,(y-origin[1])*sy) for x,y in coords]).buffer(0)
-        originals={fid:world(r['geometry']['coordinates'][0]) for fid,r in rows.items()};plans={};hits=[]
+        origin=shape(next(iter(rows.values()))['geometry']).bounds[:2];sy=111319.49079327358;sx=sy*math.cos(math.radians(origin[1]))
+        def world(geometry):return projected_geometry(geometry, origin, sx, sy)
+        originals={fid:world(r['geometry']) for fid,r in rows.items()};plans={};hits=[]
         for a in copies:
             source=by_id[a['modelInstance']['sourceAssetId']];c=source['coordinate'];ssx=sy*math.cos(math.radians(c['lat']))
-            p=Polygon([((x-c['lon'])*ssx,(y-c['lat'])*sy) for x,y in rows[source['footprintIds'][0]]['geometry']['coordinates'][0]]).buffer(0)
+            p=projected_geometry(rows[source['footprintIds'][0]]['geometry'], (c['lon'],c['lat']), ssx, sy)
             m=a['modelInstance']['matrix'];plan=affine_transform(p,[m[0],-m[8],-m[2],m[10],m[12],-m[14]])
             c=a['coordinate'];plan=affine_transform(plan,[sx/(sy*math.cos(math.radians(c['lat']))),0,0,1,(c['lon']-origin[0])*sx,(c['lat']-origin[1])*sy]);plans[a['footprintIds'][0]]=plan
             for fid,poly in originals.items():

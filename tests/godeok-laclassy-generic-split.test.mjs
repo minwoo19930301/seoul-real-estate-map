@@ -40,6 +40,8 @@ for (const batch of [
  {name:'dmc-extension', bindings:33, residuals:25, prior:42, triangles:18080},
  {name:'mapo-two', bindings:49, residuals:8, prior:46, triangles:61489},
  {name:'dmc-completion', bindings:22, residuals:47, prior:48, triangles:24214},
+ {name:'five-boundary-completion', bindings:35, residuals:60, prior:52, triangles:47771},
+ {name:'three-boundary-completion', bindings:19, residuals:48, prior:59, triangles:52540},
 ]) {
 const audit=json(`docs/model-audit/${batch.name}-generic-split.json`);
 const frozen=json(`docs/model-audit/${batch.name}-fallback-inputs.json`);

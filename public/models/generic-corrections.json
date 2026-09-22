@@ -67844,6 +67844,4248 @@
           }
         }
       ]
+    },
+    {
+      "sourceId": "apt-a10023508",
+      "sourceSha256": "6f76c6a32419ff1285a51a6fec347a9a5bede78698fb994875fc9dedd4f6f958",
+      "sourceFootprintIds": [
+        "f8908ebd-0209-4028-9d24-9680278b1d5a",
+        "6d9542f9-a41d-4b20-93c7-5c09018e8456",
+        "14e724b7-e4d6-4a89-9f6b-ca6890a7937a",
+        "64ede123-d848-491e-a140-c56fc1557c09",
+        "35c51738-43e9-479c-88a7-ce3412f48b32",
+        "5f1e79d7-1dd8-44d5-b3c5-db4a5cae3bf7",
+        "c8e84011-d179-467c-ae0a-ec85b5b27726",
+        "e891a68c-0a65-4c30-8a51-f1226681e7ab",
+        "fe8ca1a8-b4a6-47d3-9245-9bf9b5d6f93e",
+        "8ad9628d-deb9-414a-acd1-027b800050e2",
+        "819661bd-862f-4da5-82a9-e1a33c0e7777",
+        "2234312d-9cc9-4fd8-bc52-68adf07abf36",
+        "2235a737-787e-47b5-99ff-3833e65a7b30",
+        "bd146bd2-420b-4dc2-ab66-7cbfc5f144fc",
+        "7481dff6-ce83-4ec3-b4ae-83dad1fe930f",
+        "690fd8db-c2da-4308-a206-6ee3eb47808d",
+        "7ad13d1f-886a-4fb9-b128-c0db07a51e46",
+        "1731b6e3-2545-444d-bb2a-1706749c5948",
+        "b2f29caa-b5f4-4935-b062-5c13a60cc97d",
+        "f3f92cf6-0052-4fb1-be9c-98b64494cd1f"
+      ],
+      "assets": [
+        {
+          "id": "apt-a10023508",
+          "model": "generic-corrections/apt-a10023508.glb",
+          "name": "대상 외 원천 건물 (기존 추정 모형)",
+          "nameKo": "대상 외 원천 건물 (기존 추정 모형)",
+          "district": "마포구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            300.7533874511719,
+            71.0,
+            232.77108764648438
+          ],
+          "measuredGlbDimensions": [
+            300.7533874511719,
+            71.0,
+            232.77108764648438
+          ],
+          "bounds": {
+            "min": [
+              -150.37669372558594,
+              0.0,
+              -127.32796478271484
+            ],
+            "max": [
+              150.37669372558594,
+              71.0,
+              105.44313049316406
+            ]
+          },
+          "triangles": 13514,
+          "drawCalls": 3,
+          "bytes": 787396,
+          "sha256": "500594756d558feb99a01564e3733c78f51e13e657e455c7d81c73223070d785",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.9506547,
+            "lat": 37.55524362932195,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 17,
+          "footprintIds": [
+            "f8908ebd-0209-4028-9d24-9680278b1d5a",
+            "6d9542f9-a41d-4b20-93c7-5c09018e8456",
+            "14e724b7-e4d6-4a89-9f6b-ca6890a7937a",
+            "64ede123-d848-491e-a140-c56fc1557c09",
+            "35c51738-43e9-479c-88a7-ce3412f48b32",
+            "5f1e79d7-1dd8-44d5-b3c5-db4a5cae3bf7",
+            "c8e84011-d179-467c-ae0a-ec85b5b27726",
+            "e891a68c-0a65-4c30-8a51-f1226681e7ab",
+            "fe8ca1a8-b4a6-47d3-9245-9bf9b5d6f93e",
+            "8ad9628d-deb9-414a-acd1-027b800050e2",
+            "819661bd-862f-4da5-82a9-e1a33c0e7777",
+            "bd146bd2-420b-4dc2-ab66-7cbfc5f144fc",
+            "690fd8db-c2da-4308-a206-6ee3eb47808d",
+            "7ad13d1f-886a-4fb9-b128-c0db07a51e46",
+            "1731b6e3-2545-444d-bb2a-1706749c5948",
+            "b2f29caa-b5f4-4935-b062-5c13a60cc97d",
+            "f3f92cf6-0052-4fb1-be9c-98b64494cd1f"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/DISTRICT_LANDMARK_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": true,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            126.94895072076838,
+            37.55429641154479,
+            126.95235867923162,
+            37.556387427112455
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a10023508",
+            "sourceSha256": "6f76c6a32419ff1285a51a6fec347a9a5bede78698fb994875fc9dedd4f6f958",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-mapo-raemian-prugio-completion-303",
+          "model": "generic-corrections/fallback-mapo-raemian-prugio-completion-303.glb",
+          "name": "마포래미안푸르지오 303동",
+          "nameKo": "마포래미안푸르지오 303동",
+          "district": "마포구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            34.8244514465332,
+            69.0,
+            34.281158447265625
+          ],
+          "measuredGlbDimensions": [
+            34.8244514465332,
+            69.0,
+            34.281158447265625
+          ],
+          "bounds": {
+            "min": [
+              29.45168685913086,
+              0.0,
+              93.04680633544922
+            ],
+            "max": [
+              64.27613830566406,
+              69.0,
+              127.32796478271484
+            ]
+          },
+          "triangles": 1678,
+          "drawCalls": 3,
+          "bytes": 100296,
+          "sha256": "4425ac152cea3d090a57547ee08813d8cf109c36aacce5a442e8c000c8a50bc8",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.9506547,
+            "lat": 37.55524362932195,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "2235a737-787e-47b5-99ff-3833e65a7b30"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/DISTRICT_LANDMARK_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            126.95098842899418,
+            37.55409981397529,
+            126.9513830389603,
+            37.55440777095162
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a10023508",
+            "sourceSha256": "6f76c6a32419ff1285a51a6fec347a9a5bede78698fb994875fc9dedd4f6f958",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-mapo-raemian-prugio-completion-304",
+          "model": "generic-corrections/fallback-mapo-raemian-prugio-completion-304.glb",
+          "name": "마포래미안푸르지오 304동",
+          "nameKo": "마포래미안푸르지오 304동",
+          "district": "마포구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            34.823909759521484,
+            69.0,
+            34.28129959106445
+          ],
+          "measuredGlbDimensions": [
+            34.823909759521484,
+            69.0,
+            34.28129959106445
+          ],
+          "bounds": {
+            "min": [
+              61.11605453491211,
+              0.0,
+              60.34183883666992
+            ],
+            "max": [
+              95.9399642944336,
+              69.0,
+              94.62313842773438
+            ]
+          },
+          "triangles": 1678,
+          "drawCalls": 3,
+          "bytes": 100296,
+          "sha256": "cdf4fcb385f874076742401b47e1626291b3d9063bd56003ade8ae7df8832707",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.9506547,
+            "lat": 37.55524362932195,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "2234312d-9cc9-4fd8-bc52-68adf07abf36"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/DISTRICT_LANDMARK_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            126.951347230771,
+            37.55439361035933,
+            126.95174183459906,
+            37.5547015673895
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a10023508",
+            "sourceSha256": "6f76c6a32419ff1285a51a6fec347a9a5bede78698fb994875fc9dedd4f6f958",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-mapo-raemian-prugio-completion-305",
+          "model": "generic-corrections/fallback-mapo-raemian-prugio-completion-305.glb",
+          "name": "마포래미안푸르지오 305동",
+          "nameKo": "마포래미안푸르지오 305동",
+          "district": "마포구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            27.61791229248047,
+            64.0,
+            28.792463302612305
+          ],
+          "measuredGlbDimensions": [
+            27.61791229248047,
+            64.0,
+            28.792463302612305
+          ],
+          "bounds": {
+            "min": [
+              94.71997833251953,
+              0.0,
+              31.018869400024414
+            ],
+            "max": [
+              122.337890625,
+              64.0,
+              59.81133270263672
+            ]
+          },
+          "triangles": 1411,
+          "drawCalls": 3,
+          "bytes": 84332,
+          "sha256": "6a0252491129b2cd0101a200dd58e90b418250579d577adf42307019afc00421",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.9506547,
+            "lat": 37.55524362932195,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "7481dff6-ce83-4ec3-b4ae-83dad1fe930f"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/DISTRICT_LANDMARK_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            126.95172801044393,
+            37.55470633304169,
+            126.95204096019566,
+            37.55496498155621
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a10023508",
+            "sourceSha256": "6f76c6a32419ff1285a51a6fec347a9a5bede78698fb994875fc9dedd4f6f958",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        }
+      ]
+    },
+    {
+      "sourceId": "apt-a10023565",
+      "sourceSha256": "dfe7563cb2ddf56c4b0af4f6bda208e006efba9ae84b9ee143e28914a7ea6fa9",
+      "sourceFootprintIds": [
+        "5e0ad961-d247-4dd4-aeb8-403ab87bf35f",
+        "37f5735b-8197-4f0b-942a-f8cdd430b9b0",
+        "2b7fcc7d-d863-47b3-8730-c337d1df1d34",
+        "e80e12ac-1644-449e-97af-f56ac32ce8b0",
+        "9250d4f3-c500-4055-9c30-61d3603c8f17",
+        "b86ce1af-6b14-4531-be5a-b535c09aca84",
+        "8cd94bf1-7171-4ec7-b1ed-bc30e5d91b0e",
+        "1bceaea4-eb23-4525-bbfc-d5e1fbb39a9c",
+        "3f7f066a-ea86-4510-9fd5-225a258492f5",
+        "41727668-074c-4d41-93c5-aac3d9dcb877",
+        "896e7444-8860-42ad-94bd-8b0e5ffeed34"
+      ],
+      "assets": [
+        {
+          "id": "apt-a10023565",
+          "model": "generic-corrections/apt-a10023565.glb",
+          "name": "대상 외 원천 건물 (기존 추정 모형)",
+          "nameKo": "대상 외 원천 건물 (기존 추정 모형)",
+          "district": "강남구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            160.58135986328125,
+            47.0,
+            144.1912384033203
+          ],
+          "measuredGlbDimensions": [
+            160.58135986328125,
+            47.0,
+            144.1912384033203
+          ],
+          "bounds": {
+            "min": [
+              -75.45831298828125,
+              0.0,
+              -32.844085693359375
+            ],
+            "max": [
+              85.12305450439453,
+              47.0,
+              111.34715270996094
+            ]
+          },
+          "triangles": 1374,
+          "drawCalls": 3,
+          "bytes": 87132,
+          "sha256": "83d156571cd7a19a970b037a4e877ee9ccc4346c386e131611f8e553b0e4e19f",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.05704494999999,
+            "lat": 37.47664875669389,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 8,
+          "footprintIds": [
+            "5e0ad961-d247-4dd4-aeb8-403ab87bf35f",
+            "37f5735b-8197-4f0b-942a-f8cdd430b9b0",
+            "e80e12ac-1644-449e-97af-f56ac32ce8b0",
+            "9250d4f3-c500-4055-9c30-61d3603c8f17",
+            "b86ce1af-6b14-4531-be5a-b535c09aca84",
+            "8cd94bf1-7171-4ec7-b1ed-bc30e5d91b0e",
+            "3f7f066a-ea86-4510-9fd5-225a258492f5",
+            "896e7444-8860-42ad-94bd-8b0e5ffeed34"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/APARTMENT_100_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": true,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.05619080133442,
+            37.47564850150885,
+            127.05800849848835,
+            37.47694379955319
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a10023565",
+            "sourceSha256": "dfe7563cb2ddf56c4b0af4f6bda208e006efba9ae84b9ee143e28914a7ea6fa9",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-gaepo-raemian-forest-completion-128",
+          "model": "generic-corrections/fallback-gaepo-raemian-forest-completion-128.glb",
+          "name": "개포래미안포레스트 128동",
+          "nameKo": "개포래미안포레스트 128동",
+          "district": "강남구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            18.295867919921875,
+            50.0,
+            42.51306915283203
+          ],
+          "measuredGlbDimensions": [
+            18.295867919921875,
+            50.0,
+            42.51306915283203
+          ],
+          "bounds": {
+            "min": [
+              -85.12305450439453,
+              0.0,
+              -65.1157455444336
+            ],
+            "max": [
+              -66.82718658447266,
+              50.0,
+              -22.60267448425293
+            ]
+          },
+          "triangles": 650,
+          "drawCalls": 3,
+          "bytes": 41192,
+          "sha256": "77d6be9f86cb8932f79281cc3203250dfc9878cf347d67ceed9d505af45042bc",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.05704494999999,
+            "lat": 37.47664875669389,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "1bceaea4-eb23-4525-bbfc-d5e1fbb39a9c"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/APARTMENT_100_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.05608140151163,
+            37.47685179969758,
+            127.05628850117435,
+            37.47723369909926
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a10023565",
+            "sourceSha256": "dfe7563cb2ddf56c4b0af4f6bda208e006efba9ae84b9ee143e28914a7ea6fa9",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-gaepo-raemian-forest-completion-129",
+          "model": "generic-corrections/fallback-gaepo-raemian-forest-completion-129.glb",
+          "name": "개포래미안포레스트 129동",
+          "nameKo": "개포래미안포레스트 129동",
+          "district": "강남구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            38.597129821777344,
+            67.0,
+            37.114280700683594
+          ],
+          "measuredGlbDimensions": [
+            38.597129821777344,
+            67.0,
+            37.114280700683594
+          ],
+          "bounds": {
+            "min": [
+              -68.49687194824219,
+              0.0,
+              -111.34715270996094
+            ],
+            "max": [
+              -29.899744033813477,
+              67.0,
+              -74.23287200927734
+            ]
+          },
+          "triangles": 845,
+          "drawCalls": 3,
+          "bytes": 53344,
+          "sha256": "7330b4b43a925def4d274f9cc2e26503306148d4907ca77f87cc97106d7e6d7b",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.05704494999999,
+            "lat": 37.47664875669389,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "41727668-074c-4d41-93c5-aac3d9dcb877"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/APARTMENT_100_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.05626960120867,
+            37.477315598953815,
+            127.0567065005243,
+            37.47764899849125
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a10023565",
+            "sourceSha256": "dfe7563cb2ddf56c4b0af4f6bda208e006efba9ae84b9ee143e28914a7ea6fa9",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-gaepo-raemian-forest-completion-130",
+          "model": "generic-corrections/fallback-gaepo-raemian-forest-completion-130.glb",
+          "name": "개포래미안포레스트 130동",
+          "nameKo": "개포래미안포레스트 130동",
+          "district": "강남구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            41.326934814453125,
+            58.0,
+            47.45568084716797
+          ],
+          "measuredGlbDimensions": [
+            41.326934814453125,
+            58.0,
+            47.45568084716797
+          ],
+          "bounds": {
+            "min": [
+              -34.290401458740234,
+              0.0,
+              -68.29950714111328
+            ],
+            "max": [
+              7.036533355712891,
+              58.0,
+              -20.84382438659668
+            ]
+          },
+          "triangles": 734,
+          "drawCalls": 3,
+          "bytes": 46372,
+          "sha256": "5670888d19e4874378a3f99e6bcaabb465a32817fcd264345616ddb2edefbc74",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.05704494999999,
+            "lat": 37.47664875669389,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "2b7fcc7d-d863-47b3-8730-c337d1df1d34"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/APARTMENT_100_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.05665680057697,
+            37.4768359997196,
+            127.05712459988001,
+            37.477262299086966
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a10023565",
+            "sourceSha256": "dfe7563cb2ddf56c4b0af4f6bda208e006efba9ae84b9ee143e28914a7ea6fa9",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        }
+      ]
+    },
+    {
+      "sourceId": "apt-a10025203",
+      "sourceSha256": "16e8c1856fcc314ae3f45e5434278cff1da744a8fb15f71313502fe2e6190735",
+      "sourceFootprintIds": [
+        "f9f552e3-47ad-4d22-b031-b2eb00a79ba1",
+        "01996bde-0e57-4d5d-9072-28931b2448bb",
+        "e0aeb8a6-1eee-4984-969b-773f8e328b7f",
+        "0d1b5ed6-6f9d-48c5-870a-a8c91377f76e",
+        "d137f5bd-94d3-478d-9c98-e0fbe08109d9"
+      ],
+      "assets": [
+        {
+          "id": "residual-five-completion-apt-a10025203",
+          "model": "generic-corrections/residual-five-completion-apt-a10025203.glb",
+          "name": "대상 외 원천 건물 (기존 추정 모형)",
+          "nameKo": "대상 외 원천 건물 (기존 추정 모형)",
+          "district": "강남구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            146.6771697998047,
+            66.44999694824219,
+            217.2611846923828
+          ],
+          "measuredGlbDimensions": [
+            146.6771697998047,
+            66.44999694824219,
+            217.2611846923828
+          ],
+          "bounds": {
+            "min": [
+              43.13307189941406,
+              0.0,
+              -200.47207641601562
+            ],
+            "max": [
+              189.81024169921875,
+              66.44999694824219,
+              16.78911018371582
+            ]
+          },
+          "triangles": 5309,
+          "drawCalls": 3,
+          "bytes": 314360,
+          "sha256": "60d1ef878647400e3789c3b00b672d1e9b4add09ec5f0c9052c1bcd91180d885",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.0675774,
+            "lat": 37.48405412170485,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 4,
+          "footprintIds": [
+            "f9f552e3-47ad-4d22-b031-b2eb00a79ba1",
+            "01996bde-0e57-4d5d-9072-28931b2448bb",
+            "e0aeb8a6-1eee-4984-969b-773f8e328b7f",
+            "d137f5bd-94d3-478d-9c98-e0fbe08109d9"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/APARTMENT_400_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": true,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.06806569222073,
+            37.483903302409786,
+            127.06972616567684,
+            37.48585497130341
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a10025203",
+            "sourceSha256": "16e8c1856fcc314ae3f45e5434278cff1da744a8fb15f71313502fe2e6190735",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-dh-honor-hills-completion-314",
+          "model": "generic-corrections/fallback-dh-honor-hills-completion-314.glb",
+          "name": "디에이치 아너힐즈 314동",
+          "nameKo": "디에이치 아너힐즈 314동",
+          "district": "강남구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            19.671798706054688,
+            64.0,
+            28.085113525390625
+          ],
+          "measuredGlbDimensions": [
+            19.671798706054688,
+            64.0,
+            28.085113525390625
+          ],
+          "bounds": {
+            "min": [
+              115.83123779296875,
+              0.0,
+              87.93181610107422
+            ],
+            "max": [
+              135.50303649902344,
+              64.0,
+              116.01692962646484
+            ]
+          },
+          "triangles": 302,
+          "drawCalls": 3,
+          "bytes": 20744,
+          "sha256": "4808822156fc1170d6a1478f56be2a2ff29abe789e6bc2ae0a9f116f22adb559",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.0675774,
+            "lat": 37.48405412170485,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "0d1b5ed6-6f9d-48c5-870a-a8c91377f76e"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/APARTMENT_400_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.06888867902187,
+            37.483011916624825,
+            127.06911137557124,
+            37.48326421258554
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a10025203",
+            "sourceSha256": "16e8c1856fcc314ae3f45e5434278cff1da744a8fb15f71313502fe2e6190735",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        }
+      ],
+      "kind": "repartition"
+    },
+    {
+      "sourceId": "apt-a10025675",
+      "sourceSha256": "db75d83a04aa09c72aab69314adea7d234b40d01c8acc43aaa77be70ea89990d",
+      "sourceFootprintIds": [
+        "0e5c65ff-d5da-4c7a-bffd-fa6b92e5403a",
+        "2acd0fd6-44dc-42c4-a6b1-f6a3c3fca58b",
+        "b3724eb6-8655-4a74-a8d6-2a3f399d341e",
+        "a828d221-3674-490d-83c8-ce3556d75fa5",
+        "84cdd5f0-9d5d-4b94-ae0c-1923be602c8e"
+      ],
+      "assets": [
+        {
+          "id": "residual-five-completion-apt-a10025675",
+          "model": "generic-corrections/residual-five-completion-apt-a10025675.glb",
+          "name": "대상 외 원천 건물 (기존 추정 모형)",
+          "nameKo": "대상 외 원천 건물 (기존 추정 모형)",
+          "district": "강남구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            109.00183868408203,
+            47.80875015258789,
+            102.75846862792969
+          ],
+          "measuredGlbDimensions": [
+            109.00183868408203,
+            47.80875015258789,
+            102.75846862792969
+          ],
+          "bounds": {
+            "min": [
+              -155.03102111816406,
+              0.0,
+              90.7894287109375
+            ],
+            "max": [
+              -46.02918243408203,
+              47.80875015258789,
+              193.5478973388672
+            ]
+          },
+          "triangles": 2112,
+          "drawCalls": 3,
+          "bytes": 129084,
+          "sha256": "086458fe893ba951852bb5cd075c138988bc8c32e209e8d4e634a76b266085e6",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.06454034999999,
+            "lat": 37.480922670227976,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 3,
+          "footprintIds": [
+            "b3724eb6-8655-4a74-a8d6-2a3f399d341e",
+            "a828d221-3674-490d-83c8-ce3556d75fa5",
+            "84cdd5f0-9d5d-4b94-ae0c-1923be602c8e"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": true,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.06278537949524,
+            37.47918397965574,
+            127.06401929391104,
+            37.4801070904625
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a10025675",
+            "sourceSha256": "db75d83a04aa09c72aab69314adea7d234b40d01c8acc43aaa77be70ea89990d",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-raemian-blesstige-completion-201",
+          "model": "generic-corrections/fallback-raemian-blesstige-completion-201.glb",
+          "name": "래미안블레스티지 201동",
+          "nameKo": "래미안블레스티지 201동",
+          "district": "강남구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            139.19619750976562,
+            51.0,
+            142.01272583007812
+          ],
+          "measuredGlbDimensions": [
+            139.19619750976562,
+            51.0,
+            142.01272583007812
+          ],
+          "bounds": {
+            "min": [
+              -235.1282501220703,
+              0.0,
+              -117.2917251586914
+            ],
+            "max": [
+              -95.93204498291016,
+              51.0,
+              24.720996856689453
+            ]
+          },
+          "triangles": 596,
+          "drawCalls": 3,
+          "bytes": 40080,
+          "sha256": "554b228728d262c23599fd1131894e2b401066effe2b97864493be327400e8d2",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.06454034999999,
+            "lat": 37.480922670227976,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "2acd0fd6-44dc-42c4-a6b1-f6a3c3fca58b"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.06187866886792,
+            37.48070059740481,
+            127.06345438727982,
+            37.48197631229323
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a10025675",
+            "sourceSha256": "db75d83a04aa09c72aab69314adea7d234b40d01c8acc43aaa77be70ea89990d",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-raemian-blesstige-completion-219",
+          "model": "generic-corrections/fallback-raemian-blesstige-completion-219.glb",
+          "name": "래미안블레스티지 219동",
+          "nameKo": "래미안블레스티지 219동",
+          "district": "강남구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            51.40462875366211,
+            54.0,
+            51.27394104003906
+          ],
+          "measuredGlbDimensions": [
+            51.40462875366211,
+            54.0,
+            51.27394104003906
+          ],
+          "bounds": {
+            "min": [
+              -16.84188461303711,
+              0.0,
+              42.63243865966797
+            ],
+            "max": [
+              34.562744140625,
+              54.0,
+              93.90637969970703
+            ]
+          },
+          "triangles": 532,
+          "drawCalls": 3,
+          "bytes": 36104,
+          "sha256": "30d5f8dd3c240bed83e9e3d007ba345903d008ba06e6a85f74f8c6032618ae35",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.06454034999999,
+            "lat": 37.480922670227976,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "0e5c65ff-d5da-4c7a-bffd-fa6b92e5403a"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.06434969776454,
+            37.480079090104546,
+            127.0649316045766,
+            37.480539695534056
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a10025675",
+            "sourceSha256": "db75d83a04aa09c72aab69314adea7d234b40d01c8acc43aaa77be70ea89990d",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        }
+      ],
+      "kind": "repartition"
+    },
+    {
+      "sourceId": "apt-a12170601",
+      "sourceSha256": "caef5aa8dac87bfd6403c767a5fb9472562bde5e6cbdd8e1d6802080475943ea",
+      "sourceFootprintIds": [
+        "a467dd7f-2944-4610-80a3-1fefcac4933d",
+        "af274e5d-f054-49af-a086-5acdc8fc46cb",
+        "fb2cb196-9d24-4545-b68f-fee9a7b07a09",
+        "d95c2d37-76ff-470a-aea2-6bce357eb60b",
+        "da07f95d-2f97-43aa-be89-3e84436e0a29",
+        "4f32e59a-3428-46ad-81ab-77182c10da35",
+        "fa969284-8e17-42b3-a0ed-44e7ef192d66",
+        "3b681e21-6220-4d77-a25a-e037651438ba",
+        "3ec05c52-a0c6-4085-9a78-d20daa0be970",
+        "5dde175d-2623-4ac1-b001-9ef789c23cd2",
+        "43e845f9-61d2-45be-aff9-01eb3c707208",
+        "7526beca-3594-47ae-bb07-0fb31852b80a"
+      ],
+      "assets": [
+        {
+          "id": "apt-a12170601",
+          "model": "generic-corrections/apt-a12170601.glb",
+          "name": "대상 외 원천 건물 (기존 추정 모형)",
+          "nameKo": "대상 외 원천 건물 (기존 추정 모형)",
+          "district": "마포구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            199.70535278320312,
+            57.0,
+            253.53024291992188
+          ],
+          "measuredGlbDimensions": [
+            199.70535278320312,
+            57.0,
+            253.53024291992188
+          ],
+          "bounds": {
+            "min": [
+              -154.44775390625,
+              0.0,
+              -121.47735595703125
+            ],
+            "max": [
+              45.257606506347656,
+              57.0,
+              132.05288696289062
+            ]
+          },
+          "triangles": 3972,
+          "drawCalls": 3,
+          "bytes": 246372,
+          "sha256": "752a4238aa1234f5c0b9f893cf71fccafccade77dd9ec3ad81d3bbbd6f11fccf",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.9516085,
+            "lat": 37.55063125944007,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://www.k-apt.go.kr/kaptinfo/openKaptLocation.do",
+          "sources": [
+            {
+              "url": "https://www.k-apt.go.kr/kaptinfo/openKaptLocation.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 11,
+          "footprintIds": [
+            "a467dd7f-2944-4610-80a3-1fefcac4933d",
+            "af274e5d-f054-49af-a086-5acdc8fc46cb",
+            "fb2cb196-9d24-4545-b68f-fee9a7b07a09",
+            "d95c2d37-76ff-470a-aea2-6bce357eb60b",
+            "da07f95d-2f97-43aa-be89-3e84436e0a29",
+            "4f32e59a-3428-46ad-81ab-77182c10da35",
+            "fa969284-8e17-42b3-a0ed-44e7ef192d66",
+            "3b681e21-6220-4d77-a25a-e037651438ba",
+            "3ec05c52-a0c6-4085-9a78-d20daa0be970",
+            "5dde175d-2623-4ac1-b001-9ef789c23cd2",
+            "43e845f9-61d2-45be-aff9-01eb3c707208"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/APARTMENT_100_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": true,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            126.94985849824535,
+            37.5494449987333,
+            126.95212130053478,
+            37.55172250110674
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a12170601",
+            "sourceSha256": "caef5aa8dac87bfd6403c767a5fb9472562bde5e6cbdd8e1d6802080475943ea",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-mapo-raemian-prugio-completion-413",
+          "model": "generic-corrections/fallback-mapo-raemian-prugio-completion-413.glb",
+          "name": "마포래미안푸르지오 413동",
+          "nameKo": "마포래미안푸르지오 413동",
+          "district": "마포구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            49.05260467529297,
+            75.0,
+            32.027099609375
+          ],
+          "measuredGlbDimensions": [
+            49.05260467529297,
+            75.0,
+            32.027099609375
+          ],
+          "bounds": {
+            "min": [
+              105.39514923095703,
+              0.0,
+              -132.05288696289062
+            ],
+            "max": [
+              154.44775390625,
+              75.0,
+              -100.02578735351562
+            ]
+          },
+          "triangles": 1597,
+          "drawCalls": 3,
+          "bytes": 93536,
+          "sha256": "11edead2b937b20d5caa1b5c050927409af53abf8f82e98391e3d153243d9293",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.9516085,
+            "lat": 37.55063125944007,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://www.k-apt.go.kr/kaptinfo/openKaptLocation.do",
+          "sources": [
+            {
+              "url": "https://www.k-apt.go.kr/kaptinfo/openKaptLocation.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "7526beca-3594-47ae-bb07-0fb31852b80a"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/APARTMENT_100_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            126.95280270121965,
+            37.55152980095959,
+            126.95335850175466,
+            37.551817501266655
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a12170601",
+            "sourceSha256": "caef5aa8dac87bfd6403c767a5fb9472562bde5e6cbdd8e1d6802080475943ea",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        }
+      ]
+    },
+    {
+      "sourceId": "apt-a12170603",
+      "sourceSha256": "0fb98b44d2bfb3af147108a2327db6a4c9553d47cd390b0f17f8bbce299c88ed",
+      "sourceFootprintIds": [
+        "7a213013-b001-4a04-9816-485eb1559033",
+        "7f63961c-ee23-45ef-8956-dc3143ec6d7b",
+        "88eaef09-dfb8-4027-ba54-a82975446acb",
+        "36cbdcd0-d0d8-43ac-9616-223e3f92b7e1",
+        "239911c1-988d-4e7d-aa5d-6e79665dd907",
+        "3a8dae1f-04bf-47b7-b231-9f5670fbab30",
+        "424c91b8-92d6-471d-8d8b-4db24f6d7aef",
+        "73ced547-a570-499b-980a-604b57aa052b",
+        "35e20d6a-f4dc-4bd5-9009-9e33cf373a84",
+        "346fcc76-44b7-45e4-baaf-15c80a7cda56",
+        "acd7f545-7cd4-44d2-888b-a324ab90fcb3",
+        "fe8ca385-90b4-4c70-a53b-1dcaf4ebac85"
+      ],
+      "assets": [
+        {
+          "id": "apt-a12170603",
+          "model": "generic-corrections/apt-a12170603.glb",
+          "name": "대상 외 원천 건물 (기존 추정 모형)",
+          "nameKo": "대상 외 원천 건물 (기존 추정 모형)",
+          "district": "마포구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            270.2650451660156,
+            76.0,
+            309.80072021484375
+          ],
+          "measuredGlbDimensions": [
+            270.2650451660156,
+            76.0,
+            309.80072021484375
+          ],
+          "bounds": {
+            "min": [
+              -135.1325225830078,
+              0.0,
+              -154.90036010742188
+            ],
+            "max": [
+              135.1325225830078,
+              76.0,
+              154.90036010742188
+            ]
+          },
+          "triangles": 5442,
+          "drawCalls": 3,
+          "bytes": 329836,
+          "sha256": "c50bd9a7a67166b83fb9062973634a7d39a5965798cbef1e8d18914f0e14c4b0",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.95317935,
+            "lat": 37.55045721298931,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 11,
+          "footprintIds": [
+            "7a213013-b001-4a04-9816-485eb1559033",
+            "7f63961c-ee23-45ef-8956-dc3143ec6d7b",
+            "88eaef09-dfb8-4027-ba54-a82975446acb",
+            "36cbdcd0-d0d8-43ac-9616-223e3f92b7e1",
+            "239911c1-988d-4e7d-aa5d-6e79665dd907",
+            "3a8dae1f-04bf-47b7-b231-9f5670fbab30",
+            "424c91b8-92d6-471d-8d8b-4db24f6d7aef",
+            "73ced547-a570-499b-980a-604b57aa052b",
+            "35e20d6a-f4dc-4bd5-9009-9e33cf373a84",
+            "acd7f545-7cd4-44d2-888b-a324ab90fcb3",
+            "fe8ca385-90b4-4c70-a53b-1dcaf4ebac85"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": true,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            126.95164820698608,
+            37.549065706390174,
+            126.95471049301392,
+            37.55184869361008
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a12170603",
+            "sourceSha256": "0fb98b44d2bfb3af147108a2327db6a4c9553d47cd390b0f17f8bbce299c88ed",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-mapo-raemian-prugio-completion-414",
+          "model": "generic-corrections/fallback-mapo-raemian-prugio-completion-414.glb",
+          "name": "마포래미안푸르지오 414동",
+          "nameKo": "마포래미안푸르지오 414동",
+          "district": "마포구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            18.3924617767334,
+            35.0,
+            22.353103637695312
+          ],
+          "measuredGlbDimensions": [
+            18.3924617767334,
+            35.0,
+            22.353103637695312
+          ],
+          "bounds": {
+            "min": [
+              -6.817742824554443,
+              0.0,
+              -105.02867889404297
+            ],
+            "max": [
+              11.574718475341797,
+              35.0,
+              -82.67557525634766
+            ]
+          },
+          "triangles": 376,
+          "drawCalls": 3,
+          "bytes": 24784,
+          "sha256": "5ab89916eb04cf150df7197dca45d320131bdc79d45552150f17aa3af2456737",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.95317935,
+            "lat": 37.55045721298931,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "346fcc76-44b7-45e4-baaf-15c80a7cda56"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            126.95310210035575,
+            37.55119989661782,
+            126.95331049940054,
+            37.55140069569287
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a12170603",
+            "sourceSha256": "0fb98b44d2bfb3af147108a2327db6a4c9553d47cd390b0f17f8bbce299c88ed",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        }
+      ]
+    },
+    {
+      "sourceId": "apt-a13480403",
+      "sourceSha256": "117d8aa084f6abaeb1994e79d8d1e47536d7f8c3d2993d3da1efc445c65f05d4",
+      "sourceFootprintIds": [
+        "3a5772c0-eab2-4ff2-8a0b-35dc81168f10",
+        "a33f1d99-bf26-4414-a52e-f46ce21efd79",
+        "3b9ca8a4-bba4-4e2f-a240-7b14199c4bb8",
+        "3f02a046-763f-4d1f-8a1c-299c631ee5e0",
+        "1eccac8b-a0e9-4a7f-bd39-1cbd4a9edb30",
+        "82503891-8463-42c2-ae15-10231a234a6e",
+        "40688795-6d24-48a2-9640-9212daecda3b",
+        "09ae301f-4584-4add-8200-68850f5b5fe6",
+        "3ffe40f2-09c0-496d-b669-1c588be9484d",
+        "05fec66f-fc8b-4bf3-a2ae-94995d43bda1",
+        "f5e974e8-9370-436a-9e54-b84fd84cd399"
+      ],
+      "assets": [
+        {
+          "id": "apt-a13480403",
+          "model": "generic-corrections/apt-a13480403.glb",
+          "name": "대상 외 원천 건물 (기존 추정 모형)",
+          "nameKo": "대상 외 원천 건물 (기존 추정 모형)",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            141.54837036132812,
+            60.349998474121094,
+            160.48953247070312
+          ],
+          "measuredGlbDimensions": [
+            141.54837036132812,
+            60.349998474121094,
+            160.48953247070312
+          ],
+          "bounds": {
+            "min": [
+              -112.44889068603516,
+              0.0,
+              -61.42595672607422
+            ],
+            "max": [
+              29.0994873046875,
+              60.349998474121094,
+              99.06358337402344
+            ]
+          },
+          "triangles": 3521,
+          "drawCalls": 3,
+          "bytes": 218936,
+          "sha256": "838a370e8c4c4adf07622b8d16783c2ac4aad3d5cc7dc2c397b3dc941379b068",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.14668165,
+            "lat": 37.558213105314,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 6,
+          "footprintIds": [
+            "3a5772c0-eab2-4ff2-8a0b-35dc81168f10",
+            "a33f1d99-bf26-4414-a52e-f46ce21efd79",
+            "3f02a046-763f-4d1f-8a1c-299c631ee5e0",
+            "82503891-8463-42c2-ae15-10231a234a6e",
+            "40688795-6d24-48a2-9640-9212daecda3b",
+            "05fec66f-fc8b-4bf3-a2ae-94995d43bda1"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/APARTMENT_400_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": true,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.14540739529055,
+            37.5573231966895,
+            127.14701140121866,
+            37.558764902028514
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13480403",
+            "sourceSha256": "117d8aa084f6abaeb1994e79d8d1e47536d7f8c3d2993d3da1efc445c65f05d4",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-godeok-raemian-hillstate-completion-207",
+          "model": "generic-corrections/fallback-godeok-raemian-hillstate-completion-207.glb",
+          "name": "고덕래미안힐스테이트 207동",
+          "nameKo": "고덕래미안힐스테이트 207동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            34.85761260986328,
+            99.0,
+            42.936248779296875
+          ],
+          "measuredGlbDimensions": [
+            34.85761260986328,
+            99.0,
+            42.936248779296875
+          ],
+          "bounds": {
+            "min": [
+              77.59127807617188,
+              0.0,
+              -53.06577682495117
+            ],
+            "max": [
+              112.44889068603516,
+              99.0,
+              -10.129526138305664
+            ]
+          },
+          "triangles": 565,
+          "drawCalls": 3,
+          "bytes": 36976,
+          "sha256": "53c84ffd5f5148401869bc2cd531a842d417ec2bf77078136215eae634c84058",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.14668165,
+            "lat": 37.558213105314,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "3ffe40f2-09c0-496d-b669-1c588be9484d"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/APARTMENT_400_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.14756090324028,
+            37.55830410033995,
+            127.14795590470946,
+            37.55868980177301
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13480403",
+            "sourceSha256": "117d8aa084f6abaeb1994e79d8d1e47536d7f8c3d2993d3da1efc445c65f05d4",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-godeok-raemian-hillstate-completion-208",
+          "model": "generic-corrections/fallback-godeok-raemian-hillstate-completion-208.glb",
+          "name": "고덕래미안힐스테이트 208동",
+          "nameKo": "고덕래미안힐스테이트 208동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            34.85761260986328,
+            105.0,
+            42.925357818603516
+          ],
+          "measuredGlbDimensions": [
+            34.85761260986328,
+            105.0,
+            42.925357818603516
+          ],
+          "bounds": {
+            "min": [
+              25.393108367919922,
+              0.0,
+              -99.06358337402344
+            ],
+            "max": [
+              60.2507209777832,
+              105.0,
+              -56.13822555541992
+            ]
+          },
+          "triangles": 591,
+          "drawCalls": 3,
+          "bytes": 38592,
+          "sha256": "9a5d13084107fba718ca371bfca92b76c6c7adfe08f7c55994d4d7ebf3fab449",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.14668165,
+            "lat": 37.558213105314,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "f5e974e8-9370-436a-9e54-b84fd84cd399"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/APARTMENT_400_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.14696940106387,
+            37.55871740186786,
+            127.14736440253304,
+            37.55910300331037
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13480403",
+            "sourceSha256": "117d8aa084f6abaeb1994e79d8d1e47536d7f8c3d2993d3da1efc445c65f05d4",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-godeok-raemian-hillstate-completion-213",
+          "model": "generic-corrections/fallback-godeok-raemian-hillstate-completion-213.glb",
+          "name": "고덕래미안힐스테이트 213동",
+          "nameKo": "고덕래미안힐스테이트 213동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            27.60369873046875,
+            56.0,
+            28.83205795288086
+          ],
+          "measuredGlbDimensions": [
+            27.60369873046875,
+            56.0,
+            28.83205795288086
+          ],
+          "bounds": {
+            "min": [
+              -31.19094467163086,
+              0.0,
+              -73.18143463134766
+            ],
+            "max": [
+              -3.587245464324951,
+              56.0,
+              -44.3493766784668
+            ]
+          },
+          "triangles": 292,
+          "drawCalls": 3,
+          "bytes": 21236,
+          "sha256": "56fdf32bbb0d9ff62d7c02c1cbd940162e59b12601eee4233f35637ecba4bb5f",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.14668165,
+            "lat": 37.558213105314,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "09ae301f-4584-4add-8200-68850f5b5fe6"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/APARTMENT_400_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.14632819868628,
+            37.55861150147806,
+            127.14664099984864,
+            37.55887050242644
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13480403",
+            "sourceSha256": "117d8aa084f6abaeb1994e79d8d1e47536d7f8c3d2993d3da1efc445c65f05d4",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-godeok-raemian-hillstate-completion-214",
+          "model": "generic-corrections/fallback-godeok-raemian-hillstate-completion-214.glb",
+          "name": "고덕래미안힐스테이트 214동",
+          "nameKo": "고덕래미안힐스테이트 214동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            35.54594039916992,
+            53.0,
+            38.60586929321289
+          ],
+          "measuredGlbDimensions": [
+            35.54594039916992,
+            53.0,
+            38.60586929321289
+          ],
+          "bounds": {
+            "min": [
+              13.8239107131958,
+              0.0,
+              -46.23069381713867
+            ],
+            "max": [
+              49.369850158691406,
+              53.0,
+              -7.624825477600098
+            ]
+          },
+          "triangles": 340,
+          "drawCalls": 3,
+          "bytes": 24208,
+          "sha256": "7e2f596a12aa53c396ffe35cfd022ddd25041fd018a35311c8184c8a44dbb9d8",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.14668165,
+            "lat": 37.558213105314,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "3b9ca8a4-bba4-4e2f-a240-7b14199c4bb8"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/APARTMENT_400_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.14683830057452,
+            37.55828160025517,
+            127.14724110206473,
+            37.55862840154518
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13480403",
+            "sourceSha256": "117d8aa084f6abaeb1994e79d8d1e47536d7f8c3d2993d3da1efc445c65f05d4",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-godeok-raemian-hillstate-completion-215",
+          "model": "generic-corrections/fallback-godeok-raemian-hillstate-completion-215.glb",
+          "name": "고덕래미안힐스테이트 215동",
+          "nameKo": "고덕래미안힐스테이트 215동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            35.55476379394531,
+            53.0,
+            38.59455490112305
+          ],
+          "measuredGlbDimensions": [
+            35.55476379394531,
+            53.0,
+            38.59455490112305
+          ],
+          "bounds": {
+            "min": [
+              57.029701232910156,
+              0.0,
+              -7.658221244812012
+            ],
+            "max": [
+              92.58446502685547,
+              53.0,
+              30.93633460998535
+            ]
+          },
+          "triangles": 340,
+          "drawCalls": 3,
+          "bytes": 24208,
+          "sha256": "1cbd1763c4a569468fcebcb9a13fa9824c99db016674f0b66cde820d830def05",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.14668165,
+            "lat": 37.558213105314,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "1eccac8b-a0e9-4a7f-bd39-1cbd4a9edb30"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/APARTMENT_400_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.14732790239904,
+            37.557935198973624,
+            127.1477308038855,
+            37.55828190025417
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13480403",
+            "sourceSha256": "117d8aa084f6abaeb1994e79d8d1e47536d7f8c3d2993d3da1efc445c65f05d4",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        }
+      ]
+    },
+    {
+      "sourceId": "apt-a10024562",
+      "sourceSha256": "c1cb0ac36b27eec054c64101873bf81965e606b2276ac2e78109c369180d1378",
+      "sourceFootprintIds": [
+        "a3e917e7-0d44-4c8a-84fe-b266ede5143a",
+        "a5c6ede6-8ac6-4a92-be05-3bc7043bb8e7",
+        "7c748296-4ae2-4664-80cb-28696a4069ae"
+      ],
+      "assets": [
+        {
+          "id": "residual-three-completion-apt-a10024562",
+          "model": "generic-corrections/residual-three-completion-apt-a10024562.glb",
+          "name": "대상 외 원천 건물 (기존 추정 모형)",
+          "nameKo": "대상 외 원천 건물 (기존 추정 모형)",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            66.70026397705078,
+            111.0,
+            41.623172760009766
+          ],
+          "measuredGlbDimensions": [
+            66.70026397705078,
+            111.0,
+            41.623172760009766
+          ],
+          "bounds": {
+            "min": [
+              -83.84646606445312,
+              0.0,
+              -80.08352661132812
+            ],
+            "max": [
+              -17.146203994750977,
+              111.0,
+              -38.46035385131836
+            ]
+          },
+          "triangles": 856,
+          "drawCalls": 3,
+          "bytes": 54768,
+          "sha256": "4cf6391d7b748db9f603b505d9a094301d60072bfbb6298a0555b7627f521621",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.17009548033376,
+            "lat": 37.5573276038239,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "a3e917e7-0d44-4c8a-84fe-b266ede5143a"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/APARTMENT_400_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": true,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.16914535549101,
+            37.55767309825989,
+            127.16990118431701,
+            37.55804700291078
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a10024562",
+            "sourceSha256": "c1cb0ac36b27eec054c64101873bf81965e606b2276ac2e78109c369180d1378",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-godeok-arteon-completion-329",
+          "model": "generic-corrections/fallback-godeok-arteon-completion-329.glb",
+          "name": "고덕아르테온 329동",
+          "nameKo": "고덕아르테온 329동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            54.72182083129883,
+            66.0,
+            27.963184356689453
+          ],
+          "measuredGlbDimensions": [
+            54.72182083129883,
+            66.0,
+            27.963184356689453
+          ],
+          "bounds": {
+            "min": [
+              29.124645233154297,
+              0.0,
+              47.4031867980957
+            ],
+            "max": [
+              83.84646606445312,
+              66.0,
+              75.36637115478516
+            ]
+          },
+          "triangles": 1918,
+          "drawCalls": 3,
+          "bytes": 114184,
+          "sha256": "0104d49118bf9b0ba46d838d1c569ab1a29f9483b523a79f17d7449d1e7ed241",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.17009548033376,
+            "lat": 37.5573276038239,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "7c748296-4ae2-4664-80cb-28696a4069ae"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/APARTMENT_400_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.1704255127164,
+            37.55665057311706,
+            127.1710456051765,
+            37.55690177253499
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a10024562",
+            "sourceSha256": "c1cb0ac36b27eec054c64101873bf81965e606b2276ac2e78109c369180d1378",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-godeok-arteon-completion-330",
+          "model": "generic-corrections/fallback-godeok-arteon-completion-330.glb",
+          "name": "고덕아르테온 330동",
+          "nameKo": "고덕아르테온 330동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            46.07396697998047,
+            66.0,
+            36.66816329956055
+          ],
+          "measuredGlbDimensions": [
+            46.07396697998047,
+            66.0,
+            36.66816329956055
+          ],
+          "bounds": {
+            "min": [
+              -20.49813461303711,
+              0.0,
+              47.36649703979492
+            ],
+            "max": [
+              25.575830459594727,
+              66.0,
+              84.03466033935547
+            ]
+          },
+          "triangles": 1205,
+          "drawCalls": 3,
+          "bytes": 73860,
+          "sha256": "dd8a051348e677f81300357ce99728595d059ffa3417a90df82be6881afe9fe5",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.17009548033376,
+            "lat": 37.5573276038239,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "a5c6ede6-8ac6-4a92-be05-3bc7043bb8e7"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/APARTMENT_400_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.16986320117114,
+            37.55657270380226,
+            127.17038529853403,
+            37.556902102126564
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a10024562",
+            "sourceSha256": "c1cb0ac36b27eec054c64101873bf81965e606b2276ac2e78109c369180d1378",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        }
+      ],
+      "kind": "repartition"
+    },
+    {
+      "sourceId": "apt-a10025263",
+      "sourceSha256": "a5666c0701b884271bdd906134343e168ce468693692a7d11283d76bc2d8bc35",
+      "sourceFootprintIds": [
+        "ec8d3953-9e30-4fda-a942-d306ed4bf4d7",
+        "6ae8aa41-b3c9-46f8-9f37-165b140c9dd2",
+        "e4b18c4a-fad6-4973-a5ae-461a1c7bddb1",
+        "dcb4048f-c9d5-4dd3-8bcf-cd50bd488a9e",
+        "02717c2a-e059-4df3-9cb5-b57094874ab2",
+        "da89c001-3fa2-4026-ac6c-d680e9a0b7a6",
+        "dff399a6-5c8b-48a0-9feb-e520ee12fd0d",
+        "bb2ebbce-1144-47c9-81f8-3a89834b1de6",
+        "c2f0dca2-be87-4f11-9dfe-4813c203636c",
+        "b05f0e03-58d0-4e54-981b-1a6a980a7920",
+        "516c21c2-129a-4399-aa90-f67c530bef7c",
+        "ee02cfa0-4158-48ff-a562-697e975adbdc",
+        "aac48593-565d-4faa-93d8-3d7d26cbf0b9",
+        "b049cc77-8f0d-488f-8313-b1c4c236c9bd",
+        "6b3a312d-bd46-467b-913d-af0723f8bd61",
+        "3b733a5c-2f6e-43d2-b347-51c30e3afd8f",
+        "f8a51527-8124-4810-aa77-bac864f659f5",
+        "c499310d-ae13-4911-8338-3f816a1ee78e",
+        "ddb22d27-b24c-4733-8e75-f7589de2879d",
+        "e58214b9-1dfa-413e-801e-d6aa37bafe25",
+        "a6ac52e7-8f10-43ad-ab22-957edbd331c6",
+        "803f06d0-4ef1-4d60-aadf-d21253cd50e0",
+        "88156329-491e-44f7-a496-12114ae03bff",
+        "597f89b7-fdbc-4e28-828a-8469c494d22f",
+        "8cd9355e-ea56-41e1-9917-a416b5ddea80",
+        "2aa796bb-5dab-4a1e-9f70-64830e4f61ba",
+        "625b73ac-7045-4573-b8f0-364f818a1482",
+        "80c273d9-67b9-4f22-a06c-b3cf5de39faf",
+        "9e2206b1-1588-4be6-9c1c-99aedc88a3a9",
+        "3e1baf87-9f5b-470a-a4d7-fd23e54203c3",
+        "25c48aaa-e7f7-4492-bc19-37ad01d9fe5a",
+        "11b9607a-7c43-4a2e-a075-b0bc7c6d5a2d",
+        "9f1c9731-4528-4918-a760-b03d75f70c0b",
+        "6fe9ade0-d64b-4987-bed9-d3d98225fbe9",
+        "062a3518-cc0c-48b4-864d-0b5131cb94eb",
+        "0de10996-4a87-4c8e-ab48-d3049affd50f",
+        "48d59ef1-ca30-407b-8a42-0ff32fb15436",
+        "9d9da1aa-ca33-4a3d-94e8-fbe7dc53a075",
+        "9ed60f83-54fd-403f-969b-9f4cb0430ff6",
+        "4402791d-8c52-419a-8bd9-3e78662cb873",
+        "158294ca-97f7-4244-ace7-a0f8ab07058d",
+        "adc3f248-4926-4aa1-a00e-e77b2e3bb79f"
+      ],
+      "assets": [
+        {
+          "id": "residual-three-completion-apt-a10025263",
+          "model": "generic-corrections/residual-three-completion-apt-a10025263.glb",
+          "name": "대상 외 원천 건물 (기존 추정 모형)",
+          "nameKo": "대상 외 원천 건물 (기존 추정 모형)",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            844.8350830078125,
+            106.0,
+            459.68316650390625
+          ],
+          "measuredGlbDimensions": [
+            844.8350830078125,
+            106.0,
+            459.68316650390625
+          ],
+          "bounds": {
+            "min": [
+              -422.41754150390625,
+              0.0,
+              -243.4169464111328
+            ],
+            "max": [
+              422.41754150390625,
+              106.0,
+              216.2662353515625
+            ]
+          },
+          "triangles": 27398,
+          "drawCalls": 3,
+          "bytes": 1631488,
+          "sha256": "6f3c9efa6f0383609f43bd2e496de52fb16ecbfb723f6aa044f1ab97316abb53",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.16380484427178,
+            "lat": 37.55793973208305,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 40,
+          "footprintIds": [
+            "ec8d3953-9e30-4fda-a942-d306ed4bf4d7",
+            "6ae8aa41-b3c9-46f8-9f37-165b140c9dd2",
+            "e4b18c4a-fad6-4973-a5ae-461a1c7bddb1",
+            "dcb4048f-c9d5-4dd3-8bcf-cd50bd488a9e",
+            "02717c2a-e059-4df3-9cb5-b57094874ab2",
+            "da89c001-3fa2-4026-ac6c-d680e9a0b7a6",
+            "dff399a6-5c8b-48a0-9feb-e520ee12fd0d",
+            "bb2ebbce-1144-47c9-81f8-3a89834b1de6",
+            "c2f0dca2-be87-4f11-9dfe-4813c203636c",
+            "b05f0e03-58d0-4e54-981b-1a6a980a7920",
+            "516c21c2-129a-4399-aa90-f67c530bef7c",
+            "ee02cfa0-4158-48ff-a562-697e975adbdc",
+            "aac48593-565d-4faa-93d8-3d7d26cbf0b9",
+            "b049cc77-8f0d-488f-8313-b1c4c236c9bd",
+            "6b3a312d-bd46-467b-913d-af0723f8bd61",
+            "3b733a5c-2f6e-43d2-b347-51c30e3afd8f",
+            "f8a51527-8124-4810-aa77-bac864f659f5",
+            "c499310d-ae13-4911-8338-3f816a1ee78e",
+            "ddb22d27-b24c-4733-8e75-f7589de2879d",
+            "e58214b9-1dfa-413e-801e-d6aa37bafe25",
+            "a6ac52e7-8f10-43ad-ab22-957edbd331c6",
+            "803f06d0-4ef1-4d60-aadf-d21253cd50e0",
+            "88156329-491e-44f7-a496-12114ae03bff",
+            "597f89b7-fdbc-4e28-828a-8469c494d22f",
+            "8cd9355e-ea56-41e1-9917-a416b5ddea80",
+            "2aa796bb-5dab-4a1e-9f70-64830e4f61ba",
+            "625b73ac-7045-4573-b8f0-364f818a1482",
+            "80c273d9-67b9-4f22-a06c-b3cf5de39faf",
+            "9e2206b1-1588-4be6-9c1c-99aedc88a3a9",
+            "11b9607a-7c43-4a2e-a075-b0bc7c6d5a2d",
+            "9f1c9731-4528-4918-a760-b03d75f70c0b",
+            "6fe9ade0-d64b-4987-bed9-d3d98225fbe9",
+            "062a3518-cc0c-48b4-864d-0b5131cb94eb",
+            "0de10996-4a87-4c8e-ab48-d3049affd50f",
+            "48d59ef1-ca30-407b-8a42-0ff32fb15436",
+            "9d9da1aa-ca33-4a3d-94e8-fbe7dc53a075",
+            "9ed60f83-54fd-403f-969b-9f4cb0430ff6",
+            "4402791d-8c52-419a-8bd9-3e78662cb873",
+            "158294ca-97f7-4244-ace7-a0f8ab07058d",
+            "adc3f248-4926-4aa1-a00e-e77b2e3bb79f"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/DISTRICT_LANDMARK_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": true,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.15901808680769,
+            37.55599695411033,
+            127.16859160173587,
+            37.560126351632015
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a10025263",
+            "sourceSha256": "a5666c0701b884271bdd906134343e168ce468693692a7d11283d76bc2d8bc35",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-godeok-arteon-completion-340",
+          "model": "generic-corrections/fallback-godeok-arteon-completion-340.glb",
+          "name": "고덕아르테온 340동",
+          "nameKo": "고덕아르테온 340동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            44.03635025024414,
+            60.0,
+            38.14906311035156
+          ],
+          "measuredGlbDimensions": [
+            44.03635025024414,
+            60.0,
+            38.14906311035156
+          ],
+          "bounds": {
+            "min": [
+              16.225120544433594,
+              0.0,
+              205.26788330078125
+            ],
+            "max": [
+              60.261470794677734,
+              60.0,
+              243.4169464111328
+            ]
+          },
+          "triangles": 1524,
+          "drawCalls": 3,
+          "bytes": 90712,
+          "sha256": "f16b00dc7ef59f0df7e1d1c5079e896ea15c5033144f6bc0e7b046c50d1da9b1",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.16380484427178,
+            "lat": 37.55793973208305,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "3e1baf87-9f5b-470a-a4d7-fd23e54203c3"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/DISTRICT_LANDMARK_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.16398870433733,
+            37.55575304836497,
+            127.16448771611488,
+            37.556095756498244
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a10025263",
+            "sourceSha256": "a5666c0701b884271bdd906134343e168ce468693692a7d11283d76bc2d8bc35",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-godeok-arteon-completion-341",
+          "model": "generic-corrections/fallback-godeok-arteon-completion-341.glb",
+          "name": "고덕아르테온 341동",
+          "nameKo": "고덕아르테온 341동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            42.97735595703125,
+            46.0,
+            22.364044189453125
+          ],
+          "measuredGlbDimensions": [
+            42.97735595703125,
+            46.0,
+            22.364044189453125
+          ],
+          "bounds": {
+            "min": [
+              59.052459716796875,
+              0.0,
+              201.3494415283203
+            ],
+            "max": [
+              102.02981567382812,
+              46.0,
+              223.71348571777344
+            ]
+          },
+          "triangles": 1053,
+          "drawCalls": 3,
+          "bytes": 63772,
+          "sha256": "9fdadc919e5ed11cfc5b55d6cb1ad6aff8d090745bbb32b989fe6f89fa62e23b",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.16380484427178,
+            "lat": 37.55793973208305,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "25c48aaa-e7f7-4492-bc19-37ad01d9fe5a"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/DISTRICT_LANDMARK_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.16447401582492,
+            37.555930052547794,
+            127.16496102727497,
+            37.55613095732235
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a10025263",
+            "sourceSha256": "a5666c0701b884271bdd906134343e168ce468693692a7d11283d76bc2d8bc35",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        }
+      ],
+      "kind": "repartition"
+    },
+    {
+      "sourceId": "apt-a10026403",
+      "sourceSha256": "ef2c0c962c8c84123efc5a771439544f7aeb731d87a622d29ef4a6086c47c7d7",
+      "sourceFootprintIds": [
+        "7681491d-5a8a-4058-a1c6-1c17a55d1015",
+        "a0f2d8e0-e6d5-47bb-a7ad-0ed397f41d5e",
+        "49faccf1-01f3-4e50-b332-67f96d50b061",
+        "d314da95-9a05-48f0-9e8b-0fe460bfa386",
+        "2f02b52b-2b70-48d1-9504-653bfef49fed",
+        "9b2b22e2-9439-4a5c-a862-f3da00d93f3d"
+      ],
+      "assets": [
+        {
+          "id": "apt-a10026403",
+          "model": "generic-corrections/apt-a10026403.glb",
+          "name": "대상 외 원천 건물 (기존 추정 모형)",
+          "nameKo": "대상 외 원천 건물 (기존 추정 모형)",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            92.6741943359375,
+            73.0,
+            91.02555847167969
+          ],
+          "measuredGlbDimensions": [
+            92.6741943359375,
+            73.0,
+            91.02555847167969
+          ],
+          "bounds": {
+            "min": [
+              -78.483154296875,
+              0.0,
+              73.76234436035156
+            ],
+            "max": [
+              14.191039085388184,
+              73.0,
+              164.78790283203125
+            ]
+          },
+          "triangles": 1686,
+          "drawCalls": 3,
+          "bytes": 103236,
+          "sha256": "7574ef318207595a00015fb351698ce0b11d3bf4e1636e9e91fdc075142c5fce",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.1647921,
+            "lat": 37.5539499147019,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 3,
+          "footprintIds": [
+            "7681491d-5a8a-4058-a1c6-1c17a55d1015",
+            "a0f2d8e0-e6d5-47bb-a7ad-0ed397f41d5e",
+            "d314da95-9a05-48f0-9e8b-0fe460bfa386"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/APARTMENT_400_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": true,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.16390279102514,
+            37.55246958508224,
+            127.16495290162086,
+            37.55328729334281
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a10026403",
+            "sourceSha256": "ef2c0c962c8c84123efc5a771439544f7aeb731d87a622d29ef4a6086c47c7d7",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-godeok-arteon-completion-337",
+          "model": "generic-corrections/fallback-godeok-arteon-completion-337.glb",
+          "name": "고덕아르테온 337동",
+          "nameKo": "고덕아르테온 337동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            48.2301139831543,
+            66.0,
+            37.82740783691406
+          ],
+          "measuredGlbDimensions": [
+            48.2301139831543,
+            66.0,
+            37.82740783691406
+          ],
+          "bounds": {
+            "min": [
+              -37.54270935058594,
+              0.0,
+              -164.78790283203125
+            ],
+            "max": [
+              10.687405586242676,
+              66.0,
+              -126.96049499511719
+            ]
+          },
+          "triangles": 1868,
+          "drawCalls": 3,
+          "bytes": 111152,
+          "sha256": "c95ce6e08024aade1e02f05c2922c0892da05d9b2f4e4f099d14d3d3305ed7c8",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.1647921,
+            "lat": 37.5539499147019,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "9b2b22e2-9439-4a5c-a862-f3da00d93f3d"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/APARTMENT_400_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.16436669573758,
+            37.55509041150612,
+            127.16491320121963,
+            37.55543021491715
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a10026403",
+            "sourceSha256": "ef2c0c962c8c84123efc5a771439544f7aeb731d87a622d29ef4a6086c47c7d7",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-godeok-arteon-completion-338",
+          "model": "generic-corrections/fallback-godeok-arteon-completion-338.glb",
+          "name": "고덕아르테온 338동",
+          "nameKo": "고덕아르테온 338동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            46.37681198120117,
+            89.0,
+            30.647010803222656
+          ],
+          "measuredGlbDimensions": [
+            46.37681198120117,
+            89.0,
+            30.647010803222656
+          ],
+          "bounds": {
+            "min": [
+              -83.73419189453125,
+              0.0,
+              -136.8013916015625
+            ],
+            "max": [
+              -37.35737991333008,
+              89.0,
+              -106.15438079833984
+            ]
+          },
+          "triangles": 1076,
+          "drawCalls": 3,
+          "bytes": 65532,
+          "sha256": "462341c84f0ac5db19b13c1fc35c2b17d5185aa20dc8d8939d55a8c9047f6503",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.1647921,
+            "lat": 37.5539499147019,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "2f02b52b-2b70-48d1-9504-653bfef49fed"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/APARTMENT_400_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.16384329042396,
+            37.55490350962827,
+            127.16436879574405,
+            37.55517881237908
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a10026403",
+            "sourceSha256": "ef2c0c962c8c84123efc5a771439544f7aeb731d87a622d29ef4a6086c47c7d7",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-godeok-central-ipark-completion-504",
+          "model": "generic-corrections/fallback-godeok-central-ipark-completion-504.glb",
+          "name": "고덕센트럴 아이파크 504동",
+          "nameKo": "고덕센트럴 아이파크 504동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            23.148693084716797,
+            45.0,
+            32.950523376464844
+          ],
+          "measuredGlbDimensions": [
+            23.148693084716797,
+            45.0,
+            32.950523376464844
+          ],
+          "bounds": {
+            "min": [
+              60.58549880981445,
+              0.0,
+              78.59361267089844
+            ],
+            "max": [
+              83.73419189453125,
+              45.0,
+              111.54413604736328
+            ]
+          },
+          "triangles": 606,
+          "drawCalls": 3,
+          "bytes": 37864,
+          "sha256": "a19f94f2d31dbb539e8d13daa7de5f72e772cddeb76cd9f4a0a4cc2b4a8e8e09",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.1647921,
+            "lat": 37.5539499147019,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "49faccf1-01f3-4e50-b332-67f96d50b061"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/APARTMENT_400_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.16547860691121,
+            37.55294788994289,
+            127.16574090957604,
+            37.55324389292264
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a10026403",
+            "sourceSha256": "ef2c0c962c8c84123efc5a771439544f7aeb731d87a622d29ef4a6086c47c7d7",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        }
+      ]
+    },
+    {
+      "sourceId": "apt-a13483604",
+      "sourceSha256": "6ac995bc23574e35026394ddab5478612da52d36deb911fddb9ffdbc52b8fab3",
+      "sourceFootprintIds": [
+        "0dbfdd45-e7c3-486e-a8dd-f9940116c980",
+        "71add532-b197-48b7-95ad-b9fee5503f04",
+        "4e6a0082-e5cb-4da0-b93d-69ba94b35519",
+        "8e47e692-16fb-48a1-9f56-e5265cdacfe1",
+        "5590c790-b66e-469b-a713-08731494c3dc",
+        "774e8a8c-03c3-4d0a-9242-fcab58d9f57a",
+        "811aeb6e-05bb-4a80-9297-11a7a90718d2",
+        "390a6262-3eac-438b-af24-1d62e5729243",
+        "fe65a98e-4ae0-4e46-ba68-7e656978bb91",
+        "469d867d-f49d-4e2e-8e1c-1f1eb339084a"
+      ],
+      "assets": [
+        {
+          "id": "apt-a13483604",
+          "model": "generic-corrections/apt-a13483604.glb",
+          "name": "대상 외 원천 건물 (기존 추정 모형)",
+          "nameKo": "대상 외 원천 건물 (기존 추정 모형)",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            240.64593505859375,
+            82.0,
+            40.19744873046875
+          ],
+          "measuredGlbDimensions": [
+            240.64593505859375,
+            82.0,
+            40.19744873046875
+          ],
+          "bounds": {
+            "min": [
+              -119.89157104492188,
+              0.0,
+              55.994773864746094
+            ],
+            "max": [
+              120.75435638427734,
+              82.0,
+              96.19222259521484
+            ]
+          },
+          "triangles": 4036,
+          "drawCalls": 3,
+          "bytes": 240220,
+          "sha256": "b6bdc82defc7ecd5f7e4ded07bd815872c87c290a0fe46323dd04a5261e9703e",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.17059691864763,
+            "lat": 37.55397340693374,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 4,
+          "footprintIds": [
+            "0dbfdd45-e7c3-486e-a8dd-f9940116c980",
+            "71add532-b197-48b7-95ad-b9fee5503f04",
+            "5590c790-b66e-469b-a713-08731494c3dc",
+            "774e8a8c-03c3-4d0a-9242-fcab58d9f57a"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/APARTMENT_400_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": true,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.16923840184609,
+            37.55310929248633,
+            127.17196521185272,
+            37.553470395624245
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13483604",
+            "sourceSha256": "6ac995bc23574e35026394ddab5478612da52d36deb911fddb9ffdbc52b8fab3",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-godeok-arteon-completion-301",
+          "model": "generic-corrections/fallback-godeok-arteon-completion-301.glb",
+          "name": "고덕아르테온 301동",
+          "nameKo": "고덕아르테온 301동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            28.396278381347656,
+            63.0,
+            45.808387756347656
+          ],
+          "measuredGlbDimensions": [
+            28.396278381347656,
+            63.0,
+            45.808387756347656
+          ],
+          "bounds": {
+            "min": [
+              76.47013092041016,
+              0.0,
+              -44.9388427734375
+            ],
+            "max": [
+              104.86640930175781,
+              63.0,
+              0.869543194770813
+            ]
+          },
+          "triangles": 1710,
+          "drawCalls": 3,
+          "bytes": 101560,
+          "sha256": "0510e46a5703af0cab018513a0256c3031cfbdfcf7dae1018c440dc3c26fb0d1",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.17059691864763,
+            "lat": 37.55397340693374,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "811aeb6e-05bb-4a80-9297-11a7a90718d2"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/APARTMENT_400_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.17146341790831,
+            37.55396559569391,
+            127.17178518215701,
+            37.554377098333475
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13483604",
+            "sourceSha256": "6ac995bc23574e35026394ddab5478612da52d36deb911fddb9ffdbc52b8fab3",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-godeok-arteon-completion-302",
+          "model": "generic-corrections/fallback-godeok-arteon-completion-302.glb",
+          "name": "고덕아르테온 302동",
+          "nameKo": "고덕아르테온 302동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            50.41633224487305,
+            75.0,
+            28.329938888549805
+          ],
+          "measuredGlbDimensions": [
+            50.41633224487305,
+            75.0,
+            28.329938888549805
+          ],
+          "bounds": {
+            "min": [
+              19.272716522216797,
+              0.0,
+              -26.315425872802734
+            ],
+            "max": [
+              69.68904876708984,
+              75.0,
+              2.014512777328491
+            ]
+          },
+          "triangles": 1342,
+          "drawCalls": 3,
+          "bytes": 79644,
+          "sha256": "5a2a8d202a0582e2c59a3d829f77fb05f4b9ae515e8b7e3aec681acc8b08d0bc",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.17059691864763,
+            "lat": 37.55397340693374,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "4e6a0082-e5cb-4da0-b93d-69ba94b35519"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/APARTMENT_400_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.17081530188324,
+            37.55395531025537,
+            127.17138658002924,
+            37.554209802051496
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13483604",
+            "sourceSha256": "6ac995bc23574e35026394ddab5478612da52d36deb911fddb9ffdbc52b8fab3",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-godeok-arteon-completion-303",
+          "model": "generic-corrections/fallback-godeok-arteon-completion-303.glb",
+          "name": "고덕아르테온 303동",
+          "nameKo": "고덕아르테온 303동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            43.52617263793945,
+            92.0,
+            32.2161865234375
+          ],
+          "measuredGlbDimensions": [
+            43.52617263793945,
+            92.0,
+            32.2161865234375
+          ],
+          "bounds": {
+            "min": [
+              -35.68216323852539,
+              0.0,
+              -28.3859920501709
+            ],
+            "max": [
+              7.844008445739746,
+              92.0,
+              3.8301947116851807
+            ]
+          },
+          "triangles": 833,
+          "drawCalls": 3,
+          "bytes": 52248,
+          "sha256": "cf849cac358884433d7255bac8c609992cca6e556f4a7f8b64e54cb9702f9924",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.17059691864763,
+            "lat": 37.55397340693374,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "8e47e692-16fb-48a1-9f56-e5265cdacfe1"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/APARTMENT_400_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.17019259649344,
+            37.55393899970129,
+            127.1706858007698,
+            37.55422840220262
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13483604",
+            "sourceSha256": "6ac995bc23574e35026394ddab5478612da52d36deb911fddb9ffdbc52b8fab3",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-godeok-arteon-completion-304",
+          "model": "generic-corrections/fallback-godeok-arteon-completion-304.glb",
+          "name": "고덕아르테온 304동",
+          "nameKo": "고덕아르테온 304동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            60.39677429199219,
+            75.0,
+            36.49088668823242
+          ],
+          "measuredGlbDimensions": [
+            60.39677429199219,
+            75.0,
+            36.49088668823242
+          ],
+          "bounds": {
+            "min": [
+              -120.75435638427734,
+              0.0,
+              -27.384105682373047
+            ],
+            "max": [
+              -60.357582092285156,
+              75.0,
+              9.106780052185059
+            ]
+          },
+          "triangles": 1793,
+          "drawCalls": 3,
+          "bytes": 104592,
+          "sha256": "af537bee2e66ce40e9480c21888edf8eb1f924a5842ff1fbd6d30caffcf2dc52",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.17059691864763,
+            "lat": 37.55397340693374,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "390a6262-3eac-438b-af24-1d62e5729243"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/APARTMENT_400_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.16922862544254,
+            37.55389159929174,
+            127.16991299409264,
+            37.55421940213449
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13483604",
+            "sourceSha256": "6ac995bc23574e35026394ddab5478612da52d36deb911fddb9ffdbc52b8fab3",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-godeok-arteon-completion-313",
+          "model": "generic-corrections/fallback-godeok-arteon-completion-313.glb",
+          "name": "고덕아르테온 313동",
+          "nameKo": "고덕아르테온 313동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            43.52616882324219,
+            95.0,
+            32.21643829345703
+          ],
+          "measuredGlbDimensions": [
+            43.52616882324219,
+            95.0,
+            32.21643829345703
+          ],
+          "bounds": {
+            "min": [
+              -34.552528381347656,
+              0.0,
+              -92.49591064453125
+            ],
+            "max": [
+              8.973641395568848,
+              95.0,
+              -60.27947235107422
+            ]
+          },
+          "triangles": 869,
+          "drawCalls": 3,
+          "bytes": 54480,
+          "sha256": "a6857a9963c8701257a11e02c4b97f82132f6abf8d016323a31a13b2aa4507af",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.17059691864763,
+            "lat": 37.55397340693374,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "fe65a98e-4ae0-4e46-ba68-7e656978bb91"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/APARTMENT_400_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.17020539662542,
+            37.55451490467976,
+            127.17069860088017,
+            37.554804307204144
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13483604",
+            "sourceSha256": "6ac995bc23574e35026394ddab5478612da52d36deb911fddb9ffdbc52b8fab3",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-godeok-arteon-completion-314",
+          "model": "generic-corrections/fallback-godeok-arteon-completion-314.glb",
+          "name": "고덕아르테온 314동",
+          "nameKo": "고덕아르테온 314동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            65.11038208007812,
+            77.0,
+            20.803382873535156
+          ],
+          "measuredGlbDimensions": [
+            65.11038208007812,
+            77.0,
+            20.803382873535156
+          ],
+          "bounds": {
+            "min": [
+              27.891277313232422,
+              0.0,
+              -96.19222259521484
+            ],
+            "max": [
+              93.00166320800781,
+              77.0,
+              -75.38883972167969
+            ]
+          },
+          "triangles": 1222,
+          "drawCalls": 3,
+          "bytes": 72200,
+          "sha256": "c25adefc21b570ffd706fb04a3ee8094a968e506e1b9b753085e10ca40be4954",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.17059691864763,
+            "lat": 37.55397340693374,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "469d867d-f49d-4e2e-8e1c-1f1eb339084a"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/APARTMENT_400_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.1709129606222,
+            37.55465063332634,
+            127.17165074020438,
+            37.55483751136172
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13483604",
+            "sourceSha256": "6ac995bc23574e35026394ddab5478612da52d36deb911fddb9ffdbc52b8fab3",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        }
+      ]
+    },
+    {
+      "sourceId": "apt-a13550802",
+      "sourceSha256": "6a67f19b2203687b9b209cc1e010af071d9173e19254b120e53ef68e0807dd11",
+      "sourceFootprintIds": [
+        "01a1be7e-8f72-4a0a-bc2b-76edd8ebe5b5",
+        "e795d69c-2b8e-4aa3-acb7-fc1e65c6f888"
+      ],
+      "assets": [
+        {
+          "id": "fallback-raemian-la-classy-completion-103",
+          "model": "generic-corrections/fallback-raemian-la-classy-completion-103.glb",
+          "name": "래미안 라클래시 103동",
+          "nameKo": "래미안 라클래시 103동",
+          "district": "강남구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            31.953914642333984,
+            105.0,
+            34.31993865966797
+          ],
+          "measuredGlbDimensions": [
+            31.953914642333984,
+            105.0,
+            34.31993865966797
+          ],
+          "bounds": {
+            "min": [
+              14.965980529785156,
+              0.0,
+              -1.6252100467681885
+            ],
+            "max": [
+              46.91989517211914,
+              105.0,
+              32.69472885131836
+            ]
+          },
+          "triangles": 712,
+          "drawCalls": 3,
+          "bytes": 44696,
+          "sha256": "1c32a8a843d1479b6dc8632b9d055cbf3338304e8d407e131a7cc3b48d90b86d",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.0496063,
+            "lat": 37.518042900577974,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "01a1be7e-8f72-4a0a-bc2b-76edd8ebe5b5"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/APARTMENT_100_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.04977580100838,
+            37.517749198253604,
+            127.05013770317328,
+            37.51805750008679
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13550802",
+            "sourceSha256": "6a67f19b2203687b9b209cc1e010af071d9173e19254b120e53ef68e0807dd11",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-raemian-la-classy-completion-107",
+          "model": "generic-corrections/fallback-raemian-la-classy-completion-107.glb",
+          "name": "래미안 라클래시 107동",
+          "nameKo": "래미안 라클래시 107동",
+          "district": "강남구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            48.385589599609375,
+            86.0,
+            29.49990463256836
+          ],
+          "measuredGlbDimensions": [
+            48.385589599609375,
+            86.0,
+            29.49990463256836
+          ],
+          "bounds": {
+            "min": [
+              -46.91989517211914,
+              0.0,
+              -32.69472885131836
+            ],
+            "max": [
+              1.465694785118103,
+              86.0,
+              -3.194824695587158
+            ]
+          },
+          "triangles": 833,
+          "drawCalls": 3,
+          "bytes": 51444,
+          "sha256": "f08e0586a8375445bb147616523b3e678f5f25e02f50ea36a7f5972e48b732a3",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.0496063,
+            "lat": 37.518042900577974,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "e795d69c-2b8e-4aa3-acb7-fc1e65c6f888"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/APARTMENT_100_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.04907489682671,
+            37.518071600170984,
+            127.04962290009803,
+            37.518336601746356
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13550802",
+            "sourceSha256": "6a67f19b2203687b9b209cc1e010af071d9173e19254b120e53ef68e0807dd11",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        }
+      ]
     }
   ]
 }

@@ -4,6 +4,14 @@ import { readFileSync, mkdirSync, writeFileSync } from 'node:fs';
 const read = (p: string) => JSON.parse(readFileSync(p, 'utf8'));
 const assets = read('public/models/bespoke-manifest.json').assets;
 const families = [
+  {site: 'godeok-raemian-hillstate-completion', assetSite: 'godeok-raemian-hillstate', number: 123, count: 18, label: null},
+  {site: 'mapo-raemian-prugio-completion', assetSite: 'mapo-raemian-prugio', number: 101, count: 10, label: null},
+  {site: 'gaepo-raemian-forest-completion', assetSite: 'gaepo-raemian-forest', number: 128, count: 3, label: null},
+  {site: 'raemian-blesstige-completion', assetSite: 'raemian-blesstige', number: 201, count: 2, label: null},
+  {site: 'dh-honor-hills-completion', assetSite: 'dh-honor-hills', number: 314, count: 2, label: null},
+  {site: 'godeok-arteon-completion', assetSite: 'godeok-arteon', number: 301, count: 16, label: null},
+  {site: 'godeok-central-ipark-completion', assetSite: 'godeok-central-ipark', number: 504, count: 1, label: null},
+  {site: 'raemian-la-classy-completion', assetSite: 'raemian-la-classy', number: 103, count: 2, label: null},
   {site: 'songpa-helio-city', number: 503, count: 33, label: '416_verified_number_mesh'},
   {site: 'jamsil-parkrio', number: 208, count: 59, label: 'building-number-label'},
   {site: 'jamsil-trizium', number: 305, count: 44, label: 'building-number-label'},

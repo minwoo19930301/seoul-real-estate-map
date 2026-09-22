@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "sourceIdentity": "docs/model-audit/raemian-la-classy-completion-new-source-identity.json",
+  "bindings": [
+    {
+      "number": 103,
+      "sourceFootprintId": "01a1be7e-8f72-4a0a-bc2b-76edd8ebe5b5",
+      "fallbackAssetId": "fallback-raemian-la-classy-completion-103",
+      "supersedes": [
+        "fallback-raemian-la-classy-completion-103"
+      ],
+      "fallbackModel": "generic-corrections/fallback-raemian-la-classy-completion-103.glb",
+      "fallbackSha256": "1c32a8a843d1479b6dc8632b9d055cbf3338304e8d407e131a7cc3b48d90b86d"
+    },
+    {
+      "number": 107,
+      "sourceFootprintId": "e795d69c-2b8e-4aa3-acb7-fc1e65c6f888",
+      "fallbackAssetId": "fallback-raemian-la-classy-completion-107",
+      "supersedes": [
+        "fallback-raemian-la-classy-completion-107"
+      ],
+      "fallbackModel": "generic-corrections/fallback-raemian-la-classy-completion-107.glb",
+      "fallbackSha256": "f08e0586a8375445bb147616523b3e678f5f25e02f50ea36a7f5972e48b732a3"
+    }
+  ],
+  "limits": [
+    "Independent existing fallbacks only; model completion and photo review are separate."
+  ],
+  "jointSplitAudit": "docs/model-audit/three-boundary-completion-generic-split.json"
+}
