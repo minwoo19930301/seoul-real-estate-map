@@ -133,31 +133,3 @@ test('Helio preserves all six unrelated residual footprints',async({page})=>{
  }
  expect(errors).toEqual([]);await snapshot(page,'residual-buildings',{residualSourceIds:bindingDocument.preservedResidualSourceIds,errors});
 });
-
-test('Helio remaining33 buildings retain their individual generic models', async ({page}) => {
-  test.setTimeout(360_000);
-  const remaining = [...Array.from({length:14}, (_,i)=>402+i),417,418,...Array.from({length:17}, (_,i)=>501+i)];
-  const rows = remaining.map(number => {
-    expect(byId.has(`bespoke-songpa-helio-city-${number}`)).toBe(false);
-    const binding = bindings.find((b: any) => b.number === number);
-    return {number, binding, fallback: byId.get(binding.fallbackAssetId)};
-  });
-  const wanted = rows.map(r => r.fallback.id), seen = new Set<string>();
-  const errors = await boot(page);
-  for (const row of rows) {
-    if (seen.has(row.fallback.id)) continue;
-    await focusRetained(page, row.fallback);
-    await awaitModel(page, row.fallback.id);
-    const state = await page.evaluate(wanted => {
-      const s = (window as any).__SEOUL_MAP__.cityModels.getState();
-      return {active: s.models.filter((m: any) => wanted.includes(m.id) && m.active && m.drawCount > 0).map((m: any)=>m.id), footprints:s.activeFootprintIds};
-    }, wanted);
-    for (const id of state.active) {
-      seen.add(id);
-      expect(state.footprints).toContain(rows.find(r=>r.fallback.id===id)!.binding.sourceFootprintId);
-    }
-  }
-  expect([...seen].sort()).toEqual([...wanted].sort());
-  expect(errors).toEqual([]);
-  await snapshot(page, 'remaining33-generic', {numbers:remaining, seen:[...seen], errors});
-});

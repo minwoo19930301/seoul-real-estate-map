@@ -66,7 +66,7 @@ class HeightRegions(unittest.TestCase):
         self.assertEqual(len(bindings['unchangedSingletons']), 40)
         self.assertEqual([b['number'] for b in bindings['bindings']], expected_all)
         assets = json.loads((root / 'public/models/bespoke-manifest.json').read_text())['assets']
-        self.assertEqual(sorted(int(a['id'].removeprefix('bespoke-songpa-helio-city-')) for a in assets if a['id'].startswith('bespoke-songpa-helio-city-')), numbers)
+        self.assertEqual(sorted(int(a['id'].removeprefix('bespoke-songpa-helio-city-')) for a in assets if a['id'].startswith('bespoke-songpa-helio-city-') and not a.get('modelInstance')), numbers)
         self.assert_registered_envelopes('songpa-helio-city', numbers, 9510, {b['number']: b['fallbackAssetId'] for b in bindings['bindings']}, strict_cap_ownership=True, source_numbers=expected_all)
 
     def assert_registered_envelopes(self, site, numbers, households, fallback_ids=None, strict_cap_ownership=False, source_numbers=None):

@@ -331,22 +331,22 @@ def build(snapshot, coverage, bespoke, published, legacy, root):
         'kaptExtraAddressRows': sum(v - 1 for v in kapt_counts.values()),
         'unknownUniquePhysicalSiteCount': None, 'sameAddressCandidateCodes': sum(bool(r['sameAddressManagementCodes']) for r in queue),
         'coordinatesUnresolvedEligible': sum(not r['location'].get('coordinate') for r in queue if r['eligibility'] == 'eligible'),
-        'scope': 'Official management-code scheduling inventory; completion means all identified residential buildings have verified Blender MCP and visual-review evidence. Representative-photo inference is explicitly counted separately from individual photo review. Shared podiums, landscape and unseen facades are not thereby certified. Not proof that all real Seoul complexes are registered.'}
+        'scope': 'Official management-code scheduling inventory; completion means all identified residential buildings have a published model, including shared copies whose representative has verified Blender MCP and visual-review evidence. Representative-photo inference is explicitly counted separately from individual photo review. Shared podiums, landscape and unseen facades are not thereby certified. Not proof that all real Seoul complexes are registered.'}
     return queue, summary
 
 
 def markdown(summary, queue):
     s = summary
     examples = [r for r in queue if r['buildings'] or r['code'] in {'A10023043', 'A10023188'}]
-    lines = ['# 서울 400세대 이상 아파트 개별 모델링 현황', '',
-        f"공식 자료 확인일: {s['checkedOn']}. `scripts/build_apartment_bespoke_queue.py`로 생성합니다. **대상 {s['eligibleManagementCodes']:,} 관리코드, 주거동 전체 검토 완료 {s['completedManagementCodes']:,}, 미완료 {s['remainingEligibleManagementCodes']:,}**입니다. 분류 보강 검토 {s['eligibilityReviewManagementCodes']}건과 명시적 비아파트 제외 {s['explicitNonApartmentExcludedCodes']}건은 큐에 별도로 남깁니다.", '',
+    lines = ['# 서울 400세대 이상 아파트 모델 적용 현황', '',
+        f"공식 자료 확인일: {s['checkedOn']}. `scripts/build_apartment_bespoke_queue.py`로 생성합니다. **대상 {s['eligibleManagementCodes']:,} 관리코드, 주거동 전체 적용 완료 {s['completedManagementCodes']:,}, 미완료 {s['remainingEligibleManagementCodes']:,}**입니다. 분류 보강 검토 {s['eligibilityReviewManagementCodes']}건과 명시적 비아파트 제외 {s['explicitNonApartmentExcludedCodes']}건은 큐에 별도로 남깁니다.", '',
         '## 모수와 중복', '',
         f"[서울시 OA-15818]({OA_URL}) 최신 전체 CSV {s['sources']['oa-15818']['rows']:,}행을 독립 Sheet totalCount와 대조했습니다. 400세대 이상 아파트 분류는 {s['sourceEligibleUniqueCodes']['oa-15818']:,}코드입니다. [국토교통부·K-apt 주간자료]({KAPT_URL}) {s['sources']['kapt-weekly']['extractDate']} 추출본은 전국 {s['sources']['kapt-weekly']['nationalRows']:,}행, 서울 {s['sources']['kapt-weekly']['rows']:,}행·고유 {s['kaptSeoulUniqueCodes']:,}코드이고 이 중 대상은 {s['sourceEligibleUniqueCodes']['kapt-weekly']:,}코드입니다. 두 자료의 관리코드 합집합이 대상 모수입니다.", '',
         f"K-apt 서울 자료의 {s['kaptRepeatedCodes']}코드에는 복수 주소 등에 따른 추가 {s['kaptExtraAddressRows']}행이 있습니다. 원본 행 번호와 값은 보존하지만 세대수를 합산하지 않습니다. 서로 다른 관리코드의 동일 주소도 자동으로 같은 단지로 합치지 않습니다. 동일 주소 검토 후보가 있는 큐 기록은 {s['sameAddressCandidateCodes']}개입니다. 실제 고유 단지 수는 아직 확정하지 않았습니다.", '',
         '어느 한 공식 아파트 분류 자료에서 400세대 이상이면 포함합니다. 출처 간 값이 다르거나 서울시 원본이 0이어도 덮어쓰지 않습니다. 메이플자이의 서울시 0/K-apt 3,307, 타워팰리스1차의 0/1,297은 각각 같은 관리코드의 두 근거로 남습니다. 원베일리는 이미 A10023043·2,990세대·23동으로 포함되어 있어 별도 신규 단지로 중복 추가하지 않습니다. 미분류 기록은 이름만으로 아파트로 확정하지 않습니다.', '',
         '## 완료 기준', '',
         '관리코드별 명시적인 주거동 목록, 동별 bespoke ID, 실제 사진·배치도 대조 기록, 검토된 원본 GLB SHA, 게시 GLB SHA, 편집 .blend SHA, 실제 MCP 실행 기록 SHA가 모두 일치해야 완료로 계산합니다. 기존 generic/reference 모델, 동일색·높은 삼각형 수, 파일 생성만으로 완료 처리하지 않습니다. 해시 불일치나 사라진 파일은 완료를 자동 해제합니다.', '',
-        '2026-09-22 사용자 지시에 따라 대표 동의 사진 검토된 외관을 같은 단지의 다른 동에 적용할 수 있습니다. 동별 배치·층수·윤곽은 따로 유지하며, 대표 모델 ID·해시와 추정 범위를 기록합니다. 표의 대표 외관 추정 동은 각 동의 모든 면을 사진으로 확인했다는 뜻이 아닙니다.', '',
+        '2026-09-22 사용자 지시에 따라 대표 동의 사진 검토된 외관을 같은 단지의 다른 동에 적용할 수 있습니다. 단지별 대표 한 동만 제작·검토하고 나머지는 같은 메시·재질을 공유해 복제합니다. 기존 위치·방향과 전체 크기만 변환하며, 대표 동의 창문·층 패턴과 윤곽이 반복되어 실제 각 동과 다를 수 있습니다. 대표 모델 ID·해시와 추정 범위를 기록하고, 동별 사진 재현으로 집계하지 않습니다.', '',
         '| 관리코드 | 단지 | 상태 | 검증된 bespoke / 확인된 주거동 | 대표 외관 추정 동 |', '|---|---|---|---:|---:|']
     for r in examples:
         lines.append(f"| {r['code']} | {r['nameKo']} | {r['modelStatus']} | {r['verifiedBespokeBuildingCount']} / {r['expectedResidentialBuildingCount'] or '미확정'} | {r['representativeInferredBuildingCount']} |")

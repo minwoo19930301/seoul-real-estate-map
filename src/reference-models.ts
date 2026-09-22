@@ -1,4 +1,5 @@
 import type { CityModelAsset } from './city-models.ts';
+import { validModelInstance } from './shared-models.ts';
 
 export interface ReferencePlace {
   id: string; name: string; subtitle: string;
@@ -33,11 +34,19 @@ export function referenceManifest(value: unknown, preserved: CityModelAsset[]): 
       || !asset.coordinate || !Number.isFinite(asset.coordinate.lon) || !Number.isFinite(asset.coordinate.lat)
       || Math.abs(asset.coordinate.lon) > 180 || Math.abs(asset.coordinate.lat) > 90 || !Number.isFinite(asset.yawDegFromEast)
       || asset.groundOffsetM !== undefined && (!Number.isFinite(asset.groundOffsetM) || Math.abs(asset.groundOffsetM) > 100)
+      || !validModelInstance(asset.modelInstance)
       || !Array.isArray(asset.footprintIds) || asset.footprintIds.some(id => typeof id !== 'string' || !id)
       || !Array.isArray(asset.supersedes) || asset.supersedes.some(id => typeof id !== 'string' || !id || id === asset.id)) {
       throw Error('개별 건물 모델의 위치 또는 출처가 올바르지 않습니다.');
     }
     ids.add(asset.id);
+  }
+  const available = new Map([...preserved, ...data.assets].map(asset => [asset.id, asset]));
+  for (const asset of data.assets) if (asset.modelInstance) {
+    const source = available.get(asset.modelInstance.sourceAssetId);
+    if (!source || source.id === asset.id || source.modelInstance || source.model !== asset.model
+      || source.sha256 !== asset.sha256 || source.dimensions.some((n, i) => n !== asset.modelInstance!.sourceDimensions[i])
+      || asset.yawDegFromEast !== 0) throw Error('복제 모델의 대표 원본 연결이 올바르지 않습니다.');
   }
   const generations = new Map(data.assets.map(asset => [asset.id, asset]));
   const incoming = new Map(data.assets.map(asset => [asset.id, 0]));

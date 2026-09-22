@@ -5,6 +5,8 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { getFlightQueryFocus, queryBounds } from './view-window.ts';
 import { CityModelCatalog } from './city-model-catalog.ts';
 import type { CatalogTile } from './city-model-catalog.ts';
+import { SharedModelPool, applyModelInstance, validModelInstance, disposeModel } from './shared-models.ts';
+import type { ModelInstance } from './shared-models.ts';
 
 export interface CityModelAsset {
   id: string; nameKo: string; model: string; dimensions: [number, number, number];
@@ -16,6 +18,7 @@ export interface CityModelAsset {
   searchable?: boolean;
   groundOffsetM?: number;
   genericCorrection?: { sourceId: string };
+  modelInstance?: ModelInstance;
 }
 export interface DecorativeTree { coordinate: [number, number]; height_m: number; crown_radius_m: number }
 export interface CityModelState {
@@ -27,7 +30,7 @@ export interface CityModelState {
   catalogTotal?: number;
 }
 type Options = { assets?: CityModelAsset[]; catalogIndex?: string; onState?: (state: CityModelState) => void; onActiveFootprints?: (ids: string[]) => void };
-type Entry = { asset: CityModelAsset; catalogTile?: string; scene?: THREE.Scene; error: string | null; ground: number | null; draws: number; active: boolean; pending?: Promise<void>; lastUsed?: number };
+type Entry = { asset: CityModelAsset; catalogTile?: string; scene?: THREE.Scene; releaseModel?: () => void; error: string | null; ground: number | null; draws: number; active: boolean; pending?: Promise<void>; lastUsed?: number; networkRetries?: number; retryAt?: number };
 type View = { zoom: number; lon: number; lat: number; west: number; east: number; south: number; north: number };
 const originalLandmarks = new Set(['sixtythree', 'lotte', 'nseoul', 'coex', 'gyeongbokgung']);
 const isLandmark = (asset: CityModelAsset) => asset.quality === 'reference' || originalLandmarks.has(asset.id);
@@ -41,13 +44,14 @@ export function modelMercatorMatrix(coordinate: [number, number], groundM: numbe
     .multiply(new THREE.Matrix4().makeRotationX(Math.PI / 2));
 }
 
-function disposeScene(scene: THREE.Object3D) {
-  scene.traverse(object => {
-    const mesh = object as THREE.Mesh;
-    if (!mesh.isMesh) return;
-    mesh.geometry.dispose();
-    for (const material of Array.isArray(mesh.material) ? mesh.material : [mesh.material]) material.dispose();
-  });
+class RetryableModelLoadError extends Error {}
+const modelRetryDelays = [1000, 2000];
+
+function disposeScene(scene: THREE.Object3D) { disposeModel(scene); }
+function releaseEntry(entry: Entry) {
+  if (entry.releaseModel) { entry.releaseModel(); entry.releaseModel = undefined; }
+  else if (entry.scene) disposeScene(entry.scene);
+  entry.scene = undefined;
 }
 
 function illuminate(scene: THREE.Scene) {
@@ -72,6 +76,7 @@ export class CityModels {
   private contextLost = false;
   private error: string | null = null;
   private entries: Entry[] = [];
+  private modelPool = new SharedModelPool();
   private legacyEntries: Entry[] = [];
   private catalog?: CityModelCatalog;
   private indexedEntries?: Entry[];
@@ -105,6 +110,7 @@ export class CityModels {
   private treesDirty = true;
   private treesSignature = '';
   private abort = new AbortController();
+  private modelRetryTimer?: ReturnType<typeof setTimeout>;
   private flightViewTimer?: ReturnType<typeof setTimeout>;
   private lastFlightViewUpdate = -Infinity;
   private flightSnapshot?: { at: number; view: View };
@@ -194,7 +200,7 @@ export class CityModels {
       current.delete(asset.id);
       return existing ?? { asset, catalogTile: tile.id, error: null, ground: null, draws: 0, active: false };
     }));
-    for (const entry of current.values()) if (entry.scene) disposeScene(entry.scene);
+    for (const entry of current.values()) releaseEntry(entry);
     this.entries = [...this.legacyEntries, ...added];
     this.syncCatalog(); this.emit(); this.map.triggerRepaint();
   }
@@ -290,8 +296,27 @@ export class CityModels {
     return asset.coordinate.lon >= view.west - dx && asset.coordinate.lon <= view.east + dx
       && asset.coordinate.lat >= view.south - dy && asset.coordinate.lat <= view.north + dy;
   }
+  private scheduleModelRetry() {
+    if (this.modelRetryTimer !== undefined) clearTimeout(this.modelRetryTimer);
+    this.modelRetryTimer = undefined;
+    if (this.disposed) return;
+    const due = [...this.trackedEntries].flatMap(entry => entry.retryAt === undefined ? [] : [entry.retryAt]);
+    if (!due.length) return;
+    this.modelRetryTimer = setTimeout(() => {
+      this.modelRetryTimer = undefined;
+      if (this.disposed) return;
+      this.nearbyCache = undefined;
+      void this.loadNearby();
+      this.map.triggerRepaint();
+    }, Math.max(0, Math.min(...due) - performance.now()));
+  }
   private nearbyEntries(view = this.viewSnapshot()) {
     this.syncCatalog();
+    const now = performance.now();
+    for (const entry of this.trackedEntries) if (entry.retryAt !== undefined && entry.retryAt <= now) {
+      entry.error = null; entry.retryAt = undefined; this.nearbyCache = undefined;
+      this.trackEntry(entry);
+    }
     const key = [view.zoom, view.lon, view.lat, view.west, view.east, view.south, view.north,
       this.publicVisible, this.bridgesVisible, this.culturalVisible, this.officesVisible].join(':');
     if (this.nearbyCache?.key === key) return this.nearbyCache.entries;
@@ -355,7 +380,7 @@ export class CityModels {
     for (const entry of resident.sort((a, b) => (a.lastUsed ?? 0) - (b.lastUsed ?? 0))) {
       if (excess <= 0) break;
       if (protectedEntries.has(entry) || entry.pending) continue;
-      disposeScene(entry.scene!); entry.scene = undefined; entry.active = false; entry.ground = null; excess--;
+      releaseEntry(entry); entry.active = false; entry.ground = null; excess--;
       this.trackEntry(entry);
     }
   }
@@ -388,33 +413,72 @@ export class CityModels {
     return this.loadCycle;
   }
   private async loadEntry(entry: Entry) {
+    let release: (() => void) | undefined;
+    try {
+      const asset = entry.asset;
+      if (!/^[a-z0-9_-]+(?:\/[a-z0-9_-]+)*\.glb$/.test(asset.model)
+        || !asset.dimensions.every(n => Number.isFinite(n) && n > 0)
+        || !validModelInstance(asset.modelInstance)) throw new Error('Invalid model manifest');
+      const lease = await this.modelPool.acquire(`${asset.model}:${asset.sha256}`, async () => {
+        let response: Response, bytes: ArrayBuffer;
         try {
-          const asset = entry.asset;
-          if (!/^[a-z0-9_-]+(?:\/[a-z0-9_-]+)*\.glb$/.test(asset.model) || !asset.dimensions.every(n => Number.isFinite(n) && n > 0)) throw new Error('Invalid model manifest');
-          const response = await fetch(`/models/${asset.model}`, { signal: this.abort.signal });
-          if (!response.ok) throw new Error(`HTTP ${response.status}`);
-          const bytes = await response.arrayBuffer();
-          const digest = Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256', bytes)), n => n.toString(16).padStart(2, '0')).join('');
-          if (digest !== asset.sha256) throw new Error('원본 모델 체크섬 불일치');
-          const { scene: model } = await new GLTFLoader().parseAsync(bytes, '/models/');
-          if (this.disposed) { disposeScene(model); return; }
-          const box = new THREE.Box3().setFromObject(model);
-          const size = box.getSize(new THREE.Vector3()).toArray();
-          if (Math.abs(box.min.y) > 0.01 || size.some((v, i) => Math.abs(v - asset.dimensions[i]) > 0.01)) {
-            disposeScene(model); throw new Error('모델 바닥 또는 미터 치수 불일치');
+          response = await fetch(`/models/${asset.model}`, { signal: this.abort.signal });
+          if (!response.ok) {
+            if ([408, 429, 500, 502, 503, 504].includes(response.status)) throw new RetryableModelLoadError(`HTTP ${response.status}`);
+            throw new Error(`HTTP ${response.status}`);
           }
-          model.rotation.y = THREE.MathUtils.degToRad(asset.yawDegFromEast);
-          entry.scene = new THREE.Scene(); illuminate(entry.scene); entry.scene.add(model);
+          bytes = await response.arrayBuffer();
         } catch (error) {
-          if (!this.disposed) {
-            entry.error = error instanceof Error ? error.message : String(error);
-            this.nearbyCache = undefined;
-            if (isLandmark(entry.asset)) this.loadAgain = true;
+          // Only transport failures retry; parsing/checksum/geometry errors below do not.
+          if (!this.abort.signal.aborted && (error instanceof TypeError
+            || error instanceof DOMException && error.name === 'NetworkError')) {
+            throw new RetryableModelLoadError(error.message);
           }
+          throw error;
         }
-        entry.pending = undefined;
-        this.trackEntry(entry);
-        if (!this.disposed) { this.emit(); this.map.triggerRepaint(); }
+        const digest = Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256', bytes)), n => n.toString(16).padStart(2, '0')).join('');
+        if (digest !== asset.sha256) throw new Error('원본 모델 체크섬 불일치');
+        return (await new GLTFLoader().parseAsync(bytes, '/models/')).scene;
+      });
+      release = lease.release;
+      if (this.disposed) return;
+      const model = lease.model;
+      const box = new THREE.Box3().setFromObject(model, true);
+      const expectedSource = asset.modelInstance?.sourceDimensions ?? asset.dimensions;
+      if (Math.abs(box.min.y) > 0.01 || box.getSize(new THREE.Vector3()).toArray().some((v, i) => Math.abs(v - expectedSource[i]) > 0.01)) {
+        throw new Error('모델 바닥 또는 미터 치수 불일치');
+      }
+      applyModelInstance(model, asset.modelInstance);
+      if (asset.modelInstance) {
+        const transformed = new THREE.Box3().setFromObject(model, true);
+        if (Math.abs(transformed.min.y) > 0.01 || transformed.getSize(new THREE.Vector3()).toArray().some((v, i) => Math.abs(v - asset.dimensions[i]) > 0.01)) {
+          throw new Error('복제 모델 변환 치수 불일치');
+        }
+      }
+      const placement = new THREE.Group();
+      placement.rotation.y = THREE.MathUtils.degToRad(asset.yawDegFromEast);
+      placement.add(model);
+      entry.scene = new THREE.Scene(); illuminate(entry.scene); entry.scene.add(placement);
+      entry.releaseModel = release; release = undefined;
+      entry.networkRetries = 0; entry.retryAt = undefined;
+    } catch (error) {
+      if (!this.disposed) {
+        entry.error = error instanceof Error ? error.message : String(error);
+        const retries = entry.networkRetries ?? 0;
+        if (error instanceof RetryableModelLoadError && retries < modelRetryDelays.length) {
+          entry.networkRetries = retries + 1;
+          entry.retryAt = performance.now() + modelRetryDelays[retries];
+          this.scheduleModelRetry();
+        }
+        this.nearbyCache = undefined;
+        if (isLandmark(entry.asset)) this.loadAgain = true;
+      }
+    } finally {
+      release?.();
+      entry.pending = undefined;
+      this.trackEntry(entry);
+      if (!this.disposed) { this.emit(); this.map.triggerRepaint(); }
+    }
   }
 
   setFootprintMatches(matches: Record<string, string[]>) {
@@ -574,12 +638,15 @@ export class CityModels {
   private disposeResources() {
     if (this.disposed) return;
     this.disposed = true; this.catalog?.dispose(); this.abort.abort();
+    if (this.modelRetryTimer !== undefined) clearTimeout(this.modelRetryTimer);
+    this.modelRetryTimer = undefined;
     if (this.flightViewTimer !== undefined) clearTimeout(this.flightViewTimer);
     this.flightViewTimer = undefined; this.flightSnapshot = undefined;
     this.map.off('sourcedata', this.onTerrainData); this.map.off('webglcontextlost', this.onLost); this.map.off('webglcontextrestored', this.onRestored);
     this.map.off('moveend', this.onViewChanged);
     this.syncCatalog();
-    for (const entry of this.trackedEntries) { if (entry.scene) disposeScene(entry.scene); entry.active = false; }
+    for (const entry of this.trackedEntries) { releaseEntry(entry); entry.active = false; }
+    this.modelPool.dispose();
     if (this.treeScene) disposeScene(this.treeScene);
     this.renderer?.dispose(); this.activeTrees = 0; this.emit();
   }
