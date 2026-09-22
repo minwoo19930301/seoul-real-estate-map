@@ -11,6 +11,8 @@ const families = [
   {site: 'godeok-gracium', number: 102, count: 21, label: null},
   {site: 'raemian-la-classy', number: 101, count: 4, label: null},
   {site: 'godeok-arteon', number: 321, count: 24, label: null},
+  {site: 'godeok-raemian-hillstate', number: 102, count: 27, label: null},
+  {site: 'godeok-central-ipark', number: 501, count: 17, label: null},
 ];
 for (const family of families) for (const failure of ['none', 'shared-model', 'shared-and-fallback']) {
   test(`${family.site} shared copies: ${failure}`, async ({page}) => {

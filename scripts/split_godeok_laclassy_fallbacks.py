@@ -4,13 +4,14 @@ import argparse
 import copy
 import math
 import sqlite3
+from pathlib import Path
 import numpy as np
 from shapely.geometry import shape, MultiPoint
 from shapely.ops import transform
 import json
 from collections import Counter
 
-from publish_bespoke_models import encoded, read, replace_batch
+from publish_bespoke_models import encoded, read, replace_batch, safe_id
 from split_caelitus_fallback import ROOT, decode, encode, sha
 from split_prestige_fallbacks import canonical_sha, replay, triangle_signatures
 
@@ -74,8 +75,9 @@ def partition_by_replayed_source(cfg, folder, source, ids, owners, authoring):
     return {'sourceId': source['id'], 'sourceSha256': cfg['sha'], 'sourceFootprintIds': ids, 'assets': outputs}, documents, proof
 
 
-def prepare():
-    frozen = read(INPUT)
+def prepare(input_path=INPUT):
+    batch = safe_id(input_path.stem.removesuffix('-fallback-inputs'))
+    frozen = read(input_path)
     folder = ROOT / 'public/models'
     base = read(folder / 'manifest.json')
     assets = {a['id']: a for a in base['assets']}
@@ -108,11 +110,11 @@ def prepare():
         owners, authoring = replay(source, original, matches[source_id], frozen_source['provenance'])
         targets = frozen_source['targets']
         parts = [(f"fallback-{t['site']}-{t['number']}", t['name'], t['sourceId']) for t in targets]
-        cfg = {'site': 'godeok-laclassy-' + source_id, 'source': source_id, 'sha': source['sha256'],
+        cfg = {'site': batch + '-' + source_id, 'source': source_id, 'sha': source['sha256'],
             'count': len(matches[source_id]), 'removeApartmentCode': True,
             'remainingName': '대상 외 원천 건물 (기존 추정 모형)', 'parts': parts,
             'limits': ['Only archived indexed triangles, material attributes and terrain anchors are partitioned; no photo-modeling credit.',
-                'Gracium and Arteon residential sources mixed in one historical asset are separated jointly using independently confirmed addresses and numbered register records.',
+                frozen['scope'],
                 'All unnamed, unmatched and unrelated source buildings remain in unchanged-shape residuals. Original convex-hull approximations remain archived.']}
         correction, files, proof = partition_by_replayed_source(cfg, folder, source, matches[source_id], owners, authoring)
         gltf, primitives = decode(original)
@@ -152,22 +154,23 @@ def prepare():
         documents[ROOT / f'docs/model-audit/{site}-fallback-bindings.json'] = encoded({
             'version': 1, 'sourceIdentity': item['path'], 'bindings': sorted(bindings[site], key=lambda b: b['number']),
             'limits': ['Independent existing fallbacks only; model completion and photo review are separate.'],
-            'jointSplitAudit': 'docs/model-audit/godeok-laclassy-generic-split.json'})
-    audit = {'version': 1, 'frozenInputsSha256': sha(INPUT.read_bytes()), 'sources': proofs,
+            'jointSplitAudit': f'docs/model-audit/{batch}-generic-split.json'})
+    audit = {'version': 1, 'frozenInputsSha256': sha(input_path.read_bytes()), 'sources': proofs,
         'preservedPriorCorrectionIds': [c['sourceId'] for c in existing['corrections']],
         'preservedPriorCorrectionsCanonicalSha256': canonical_sha(existing['corrections']),
         'sourceTriangles': sum(p['sourceTriangles'] for p in proofs),
         'hullApproximationTriangles': sum(p['legacyTrianglesOutsideSourcePolygonInsideItsHull'] for p in proofs),
         'preservedResidualSourceIds': sorted(residuals), 'unchangedStandaloneAssets': frozen['singletons']}
-    documents[ROOT / 'docs/model-audit/godeok-laclassy-generic-split.json'] = encoded(audit)
+    documents[ROOT / f'docs/model-audit/{batch}-generic-split.json'] = encoded(audit)
     documents[folder / 'generic-corrections.json'] = encoded({**existing, 'corrections': [*existing['corrections'], *added]})
     return documents, audit, bindings
 
 
-def main(stage_only):
-    documents, audit, bindings = prepare()
+def main(stage_only, input_path=INPUT):
+    documents, audit, bindings = prepare(input_path)
+    stage = STAGE.parent / (safe_id(input_path.stem.removesuffix('-fallback-inputs')) + '-fallback-review')
     for path, data in documents.items():
-        target = STAGE / path.relative_to(ROOT)
+        target = stage / path.relative_to(ROOT)
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_bytes(data)
     if not stage_only:
@@ -188,4 +191,6 @@ def main(stage_only):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--stage-only', action='store_true')
-    main(parser.parse_args().stage_only)
+    parser.add_argument('--inputs', type=lambda p: Path(p).resolve(), default=INPUT)
+    args = parser.parse_args()
+    main(args.stage_only, args.inputs)

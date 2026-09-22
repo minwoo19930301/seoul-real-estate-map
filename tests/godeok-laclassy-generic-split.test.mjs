@@ -9,8 +9,6 @@ const json=p=>JSON.parse(read(p));
 const hash=b=>crypto.createHash('sha256').update(b).digest('hex');
 const base=json('public/models/manifest.json'),matches=json('public/models/footprint-matches.json');
 const corrections=json('public/models/generic-corrections.json');
-const audit=json('docs/model-audit/godeok-laclassy-generic-split.json');
-const frozen=json('docs/model-audit/godeok-laclassy-fallback-inputs.json');
 const effective=applyGenericCorrections(base.assets,matches,corrections);
 function triangles(asset, onTriangle) {
  const bytes=read('public/models/'+asset.model),length=bytes.readUInt32LE(12);
@@ -34,6 +32,12 @@ function triangles(asset, onTriangle) {
  }
  assert.equal(out.length,asset.triangles);assert.deepEqual(bounds,[asset.bounds.min,asset.bounds.max]);return out.sort();
 }
+for (const batch of [
+ {name:'godeok-laclassy', bindings:52, residuals:65, prior:27, triangles:93135},
+ {name:'godeok-central-hillstate', bindings:46, residuals:4, prior:33, triangles:32489},
+]) {
+const audit=json(`docs/model-audit/${batch.name}-generic-split.json`);
+const frozen=json(`docs/model-audit/${batch.name}-fallback-inputs.json`);
 for (const input of frozen.compounds) test(`${input.assetId} source-emission partition conserves every archived attribute and owner`,()=>{
  const source=base.assets.find(a=>a.id===input.assetId),proof=audit.sources.find(p=>p.sourceId===input.assetId);
  const correction=corrections.corrections.find(c=>c.sourceId===input.assetId);
@@ -56,7 +60,7 @@ for (const input of frozen.compounds) test(`${input.assetId} source-emission par
  assert.equal(correction.assets.reduce((n,a)=>n+a.triangles,0),source.triangles);
  assert.match(proof.ownershipMethod,/byte-exact|byte.exact|Byte-exact/);
 });
-test('three complex bindings retain all52 identified buildings and65 unmatched neighbors',()=>{
+test(`${batch.name} bindings retain ${batch.bindings} buildings and ${batch.residuals} unmatched neighbors`,()=>{
  let count=0;const allSelected=new Set();
  for(const item of frozen.identities){
   assert.equal(hash(read(item.path)),item.sha256);
@@ -69,15 +73,17 @@ test('three complex bindings retain all52 identified buildings and65 unmatched n
    assert.equal(allSelected.has(row.sourceId),false);allSelected.add(row.sourceId);count++;
   }
  }
- assert.equal(count,52);assert.equal(audit.preservedResidualSourceIds.length,65);
+ assert.equal(count,batch.bindings);assert.equal(audit.preservedResidualSourceIds.length,batch.residuals);
  for(const fid of audit.preservedResidualSourceIds){assert.equal(allSelected.has(fid),false);assert.equal(Object.values(effective.matches).filter(ids=>ids.includes(fid)).length,1);}
- assert.equal(audit.sourceTriangles,93135);
+ assert.equal(audit.sourceTriangles,batch.triangles);
 });
-test('joint partition retains all27 earlier correction records and their files',()=>{
- const ids=audit.preservedPriorCorrectionIds;assert.equal(ids.length,27);
+test(`${batch.name} retains all ${batch.prior} earlier corrections and their files`,()=>{
+ const ids=audit.preservedPriorCorrectionIds;assert.equal(ids.length,batch.prior);
  const prior=corrections.corrections.filter(c=>ids.includes(c.sourceId));assert.deepEqual(prior.map(c=>c.sourceId),ids);
  // Preserve the publisher's numeric JSON representation (Python0.0 must not become JS0).
- const canonical=execFileSync('python3',['-c',"import json,hashlib; a=json.load(open('docs/model-audit/godeok-laclassy-generic-split.json')); c=json.load(open('public/models/generic-corrections.json')); p=[r for r in c['corrections'] if r['sourceId'] in a['preservedPriorCorrectionIds']]; print(hashlib.sha256(json.dumps(p,ensure_ascii=False,sort_keys=True,separators=(',',':')).encode()).hexdigest())"],{encoding:'utf8'}).trim();
+ const canonical=execFileSync('python3',['-c',"import sys,json,hashlib; a=json.load(open(sys.argv[1])); c=json.load(open('public/models/generic-corrections.json')); p=[r for r in c['corrections'] if r['sourceId'] in a['preservedPriorCorrectionIds']]; print(hashlib.sha256(json.dumps(p,ensure_ascii=False,sort_keys=True,separators=(',',':')).encode()).hexdigest())",`docs/model-audit/${batch.name}-generic-split.json`],{encoding:'utf8'}).trim();
  assert.equal(canonical,audit.preservedPriorCorrectionsCanonicalSha256);
  for(const c of prior)for(const a of c.assets)assert.equal(hash(read('public/models/'+a.model)),a.sha256);
 });
+
+}

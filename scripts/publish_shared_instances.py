@@ -64,6 +64,14 @@ def placement(source_row, target_row, source_asset, estimated_storey_height=None
     return anchor, [float(v) for v in matrix]
 
 
+def effective_fallback_assets(assets, corrections):
+    current = {asset['id']: asset for asset in assets}
+    for correction in corrections:
+        current.pop(correction['sourceId'], None)
+        current.update({asset['id']: asset for asset in correction['assets']})
+    return current
+
+
 def publish(args):
     site = safe_id(args.site)
     prefix = safe_id(args.id_prefix)
@@ -90,8 +98,9 @@ def publish(args):
     source_row = rows[args.representative_number]
     if source['footprintIds'] != [source_row['sourceId']]:
         raise ValueError('Representative source ownership does not match inventory')
-    fallback_assets = {a['id']: a for a in read(PUB / 'manifest.json')['assets']}
-    fallback_assets.update({a['id']: a for c in read(PUB / 'generic-corrections.json')['corrections'] for a in c['assets']})
+    fallback_assets = effective_fallback_assets(
+        read(PUB / 'manifest.json')['assets'],
+        read(PUB / 'generic-corrections.json')['corrections'])
     matches = read(PUB / 'footprint-matches.json')
     new = []
     for number, row in sorted(rows.items()):
@@ -101,7 +110,9 @@ def publish(args):
         binding = bindings[number]
         if binding['sourceFootprintId'] != row['sourceId']:
             raise ValueError('Target fallback source identity differs')
-        fallback = fallback_assets[binding['fallbackAssetId']]
+        fallback = fallback_assets.get(binding['fallbackAssetId'])
+        if fallback is None:
+            raise ValueError('Target fallback is no longer active: ' + binding['fallbackAssetId'])
         if fallback.get('footprintIds', matches.get(fallback['id'])) != [row['sourceId']] or fallback['sha256'] != binding['fallbackSha256']:
             raise ValueError('Target fallback ownership/hash differs')
         if any(row['sourceId'] in a.get('footprintIds', []) for a in by_id.values()):

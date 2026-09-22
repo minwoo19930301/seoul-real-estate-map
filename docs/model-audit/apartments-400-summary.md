@@ -25,6 +25,7 @@ K-apt 서울 자료의 123코드에는 복수 주소 등에 따른 추가 147행
 | A10023188 | 청량리역 한양수자인 그라시엘 | complete_residential_buildings | 4 / 4 | 0 |
 | A10024131 | 래미안 라클래시 | partial | 5 / 7 | 5 |
 | A10025010 | 고덕 아르테온 아파트 | partial | 25 / 41 | 25 |
+| A10025104 | 고덕센트럴 아이파크 | partial | 18 / 19 | 18 |
 | A10025263 | 고덕 그라시움 아파트 | partial | 22 / 53 | 22 |
 | A10025850 | 헬리오시티아파트 | complete_residential_buildings | 84 / 84 | 84 |
 | A10026004 | 신반포자이아파트 | complete_residential_buildings | 7 / 7 | 7 |
@@ -32,6 +33,7 @@ K-apt 서울 자료의 123코드에는 복수 주소 등에 따른 추가 147행
 | A10026227 | 아크로리버뷰 신반포 | complete_residential_buildings | 5 / 5 | 5 |
 | A10026988 | 트리마제 | complete_residential_buildings | 4 / 4 | 0 |
 | A10027205 | 아크로리버파크 | complete_residential_buildings | 15 / 15 | 15 |
+| A10027207 | 래미안힐스테이트 고덕 | partial | 28 / 51 | 28 |
 | A10027908 | 래미안첼리투스 | complete_residential_buildings | 3 / 3 | 0 |
 | A12174601 | 메세나폴리스 | complete_residential_buildings | 3 / 3 | 0 |
 | A13527017 | 타워팰리스1차 | complete_residential_buildings | 4 / 4 | 0 |

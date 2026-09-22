@@ -1,0 +1,43 @@
+{
+  "checkedOn": "2026-09-22",
+  "baselineCommit": "96a4fc3e5545282eb3eab68cb698d4a060d2a2a0",
+  "newPhysicalBuildings": 46,
+  "newRepresentatives": 2,
+  "newSharedCopies": 44,
+  "bespokeAssetRecords": 690,
+  "node": {
+    "passed": 13844,
+    "failed": 0
+  },
+  "python": {
+    "passed": 55,
+    "failed": 0
+  },
+  "browser": {
+    "passed": 6,
+    "scope": "Two complexes: normal, shared GLB404, shared GLB and one fallback404. Common geometry/material, one representative file fetch, fallback recovery verified."
+  },
+  "build": "passed",
+  "buildWarning": "generic-corrections chunk exceeds configured 1800KB warning threshold",
+  "preservation": {
+    "baseline": "96a4fc3e5545282eb3eab68cb698d4a060d2a2a0",
+    "public/models/manifest.json": 13607,
+    "public/models/reference-manifest.json": 125,
+    "public/models/bespoke-manifest.json": 644,
+    "priorCorrections": 33,
+    "unchangedPriorGLBAndBlendFiles": 114501
+  },
+  "placements": "shared-instance-placement-check.json",
+  "sourcePartitions": {
+    "trianglesPreserved": 32489,
+    "residualSourcesPreserved": 4,
+    "bindingSources": 46
+  },
+  "limitations": [
+    "Both complexes partial because source identity gaps remain.",
+    "Photos show other or unidentified numbered towers; representative exterior is complex-photo inference.",
+    "Clones repeat representative body, facade and floor pattern.",
+    "Plan overlap checks cover identified source bodies only; not all surrounding features or ornamental projections."
+  ],
+  "publication": "Local report before PR upload; not merged or deployed"
+}
