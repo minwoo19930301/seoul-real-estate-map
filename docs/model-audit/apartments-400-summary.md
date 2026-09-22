@@ -23,6 +23,7 @@ K-apt 서울 자료의 123코드에는 복수 주소 등에 따른 추가 147행
 | A10023043 | 래미안원베일리 | complete_residential_buildings | 23 / 23 | 22 |
 | A10023083 | 청량리역 롯데캐슬 SKY-L65 | complete_residential_buildings | 4 / 4 | 0 |
 | A10023188 | 청량리역 한양수자인 그라시엘 | complete_residential_buildings | 4 / 4 | 0 |
+| A10025850 | 헬리오시티아파트 | partial | 51 / 84 | 51 |
 | A10026004 | 신반포자이아파트 | complete_residential_buildings | 7 / 7 | 7 |
 | A10026207 | 서울숲리버뷰자이아파트 | complete_residential_buildings | 7 / 7 | 7 |
 | A10026227 | 아크로리버뷰 신반포 | complete_residential_buildings | 5 / 5 | 5 |

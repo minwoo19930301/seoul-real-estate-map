@@ -58,13 +58,26 @@ class HeightRegions(unittest.TestCase):
     def test_els72_preserves_registered_envelopes_and_original_standalone_bindings(self):
         self.assert_registered_envelopes('jamsil-els', range(101, 173), 5678, {121: 'residential-5ffec150-2a79-4581-8599-3dc2a60b75c9', 122: 'residential-2054abab-825b-4a26-ac58-95c70223e349'})
 
-    def assert_registered_envelopes(self, site, numbers, households, fallback_ids=None):
+    def test_helio51_preserves_registered_envelopes_and_all_eighty_four_fallback_bindings(self):
+        root = path.parents[2]
+        bindings = json.loads((root / 'docs/model-audit/songpa-helio-city-fallback-bindings.json').read_text())
+        numbers = list(range(101, 113)) + list(range(201, 220)) + list(range(301, 319)) + [401, 416]
+        expected_all = list(range(101, 113)) + list(range(201, 220)) + list(range(301, 319)) + list(range(401, 419)) + list(range(501, 518))
+        self.assertEqual(len(bindings['unchangedSingletons']), 40)
+        self.assertEqual([b['number'] for b in bindings['bindings']], expected_all)
+        assets = json.loads((root / 'public/models/bespoke-manifest.json').read_text())['assets']
+        self.assertEqual(sorted(int(a['id'].removeprefix('bespoke-songpa-helio-city-')) for a in assets if a['id'].startswith('bespoke-songpa-helio-city-')), numbers)
+        self.assert_registered_envelopes('songpa-helio-city', numbers, 9510, {b['number']: b['fallbackAssetId'] for b in bindings['bindings']}, strict_cap_ownership=True, source_numbers=expected_all)
+
+    def assert_registered_envelopes(self, site, numbers, households, fallback_ids=None, strict_cap_ownership=False, source_numbers=None):
         root = path.parents[2]
         assets = {a['id']: a for a in json.loads((root / 'public/models/bespoke-manifest.json').read_text())['assets']}
         sources = json.loads((root / f'docs/model-audit/{site}-source-identity.json').read_text())['towers']
-        self.assertEqual([s['number'] for s in sources], list(numbers))
+        self.assertEqual([s['number'] for s in sources], list(source_numbers if source_numbers is not None else numbers))
         self.assertEqual(sum(int(s['register']['households']) for s in sources), households)
         for source in sources:
+            if source['number'] not in numbers:
+                continue
             with self.subTest(number=source['number']):
                 asset = assets[f"bespoke-{site}-{source['number']}"]
                 self.assertEqual(asset['footprintIds'], [source['sourceId']])
@@ -91,6 +104,9 @@ class HeightRegions(unittest.TestCase):
                     cap = triangles[np.max(np.abs(triangles[:, :, 1] - height), axis=1) < 1e-4]
                     union = unary_union([Polygon(t[:, [0, 2]] * [1, -1]) for t in cap])
                     self.assertLess(footprint.buffer(-.03).difference(union).area, .001)
+                    if strict_cap_ownership:
+                        allowed = footprint.buffer(.5) if height == 0 else footprint
+                        self.assertLess(union.difference(allowed).area, .001)
                 raised = triangles[np.min(triangles[:, :, 1], axis=1) > deck_height + .01]
                 raised_points = module.shapely.points((raised[:, :, [0, 2]] * [1, -1]).reshape(-1, 2))
                 self.assertLess(float(module.shapely.distance(raised_points, footprint).max()), 1e-5)
