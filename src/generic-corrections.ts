@@ -22,6 +22,7 @@ export function applyGenericCorrections(assets: CityModelAsset[], matches: Recor
   const byId = new Map(assets.map(a => [a.id, a]));
   const effectiveMatches = { ...matches };
   const touched = new Set<string>();
+  const ancestry = new Map<string, string[]>();
   for (const correction of document.corrections) {
     const original = byId.get(correction.sourceId);
     const repartition = correction.kind === 'repartition';
@@ -58,8 +59,14 @@ export function applyGenericCorrections(assets: CityModelAsset[], matches: Recor
         || new Set(footprints).size !== footprints.length || !same(footprints, correction.sourceFootprintIds)) throw new Error('Generic correction must exactly partition original ownership');
     // Remove the compound only after every source footprint has a unique replacement.
     if (!partitionIds.includes(original.id)) { byId.delete(original.id); delete effectiveMatches[original.id]; }
+    const ancestors = [...new Set([original.id, ...(ancestry.get(original.id) ?? [])])];
     touched.add(original.id);
-    for (const part of correction.assets) { byId.set(part.id, part); effectiveMatches[part.id] = [...part.footprintIds!]; touched.add(part.id); }
+    for (const part of correction.assets) { byId.set(part.id, part); effectiveMatches[part.id] = [...part.footprintIds!]; touched.add(part.id); ancestry.set(part.id, ancestors); }
   }
-  return { assets: [...byId.values()], matches: effectiveMatches };
+  // Annotate only the returned runtime copies, after validating every historical record.
+  // Public correction objects remain byte-for-byte untouched, including metadata-only records.
+  const current = [...byId.values()].map(asset => asset.genericCorrection && ancestry.get(asset.id)?.some(id => id !== asset.genericCorrection!.sourceId)
+    ? { ...asset, genericCorrection: { ...asset.genericCorrection, ancestorSourceIds: [...ancestry.get(asset.id)!] } }
+    : asset);
+  return { assets: current, matches: effectiveMatches };
 }

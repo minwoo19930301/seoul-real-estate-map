@@ -12,6 +12,8 @@ from pathlib import Path
 import numpy as np
 from shapely.geometry import Polygon
 
+from bespoke.validate_height_regions import read_triangles
+
 from publish_bespoke_models import ROOT, PUB, read, encoded, sha, safe_id, replace_batch, validate_mcp_evidence
 
 METRES = 111319.49079327358
@@ -48,15 +50,17 @@ def target_height(row, estimated_storey_height=None):
     return floors * estimated_storey_height, f'Estimated {floors} floors x {estimated_storey_height}m; registered height missing/zero, not measured; cloned floor pattern unchanged'
 
 
-def placement(source_row, target_row, source_asset, estimated_storey_height=None):
+def placement(source_row, target_row, source_asset, estimated_storey_height=None, *, height_override=None, anchor_override=None):
     source_anchor = [source_asset['coordinate'][k] for k in ['lon', 'lat']]
     ring = target_row['geometry']['coordinates'][0]
     anchor = [(min(p[i] for p in ring) + max(p[i] for p in ring)) / 2 for i in [0, 1]]
+    if anchor_override is not None:
+        anchor = list(anchor_override)
     sb, ss, sc = frame(local_polygon(source_row, source_anchor))
     tb, ts, tc = frame(local_polygon(target_row, anchor))
     horizontal = tb @ np.diag(ts / ss) @ sb.T
     offset = tc - horizontal @ sc
-    height, _ = target_height(target_row, estimated_storey_height)
+    height = height_override if height_override is not None else target_height(target_row, estimated_storey_height)[0]
     sy = height / source_asset['dimensions'][1]
     matrix = [horizontal[0, 0], 0, -horizontal[1, 0], 0,
               0, sy, 0, 0, -horizontal[0, 1], 0, horizontal[1, 1], 0,
@@ -70,6 +74,42 @@ def effective_fallback_assets(assets, corrections):
         current.pop(correction['sourceId'], None)
         current.update({asset['id']: asset for asset in correction['assets']})
     return current
+
+
+PRESERVED_HEIGHT_BASIS = ('Existing visible fallback estimate preserved; registered height conflict unresolved, '
+                          'not measured; cloned floor pattern unchanged')
+
+
+def preserved_fallback_height(fallback):
+    """Measure baked GLB triangles, rather than trusting catalog height metadata."""
+    if (fallback.get('rootTransform') not in (None, 'identity') or fallback.get('modelInstance')
+            or fallback.get('yawDegFromEast', 0) != 0 or fallback.get('groundOffsetM', 0) != 0
+            or any(k in fallback for k in ('matrix', 'scale', 'rotation', 'translation'))):
+        raise ValueError('Fallback height preservation requires an untransformed grounded model')
+    path = (PUB / fallback['model']).resolve()
+    if not path.is_relative_to(PUB.resolve()) or not path.is_file():
+        raise ValueError('Fallback GLB is missing or outside the model directory')
+    digest = sha(path)
+    if digest != fallback['sha256']:
+        raise ValueError('Fallback GLB hash differs from binding')
+    # The existing decoder rejects scene/node transforms, skins, morphs and non-finite vertices.
+    triangles = read_triangles(path)
+    if not triangles.size or not np.isfinite(triangles).all():
+        raise ValueError('Fallback geometry has no finite bounds')
+    lo, hi = triangles.reshape(-1, 3).min(axis=0), triangles.reshape(-1, 3).max(axis=0)
+    height = float(hi[1] - lo[1])
+    if not math.isfinite(height) or height <= 0 or abs(float(lo[1])) > .01:
+        raise ValueError('Fallback height must be finite, positive and grounded at local Y zero')
+    coordinate = fallback.get('coordinate', {})
+    anchor = [coordinate.get(k) for k in ('lon', 'lat')]
+    if (not all(isinstance(v, (int, float)) and math.isfinite(v) for v in anchor)
+            or not -180 <= anchor[0] <= 180 or not -90 <= anchor[1] <= 90):
+        raise ValueError('Fallback anchor must be finite geographic coordinates')
+    proof = {'policy': 'preserve-existing-visible-fallback-height', 'fallbackId': fallback['id'],
+             'fallbackSha256': digest, 'fallbackModel': fallback['model'], 'heightM': height,
+             'localBounds': {'min': lo.tolist(), 'max': hi.tolist()}, 'anchor': anchor,
+             'heightBasis': PRESERVED_HEIGHT_BASIS}
+    return height, proof
 
 
 def publish(args):
@@ -95,6 +135,13 @@ def publish(args):
     if site in evidence['sites']:
         raise ValueError('Publication already exists; preserve its immutable audit identity')
     rows = {r['number']: r for r in identity['towers']}
+    preserve_numbers = set(getattr(args, 'preserve_fallback_height_for', []) or [])
+    if preserve_numbers - rows.keys():
+        raise ValueError('Unknown height-preservation target number')
+    if args.representative_number in preserve_numbers:
+        raise ValueError('Cannot preserve fallback height for the representative')
+    if any(f'{prefix}-{number}' in by_id for number in preserve_numbers):
+        raise ValueError('Height-preservation target already exists')
     source_row = rows[args.representative_number]
     if source['footprintIds'] != [source_row['sourceId']]:
         raise ValueError('Representative source ownership does not match inventory')
@@ -117,8 +164,15 @@ def publish(args):
             raise ValueError('Target fallback ownership/hash differs')
         if any(row['sourceId'] in a.get('footprintIds', []) for a in by_id.values()):
             raise ValueError('Target already has a reviewed model under another identity')
-        anchor, matrix = placement(source_row, row, source, args.estimated_storey_height)
-        height, height_basis = target_height(row, args.estimated_storey_height)
+        height_policy = None
+        if number in preserve_numbers:
+            height, height_policy = preserved_fallback_height(fallback)
+            height_basis = PRESERVED_HEIGHT_BASIS
+            anchor, matrix = placement(source_row, row, source, args.estimated_storey_height,
+                                       height_override=height, anchor_override=height_policy['anchor'])
+        else:
+            anchor, matrix = placement(source_row, row, source, args.estimated_storey_height)
+            height, height_basis = target_height(row, args.estimated_storey_height)
         asset = {k: copy.deepcopy(source[k]) for k in ['model', 'sha256', 'heightDatum', 'quality', 'referenceUrl', 'category', 'district', 'minZoom'] if k in source}
         asset.update(id=aid, nameKo=f'{args.name} {number}동', coordinate=dict(zip(['lon', 'lat'], anchor)),
                      yawDegFromEast=0, footprintIds=[row['sourceId']], supersedes=binding['supersedes'],
@@ -134,8 +188,13 @@ def publish(args):
                       inferenceScope=LIMITS, accuracy=LIMITS, components=['Shared representative geometry/materials', 'Inventory-based placement/size transform'],
                       uncertainties=[LIMITS, *source_record.get('uncertainties', [])],
                       buildingFacts={'floors': int(row['register']['floors']), 'floorsBasis': 'Existing register metadata; the cloned floor pattern is unchanged',
-                                     'heightM': height, 'registeredHeightM': float(row['register']['height'] or 0), 'sourceHeightM': row['sourceHeightM'],
+                                     'heightM': height, 'registeredHeightM': float(row['register']['height'] or 0), 'sourceHeightM': row.get('sourceHeightM', row.get('osmHeightM')),
                                      'heightBasis': height_basis})
+        if height_policy is not None:
+            asset['heightEstimated'] = True
+            record['heightPolicy'] = height_policy
+            record['buildingFacts']['heightUnresolved'] = True
+            record['uncertainties'].append(PRESERVED_HEIGHT_BASIS)
         asset['sourceRecord'] = record
         new.append(asset)
     if not new:
@@ -153,7 +212,9 @@ def publish(args):
         sx = METRES * math.cos(math.radians(lat))
         asset.update(dimensions=bounds['dimensions'], geoBounds=[lon + lo[0] / sx, lat - hi[2] / METRES, lon + hi[0] / sx, lat - lo[2] / METRES])
         records.append({**bounds, 'sha256': source['sha256'], 'sourceSha256': source_record['sourceGlbSha256'],
-                        'sharedModel': source['model'], 'modelInstance': asset['modelInstance']})
+                        'sharedModel': source['model'], 'modelInstance': asset['modelInstance'],
+                        **({'heightPolicy': asset['sourceRecord']['heightPolicy']}
+                           if 'heightPolicy' in asset['sourceRecord'] else {})})
     review = copy.deepcopy(source_site['review'])
     review.update(siteId=site, reviewScope='One representative visually reviewed; batch placement checks and sample map review for shared copies',
                   inferenceApprovedAssets=[a['id'] for a in new],
@@ -163,7 +224,7 @@ def publish(args):
                              'mcpEvidence': source_site['mcpEvidence'], 'recipeInputs': [],
                              'sharedRepresentative': source['id'], 'newGlbFiles': 0, 'newBlendFiles': 0,
                              'placementInputs': [{'path': str(p.relative_to(ROOT)), 'sha256': sha(p)} for p in [args.identity, args.bindings]],
-                             'placementMethod': 'Long-axis oriented rectangle mapping with positive plan scales and registered overall height; actual concave target shapes are not reconstructed.'}
+                             'placementMethod': 'Long-axis oriented rectangle mapping with positive plan scales and explicit per-target height basis; actual concave target shapes are not reconstructed.'}
     manifest['assets'].extend(new)
     deployment_path = ROOT / 'public/data/deployment-assets.json'
     deployment = read(deployment_path)
@@ -182,4 +243,6 @@ if __name__ == '__main__':
     parser.add_argument('--representative-number', type=int, required=True)
     parser.add_argument('--hidden-node', action='append', default=[], help='Repeat for representative number-label nodes; omit when the representative is unlabeled')
     parser.add_argument('--estimated-storey-height', type=float, help='Explicit estimate used only where the register height is missing/zero')
+    parser.add_argument('--preserve-fallback-height-for', type=int, action='append', default=[], metavar='NUMBER',
+                        help='Explicitly preserve this target current fallback GLB height; repeat for each reviewed unresolved-height exception')
     publish(parser.parse_args())

@@ -66503,6 +66503,1347 @@
           }
         }
       ]
+    },
+    {
+      "sourceId": "apt-a10020267",
+      "sourceSha256": "74b834b2b0af2822be5621a0a37307896e2ac909f5202ce9aaa5bf9a11af6907",
+      "sourceFootprintIds": [
+        "02b5eb9c-c9d4-4ec8-8b68-6d4612f7bd10",
+        "f775b4ee-a0b9-4016-abc0-0856b6337da8",
+        "ce90ca0c-9cb0-4c86-ac08-d383bc5e37df",
+        "a6fc9002-b463-4b11-a9cf-bbf3ad57aa58",
+        "69a0b004-bf13-43ee-94ae-fe5fe835854e"
+      ],
+      "assets": [
+        {
+          "id": "apt-a10020267",
+          "model": "generic-corrections/apt-a10020267.glb",
+          "name": "대상 외 원천 건물 (기존 추정 모형)",
+          "nameKo": "대상 외 원천 건물 (기존 추정 모형)",
+          "district": "서대문구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            26.9371337890625,
+            60.0,
+            30.50145721435547
+          ],
+          "measuredGlbDimensions": [
+            26.9371337890625,
+            60.0,
+            30.50145721435547
+          ],
+          "bounds": {
+            "min": [
+              -77.09684753417969,
+              0.0,
+              47.455955505371094
+            ],
+            "max": [
+              -50.15971374511719,
+              60.0,
+              77.95741271972656
+            ]
+          },
+          "triangles": 292,
+          "drawCalls": 3,
+          "bytes": 21192,
+          "sha256": "01f70328c79b32306960fd84c114de2440da94ab6f55b8f50deddeb6df92bb31",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.91436540000001,
+            "lat": 37.571320103292436,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "a6fc9002-b463-4b11-a9cf-bbf3ad57aa58"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/APARTMENT_100_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": true,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            126.9134915958477,
+            37.57061979664644,
+            126.91379689729787,
+            37.57089379797084
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a10020267",
+            "sourceSha256": "74b834b2b0af2822be5621a0a37307896e2ac909f5202ce9aaa5bf9a11af6907",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-dmc-parkview-xi-completion-401",
+          "model": "generic-corrections/fallback-dmc-parkview-xi-completion-401.glb",
+          "name": "DMC파크뷰자이아파트 401동",
+          "nameKo": "DMC파크뷰자이아파트 401동",
+          "district": "서대문구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            45.765777587890625,
+            49.0,
+            37.092098236083984
+          ],
+          "measuredGlbDimensions": [
+            45.765777587890625,
+            49.0,
+            37.092098236083984
+          ],
+          "bounds": {
+            "min": [
+              31.331071853637695,
+              0.0,
+              -77.95741271972656
+            ],
+            "max": [
+              77.09684753417969,
+              49.0,
+              -40.86531448364258
+            ]
+          },
+          "triangles": 380,
+          "drawCalls": 3,
+          "bytes": 26680,
+          "sha256": "ac84725599730d8fc4556cae40646251e79f2c41141a3fd6de4de1e7052e4c25",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.91436540000001,
+            "lat": 37.571320103292436,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "69a0b004-bf13-43ee-94ae-fe5fe835854e"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/APARTMENT_100_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            126.9147205016878,
+            37.57168720175361,
+            126.91523920415231,
+            37.57202040335354
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a10020267",
+            "sourceSha256": "74b834b2b0af2822be5621a0a37307896e2ac909f5202ce9aaa5bf9a11af6907",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-dmc-parkview-xi-completion-402",
+          "model": "generic-corrections/fallback-dmc-parkview-xi-completion-402.glb",
+          "name": "DMC파크뷰자이아파트 402동",
+          "nameKo": "DMC파크뷰자이아파트 402동",
+          "district": "서대문구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            26.231281280517578,
+            30.0,
+            23.38840103149414
+          ],
+          "measuredGlbDimensions": [
+            26.231281280517578,
+            30.0,
+            23.38840103149414
+          ],
+          "bounds": {
+            "min": [
+              7.270290851593018,
+              0.0,
+              -33.874385833740234
+            ],
+            "max": [
+              33.50157165527344,
+              30.0,
+              -10.48598575592041
+            ]
+          },
+          "triangles": 128,
+          "drawCalls": 3,
+          "bytes": 11044,
+          "sha256": "e620bf5278ffa3465bb104c91b8d5c585c672537bffa368e8331d71c8b0a3b69",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.91436540000001,
+            "lat": 37.571320103292436,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "02b5eb9c-c9d4-4ec8-8b68-6d4612f7bd10"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/APARTMENT_100_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            126.91444780039039,
+            37.571414300445625,
+            126.9147451018083,
+            37.57162440145614
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a10020267",
+            "sourceSha256": "74b834b2b0af2822be5621a0a37307896e2ac909f5202ce9aaa5bf9a11af6907",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-dmc-parkview-xi-completion-403",
+          "model": "generic-corrections/fallback-dmc-parkview-xi-completion-403.glb",
+          "name": "DMC파크뷰자이아파트 403동",
+          "nameKo": "DMC파크뷰자이아파트 403동",
+          "district": "서대문구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            19.825660705566406,
+            31.0,
+            22.364253997802734
+          ],
+          "measuredGlbDimensions": [
+            19.825660705566406,
+            31.0,
+            22.364253997802734
+          ],
+          "bounds": {
+            "min": [
+              -18.378660202026367,
+              0.0,
+              -34.152687072753906
+            ],
+            "max": [
+              1.4469996690750122,
+              31.0,
+              -11.788432121276855
+            ]
+          },
+          "triangles": 128,
+          "drawCalls": 3,
+          "bytes": 11060,
+          "sha256": "bf4fc49e681bed3e3aca47e4b0afcae41472a564d4bb11dbc546cbbf1362a86c",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.91436540000001,
+            "lat": 37.571320103292436,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "f775b4ee-a0b9-4016-abc0-0856b6337da8"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/APARTMENT_100_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            126.91415709901091,
+            37.57142600050466,
+            126.91438180007809,
+            37.57162690146845
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a10020267",
+            "sourceSha256": "74b834b2b0af2822be5621a0a37307896e2ac909f5202ce9aaa5bf9a11af6907",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-dmc-parkview-xi-completion-404",
+          "model": "generic-corrections/fallback-dmc-parkview-xi-completion-404.glb",
+          "name": "DMC파크뷰자이아파트 404동",
+          "nameKo": "DMC파크뷰자이아파트 404동",
+          "district": "서대문구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            19.825660705566406,
+            31.0,
+            22.364337921142578
+          ],
+          "measuredGlbDimensions": [
+            19.825660705566406,
+            31.0,
+            22.364337921142578
+          ],
+          "bounds": {
+            "min": [
+              3.3969199657440186,
+              0.0,
+              -65.33361053466797
+            ],
+            "max": [
+              23.222579956054688,
+              31.0,
+              -42.96927261352539
+            ]
+          },
+          "triangles": 128,
+          "drawCalls": 3,
+          "bytes": 11052,
+          "sha256": "9b57a5509f6833463b65fff04551218b298fd3ac6dc8e3149df5cbc767d08a51",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.91436540000001,
+            "lat": 37.571320103292436,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "ce90ca0c-9cb0-4c86-ac08-d383bc5e37df"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/APARTMENT_100_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            126.91440390018343,
+            37.57170610183552,
+            126.91462860125196,
+            37.571907002789054
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a10020267",
+            "sourceSha256": "74b834b2b0af2822be5621a0a37307896e2ac909f5202ce9aaa5bf9a11af6907",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        }
+      ]
+    },
+    {
+      "sourceId": "apt-a10024938",
+      "sourceSha256": "2d2e34870ef1f7bcfd239eecedfc5c4bcc082da0f3f17e51364dc2f2887d1365",
+      "sourceFootprintIds": [
+        "399f6e7d-9a7a-4957-8277-95af5b2dfb2d",
+        "02fadcea-db46-44bf-a1b8-6e39277539b2",
+        "281d16d6-5022-4095-b7bc-3ab50960d2bd",
+        "a0175bed-06c3-4c32-a627-7556844e7f6a",
+        "95ed75c3-593f-447f-b63b-aa3fa978862f",
+        "cc8b652f-30c2-423e-9580-ec7090ba6f41",
+        "c99e8f0e-444d-4740-84c1-7251945b11a9",
+        "5a1cdf7f-9d67-439f-bcd3-ed28e826b65e",
+        "027226ca-f631-4b01-825e-3d0d5e445ebe",
+        "8fa0bbe8-c3b8-44ed-bde1-6e2904d4b303"
+      ],
+      "assets": [
+        {
+          "id": "residual-dmc-completion-apt-a10024938",
+          "model": "generic-corrections/residual-dmc-completion-apt-a10024938.glb",
+          "name": "대상 외 원천 건물 (기존 추정 모형)",
+          "nameKo": "대상 외 원천 건물 (기존 추정 모형)",
+          "district": "서대문구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            256.00494384765625,
+            78.6500015258789,
+            151.7960662841797
+          ],
+          "measuredGlbDimensions": [
+            256.00494384765625,
+            78.6500015258789,
+            151.7960662841797
+          ],
+          "bounds": {
+            "min": [
+              -105.9585189819336,
+              0.0,
+              -132.73715209960938
+            ],
+            "max": [
+              150.0464324951172,
+              78.6500015258789,
+              19.058908462524414
+            ]
+          },
+          "triangles": 3865,
+          "drawCalls": 3,
+          "bytes": 233736,
+          "sha256": "a9ab52e10aadf76455fdebcc7adc4b5aa7eae82380ddfd56b06c7fd3ca7c6793",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.9163936,
+            "lat": 37.57541150954674,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 8,
+          "footprintIds": [
+            "399f6e7d-9a7a-4957-8277-95af5b2dfb2d",
+            "02fadcea-db46-44bf-a1b8-6e39277539b2",
+            "281d16d6-5022-4095-b7bc-3ab50960d2bd",
+            "a0175bed-06c3-4c32-a627-7556844e7f6a",
+            "95ed75c3-593f-447f-b63b-aa3fa978862f",
+            "cc8b652f-30c2-423e-9580-ec7090ba6f41",
+            "5a1cdf7f-9d67-439f-bcd3-ed28e826b65e",
+            "027226ca-f631-4b01-825e-3d0d5e445ebe"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": true,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            126.91519261599605,
+            37.57524030026221,
+            126.9180942972824,
+            37.576603898125015
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a10024938",
+            "sourceSha256": "2d2e34870ef1f7bcfd239eecedfc5c4bcc082da0f3f17e51364dc2f2887d1365",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-dmc-parkview-xi-completion-220",
+          "model": "generic-corrections/fallback-dmc-parkview-xi-completion-220.glb",
+          "name": "DMC파크뷰자이아파트 220동",
+          "nameKo": "DMC파크뷰자이아파트 220동",
+          "district": "서대문구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            33.45539855957031,
+            69.0,
+            34.753517150878906
+          ],
+          "measuredGlbDimensions": [
+            33.45539855957031,
+            69.0,
+            34.753517150878906
+          ],
+          "bounds": {
+            "min": [
+              -150.0464324951172,
+              0.0,
+              71.14493560791016
+            ],
+            "max": [
+              -116.59103393554688,
+              69.0,
+              105.89845275878906
+            ]
+          },
+          "triangles": 1162,
+          "drawCalls": 3,
+          "bytes": 71840,
+          "sha256": "9542fb7efbe42e30af40fb70550c0ef611feb4028560f432ccb1bdf031c81dff",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.9163936,
+            "lat": 37.57541150954674,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "8fa0bbe8-c3b8-44ed-bde1-6e2904d4b303"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            126.91469290271762,
+            37.57446020148354,
+            126.91507210203922,
+            37.57477240097374
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a10024938",
+            "sourceSha256": "2d2e34870ef1f7bcfd239eecedfc5c4bcc082da0f3f17e51364dc2f2887d1365",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-dmc-parkview-xi-completion-221",
+          "model": "generic-corrections/fallback-dmc-parkview-xi-completion-221.glb",
+          "name": "DMC파크뷰자이아파트 221동",
+          "nameKo": "DMC파크뷰자이아파트 221동",
+          "district": "서대문구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            48.76664733886719,
+            35.0,
+            10.036857604980469
+          ],
+          "measuredGlbDimensions": [
+            48.76664733886719,
+            35.0,
+            10.036857604980469
+          ],
+          "bounds": {
+            "min": [
+              -112.8963394165039,
+              0.0,
+              43.43431854248047
+            ],
+            "max": [
+              -64.12969207763672,
+              35.0,
+              53.47117614746094
+            ]
+          },
+          "triangles": 260,
+          "drawCalls": 3,
+          "bytes": 19240,
+          "sha256": "49ccef0ca35607fab55c2934ef883f6457249cf82e6948f1ff7d4d75fb2672aa",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.9163936,
+            "lat": 37.57541150954674,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": false,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "c99e8f0e-444d-4740-84c1-7251945b11a9"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            126.91511397945558,
+            37.5749311682496,
+            126.91566672371762,
+            37.57502133140251
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a10024938",
+            "sourceSha256": "2d2e34870ef1f7bcfd239eecedfc5c4bcc082da0f3f17e51364dc2f2887d1365",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        }
+      ],
+      "kind": "repartition"
+    },
+    {
+      "sourceId": "apt-a12012101",
+      "sourceSha256": "ec1e697e7206f099b70d4fcff683b7c2c53aca3fe0472c0b5df86ecd7f8beedb",
+      "sourceFootprintIds": [
+        "07ca412a-c40c-4b10-9557-77989ded8898",
+        "6ab4425c-2314-4679-862b-75ad471678bb",
+        "10ad21e1-d6be-47c6-aa44-89a090321066",
+        "727a222e-529f-4ff8-8ecd-9d088de4df47",
+        "4f810c10-81f4-4d9e-85f0-81685a6b987c",
+        "c0cde1f4-a28b-444c-a799-fe977978f21c",
+        "62bdd743-8817-4395-beed-0493d5f3c1b2",
+        "efe218d8-873c-4ece-8ee0-f9370b0af9bc",
+        "e48f1561-5566-4a2a-9b79-8d791f217883",
+        "b55a8c16-48c5-44fa-990a-f59939368b9e",
+        "3b07ca62-48f5-4297-b0ff-6b81996826fa",
+        "1d38f274-1da6-4b46-aa60-bba5b1d77d37",
+        "c6281e8b-5c31-4e73-81a8-da09fba8bcf6"
+      ],
+      "assets": [
+        {
+          "id": "apt-a12012101",
+          "model": "generic-corrections/apt-a12012101.glb",
+          "name": "대상 외 원천 건물 (기존 추정 모형)",
+          "nameKo": "대상 외 원천 건물 (기존 추정 모형)",
+          "district": "서대문구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            173.89688110351562,
+            41.0,
+            234.072265625
+          ],
+          "measuredGlbDimensions": [
+            173.89688110351562,
+            41.0,
+            234.072265625
+          ],
+          "bounds": {
+            "min": [
+              -123.61969757080078,
+              0.0,
+              -114.42008209228516
+            ],
+            "max": [
+              50.27717590332031,
+              41.0,
+              119.65219116210938
+            ]
+          },
+          "triangles": 3229,
+          "drawCalls": 3,
+          "bytes": 203148,
+          "sha256": "e47de09ec3134843471fea0813df085c4ecd872875c3b2d0c548fade6f4f6895",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.91294599999999,
+            "lat": 37.57227085775636,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 11,
+          "footprintIds": [
+            "07ca412a-c40c-4b10-9557-77989ded8898",
+            "6ab4425c-2314-4679-862b-75ad471678bb",
+            "10ad21e1-d6be-47c6-aa44-89a090321066",
+            "727a222e-529f-4ff8-8ecd-9d088de4df47",
+            "4f810c10-81f4-4d9e-85f0-81685a6b987c",
+            "c0cde1f4-a28b-444c-a799-fe977978f21c",
+            "62bdd743-8817-4395-beed-0493d5f3c1b2",
+            "efe218d8-873c-4ece-8ee0-f9370b0af9bc",
+            "e48f1561-5566-4a2a-9b79-8d791f217883",
+            "b55a8c16-48c5-44fa-990a-f59939368b9e",
+            "3b07ca62-48f5-4297-b0ff-6b81996826fa"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/APARTMENT_400_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": true,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            126.9115448949292,
+            37.571195996078984,
+            126.91351584127518,
+            37.57329870374898
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a12012101",
+            "sourceSha256": "ec1e697e7206f099b70d4fcff683b7c2c53aca3fe0472c0b5df86ecd7f8beedb",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-dmc-parkview-xi-completion-211",
+          "model": "generic-corrections/fallback-dmc-parkview-xi-completion-211.glb",
+          "name": "DMC파크뷰자이아파트 211동",
+          "nameKo": "DMC파크뷰자이아파트 211동",
+          "district": "서대문구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            26.045631408691406,
+            46.0,
+            14.416122436523438
+          ],
+          "measuredGlbDimensions": [
+            26.045631408691406,
+            46.0,
+            14.416122436523438
+          ],
+          "bounds": {
+            "min": [
+              38.64494323730469,
+              0.0,
+              -119.65219116210938
+            ],
+            "max": [
+              64.6905746459961,
+              46.0,
+              -105.23606872558594
+            ]
+          },
+          "triangles": 200,
+          "drawCalls": 3,
+          "bytes": 15520,
+          "sha256": "961a2ed8662ec459a6d1e00c468b9906b445dc2f5dc529f00914fb1e67357aac",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.91294599999999,
+            "lat": 37.57227085775636,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "c6281e8b-5c31-4e73-81a8-da09fba8bcf6"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/APARTMENT_400_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            126.91338400160487,
+            37.57321620344614,
+            126.91367920266875,
+            37.57334570392092
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a12012101",
+            "sourceSha256": "ec1e697e7206f099b70d4fcff683b7c2c53aca3fe0472c0b5df86ecd7f8beedb",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-dmc-parkview-xi-completion-501",
+          "model": "generic-corrections/fallback-dmc-parkview-xi-completion-501.glb",
+          "name": "DMC파크뷰자이아파트 501동",
+          "nameKo": "DMC파크뷰자이아파트 501동",
+          "district": "서대문구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            45.041648864746094,
+            31.0,
+            53.67850112915039
+          ],
+          "measuredGlbDimensions": [
+            45.041648864746094,
+            31.0,
+            53.67850112915039
+          ],
+          "bounds": {
+            "min": [
+              78.57804870605469,
+              0.0,
+              -33.8682861328125
+            ],
+            "max": [
+              123.61969757080078,
+              31.0,
+              19.81021499633789
+            ]
+          },
+          "triangles": 714,
+          "drawCalls": 3,
+          "bytes": 44728,
+          "sha256": "9045d12ffef52a2e2332bd68d6f3b9f7431b6388c1ffd7e583525fa6ff3bcbd7",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.91294599999999,
+            "lat": 37.57227085775636,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "1d38f274-1da6-4b46-aa60-bba5b1d77d37"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/APARTMENT_400_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            126.91383660323442,
+            37.572092899354615,
+            126.91434710507079,
+            37.57257510112569
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a12012101",
+            "sourceSha256": "ec1e697e7206f099b70d4fcff683b7c2c53aca3fe0472c0b5df86ecd7f8beedb",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        }
+      ]
+    },
+    {
+      "sourceId": "apt-a12013003",
+      "sourceSha256": "a4466100e81a8d2e4bde3432d2bbbabd189ff160e37dc127f28a6a9a9de4b026",
+      "sourceFootprintIds": [
+        "5c0d0ca9-618b-4b04-9cf3-02b0bbde2572",
+        "9ad60427-6a25-4a0e-81a6-c86fd4179472",
+        "9bc9f4cf-80eb-4fe1-a1d0-bb85e223e1dd",
+        "1d0b4503-2412-41e8-aaff-b66c8941c1e8",
+        "23bdde83-4ded-42b8-bdc9-030ed5f74d92",
+        "563ff623-fbd8-41d0-af1c-8b850fe470ab",
+        "349b5513-3786-4119-b3da-d9a89f74bb1d",
+        "b0173f2b-8c57-4974-b4c4-ddd718312f43",
+        "73bce931-e6fe-43e8-a72f-ebd606251e44",
+        "ba964c87-3a6a-41ce-8638-2c3b9ad5774c",
+        "b88e60d9-10b2-426d-8d90-9cb473e0bd04",
+        "95979fb6-cb69-4679-b6f6-1c409a361298",
+        "271d82cc-f16a-494d-ae85-f8cadf527a88",
+        "2de81be2-6bff-4666-a222-65081f09d536",
+        "d735d81d-3143-43ea-ac0c-46064f1e0700",
+        "b1d5c9c5-c6ef-4c33-a1e7-0d95e46ce01e",
+        "3db06dbb-f149-41ae-aa86-0b8582fa1a10",
+        "e0099476-776a-4284-b259-7e51bdbb66d4",
+        "c23ca5f3-bacd-45da-8cc9-88421f169972",
+        "26b7562c-31e9-4cc2-a704-56579ec951b5",
+        "7dcfdaaf-f9a8-4901-9c48-da32f15b19b5",
+        "0d1e8d63-195c-4209-9b32-960c05458105",
+        "d2ee177b-98cd-4596-b299-7d62485cef2d",
+        "e7160c0d-521d-4150-93f8-bb12dce4c3e2",
+        "8654fbfc-4dd2-4b10-9d62-c49b07cf97d5",
+        "97e5ff76-5ecb-404c-bfae-3c552ae154b7",
+        "63a69389-8a03-4c0c-8b8f-d4043867f011",
+        "96126c18-cc44-4e19-892e-43443406b071"
+      ],
+      "assets": [
+        {
+          "id": "apt-a12013003",
+          "model": "generic-corrections/apt-a12013003.glb",
+          "name": "대상 외 원천 건물 (기존 추정 모형)",
+          "nameKo": "대상 외 원천 건물 (기존 추정 모형)",
+          "district": "서대문구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            451.89410400390625,
+            104.0,
+            405.5056457519531
+          ],
+          "measuredGlbDimensions": [
+            451.89410400390625,
+            104.0,
+            405.5056457519531
+          ],
+          "bounds": {
+            "min": [
+              -269.7088928222656,
+              0.0,
+              -202.75282287597656
+            ],
+            "max": [
+              182.18519592285156,
+              104.0,
+              202.75282287597656
+            ]
+          },
+          "triangles": 12872,
+          "drawCalls": 3,
+          "bytes": 781296,
+          "sha256": "a7f7d95271427b1b0def85fa439c33764cc143dab22432f742a030195db66b7b",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.91087900000001,
+            "lat": 37.57316407227217,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 27,
+          "footprintIds": [
+            "5c0d0ca9-618b-4b04-9cf3-02b0bbde2572",
+            "9ad60427-6a25-4a0e-81a6-c86fd4179472",
+            "9bc9f4cf-80eb-4fe1-a1d0-bb85e223e1dd",
+            "1d0b4503-2412-41e8-aaff-b66c8941c1e8",
+            "23bdde83-4ded-42b8-bdc9-030ed5f74d92",
+            "563ff623-fbd8-41d0-af1c-8b850fe470ab",
+            "349b5513-3786-4119-b3da-d9a89f74bb1d",
+            "b0173f2b-8c57-4974-b4c4-ddd718312f43",
+            "73bce931-e6fe-43e8-a72f-ebd606251e44",
+            "ba964c87-3a6a-41ce-8638-2c3b9ad5774c",
+            "b88e60d9-10b2-426d-8d90-9cb473e0bd04",
+            "95979fb6-cb69-4679-b6f6-1c409a361298",
+            "271d82cc-f16a-494d-ae85-f8cadf527a88",
+            "2de81be2-6bff-4666-a222-65081f09d536",
+            "d735d81d-3143-43ea-ac0c-46064f1e0700",
+            "b1d5c9c5-c6ef-4c33-a1e7-0d95e46ce01e",
+            "3db06dbb-f149-41ae-aa86-0b8582fa1a10",
+            "e0099476-776a-4284-b259-7e51bdbb66d4",
+            "c23ca5f3-bacd-45da-8cc9-88421f169972",
+            "26b7562c-31e9-4cc2-a704-56579ec951b5",
+            "7dcfdaaf-f9a8-4901-9c48-da32f15b19b5",
+            "0d1e8d63-195c-4209-9b32-960c05458105",
+            "d2ee177b-98cd-4596-b299-7d62485cef2d",
+            "e7160c0d-521d-4150-93f8-bb12dce4c3e2",
+            "8654fbfc-4dd2-4b10-9d62-c49b07cf97d5",
+            "97e5ff76-5ecb-404c-bfae-3c552ae154b7",
+            "63a69389-8a03-4c0c-8b8f-d4043867f011"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/DISTRICT_LANDMARK_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": true,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            126.90782208401377,
+            37.57134269040302,
+            126.9129439109195,
+            37.57498540959651
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a12013003",
+            "sourceSha256": "a4466100e81a8d2e4bde3432d2bbbabd189ff160e37dc127f28a6a9a9de4b026",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-dmc-parkview-xi-completion-218",
+          "model": "generic-corrections/fallback-dmc-parkview-xi-completion-218.glb",
+          "name": "DMC파크뷰자이아파트 218동",
+          "nameKo": "DMC파크뷰자이아파트 218동",
+          "district": "서대문구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            35.21240234375,
+            83.0,
+            30.6134033203125
+          ],
+          "measuredGlbDimensions": [
+            35.21240234375,
+            83.0,
+            30.6134033203125
+          ],
+          "bounds": {
+            "min": [
+              234.49649047851562,
+              0.0,
+              -118.92717742919922
+            ],
+            "max": [
+              269.7088928222656,
+              83.0,
+              -88.31377410888672
+            ]
+          },
+          "triangles": 856,
+          "drawCalls": 3,
+          "bytes": 52868,
+          "sha256": "cb71d812ca6e0acaee84dd189afae8db23c5f62ba211a8e115de09504af5ed99",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 126.91087900000001,
+            "lat": 37.57316407227217,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "96126c18-cc44-4e19-892e-43443406b071"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/DISTRICT_LANDMARK_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            126.91353681399701,
+            37.57395740417736,
+            126.91393591598624,
+            37.57423240562102
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a12013003",
+            "sourceSha256": "a4466100e81a8d2e4bde3432d2bbbabd189ff160e37dc127f28a6a9a9de4b026",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        }
+      ]
     }
   ]
 }

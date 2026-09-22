@@ -115,7 +115,7 @@ class HeightRegions(unittest.TestCase):
         root = path.parents[2]
         assets = json.loads((root / 'public/models/bespoke-manifest.json').read_text())['assets']
         sources = {s['number']: s for s in json.loads((root / 'docs/model-audit/banpo-xi-source-identity.json').read_text())['towers']}
-        family = [a for a in assets if a['id'].startswith('bespoke-banpo-xi-')]
+        family = [a for a in assets if a['id'].startswith('bespoke-banpo-xi-') and not a.get('modelInstance')]
         self.assertGreaterEqual(len(family), 13)
         self.assertEqual(sum(int(s['register']['households']) for s in sources.values()), 3410)
         for asset in family:

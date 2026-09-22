@@ -39,12 +39,13 @@ for (const batch of [
  {name:'seocho-gaepo-blesstige-honor', bindings:78, residuals:17, prior:38, triangles:61407},
  {name:'dmc-extension', bindings:33, residuals:25, prior:42, triangles:18080},
  {name:'mapo-two', bindings:49, residuals:8, prior:46, triangles:61489},
+ {name:'dmc-completion', bindings:22, residuals:47, prior:48, triangles:24214},
 ]) {
 const audit=json(`docs/model-audit/${batch.name}-generic-split.json`);
 const frozen=json(`docs/model-audit/${batch.name}-fallback-inputs.json`);
 for (const input of frozen.compounds) test(`${input.assetId} source-emission partition conserves every archived attribute and owner`,()=>{
- const source=base.assets.find(a=>a.id===input.assetId),proof=audit.sources.find(p=>p.sourceId===input.assetId);
- const correction=corrections.corrections.find(c=>c.sourceId===input.assetId);
+ const source=[...base.assets,...corrections.corrections.flatMap(c=>c.assets)].find(a=>a.id===input.assetId&&a.sha256===input.sha256),proof=audit.sources.find(p=>p.sourceId===input.assetId);
+ const correction=corrections.corrections.find(c=>c.sourceId===input.assetId&&c.sourceSha256===input.sha256);
  assert.equal(source.sha256,input.sha256);assert.equal(proof.sourceAuthoringReplay.byteExact,true);
  assert.equal(proof.sourceAuthoringReplay.sha256,input.sha256);
  const ordered=new Map();triangles(source,({material,index,signature})=>{if(!ordered.has(material))ordered.set(material,[]);assert.equal(ordered.get(material).length,index);ordered.get(material).push(signature)});
@@ -83,9 +84,9 @@ test(`${batch.name} bindings retain ${batch.bindings} buildings and ${batch.resi
 });
 test(`${batch.name} retains all ${batch.prior} earlier corrections and their files`,()=>{
  const ids=audit.preservedPriorCorrectionIds;assert.equal(ids.length,batch.prior);
- const prior=corrections.corrections.filter(c=>ids.includes(c.sourceId));assert.deepEqual(prior.map(c=>c.sourceId),ids);
+ const prior=corrections.corrections.slice(0,batch.prior);assert.deepEqual(prior.map(c=>c.sourceId),ids);
  // Preserve the publisher's numeric JSON representation (Python0.0 must not become JS0).
- const canonical=execFileSync('python3',['-c',"import sys,json,hashlib; a=json.load(open(sys.argv[1])); c=json.load(open('public/models/generic-corrections.json')); p=[r for r in c['corrections'] if r['sourceId'] in a['preservedPriorCorrectionIds']]; print(hashlib.sha256(json.dumps(p,ensure_ascii=False,sort_keys=True,separators=(',',':')).encode()).hexdigest())",`docs/model-audit/${batch.name}-generic-split.json`],{encoding:'utf8'}).trim();
+ const canonical=execFileSync('python3',['-c',"import sys,json,hashlib; a=json.load(open(sys.argv[1])); c=json.load(open('public/models/generic-corrections.json')); p=c['corrections'][:len(a['preservedPriorCorrectionIds'])]; print(hashlib.sha256(json.dumps(p,ensure_ascii=False,sort_keys=True,separators=(',',':')).encode()).hexdigest())",`docs/model-audit/${batch.name}-generic-split.json`],{encoding:'utf8'}).trim();
  assert.equal(canonical,audit.preservedPriorCorrectionsCanonicalSha256);
  for(const c of prior)for(const a of c.assets)assert.equal(hash(read('public/models/'+a.model)),a.sha256);
 });

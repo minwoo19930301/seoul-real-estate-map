@@ -112512,6 +112512,2797 @@
         126.94336392709712,
         37.55348720016309
       ]
+    },
+    {
+      "model": "bespoke/banpo-xi-101-roof-contained/bespoke-banpo-xi-101.glb",
+      "sha256": "4ca21814491e825ec683351765ea5b24598f8e4b41a6d34913948f35b068f56d",
+      "heightDatum": "metres; independent terrain anchor",
+      "quality": "reference",
+      "referenceUrl": "https://kbland.kr/se/c/15891",
+      "category": "apartment",
+      "district": "서초구",
+      "minZoom": 15,
+      "id": "bespoke-banpo-xi-103",
+      "nameKo": "반포자이 103동",
+      "coordinate": {
+        "lon": 127.01080069999122,
+        "lat": 37.506898750118026
+      },
+      "yawDegFromEast": 0,
+      "footprintIds": [
+        "4afb2bb8-e9bd-4692-b310-cec4d7ccc560"
+      ],
+      "supersedes": [
+        "residential-4afb2bb8-e9bd-4692-b310-cec4d7ccc560"
+      ],
+      "searchable": false,
+      "groundOffsetM": 0,
+      "modelInstance": {
+        "sourceAssetId": "bespoke-banpo-xi-101",
+        "sourceDimensions": [
+          33.3434476852417,
+          81.30000305175781,
+          31.167630195617676
+        ],
+        "matrix": [
+          0.9999985532248867,
+          0.0,
+          6.160491412032068e-07,
+          0.0,
+          0.0,
+          1.0129150723610039,
+          0.0,
+          0.0,
+          -1.5137332896761307e-06,
+          0.0,
+          0.999999274325562,
+          0.0,
+          1.8109557328183234,
+          0.0,
+          -2.401297798946572,
+          1.0
+        ],
+        "hiddenNodes": []
+      },
+      "heightEstimated": true,
+      "sourceRecord": {
+        "provider": "Shared representative instance",
+        "siteId": "banpo-xi-final-shared",
+        "sources": [
+          {
+            "url": "https://file.kbland.kr/image/kbstar/land/img/alian/kms/complex/photo/objctidnfr/17727/MTc3MjcxMDAzNzgzOTMx.jpg",
+            "sha256": "f81662f01d777e234135b8a5f4e7dbf09a3d099b6bfbc211db734e8223179798",
+            "scope": "complex",
+            "observations": "Root directly inspected the actual photograph; individual tower numbers and camera orientation unverified."
+          },
+          {
+            "url": "https://kbland.kr/se/c/15891",
+            "observations": "Raw page title Banpo Xi, parcel20-43, roadShinbanpo-ro270,3410households,44buildings and exact photo object17727 filename independently matched; page17727 is unrelated Seocho Artnouveau CityIII."
+          },
+          {
+            "url": "https://api.openstreetmap.org/api/0.6/way/165196918/full",
+            "observations": "Named residential boundary Banpo Xi; full numbered polygons and exact register rows independently checked. Not cadastral survey."
+          },
+          {
+            "dataset": "Exact numbered building-register rows and OSM source polygons",
+            "snapshot": "banpo-xi-source-identity.json",
+            "sha256": "19381e87a09e11b62b74f66c7433bb3f6473b5407452b68988a912300a8dd3ed",
+            "observations": "Exact numbered official residential register rows, individual source polygons and original OSM values retained. No child source parts; lower-wing geometry and heights are explicitly photo inference."
+          }
+        ],
+        "blendSource": "modeling/bespoke/banpo-xi-101-roof-contained/banpo-xi-101-authored.blend",
+        "blendSha256": "fdea5e575268e48649086f67714c11b7176fc54848d5018195f2eb622c25369e",
+        "sourceGlbSha256": "b90310c2fe4f015abd1c58405b926afb9bad8e3cdf2dfbd645ea1d6cc280fd00",
+        "components": [
+          "Shared representative geometry/materials",
+          "Inventory-based placement/size transform"
+        ],
+        "buildingFacts": {
+          "floors": 27,
+          "floorsBasis": "Existing register metadata; the cloned floor pattern is unchanged",
+          "heightM": 82.3499984741211,
+          "registeredHeightM": 57.7,
+          "sourceHeightM": null,
+          "heightBasis": "Existing visible fallback estimate preserved; registered height conflict unresolved, not measured; cloned floor pattern unchanged",
+          "heightUnresolved": true
+        },
+        "uncertainties": [
+          "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+          "No numbered tower photograph or camera orientation confirmed.",
+          "No child-source height regions; stepped wing geometry and lower floor count are explicit photo inference.",
+          "Window sizes, roof ornament, floor spacing, hidden faces and material colors are approximations.",
+          "Full-surface projection checked within0.481m beyond source polygon; ground decorations are checked separately.",
+          "Official maximum-height roof datum and ornament treatment unconfirmed.",
+          "Named OSM boundary is not cadastral or surveyed site-plan evidence.",
+          "Existing visible fallback estimate preserved; registered height conflict unresolved, not measured; cloned floor pattern unchanged"
+        ],
+        "accuracy": "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+        "modelingBasis": "representative-photo-inference",
+        "inferenceScope": "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+        "delivery": "shared-instance",
+        "inferredFrom": [
+          {
+            "id": "bespoke-banpo-xi-101",
+            "sha256": "4ca21814491e825ec683351765ea5b24598f8e4b41a6d34913948f35b068f56d",
+            "siteId": "banpo-xi-101-roof-contained"
+          }
+        ],
+        "heightPolicy": {
+          "policy": "preserve-existing-visible-fallback-height",
+          "fallbackId": "residential-4afb2bb8-e9bd-4692-b310-cec4d7ccc560",
+          "fallbackSha256": "7f310923774b387c42cb44d4a1284a8848cfe97b48bf899a4df47f144baff389",
+          "fallbackModel": "residential-4afb2bb8-e9bd-4692-b310-cec4d7ccc560.glb",
+          "heightM": 82.3499984741211,
+          "localBounds": {
+            "min": [
+              -16.245161056518555,
+              0.0,
+              -15.194952011108398
+            ],
+            "max": [
+              16.245161056518555,
+              82.3499984741211,
+              15.194952011108398
+            ]
+          },
+          "anchor": [
+            127.01080069999122,
+            37.506898750118026
+          ],
+          "heightBasis": "Existing visible fallback estimate preserved; registered height conflict unresolved, not measured; cloned floor pattern unchanged"
+        }
+      },
+      "dimensions": [
+        33.34341152091755,
+        82.3499984741211,
+        31.167608096152243
+      ],
+      "geoBounds": [
+        127.01061242915306,
+        37.50675868305416,
+        127.01099001203465,
+        37.50703866644138
+      ]
+    },
+    {
+      "model": "bespoke/dmc-parkview-xi-301-representative-v2/bespoke-dmc-parkview-xi-301.glb",
+      "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+      "heightDatum": "metres; independent terrain anchor",
+      "quality": "reference",
+      "referenceUrl": "https://kbland.kr/se/c/28216",
+      "category": "apartment",
+      "district": "서대문구",
+      "minZoom": 15,
+      "id": "bespoke-dmc-parkview-xi-105",
+      "nameKo": "DMC파크뷰자이 105동",
+      "coordinate": {
+        "lon": 126.91530130000001,
+        "lat": 37.5725748
+      },
+      "yawDegFromEast": 0,
+      "footprintIds": [
+        "d7c6e615-1c43-4e55-9efc-762f6eee78ef"
+      ],
+      "supersedes": [
+        "residential-d7c6e615-1c43-4e55-9efc-762f6eee78ef"
+      ],
+      "searchable": false,
+      "groundOffsetM": 0,
+      "modelInstance": {
+        "sourceAssetId": "bespoke-dmc-parkview-xi-301",
+        "sourceDimensions": [
+          37.24368190765381,
+          57.599998474121094,
+          26.963677406311035
+        ],
+        "matrix": [
+          0.4465728836914107,
+          0.0,
+          -0.4960089490970083,
+          0.0,
+          0.0,
+          0.510416680188091,
+          0.0,
+          0.0,
+          0.30230507734146994,
+          0.0,
+          0.2852170960382317,
+          0.0,
+          -1.6574739479770595,
+          0.0,
+          1.1189068697299431,
+          1.0
+        ],
+        "hiddenNodes": []
+      },
+      "sourceRecord": {
+        "provider": "Shared representative instance",
+        "siteId": "dmc-parkview-xi-completion-shared",
+        "sources": [
+          {
+            "url": "https://file.kbland.kr/image/kbstar/land/img/alian/kms/complex/photo/objctidnfr/35380/MzUzODAxMDAyMDY3Njcy.jpg",
+            "sha256": "7f9559aeecf8dae5ede7c228402b6e7aa1fa67dc2f5842e5517d4321f2b61dc2",
+            "scope": "complex",
+            "observedTowerNumber": null,
+            "observations": "Root directly viewed actual completed-complex photo and final V2 four views. Orange rectangular frames surround multi-floor window groups against pale beige opaque walls and white window piers. The upper facade now has a broad recessed gray louver opening and pale structural sides/cap rather than a small separate rooftop box. Number and compass face unconfirmed; facade layout and dimensions are complex-level inference."
+          },
+          {
+            "url": "https://kbland.kr/se/c/28216",
+            "observations": "Primary complex photograph; representative only."
+          },
+          {
+            "dataset": "Previously identified numbered source inventory",
+            "snapshot": "dmc-parkview-xi-source-identity.json",
+            "sha256": "a8c30c48f56677b703b5f5287db6eee1513deb3969a7e819d37bc6fe23246b07",
+            "observations": "6existing sources127,301-305 linked by normalized source number, exact GajaeulMiraero2/Namgajwadong385 register, equal floors and height differences<=1m, official point proximity. Root actual SQLite geometry/properties/register validation; official61buildings4300households. No full boundary proof."
+          }
+        ],
+        "blendSource": "modeling/bespoke/dmc-parkview-xi-301-representative-v2/dmc-parkview-xi-301-authored.blend",
+        "blendSha256": "e4c7df081596a675a389a6738f0489f98e255fb68cb008408a972f59d7742e6c",
+        "sourceGlbSha256": "18249cde4215e62670ebbc6b5eb78e84dffc3c0d2b2645bb9aa33dbba26ab755",
+        "components": [
+          "Shared representative geometry/materials",
+          "Inventory-based placement/size transform"
+        ],
+        "buildingFacts": {
+          "floors": 9,
+          "floorsBasis": "Existing register metadata; the cloned floor pattern is unchanged",
+          "heightM": 29.4,
+          "registeredHeightM": 29.4,
+          "sourceHeightM": 29.0,
+          "heightBasis": "Overall cloned envelope scaled to existing registered height; not individual floor reconstruction"
+        },
+        "uncertainties": [
+          "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+          "Photo number and orientation unconfirmed; exterior inferred from complex photo.",
+          "Recess and frame dimensions, hidden facade and roof datum are not measured.",
+          "OSM58m versus registered57.6m retained.",
+          "Copies repeat representative geometry/window/floor pattern; individual shapes are not reconstructed.",
+          "Only6of61official residential buildings currently identified."
+        ],
+        "accuracy": "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+        "modelingBasis": "representative-photo-inference",
+        "inferenceScope": "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+        "delivery": "shared-instance",
+        "inferredFrom": [
+          {
+            "id": "bespoke-dmc-parkview-xi-301",
+            "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+            "siteId": "dmc-parkview-xi-301-representative-v2"
+          }
+        ]
+      },
+      "dimensions": [
+        18.72521376633614,
+        29.4,
+        20.753838376014695
+      ],
+      "geoBounds": [
+        126.91517587193975,
+        37.572492176536045,
+        126.91538810429066,
+        37.57267861143822
+      ]
+    },
+    {
+      "model": "bespoke/dmc-parkview-xi-301-representative-v2/bespoke-dmc-parkview-xi-301.glb",
+      "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+      "heightDatum": "metres; independent terrain anchor",
+      "quality": "reference",
+      "referenceUrl": "https://kbland.kr/se/c/28216",
+      "category": "apartment",
+      "district": "서대문구",
+      "minZoom": 15,
+      "id": "bespoke-dmc-parkview-xi-110",
+      "nameKo": "DMC파크뷰자이 110동",
+      "coordinate": {
+        "lon": 126.91542235,
+        "lat": 37.57226295
+      },
+      "yawDegFromEast": 0,
+      "footprintIds": [
+        "d095ea56-8c40-494a-b259-6cd535082bcd"
+      ],
+      "supersedes": [
+        "residential-d095ea56-8c40-494a-b259-6cd535082bcd"
+      ],
+      "searchable": false,
+      "groundOffsetM": 0,
+      "modelInstance": {
+        "sourceAssetId": "bespoke-dmc-parkview-xi-301",
+        "sourceDimensions": [
+          37.24368190765381,
+          57.599998474121094,
+          26.963677406311035
+        ],
+        "matrix": [
+          0.9598724200941917,
+          0.0,
+          0.8815822207687708,
+          0.0,
+          0.0,
+          0.6979166851551449,
+          0.0,
+          0.0,
+          -0.29397687491740576,
+          0.0,
+          0.27879817393939677,
+          0.0,
+          -2.465256361510237,
+          0.0,
+          -2.9022944639616166,
+          1.0
+        ],
+        "hiddenNodes": []
+      },
+      "sourceRecord": {
+        "provider": "Shared representative instance",
+        "siteId": "dmc-parkview-xi-completion-shared",
+        "sources": [
+          {
+            "url": "https://file.kbland.kr/image/kbstar/land/img/alian/kms/complex/photo/objctidnfr/35380/MzUzODAxMDAyMDY3Njcy.jpg",
+            "sha256": "7f9559aeecf8dae5ede7c228402b6e7aa1fa67dc2f5842e5517d4321f2b61dc2",
+            "scope": "complex",
+            "observedTowerNumber": null,
+            "observations": "Root directly viewed actual completed-complex photo and final V2 four views. Orange rectangular frames surround multi-floor window groups against pale beige opaque walls and white window piers. The upper facade now has a broad recessed gray louver opening and pale structural sides/cap rather than a small separate rooftop box. Number and compass face unconfirmed; facade layout and dimensions are complex-level inference."
+          },
+          {
+            "url": "https://kbland.kr/se/c/28216",
+            "observations": "Primary complex photograph; representative only."
+          },
+          {
+            "dataset": "Previously identified numbered source inventory",
+            "snapshot": "dmc-parkview-xi-source-identity.json",
+            "sha256": "a8c30c48f56677b703b5f5287db6eee1513deb3969a7e819d37bc6fe23246b07",
+            "observations": "6existing sources127,301-305 linked by normalized source number, exact GajaeulMiraero2/Namgajwadong385 register, equal floors and height differences<=1m, official point proximity. Root actual SQLite geometry/properties/register validation; official61buildings4300households. No full boundary proof."
+          }
+        ],
+        "blendSource": "modeling/bespoke/dmc-parkview-xi-301-representative-v2/dmc-parkview-xi-301-authored.blend",
+        "blendSha256": "e4c7df081596a675a389a6738f0489f98e255fb68cb008408a972f59d7742e6c",
+        "sourceGlbSha256": "18249cde4215e62670ebbc6b5eb78e84dffc3c0d2b2645bb9aa33dbba26ab755",
+        "components": [
+          "Shared representative geometry/materials",
+          "Inventory-based placement/size transform"
+        ],
+        "buildingFacts": {
+          "floors": 13,
+          "floorsBasis": "Existing register metadata; the cloned floor pattern is unchanged",
+          "heightM": 40.2,
+          "registeredHeightM": 40.2,
+          "sourceHeightM": 40.0,
+          "heightBasis": "Overall cloned envelope scaled to existing registered height; not individual floor reconstruction"
+        },
+        "uncertainties": [
+          "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+          "Photo number and orientation unconfirmed; exterior inferred from complex photo.",
+          "Recess and frame dimensions, hidden facade and roof datum are not measured.",
+          "OSM58m versus registered57.6m retained.",
+          "Copies repeat representative geometry/window/floor pattern; individual shapes are not reconstructed.",
+          "Only6of61official residential buildings currently identified."
+        ],
+        "accuracy": "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+        "modelingBasis": "representative-photo-inference",
+        "inferenceScope": "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+        "delivery": "shared-instance",
+        "inferredFrom": [
+          {
+            "id": "bespoke-dmc-parkview-xi-301",
+            "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+            "siteId": "dmc-parkview-xi-301-representative-v2"
+          }
+        ]
+      },
+      "dimensions": [
+        36.57378015098519,
+        40.2,
+        32.92771458368007
+      ],
+      "geoBounds": [
+        126.91523660609724,
+        37.572136595042124,
+        126.91565113310543,
+        37.572432389734935
+      ]
+    },
+    {
+      "model": "bespoke/dmc-parkview-xi-301-representative-v2/bespoke-dmc-parkview-xi-301.glb",
+      "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+      "heightDatum": "metres; independent terrain anchor",
+      "quality": "reference",
+      "referenceUrl": "https://kbland.kr/se/c/28216",
+      "category": "apartment",
+      "district": "서대문구",
+      "minZoom": 15,
+      "id": "bespoke-dmc-parkview-xi-204",
+      "nameKo": "DMC파크뷰자이 204동",
+      "coordinate": {
+        "lon": 126.9153914,
+        "lat": 37.57330415
+      },
+      "yawDegFromEast": 0,
+      "footprintIds": [
+        "a80420fe-f4c1-4e9e-8ee2-4979f0b7d42f"
+      ],
+      "supersedes": [
+        "residential-a80420fe-f4c1-4e9e-8ee2-4979f0b7d42f"
+      ],
+      "searchable": false,
+      "groundOffsetM": 0,
+      "modelInstance": {
+        "sourceAssetId": "bespoke-dmc-parkview-xi-301",
+        "sourceDimensions": [
+          37.24368190765381,
+          57.599998474121094,
+          26.963677406311035
+        ],
+        "matrix": [
+          0.6987106011539091,
+          0.0,
+          -0.7652565715428844,
+          0.0,
+          0.0,
+          0.6093750161429251,
+          0.0,
+          0.0,
+          0.28104008296502875,
+          0.0,
+          0.28492153326357733,
+          0.0,
+          -2.370106520272268,
+          0.0,
+          1.9066455701023783,
+          1.0
+        ],
+        "hiddenNodes": []
+      },
+      "sourceRecord": {
+        "provider": "Shared representative instance",
+        "siteId": "dmc-parkview-xi-completion-shared",
+        "sources": [
+          {
+            "url": "https://file.kbland.kr/image/kbstar/land/img/alian/kms/complex/photo/objctidnfr/35380/MzUzODAxMDAyMDY3Njcy.jpg",
+            "sha256": "7f9559aeecf8dae5ede7c228402b6e7aa1fa67dc2f5842e5517d4321f2b61dc2",
+            "scope": "complex",
+            "observedTowerNumber": null,
+            "observations": "Root directly viewed actual completed-complex photo and final V2 four views. Orange rectangular frames surround multi-floor window groups against pale beige opaque walls and white window piers. The upper facade now has a broad recessed gray louver opening and pale structural sides/cap rather than a small separate rooftop box. Number and compass face unconfirmed; facade layout and dimensions are complex-level inference."
+          },
+          {
+            "url": "https://kbland.kr/se/c/28216",
+            "observations": "Primary complex photograph; representative only."
+          },
+          {
+            "dataset": "Previously identified numbered source inventory",
+            "snapshot": "dmc-parkview-xi-source-identity.json",
+            "sha256": "a8c30c48f56677b703b5f5287db6eee1513deb3969a7e819d37bc6fe23246b07",
+            "observations": "6existing sources127,301-305 linked by normalized source number, exact GajaeulMiraero2/Namgajwadong385 register, equal floors and height differences<=1m, official point proximity. Root actual SQLite geometry/properties/register validation; official61buildings4300households. No full boundary proof."
+          }
+        ],
+        "blendSource": "modeling/bespoke/dmc-parkview-xi-301-representative-v2/dmc-parkview-xi-301-authored.blend",
+        "blendSha256": "e4c7df081596a675a389a6738f0489f98e255fb68cb008408a972f59d7742e6c",
+        "sourceGlbSha256": "18249cde4215e62670ebbc6b5eb78e84dffc3c0d2b2645bb9aa33dbba26ab755",
+        "components": [
+          "Shared representative geometry/materials",
+          "Inventory-based placement/size transform"
+        ],
+        "buildingFacts": {
+          "floors": 11,
+          "floorsBasis": "Existing register metadata; the cloned floor pattern is unchanged",
+          "heightM": 35.1,
+          "registeredHeightM": 35.1,
+          "sourceHeightM": 35.0,
+          "heightBasis": "Overall cloned envelope scaled to existing registered height; not individual floor reconstruction"
+        },
+        "uncertainties": [
+          "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+          "Photo number and orientation unconfirmed; exterior inferred from complex photo.",
+          "Recess and frame dimensions, hidden facade and roof datum are not measured.",
+          "OSM58m versus registered57.6m retained.",
+          "Copies repeat representative geometry/window/floor pattern; individual shapes are not reconstructed.",
+          "Only6of61official residential buildings currently identified."
+        ],
+        "accuracy": "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+        "modelingBasis": "representative-photo-inference",
+        "inferenceScope": "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+        "delivery": "shared-instance",
+        "inferredFrom": [
+          {
+            "id": "bespoke-dmc-parkview-xi-301",
+            "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+            "siteId": "dmc-parkview-xi-301-representative-v2"
+          }
+        ]
+      },
+      "dimensions": [
+        26.598302493503972,
+        35.1,
+        29.804278285490334
+      ],
+      "geoBounds": [
+        126.91521557168033,
+        37.57318481236435,
+        126.91551704089844,
+        37.57345254875151
+      ]
+    },
+    {
+      "model": "bespoke/dmc-parkview-xi-301-representative-v2/bespoke-dmc-parkview-xi-301.glb",
+      "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+      "heightDatum": "metres; independent terrain anchor",
+      "quality": "reference",
+      "referenceUrl": "https://kbland.kr/se/c/28216",
+      "category": "apartment",
+      "district": "서대문구",
+      "minZoom": 15,
+      "id": "bespoke-dmc-parkview-xi-205",
+      "nameKo": "DMC파크뷰자이 205동",
+      "coordinate": {
+        "lon": 126.91492325,
+        "lat": 37.57289085
+      },
+      "yawDegFromEast": 0,
+      "footprintIds": [
+        "ea8ea196-6449-4947-80ec-40fea73e8ed9"
+      ],
+      "supersedes": [
+        "residential-ea8ea196-6449-4947-80ec-40fea73e8ed9"
+      ],
+      "searchable": false,
+      "groundOffsetM": 0,
+      "modelInstance": {
+        "sourceAssetId": "bespoke-dmc-parkview-xi-301",
+        "sourceDimensions": [
+          37.24368190765381,
+          57.599998474121094,
+          26.963677406311035
+        ],
+        "matrix": [
+          0.6986695510593627,
+          0.0,
+          -0.7652064528516118,
+          0.0,
+          0.0,
+          0.6059027938287204,
+          0.0,
+          0.0,
+          0.28104123604181497,
+          0.0,
+          0.2849219868916412,
+          0.0,
+          -2.366428894419204,
+          0.0,
+          1.9074495297414384,
+          1.0
+        ],
+        "hiddenNodes": []
+      },
+      "sourceRecord": {
+        "provider": "Shared representative instance",
+        "siteId": "dmc-parkview-xi-completion-shared",
+        "sources": [
+          {
+            "url": "https://file.kbland.kr/image/kbstar/land/img/alian/kms/complex/photo/objctidnfr/35380/MzUzODAxMDAyMDY3Njcy.jpg",
+            "sha256": "7f9559aeecf8dae5ede7c228402b6e7aa1fa67dc2f5842e5517d4321f2b61dc2",
+            "scope": "complex",
+            "observedTowerNumber": null,
+            "observations": "Root directly viewed actual completed-complex photo and final V2 four views. Orange rectangular frames surround multi-floor window groups against pale beige opaque walls and white window piers. The upper facade now has a broad recessed gray louver opening and pale structural sides/cap rather than a small separate rooftop box. Number and compass face unconfirmed; facade layout and dimensions are complex-level inference."
+          },
+          {
+            "url": "https://kbland.kr/se/c/28216",
+            "observations": "Primary complex photograph; representative only."
+          },
+          {
+            "dataset": "Previously identified numbered source inventory",
+            "snapshot": "dmc-parkview-xi-source-identity.json",
+            "sha256": "a8c30c48f56677b703b5f5287db6eee1513deb3969a7e819d37bc6fe23246b07",
+            "observations": "6existing sources127,301-305 linked by normalized source number, exact GajaeulMiraero2/Namgajwadong385 register, equal floors and height differences<=1m, official point proximity. Root actual SQLite geometry/properties/register validation; official61buildings4300households. No full boundary proof."
+          }
+        ],
+        "blendSource": "modeling/bespoke/dmc-parkview-xi-301-representative-v2/dmc-parkview-xi-301-authored.blend",
+        "blendSha256": "e4c7df081596a675a389a6738f0489f98e255fb68cb008408a972f59d7742e6c",
+        "sourceGlbSha256": "18249cde4215e62670ebbc6b5eb78e84dffc3c0d2b2645bb9aa33dbba26ab755",
+        "components": [
+          "Shared representative geometry/materials",
+          "Inventory-based placement/size transform"
+        ],
+        "buildingFacts": {
+          "floors": 11,
+          "floorsBasis": "Existing register metadata; the cloned floor pattern is unchanged",
+          "heightM": 34.9,
+          "registeredHeightM": 34.9,
+          "sourceHeightM": 35.0,
+          "heightBasis": "Overall cloned envelope scaled to existing registered height; not individual floor reconstruction"
+        },
+        "uncertainties": [
+          "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+          "Photo number and orientation unconfirmed; exterior inferred from complex photo.",
+          "Recess and frame dimensions, hidden facade and roof datum are not measured.",
+          "OSM58m versus registered57.6m retained.",
+          "Copies repeat representative geometry/window/floor pattern; individual shapes are not reconstructed.",
+          "Only6of61official residential buildings currently identified."
+        ],
+        "accuracy": "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+        "modelingBasis": "representative-photo-inference",
+        "inferenceScope": "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+        "delivery": "shared-instance",
+        "inferredFrom": [
+          {
+            "id": "bespoke-dmc-parkview-xi-301",
+            "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+            "siteId": "dmc-parkview-xi-301-representative-v2"
+          }
+        ]
+      },
+      "dimensions": [
+        26.596988218949896,
+        34.9,
+        29.802599297784123
+      ],
+      "geoBounds": [
+        126.91474747144419,
+        37.57277151063408,
+        126.91504892409313,
+        37.57303923193863
+      ]
+    },
+    {
+      "model": "bespoke/dmc-parkview-xi-301-representative-v2/bespoke-dmc-parkview-xi-301.glb",
+      "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+      "heightDatum": "metres; independent terrain anchor",
+      "quality": "reference",
+      "referenceUrl": "https://kbland.kr/se/c/28216",
+      "category": "apartment",
+      "district": "서대문구",
+      "minZoom": 15,
+      "id": "bespoke-dmc-parkview-xi-208",
+      "nameKo": "DMC파크뷰자이 208동",
+      "coordinate": {
+        "lon": 126.91554389999999,
+        "lat": 37.5736738
+      },
+      "yawDegFromEast": 0,
+      "footprintIds": [
+        "72b95b4d-4477-4a06-906f-c99fd1791771"
+      ],
+      "supersedes": [
+        "residential-72b95b4d-4477-4a06-906f-c99fd1791771"
+      ],
+      "searchable": false,
+      "groundOffsetM": 0,
+      "modelInstance": {
+        "sourceAssetId": "bespoke-dmc-parkview-xi-301",
+        "sourceDimensions": [
+          37.24368190765381,
+          57.599998474121094,
+          26.963677406311035
+        ],
+        "matrix": [
+          0.4218212143668525,
+          0.0,
+          0.39471227799936287,
+          0.0,
+          0.0,
+          0.8923611347506082,
+          0.0,
+          0.0,
+          -0.23845933111947476,
+          0.0,
+          0.24170910106019358,
+          0.0,
+          -0.8793420013628894,
+          0.0,
+          -1.57806151443987,
+          1.0
+        ],
+        "hiddenNodes": []
+      },
+      "sourceRecord": {
+        "provider": "Shared representative instance",
+        "siteId": "dmc-parkview-xi-completion-shared",
+        "sources": [
+          {
+            "url": "https://file.kbland.kr/image/kbstar/land/img/alian/kms/complex/photo/objctidnfr/35380/MzUzODAxMDAyMDY3Njcy.jpg",
+            "sha256": "7f9559aeecf8dae5ede7c228402b6e7aa1fa67dc2f5842e5517d4321f2b61dc2",
+            "scope": "complex",
+            "observedTowerNumber": null,
+            "observations": "Root directly viewed actual completed-complex photo and final V2 four views. Orange rectangular frames surround multi-floor window groups against pale beige opaque walls and white window piers. The upper facade now has a broad recessed gray louver opening and pale structural sides/cap rather than a small separate rooftop box. Number and compass face unconfirmed; facade layout and dimensions are complex-level inference."
+          },
+          {
+            "url": "https://kbland.kr/se/c/28216",
+            "observations": "Primary complex photograph; representative only."
+          },
+          {
+            "dataset": "Previously identified numbered source inventory",
+            "snapshot": "dmc-parkview-xi-source-identity.json",
+            "sha256": "a8c30c48f56677b703b5f5287db6eee1513deb3969a7e819d37bc6fe23246b07",
+            "observations": "6existing sources127,301-305 linked by normalized source number, exact GajaeulMiraero2/Namgajwadong385 register, equal floors and height differences<=1m, official point proximity. Root actual SQLite geometry/properties/register validation; official61buildings4300households. No full boundary proof."
+          }
+        ],
+        "blendSource": "modeling/bespoke/dmc-parkview-xi-301-representative-v2/dmc-parkview-xi-301-authored.blend",
+        "blendSha256": "e4c7df081596a675a389a6738f0489f98e255fb68cb008408a972f59d7742e6c",
+        "sourceGlbSha256": "18249cde4215e62670ebbc6b5eb78e84dffc3c0d2b2645bb9aa33dbba26ab755",
+        "components": [
+          "Shared representative geometry/materials",
+          "Inventory-based placement/size transform"
+        ],
+        "buildingFacts": {
+          "floors": 17,
+          "floorsBasis": "Existing register metadata; the cloned floor pattern is unchanged",
+          "heightM": 51.4,
+          "registeredHeightM": 51.4,
+          "sourceHeightM": 51.0,
+          "heightBasis": "Overall cloned envelope scaled to existing registered height; not individual floor reconstruction"
+        },
+        "uncertainties": [
+          "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+          "Photo number and orientation unconfirmed; exterior inferred from complex photo.",
+          "Recess and frame dimensions, hidden facade and roof datum are not measured.",
+          "OSM58m versus registered57.6m retained.",
+          "Copies repeat representative geometry/window/floor pattern; individual shapes are not reconstructed.",
+          "Only6of61official residential buildings currently identified."
+        ],
+        "accuracy": "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+        "modelingBasis": "representative-photo-inference",
+        "inferenceScope": "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+        "delivery": "shared-instance",
+        "inferredFrom": [
+          {
+            "id": "bespoke-dmc-parkview-xi-301",
+            "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+            "siteId": "dmc-parkview-xi-301-representative-v2"
+          }
+        ]
+      },
+      "dimensions": [
+        17.591174573903736,
+        51.4,
+        16.192207574503755
+      ],
+      "geoBounds": [
+        126.9154563883551,
+        37.57361534306993,
+        126.91565577040096,
+        37.57376080014541
+      ]
+    },
+    {
+      "model": "bespoke/dmc-parkview-xi-301-representative-v2/bespoke-dmc-parkview-xi-301.glb",
+      "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+      "heightDatum": "metres; independent terrain anchor",
+      "quality": "reference",
+      "referenceUrl": "https://kbland.kr/se/c/28216",
+      "category": "apartment",
+      "district": "서대문구",
+      "minZoom": 15,
+      "id": "bespoke-dmc-parkview-xi-209",
+      "nameKo": "DMC파크뷰자이 209동",
+      "coordinate": {
+        "lon": 126.9150472,
+        "lat": 37.57327325
+      },
+      "yawDegFromEast": 0,
+      "footprintIds": [
+        "f45b1444-b291-4519-874c-dd3c93b87393"
+      ],
+      "supersedes": [
+        "residential-f45b1444-b291-4519-874c-dd3c93b87393"
+      ],
+      "searchable": false,
+      "groundOffsetM": 0,
+      "modelInstance": {
+        "sourceAssetId": "bespoke-dmc-parkview-xi-301",
+        "sourceDimensions": [
+          37.24368190765381,
+          57.599998474121094,
+          26.963677406311035
+        ],
+        "matrix": [
+          0.5063609694288721,
+          0.0,
+          0.4761957374310271,
+          0.0,
+          0.0,
+          0.8923611347506082,
+          0.0,
+          0.0,
+          -0.30071200732491205,
+          0.0,
+          0.30482625765969873,
+          0.0,
+          -1.1286170849254342,
+          0.0,
+          -1.7442579870326207,
+          1.0
+        ],
+        "hiddenNodes": []
+      },
+      "sourceRecord": {
+        "provider": "Shared representative instance",
+        "siteId": "dmc-parkview-xi-completion-shared",
+        "sources": [
+          {
+            "url": "https://file.kbland.kr/image/kbstar/land/img/alian/kms/complex/photo/objctidnfr/35380/MzUzODAxMDAyMDY3Njcy.jpg",
+            "sha256": "7f9559aeecf8dae5ede7c228402b6e7aa1fa67dc2f5842e5517d4321f2b61dc2",
+            "scope": "complex",
+            "observedTowerNumber": null,
+            "observations": "Root directly viewed actual completed-complex photo and final V2 four views. Orange rectangular frames surround multi-floor window groups against pale beige opaque walls and white window piers. The upper facade now has a broad recessed gray louver opening and pale structural sides/cap rather than a small separate rooftop box. Number and compass face unconfirmed; facade layout and dimensions are complex-level inference."
+          },
+          {
+            "url": "https://kbland.kr/se/c/28216",
+            "observations": "Primary complex photograph; representative only."
+          },
+          {
+            "dataset": "Previously identified numbered source inventory",
+            "snapshot": "dmc-parkview-xi-source-identity.json",
+            "sha256": "a8c30c48f56677b703b5f5287db6eee1513deb3969a7e819d37bc6fe23246b07",
+            "observations": "6existing sources127,301-305 linked by normalized source number, exact GajaeulMiraero2/Namgajwadong385 register, equal floors and height differences<=1m, official point proximity. Root actual SQLite geometry/properties/register validation; official61buildings4300households. No full boundary proof."
+          }
+        ],
+        "blendSource": "modeling/bespoke/dmc-parkview-xi-301-representative-v2/dmc-parkview-xi-301-authored.blend",
+        "blendSha256": "e4c7df081596a675a389a6738f0489f98e255fb68cb008408a972f59d7742e6c",
+        "sourceGlbSha256": "18249cde4215e62670ebbc6b5eb78e84dffc3c0d2b2645bb9aa33dbba26ab755",
+        "components": [
+          "Shared representative geometry/materials",
+          "Inventory-based placement/size transform"
+        ],
+        "buildingFacts": {
+          "floors": 17,
+          "floorsBasis": "Existing register metadata; the cloned floor pattern is unchanged",
+          "heightM": 51.4,
+          "registeredHeightM": 51.4,
+          "sourceHeightM": 51.0,
+          "heightBasis": "Overall cloned envelope scaled to existing registered height; not individual floor reconstruction"
+        },
+        "uncertainties": [
+          "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+          "Photo number and orientation unconfirmed; exterior inferred from complex photo.",
+          "Recess and frame dimensions, hidden facade and roof datum are not measured.",
+          "OSM58m versus registered57.6m retained.",
+          "Copies repeat representative geometry/window/floor pattern; individual shapes are not reconstructed.",
+          "Only6of61official residential buildings currently identified."
+        ],
+        "accuracy": "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+        "modelingBasis": "representative-photo-inference",
+        "inferenceScope": "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+        "delivery": "shared-instance",
+        "inferredFrom": [
+          {
+            "id": "bespoke-dmc-parkview-xi-301",
+            "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+            "siteId": "dmc-parkview-xi-301-representative-v2"
+          }
+        ]
+      },
+      "dimensions": [
+        21.32326111521787,
+        51.4,
+        19.720785175846096
+      ],
+      "geoBounds": [
+        126.91494017469849,
+        37.57320059841129,
+        126.91518185569261,
+        37.573377753238674
+      ]
+    },
+    {
+      "model": "bespoke/dmc-parkview-xi-301-representative-v2/bespoke-dmc-parkview-xi-301.glb",
+      "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+      "heightDatum": "metres; independent terrain anchor",
+      "quality": "reference",
+      "referenceUrl": "https://kbland.kr/se/c/28216",
+      "category": "apartment",
+      "district": "서대문구",
+      "minZoom": 15,
+      "id": "bespoke-dmc-parkview-xi-210",
+      "nameKo": "DMC파크뷰자이 210동",
+      "coordinate": {
+        "lon": 126.9145791,
+        "lat": 37.5728599
+      },
+      "yawDegFromEast": 0,
+      "footprintIds": [
+        "2e41e971-564e-4d3d-8ed1-ab980ddf78ef"
+      ],
+      "supersedes": [
+        "residential-2e41e971-564e-4d3d-8ed1-ab980ddf78ef"
+      ],
+      "searchable": false,
+      "groundOffsetM": 0,
+      "modelInstance": {
+        "sourceAssetId": "bespoke-dmc-parkview-xi-301",
+        "sourceDimensions": [
+          37.24368190765381,
+          57.599998474121094,
+          26.963677406311035
+        ],
+        "matrix": [
+          0.5062894226403197,
+          0.0,
+          0.4764035115688178,
+          0.0,
+          0.0,
+          0.8923611347506082,
+          0.0,
+          0.0,
+          -0.30080271662975816,
+          0.0,
+          0.3047383533771801,
+          0.0,
+          -1.1308492418719789,
+          0.0,
+          -1.7475407262533427,
+          1.0
+        ],
+        "hiddenNodes": []
+      },
+      "sourceRecord": {
+        "provider": "Shared representative instance",
+        "siteId": "dmc-parkview-xi-completion-shared",
+        "sources": [
+          {
+            "url": "https://file.kbland.kr/image/kbstar/land/img/alian/kms/complex/photo/objctidnfr/35380/MzUzODAxMDAyMDY3Njcy.jpg",
+            "sha256": "7f9559aeecf8dae5ede7c228402b6e7aa1fa67dc2f5842e5517d4321f2b61dc2",
+            "scope": "complex",
+            "observedTowerNumber": null,
+            "observations": "Root directly viewed actual completed-complex photo and final V2 four views. Orange rectangular frames surround multi-floor window groups against pale beige opaque walls and white window piers. The upper facade now has a broad recessed gray louver opening and pale structural sides/cap rather than a small separate rooftop box. Number and compass face unconfirmed; facade layout and dimensions are complex-level inference."
+          },
+          {
+            "url": "https://kbland.kr/se/c/28216",
+            "observations": "Primary complex photograph; representative only."
+          },
+          {
+            "dataset": "Previously identified numbered source inventory",
+            "snapshot": "dmc-parkview-xi-source-identity.json",
+            "sha256": "a8c30c48f56677b703b5f5287db6eee1513deb3969a7e819d37bc6fe23246b07",
+            "observations": "6existing sources127,301-305 linked by normalized source number, exact GajaeulMiraero2/Namgajwadong385 register, equal floors and height differences<=1m, official point proximity. Root actual SQLite geometry/properties/register validation; official61buildings4300households. No full boundary proof."
+          }
+        ],
+        "blendSource": "modeling/bespoke/dmc-parkview-xi-301-representative-v2/dmc-parkview-xi-301-authored.blend",
+        "blendSha256": "e4c7df081596a675a389a6738f0489f98e255fb68cb008408a972f59d7742e6c",
+        "sourceGlbSha256": "18249cde4215e62670ebbc6b5eb78e84dffc3c0d2b2645bb9aa33dbba26ab755",
+        "components": [
+          "Shared representative geometry/materials",
+          "Inventory-based placement/size transform"
+        ],
+        "buildingFacts": {
+          "floors": 17,
+          "floorsBasis": "Existing register metadata; the cloned floor pattern is unchanged",
+          "heightM": 51.4,
+          "registeredHeightM": 51.4,
+          "sourceHeightM": 51.0,
+          "heightBasis": "Overall cloned envelope scaled to existing registered height; not individual floor reconstruction"
+        },
+        "uncertainties": [
+          "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+          "Photo number and orientation unconfirmed; exterior inferred from complex photo.",
+          "Recess and frame dimensions, hidden facade and roof datum are not measured.",
+          "OSM58m versus registered57.6m retained.",
+          "Copies repeat representative geometry/window/floor pattern; individual shapes are not reconstructed.",
+          "Only6of61official residential buildings currently identified."
+        ],
+        "accuracy": "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+        "modelingBasis": "representative-photo-inference",
+        "inferenceScope": "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+        "delivery": "shared-instance",
+        "inferredFrom": [
+          {
+            "id": "bespoke-dmc-parkview-xi-301",
+            "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+            "siteId": "dmc-parkview-xi-301-representative-v2"
+          }
+        ]
+      },
+      "dimensions": [
+        21.322150491922727,
+        51.4,
+        19.726283262972927
+      ],
+      "geoBounds": [
+        126.91447205273762,
+        37.57278725095296,
+        126.91471371980244,
+        37.572964455170506
+      ]
+    },
+    {
+      "model": "bespoke/dmc-parkview-xi-301-representative-v2/bespoke-dmc-parkview-xi-301.glb",
+      "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+      "heightDatum": "metres; independent terrain anchor",
+      "quality": "reference",
+      "referenceUrl": "https://kbland.kr/se/c/28216",
+      "category": "apartment",
+      "district": "서대문구",
+      "minZoom": 15,
+      "id": "bespoke-dmc-parkview-xi-211",
+      "nameKo": "DMC파크뷰자이 211동",
+      "coordinate": {
+        "lon": 126.9135316,
+        "lat": 37.57328095
+      },
+      "yawDegFromEast": 0,
+      "footprintIds": [
+        "c6281e8b-5c31-4e73-81a8-da09fba8bcf6"
+      ],
+      "supersedes": [
+        "fallback-dmc-parkview-xi-completion-211"
+      ],
+      "searchable": false,
+      "groundOffsetM": 0,
+      "modelInstance": {
+        "sourceAssetId": "bespoke-dmc-parkview-xi-301",
+        "sourceDimensions": [
+          37.24368190765381,
+          57.599998474121094,
+          26.963677406311035
+        ],
+        "matrix": [
+          0.6588895161820328,
+          0.0,
+          -0.09255409245245998,
+          0.0,
+          0.0,
+          0.8055555768954906,
+          0.0,
+          0.0,
+          0.04643501117440902,
+          0.0,
+          0.4020490260525781,
+          0.0,
+          -1.9801116109743528,
+          0.0,
+          -0.19751532567698615,
+          1.0
+        ],
+        "hiddenNodes": []
+      },
+      "sourceRecord": {
+        "provider": "Shared representative instance",
+        "siteId": "dmc-parkview-xi-completion-shared",
+        "sources": [
+          {
+            "url": "https://file.kbland.kr/image/kbstar/land/img/alian/kms/complex/photo/objctidnfr/35380/MzUzODAxMDAyMDY3Njcy.jpg",
+            "sha256": "7f9559aeecf8dae5ede7c228402b6e7aa1fa67dc2f5842e5517d4321f2b61dc2",
+            "scope": "complex",
+            "observedTowerNumber": null,
+            "observations": "Root directly viewed actual completed-complex photo and final V2 four views. Orange rectangular frames surround multi-floor window groups against pale beige opaque walls and white window piers. The upper facade now has a broad recessed gray louver opening and pale structural sides/cap rather than a small separate rooftop box. Number and compass face unconfirmed; facade layout and dimensions are complex-level inference."
+          },
+          {
+            "url": "https://kbland.kr/se/c/28216",
+            "observations": "Primary complex photograph; representative only."
+          },
+          {
+            "dataset": "Previously identified numbered source inventory",
+            "snapshot": "dmc-parkview-xi-source-identity.json",
+            "sha256": "a8c30c48f56677b703b5f5287db6eee1513deb3969a7e819d37bc6fe23246b07",
+            "observations": "6existing sources127,301-305 linked by normalized source number, exact GajaeulMiraero2/Namgajwadong385 register, equal floors and height differences<=1m, official point proximity. Root actual SQLite geometry/properties/register validation; official61buildings4300households. No full boundary proof."
+          }
+        ],
+        "blendSource": "modeling/bespoke/dmc-parkview-xi-301-representative-v2/dmc-parkview-xi-301-authored.blend",
+        "blendSha256": "e4c7df081596a675a389a6738f0489f98e255fb68cb008408a972f59d7742e6c",
+        "sourceGlbSha256": "18249cde4215e62670ebbc6b5eb78e84dffc3c0d2b2645bb9aa33dbba26ab755",
+        "components": [
+          "Shared representative geometry/materials",
+          "Inventory-based placement/size transform"
+        ],
+        "buildingFacts": {
+          "floors": 16,
+          "floorsBasis": "Existing register metadata; the cloned floor pattern is unchanged",
+          "heightM": 46.4,
+          "registeredHeightM": 46.4,
+          "sourceHeightM": 46.0,
+          "heightBasis": "Overall cloned envelope scaled to existing registered height; not individual floor reconstruction"
+        },
+        "uncertainties": [
+          "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+          "Photo number and orientation unconfirmed; exterior inferred from complex photo.",
+          "Recess and frame dimensions, hidden facade and roof datum are not measured.",
+          "OSM58m versus registered57.6m retained.",
+          "Copies repeat representative geometry/window/floor pattern; individual shapes are not reconstructed.",
+          "Only6of61official residential buildings currently identified."
+        ],
+        "accuracy": "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+        "modelingBasis": "representative-photo-inference",
+        "inferenceScope": "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+        "delivery": "shared-instance",
+        "inferredFrom": [
+          {
+            "id": "bespoke-dmc-parkview-xi-301",
+            "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+            "siteId": "dmc-parkview-xi-301-representative-v2"
+          }
+        ]
+      },
+      "dimensions": [
+        24.454175986195565,
+        46.4,
+        12.728825066644356
+      ],
+      "geoBounds": [
+        126.9133880470025,
+        37.57322687391805,
+        126.91366521427734,
+        37.57334121889912
+      ]
+    },
+    {
+      "model": "bespoke/dmc-parkview-xi-301-representative-v2/bespoke-dmc-parkview-xi-301.glb",
+      "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+      "heightDatum": "metres; independent terrain anchor",
+      "quality": "reference",
+      "referenceUrl": "https://kbland.kr/se/c/28216",
+      "category": "apartment",
+      "district": "서대문구",
+      "minZoom": 15,
+      "id": "bespoke-dmc-parkview-xi-212",
+      "nameKo": "DMC파크뷰자이 212동",
+      "coordinate": {
+        "lon": 126.9143582,
+        "lat": 37.57345565
+      },
+      "yawDegFromEast": 0,
+      "footprintIds": [
+        "d0e97d47-bc94-4320-9eaf-b3fd7455b2e9"
+      ],
+      "supersedes": [
+        "residential-d0e97d47-bc94-4320-9eaf-b3fd7455b2e9"
+      ],
+      "searchable": false,
+      "groundOffsetM": 0,
+      "modelInstance": {
+        "sourceAssetId": "bespoke-dmc-parkview-xi-301",
+        "sourceDimensions": [
+          37.24368190765381,
+          57.599998474121094,
+          26.963677406311035
+        ],
+        "matrix": [
+          1.3060779746378257,
+          0.0,
+          -0.4119909487791822,
+          0.0,
+          0.0,
+          0.951388914092088,
+          0.0,
+          0.0,
+          0.13619051526425915,
+          0.0,
+          0.5229217477508418,
+          0.0,
+          -4.182426026589162,
+          0.0,
+          2.181548883782549,
+          1.0
+        ],
+        "hiddenNodes": []
+      },
+      "sourceRecord": {
+        "provider": "Shared representative instance",
+        "siteId": "dmc-parkview-xi-completion-shared",
+        "sources": [
+          {
+            "url": "https://file.kbland.kr/image/kbstar/land/img/alian/kms/complex/photo/objctidnfr/35380/MzUzODAxMDAyMDY3Njcy.jpg",
+            "sha256": "7f9559aeecf8dae5ede7c228402b6e7aa1fa67dc2f5842e5517d4321f2b61dc2",
+            "scope": "complex",
+            "observedTowerNumber": null,
+            "observations": "Root directly viewed actual completed-complex photo and final V2 four views. Orange rectangular frames surround multi-floor window groups against pale beige opaque walls and white window piers. The upper facade now has a broad recessed gray louver opening and pale structural sides/cap rather than a small separate rooftop box. Number and compass face unconfirmed; facade layout and dimensions are complex-level inference."
+          },
+          {
+            "url": "https://kbland.kr/se/c/28216",
+            "observations": "Primary complex photograph; representative only."
+          },
+          {
+            "dataset": "Previously identified numbered source inventory",
+            "snapshot": "dmc-parkview-xi-source-identity.json",
+            "sha256": "a8c30c48f56677b703b5f5287db6eee1513deb3969a7e819d37bc6fe23246b07",
+            "observations": "6existing sources127,301-305 linked by normalized source number, exact GajaeulMiraero2/Namgajwadong385 register, equal floors and height differences<=1m, official point proximity. Root actual SQLite geometry/properties/register validation; official61buildings4300households. No full boundary proof."
+          }
+        ],
+        "blendSource": "modeling/bespoke/dmc-parkview-xi-301-representative-v2/dmc-parkview-xi-301-authored.blend",
+        "blendSha256": "e4c7df081596a675a389a6738f0489f98e255fb68cb008408a972f59d7742e6c",
+        "sourceGlbSha256": "18249cde4215e62670ebbc6b5eb78e84dffc3c0d2b2645bb9aa33dbba26ab755",
+        "components": [
+          "Shared representative geometry/materials",
+          "Inventory-based placement/size transform"
+        ],
+        "buildingFacts": {
+          "floors": 19,
+          "floorsBasis": "Existing register metadata; the cloned floor pattern is unchanged",
+          "heightM": 54.8,
+          "registeredHeightM": 54.8,
+          "sourceHeightM": 55.0,
+          "heightBasis": "Overall cloned envelope scaled to existing registered height; not individual floor reconstruction"
+        },
+        "uncertainties": [
+          "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+          "Photo number and orientation unconfirmed; exterior inferred from complex photo.",
+          "Recess and frame dimensions, hidden facade and roof datum are not measured.",
+          "OSM58m versus registered57.6m retained.",
+          "Copies repeat representative geometry/window/floor pattern; individual shapes are not reconstructed.",
+          "Only6of61official residential buildings currently identified."
+        ],
+        "accuracy": "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+        "modelingBasis": "representative-photo-inference",
+        "inferenceScope": "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+        "delivery": "shared-instance",
+        "inferredFrom": [
+          {
+            "id": "bespoke-dmc-parkview-xi-301",
+            "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+            "siteId": "dmc-parkview-xi-301-representative-v2"
+          }
+        ]
+      },
+      "dimensions": [
+        48.39876000072781,
+        54.8,
+        22.530369491283125
+      ],
+      "geoBounds": [
+        126.914068220918,
+        37.573351408749325,
+        126.91461678096316,
+        37.57355380250203
+      ]
+    },
+    {
+      "model": "bespoke/dmc-parkview-xi-301-representative-v2/bespoke-dmc-parkview-xi-301.glb",
+      "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+      "heightDatum": "metres; independent terrain anchor",
+      "quality": "reference",
+      "referenceUrl": "https://kbland.kr/se/c/28216",
+      "category": "apartment",
+      "district": "서대문구",
+      "minZoom": 15,
+      "id": "bespoke-dmc-parkview-xi-213",
+      "nameKo": "DMC파크뷰자이 213동",
+      "coordinate": {
+        "lon": 126.91505004999999,
+        "lat": 37.57372145
+      },
+      "yawDegFromEast": 0,
+      "footprintIds": [
+        "9dba76c7-614b-4219-b073-4f72465e90dd"
+      ],
+      "supersedes": [
+        "residential-9dba76c7-614b-4219-b073-4f72465e90dd"
+      ],
+      "searchable": false,
+      "groundOffsetM": 0,
+      "modelInstance": {
+        "sourceAssetId": "bespoke-dmc-parkview-xi-301",
+        "sourceDimensions": [
+          37.24368190765381,
+          57.599998474121094,
+          26.963677406311035
+        ],
+        "matrix": [
+          0.5770165900132241,
+          0.0,
+          -0.3325409609970434,
+          0.0,
+          0.0,
+          0.9027778016932223,
+          0.0,
+          0.0,
+          0.2251833611921069,
+          0.0,
+          0.40694062100297995,
+          0.0,
+          -1.9492740611778767,
+          0.0,
+          0.4993230790325623,
+          1.0
+        ],
+        "hiddenNodes": []
+      },
+      "sourceRecord": {
+        "provider": "Shared representative instance",
+        "siteId": "dmc-parkview-xi-completion-shared",
+        "sources": [
+          {
+            "url": "https://file.kbland.kr/image/kbstar/land/img/alian/kms/complex/photo/objctidnfr/35380/MzUzODAxMDAyMDY3Njcy.jpg",
+            "sha256": "7f9559aeecf8dae5ede7c228402b6e7aa1fa67dc2f5842e5517d4321f2b61dc2",
+            "scope": "complex",
+            "observedTowerNumber": null,
+            "observations": "Root directly viewed actual completed-complex photo and final V2 four views. Orange rectangular frames surround multi-floor window groups against pale beige opaque walls and white window piers. The upper facade now has a broad recessed gray louver opening and pale structural sides/cap rather than a small separate rooftop box. Number and compass face unconfirmed; facade layout and dimensions are complex-level inference."
+          },
+          {
+            "url": "https://kbland.kr/se/c/28216",
+            "observations": "Primary complex photograph; representative only."
+          },
+          {
+            "dataset": "Previously identified numbered source inventory",
+            "snapshot": "dmc-parkview-xi-source-identity.json",
+            "sha256": "a8c30c48f56677b703b5f5287db6eee1513deb3969a7e819d37bc6fe23246b07",
+            "observations": "6existing sources127,301-305 linked by normalized source number, exact GajaeulMiraero2/Namgajwadong385 register, equal floors and height differences<=1m, official point proximity. Root actual SQLite geometry/properties/register validation; official61buildings4300households. No full boundary proof."
+          }
+        ],
+        "blendSource": "modeling/bespoke/dmc-parkview-xi-301-representative-v2/dmc-parkview-xi-301-authored.blend",
+        "blendSha256": "e4c7df081596a675a389a6738f0489f98e255fb68cb008408a972f59d7742e6c",
+        "sourceGlbSha256": "18249cde4215e62670ebbc6b5eb78e84dffc3c0d2b2645bb9aa33dbba26ab755",
+        "components": [
+          "Shared representative geometry/materials",
+          "Inventory-based placement/size transform"
+        ],
+        "buildingFacts": {
+          "floors": 18,
+          "floorsBasis": "Existing register metadata; the cloned floor pattern is unchanged",
+          "heightM": 52.0,
+          "registeredHeightM": 52.0,
+          "sourceHeightM": 52.0,
+          "heightBasis": "Overall cloned envelope scaled to existing registered height; not individual floor reconstruction"
+        },
+        "uncertainties": [
+          "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+          "Photo number and orientation unconfirmed; exterior inferred from complex photo.",
+          "Recess and frame dimensions, hidden facade and roof datum are not measured.",
+          "OSM58m versus registered57.6m retained.",
+          "Copies repeat representative geometry/window/floor pattern; individual shapes are not reconstructed.",
+          "Only6of61official residential buildings currently identified."
+        ],
+        "accuracy": "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+        "modelingBasis": "representative-photo-inference",
+        "inferenceScope": "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+        "delivery": "shared-instance",
+        "inferredFrom": [
+          {
+            "id": "bespoke-dmc-parkview-xi-301",
+            "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+            "siteId": "dmc-parkview-xi-301-representative-v2"
+          }
+        ]
+      },
+      "dimensions": [
+        21.86854600237345,
+        52,
+        17.777633940184447
+      ],
+      "geoBounds": [
+        126.91490557965965,
+        37.57365060309433,
+        126.91515344248505,
+        37.57381030229717
+      ]
+    },
+    {
+      "model": "bespoke/dmc-parkview-xi-301-representative-v2/bespoke-dmc-parkview-xi-301.glb",
+      "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+      "heightDatum": "metres; independent terrain anchor",
+      "quality": "reference",
+      "referenceUrl": "https://kbland.kr/se/c/28216",
+      "category": "apartment",
+      "district": "서대문구",
+      "minZoom": 15,
+      "id": "bespoke-dmc-parkview-xi-214",
+      "nameKo": "DMC파크뷰자이 214동",
+      "coordinate": {
+        "lon": 126.91375565,
+        "lat": 37.5736302
+      },
+      "yawDegFromEast": 0,
+      "footprintIds": [
+        "a7f298f1-7c2b-44be-be15-1c8d813f2444"
+      ],
+      "supersedes": [
+        "residential-a7f298f1-7c2b-44be-be15-1c8d813f2444"
+      ],
+      "searchable": false,
+      "groundOffsetM": 0,
+      "modelInstance": {
+        "sourceAssetId": "bespoke-dmc-parkview-xi-301",
+        "sourceDimensions": [
+          37.24368190765381,
+          57.599998474121094,
+          26.963677406311035
+        ],
+        "matrix": [
+          0.3161943465081327,
+          0.0,
+          1.2743340621223036,
+          0.0,
+          0.0,
+          1.1458333636875513,
+          0.0,
+          0.0,
+          -0.45951919817863945,
+          0.0,
+          0.08599739476099443,
+          0.0,
+          -0.3897368720991292,
+          0.0,
+          -3.829742682804314,
+          1.0
+        ],
+        "hiddenNodes": []
+      },
+      "sourceRecord": {
+        "provider": "Shared representative instance",
+        "siteId": "dmc-parkview-xi-completion-shared",
+        "sources": [
+          {
+            "url": "https://file.kbland.kr/image/kbstar/land/img/alian/kms/complex/photo/objctidnfr/35380/MzUzODAxMDAyMDY3Njcy.jpg",
+            "sha256": "7f9559aeecf8dae5ede7c228402b6e7aa1fa67dc2f5842e5517d4321f2b61dc2",
+            "scope": "complex",
+            "observedTowerNumber": null,
+            "observations": "Root directly viewed actual completed-complex photo and final V2 four views. Orange rectangular frames surround multi-floor window groups against pale beige opaque walls and white window piers. The upper facade now has a broad recessed gray louver opening and pale structural sides/cap rather than a small separate rooftop box. Number and compass face unconfirmed; facade layout and dimensions are complex-level inference."
+          },
+          {
+            "url": "https://kbland.kr/se/c/28216",
+            "observations": "Primary complex photograph; representative only."
+          },
+          {
+            "dataset": "Previously identified numbered source inventory",
+            "snapshot": "dmc-parkview-xi-source-identity.json",
+            "sha256": "a8c30c48f56677b703b5f5287db6eee1513deb3969a7e819d37bc6fe23246b07",
+            "observations": "6existing sources127,301-305 linked by normalized source number, exact GajaeulMiraero2/Namgajwadong385 register, equal floors and height differences<=1m, official point proximity. Root actual SQLite geometry/properties/register validation; official61buildings4300households. No full boundary proof."
+          }
+        ],
+        "blendSource": "modeling/bespoke/dmc-parkview-xi-301-representative-v2/dmc-parkview-xi-301-authored.blend",
+        "blendSha256": "e4c7df081596a675a389a6738f0489f98e255fb68cb008408a972f59d7742e6c",
+        "sourceGlbSha256": "18249cde4215e62670ebbc6b5eb78e84dffc3c0d2b2645bb9aa33dbba26ab755",
+        "components": [
+          "Shared representative geometry/materials",
+          "Inventory-based placement/size transform"
+        ],
+        "buildingFacts": {
+          "floors": 23,
+          "floorsBasis": "Existing register metadata; the cloned floor pattern is unchanged",
+          "heightM": 66.0,
+          "registeredHeightM": 66.0,
+          "sourceHeightM": 66.0,
+          "heightBasis": "Overall cloned envelope scaled to existing registered height; not individual floor reconstruction"
+        },
+        "uncertainties": [
+          "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+          "Photo number and orientation unconfirmed; exterior inferred from complex photo.",
+          "Recess and frame dimensions, hidden facade and roof datum are not measured.",
+          "OSM58m versus registered57.6m retained.",
+          "Copies repeat representative geometry/window/floor pattern; individual shapes are not reconstructed.",
+          "Only6of61official residential buildings currently identified."
+        ],
+        "accuracy": "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+        "modelingBasis": "representative-photo-inference",
+        "inferenceScope": "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+        "delivery": "shared-instance",
+        "inferredFrom": [
+          {
+            "id": "bespoke-dmc-parkview-xi-301",
+            "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+            "siteId": "dmc-parkview-xi-301-representative-v2"
+          }
+        ]
+      },
+      "dimensions": [
+        18.859352079680857,
+        66,
+        47.30242715163599
+      ],
+      "geoBounds": [
+        126.91365976529805,
+        37.573425155166845,
+        126.91387352100743,
+        37.57385008009971
+      ]
+    },
+    {
+      "model": "bespoke/dmc-parkview-xi-301-representative-v2/bespoke-dmc-parkview-xi-301.glb",
+      "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+      "heightDatum": "metres; independent terrain anchor",
+      "quality": "reference",
+      "referenceUrl": "https://kbland.kr/se/c/28216",
+      "category": "apartment",
+      "district": "서대문구",
+      "minZoom": 15,
+      "id": "bespoke-dmc-parkview-xi-215",
+      "nameKo": "DMC파크뷰자이 215동",
+      "coordinate": {
+        "lon": 126.91456070000001,
+        "lat": 37.5738877
+      },
+      "yawDegFromEast": 0,
+      "footprintIds": [
+        "def00b67-b27a-4ddd-8c22-7e3122a639d0"
+      ],
+      "supersedes": [
+        "residential-def00b67-b27a-4ddd-8c22-7e3122a639d0"
+      ],
+      "searchable": false,
+      "groundOffsetM": 0,
+      "modelInstance": {
+        "sourceAssetId": "bespoke-dmc-parkview-xi-301",
+        "sourceDimensions": [
+          37.24368190765381,
+          57.599998474121094,
+          26.963677406311035
+        ],
+        "matrix": [
+          0.6172244763054959,
+          0.0,
+          1.1589720715020455,
+          0.0,
+          0.0,
+          1.0972222512886856,
+          0.0,
+          0.0,
+          -0.4247328324297051,
+          0.0,
+          0.19538125873647857,
+          0.0,
+          -1.3075622096249078,
+          0.0,
+          -3.6179843245426273,
+          1.0
+        ],
+        "hiddenNodes": []
+      },
+      "sourceRecord": {
+        "provider": "Shared representative instance",
+        "siteId": "dmc-parkview-xi-completion-shared",
+        "sources": [
+          {
+            "url": "https://file.kbland.kr/image/kbstar/land/img/alian/kms/complex/photo/objctidnfr/35380/MzUzODAxMDAyMDY3Njcy.jpg",
+            "sha256": "7f9559aeecf8dae5ede7c228402b6e7aa1fa67dc2f5842e5517d4321f2b61dc2",
+            "scope": "complex",
+            "observedTowerNumber": null,
+            "observations": "Root directly viewed actual completed-complex photo and final V2 four views. Orange rectangular frames surround multi-floor window groups against pale beige opaque walls and white window piers. The upper facade now has a broad recessed gray louver opening and pale structural sides/cap rather than a small separate rooftop box. Number and compass face unconfirmed; facade layout and dimensions are complex-level inference."
+          },
+          {
+            "url": "https://kbland.kr/se/c/28216",
+            "observations": "Primary complex photograph; representative only."
+          },
+          {
+            "dataset": "Previously identified numbered source inventory",
+            "snapshot": "dmc-parkview-xi-source-identity.json",
+            "sha256": "a8c30c48f56677b703b5f5287db6eee1513deb3969a7e819d37bc6fe23246b07",
+            "observations": "6existing sources127,301-305 linked by normalized source number, exact GajaeulMiraero2/Namgajwadong385 register, equal floors and height differences<=1m, official point proximity. Root actual SQLite geometry/properties/register validation; official61buildings4300households. No full boundary proof."
+          }
+        ],
+        "blendSource": "modeling/bespoke/dmc-parkview-xi-301-representative-v2/dmc-parkview-xi-301-authored.blend",
+        "blendSha256": "e4c7df081596a675a389a6738f0489f98e255fb68cb008408a972f59d7742e6c",
+        "sourceGlbSha256": "18249cde4215e62670ebbc6b5eb78e84dffc3c0d2b2645bb9aa33dbba26ab755",
+        "components": [
+          "Shared representative geometry/materials",
+          "Inventory-based placement/size transform"
+        ],
+        "buildingFacts": {
+          "floors": 22,
+          "floorsBasis": "Existing register metadata; the cloned floor pattern is unchanged",
+          "heightM": 63.2,
+          "registeredHeightM": 63.2,
+          "sourceHeightM": 63.0,
+          "heightBasis": "Overall cloned envelope scaled to existing registered height; not individual floor reconstruction"
+        },
+        "uncertainties": [
+          "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+          "Photo number and orientation unconfirmed; exterior inferred from complex photo.",
+          "Recess and frame dimensions, hidden facade and roof datum are not measured.",
+          "OSM58m versus registered57.6m retained.",
+          "Copies repeat representative geometry/window/floor pattern; individual shapes are not reconstructed.",
+          "Only6of61official residential buildings currently identified."
+        ],
+        "accuracy": "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+        "modelingBasis": "representative-photo-inference",
+        "inferenceScope": "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+        "delivery": "shared-instance",
+        "inferredFrom": [
+          {
+            "id": "bespoke-dmc-parkview-xi-301",
+            "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+            "siteId": "dmc-parkview-xi-301-representative-v2"
+          }
+        ]
+      },
+      "dimensions": [
+        26.82273979359763,
+        63.2,
+        43.029848967881954
+      ],
+      "geoBounds": [
+        126.91442639661473,
+        37.57370949419048,
+        126.91473041202167,
+        37.574096037900496
+      ]
+    },
+    {
+      "model": "bespoke/dmc-parkview-xi-301-representative-v2/bespoke-dmc-parkview-xi-301.glb",
+      "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+      "heightDatum": "metres; independent terrain anchor",
+      "quality": "reference",
+      "referenceUrl": "https://kbland.kr/se/c/28216",
+      "category": "apartment",
+      "district": "서대문구",
+      "minZoom": 15,
+      "id": "bespoke-dmc-parkview-xi-216",
+      "nameKo": "DMC파크뷰자이 216동",
+      "coordinate": {
+        "lon": 126.91530935,
+        "lat": 37.5742262
+      },
+      "yawDegFromEast": 0,
+      "footprintIds": [
+        "9192baa9-c5b7-4539-8b05-7cbc6ed18795"
+      ],
+      "supersedes": [
+        "residential-9192baa9-c5b7-4539-8b05-7cbc6ed18795"
+      ],
+      "searchable": false,
+      "groundOffsetM": 0,
+      "modelInstance": {
+        "sourceAssetId": "bespoke-dmc-parkview-xi-301",
+        "sourceDimensions": [
+          37.24368190765381,
+          57.599998474121094,
+          26.963677406311035
+        ],
+        "matrix": [
+          0.9295825437870547,
+          0.0,
+          0.9271788629379268,
+          0.0,
+          0.0,
+          1.0000000264909539,
+          0.0,
+          0.0,
+          -0.3489037691634188,
+          0.0,
+          0.31130119362346637,
+          0.0,
+          -2.310414792793384,
+          0.0,
+          -3.070307314246046,
+          1.0
+        ],
+        "hiddenNodes": []
+      },
+      "sourceRecord": {
+        "provider": "Shared representative instance",
+        "siteId": "dmc-parkview-xi-completion-shared",
+        "sources": [
+          {
+            "url": "https://file.kbland.kr/image/kbstar/land/img/alian/kms/complex/photo/objctidnfr/35380/MzUzODAxMDAyMDY3Njcy.jpg",
+            "sha256": "7f9559aeecf8dae5ede7c228402b6e7aa1fa67dc2f5842e5517d4321f2b61dc2",
+            "scope": "complex",
+            "observedTowerNumber": null,
+            "observations": "Root directly viewed actual completed-complex photo and final V2 four views. Orange rectangular frames surround multi-floor window groups against pale beige opaque walls and white window piers. The upper facade now has a broad recessed gray louver opening and pale structural sides/cap rather than a small separate rooftop box. Number and compass face unconfirmed; facade layout and dimensions are complex-level inference."
+          },
+          {
+            "url": "https://kbland.kr/se/c/28216",
+            "observations": "Primary complex photograph; representative only."
+          },
+          {
+            "dataset": "Previously identified numbered source inventory",
+            "snapshot": "dmc-parkview-xi-source-identity.json",
+            "sha256": "a8c30c48f56677b703b5f5287db6eee1513deb3969a7e819d37bc6fe23246b07",
+            "observations": "6existing sources127,301-305 linked by normalized source number, exact GajaeulMiraero2/Namgajwadong385 register, equal floors and height differences<=1m, official point proximity. Root actual SQLite geometry/properties/register validation; official61buildings4300households. No full boundary proof."
+          }
+        ],
+        "blendSource": "modeling/bespoke/dmc-parkview-xi-301-representative-v2/dmc-parkview-xi-301-authored.blend",
+        "blendSha256": "e4c7df081596a675a389a6738f0489f98e255fb68cb008408a972f59d7742e6c",
+        "sourceGlbSha256": "18249cde4215e62670ebbc6b5eb78e84dffc3c0d2b2645bb9aa33dbba26ab755",
+        "components": [
+          "Shared representative geometry/materials",
+          "Inventory-based placement/size transform"
+        ],
+        "buildingFacts": {
+          "floors": 20,
+          "floorsBasis": "Existing register metadata; the cloned floor pattern is unchanged",
+          "heightM": 57.6,
+          "registeredHeightM": 57.6,
+          "sourceHeightM": 58.0,
+          "heightBasis": "Overall cloned envelope scaled to existing registered height; not individual floor reconstruction"
+        },
+        "uncertainties": [
+          "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+          "Photo number and orientation unconfirmed; exterior inferred from complex photo.",
+          "Recess and frame dimensions, hidden facade and roof datum are not measured.",
+          "OSM58m versus registered57.6m retained.",
+          "Copies repeat representative geometry/window/floor pattern; individual shapes are not reconstructed.",
+          "Only6of61official residential buildings currently identified."
+        ],
+        "accuracy": "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+        "modelingBasis": "representative-photo-inference",
+        "inferenceScope": "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+        "delivery": "shared-instance",
+        "inferredFrom": [
+          {
+            "id": "bespoke-dmc-parkview-xi-301",
+            "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+            "siteId": "dmc-parkview-xi-301-representative-v2"
+          }
+        ]
+      },
+      "dimensions": [
+        36.244235431758085,
+        57.599999999999994,
+        34.65810249694564
+      ],
+      "geoBounds": [
+        126.91512628751595,
+        37.57409456093527,
+        126.91553709029577,
+        37.57440589996719
+      ]
+    },
+    {
+      "model": "bespoke/dmc-parkview-xi-301-representative-v2/bespoke-dmc-parkview-xi-301.glb",
+      "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+      "heightDatum": "metres; independent terrain anchor",
+      "quality": "reference",
+      "referenceUrl": "https://kbland.kr/se/c/28216",
+      "category": "apartment",
+      "district": "서대문구",
+      "minZoom": 15,
+      "id": "bespoke-dmc-parkview-xi-218",
+      "nameKo": "DMC파크뷰자이 218동",
+      "coordinate": {
+        "lon": 126.91373635,
+        "lat": 37.5740949
+      },
+      "yawDegFromEast": 0,
+      "footprintIds": [
+        "96126c18-cc44-4e19-892e-43443406b071"
+      ],
+      "supersedes": [
+        "fallback-dmc-parkview-xi-completion-218"
+      ],
+      "searchable": false,
+      "groundOffsetM": 0,
+      "modelInstance": {
+        "sourceAssetId": "bespoke-dmc-parkview-xi-301",
+        "sourceDimensions": [
+          37.24368190765381,
+          57.599998474121094,
+          26.963677406311035
+        ],
+        "matrix": [
+          0.9487351652453132,
+          0.0,
+          0.017548605245276884,
+          0.0,
+          0.0,
+          1.4375000380807463,
+          0.0,
+          0.0,
+          -0.010828049458682274,
+          0.0,
+          1.147098631015306,
+          0.0,
+          -2.6582964730483676,
+          0.0,
+          -1.3097506857374688,
+          1.0
+        ],
+        "hiddenNodes": []
+      },
+      "sourceRecord": {
+        "provider": "Shared representative instance",
+        "siteId": "dmc-parkview-xi-completion-shared",
+        "sources": [
+          {
+            "url": "https://file.kbland.kr/image/kbstar/land/img/alian/kms/complex/photo/objctidnfr/35380/MzUzODAxMDAyMDY3Njcy.jpg",
+            "sha256": "7f9559aeecf8dae5ede7c228402b6e7aa1fa67dc2f5842e5517d4321f2b61dc2",
+            "scope": "complex",
+            "observedTowerNumber": null,
+            "observations": "Root directly viewed actual completed-complex photo and final V2 four views. Orange rectangular frames surround multi-floor window groups against pale beige opaque walls and white window piers. The upper facade now has a broad recessed gray louver opening and pale structural sides/cap rather than a small separate rooftop box. Number and compass face unconfirmed; facade layout and dimensions are complex-level inference."
+          },
+          {
+            "url": "https://kbland.kr/se/c/28216",
+            "observations": "Primary complex photograph; representative only."
+          },
+          {
+            "dataset": "Previously identified numbered source inventory",
+            "snapshot": "dmc-parkview-xi-source-identity.json",
+            "sha256": "a8c30c48f56677b703b5f5287db6eee1513deb3969a7e819d37bc6fe23246b07",
+            "observations": "6existing sources127,301-305 linked by normalized source number, exact GajaeulMiraero2/Namgajwadong385 register, equal floors and height differences<=1m, official point proximity. Root actual SQLite geometry/properties/register validation; official61buildings4300households. No full boundary proof."
+          }
+        ],
+        "blendSource": "modeling/bespoke/dmc-parkview-xi-301-representative-v2/dmc-parkview-xi-301-authored.blend",
+        "blendSha256": "e4c7df081596a675a389a6738f0489f98e255fb68cb008408a972f59d7742e6c",
+        "sourceGlbSha256": "18249cde4215e62670ebbc6b5eb78e84dffc3c0d2b2645bb9aa33dbba26ab755",
+        "components": [
+          "Shared representative geometry/materials",
+          "Inventory-based placement/size transform"
+        ],
+        "buildingFacts": {
+          "floors": 29,
+          "floorsBasis": "Existing register metadata; the cloned floor pattern is unchanged",
+          "heightM": 82.8,
+          "registeredHeightM": 82.8,
+          "sourceHeightM": 83.0,
+          "heightBasis": "Overall cloned envelope scaled to existing registered height; not individual floor reconstruction"
+        },
+        "uncertainties": [
+          "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+          "Photo number and orientation unconfirmed; exterior inferred from complex photo.",
+          "Recess and frame dimensions, hidden facade and roof datum are not measured.",
+          "OSM58m versus registered57.6m retained.",
+          "Copies repeat representative geometry/window/floor pattern; individual shapes are not reconstructed.",
+          "Only6of61official residential buildings currently identified."
+        ],
+        "accuracy": "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+        "modelingBasis": "representative-photo-inference",
+        "inferenceScope": "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+        "delivery": "shared-instance",
+        "inferredFrom": [
+          {
+            "id": "bespoke-dmc-parkview-xi-301",
+            "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+            "siteId": "dmc-parkview-xi-301-representative-v2"
+          }
+        ]
+      },
+      "dimensions": [
+        35.36296981360107,
+        82.8,
+        30.792716693430076
+      ],
+      "geoBounds": [
+        126.91353609165508,
+        37.57395670158578,
+        126.91393690520559,
+        37.574233317266234
+      ]
+    },
+    {
+      "model": "bespoke/dmc-parkview-xi-301-representative-v2/bespoke-dmc-parkview-xi-301.glb",
+      "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+      "heightDatum": "metres; independent terrain anchor",
+      "quality": "reference",
+      "referenceUrl": "https://kbland.kr/se/c/28216",
+      "category": "apartment",
+      "district": "서대문구",
+      "minZoom": 15,
+      "id": "bespoke-dmc-parkview-xi-219",
+      "nameKo": "DMC파크뷰자이 219동",
+      "coordinate": {
+        "lon": 126.914436,
+        "lat": 37.5743618
+      },
+      "yawDegFromEast": 0,
+      "footprintIds": [
+        "621ad685-27c1-451b-9351-b21e8dee28f7"
+      ],
+      "supersedes": [
+        "residential-621ad685-27c1-451b-9351-b21e8dee28f7"
+      ],
+      "searchable": false,
+      "groundOffsetM": 0,
+      "modelInstance": {
+        "sourceAssetId": "bespoke-dmc-parkview-xi-301",
+        "sourceDimensions": [
+          37.24368190765381,
+          57.599998474121094,
+          26.963677406311035
+        ],
+        "matrix": [
+          0.9282774754034759,
+          0.0,
+          -0.19697912371639206,
+          0.0,
+          0.0,
+          1.3888889256818804,
+          0.0,
+          0.0,
+          0.24832254371043028,
+          0.0,
+          1.120152514679291,
+          0.0,
+          -0.6011621354037513,
+          0.0,
+          0.6201778257341589,
+          1.0
+        ],
+        "hiddenNodes": []
+      },
+      "sourceRecord": {
+        "provider": "Shared representative instance",
+        "siteId": "dmc-parkview-xi-completion-shared",
+        "sources": [
+          {
+            "url": "https://file.kbland.kr/image/kbstar/land/img/alian/kms/complex/photo/objctidnfr/35380/MzUzODAxMDAyMDY3Njcy.jpg",
+            "sha256": "7f9559aeecf8dae5ede7c228402b6e7aa1fa67dc2f5842e5517d4321f2b61dc2",
+            "scope": "complex",
+            "observedTowerNumber": null,
+            "observations": "Root directly viewed actual completed-complex photo and final V2 four views. Orange rectangular frames surround multi-floor window groups against pale beige opaque walls and white window piers. The upper facade now has a broad recessed gray louver opening and pale structural sides/cap rather than a small separate rooftop box. Number and compass face unconfirmed; facade layout and dimensions are complex-level inference."
+          },
+          {
+            "url": "https://kbland.kr/se/c/28216",
+            "observations": "Primary complex photograph; representative only."
+          },
+          {
+            "dataset": "Previously identified numbered source inventory",
+            "snapshot": "dmc-parkview-xi-source-identity.json",
+            "sha256": "a8c30c48f56677b703b5f5287db6eee1513deb3969a7e819d37bc6fe23246b07",
+            "observations": "6existing sources127,301-305 linked by normalized source number, exact GajaeulMiraero2/Namgajwadong385 register, equal floors and height differences<=1m, official point proximity. Root actual SQLite geometry/properties/register validation; official61buildings4300households. No full boundary proof."
+          }
+        ],
+        "blendSource": "modeling/bespoke/dmc-parkview-xi-301-representative-v2/dmc-parkview-xi-301-authored.blend",
+        "blendSha256": "e4c7df081596a675a389a6738f0489f98e255fb68cb008408a972f59d7742e6c",
+        "sourceGlbSha256": "18249cde4215e62670ebbc6b5eb78e84dffc3c0d2b2645bb9aa33dbba26ab755",
+        "components": [
+          "Shared representative geometry/materials",
+          "Inventory-based placement/size transform"
+        ],
+        "buildingFacts": {
+          "floors": 28,
+          "floorsBasis": "Existing register metadata; the cloned floor pattern is unchanged",
+          "heightM": 80.0,
+          "registeredHeightM": 80.0,
+          "sourceHeightM": 80.0,
+          "heightBasis": "Overall cloned envelope scaled to existing registered height; not individual floor reconstruction"
+        },
+        "uncertainties": [
+          "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+          "Photo number and orientation unconfirmed; exterior inferred from complex photo.",
+          "Recess and frame dimensions, hidden facade and roof datum are not measured.",
+          "OSM58m versus registered57.6m retained.",
+          "Copies repeat representative geometry/window/floor pattern; individual shapes are not reconstructed.",
+          "Only6of61official residential buildings currently identified."
+        ],
+        "accuracy": "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+        "modelingBasis": "representative-photo-inference",
+        "inferenceScope": "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+        "delivery": "shared-instance",
+        "inferredFrom": [
+          {
+            "id": "bespoke-dmc-parkview-xi-301",
+            "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+            "siteId": "dmc-parkview-xi-301-representative-v2"
+          }
+        ]
+      },
+      "dimensions": [
+        34.60345905576867,
+        80,
+        34.21640968906223
+      ],
+      "geoBounds": [
+        126.91424292983565,
+        37.574203129647415,
+        126.91463513628963,
+        37.57451050088533
+      ]
+    },
+    {
+      "model": "bespoke/dmc-parkview-xi-301-representative-v2/bespoke-dmc-parkview-xi-301.glb",
+      "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+      "heightDatum": "metres; independent terrain anchor",
+      "quality": "reference",
+      "referenceUrl": "https://kbland.kr/se/c/28216",
+      "category": "apartment",
+      "district": "서대문구",
+      "minZoom": 15,
+      "id": "bespoke-dmc-parkview-xi-220",
+      "nameKo": "DMC파크뷰자이 220동",
+      "coordinate": {
+        "lon": 126.9148825,
+        "lat": 37.5746163
+      },
+      "yawDegFromEast": 0,
+      "footprintIds": [
+        "8fa0bbe8-c3b8-44ed-bde1-6e2904d4b303"
+      ],
+      "supersedes": [
+        "fallback-dmc-parkview-xi-completion-220"
+      ],
+      "searchable": false,
+      "groundOffsetM": 0,
+      "modelInstance": {
+        "sourceAssetId": "bespoke-dmc-parkview-xi-301",
+        "sourceDimensions": [
+          37.24368190765381,
+          57.599998474121094,
+          26.963677406311035
+        ],
+        "matrix": [
+          0.6926302586866467,
+          0.0,
+          -0.6485139656067989,
+          0.0,
+          0.0,
+          1.1944444760864172,
+          0.0,
+          0.0,
+          0.7915143834253343,
+          0.0,
+          0.8301658089094639,
+          0.0,
+          0.5091422760153281,
+          0.0,
+          3.1932925815399473,
+          1.0
+        ],
+        "hiddenNodes": []
+      },
+      "sourceRecord": {
+        "provider": "Shared representative instance",
+        "siteId": "dmc-parkview-xi-completion-shared",
+        "sources": [
+          {
+            "url": "https://file.kbland.kr/image/kbstar/land/img/alian/kms/complex/photo/objctidnfr/35380/MzUzODAxMDAyMDY3Njcy.jpg",
+            "sha256": "7f9559aeecf8dae5ede7c228402b6e7aa1fa67dc2f5842e5517d4321f2b61dc2",
+            "scope": "complex",
+            "observedTowerNumber": null,
+            "observations": "Root directly viewed actual completed-complex photo and final V2 four views. Orange rectangular frames surround multi-floor window groups against pale beige opaque walls and white window piers. The upper facade now has a broad recessed gray louver opening and pale structural sides/cap rather than a small separate rooftop box. Number and compass face unconfirmed; facade layout and dimensions are complex-level inference."
+          },
+          {
+            "url": "https://kbland.kr/se/c/28216",
+            "observations": "Primary complex photograph; representative only."
+          },
+          {
+            "dataset": "Previously identified numbered source inventory",
+            "snapshot": "dmc-parkview-xi-source-identity.json",
+            "sha256": "a8c30c48f56677b703b5f5287db6eee1513deb3969a7e819d37bc6fe23246b07",
+            "observations": "6existing sources127,301-305 linked by normalized source number, exact GajaeulMiraero2/Namgajwadong385 register, equal floors and height differences<=1m, official point proximity. Root actual SQLite geometry/properties/register validation; official61buildings4300households. No full boundary proof."
+          }
+        ],
+        "blendSource": "modeling/bespoke/dmc-parkview-xi-301-representative-v2/dmc-parkview-xi-301-authored.blend",
+        "blendSha256": "e4c7df081596a675a389a6738f0489f98e255fb68cb008408a972f59d7742e6c",
+        "sourceGlbSha256": "18249cde4215e62670ebbc6b5eb78e84dffc3c0d2b2645bb9aa33dbba26ab755",
+        "components": [
+          "Shared representative geometry/materials",
+          "Inventory-based placement/size transform"
+        ],
+        "buildingFacts": {
+          "floors": 24,
+          "floorsBasis": "Existing register metadata; the cloned floor pattern is unchanged",
+          "heightM": 68.8,
+          "registeredHeightM": 68.8,
+          "sourceHeightM": 69.0,
+          "heightBasis": "Overall cloned envelope scaled to existing registered height; not individual floor reconstruction"
+        },
+        "uncertainties": [
+          "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+          "Photo number and orientation unconfirmed; exterior inferred from complex photo.",
+          "Recess and frame dimensions, hidden facade and roof datum are not measured.",
+          "OSM58m versus registered57.6m retained.",
+          "Copies repeat representative geometry/window/floor pattern; individual shapes are not reconstructed.",
+          "Only6of61official residential buildings currently identified."
+        ],
+        "accuracy": "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+        "modelingBasis": "representative-photo-inference",
+        "inferenceScope": "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+        "delivery": "shared-instance",
+        "inferredFrom": [
+          {
+            "id": "bespoke-dmc-parkview-xi-301",
+            "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+            "siteId": "dmc-parkview-xi-301-representative-v2"
+          }
+        ]
+      },
+      "dimensions": [
+        35.089038666566324,
+        68.8,
+        35.654571812808854
+      ],
+      "geoBounds": [
+        126.91468774362778,
+        37.57445346542128,
+        126.91508545515251,
+        37.57477375588936
+      ]
+    },
+    {
+      "model": "bespoke/dmc-parkview-xi-301-representative-v2/bespoke-dmc-parkview-xi-301.glb",
+      "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+      "heightDatum": "metres; independent terrain anchor",
+      "quality": "reference",
+      "referenceUrl": "https://kbland.kr/se/c/28216",
+      "category": "apartment",
+      "district": "서대문구",
+      "minZoom": 15,
+      "id": "bespoke-dmc-parkview-xi-221",
+      "nameKo": "DMC파크뷰자이 221동",
+      "coordinate": {
+        "lon": 126.91539035,
+        "lat": 37.57497625
+      },
+      "yawDegFromEast": 0,
+      "footprintIds": [
+        "c99e8f0e-444d-4740-84c1-7251945b11a9"
+      ],
+      "supersedes": [
+        "fallback-dmc-parkview-xi-completion-221"
+      ],
+      "searchable": false,
+      "groundOffsetM": 0,
+      "modelInstance": {
+        "sourceAssetId": "bespoke-dmc-parkview-xi-301",
+        "sourceDimensions": [
+          37.24368190765381,
+          57.599998474121094,
+          26.963677406311035
+        ],
+        "matrix": [
+          1.3098997277103275,
+          0.0,
+          -0.004137386120673292,
+          0.0,
+          0.0,
+          0.6093750161429251,
+          0.0,
+          0.0,
+          -0.027618699988865965,
+          0.0,
+          0.3572447688691058,
+          0.0,
+          -3.798592683311726,
+          0.0,
+          -0.40328555674235445,
+          1.0
+        ],
+        "hiddenNodes": []
+      },
+      "sourceRecord": {
+        "provider": "Shared representative instance",
+        "siteId": "dmc-parkview-xi-completion-shared",
+        "sources": [
+          {
+            "url": "https://file.kbland.kr/image/kbstar/land/img/alian/kms/complex/photo/objctidnfr/35380/MzUzODAxMDAyMDY3Njcy.jpg",
+            "sha256": "7f9559aeecf8dae5ede7c228402b6e7aa1fa67dc2f5842e5517d4321f2b61dc2",
+            "scope": "complex",
+            "observedTowerNumber": null,
+            "observations": "Root directly viewed actual completed-complex photo and final V2 four views. Orange rectangular frames surround multi-floor window groups against pale beige opaque walls and white window piers. The upper facade now has a broad recessed gray louver opening and pale structural sides/cap rather than a small separate rooftop box. Number and compass face unconfirmed; facade layout and dimensions are complex-level inference."
+          },
+          {
+            "url": "https://kbland.kr/se/c/28216",
+            "observations": "Primary complex photograph; representative only."
+          },
+          {
+            "dataset": "Previously identified numbered source inventory",
+            "snapshot": "dmc-parkview-xi-source-identity.json",
+            "sha256": "a8c30c48f56677b703b5f5287db6eee1513deb3969a7e819d37bc6fe23246b07",
+            "observations": "6existing sources127,301-305 linked by normalized source number, exact GajaeulMiraero2/Namgajwadong385 register, equal floors and height differences<=1m, official point proximity. Root actual SQLite geometry/properties/register validation; official61buildings4300households. No full boundary proof."
+          }
+        ],
+        "blendSource": "modeling/bespoke/dmc-parkview-xi-301-representative-v2/dmc-parkview-xi-301-authored.blend",
+        "blendSha256": "e4c7df081596a675a389a6738f0489f98e255fb68cb008408a972f59d7742e6c",
+        "sourceGlbSha256": "18249cde4215e62670ebbc6b5eb78e84dffc3c0d2b2645bb9aa33dbba26ab755",
+        "components": [
+          "Shared representative geometry/materials",
+          "Inventory-based placement/size transform"
+        ],
+        "buildingFacts": {
+          "floors": 11,
+          "floorsBasis": "Existing register metadata; the cloned floor pattern is unchanged",
+          "heightM": 35.1,
+          "registeredHeightM": 35.1,
+          "sourceHeightM": 35.0,
+          "heightBasis": "Overall cloned envelope scaled to existing registered height; not individual floor reconstruction"
+        },
+        "uncertainties": [
+          "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+          "Photo number and orientation unconfirmed; exterior inferred from complex photo.",
+          "Recess and frame dimensions, hidden facade and roof datum are not measured.",
+          "OSM58m versus registered57.6m retained.",
+          "Copies repeat representative geometry/window/floor pattern; individual shapes are not reconstructed.",
+          "Only6of61official residential buildings currently identified."
+        ],
+        "accuracy": "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+        "modelingBasis": "representative-photo-inference",
+        "inferenceScope": "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+        "delivery": "shared-instance",
+        "inferredFrom": [
+          {
+            "id": "bespoke-dmc-parkview-xi-301",
+            "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+            "siteId": "dmc-parkview-xi-301-representative-v2"
+          }
+        ]
+      },
+      "dimensions": [
+        48.85879882225453,
+        35.1,
+        9.710110711029213
+      ],
+      "geoBounds": [
+        126.9151130403713,
+        37.5749334610363,
+        126.91566682588497,
+        37.57502068844492
+      ]
+    },
+    {
+      "model": "bespoke/dmc-parkview-xi-301-representative-v2/bespoke-dmc-parkview-xi-301.glb",
+      "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+      "heightDatum": "metres; independent terrain anchor",
+      "quality": "reference",
+      "referenceUrl": "https://kbland.kr/se/c/28216",
+      "category": "apartment",
+      "district": "서대문구",
+      "minZoom": 15,
+      "id": "bespoke-dmc-parkview-xi-401",
+      "nameKo": "DMC파크뷰자이 401동",
+      "coordinate": {
+        "lon": 126.91497985000001,
+        "lat": 37.5718538
+      },
+      "yawDegFromEast": 0,
+      "footprintIds": [
+        "69a0b004-bf13-43ee-94ae-fe5fe835854e"
+      ],
+      "supersedes": [
+        "fallback-dmc-parkview-xi-completion-401"
+      ],
+      "searchable": false,
+      "groundOffsetM": 0,
+      "modelInstance": {
+        "sourceAssetId": "bespoke-dmc-parkview-xi-301",
+        "sourceDimensions": [
+          37.24368190765381,
+          57.599998474121094,
+          26.963677406311035
+        ],
+        "matrix": [
+          1.066045634523054,
+          0.0,
+          0.7831849193250606,
+          0.0,
+          0.0,
+          0.8437500223517425,
+          0.0,
+          0.0,
+          -0.2513793279142462,
+          0.0,
+          0.29369783635927355,
+          0.0,
+          -2.8252823264596083,
+          0.0,
+          -2.6318632594400335,
+          1.0
+        ],
+        "hiddenNodes": []
+      },
+      "sourceRecord": {
+        "provider": "Shared representative instance",
+        "siteId": "dmc-parkview-xi-completion-shared",
+        "sources": [
+          {
+            "url": "https://file.kbland.kr/image/kbstar/land/img/alian/kms/complex/photo/objctidnfr/35380/MzUzODAxMDAyMDY3Njcy.jpg",
+            "sha256": "7f9559aeecf8dae5ede7c228402b6e7aa1fa67dc2f5842e5517d4321f2b61dc2",
+            "scope": "complex",
+            "observedTowerNumber": null,
+            "observations": "Root directly viewed actual completed-complex photo and final V2 four views. Orange rectangular frames surround multi-floor window groups against pale beige opaque walls and white window piers. The upper facade now has a broad recessed gray louver opening and pale structural sides/cap rather than a small separate rooftop box. Number and compass face unconfirmed; facade layout and dimensions are complex-level inference."
+          },
+          {
+            "url": "https://kbland.kr/se/c/28216",
+            "observations": "Primary complex photograph; representative only."
+          },
+          {
+            "dataset": "Previously identified numbered source inventory",
+            "snapshot": "dmc-parkview-xi-source-identity.json",
+            "sha256": "a8c30c48f56677b703b5f5287db6eee1513deb3969a7e819d37bc6fe23246b07",
+            "observations": "6existing sources127,301-305 linked by normalized source number, exact GajaeulMiraero2/Namgajwadong385 register, equal floors and height differences<=1m, official point proximity. Root actual SQLite geometry/properties/register validation; official61buildings4300households. No full boundary proof."
+          }
+        ],
+        "blendSource": "modeling/bespoke/dmc-parkview-xi-301-representative-v2/dmc-parkview-xi-301-authored.blend",
+        "blendSha256": "e4c7df081596a675a389a6738f0489f98e255fb68cb008408a972f59d7742e6c",
+        "sourceGlbSha256": "18249cde4215e62670ebbc6b5eb78e84dffc3c0d2b2645bb9aa33dbba26ab755",
+        "components": [
+          "Shared representative geometry/materials",
+          "Inventory-based placement/size transform"
+        ],
+        "buildingFacts": {
+          "floors": 16,
+          "floorsBasis": "Existing register metadata; the cloned floor pattern is unchanged",
+          "heightM": 48.6,
+          "registeredHeightM": 48.6,
+          "sourceHeightM": 49.0,
+          "heightBasis": "Overall cloned envelope scaled to existing registered height; not individual floor reconstruction"
+        },
+        "uncertainties": [
+          "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+          "Photo number and orientation unconfirmed; exterior inferred from complex photo.",
+          "Recess and frame dimensions, hidden facade and roof datum are not measured.",
+          "OSM58m versus registered57.6m retained.",
+          "Copies repeat representative geometry/window/floor pattern; individual shapes are not reconstructed.",
+          "Only6of61official residential buildings currently identified."
+        ],
+        "accuracy": "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+        "modelingBasis": "representative-photo-inference",
+        "inferenceScope": "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+        "delivery": "shared-instance",
+        "inferredFrom": [
+          {
+            "id": "bespoke-dmc-parkview-xi-301",
+            "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+            "siteId": "dmc-parkview-xi-301-representative-v2"
+          }
+        ]
+      },
+      "dimensions": [
+        40.40774020735121,
+        48.6,
+        29.514230829234535
+      ],
+      "geoBounds": [
+        126.91476877165609,
+        37.571743076824795,
+        126.91522675022885,
+        37.572008207671324
+      ]
+    },
+    {
+      "model": "bespoke/dmc-parkview-xi-301-representative-v2/bespoke-dmc-parkview-xi-301.glb",
+      "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+      "heightDatum": "metres; independent terrain anchor",
+      "quality": "reference",
+      "referenceUrl": "https://kbland.kr/se/c/28216",
+      "category": "apartment",
+      "district": "서대문구",
+      "minZoom": 15,
+      "id": "bespoke-dmc-parkview-xi-402",
+      "nameKo": "DMC파크뷰자이 402동",
+      "coordinate": {
+        "lon": 126.91459645,
+        "lat": 37.57151935
+      },
+      "yawDegFromEast": 0,
+      "footprintIds": [
+        "02b5eb9c-c9d4-4ec8-8b68-6d4612f7bd10"
+      ],
+      "supersedes": [
+        "fallback-dmc-parkview-xi-completion-402"
+      ],
+      "searchable": false,
+      "groundOffsetM": 0,
+      "modelInstance": {
+        "sourceAssetId": "bespoke-dmc-parkview-xi-301",
+        "sourceDimensions": [
+          37.24368190765381,
+          57.599998474121094,
+          26.963677406311035
+        ],
+        "matrix": [
+          0.5310312808528876,
+          0.0,
+          0.4115775448967165,
+          0.0,
+          0.0,
+          0.5277777917591145,
+          0.0,
+          0.0,
+          -0.2502656932269868,
+          0.0,
+          0.30588845194990105,
+          0.0,
+          -1.2619667398875172,
+          0.0,
+          -1.5592991864213277,
+          1.0
+        ],
+        "hiddenNodes": []
+      },
+      "sourceRecord": {
+        "provider": "Shared representative instance",
+        "siteId": "dmc-parkview-xi-completion-shared",
+        "sources": [
+          {
+            "url": "https://file.kbland.kr/image/kbstar/land/img/alian/kms/complex/photo/objctidnfr/35380/MzUzODAxMDAyMDY3Njcy.jpg",
+            "sha256": "7f9559aeecf8dae5ede7c228402b6e7aa1fa67dc2f5842e5517d4321f2b61dc2",
+            "scope": "complex",
+            "observedTowerNumber": null,
+            "observations": "Root directly viewed actual completed-complex photo and final V2 four views. Orange rectangular frames surround multi-floor window groups against pale beige opaque walls and white window piers. The upper facade now has a broad recessed gray louver opening and pale structural sides/cap rather than a small separate rooftop box. Number and compass face unconfirmed; facade layout and dimensions are complex-level inference."
+          },
+          {
+            "url": "https://kbland.kr/se/c/28216",
+            "observations": "Primary complex photograph; representative only."
+          },
+          {
+            "dataset": "Previously identified numbered source inventory",
+            "snapshot": "dmc-parkview-xi-source-identity.json",
+            "sha256": "a8c30c48f56677b703b5f5287db6eee1513deb3969a7e819d37bc6fe23246b07",
+            "observations": "6existing sources127,301-305 linked by normalized source number, exact GajaeulMiraero2/Namgajwadong385 register, equal floors and height differences<=1m, official point proximity. Root actual SQLite geometry/properties/register validation; official61buildings4300households. No full boundary proof."
+          }
+        ],
+        "blendSource": "modeling/bespoke/dmc-parkview-xi-301-representative-v2/dmc-parkview-xi-301-authored.blend",
+        "blendSha256": "e4c7df081596a675a389a6738f0489f98e255fb68cb008408a972f59d7742e6c",
+        "sourceGlbSha256": "18249cde4215e62670ebbc6b5eb78e84dffc3c0d2b2645bb9aa33dbba26ab755",
+        "components": [
+          "Shared representative geometry/materials",
+          "Inventory-based placement/size transform"
+        ],
+        "buildingFacts": {
+          "floors": 10,
+          "floorsBasis": "Existing register metadata; the cloned floor pattern is unchanged",
+          "heightM": 30.4,
+          "registeredHeightM": 30.4,
+          "sourceHeightM": 30.0,
+          "heightBasis": "Overall cloned envelope scaled to existing registered height; not individual floor reconstruction"
+        },
+        "uncertainties": [
+          "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+          "Photo number and orientation unconfirmed; exterior inferred from complex photo.",
+          "Recess and frame dimensions, hidden facade and roof datum are not measured.",
+          "OSM58m versus registered57.6m retained.",
+          "Copies repeat representative geometry/window/floor pattern; individual shapes are not reconstructed.",
+          "Only6of61official residential buildings currently identified."
+        ],
+        "accuracy": "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+        "modelingBasis": "representative-photo-inference",
+        "inferenceScope": "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+        "delivery": "shared-instance",
+        "inferredFrom": [
+          {
+            "id": "bespoke-dmc-parkview-xi-301",
+            "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+            "siteId": "dmc-parkview-xi-301-representative-v2"
+          }
+        ]
+      },
+      "dimensions": [
+        21.432465490369797,
+        30.4,
+        17.64135827788286
+      ],
+      "geoBounds": [
+        126.9144884906181,
+        37.57145479609189,
+        126.91473140363,
+        37.571613271109634
+      ]
+    },
+    {
+      "model": "bespoke/dmc-parkview-xi-301-representative-v2/bespoke-dmc-parkview-xi-301.glb",
+      "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+      "heightDatum": "metres; independent terrain anchor",
+      "quality": "reference",
+      "referenceUrl": "https://kbland.kr/se/c/28216",
+      "category": "apartment",
+      "district": "서대문구",
+      "minZoom": 15,
+      "id": "bespoke-dmc-parkview-xi-403",
+      "nameKo": "DMC파크뷰자이 403동",
+      "coordinate": {
+        "lon": 126.91426945,
+        "lat": 37.57152645
+      },
+      "yawDegFromEast": 0,
+      "footprintIds": [
+        "f775b4ee-a0b9-4016-abc0-0856b6337da8"
+      ],
+      "supersedes": [
+        "fallback-dmc-parkview-xi-completion-403"
+      ],
+      "searchable": false,
+      "groundOffsetM": 0,
+      "modelInstance": {
+        "sourceAssetId": "bespoke-dmc-parkview-xi-301",
+        "sourceDimensions": [
+          37.24368190765381,
+          57.599998474121094,
+          26.963677406311035
+        ],
+        "matrix": [
+          0.32691042080448096,
+          0.0,
+          -0.44526994919617935,
+          0.0,
+          0.0,
+          0.5329861252304217,
+          0.0,
+          0.0,
+          0.2916333012374551,
+          0.0,
+          0.2231837034296194,
+          0.0,
+          -1.2951212335656308,
+          0.0,
+          1.0426534638362672,
+          1.0
+        ],
+        "hiddenNodes": []
+      },
+      "sourceRecord": {
+        "provider": "Shared representative instance",
+        "siteId": "dmc-parkview-xi-completion-shared",
+        "sources": [
+          {
+            "url": "https://file.kbland.kr/image/kbstar/land/img/alian/kms/complex/photo/objctidnfr/35380/MzUzODAxMDAyMDY3Njcy.jpg",
+            "sha256": "7f9559aeecf8dae5ede7c228402b6e7aa1fa67dc2f5842e5517d4321f2b61dc2",
+            "scope": "complex",
+            "observedTowerNumber": null,
+            "observations": "Root directly viewed actual completed-complex photo and final V2 four views. Orange rectangular frames surround multi-floor window groups against pale beige opaque walls and white window piers. The upper facade now has a broad recessed gray louver opening and pale structural sides/cap rather than a small separate rooftop box. Number and compass face unconfirmed; facade layout and dimensions are complex-level inference."
+          },
+          {
+            "url": "https://kbland.kr/se/c/28216",
+            "observations": "Primary complex photograph; representative only."
+          },
+          {
+            "dataset": "Previously identified numbered source inventory",
+            "snapshot": "dmc-parkview-xi-source-identity.json",
+            "sha256": "a8c30c48f56677b703b5f5287db6eee1513deb3969a7e819d37bc6fe23246b07",
+            "observations": "6existing sources127,301-305 linked by normalized source number, exact GajaeulMiraero2/Namgajwadong385 register, equal floors and height differences<=1m, official point proximity. Root actual SQLite geometry/properties/register validation; official61buildings4300households. No full boundary proof."
+          }
+        ],
+        "blendSource": "modeling/bespoke/dmc-parkview-xi-301-representative-v2/dmc-parkview-xi-301-authored.blend",
+        "blendSha256": "e4c7df081596a675a389a6738f0489f98e255fb68cb008408a972f59d7742e6c",
+        "sourceGlbSha256": "18249cde4215e62670ebbc6b5eb78e84dffc3c0d2b2645bb9aa33dbba26ab755",
+        "components": [
+          "Shared representative geometry/materials",
+          "Inventory-based placement/size transform"
+        ],
+        "buildingFacts": {
+          "floors": 10,
+          "floorsBasis": "Existing register metadata; the cloned floor pattern is unchanged",
+          "heightM": 30.7,
+          "registeredHeightM": 30.7,
+          "sourceHeightM": 31.0,
+          "heightBasis": "Overall cloned envelope scaled to existing registered height; not individual floor reconstruction"
+        },
+        "uncertainties": [
+          "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+          "Photo number and orientation unconfirmed; exterior inferred from complex photo.",
+          "Recess and frame dimensions, hidden facade and roof datum are not measured.",
+          "OSM58m versus registered57.6m retained.",
+          "Copies repeat representative geometry/window/floor pattern; individual shapes are not reconstructed.",
+          "Only6of61official residential buildings currently identified."
+        ],
+        "accuracy": "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+        "modelingBasis": "representative-photo-inference",
+        "inferenceScope": "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+        "delivery": "shared-instance",
+        "inferredFrom": [
+          {
+            "id": "bespoke-dmc-parkview-xi-301",
+            "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+            "siteId": "dmc-parkview-xi-301-representative-v2"
+          }
+        ]
+      },
+      "dimensions": [
+        14.696717383790624,
+        30.700000000000003,
+        18.161585769790115
+      ],
+      "geoBounds": [
+        126.91417015087417,
+        37.57145400185972,
+        126.91433672173493,
+        37.57161715016053
+      ]
+    },
+    {
+      "model": "bespoke/dmc-parkview-xi-301-representative-v2/bespoke-dmc-parkview-xi-301.glb",
+      "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+      "heightDatum": "metres; independent terrain anchor",
+      "quality": "reference",
+      "referenceUrl": "https://kbland.kr/se/c/28216",
+      "category": "apartment",
+      "district": "서대문구",
+      "minZoom": 15,
+      "id": "bespoke-dmc-parkview-xi-404",
+      "nameKo": "DMC파크뷰자이 404동",
+      "coordinate": {
+        "lon": 126.91451624999999,
+        "lat": 37.571806550000005
+      },
+      "yawDegFromEast": 0,
+      "footprintIds": [
+        "ce90ca0c-9cb0-4c86-ac08-d383bc5e37df"
+      ],
+      "supersedes": [
+        "fallback-dmc-parkview-xi-completion-404"
+      ],
+      "searchable": false,
+      "groundOffsetM": 0,
+      "modelInstance": {
+        "sourceAssetId": "bespoke-dmc-parkview-xi-301",
+        "sourceDimensions": [
+          37.24368190765381,
+          57.599998474121094,
+          26.963677406311035
+        ],
+        "matrix": [
+          0.32675168189454296,
+          0.0,
+          -0.44530929184305,
+          0.0,
+          0.0,
+          0.5329861252304217,
+          0.0,
+          0.0,
+          0.2919180078621035,
+          0.0,
+          0.2232547345628048,
+          0.0,
+          -1.2970148131433106,
+          0.0,
+          1.0443786076639645,
+          1.0
+        ],
+        "hiddenNodes": []
+      },
+      "sourceRecord": {
+        "provider": "Shared representative instance",
+        "siteId": "dmc-parkview-xi-completion-shared",
+        "sources": [
+          {
+            "url": "https://file.kbland.kr/image/kbstar/land/img/alian/kms/complex/photo/objctidnfr/35380/MzUzODAxMDAyMDY3Njcy.jpg",
+            "sha256": "7f9559aeecf8dae5ede7c228402b6e7aa1fa67dc2f5842e5517d4321f2b61dc2",
+            "scope": "complex",
+            "observedTowerNumber": null,
+            "observations": "Root directly viewed actual completed-complex photo and final V2 four views. Orange rectangular frames surround multi-floor window groups against pale beige opaque walls and white window piers. The upper facade now has a broad recessed gray louver opening and pale structural sides/cap rather than a small separate rooftop box. Number and compass face unconfirmed; facade layout and dimensions are complex-level inference."
+          },
+          {
+            "url": "https://kbland.kr/se/c/28216",
+            "observations": "Primary complex photograph; representative only."
+          },
+          {
+            "dataset": "Previously identified numbered source inventory",
+            "snapshot": "dmc-parkview-xi-source-identity.json",
+            "sha256": "a8c30c48f56677b703b5f5287db6eee1513deb3969a7e819d37bc6fe23246b07",
+            "observations": "6existing sources127,301-305 linked by normalized source number, exact GajaeulMiraero2/Namgajwadong385 register, equal floors and height differences<=1m, official point proximity. Root actual SQLite geometry/properties/register validation; official61buildings4300households. No full boundary proof."
+          }
+        ],
+        "blendSource": "modeling/bespoke/dmc-parkview-xi-301-representative-v2/dmc-parkview-xi-301-authored.blend",
+        "blendSha256": "e4c7df081596a675a389a6738f0489f98e255fb68cb008408a972f59d7742e6c",
+        "sourceGlbSha256": "18249cde4215e62670ebbc6b5eb78e84dffc3c0d2b2645bb9aa33dbba26ab755",
+        "components": [
+          "Shared representative geometry/materials",
+          "Inventory-based placement/size transform"
+        ],
+        "buildingFacts": {
+          "floors": 10,
+          "floorsBasis": "Existing register metadata; the cloned floor pattern is unchanged",
+          "heightM": 30.7,
+          "registeredHeightM": 30.7,
+          "sourceHeightM": 31.0,
+          "heightBasis": "Overall cloned envelope scaled to existing registered height; not individual floor reconstruction"
+        },
+        "uncertainties": [
+          "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+          "Photo number and orientation unconfirmed; exterior inferred from complex photo.",
+          "Recess and frame dimensions, hidden facade and roof datum are not measured.",
+          "OSM58m versus registered57.6m retained.",
+          "Copies repeat representative geometry/window/floor pattern; individual shapes are not reconstructed.",
+          "Only6of61official residential buildings currently identified."
+        ],
+        "accuracy": "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+        "modelingBasis": "representative-photo-inference",
+        "inferenceScope": "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+        "delivery": "shared-instance",
+        "inferredFrom": [
+          {
+            "id": "bespoke-dmc-parkview-xi-301",
+            "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+            "siteId": "dmc-parkview-xi-301-representative-v2"
+          }
+        ]
+      },
+      "dimensions": [
+        14.695576135189707,
+        30.700000000000003,
+        18.16392326945906
+      ],
+      "geoBounds": [
+        126.91441693039695,
+        37.5717340775615,
+        126.91458348894936,
+        37.57189724686042
+      ]
+    },
+    {
+      "model": "bespoke/dmc-parkview-xi-301-representative-v2/bespoke-dmc-parkview-xi-301.glb",
+      "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+      "heightDatum": "metres; independent terrain anchor",
+      "quality": "reference",
+      "referenceUrl": "https://kbland.kr/se/c/28216",
+      "category": "apartment",
+      "district": "서대문구",
+      "minZoom": 15,
+      "id": "bespoke-dmc-parkview-xi-501",
+      "nameKo": "DMC파크뷰자이 501동",
+      "coordinate": {
+        "lon": 126.91409185,
+        "lat": 37.572334
+      },
+      "yawDegFromEast": 0,
+      "footprintIds": [
+        "1d38f274-1da6-4b46-aa60-bba5b1d77d37"
+      ],
+      "supersedes": [
+        "fallback-dmc-parkview-xi-completion-501"
+      ],
+      "searchable": false,
+      "groundOffsetM": 0,
+      "modelInstance": {
+        "sourceAssetId": "bespoke-dmc-parkview-xi-301",
+        "sourceDimensions": [
+          37.24368190765381,
+          57.599998474121094,
+          26.963677406311035
+        ],
+        "matrix": [
+          0.9019607628934335,
+          0.0,
+          0.7752594710933097,
+          0.0,
+          0.0,
+          0.5329861252304217,
+          0.0,
+          0.0,
+          -1.016449569171521,
+          0.0,
+          1.2161532545766784,
+          0.0,
+          -9.33183618337066,
+          0.0,
+          -7.095686814955561,
+          1.0
+        ],
+        "hiddenNodes": []
+      },
+      "sourceRecord": {
+        "provider": "Shared representative instance",
+        "siteId": "dmc-parkview-xi-completion-shared",
+        "sources": [
+          {
+            "url": "https://file.kbland.kr/image/kbstar/land/img/alian/kms/complex/photo/objctidnfr/35380/MzUzODAxMDAyMDY3Njcy.jpg",
+            "sha256": "7f9559aeecf8dae5ede7c228402b6e7aa1fa67dc2f5842e5517d4321f2b61dc2",
+            "scope": "complex",
+            "observedTowerNumber": null,
+            "observations": "Root directly viewed actual completed-complex photo and final V2 four views. Orange rectangular frames surround multi-floor window groups against pale beige opaque walls and white window piers. The upper facade now has a broad recessed gray louver opening and pale structural sides/cap rather than a small separate rooftop box. Number and compass face unconfirmed; facade layout and dimensions are complex-level inference."
+          },
+          {
+            "url": "https://kbland.kr/se/c/28216",
+            "observations": "Primary complex photograph; representative only."
+          },
+          {
+            "dataset": "Previously identified numbered source inventory",
+            "snapshot": "dmc-parkview-xi-source-identity.json",
+            "sha256": "a8c30c48f56677b703b5f5287db6eee1513deb3969a7e819d37bc6fe23246b07",
+            "observations": "6existing sources127,301-305 linked by normalized source number, exact GajaeulMiraero2/Namgajwadong385 register, equal floors and height differences<=1m, official point proximity. Root actual SQLite geometry/properties/register validation; official61buildings4300households. No full boundary proof."
+          }
+        ],
+        "blendSource": "modeling/bespoke/dmc-parkview-xi-301-representative-v2/dmc-parkview-xi-301-authored.blend",
+        "blendSha256": "e4c7df081596a675a389a6738f0489f98e255fb68cb008408a972f59d7742e6c",
+        "sourceGlbSha256": "18249cde4215e62670ebbc6b5eb78e84dffc3c0d2b2645bb9aa33dbba26ab755",
+        "components": [
+          "Shared representative geometry/materials",
+          "Inventory-based placement/size transform"
+        ],
+        "buildingFacts": {
+          "floors": 10,
+          "floorsBasis": "Existing register metadata; the cloned floor pattern is unchanged",
+          "heightM": 30.7,
+          "registeredHeightM": 30.7,
+          "sourceHeightM": 31.0,
+          "heightBasis": "Overall cloned envelope scaled to existing registered height; not individual floor reconstruction"
+        },
+        "uncertainties": [
+          "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+          "Photo number and orientation unconfirmed; exterior inferred from complex photo.",
+          "Recess and frame dimensions, hidden facade and roof datum are not measured.",
+          "OSM58m versus registered57.6m retained.",
+          "Copies repeat representative geometry/window/floor pattern; individual shapes are not reconstructed.",
+          "Only6of61official residential buildings currently identified."
+        ],
+        "accuracy": "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+        "modelingBasis": "representative-photo-inference",
+        "inferenceScope": "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+        "delivery": "shared-instance",
+        "inferredFrom": [
+          {
+            "id": "bespoke-dmc-parkview-xi-301",
+            "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+            "siteId": "dmc-parkview-xi-301-representative-v2"
+          }
+        ]
+      },
+      "dimensions": [
+        45.86645433056757,
+        30.700000000000003,
+        47.95245906937749
+      ],
+      "geoBounds": [
+        126.91377324368275,
+        37.57218009013019,
+        126.91429309430114,
+        37.572610854399116
+      ]
     }
   ],
   "places": [

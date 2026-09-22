@@ -95738,6 +95738,1348 @@
         }
       ],
       "placementMethod": "Long-axis oriented rectangle mapping with positive plan scales and registered overall height; actual concave target shapes are not reconstructed."
+    },
+    "banpo-xi-final-shared": {
+      "sources": [
+        {
+          "url": "https://file.kbland.kr/image/kbstar/land/img/alian/kms/complex/photo/objctidnfr/17727/MTc3MjcxMDAzNzgzOTMx.jpg",
+          "sha256": "f81662f01d777e234135b8a5f4e7dbf09a3d099b6bfbc211db734e8223179798",
+          "scope": "complex",
+          "observations": "Root directly inspected the actual photograph; individual tower numbers and camera orientation unverified."
+        },
+        {
+          "url": "https://kbland.kr/se/c/15891",
+          "observations": "Raw page title Banpo Xi, parcel20-43, roadShinbanpo-ro270,3410households,44buildings and exact photo object17727 filename independently matched; page17727 is unrelated Seocho Artnouveau CityIII."
+        },
+        {
+          "url": "https://api.openstreetmap.org/api/0.6/way/165196918/full",
+          "observations": "Named residential boundary Banpo Xi; full numbered polygons and exact register rows independently checked. Not cadastral survey."
+        },
+        {
+          "dataset": "Exact numbered building-register rows and OSM source polygons",
+          "snapshot": "banpo-xi-source-identity.json",
+          "sha256": "19381e87a09e11b62b74f66c7433bb3f6473b5407452b68988a912300a8dd3ed",
+          "observations": "Exact numbered official residential register rows, individual source polygons and original OSM values retained. No child source parts; lower-wing geometry and heights are explicitly photo inference."
+        }
+      ],
+      "review": {
+        "siteId": "banpo-xi-final-shared",
+        "status": "visually-reviewed",
+        "reviewer": "root independently compared source photograph and all four views per numbered model",
+        "inferenceApprovedAssets": [
+          "bespoke-banpo-xi-103"
+        ],
+        "reviewedSourcePhotos": [
+          {
+            "url": "https://file.kbland.kr/image/kbstar/land/img/alian/kms/complex/photo/objctidnfr/17727/MTc3MjcxMDAzNzgzOTMx.jpg",
+            "sha256": "f81662f01d777e234135b8a5f4e7dbf09a3d099b6bfbc211db734e8223179798",
+            "scope": "complex",
+            "observations": "Root directly inspected the actual photograph; individual tower numbers and camera orientation unverified."
+          }
+        ],
+        "comparisons": [
+          "Root directly viewed actual KB exterior photograph and all final four-view renders. Broad glazed bays, darker service strips and base, pale courses, stepped massing and open roof frames match the reviewed complex vocabulary.",
+          "Root independently decoded every actual GLB: exact source ground coverage, full lower/upper roof-deck coverage, no region ceiling violations, registered maximum height and finite full-surface projection. Declared regions are photo inference, not sourced child heights.",
+          "Exact numbered source identity and register rows independently checked against live local source databases and reconstructed OSM boundary165196918. KB page15891 directly connects the complex and photograph; guessed page17727 is excluded.",
+          "For101, a prior unposted roof frame projected2.9m beyond the footprint; the corrected inscribed frame was reopened and reviewed while the facade remained unchanged.",
+          "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+          "All copy transforms, bounds, source identities and independent fallback bindings checked automatically."
+        ],
+        "limits": [
+          "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+          "Representative has no number label; no node needs hiding.",
+          "Existing authored assets remain unchanged."
+        ],
+        "renders": [
+          "docs/model-audit/renders/banpo-xi-101-roof-contained/front.png",
+          "docs/model-audit/renders/banpo-xi-101-roof-contained/opposite.png",
+          "docs/model-audit/renders/banpo-xi-101-roof-contained/side.png",
+          "docs/model-audit/renders/banpo-xi-101-roof-contained/roof.png"
+        ],
+        "renderSha256": {
+          "docs/model-audit/renders/banpo-xi-101-roof-contained/front.png": "6580b34f2a52a42e33a9b8329801492891063e064aadd9ce8ad7732a6e3417de",
+          "docs/model-audit/renders/banpo-xi-101-roof-contained/opposite.png": "8e88bc19afb2d412db9bd087321e71d811c2ac78e33eb5524ee87f7b1c5b6e98",
+          "docs/model-audit/renders/banpo-xi-101-roof-contained/side.png": "105ee466ba01c8c3c9ce430a64ce5d111939f834dbb64cd7463cb80ed456cf96",
+          "docs/model-audit/renders/banpo-xi-101-roof-contained/roof.png": "a47ebbea7a2e1443b95c34e3dac8dc952ad0f4c7c0d0290e8010412b8477e2ee"
+        },
+        "reviewedInputs": {
+          "banpo-xi-101.glb": "b90310c2fe4f015abd1c58405b926afb9bad8e3cdf2dfbd645ea1d6cc280fd00",
+          "banpo-xi-101-authored.blend": "fdea5e575268e48649086f67714c11b7176fc54848d5018195f2eb622c25369e"
+        },
+        "reviewScope": "One representative visually reviewed; batch placement checks and sample map review for shared copies"
+      },
+      "assets": [
+        {
+          "id": "bespoke-banpo-xi-103",
+          "dimensions": [
+            33.34341152091755,
+            82.3499984741211,
+            31.167608096152243
+          ],
+          "min": [
+            -16.625732628174074,
+            0,
+            -15.575413869720457
+          ],
+          "max": [
+            16.717678892743475,
+            82.3499984741211,
+            15.592194226431786
+          ],
+          "sha256": "4ca21814491e825ec683351765ea5b24598f8e4b41a6d34913948f35b068f56d",
+          "sourceSha256": "b90310c2fe4f015abd1c58405b926afb9bad8e3cdf2dfbd645ea1d6cc280fd00",
+          "sharedModel": "bespoke/banpo-xi-101-roof-contained/bespoke-banpo-xi-101.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-banpo-xi-101",
+            "sourceDimensions": [
+              33.3434476852417,
+              81.30000305175781,
+              31.167630195617676
+            ],
+            "matrix": [
+              0.9999985532248867,
+              0.0,
+              6.160491412032068e-07,
+              0.0,
+              0.0,
+              1.0129150723610039,
+              0.0,
+              0.0,
+              -1.5137332896761307e-06,
+              0.0,
+              0.999999274325562,
+              0.0,
+              1.8109557328183234,
+              0.0,
+              -2.401297798946572,
+              1.0
+            ],
+            "hiddenNodes": []
+          },
+          "heightPolicy": {
+            "policy": "preserve-existing-visible-fallback-height",
+            "fallbackId": "residential-4afb2bb8-e9bd-4692-b310-cec4d7ccc560",
+            "fallbackSha256": "7f310923774b387c42cb44d4a1284a8848cfe97b48bf899a4df47f144baff389",
+            "fallbackModel": "residential-4afb2bb8-e9bd-4692-b310-cec4d7ccc560.glb",
+            "heightM": 82.3499984741211,
+            "localBounds": {
+              "min": [
+                -16.245161056518555,
+                0.0,
+                -15.194952011108398
+              ],
+              "max": [
+                16.245161056518555,
+                82.3499984741211,
+                15.194952011108398
+              ]
+            },
+            "anchor": [
+              127.01080069999122,
+              37.506898750118026
+            ],
+            "heightBasis": "Existing visible fallback estimate preserved; registered height conflict unresolved, not measured; cloned floor pattern unchanged"
+          }
+        }
+      ],
+      "mcpEvidence": [
+        {
+          "path": "docs/model-audit/mcp/banpo-xi-101-roof-contained/mcp-build.json",
+          "sha256": "37c2e4968856dddafdf54c9a7dfe7ea66e1b37c7ea9403bdfa3155acb6f5d110",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        },
+        {
+          "path": "docs/model-audit/mcp/banpo-xi-101-roof-contained/mcp-standalone.json",
+          "sha256": "62e8bd268b7d26bec6d8ae7fc4c51e7feff7cb8f4d7bb62dae41c0ae7e0c5d04",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        }
+      ],
+      "recipeInputs": [],
+      "sharedRepresentative": "bespoke-banpo-xi-101",
+      "newGlbFiles": 0,
+      "newBlendFiles": 0,
+      "placementInputs": [
+        {
+          "path": "docs/model-audit/banpo-xi-final-source-identity.json",
+          "sha256": "3b82ce575f56815929674518ca3ab1bbea789563c3c5533a9e01669a25a64c0b"
+        },
+        {
+          "path": "docs/model-audit/banpo-xi-final-fallback-bindings.json",
+          "sha256": "f214afa62a70a7f2dbfbd84b68a647feb2890c12a0184dd48cdef60be9fcf223"
+        }
+      ],
+      "placementMethod": "Long-axis oriented rectangle mapping with positive plan scales and explicit per-target height basis; actual concave target shapes are not reconstructed."
+    },
+    "dmc-parkview-xi-completion-shared": {
+      "sources": [
+        {
+          "url": "https://file.kbland.kr/image/kbstar/land/img/alian/kms/complex/photo/objctidnfr/35380/MzUzODAxMDAyMDY3Njcy.jpg",
+          "sha256": "7f9559aeecf8dae5ede7c228402b6e7aa1fa67dc2f5842e5517d4321f2b61dc2",
+          "scope": "complex",
+          "observedTowerNumber": null,
+          "observations": "Root directly viewed actual completed-complex photo and final V2 four views. Orange rectangular frames surround multi-floor window groups against pale beige opaque walls and white window piers. The upper facade now has a broad recessed gray louver opening and pale structural sides/cap rather than a small separate rooftop box. Number and compass face unconfirmed; facade layout and dimensions are complex-level inference."
+        },
+        {
+          "url": "https://kbland.kr/se/c/28216",
+          "observations": "Primary complex photograph; representative only."
+        },
+        {
+          "dataset": "Previously identified numbered source inventory",
+          "snapshot": "dmc-parkview-xi-source-identity.json",
+          "sha256": "a8c30c48f56677b703b5f5287db6eee1513deb3969a7e819d37bc6fe23246b07",
+          "observations": "6existing sources127,301-305 linked by normalized source number, exact GajaeulMiraero2/Namgajwadong385 register, equal floors and height differences<=1m, official point proximity. Root actual SQLite geometry/properties/register validation; official61buildings4300households. No full boundary proof."
+        }
+      ],
+      "review": {
+        "siteId": "dmc-parkview-xi-completion-shared",
+        "status": "visually-reviewed",
+        "reviewer": "Root independently viewed original photograph and final four-view representative sheet",
+        "inferenceApprovedAssets": [
+          "bespoke-dmc-parkview-xi-105",
+          "bespoke-dmc-parkview-xi-110",
+          "bespoke-dmc-parkview-xi-204",
+          "bespoke-dmc-parkview-xi-205",
+          "bespoke-dmc-parkview-xi-208",
+          "bespoke-dmc-parkview-xi-209",
+          "bespoke-dmc-parkview-xi-210",
+          "bespoke-dmc-parkview-xi-211",
+          "bespoke-dmc-parkview-xi-212",
+          "bespoke-dmc-parkview-xi-213",
+          "bespoke-dmc-parkview-xi-214",
+          "bespoke-dmc-parkview-xi-215",
+          "bespoke-dmc-parkview-xi-216",
+          "bespoke-dmc-parkview-xi-218",
+          "bespoke-dmc-parkview-xi-219",
+          "bespoke-dmc-parkview-xi-220",
+          "bespoke-dmc-parkview-xi-221",
+          "bespoke-dmc-parkview-xi-401",
+          "bespoke-dmc-parkview-xi-402",
+          "bespoke-dmc-parkview-xi-403",
+          "bespoke-dmc-parkview-xi-404",
+          "bespoke-dmc-parkview-xi-501"
+        ],
+        "reviewedSourcePhotos": [
+          {
+            "url": "https://file.kbland.kr/image/kbstar/land/img/alian/kms/complex/photo/objctidnfr/35380/MzUzODAxMDAyMDY3Njcy.jpg",
+            "sha256": "7f9559aeecf8dae5ede7c228402b6e7aa1fa67dc2f5842e5517d4321f2b61dc2",
+            "scope": "complex",
+            "observedTowerNumber": null,
+            "observations": "Root directly viewed actual completed-complex photo and final V2 four views. Orange rectangular frames surround multi-floor window groups against pale beige opaque walls and white window piers. The upper facade now has a broad recessed gray louver opening and pale structural sides/cap rather than a small separate rooftop box. Number and compass face unconfirmed; facade layout and dimensions are complex-level inference."
+          }
+        ],
+        "comparisons": [
+          "Root directly viewed actual completed-complex photo and final V2 four views. Orange rectangular frames surround multi-floor window groups against pale beige opaque walls and white window piers. The upper facade now has a broad recessed gray louver opening and pale structural sides/cap rather than a small separate rooftop box. Number and compass face unconfirmed; facade layout and dimensions are complex-level inference.",
+          "Compared original with front/opposite/side/roof representative renders. Hidden faces and precise facade measurements remain inferred.",
+          "One representative only; sibling geometry/materials shared with independent placements. Actual MCP clean reload and source hashes recorded.",
+          "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+          "All copy transforms, bounds, source identities and independent fallback bindings checked automatically."
+        ],
+        "limits": [
+          "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+          "Representative has no number label; no node needs hiding.",
+          "Existing authored assets remain unchanged."
+        ],
+        "renders": [
+          "docs/model-audit/renders/dmc-parkview-xi-301-representative-v2/front.png",
+          "docs/model-audit/renders/dmc-parkview-xi-301-representative-v2/opposite.png",
+          "docs/model-audit/renders/dmc-parkview-xi-301-representative-v2/side.png",
+          "docs/model-audit/renders/dmc-parkview-xi-301-representative-v2/roof.png"
+        ],
+        "renderSha256": {
+          "docs/model-audit/renders/dmc-parkview-xi-301-representative-v2/front.png": "38d3668fb97bd6ddf53e46b0575033575d06552820ffecb422a30f35599fd250",
+          "docs/model-audit/renders/dmc-parkview-xi-301-representative-v2/opposite.png": "cf611eabcc0ce1150ba11db83ee4b00befc7d2f09e093a86c6bbc8395d6c3b07",
+          "docs/model-audit/renders/dmc-parkview-xi-301-representative-v2/side.png": "64c3b5f3f7bbd56e0dafbc0b12fa889945eaad5eef5ccba678e3e874d1c4b430",
+          "docs/model-audit/renders/dmc-parkview-xi-301-representative-v2/roof.png": "22b8bfc6df0943f108d9fa29b849b9e1ceaadd670f039c95418296fc87111710"
+        },
+        "reviewedInputs": {
+          "dmc-parkview-xi-301.glb": "18249cde4215e62670ebbc6b5eb78e84dffc3c0d2b2645bb9aa33dbba26ab755",
+          "dmc-parkview-xi-301-authored.blend": "e4c7df081596a675a389a6738f0489f98e255fb68cb008408a972f59d7742e6c"
+        },
+        "reviewScope": "One representative visually reviewed; batch placement checks and sample map review for shared copies"
+      },
+      "assets": [
+        {
+          "id": "bespoke-dmc-parkview-xi-105",
+          "dimensions": [
+            18.72521376633614,
+            29.4,
+            20.753838376014695
+          ],
+          "min": [
+            -11.066490243792922,
+            0,
+            -11.556236441455944
+          ],
+          "max": [
+            7.6587235225432195,
+            29.4,
+            9.197601934558751
+          ],
+          "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+          "sourceSha256": "18249cde4215e62670ebbc6b5eb78e84dffc3c0d2b2645bb9aa33dbba26ab755",
+          "sharedModel": "bespoke/dmc-parkview-xi-301-representative-v2/bespoke-dmc-parkview-xi-301.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-dmc-parkview-xi-301",
+            "sourceDimensions": [
+              37.24368190765381,
+              57.599998474121094,
+              26.963677406311035
+            ],
+            "matrix": [
+              0.4465728836914107,
+              0.0,
+              -0.4960089490970083,
+              0.0,
+              0.0,
+              0.510416680188091,
+              0.0,
+              0.0,
+              0.30230507734146994,
+              0.0,
+              0.2852170960382317,
+              0.0,
+              -1.6574739479770595,
+              0.0,
+              1.1189068697299431,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-dmc-parkview-xi-110",
+          "dimensions": [
+            36.57378015098519,
+            40.2,
+            32.92771458368007
+          ],
+          "min": [
+            -16.38821241956544,
+            0,
+            -18.86194501321936
+          ],
+          "max": [
+            20.185567731419752,
+            40.2,
+            14.065769570460713
+          ],
+          "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+          "sourceSha256": "18249cde4215e62670ebbc6b5eb78e84dffc3c0d2b2645bb9aa33dbba26ab755",
+          "sharedModel": "bespoke/dmc-parkview-xi-301-representative-v2/bespoke-dmc-parkview-xi-301.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-dmc-parkview-xi-301",
+            "sourceDimensions": [
+              37.24368190765381,
+              57.599998474121094,
+              26.963677406311035
+            ],
+            "matrix": [
+              0.9598724200941917,
+              0.0,
+              0.8815822207687708,
+              0.0,
+              0.0,
+              0.6979166851551449,
+              0.0,
+              0.0,
+              -0.29397687491740576,
+              0.0,
+              0.27879817393939677,
+              0.0,
+              -2.465256361510237,
+              0.0,
+              -2.9022944639616166,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-dmc-parkview-xi-204",
+          "dimensions": [
+            26.598302493503972,
+            35.1,
+            29.804278285490334
+          ],
+          "min": [
+            -15.513142147305869,
+            0,
+            -16.519673453063568
+          ],
+          "max": [
+            11.085160346198101,
+            35.1,
+            13.284604832426764
+          ],
+          "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+          "sourceSha256": "18249cde4215e62670ebbc6b5eb78e84dffc3c0d2b2645bb9aa33dbba26ab755",
+          "sharedModel": "bespoke/dmc-parkview-xi-301-representative-v2/bespoke-dmc-parkview-xi-301.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-dmc-parkview-xi-301",
+            "sourceDimensions": [
+              37.24368190765381,
+              57.599998474121094,
+              26.963677406311035
+            ],
+            "matrix": [
+              0.6987106011539091,
+              0.0,
+              -0.7652565715428844,
+              0.0,
+              0.0,
+              0.6093750161429251,
+              0.0,
+              0.0,
+              0.28104008296502875,
+              0.0,
+              0.28492153326357733,
+              0.0,
+              -2.370106520272268,
+              0.0,
+              1.9066455701023783,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-dmc-parkview-xi-205",
+          "dimensions": [
+            26.596988218949896,
+            34.9,
+            29.802599297784123
+          ],
+          "min": [
+            -15.508837605435435,
+            0,
+            -16.517801851359067
+          ],
+          "max": [
+            11.08815061351446,
+            34.9,
+            13.284797446425056
+          ],
+          "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+          "sourceSha256": "18249cde4215e62670ebbc6b5eb78e84dffc3c0d2b2645bb9aa33dbba26ab755",
+          "sharedModel": "bespoke/dmc-parkview-xi-301-representative-v2/bespoke-dmc-parkview-xi-301.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-dmc-parkview-xi-301",
+            "sourceDimensions": [
+              37.24368190765381,
+              57.599998474121094,
+              26.963677406311035
+            ],
+            "matrix": [
+              0.6986695510593627,
+              0.0,
+              -0.7652064528516118,
+              0.0,
+              0.0,
+              0.6059027938287204,
+              0.0,
+              0.0,
+              0.28104123604181497,
+              0.0,
+              0.2849219868916412,
+              0.0,
+              -2.366428894419204,
+              0.0,
+              1.9074495297414384,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-dmc-parkview-xi-208",
+          "dimensions": [
+            17.591174573903736,
+            51.4,
+            16.192207574503755
+          ],
+          "min": [
+            -7.721019291395207,
+            0,
+            -9.684811885655556
+          ],
+          "max": [
+            9.870155282508527,
+            51.4,
+            6.507395688848199
+          ],
+          "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+          "sourceSha256": "18249cde4215e62670ebbc6b5eb78e84dffc3c0d2b2645bb9aa33dbba26ab755",
+          "sharedModel": "bespoke/dmc-parkview-xi-301-representative-v2/bespoke-dmc-parkview-xi-301.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-dmc-parkview-xi-301",
+            "sourceDimensions": [
+              37.24368190765381,
+              57.599998474121094,
+              26.963677406311035
+            ],
+            "matrix": [
+              0.4218212143668525,
+              0.0,
+              0.39471227799936287,
+              0.0,
+              0.0,
+              0.8923611347506082,
+              0.0,
+              0.0,
+              -0.23845933111947476,
+              0.0,
+              0.24170910106019358,
+              0.0,
+              -0.8793420013628894,
+              0.0,
+              -1.57806151443987,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-dmc-parkview-xi-209",
+          "dimensions": [
+            21.32326111521787,
+            51.4,
+            19.720785175846096
+          ],
+          "min": [
+            -9.442730316726575,
+            0,
+            -11.633247315411129
+          ],
+          "max": [
+            11.880530798491296,
+            51.4,
+            8.087537860434965
+          ],
+          "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+          "sourceSha256": "18249cde4215e62670ebbc6b5eb78e84dffc3c0d2b2645bb9aa33dbba26ab755",
+          "sharedModel": "bespoke/dmc-parkview-xi-301-representative-v2/bespoke-dmc-parkview-xi-301.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-dmc-parkview-xi-301",
+            "sourceDimensions": [
+              37.24368190765381,
+              57.599998474121094,
+              26.963677406311035
+            ],
+            "matrix": [
+              0.5063609694288721,
+              0.0,
+              0.4761957374310271,
+              0.0,
+              0.0,
+              0.8923611347506082,
+              0.0,
+              0.0,
+              -0.30071200732491205,
+              0.0,
+              0.30482625765969873,
+              0.0,
+              -1.1286170849254342,
+              0.0,
+              -1.7442579870326207,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-dmc-parkview-xi-210",
+          "dimensions": [
+            21.322150491922727,
+            51.4,
+            19.726283262972927
+          ],
+          "min": [
+            -9.444720322160087,
+            0,
+            -11.639028340639738
+          ],
+          "max": [
+            11.87743016976264,
+            51.4,
+            8.087254922333187
+          ],
+          "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+          "sourceSha256": "18249cde4215e62670ebbc6b5eb78e84dffc3c0d2b2645bb9aa33dbba26ab755",
+          "sharedModel": "bespoke/dmc-parkview-xi-301-representative-v2/bespoke-dmc-parkview-xi-301.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-dmc-parkview-xi-301",
+            "sourceDimensions": [
+              37.24368190765381,
+              57.599998474121094,
+              26.963677406311035
+            ],
+            "matrix": [
+              0.5062894226403197,
+              0.0,
+              0.4764035115688178,
+              0.0,
+              0.0,
+              0.8923611347506082,
+              0.0,
+              0.0,
+              -0.30080271662975816,
+              0.0,
+              0.3047383533771801,
+              0.0,
+              -1.1308492418719789,
+              0.0,
+              -1.7475407262533427,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-dmc-parkview-xi-211",
+          "dimensions": [
+            24.454175986195565,
+            46.4,
+            12.728825066644356
+          ],
+          "min": [
+            -12.66552938568165,
+            0,
+            -6.709103160616542
+          ],
+          "max": [
+            11.788646600513916,
+            46.4,
+            6.019721906027814
+          ],
+          "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+          "sourceSha256": "18249cde4215e62670ebbc6b5eb78e84dffc3c0d2b2645bb9aa33dbba26ab755",
+          "sharedModel": "bespoke/dmc-parkview-xi-301-representative-v2/bespoke-dmc-parkview-xi-301.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-dmc-parkview-xi-301",
+            "sourceDimensions": [
+              37.24368190765381,
+              57.599998474121094,
+              26.963677406311035
+            ],
+            "matrix": [
+              0.6588895161820328,
+              0.0,
+              -0.09255409245245998,
+              0.0,
+              0.0,
+              0.8055555768954906,
+              0.0,
+              0.0,
+              0.04643501117440902,
+              0.0,
+              0.4020490260525781,
+              0.0,
+              -1.9801116109743528,
+              0.0,
+              -0.19751532567698615,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-dmc-parkview-xi-212",
+          "dimensions": [
+            48.39876000072781,
+            54.8,
+            22.530369491283125
+          ],
+          "min": [
+            -25.584488186154047,
+            0,
+            -10.92628654619498
+          ],
+          "max": [
+            22.814271814573765,
+            54.8,
+            11.604082945088146
+          ],
+          "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+          "sourceSha256": "18249cde4215e62670ebbc6b5eb78e84dffc3c0d2b2645bb9aa33dbba26ab755",
+          "sharedModel": "bespoke/dmc-parkview-xi-301-representative-v2/bespoke-dmc-parkview-xi-301.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-dmc-parkview-xi-301",
+            "sourceDimensions": [
+              37.24368190765381,
+              57.599998474121094,
+              26.963677406311035
+            ],
+            "matrix": [
+              1.3060779746378257,
+              0.0,
+              -0.4119909487791822,
+              0.0,
+              0.0,
+              0.951388914092088,
+              0.0,
+              0.0,
+              0.13619051526425915,
+              0.0,
+              0.5229217477508418,
+              0.0,
+              -4.182426026589162,
+              0.0,
+              2.181548883782549,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-dmc-parkview-xi-213",
+          "dimensions": [
+            21.86854600237345,
+            52,
+            17.777633940184447
+          ],
+          "min": [
+            -12.74639018017513,
+            0,
+            -9.890992476682348
+          ],
+          "max": [
+            9.122155822198318,
+            52,
+            7.8866414635021
+          ],
+          "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+          "sourceSha256": "18249cde4215e62670ebbc6b5eb78e84dffc3c0d2b2645bb9aa33dbba26ab755",
+          "sharedModel": "bespoke/dmc-parkview-xi-301-representative-v2/bespoke-dmc-parkview-xi-301.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-dmc-parkview-xi-301",
+            "sourceDimensions": [
+              37.24368190765381,
+              57.599998474121094,
+              26.963677406311035
+            ],
+            "matrix": [
+              0.5770165900132241,
+              0.0,
+              -0.3325409609970434,
+              0.0,
+              0.0,
+              0.9027778016932223,
+              0.0,
+              0.0,
+              0.2251833611921069,
+              0.0,
+              0.40694062100297995,
+              0.0,
+              -1.9492740611778767,
+              0.0,
+              0.4993230790325623,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-dmc-parkview-xi-214",
+          "dimensions": [
+            18.859352079680857,
+            66,
+            47.30242715163599
+          ],
+          "min": [
+            -8.459766330636498,
+            0,
+            -24.476940735621348
+          ],
+          "max": [
+            10.399585749044359,
+            66,
+            22.82548641601464
+          ],
+          "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+          "sourceSha256": "18249cde4215e62670ebbc6b5eb78e84dffc3c0d2b2645bb9aa33dbba26ab755",
+          "sharedModel": "bespoke/dmc-parkview-xi-301-representative-v2/bespoke-dmc-parkview-xi-301.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-dmc-parkview-xi-301",
+            "sourceDimensions": [
+              37.24368190765381,
+              57.599998474121094,
+              26.963677406311035
+            ],
+            "matrix": [
+              0.3161943465081327,
+              0.0,
+              1.2743340621223036,
+              0.0,
+              0.0,
+              1.1458333636875513,
+              0.0,
+              0.0,
+              -0.45951919817863945,
+              0.0,
+              0.08599739476099443,
+              0.0,
+              -0.3897368720991292,
+              0.0,
+              -3.829742682804314,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-dmc-parkview-xi-215",
+          "dimensions": [
+            26.82273979359763,
+            63.2,
+            43.029848967881954
+          ],
+          "min": [
+            -11.849349323829625,
+            0,
+            -23.192068996151853
+          ],
+          "max": [
+            14.973390469768006,
+            63.2,
+            19.8377799717301
+          ],
+          "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+          "sourceSha256": "18249cde4215e62670ebbc6b5eb78e84dffc3c0d2b2645bb9aa33dbba26ab755",
+          "sharedModel": "bespoke/dmc-parkview-xi-301-representative-v2/bespoke-dmc-parkview-xi-301.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-dmc-parkview-xi-301",
+            "sourceDimensions": [
+              37.24368190765381,
+              57.599998474121094,
+              26.963677406311035
+            ],
+            "matrix": [
+              0.6172244763054959,
+              0.0,
+              1.1589720715020455,
+              0.0,
+              0.0,
+              1.0972222512886856,
+              0.0,
+              0.0,
+              -0.4247328324297051,
+              0.0,
+              0.19538125873647857,
+              0.0,
+              -1.3075622096249078,
+              0.0,
+              -3.6179843245426273,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-dmc-parkview-xi-216",
+          "dimensions": [
+            36.244235431758085,
+            57.599999999999994,
+            34.65810249694564
+          ],
+          "min": [
+            -16.151204657499317,
+            0,
+            -20.004108843491714
+          ],
+          "max": [
+            20.09303077425877,
+            57.599999999999994,
+            14.653993653453922
+          ],
+          "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+          "sourceSha256": "18249cde4215e62670ebbc6b5eb78e84dffc3c0d2b2645bb9aa33dbba26ab755",
+          "sharedModel": "bespoke/dmc-parkview-xi-301-representative-v2/bespoke-dmc-parkview-xi-301.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-dmc-parkview-xi-301",
+            "sourceDimensions": [
+              37.24368190765381,
+              57.599998474121094,
+              26.963677406311035
+            ],
+            "matrix": [
+              0.9295825437870547,
+              0.0,
+              0.9271788629379268,
+              0.0,
+              0.0,
+              1.0000000264909539,
+              0.0,
+              0.0,
+              -0.3489037691634188,
+              0.0,
+              0.31130119362346637,
+              0.0,
+              -2.310414792793384,
+              0.0,
+              -3.070307314246046,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-dmc-parkview-xi-218",
+          "dimensions": [
+            35.36296981360107,
+            82.8,
+            30.792716693430076
+          ],
+          "min": [
+            -17.66838919739377,
+            0,
+            -15.408539594163528
+          ],
+          "max": [
+            17.694580616207304,
+            82.8,
+            15.384177099266548
+          ],
+          "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+          "sourceSha256": "18249cde4215e62670ebbc6b5eb78e84dffc3c0d2b2645bb9aa33dbba26ab755",
+          "sharedModel": "bespoke/dmc-parkview-xi-301-representative-v2/bespoke-dmc-parkview-xi-301.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-dmc-parkview-xi-301",
+            "sourceDimensions": [
+              37.24368190765381,
+              57.599998474121094,
+              26.963677406311035
+            ],
+            "matrix": [
+              0.9487351652453132,
+              0.0,
+              0.017548605245276884,
+              0.0,
+              0.0,
+              1.4375000380807463,
+              0.0,
+              0.0,
+              -0.010828049458682274,
+              0.0,
+              1.147098631015306,
+              0.0,
+              -2.6582964730483676,
+              0.0,
+              -1.3097506857374688,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-dmc-parkview-xi-219",
+          "dimensions": [
+            34.60345905576867,
+            80,
+            34.21640968906223
+          ],
+          "min": [
+            -17.03412949686676,
+            0,
+            -16.55330683546731
+          ],
+          "max": [
+            17.56932955890191,
+            80,
+            17.663102853594918
+          ],
+          "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+          "sourceSha256": "18249cde4215e62670ebbc6b5eb78e84dffc3c0d2b2645bb9aa33dbba26ab755",
+          "sharedModel": "bespoke/dmc-parkview-xi-301-representative-v2/bespoke-dmc-parkview-xi-301.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-dmc-parkview-xi-301",
+            "sourceDimensions": [
+              37.24368190765381,
+              57.599998474121094,
+              26.963677406311035
+            ],
+            "matrix": [
+              0.9282774754034759,
+              0.0,
+              -0.19697912371639206,
+              0.0,
+              0.0,
+              1.3888889256818804,
+              0.0,
+              0.0,
+              0.24832254371043028,
+              0.0,
+              1.120152514679291,
+              0.0,
+              -0.6011621354037513,
+              0.0,
+              0.6201778257341589,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-dmc-parkview-xi-220",
+          "dimensions": [
+            35.089038666566324,
+            68.8,
+            35.654571812808854
+          ],
+          "min": [
+            -17.182840955474443,
+            0,
+            -17.527909426098294
+          ],
+          "max": [
+            17.90619771109188,
+            68.8,
+            18.12666238671056
+          ],
+          "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+          "sourceSha256": "18249cde4215e62670ebbc6b5eb78e84dffc3c0d2b2645bb9aa33dbba26ab755",
+          "sharedModel": "bespoke/dmc-parkview-xi-301-representative-v2/bespoke-dmc-parkview-xi-301.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-dmc-parkview-xi-301",
+            "sourceDimensions": [
+              37.24368190765381,
+              57.599998474121094,
+              26.963677406311035
+            ],
+            "matrix": [
+              0.6926302586866467,
+              0.0,
+              -0.6485139656067989,
+              0.0,
+              0.0,
+              1.1944444760864172,
+              0.0,
+              0.0,
+              0.7915143834253343,
+              0.0,
+              0.8301658089094639,
+              0.0,
+              0.5091422760153281,
+              0.0,
+              3.1932925815399473,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-dmc-parkview-xi-221",
+          "dimensions": [
+            48.85879882225453,
+            35.1,
+            9.710110711029213
+          ],
+          "min": [
+            -24.466178737869356,
+            0,
+            -4.9468650603637165
+          ],
+          "max": [
+            24.392620084385175,
+            35.1,
+            4.763245650665497
+          ],
+          "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+          "sourceSha256": "18249cde4215e62670ebbc6b5eb78e84dffc3c0d2b2645bb9aa33dbba26ab755",
+          "sharedModel": "bespoke/dmc-parkview-xi-301-representative-v2/bespoke-dmc-parkview-xi-301.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-dmc-parkview-xi-301",
+            "sourceDimensions": [
+              37.24368190765381,
+              57.599998474121094,
+              26.963677406311035
+            ],
+            "matrix": [
+              1.3098997277103275,
+              0.0,
+              -0.004137386120673292,
+              0.0,
+              0.0,
+              0.6093750161429251,
+              0.0,
+              0.0,
+              -0.027618699988865965,
+              0.0,
+              0.3572447688691058,
+              0.0,
+              -3.798592683311726,
+              0.0,
+              -0.40328555674235445,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-dmc-parkview-xi-401",
+          "dimensions": [
+            40.40774020735121,
+            48.6,
+            29.514230829234535
+          ],
+          "min": [
+            -18.6235762802803,
+            0,
+            -17.188583346214326
+          ],
+          "max": [
+            21.78416392707091,
+            48.6,
+            12.325647483020209
+          ],
+          "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+          "sourceSha256": "18249cde4215e62670ebbc6b5eb78e84dffc3c0d2b2645bb9aa33dbba26ab755",
+          "sharedModel": "bespoke/dmc-parkview-xi-301-representative-v2/bespoke-dmc-parkview-xi-301.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-dmc-parkview-xi-301",
+            "sourceDimensions": [
+              37.24368190765381,
+              57.599998474121094,
+              26.963677406311035
+            ],
+            "matrix": [
+              1.066045634523054,
+              0.0,
+              0.7831849193250606,
+              0.0,
+              0.0,
+              0.8437500223517425,
+              0.0,
+              0.0,
+              -0.2513793279142462,
+              0.0,
+              0.29369783635927355,
+              0.0,
+              -2.8252823264596083,
+              0.0,
+              -2.6318632594400335,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-dmc-parkview-xi-402",
+          "dimensions": [
+            21.432465490369797,
+            30.4,
+            17.64135827788286
+          ],
+          "min": [
+            -9.525367574875984,
+            0,
+            -10.455250098609827
+          ],
+          "max": [
+            11.907097915493813,
+            30.4,
+            7.186108179273031
+          ],
+          "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+          "sourceSha256": "18249cde4215e62670ebbc6b5eb78e84dffc3c0d2b2645bb9aa33dbba26ab755",
+          "sharedModel": "bespoke/dmc-parkview-xi-301-representative-v2/bespoke-dmc-parkview-xi-301.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-dmc-parkview-xi-301",
+            "sourceDimensions": [
+              37.24368190765381,
+              57.599998474121094,
+              26.963677406311035
+            ],
+            "matrix": [
+              0.5310312808528876,
+              0.0,
+              0.4115775448967165,
+              0.0,
+              0.0,
+              0.5277777917591145,
+              0.0,
+              0.0,
+              -0.2502656932269868,
+              0.0,
+              0.30588845194990105,
+              0.0,
+              -1.2619667398875172,
+              0.0,
+              -1.5592991864213277,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-dmc-parkview-xi-403",
+          "dimensions": [
+            14.696717383790624,
+            30.700000000000003,
+            18.161585769790115
+          ],
+          "min": [
+            -8.76126341810595,
+            0,
+            -10.096695685087521
+          ],
+          "max": [
+            5.935453965684675,
+            30.700000000000003,
+            8.064890084702592
+          ],
+          "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+          "sourceSha256": "18249cde4215e62670ebbc6b5eb78e84dffc3c0d2b2645bb9aa33dbba26ab755",
+          "sharedModel": "bespoke/dmc-parkview-xi-301-representative-v2/bespoke-dmc-parkview-xi-301.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-dmc-parkview-xi-301",
+            "sourceDimensions": [
+              37.24368190765381,
+              57.599998474121094,
+              26.963677406311035
+            ],
+            "matrix": [
+              0.32691042080448096,
+              0.0,
+              -0.44526994919617935,
+              0.0,
+              0.0,
+              0.5329861252304217,
+              0.0,
+              0.0,
+              0.2916333012374551,
+              0.0,
+              0.2231837034296194,
+              0.0,
+              -1.2951212335656308,
+              0.0,
+              1.0426534638362672,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-dmc-parkview-xi-404",
+          "dimensions": [
+            14.695576135189707,
+            30.700000000000003,
+            18.16392326945906
+          ],
+          "min": [
+            -8.763037184555499,
+            0,
+            -10.096328318641362
+          ],
+          "max": [
+            5.932538950634208,
+            30.700000000000003,
+            8.0675949508177
+          ],
+          "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+          "sourceSha256": "18249cde4215e62670ebbc6b5eb78e84dffc3c0d2b2645bb9aa33dbba26ab755",
+          "sharedModel": "bespoke/dmc-parkview-xi-301-representative-v2/bespoke-dmc-parkview-xi-301.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-dmc-parkview-xi-301",
+            "sourceDimensions": [
+              37.24368190765381,
+              57.599998474121094,
+              26.963677406311035
+            ],
+            "matrix": [
+              0.32675168189454296,
+              0.0,
+              -0.44530929184305,
+              0.0,
+              0.0,
+              0.5329861252304217,
+              0.0,
+              0.0,
+              0.2919180078621035,
+              0.0,
+              0.2232547345628048,
+              0.0,
+              -1.2970148131433106,
+              0.0,
+              1.0443786076639645,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-dmc-parkview-xi-501",
+          "dimensions": [
+            45.86645433056757,
+            30.700000000000003,
+            47.95245906937749
+          ],
+          "min": [
+            -28.11065637395658,
+            0,
+            -30.81929073407209
+          ],
+          "max": [
+            17.75579795661099,
+            30.700000000000003,
+            17.1331683353054
+          ],
+          "sha256": "b20b75c5cb971b4dbe121dd3670a22a15bdcd70782982c55161025c70d4fd972",
+          "sourceSha256": "18249cde4215e62670ebbc6b5eb78e84dffc3c0d2b2645bb9aa33dbba26ab755",
+          "sharedModel": "bespoke/dmc-parkview-xi-301-representative-v2/bespoke-dmc-parkview-xi-301.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-dmc-parkview-xi-301",
+            "sourceDimensions": [
+              37.24368190765381,
+              57.599998474121094,
+              26.963677406311035
+            ],
+            "matrix": [
+              0.9019607628934335,
+              0.0,
+              0.7752594710933097,
+              0.0,
+              0.0,
+              0.5329861252304217,
+              0.0,
+              0.0,
+              -1.016449569171521,
+              0.0,
+              1.2161532545766784,
+              0.0,
+              -9.33183618337066,
+              0.0,
+              -7.095686814955561,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        }
+      ],
+      "mcpEvidence": [
+        {
+          "path": "docs/model-audit/mcp/dmc-parkview-xi-301-representative-v2/mcp-build-reload-final.json",
+          "sha256": "7a9015c46ad43b5e9534265e1939c0791171cc870fc6efa6745b5685f7aa56da",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender2.0.0"
+        }
+      ],
+      "recipeInputs": [],
+      "sharedRepresentative": "bespoke-dmc-parkview-xi-301",
+      "newGlbFiles": 0,
+      "newBlendFiles": 0,
+      "placementInputs": [
+        {
+          "path": "docs/model-audit/dmc-parkview-xi-completion-source-identity.json",
+          "sha256": "624f5ab347b1f187b60df452e0ed778418930c9f3ae2a056d688fdfb57369add"
+        },
+        {
+          "path": "docs/model-audit/dmc-parkview-xi-completion-fallback-bindings.json",
+          "sha256": "fd956d89ff44ad5f2f9e23dd819a64c89496527963f480f74a98789a490edb1b"
+        }
+      ],
+      "placementMethod": "Long-axis oriented rectangle mapping with positive plan scales and explicit per-target height basis; actual concave target shapes are not reconstructed."
     }
   }
 }

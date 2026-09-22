@@ -21,6 +21,8 @@ const families = [
   {site: 'raemian-blesstige', number: 202, count: 20, label: null},
   {site: 'dh-honor-hills', number: 301, count: 20, label: null},
   {site: 'mapo-raemian-prugio', number: 403, count: 33, label: null},
+  {site: 'dmc-parkview-xi-completion', assetSite: 'dmc-parkview-xi', number: 105, count: 22, label: null},
+  {site: 'banpo-xi-final', assetSite: 'banpo-xi', number: 103, count: 1, label: null},
   {site: 'mapo-grang-xi', number: 101, count: 14, label: null},
   {site: 'dmc-parkview-xi-extension', assetSite: 'dmc-parkview-xi', number: 103, count: 33, label: null},
 ];
@@ -53,16 +55,19 @@ for (const family of families) for (const failure of ['none', 'shared-model', 's
     const proof = await page.evaluate(({site,label}) => {
       const api = (window as any).__SEOUL_MAP__, entries = api.cityModels.entries.filter((e: any)=>e.scene && e.asset.sourceRecord?.siteId===`${site}-shared`);
       return entries.map((e: any)=>{
-        let geometry: string|undefined, material: string|undefined, labelVisible: boolean|undefined;
+        let geometry: string|undefined, material: string|undefined, labelVisible: boolean|undefined, sourceGeometry: string|undefined, sourceMaterial: string|undefined;
+        const source=api.cityModels.entries.find((source: any)=>source.asset.id===e.asset.modelInstance?.sourceAssetId);
+        source?.scene?.traverse((o: any)=>{if(o.isMesh && sourceGeometry===undefined){sourceGeometry=o.geometry.uuid;sourceMaterial=o.material.uuid;}});
         e.scene.traverse((o: any)=>{
           if (o.name===label) labelVisible=o.visible;
           if (o.isMesh && o.name!==label && geometry===undefined) {geometry=o.geometry.uuid;material=o.material.uuid;}
         });
-        return {id:e.asset.id,geometry,material,labelVisible,coordinate:e.asset.coordinate,active:e.active};
+        return {id:e.asset.id,geometry,material,sourceGeometry,sourceMaterial,labelVisible,coordinate:e.asset.coordinate,active:e.active};
       });
     },family);
     if (failure === 'none') {
-      expect(proof.length).toBeGreaterThan(1);
+      expect(proof.length).toBeGreaterThanOrEqual(Math.min(2,family.count));
+      if(family.count===1){expect(proof[0].sourceGeometry).toBeDefined();expect(proof[0].geometry).toBe(proof[0].sourceGeometry);expect(proof[0].material).toBe(proof[0].sourceMaterial);}
       expect(new Set(proof.map((p: any)=>p.geometry)).size).toBe(1);
       expect(new Set(proof.map((p: any)=>p.material)).size).toBe(1);
       expect(proof.every((p: any)=>p.labelVisible===(family.label ? false : undefined))).toBe(true);

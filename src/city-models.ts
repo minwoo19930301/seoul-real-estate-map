@@ -17,7 +17,7 @@ export interface CityModelAsset {
   quality?: 'reference';
   searchable?: boolean;
   groundOffsetM?: number;
-  genericCorrection?: { sourceId: string };
+  genericCorrection?: { sourceId: string; ancestorSourceIds?: string[] };
   modelInstance?: ModelInstance;
 }
 export interface DecorativeTree { coordinate: [number, number]; height_m: number; crown_radius_m: number }
@@ -224,6 +224,13 @@ export class CityModels {
     this.replacementTargets.clear();
     this.retainedRemainders.clear();
     this.replacementPeers.clear();
+    const remaindersByAncestor = new Map<string, CityModelAsset[]>();
+    for (const { asset } of this.entries) {
+      if (!asset.genericCorrection || asset.searchable === false || isLandmark(asset)) continue;
+      for (const ancestor of new Set([asset.genericCorrection.sourceId, ...(asset.genericCorrection.ancestorSourceIds ?? [])])) {
+        remaindersByAncestor.set(ancestor, [...(remaindersByAncestor.get(ancestor) ?? []), asset]);
+      }
+    }
     const replacing = new Map<string, Entry[]>();
     for (const entry of this.entries) {
       if (!isLandmark(entry.asset)) continue;
@@ -242,8 +249,18 @@ export class CityModels {
       this.replacementTargets.set(entry.asset.id, targets);
       const remainders = new Set<string>();
       for (const id of targets) {
-        const sourceId = byId.get(id)?.genericCorrection?.sourceId;
-        if (sourceId && sourceId !== id && byId.get(sourceId)?.genericCorrection?.sourceId === sourceId) remainders.add(sourceId);
+        const target = byId.get(id);
+        const correction = target?.genericCorrection;
+        if (!correction) continue;
+        const targetFootprints = new Set(target.footprintIds ?? this.matches[id] ?? []);
+        for (const ancestor of new Set([correction.sourceId, ...(correction.ancestorSourceIds ?? [])])) {
+          for (const residual of remaindersByAncestor.get(ancestor) ?? []) {
+            if (residual.id === id || targets.has(residual.id)) continue;
+            const residualFootprints = residual.footprintIds ?? this.matches[residual.id] ?? [];
+            if (residualFootprints.some(fid => targetFootprints.has(fid))) continue;
+            remainders.add(residual.id);
+          }
+        }
       }
       this.retainedRemainders.set(entry.asset.id, remainders);
     }
