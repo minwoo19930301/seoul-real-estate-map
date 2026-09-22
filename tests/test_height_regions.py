@@ -12,6 +12,9 @@ path = Path(__file__).resolve().parents[1] / 'scripts/bespoke/validate_height_re
 spec = importlib.util.spec_from_file_location('height_regions', path)
 module = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(module)
+neighbor_spec = importlib.util.spec_from_file_location('neighbor_intrusions', path.with_name('validate_neighbor_intrusions.py'))
+neighbor_module = importlib.util.module_from_spec(neighbor_spec)
+neighbor_spec.loader.exec_module(neighbor_module)
 
 
 def cap(x0, x1, height, y0=0, y1=10):
@@ -24,6 +27,19 @@ def region(name, x0, x1, height):
 
 
 class HeightRegions(unittest.TestCase):
+    def test_els_shared_walls_have_no_surfaces_inside_neighbor_envelopes(self):
+        root = path.parents[2]
+        sources = {s['number']: s for s in json.loads((root / 'docs/model-audit/jamsil-els-source-identity.json').read_text())['towers']}
+        assets = {a['id']: a for a in json.loads((root / 'public/models/bespoke-manifest.json').read_text())['assets']}
+        for a, b in [(138, 139), (139, 138), (153, 158), (158, 153)]:
+            with self.subTest(tower=a, neighbor=b):
+                asset = assets[f'bespoke-jamsil-els-{a}']
+                triangles = module.read_triangles(root / 'public/models' / asset['model'])
+                neighbor_height = min(float(sources[a]['register']['height']), float(sources[b]['register']['height']))
+                hits = neighbor_module.neighbor_intrusions(triangles,
+                    [asset['coordinate']['lon'], asset['coordinate']['lat']], sources[b]['geometry'], neighbor_height)
+                self.assertEqual(hits, [])
+
     def test_shinbanpo7_preserves_registered_envelopes_and_full_concave_roof_caps(self):
         self.assert_registered_envelopes('shinbanpo-xi', range(101, 108), 607)
 
@@ -38,6 +54,9 @@ class HeightRegions(unittest.TestCase):
 
     def test_ricenz63_preserves_registered_envelopes_and_excludes_boundary_conflicts(self):
         self.assert_registered_envelopes('jamsil-ricenz', [n for n in range(201, 266) if n not in [263, 265]], 5456)
+
+    def test_els72_preserves_registered_envelopes_and_original_standalone_bindings(self):
+        self.assert_registered_envelopes('jamsil-els', range(101, 173), 5678, {121: 'residential-5ffec150-2a79-4581-8599-3dc2a60b75c9', 122: 'residential-2054abab-825b-4a26-ac58-95c70223e349'})
 
     def assert_registered_envelopes(self, site, numbers, households, fallback_ids=None):
         root = path.parents[2]
@@ -209,6 +228,24 @@ class HeightRegions(unittest.TestCase):
         tall_in_hole = cap(4, 6, 30, 4, 6)
         result = module.inspect_regions(cap(0, 10, 10) + tall_in_hole, [courtyard])[0]
         self.assertEqual(result['overHeightTriangles'], 0)
+
+
+class NeighborEnvelopeTests(unittest.TestCase):
+    neighbor = mapping(Polygon([(0, 0), (2/111320, 0), (2/111320, -2/111320), (0, -2/111320)]))
+
+    def test_crossing_face_with_all_vertices_outside_is_detected(self):
+        triangles = [[[-1, 1, 1], [3, 1, 1], [-1, 3, 1]]]
+        self.assertEqual(neighbor_module.neighbor_intrusions(triangles, [0, 0], self.neighbor, 5), [0])
+
+    def test_height_clip_keeps_faces_above_neighbor_and_sloping_clearance(self):
+        triangles = [[[-1, 8, 1], [3, 8, 1], [-1, 10, 1]],
+                     [[-3, 0, 1], [1, 10, 1], [2, 10, 1]]]
+        self.assertEqual(neighbor_module.neighbor_intrusions(triangles, [0, 0], self.neighbor, 1), [])
+
+    def test_shared_boundary_is_allowed_but_outward_detail_is_rejected(self):
+        triangles = [[[0, 0, 0], [0, 3, 0], [0, 3, 2]],
+                     [[.02, 0, 0], [.02, 3, 0], [.02, 3, 2]]]
+        self.assertEqual(neighbor_module.neighbor_intrusions(triangles, [0, 0], self.neighbor, 5), [1])
 
 
 if __name__ == '__main__':

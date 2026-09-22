@@ -1,6 +1,6 @@
 # 서울 400세대 이상 아파트 개별 모델링 현황
 
-공식 자료 확인일: 2026-09-21. `scripts/build_apartment_bespoke_queue.py`로 생성합니다. **대상 1,417 관리코드, 주거동 전체 검토 완료 22, 미완료 1,395**입니다. 분류 보강 검토 2건과 명시적 비아파트 제외 1건은 큐에 별도로 남깁니다.
+공식 자료 확인일: 2026-09-21. `scripts/build_apartment_bespoke_queue.py`로 생성합니다. **대상 1,417 관리코드, 주거동 전체 검토 완료 23, 미완료 1,394**입니다. 분류 보강 검토 2건과 명시적 비아파트 제외 1건은 큐에 별도로 남깁니다.
 
 ## 모수와 중복
 
@@ -37,6 +37,7 @@ K-apt 서울 자료의 123코드에는 복수 주소 등에 따른 추가 147행
 | A13776301 | 반포리체 | complete_residential_buildings | 9 / 9 | 9 |
 | A13776509 | 래미안퍼스티지 | complete_residential_buildings | 28 / 28 | 28 |
 | A13822003 | 잠실리센츠 | partial | 63 / 65 | 63 |
+| A13822004 | 잠실엘스아파트 | complete_residential_buildings | 72 / 72 | 72 |
 | A13822301 | 갤러리아팰리스 | complete_residential_buildings | 3 / 3 | 0 |
 | A15088614 | 롯데캐슬엠파이어 | complete_residential_buildings | 2 / 2 | 0 |
 | A15088915 | 롯데캐슬아이비 | complete_residential_buildings | 2 / 2 | 0 |
