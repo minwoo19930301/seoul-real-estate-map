@@ -1,0 +1,43 @@
+{
+  "checkedOn": "2026-09-22",
+  "baselineCommit": "485a98f62280656c706dd661c293113a88b88675",
+  "newPhysicalBuildings": 52,
+  "newRepresentatives": 3,
+  "newSharedCopies": 49,
+  "bespokeAssetRecords": 644,
+  "node": {
+    "passed": 13838,
+    "failed": 0
+  },
+  "python": {
+    "passed": 52,
+    "failed": 0
+  },
+  "browser": {
+    "passed": 9,
+    "scope": "Three complexes, each normal/sharedGLB404/sharedGLB+onefallback404; commongeometry/material and onefilefetch verified"
+  },
+  "build": "passed",
+  "buildWarning": "generic-corrections chunk approximately1.94MB uncompressed/146KB gzip",
+  "preservation": {
+    "baseline": "485a98f62280656c706dd661c293113a88b88675",
+    "public/models/manifest.json": 13607,
+    "public/models/reference-manifest.json": 125,
+    "public/models/bespoke-manifest.json": 592,
+    "priorCorrections": 27,
+    "unchangedPriorGLBAndBlendFiles": 114443
+  },
+  "placements": "shared-instance-placement-check.json",
+  "sourcePartitions": {
+    "trianglesPreserved": 93135,
+    "residualSourcesPreserved": 65,
+    "bindingSources": 52
+  },
+  "limitations": [
+    "Each complex partial because sourceidentity gaps remain",
+    "Representative photograph numbers and compassfaces unidentified",
+    "Clones repeat representative body/facade pattern",
+    "Plan-overlap checks cover identified sourcebodies only; not all surroundingfeatures or ornamental projections"
+  ],
+  "publication": "Local report before PR upload; not merged or deployed"
+}

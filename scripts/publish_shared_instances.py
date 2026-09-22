@@ -147,7 +147,7 @@ def publish(args):
     review.update(siteId=site, reviewScope='One representative visually reviewed; batch placement checks and sample map review for shared copies',
                   inferenceApprovedAssets=[a['id'] for a in new],
                   comparisons=[*review['comparisons'], LIMITS, 'All copy transforms, bounds, source identities and independent fallback bindings checked automatically.'],
-                  limits=[LIMITS, 'Representative number hidden on all copies. Existing authored assets remain unchanged.'])
+                  limits=[LIMITS, 'Representative number hidden on all copies.' if args.hidden_node else 'Representative has no number label; no node needs hiding.', 'Existing authored assets remain unchanged.'])
     evidence['sites'][site] = {'sources': source_site['sources'], 'review': review, 'assets': records,
                              'mcpEvidence': source_site['mcpEvidence'], 'recipeInputs': [],
                              'sharedRepresentative': source['id'], 'newGlbFiles': 0, 'newBlendFiles': 0,
@@ -169,6 +169,6 @@ if __name__ == '__main__':
     for option in ['source-asset', 'site', 'id-prefix', 'name']:
         parser.add_argument('--' + option, required=True)
     parser.add_argument('--representative-number', type=int, required=True)
-    parser.add_argument('--hidden-node', action='append', required=True)
+    parser.add_argument('--hidden-node', action='append', default=[], help='Repeat for representative number-label nodes; omit when the representative is unlabeled')
     parser.add_argument('--estimated-storey-height', type=float, help='Explicit estimate used only where the register height is missing/zero')
     publish(parser.parse_args())

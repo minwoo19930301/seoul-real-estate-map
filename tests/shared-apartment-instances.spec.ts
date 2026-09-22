@@ -8,6 +8,9 @@ const families = [
   {site: 'jamsil-parkrio', number: 208, count: 59, label: 'building-number-label'},
   {site: 'jamsil-trizium', number: 305, count: 44, label: 'building-number-label'},
   {site: 'daechi-eunma', number: 12, count: 27, label: 'building-number-label'},
+  {site: 'godeok-gracium', number: 102, count: 21, label: null},
+  {site: 'raemian-la-classy', number: 101, count: 4, label: null},
+  {site: 'godeok-arteon', number: 321, count: 24, label: null},
 ];
 for (const family of families) for (const failure of ['none', 'shared-model', 'shared-and-fallback']) {
   test(`${family.site} shared copies: ${failure}`, async ({page}) => {
@@ -50,7 +53,7 @@ for (const family of families) for (const failure of ['none', 'shared-model', 's
       expect(proof.length).toBeGreaterThan(1);
       expect(new Set(proof.map((p: any)=>p.geometry)).size).toBe(1);
       expect(new Set(proof.map((p: any)=>p.material)).size).toBe(1);
-      expect(proof.every((p: any)=>p.labelVisible===false)).toBe(true);
+      expect(proof.every((p: any)=>p.labelVisible===(family.label ? false : undefined))).toBe(true);
       expect(requests.length).toBe(1);
     }
     expect(errors).toEqual([]);
