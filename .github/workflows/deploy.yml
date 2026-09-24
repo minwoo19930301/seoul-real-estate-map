@@ -32,6 +32,7 @@ jobs:
       - run: pip install -r api/requirements.txt
       - run: python -m unittest discover -s tests -p 'test_hosted*.py' -v
       - run: python -m unittest discover -s tests -p 'test_database.py' -v
+      - run: python -m unittest discover -s tests -p 'test_proptech_brightdata.py' -v
       - run: python -m unittest discover -s tests -p 'test_residential_survey*.py' -v
       - run: python -m unittest discover -s tests -p 'test_bespoke_publisher.py' -v
       - run: python -m unittest discover -s tests -p 'test_height_regions.py' -v

@@ -44,6 +44,10 @@ class Extraction(unittest.TestCase):
 
 
 class Transactions(unittest.TestCase):
+    def test_upload_rejects_other_transport_before_credentials(self):
+        from scripts.collect_proptech_brightdata import upload
+        with self.assertRaises(ValueError):
+            upload({'provider': 'kbland'}, {'transport': 'direct', 'httpStatus': 200})
     def test_write_error_rolls_back_without_commit(self):
         replies = [{'baton': 'opaque', 'results': [{'type': 'error'}]}, {'results': []}]
         with patch('scripts.collect_proptech_brightdata.http_json', side_effect=replies) as request:

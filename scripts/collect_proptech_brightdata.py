@@ -252,6 +252,11 @@ def sql(hostname, token, statements):
 
 
 def upload(document, receipt):
+    if (receipt.get('transport') != TRANSPORT or receipt.get('httpStatus') != 200
+            or not re.fullmatch(r'[a-f0-9]{64}', receipt.get('sha256', ''))):
+        raise ValueError('Only successful Bright Data snapshots may be uploaded')
+    if document.get('provider') not in {'kbland', 'naver-gallery'}:
+        raise ValueError('Provider has no reviewed extraction contract')
     config = Path.home() / '.config/seoul-map-turso'
     state = json.loads((config / 'upload-state.json').read_text())['seoul-service.sqlite']
     accounts = json.loads((config / 'accounts.json').read_text())['accounts']
