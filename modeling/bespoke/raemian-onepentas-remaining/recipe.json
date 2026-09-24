@@ -1,0 +1,30 @@
+{
+  "siteId": "raemian-onepentas-remaining",
+  "status": "draft for independent root review",
+  "coordinate": {
+    "lon": 126.9937662,
+    "lat": 37.5042453
+  },
+  "geometryInput": "authored-input.json",
+  "buildScript": "build.py",
+  "heightDatum": "Existing residential arms and registered source heights unchanged. Main-roof mechanical heads on 101/103/104 extend an estimated 5.8 m above existing roof; this added envelope is photo-family inference, not an official registered height. Registered roof-versus-machinery datum is unresolved.",
+  "basis": "representative-photo-inference",
+  "inferredFromAssetIds": [
+    "bespoke-raemian-onepentas-105",
+    "bespoke-raemian-onepentas-106"
+  ],
+  "bridge": {
+    "owner": "bespoke-raemian-onepentas-101",
+    "lowerDatumM": 96.55,
+    "heightM": 4.75,
+    "planAndDatum": "estimated; existence and truss supported by officialphoto00",
+    "extraFootprintIds": []
+  },
+  "uncertainties": [
+    "Façades use representative-photo-inference from reviewed105/106; these four towers are not independently matched face by face. Hidden façades and all nominal window/member dimensions uncertain.",
+    "Registered height datum not independently tied to roof or machinery. Internal unit-arm cuts and setback outlines are estimated within actual retained source polygons.",
+    "Skycommunity existence confirmed official numberedplan and completedphoto00. Lower datum96.55m and plan width/landing positions estimated;4.75m componentheight is registered, not proof of lower datum.",
+    "Bridge geometry owned only by101,102landing core owned by102. Bridge claims no extrafootprint. Shared legacyapt-a10022556 must be suppressed only when allfourreplacement assets load; individualfailure retains fallback.",
+    "No105/106 or neighboringFirstige126 ownership claimed."
+  ]
+}

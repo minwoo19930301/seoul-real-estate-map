@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "sourceIdentity": "docs/model-audit/dh-honor-hills-completion-new-source-identity.json",
+  "bindings": [
+    {
+      "number": 314,
+      "sourceFootprintId": "0d1b5ed6-6f9d-48c5-870a-a8c91377f76e",
+      "fallbackAssetId": "fallback-dh-honor-hills-completion-314",
+      "supersedes": [
+        "fallback-dh-honor-hills-completion-314"
+      ],
+      "fallbackModel": "generic-corrections/fallback-dh-honor-hills-completion-314.glb",
+      "fallbackSha256": "4808822156fc1170d6a1478f56be2a2ff29abe789e6bc2ae0a9f116f22adb559"
+    },
+    {
+      "number": 316,
+      "sourceFootprintId": "8aa9bba0-267c-405a-8610-c4314c00a332",
+      "fallbackAssetId": "residential-8aa9bba0-267c-405a-8610-c4314c00a332",
+      "supersedes": [
+        "residential-8aa9bba0-267c-405a-8610-c4314c00a332"
+      ],
+      "fallbackModel": "residential-8aa9bba0-267c-405a-8610-c4314c00a332.glb",
+      "fallbackSha256": "85d96e10e04cb6868dd7a7eeb42c91856c5c46c75a2dc97d4322cacb043ae6cd"
+    }
+  ],
+  "limits": [
+    "Independent existing fallbacks only; model completion and photo review are separate."
+  ],
+  "jointSplitAudit": "docs/model-audit/five-boundary-completion-generic-split.json"
+}

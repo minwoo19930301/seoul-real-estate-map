@@ -64,6 +64,23 @@ test('reference load failure restores superseded generic visibility',async()=>{c
 test('reference replacement recovers after toggle and view changes',()=>{const h=cityHarness(),a={defaultProjectionData:{mainMatrix:new THREE.Matrix4().elements},shaderData:{variantName:'mercator'}};h.m.render(a);h.m.setVisible(false);h.m.setVisible(true);h.setCenter([126.8,37.7]);h.m.render(a);assert.deepEqual(h.m.getState().activeFootprintIds,[]);h.setCenter([127.1,37.5]);h.m.render(a);assert.deepEqual(h.m.getState().activeFootprintIds,['fp-ref']);h.m.destroy()});
 test('reference priority remains selected with 32 nearby generic catalog entries',()=>{const h=cityHarness();const g=h.m.entries[0];h.m.entries=[h.m.entries[1],...Array.from({length:32},(_,i)=>({...g,asset:{...g.asset,id:'g'+i,coordinate:{lon:127.1,lat:37.5}}}))];h.m.render({defaultProjectionData:{mainMatrix:new THREE.Matrix4().elements},shaderData:{variantName:'mercator'}});assert.ok(h.m.getState().models.find(x=>x.id==='ref').active);assert.equal(h.m.getState().activeFootprintIds.includes('fp-ref'),true);h.m.destroy()});
 
+test('nearby authored towers are not displaced by another complex with many historical upgrades', () => {
+  const h = cityHarness(), template = h.m.entries[1];
+  const entry = (id, coordinate, supersedes = []) => ({ ...template,
+    asset: asset(id, { coordinate, supersedes }), scene: new THREE.Scene(), active: false, draws: 0 });
+  const nearby = Array.from({ length: 13 }, (_, i) => entry(`near-${i}`, { lon: 127.1 + i * .00001, lat: 37.5 }));
+  const distant = Array.from({ length: 24 }, (_, i) => {
+    const coordinate = { lon: 127.101 + i * .00001, lat: 37.501 };
+    return [entry(`old-${i}`, coordinate), entry(`upgrade-${i}`, coordinate, [`old-${i}`])];
+  }).flat();
+  h.m.entries = [...distant, ...nearby];
+  const selected = h.m.nearbyEntries();
+  assert.equal(selected.length, 32, 'keep the existing primary model budget');
+  for (const tower of nearby) assert.ok(selected.includes(tower), `${tower.asset.id} must stay selected near the camera`);
+  assert.ok(selected.every(e => !e.asset.id.startsWith('old-')), 'older generations remain fallbacks, not extra primary slots');
+  h.m.destroy();
+});
+
 test('a partly overlapping compound GLB yields to the landmark without hiding its unrelated source solids', () => {
   const h = cityHarness(), [generic, reference] = h.m.entries;
   reference.asset.supersedes = [];
@@ -116,6 +133,76 @@ test('a failed reference fetch loads the unloaded preserved replacement and rest
     assert.deepEqual(requested, ['/models/unavailable.glb', '/models/lotte.glb']);
     assert.deepEqual(h.m.getState().activeFootprintIds, ['preserved-solid']);
     assert.equal(h.m.getState().models.find(m => m.id === 'generic').active, true);
+  } finally { globalThis.fetch = originalFetch; h.m.destroy(); }
+});
+
+test('a failed landmark retains its unloaded generic fallback among more than 32 nearby landmarks', async () => {
+  const h = cityHarness(), [generic, reference] = h.m.entries, originalFetch = globalThis.fetch, requested = [];
+  generic.scene = undefined;
+  generic.asset = { ...generic.asset, coordinate: { lon: 127.13, lat: 37.5 }, geoBounds: [127.0999, 37.4999, 127.1001, 37.5001] };
+  reference.scene = undefined; reference.asset = { ...reference.asset, model: 'unavailable.glb' };
+  const peers = Array.from({ length: 40 }, (_, i) => ({ ...reference, scene: new THREE.Scene(),
+    asset: { ...reference.asset, id: `nearby-${i}`, model: 'lotte.glb', coordinate: { lon: 127.1002 + i * .00002, lat: 37.5 }, supersedes: [`fallback-${i}`], footprintIds: [`peer-${i}`] } }));
+  const retainedPeers = peers.map((peer, i) => ({ ...generic, scene: new THREE.Scene(),
+    asset: { ...generic.asset, id: `fallback-${i}`, coordinate: peer.asset.coordinate, geoBounds: undefined } }));
+  h.m.entries = [generic, reference, ...peers, ...retainedPeers];
+  h.m.setFootprintMatches({ generic: ['preserved-solid'] });
+  assert.ok(!h.m.nearbyCandidates().includes(generic), 'remote shared anchor initially puts this fallback beyond the resident reserve');
+  globalThis.fetch = async url => {
+    requested.push(url);
+    return url.endsWith('/unavailable.glb') ? new Response('', { status: 404 })
+      : new Response(readFileSync(new URL('../public/models/lotte.glb', import.meta.url)));
+  };
+  try {
+    await h.m.loadNearby();
+    h.m.render({ defaultProjectionData: { mainMatrix: new THREE.Matrix4().elements }, shaderData: { variantName: 'mercator' } });
+    assert.deepEqual(requested, ['/models/unavailable.glb', '/models/lotte.glb']);
+    assert.equal(reference.error, 'HTTP 404');
+    assert.equal(generic.active, true);
+    assert.ok(h.m.getState().activeFootprintIds.includes('preserved-solid'));
+    assert.equal(h.m.nearbyEntries().length, 32);
+    assert.ok(h.m.nearbyCandidates().length <= 48);
+    assert.equal(h.m.getState().models.filter(m => m.active).length, 32);
+  } finally { globalThis.fetch = originalFetch; h.m.destroy(); }
+});
+
+test('a shared compound fallback remains drawable after one sibling fails in a dense landmark view', () => {
+  const h = cityHarness(), [generic, reference] = h.m.entries;
+  const sibling = { ...reference, asset: { ...reference.asset, id: 'failed-sibling', footprintIds: ['sibling-solid'] }, scene: undefined, error: 'HTTP 404' };
+  const peers = Array.from({ length: 40 }, (_, i) => ({ ...reference, scene: new THREE.Scene(),
+    asset: { ...reference.asset, id: `peer-${i}`, coordinate: { lon: 127.1002 + i * .00002, lat: 37.5 }, supersedes: [], footprintIds: [`peer-solid-${i}`] } }));
+  h.m.entries = [generic, reference, sibling, ...peers];
+  h.m.setFootprintMatches({ generic: ['fp-ref', 'sibling-solid'] });
+  h.m.render({ defaultProjectionData: { mainMatrix: new THREE.Matrix4().elements }, shaderData: { variantName: 'mercator' } });
+  assert.equal(reference.active, false, 'ready sibling must not overlap the retained compound');
+  assert.equal(generic.active, true);
+  assert.ok(h.m.getState().activeFootprintIds.includes('sibling-solid'));
+  assert.ok(h.m.nearbyCandidates().length <= 48);
+  assert.equal(h.m.getState().models.filter(m => m.active).length, 32);
+  h.m.destroy();
+});
+
+test('an authored split tower keeps the unmodeled compound remainder selectable in a dense view', async () => {
+  const h = cityHarness(), [remainder, reference] = h.m.entries, originalFetch = globalThis.fetch, requested = [];
+  remainder.scene = undefined;
+  remainder.asset = { ...remainder.asset, genericCorrection: { sourceId: 'generic' },
+    coordinate: { lon: 127.13, lat: 37.5 }, geoBounds: [127.0999, 37.4999, 127.1001, 37.5001] };
+  reference.asset = { ...reference.asset, supersedes: ['split-fallback'] };
+  const split = { ...remainder, scene: new THREE.Scene(), asset: { ...remainder.asset, id: 'split-fallback', coordinate: reference.asset.coordinate } };
+  const peers = Array.from({ length: 40 }, (_, i) => ({ ...reference, scene: new THREE.Scene(),
+    asset: { ...reference.asset, id: `peer-${i}`, coordinate: { lon: 127.1002 + i * .00002, lat: 37.5 }, supersedes: [], footprintIds: [`peer-solid-${i}`] } }));
+  h.m.entries = [remainder, split, reference, ...peers];
+  h.m.setFootprintMatches({ generic: ['preserved-neighbor'], 'split-fallback': ['fp-ref'] });
+  globalThis.fetch = async url => { requested.push(url); return new Response(readFileSync(new URL('../public/models/lotte.glb', import.meta.url))); };
+  try {
+    await h.m.loadNearby();
+    h.m.render({ defaultProjectionData: { mainMatrix: new THREE.Matrix4().elements }, shaderData: { variantName: 'mercator' } });
+    assert.deepEqual(requested, ['/models/lotte.glb']);
+    assert.equal(reference.active, true);assert.equal(split.active, false);assert.equal(remainder.active, true);
+    assert.ok(h.m.getState().activeFootprintIds.includes('preserved-neighbor'));
+    assert.equal(remainder.asset.quality, undefined, 'selection priority does not award authored-model status');
+    assert.equal(h.m.nearbyEntries().length, 32);assert.ok(h.m.nearbyCandidates().length <= 48);
+    assert.equal(h.m.getState().models.filter(m => m.active).length, 32);
   } finally { globalThis.fetch = originalFetch; h.m.destroy(); }
 });
 

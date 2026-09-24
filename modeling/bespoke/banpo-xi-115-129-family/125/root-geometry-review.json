@@ -1,0 +1,39 @@
+{
+  "number": 125,
+  "passed": true,
+  "glbSha256": "1bd078cc5341284193fe1b5399dcfacae4b95f2bd344770e4626f9528098e7aa",
+  "sourceId": "bbcba07f-f933-4413-bfdd-878512367c17",
+  "registerId": "10231100186151",
+  "heightM": 78.5,
+  "floors": 28,
+  "maximumFullSurfaceProjectionM": 0.310000474838165,
+  "missingSourceGroundAreaM2": 7.548584659268757e-06,
+  "extraGroundDecorAreaM2": 13.575911543048512,
+  "checks": [
+    {
+      "id": "lower-photo-inferred",
+      "heightM": 65.01785714285714,
+      "areaM2": 296.43604377720095,
+      "interiorAreaM2": 269.914447586546,
+      "overHeightTriangles": 0,
+      "exampleTriangleIndices": [],
+      "uncoveredNearRoofAreaM2": 253.39776726803535,
+      "roofCoverageRatio": 0.06119227950261785,
+      "deckHeightM": 62.017857142857146,
+      "deckCoverageRatio": 1.0
+    },
+    {
+      "id": "upper-photo-inferred",
+      "heightM": 78.5,
+      "areaM2": 220.27154833012506,
+      "interiorAreaM2": 191.76214567743156,
+      "overHeightTriangles": 0,
+      "exampleTriangleIndices": [],
+      "uncoveredNearRoofAreaM2": 173.91226281285114,
+      "roofCoverageRatio": 0.09308345399204188,
+      "deckHeightM": 75.5,
+      "deckCoverageRatio": 1.0
+    }
+  ],
+  "limitations": "All lower-wing geometries/heights are explicit representative photo inference;29/28/27/26 maximum floor counts and maximum heights are official rows. Roof decks checked separately from open3m ornament envelope."
+}

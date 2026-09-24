@@ -1,0 +1,20 @@
+from pathlib import Path
+import json,math,hashlib
+from shapely.geometry import Polygon,box
+from shapely.ops import split
+from shapely.geometry import LineString
+OUT=Path(__file__).resolve().parent;rows=json.loads((OUT/'retained-footprints.json').read_text());lon,lat=126.9937662,37.5042453
+D={'siteId':'raemian-onepentas','coordinate':{'lon':lon,'lat':lat},'towers':{},'heightDatum':'Exact public register105/106 height112.85m. Adopted as highest residential roof datum; lowarms fromofficialfloorchart withestimated3.2mstorey module/4.05mpiloti. Rooftopservices +5.8m photoestimated, not registered additionalheight.'}
+for n in ['105','106']:
+ row=next(r for r in rows if r['name']==n);r=[((x-lon)*111320*math.cos(math.radians(lat)),(y-lat)*111320)for x,y in row['geometry']['coordinates'][0][:-1]];p=Polygon(r)
+ if n=='105':low=p.intersection(box(-1000,-1000,-78.1,1000));main=p.difference(low);styles=['rear','curve','living','stone','service','recess','living','curve','rear','service','recess']
+ else:
+  # Northeast1ho arm stops29F; central2ho+west3ho rise34F/combined3502.
+  u=(.357,.934);v=(-u[1],u[0]);pt=(8,0);line=LineString([(pt[0]+v[0]*1000,pt[1]+v[1]*1000),(pt[0]-v[0]*1000,pt[1]-v[1]*1000)]);pieces=list(split(p,line).geoms);low=max(pieces,key=lambda x:x.centroid.x*u[0]+x.centroid.y*u[1]);main=p.difference(low);styles=['service','rear','curve','living','living','recess','living','curve','rear','service']
+ def rings(p):return [list(x.exterior.coords)[:-1]for x in ([p]if p.geom_type=='Polygon'else p.geoms)]
+ D['towers'][n]={'row':row,'ring':r,'styles':styles,'lowFloor':26 if n=='105'else 29,'regions':[{'name':'low_west_3ho'if n=='105'else'low_northeast_1ho','floors':26 if n=='105'else 29,'height':84.05 if n=='105'else 93.65,'rings':rings(low)},{'name':'main_1_2ho'if n=='105'else'main_2_3ho','floors':34,'height':109.65,'rings':rings(main)},{'name':'combined_3501'if n=='105'else'combined_3502','floors':35,'height':112.85,'base':109.65,'rings':rings(main.buffer(-1.15,join_style=2))}], 'sourceFloorChart':'official-unit-floors-1.jpg','roofDetails':{'status':'photoestimated serviceenclosure approx5.8m andthinmetalparapet; exactdimensionsnotmeasured'}}
+(OUT/'authored-input.json').write_text(json.dumps(D,ensure_ascii=False,indent=2)+'\n')
+sources=[]
+for f in sorted(OUT.glob('official-*')):
+ if f.suffix in ['.jpg','.html']:sources.append({'file':f.name,'sha256':hashlib.sha256(f.read_bytes()).hexdigest()})
+(OUT/'evidence-ledger.json').write_text(json.dumps({'identity':{'managementCode':'A10022556','households':641,'residentialBuildings':6,'officialPage':'https://openapt.seoul.go.kr/commonPortal/programLink.do?aptCode=A10022556&jspNm=%2FopenApt%2FdMenu%2FdangiInfo%2FdangiInfo.open'},'sources':[{'url':'https://www.raemian.co.kr/sales/sub/s/onepentas?menuSeq=10051','observations':'Numberedsiteplan andcompletedfrontphoto;101/102bridge,105NW106NE inplancoordinates. Northarrowrotatedrelativepage.'},{'url':'https://www.raemian.co.kr/sales/sub/s/onepentas?menuSeq=10072','observations':'105columns1/2rise34Fthencombined3501;3ho26F.1061ho29F2/3ho34Fthencombined3502. Unitnumberchartnotexactroofoutline.'},{'url':'https://www.raemian.co.kr/community/times/style/view.do?seq=101','observations':'Actualcompletedsitevisit photos0/2/34 exterior andmanygrounddetails.106number visiblephoto2;bronzehorizontalbands androundedends,broadbluegreyglass,narrowrearstonecore;openpiloti+slantedmetalcorners.'}],'withdrawn':[{'claim':'1053ho16F','reason':'Initialcontactsheetmisread;fullresolutionchartclearly2603=26F.'},{'claim':'neighbor126probablyOneBailey','reason':'Exact23F65.3mpublicregisterandaddressconfirmRaemianFirstige126;OneBailey126is1Famenity.'}],'files':sources,'limits':['Officialplansalesdisclaimer allowsasbuiltchanges;completedphotosprioritized.','Facadecolorsdimensionsnominalvisualestimates,notCAD/realitycapture.','105rearfullcoverageislimited;sourcefootprint/floorchartcontrolmass,photooccludedfacesexplicitinferred.','Unitmergechartcannotalonefixpenthouseroofoutline.','No126neighborclaim;oldgenericcompoundpartitionownedbyroot.']},ensure_ascii=False,indent=2)+'\n')

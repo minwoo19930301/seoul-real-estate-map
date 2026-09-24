@@ -1,4 +1,5 @@
 import hashlib
+import copy
 import importlib.util
 import json
 from pathlib import Path
@@ -21,11 +22,22 @@ class McpEvidenceTest(unittest.TestCase):
 
     def evidence(self, calls):
         self.path.write_text(json.dumps(calls))
-        return [{'path': str(self.path.relative_to(self.root)), 'sha256': hashlib.sha256(self.path.read_bytes()).hexdigest()}]
+        return [{'tool': 'execute_blender_code', 'path': str(self.path.relative_to(self.root)), 'sha256': hashlib.sha256(self.path.read_bytes()).hexdigest()}]
 
     def test_successful_execution_is_accepted(self):
         records = self.evidence([{'tool': 'execute_blender_code', 'isError': False, 'content': [{'text': 'Code executed successfully: exported model.glb'}]}])
         publisher.validate_mcp_evidence(records, self.root)
+
+    def test_publisher_rejects_proof_metadata_that_the_completion_queue_cannot_verify(self):
+        for tool in [None, 'get_scene_info']:
+            records = self.evidence([{'tool': 'execute_blender_code', 'isError': False,
+                                      'content': [{'text': 'Code executed successfully: exported model.glb'}]}])
+            if tool is None:
+                records[0].pop('tool')
+            else:
+                records[0]['tool'] = tool
+            with self.subTest(tool=tool), self.assertRaisesRegex(ValueError, 'Invalid Blender MCP evidence'):
+                publisher.validate_mcp_evidence(records, self.root)
 
     def test_empty_evidence_and_failed_or_unrelated_calls_are_rejected(self):
         for records in [None, []]:
@@ -52,6 +64,63 @@ class McpEvidenceTest(unittest.TestCase):
 
 
 class StagingPathTest(unittest.TestCase):
+    def test_numbered_towers_keep_distinct_recipes_and_editable_files_with_same_names(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            stage = root / 'stage'
+            (root / 'data').mkdir()
+            public = root / 'public/models'
+            public.mkdir(parents=True)
+            for name in ['manifest.json', 'reference-manifest.json', 'bespoke-manifest.json']:
+                (public / name).write_text(json.dumps({'assets': [], 'places': []}))
+            deployment = root / 'public/data/deployment-assets.json'
+            deployment.parent.mkdir()
+            deployment.write_text('{"files":{}}')
+            assets, reviewed, recipes = [], {}, []
+            for number in ['101', '102']:
+                folder = stage / number
+                folder.mkdir(parents=True)
+                for filename in ['build.py', 'source.json', 'authored.blend', 'model.glb']:
+                    file = folder / filename
+                    file.write_bytes(f'{number}: {filename}'.encode())
+                    reviewed[f'{number}/{filename}'] = publisher.sha(file)
+                recipes.extend([f'{number}/build.py', f'{number}/source.json'])
+                assets.append({'id': f'tower-{number}', 'nameKo': number, 'file': f'{number}/model.glb',
+                               'blendSource': f'{number}/authored.blend', 'coordinate': {'lon': 127, 'lat': 37},
+                               'category': 'apartment', 'components': ['fixture'], 'referenceUrl': 'https://example.test/'})
+            bundle = stage / 'bundle.json'
+            bundle.write_text(json.dumps({'siteId': 'family', 'sources': ['fixture'], 'assets': assets,
+                                          'recipeFiles': recipes, 'mcpEvidence': []}))
+            review = stage / 'review.json'
+            review.write_text(json.dumps({'siteId': 'family', 'status': 'visually-reviewed',
+                                          'comparisons': ['fixture'], 'reviewedInputs': reviewed}))
+
+            # Geometry validation is covered separately; exercise the real publishing transaction here.
+            def normalize(command, **kwargs):
+                source, destination = Path(command[-2]), Path(command[-1])
+                destination.parent.mkdir(parents=True, exist_ok=True)
+                destination.write_bytes(source.read_bytes())
+                Path(str(destination) + '.json').write_text(json.dumps({
+                    'min': [0, 0, 0], 'max': [1, 1, 1], 'dimensions': [1, 1, 1],
+                    'sha256': publisher.sha(destination)}))
+
+            with patch.object(publisher, 'ROOT', root), patch.object(publisher, 'PUB', public), \
+                    patch.object(publisher, 'STAGE', stage), patch.object(publisher, 'validate_mcp_evidence'), \
+                    patch.object(publisher.subprocess, 'run', side_effect=normalize), patch('builtins.print'):
+                publisher.publish(bundle, review)
+            for number in ['101', '102']:
+                for filename in ['build.py', 'source.json', 'authored.blend']:
+                    source = stage / number / filename
+                    destination = root / 'modeling/bespoke/family' / number / filename
+                    self.assertEqual(destination.read_bytes(), source.read_bytes())
+            manifest = json.loads((public / 'bespoke-manifest.json').read_text())
+            self.assertEqual(len({a['sourceRecord']['blendSource'] for a in manifest['assets']}), 2)
+            evidence = json.loads((root / 'docs/model-audit/published-bespoke.json').read_text())
+            inputs = evidence['sites']['family']['recipeInputs']
+            self.assertEqual(len({r['path'] for r in inputs}), 4)
+            for record in inputs:
+                self.assertEqual(publisher.sha(root / record['path']), record['sha256'])
+
     def test_linked_workspace_is_accepted_but_outside_bundle_is_rejected(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
@@ -69,6 +138,67 @@ class StagingPathTest(unittest.TestCase):
                     publisher.publish(linked / 'bundle.json', review)
                 with self.assertRaisesRegex(ValueError, 'staging directory'):
                     publisher.publish(outside, review)
+
+
+class RepresentativeInferenceTest(unittest.TestCase):
+    def setUp(self):
+        self.source = {'id': 'bespoke-representative', 'sha256': 'a' * 64,
+                       'sourceRecord': {'siteId': 'reviewed-site', 'sourceGlbSha256': 'b' * 64}}
+        self.asset = {'id': 'bespoke-sibling', 'modelingBasis': 'representative-photo-inference',
+                      'inferredFromAssetIds': [self.source['id']],
+                      'inferenceScope': 'Facade language reused; numbered footprint and height are independent.'}
+        self.review = {'inferenceApprovedAssets': [self.asset['id']]}
+
+    def test_representative_bytes_and_estimated_scope_survive_publication(self):
+        result = publisher.inference_record(self.asset, [self.source], self.review)
+        self.assertEqual(result['inferredFrom'], [{'id': self.source['id'], 'sha256': 'a' * 64, 'siteId': 'reviewed-site'}])
+        self.assertEqual(result['inferenceScope'], self.asset['inferenceScope'])
+        self.assertIn('not independently photo-verified', result['accuracy'])
+
+    def test_unknown_source_and_unacknowledged_inference_are_rejected(self):
+        with self.assertRaisesRegex(ValueError, 'existing reviewed'):
+            publisher.inference_record(self.asset, [], self.review)
+        with self.assertRaisesRegex(ValueError, 'acknowledgement'):
+            publisher.inference_record(self.asset, [self.source], {})
+        self.asset['modelingBasis'] = 'individual-photo-review'
+        with self.assertRaisesRegex(ValueError, 'must declare'):
+            publisher.inference_record(self.asset, [self.source], self.review)
+
+
+class ComplexPhotoInferenceTest(unittest.TestCase):
+    def setUp(self):
+        self.photo = {'url': 'https://example.org/completed/photo.jpg', 'sha256': 'a' * 64, 'scope': 'complex'}
+        self.asset = {'id': 'bespoke-unidentified-photo-tower', 'modelingBasis': 'complex-photo-inference',
+                      'inferredFromPhotos': [self.photo], 'inferenceScope': 'Own numbered footprint; photograph identifies the complex only.'}
+        self.review = {'inferenceApprovedAssets': [self.asset['id']], 'reviewedSourcePhotos': [copy.deepcopy(self.photo)]}
+        self.sources = [copy.deepcopy(self.photo)]
+
+    def test_complex_photo_keeps_identity_limit_and_binds_reviewed_source(self):
+        result = publisher.inference_record(self.asset, [], self.review, self.sources)
+        self.assertEqual(result['modelingBasis'], 'complex-photo-inference')
+        self.assertEqual(result['inferredFromPhotos'], [self.photo])
+        self.assertIn('does not establish this numbered tower', result['accuracy'])
+        self.assertNotIn('inferredFrom', result)
+
+    def test_changed_photo_unreviewed_source_and_false_individual_claim_are_rejected(self):
+        for target in ['source', 'review', 'asset']:
+            asset, review, sources = copy.deepcopy((self.asset, self.review, self.sources))
+            photo = sources[0] if target == 'source' else review['reviewedSourcePhotos'][0] if target == 'review' else asset['inferredFromPhotos'][0]
+            photo['sha256'] = 'b' * 64
+            with self.subTest(target=target), self.assertRaisesRegex(ValueError, 'proof mismatch'):
+                publisher.inference_record(asset, [], review, sources)
+        for mutate in [
+            lambda a: a.update(modelingBasis='individual-photo-review'),
+            lambda a: a['inferredFromPhotos'][0].update(scope='numbered-tower'),
+            lambda a: a['inferredFromPhotos'][0].update(url='file:///private/photo.jpg'),
+            lambda a: a['inferredFromPhotos'].append(copy.deepcopy(a['inferredFromPhotos'][0])),
+            lambda a: a.update(inferredFromAssetIds=['bespoke-fake']),
+        ]:
+            asset = copy.deepcopy(self.asset); mutate(asset)
+            with self.assertRaises(ValueError):
+                publisher.inference_record(asset, [], self.review, self.sources)
+        with self.assertRaisesRegex(ValueError, 'acknowledgement'):
+            publisher.inference_record(self.asset, [], {}, self.sources)
 
 
 if __name__ == '__main__':

@@ -1,0 +1,340 @@
+{
+  "version": 1,
+  "complex": {
+    "managementCode": "A10025104",
+    "name": "고덕센트럴 아이파크",
+    "address": "서울특별시 강동구 고덕로80길 99",
+    "households": 1745,
+    "officialBuildingCount": 19
+  },
+  "sourceSha256": "3301c7f4d62fff70c2a03e3c35f7bae2350c5fabb799c8e1dad537db38ba80f9",
+  "membershipBasis": "Prior published identities retained; added full polygons inside named OSM residential boundary with exact road, parcel and uniquely numbered main residential register rows. Height/floor conflicts not silently corrected.",
+  "confirmedBuildingCount": 1,
+  "unmappedOfficialBuildingCount": 0,
+  "limitations": [
+    "Only independently identified source polygons included; remaining official buildings are withheld.",
+    "One existing photo-reviewed representative is copied; individual elevations and floor patterns are not separately reconstructed.",
+    "Named OSM boundary is community mapping, not cadastral survey.",
+    "Registered height controls new copy scale; raw source height/floor differences remain in identityComparison."
+  ],
+  "towers": [
+    {
+      "number": 504,
+      "sourceId": "49faccf1-01f3-4e50-b332-67f96d50b061",
+      "sourceName": "504동",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              127.1657352,
+              37.5530338
+            ],
+            [
+              127.1656909,
+              37.5530647
+            ],
+            [
+              127.1657104,
+              37.5530815
+            ],
+            [
+              127.1657015,
+              37.5530885
+            ],
+            [
+              127.1657409,
+              37.5531225
+            ],
+            [
+              127.1656949,
+              37.5531558
+            ],
+            [
+              127.1656776,
+              37.5531408
+            ],
+            [
+              127.1656719,
+              37.5531443
+            ],
+            [
+              127.1656763,
+              37.5531661
+            ],
+            [
+              127.1656445,
+              37.5532439
+            ],
+            [
+              127.1655264,
+              37.5532232
+            ],
+            [
+              127.1655702,
+              37.5531229
+            ],
+            [
+              127.1655547,
+              37.5531096
+            ],
+            [
+              127.1655383,
+              37.5531198
+            ],
+            [
+              127.1654786,
+              37.5530675
+            ],
+            [
+              127.1656423,
+              37.5529479
+            ],
+            [
+              127.1657352,
+              37.5530338
+            ]
+          ]
+        ]
+      },
+      "sourceProperties": {
+        "names": {
+          "primary": "504동"
+        },
+        "sources": [
+          {
+            "property": "",
+            "dataset": "OpenStreetMap",
+            "license": "ODbL-1.0",
+            "record_id": "w884988430@5",
+            "update_time": "2026-02-07T04:41:51.000Z",
+            "provider": "osm",
+            "resource": "planet",
+            "version": "2026-08-02T00:00:00.000Z"
+          }
+        ],
+        "height": 45.0,
+        "is_underground": false,
+        "num_floors": 15,
+        "subtype": "residential",
+        "class": "apartments",
+        "has_parts": false,
+        "version": 3,
+        "bbox": {
+          "xmin": 127.16546630859375,
+          "xmax": 127.16574096679688,
+          "ymin": 37.55294418334961,
+          "ymax": 37.553245544433594
+        },
+        "min_height": null,
+        "feature_type": "building",
+        "_seoul": {
+          "district_id": "bda1d9bc-b6ad-4716-b4b3-069a9f5072fd",
+          "height_status": "source-reported-unverified",
+          "height_source_indices": [
+            0
+          ],
+          "boundary_crossing": false,
+          "original_geometry_valid": true
+        }
+      },
+      "sourceHeightM": 45.0,
+      "sourceChildIds": [],
+      "register": {
+        "row_number": 314959,
+        "id": "10261100263809",
+        "district": "강동구",
+        "dong": "상일동",
+        "parcel_key": "강동구|상일동|land|513|0",
+        "road_key": "강동구|고덕로80길|99|0|지상",
+        "building_dong": "504동",
+        "main_aux": "주건축물",
+        "main_use": "공동주택",
+        "other_use": "공동주택(아파트)",
+        "floors": "15",
+        "basement": "0",
+        "height": "44.7",
+        "households": "42",
+        "approval_year": "2019",
+        "roof": "(철근)콘크리트",
+        "structure": "철근콘크리트구조",
+        "source_hash": "b2117f4b144f4836a11d42176af00b7910782d7ec7e0924119b07c504081cd71",
+        "raw_json": "{\"\\ub300\\uc9c0\\uc704\\uce58\":\"\\uc11c\\uc6b8\\ud2b9\\ubcc4\\uc2dc \\uac15\\ub3d9\\uad6c \\uc0c1\\uc77c\\ub3d9 513\",\"\\uc2dc\\uad70\\uad6c\\ucf54\\ub4dc\\uba85\":\"\\uc11c\\uc6b8\\ud2b9\\ubcc4\\uc2dc \\uac15\\ub3d9\\uad6c\",\"\\ubc95\\uc815\\ub3d9\\ucf54\\ub4dc\\uba85\":\"\\uc0c1\\uc77c\\ub3d9\",\"\\ub300\\uc9c0\\uad6c\\ubd84\\ucf54\\ub4dc\\uba85\":\"\\ub300\\uc9c0\",\"\\uc8fc\\uc9c0\\ubc88\":\"0513\",\"\\ubd80\\uc9c0\\ubc88\":\"0000\",\"\\ud2b9\\uc218\\uc9c0\\uba85\":\"\",\"\\ube14\\ub85d\\ubc88\\ud638\":\"\",\"\\ub85c\\ud2b8\\ubc88\\ud638\":\"\",\"\\uc0c8\\uc8fc\\uc18c\\ub3c4\\ub85c\\ucf54\\ub4dc\\uba85\":\"\\uace0\\ub355\\ub85c80\\uae38\",\"\\uc0c8\\uc8fc\\uc18c\\ubc95\\uc815\\ub3d9\\ucf54\\ub4dc\\uba85\":\"\\uc0c1\\uc77c\\ub3d9\",\"\\uc0c8\\uc8fc\\uc18c\\uc9c0\\uc0c1\\uc9c0\\ud558\\uad6c\\ubd84\\ucf54\\ub4dc\\uba85\":\"\\uc9c0\\uc0c1\",\"\\uc0c8\\uc8fc\\uc18c\\uc8fc\\uc9c0\\ubc88\":\"99\",\"\\uc0c8\\uc8fc\\uc18c\\ubd80\\uc9c0\\ubc88\":\"\",\"\\uac74\\ucd95\\ubb3c\\ub300\\uc7a5\\uc77c\\ub828\\ubc88\\ud638\":\"10261100263809\",\"\\ub300\\uc7a5\\uad6c\\ubd84\\ucf54\\ub4dc\\uba85\":\"\\uc9d1\\ud569\",\"\\ub300\\uc7a5\\uc885\\ub958\\ucf54\\ub4dc\\uba85\":\"\\ud45c\\uc81c\\ubd80\",\"\\ub3d9\\uba85\":\"504\\ub3d9\",\"\\uc8fc\\ubd80\\uc18d\\uad6c\\ubd84\\ucf54\\ub4dc\\uba85\":\"\\uc8fc\\uac74\\ucd95\\ubb3c\",\"\\ub300\\uc9c0\\uba74\\uc801\":\"\",\"\\uac74\\ucd95\\uba74\\uc801\":\"390.83\",\"\\uac74\\ud3d0\\uc728\":\"\",\"\\uc5f0\\uba74\\uc801\":\"3676.24\",\"\\uc6a9\\uc801\\ub960\\uc0b0\\uc815\\uc5f0\\uba74\\uc801\":\"3676.24\",\"\\uc6a9\\uc801\\ub960\":\"\",\"\\uad6c\\uc870\\ucf54\\ub4dc\\uba85\":\"\\ucca0\\uadfc\\ucf58\\ud06c\\ub9ac\\ud2b8\\uad6c\\uc870\",\"\\uae30\\ud0c0\\uad6c\\uc870\\uc815\\ubcf4\":\"\\ucca0\\uadfc\\ucf58\\ud06c\\ub9ac\\ud2b8\\uad6c\\uc870\",\"\\uc8fc\\uc6a9\\ub3c4\\ucf54\\ub4dc\\uba85\":\"\\uacf5\\ub3d9\\uc8fc\\ud0dd\",\"\\uae30\\ud0c0\\uc6a9\\ub3c4\\ub0b4\\uc6a9\":\"\\uacf5\\ub3d9\\uc8fc\\ud0dd(\\uc544\\ud30c\\ud2b8)\",\"\\uc9c0\\ubd95\\ucf54\\ub4dc\\uba85\":\"(\\ucca0\\uadfc)\\ucf58\\ud06c\\ub9ac\\ud2b8\",\"\\uae30\\ud0c0\\uc9c0\\ubd95\\uba85\":\"(\\ucca0\\uadfc)\\ucf58\\ud06c\\ub9ac\\ud2b8\",\"\\uc138\\ub300\\uc218\":\"42\",\"\\uac00\\uad6c\\uc218\":\"\",\"\\ud638\\uc218\":\"\",\"\\uc9c0\\uc0c1\\uce35\\uc218\":\"15\",\"\\uc9c0\\ud558\\uce35\\uc218\":\"0\",\"\\ub192\\uc774\":\"44.7\",\"\\uc2b9\\uc6a9\\uc2b9\\uac15\\uae30\\uc218\":\"\",\"\\ube44\\uc0c1\\uc6a9\\uc2b9\\uac15\\uae30\\uc218\":\"2\",\"\\ubd80\\uc18d\\uac74\\ucd95\\ubb3c\\uc218\":\"\",\"\\ubd80\\uc18d\\uac74\\ucd95\\ubb3c\\uba74\\uc801\":\"\",\"\\ucd1d\\ub3d9\\uc5f0\\uba74\\uc801\":\"3676.24\",\"\\uc625\\ub0b4\\uae30\\uacc4\\uc2dd\\ub300\\uc218\":\"\",\"\\uc625\\ub0b4\\uae30\\uacc4\\uc2dd\\uba74\\uc801\":\"\",\"\\uc625\\uc678\\uae30\\uacc4\\uc2dd\\ub300\\uc218\":\"\",\"\\uc625\\uc678\\uae30\\uacc4\\uc2dd\\uba74\\uc801\":\"\",\"\\uc625\\ub0b4\\uc790\\uc8fc\\uc2dd\\ub300\\uc218\":\"\",\"\\uc625\\ub0b4\\uc790\\uc8fc\\uc2dd\\uba74\\uc801\":\"\",\"\\uc625\\uc678\\uc790\\uc8fc\\uc2dd\\ub300\\uc218\":\"\",\"\\uc625\\uc678\\uc790\\uc8fc\\uc2dd\\uba74\\uc801\":\"\",\"\\ud5c8\\uac00\\uc77c\\uc790\":\"2014-06-24\",\"\\ucc29\\uacf5\\uc77c\\uc790\":\"2017-06-20\",\"\\uc0ac\\uc6a9\\uc2b9\\uc778\\uc77c\\uc790\":\"2019-12-30\",\"\\uc5d0\\ub108\\uc9c0\\ud6a8\\uc728\\ub4f1\\uae09\\uac12\":\"1+\",\"\\uc5d0\\ub108\\uc9c0\\uc808\\uac10\\ub960\":\"111.8\",\"EPI\\uc810\\uc218\":\"86.3\",\"\\uce5c\\ud658\\uacbd\\uac74\\ucd95\\ubb3c\\ub4f1\\uae09\\uac12\":\"1\",\"\\uce5c\\ud658\\uacbd\\uac74\\ucd95\\ubb3c\\uc778\\uc99d\\uc810\\uc218\":\"\",\"\\uc9c0\\ub2a5\\ud615\\uac74\\ucd95\\ubb3c\\ub4f1\\uae09\\uac12\":\"\",\"\\uc9c0\\ub2a5\\ud615\\uac74\\ucd95\\ubb3c\\uc778\\uc99d\\uc810\\uc218\":\"\",\"\\ub0b4\\uc9c4\\uc124\\uacc4\\uc801\\uc6a9\\uc5ec\\ubd80\":\"1\",\"\\ub0b4\\uc9c4\\ub2a5\\ub825\\ub0b4\\uc6a9\":\"VII-0.168g\"}"
+      },
+      "identityComparison": {
+        "namedBoundaryCovers": true,
+        "floorsEqual": true,
+        "sourceFloors": 15,
+        "registeredFloors": 15,
+        "heightDifferenceM": 0.3,
+        "identityBasis": "Named OSM residential boundary covers full source polygon, exact official road and parcel, unambiguous residential register dong. Not cadastral proof; source/register conflicts remain recorded."
+      }
+    }
+  ],
+  "officialRecords": [
+    {
+      "address": "서울특별시 강동구 고덕로80길 99",
+      "buildingCount": 19,
+      "classification": "아파트",
+      "code": "A10025104",
+      "district": "강동구",
+      "households": 1745,
+      "nameKo": "고덕센트럴 아이파크",
+      "sourceCoordinate": [
+        127.1669237,
+        37.5522344
+      ],
+      "sourceId": "oa-15818",
+      "sourceRow": 2544
+    },
+    {
+      "address": "서울특별시 강동구 고덕로80길 99",
+      "buildingCount": 19,
+      "classification": "아파트",
+      "code": "A10025104",
+      "district": "강동구",
+      "households": 1745,
+      "nameKo": "고덕센트럴 아이파크",
+      "sourceCoordinate": null,
+      "sourceId": "kapt-weekly",
+      "sourceRow": 3220
+    }
+  ],
+  "officialSnapshotSha256": "0430f2d2f803c8c9d1b2d6f2763d2b24021f675f1699e2514f05cf8457c3d308",
+  "namedBoundaryEvidence": {
+    "kind": "way",
+    "id": 669472096,
+    "tags": {
+      "addr:city": "서울특별시",
+      "addr:district": "강동구",
+      "addr:subdistrict": "상일동",
+      "construction": "yes",
+      "landuse": "residential",
+      "name": "고덕센트럴아이파크",
+      "residential": "apartments"
+    },
+    "url": "https://www.openstreetmap.org/api/0.6/way/669472096/full",
+    "sha256": "1820f7e5b2fab44e5c56f5ef658590f1a25544460a95aaade1534bd88072c8c8",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            127.1653865,
+            37.5533751
+          ],
+          [
+            127.1653764,
+            37.5533504
+          ],
+          [
+            127.1653837,
+            37.5520264
+          ],
+          [
+            127.16539,
+            37.5506588
+          ],
+          [
+            127.1654053,
+            37.550608
+          ],
+          [
+            127.1654248,
+            37.5505808
+          ],
+          [
+            127.1654529,
+            37.5505629
+          ],
+          [
+            127.1654878,
+            37.5505503
+          ],
+          [
+            127.1655447,
+            37.5505509
+          ],
+          [
+            127.1673514,
+            37.5504729
+          ],
+          [
+            127.1673383,
+            37.5505499
+          ],
+          [
+            127.1674186,
+            37.5505725
+          ],
+          [
+            127.1676252,
+            37.5507586
+          ],
+          [
+            127.1674898,
+            37.5508547
+          ],
+          [
+            127.1674257,
+            37.5508392
+          ],
+          [
+            127.1671236,
+            37.5510221
+          ],
+          [
+            127.167143,
+            37.5511024
+          ],
+          [
+            127.1673126,
+            37.5512676
+          ],
+          [
+            127.1675169,
+            37.5514766
+          ],
+          [
+            127.1678609,
+            37.5514655
+          ],
+          [
+            127.1679822,
+            37.5514063
+          ],
+          [
+            127.1681789,
+            37.5515733
+          ],
+          [
+            127.1681761,
+            37.5520106
+          ],
+          [
+            127.1681794,
+            37.5534901
+          ],
+          [
+            127.1654411,
+            37.5534035
+          ],
+          [
+            127.1654105,
+            37.5533927
+          ],
+          [
+            127.1653865,
+            37.5533751
+          ]
+        ]
+      ]
+    },
+    "previousPublishedBuildingsCovered": 18,
+    "sourceBuildingsInside": 29
+  },
+  "newBuildingNumbers": [
+    504
+  ],
+  "scope": "New fallback targets only; full placement context in companion identity"
+}

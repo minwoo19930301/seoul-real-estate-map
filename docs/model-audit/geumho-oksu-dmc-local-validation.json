@@ -1,0 +1,45 @@
+{
+  "checkedOn": "2026-09-22",
+  "baselineCommit": "02a50569f2c2081dbfc1fe450e7a9a6d3799aba4",
+  "newPhysicalBuildings": 37,
+  "newRepresentatives": 3,
+  "newSharedCopies": 34,
+  "bespokeAssetRecords": 727,
+  "currentSharedCopies": 290,
+  "node": {
+    "passed": 13852,
+    "failed": 0
+  },
+  "python": {
+    "passed": 55,
+    "failed": 0
+  },
+  "browser": {
+    "passed": 9,
+    "scope": "Three complexes: normal, shared GLB404, shared GLB and one fallback404. Common geometry/material, one representative file fetch and original-source fallback recovery verified."
+  },
+  "build": "passed",
+  "buildWarning": "generic-corrections chunk2303.64KB uncompressed and172.95KB gzip exceeds1800KB threshold",
+  "preservation": {
+    "baseline": "02a50569f2c2081dbfc1fe450e7a9a6d3799aba4",
+    "public/models/manifest.json": 13607,
+    "public/models/reference-manifest.json": 125,
+    "public/models/bespoke-manifest.json": 690,
+    "priorCorrections": 35,
+    "unchangedPriorGLBAndBlendFiles": 114553
+  },
+  "placements": "shared-instance-placement-check.json",
+  "sourcePartitions": {
+    "trianglesPreserved": 33787,
+    "residualSourcesPreserved": 6,
+    "bindingSources": 37
+  },
+  "limitations": [
+    "Geumho16/17 and DMC6/61 remain partial. Oksu15/15 identified residential buildings linked.",
+    "Photographs do not establish representative numbers or compass faces.",
+    "Copies repeat representative shape, window and floor patterns.",
+    "Placement checks cover identified source body plans only, not all surrounding objects or ornament projections.",
+    "Geumho household counts differ:OA1467 andKapt1330, both above400."
+  ],
+  "publication": "Local report before PR upload; not merged or deployed"
+}

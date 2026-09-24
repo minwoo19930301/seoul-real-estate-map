@@ -1,0 +1,386 @@
+{
+  "version": 1,
+  "sourceId": "apt-a13480403",
+  "sourceSha256": "117d8aa084f6abaeb1994e79d8d1e47536d7f8c3d2993d3da1efc445c65f05d4",
+  "sourceTriangles": 5649,
+  "sourceCoordinate": {
+    "lon": 127.14668165,
+    "lat": 37.558213105314,
+    "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+    "confidence": "source_footprint_unsurveyed"
+  },
+  "groupFootprints": {
+    "apt-a13480403": [
+      "3a5772c0-eab2-4ff2-8a0b-35dc81168f10",
+      "a33f1d99-bf26-4414-a52e-f46ce21efd79",
+      "3f02a046-763f-4d1f-8a1c-299c631ee5e0",
+      "82503891-8463-42c2-ae15-10231a234a6e",
+      "40688795-6d24-48a2-9640-9212daecda3b",
+      "05fec66f-fc8b-4bf3-a2ae-94995d43bda1"
+    ],
+    "fallback-godeok-raemian-hillstate-completion-207": [
+      "3ffe40f2-09c0-496d-b669-1c588be9484d"
+    ],
+    "fallback-godeok-raemian-hillstate-completion-208": [
+      "f5e974e8-9370-436a-9e54-b84fd84cd399"
+    ],
+    "fallback-godeok-raemian-hillstate-completion-213": [
+      "09ae301f-4584-4add-8200-68850f5b5fe6"
+    ],
+    "fallback-godeok-raemian-hillstate-completion-214": [
+      "3b9ca8a4-bba4-4e2f-a240-7b14199c4bb8"
+    ],
+    "fallback-godeok-raemian-hillstate-completion-215": [
+      "1eccac8b-a0e9-4a7f-bd39-1cbd4a9edb30"
+    ]
+  },
+  "ownershipMethod": "Original source-emission indices from byte-exact authoring replay; overlapping historical plans cannot change ownership. Byte-exact archived authoring replay and per-source triangle-signature multiplicity independently checked.",
+  "legacyTrianglesOutsideSourcePolygonInsideItsHull": 0,
+  "legacyTrianglesOutsideSourceConvexHull": 0,
+  "limits": [
+    "Only archived indexed triangles, material attributes and terrain anchors are partitioned; no photo-modeling credit.",
+    "Add35 identified buildings acrossfivecomplexes using their published single representative. All priorpublishedmodels retained; residual fallback files repartitioned only with independent triangle provenance.",
+    "All unnamed, unmatched and unrelated source buildings remain in unchanged-shape residuals. Original convex-hull approximations remain archived."
+  ],
+  "outputs": [
+    {
+      "id": "apt-a13480403",
+      "model": "generic-corrections/apt-a13480403.glb",
+      "sha256": "838a370e8c4c4adf07622b8d16783c2ac4aad3d5cc7dc2c397b3dc941379b068",
+      "bytes": 218936,
+      "triangles": 3521,
+      "bounds": {
+        "min": [
+          -112.44889068603516,
+          0.0,
+          -61.42595672607422
+        ],
+        "max": [
+          29.0994873046875,
+          60.349998474121094,
+          99.06358337402344
+        ]
+      },
+      "footprintIds": [
+        "3a5772c0-eab2-4ff2-8a0b-35dc81168f10",
+        "a33f1d99-bf26-4414-a52e-f46ce21efd79",
+        "3f02a046-763f-4d1f-8a1c-299c631ee5e0",
+        "82503891-8463-42c2-ae15-10231a234a6e",
+        "40688795-6d24-48a2-9640-9212daecda3b",
+        "05fec66f-fc8b-4bf3-a2ae-94995d43bda1"
+      ]
+    },
+    {
+      "id": "fallback-godeok-raemian-hillstate-completion-207",
+      "model": "generic-corrections/fallback-godeok-raemian-hillstate-completion-207.glb",
+      "sha256": "53c84ffd5f5148401869bc2cd531a842d417ec2bf77078136215eae634c84058",
+      "bytes": 36976,
+      "triangles": 565,
+      "bounds": {
+        "min": [
+          77.59127807617188,
+          0.0,
+          -53.06577682495117
+        ],
+        "max": [
+          112.44889068603516,
+          99.0,
+          -10.129526138305664
+        ]
+      },
+      "footprintIds": [
+        "3ffe40f2-09c0-496d-b669-1c588be9484d"
+      ]
+    },
+    {
+      "id": "fallback-godeok-raemian-hillstate-completion-208",
+      "model": "generic-corrections/fallback-godeok-raemian-hillstate-completion-208.glb",
+      "sha256": "9a5d13084107fba718ca371bfca92b76c6c7adfe08f7c55994d4d7ebf3fab449",
+      "bytes": 38592,
+      "triangles": 591,
+      "bounds": {
+        "min": [
+          25.393108367919922,
+          0.0,
+          -99.06358337402344
+        ],
+        "max": [
+          60.2507209777832,
+          105.0,
+          -56.13822555541992
+        ]
+      },
+      "footprintIds": [
+        "f5e974e8-9370-436a-9e54-b84fd84cd399"
+      ]
+    },
+    {
+      "id": "fallback-godeok-raemian-hillstate-completion-213",
+      "model": "generic-corrections/fallback-godeok-raemian-hillstate-completion-213.glb",
+      "sha256": "56fdf32bbb0d9ff62d7c02c1cbd940162e59b12601eee4233f35637ecba4bb5f",
+      "bytes": 21236,
+      "triangles": 292,
+      "bounds": {
+        "min": [
+          -31.19094467163086,
+          0.0,
+          -73.18143463134766
+        ],
+        "max": [
+          -3.587245464324951,
+          56.0,
+          -44.3493766784668
+        ]
+      },
+      "footprintIds": [
+        "09ae301f-4584-4add-8200-68850f5b5fe6"
+      ]
+    },
+    {
+      "id": "fallback-godeok-raemian-hillstate-completion-214",
+      "model": "generic-corrections/fallback-godeok-raemian-hillstate-completion-214.glb",
+      "sha256": "7e2f596a12aa53c396ffe35cfd022ddd25041fd018a35311c8184c8a44dbb9d8",
+      "bytes": 24208,
+      "triangles": 340,
+      "bounds": {
+        "min": [
+          13.8239107131958,
+          0.0,
+          -46.23069381713867
+        ],
+        "max": [
+          49.369850158691406,
+          53.0,
+          -7.624825477600098
+        ]
+      },
+      "footprintIds": [
+        "3b9ca8a4-bba4-4e2f-a240-7b14199c4bb8"
+      ]
+    },
+    {
+      "id": "fallback-godeok-raemian-hillstate-completion-215",
+      "model": "generic-corrections/fallback-godeok-raemian-hillstate-completion-215.glb",
+      "sha256": "1cbd1763c4a569468fcebcb9a13fa9824c99db016674f0b66cde820d830def05",
+      "bytes": 24208,
+      "triangles": 340,
+      "bounds": {
+        "min": [
+          57.029701232910156,
+          0.0,
+          -7.658221244812012
+        ],
+        "max": [
+          92.58446502685547,
+          53.0,
+          30.93633460998535
+        ]
+      },
+      "footprintIds": [
+        "1eccac8b-a0e9-4a7f-bd39-1cbd4a9edb30"
+      ]
+    }
+  ],
+  "sourceAuthoringReplay": {
+    "byteExact": true,
+    "sha256": "117d8aa084f6abaeb1994e79d8d1e47536d7f8c3d2993d3da1efc445c65f05d4",
+    "provenancePath": "docs/APARTMENT_400_PROVENANCE.json",
+    "frozenAssetProvenanceSha256": "734859854bdead923308f0adf46b9db2102edd9a0b6fda122546da219e197fad",
+    "authoringAnchor": [
+      127.1467882,
+      37.5579377
+    ],
+    "generator": "scripts/build_district_landmarks.py",
+    "generatorSha256": "35dce09a4a4c71a871d4d2e03a8d2ae32e68a5fd0701ce1a0be643ef7d0e4712",
+    "triangleRangesBySource": [
+      {
+        "sourceId": "05fec66f-fc8b-4bf3-a2ae-94995d43bda1",
+        "triangleRangesByMaterial": [
+          [
+            0,
+            16
+          ],
+          [
+            0,
+            480
+          ],
+          [
+            0,
+            4
+          ]
+        ]
+      },
+      {
+        "sourceId": "09ae301f-4584-4add-8200-68850f5b5fe6",
+        "triangleRangesByMaterial": [
+          [
+            16,
+            32
+          ],
+          [
+            480,
+            752
+          ],
+          [
+            4,
+            8
+          ]
+        ]
+      },
+      {
+        "sourceId": "1eccac8b-a0e9-4a7f-bd39-1cbd4a9edb30",
+        "triangleRangesByMaterial": [
+          [
+            32,
+            48
+          ],
+          [
+            752,
+            1072
+          ],
+          [
+            8,
+            12
+          ]
+        ]
+      },
+      {
+        "sourceId": "3a5772c0-eab2-4ff2-8a0b-35dc81168f10",
+        "triangleRangesByMaterial": [
+          [
+            48,
+            64
+          ],
+          [
+            1072,
+            1616
+          ],
+          [
+            12,
+            16
+          ]
+        ]
+      },
+      {
+        "sourceId": "3b9ca8a4-bba4-4e2f-a240-7b14199c4bb8",
+        "triangleRangesByMaterial": [
+          [
+            64,
+            80
+          ],
+          [
+            1616,
+            1936
+          ],
+          [
+            16,
+            20
+          ]
+        ]
+      },
+      {
+        "sourceId": "3f02a046-763f-4d1f-8a1c-299c631ee5e0",
+        "triangleRangesByMaterial": [
+          [
+            80,
+            176
+          ],
+          [
+            1936,
+            2514
+          ],
+          [
+            20,
+            64
+          ]
+        ]
+      },
+      {
+        "sourceId": "3ffe40f2-09c0-496d-b669-1c588be9484d",
+        "triangleRangesByMaterial": [
+          [
+            176,
+            278
+          ],
+          [
+            2514,
+            2930
+          ],
+          [
+            64,
+            111
+          ]
+        ]
+      },
+      {
+        "sourceId": "40688795-6d24-48a2-9640-9212daecda3b",
+        "triangleRangesByMaterial": [
+          [
+            278,
+            398
+          ],
+          [
+            2930,
+            3538
+          ],
+          [
+            111,
+            166
+          ]
+        ]
+      },
+      {
+        "sourceId": "82503891-8463-42c2-ae15-10231a234a6e",
+        "triangleRangesByMaterial": [
+          [
+            398,
+            414
+          ],
+          [
+            3538,
+            3878
+          ],
+          [
+            166,
+            170
+          ]
+        ]
+      },
+      {
+        "sourceId": "a33f1d99-bf26-4414-a52e-f46ce21efd79",
+        "triangleRangesByMaterial": [
+          [
+            414,
+            430
+          ],
+          [
+            3878,
+            4454
+          ],
+          [
+            170,
+            174
+          ]
+        ]
+      },
+      {
+        "sourceId": "f5e974e8-9370-436a-9e54-b84fd84cd399",
+        "triangleRangesByMaterial": [
+          [
+            430,
+            532
+          ],
+          [
+            4454,
+            4896
+          ],
+          [
+            174,
+            221
+          ]
+        ]
+      }
+    ],
+    "rangeConvention": "Half-open [start,end) original indexed triangle ranges, one range per material; original vertex packing retains emission order."
+  }
+}

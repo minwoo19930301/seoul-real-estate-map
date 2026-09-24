@@ -1,0 +1,186 @@
+{
+  "date": "2026-09-21",
+  "releaseSha": "a89732cf8bf4ac8ec18501917250f162f6ea6cc9",
+  "pullRequest": "https://github.com/minwoo19930301/seoul-real-estate-map/pull/15",
+  "workflowRun": "https://github.com/minwoo19930301/seoul-real-estate-map/actions/runs/35532987648",
+  "workflowConclusion": "success",
+  "url": "https://seoul-elevation.vercel.app",
+  "remoteBespokeAssets": 69,
+  "remoteManifestSha256": "454a3d533c5dd253550c90b2f1309d2e722645080eac3ff615fba6279ce93040",
+  "apiAndAssetChecks": "Independent PR15 snapshot verifier passed release SHA, every reviewed GLB hash, retained references, ownership corrections, terrain, search, GeoJSON layers, gzip and frontend.",
+  "publicBrowserCases": 20,
+  "publicBrowserResult": "passed",
+  "rootOpenedScreenshots": [
+    "mokdong-trapalace-normal",
+    "mokdong-trapalace-fallback",
+    "mokdong-hyperion-2-normal",
+    "mokdong-hyperion-2-fallback",
+    "galleria-palace-normal",
+    "galleria-palace-fallback",
+    "maple-normal",
+    "maple-fallback"
+  ],
+  "observed": "Root opened all eight new-site normal/fallback screenshots. Real UI search reaches each site, and intentional missing-model responses restore previous geometry while surrounding buildings remain. Public screenshots and network responses do not prove per-mesh draw state; separate local development tests cover exact ownership and individual fallback behavior.",
+  "evidence": [
+    {
+      "path": "docs/model-audit/renders/trapalace-hyperion-galleria-maple-public/galleria-palace-fallback.json",
+      "sha256": "c54fb94dd556e20cf0320bd9a970fc0a94f07311b4affca1fe8de9f8f1e420a2"
+    },
+    {
+      "path": "docs/model-audit/renders/trapalace-hyperion-galleria-maple-public/galleria-palace-fallback.png",
+      "sha256": "cd257fb7c10c856418cc25fc9c2577fe546b16c98f210014ce3e920f1016345d"
+    },
+    {
+      "path": "docs/model-audit/renders/trapalace-hyperion-galleria-maple-public/galleria-palace-normal.json",
+      "sha256": "414b39452d51c4d72c26b9314f5daa66aa64730d29fb47c3237c6a85dd31b428"
+    },
+    {
+      "path": "docs/model-audit/renders/trapalace-hyperion-galleria-maple-public/galleria-palace-normal.png",
+      "sha256": "23cf9573aa55b0a6987783309dc1d567f9bc151b43f6b43fc0ec7a5dabaf01c0"
+    },
+    {
+      "path": "docs/model-audit/renders/trapalace-hyperion-galleria-maple-public/gratte-ciel-fallback.json",
+      "sha256": "5487518507c2e518b9c87e63a9d834e349e9250b72b09468f360671a58e163c6"
+    },
+    {
+      "path": "docs/model-audit/renders/trapalace-hyperion-galleria-maple-public/gratte-ciel-fallback.png",
+      "sha256": "22cb6adb7bf1095711e031a72a8db83b24dc5a830c3d11309b8144ce0cfe5e4c"
+    },
+    {
+      "path": "docs/model-audit/renders/trapalace-hyperion-galleria-maple-public/gratte-ciel-normal.json",
+      "sha256": "de8c3f3ad8377307cb787afb90b605bcf546791a78230d1938c3f3e9d773415f"
+    },
+    {
+      "path": "docs/model-audit/renders/trapalace-hyperion-galleria-maple-public/gratte-ciel-normal.png",
+      "sha256": "f5305b6b34e6e624772add4395afc99289b364a7069d4a4675227ea7372845b3"
+    },
+    {
+      "path": "docs/model-audit/renders/trapalace-hyperion-galleria-maple-public/lotte-castle-empire-fallback.json",
+      "sha256": "d2b7e7a4f2eda41d9370ad2e7e2497ac4f3abeed0f80cd1c567c4ff5afe0f6c1"
+    },
+    {
+      "path": "docs/model-audit/renders/trapalace-hyperion-galleria-maple-public/lotte-castle-empire-fallback.png",
+      "sha256": "7135ea46f08dd11e5b39e6e36f3ae08f1b5a72edfee3d06e0fbd4b6f8832810e"
+    },
+    {
+      "path": "docs/model-audit/renders/trapalace-hyperion-galleria-maple-public/lotte-castle-empire-normal.json",
+      "sha256": "59e34711787052874d73e4f9be50c02259ffa6a79f74517fc08587919d41eb76"
+    },
+    {
+      "path": "docs/model-audit/renders/trapalace-hyperion-galleria-maple-public/lotte-castle-empire-normal.png",
+      "sha256": "38eb2ba610c69e3f645686d9bd14c487fc47a1843747383b28896dc9c9858c80"
+    },
+    {
+      "path": "docs/model-audit/renders/trapalace-hyperion-galleria-maple-public/lotte-castle-ivy-fallback.json",
+      "sha256": "0d0dab7f8554a4fe3b0bdda6c91d3881bf024213afd25c214ff6740575c24ae1"
+    },
+    {
+      "path": "docs/model-audit/renders/trapalace-hyperion-galleria-maple-public/lotte-castle-ivy-fallback.png",
+      "sha256": "db8417418369dae5970398ce7c8ab604f32fc33dc13ca64e7d8da6daf8c16c31"
+    },
+    {
+      "path": "docs/model-audit/renders/trapalace-hyperion-galleria-maple-public/lotte-castle-ivy-normal.json",
+      "sha256": "4c8274535d04cadc3d4e21145c55729342fdcb94d120b303e8185e3c1a38f73f"
+    },
+    {
+      "path": "docs/model-audit/renders/trapalace-hyperion-galleria-maple-public/lotte-castle-ivy-normal.png",
+      "sha256": "d2e7fbff60203d1e075e41220847c8d6374738cf16ec6a56d0bc0c3b8d479ede"
+    },
+    {
+      "path": "docs/model-audit/renders/trapalace-hyperion-galleria-maple-public/maple-fallback.json",
+      "sha256": "abe8b4b9ee611241db5a11efe4c02f327d685150867cf066efa2a706662457c7"
+    },
+    {
+      "path": "docs/model-audit/renders/trapalace-hyperion-galleria-maple-public/maple-fallback.png",
+      "sha256": "e42c9d4876414f7395150c57fdbcb88c56902975e4a771ac90744f6b4be718d7"
+    },
+    {
+      "path": "docs/model-audit/renders/trapalace-hyperion-galleria-maple-public/maple-normal.json",
+      "sha256": "f13dfdf884d509689b2971640e5495c857f1c05c775ae2bb58ff8980adf85f78"
+    },
+    {
+      "path": "docs/model-audit/renders/trapalace-hyperion-galleria-maple-public/maple-normal.png",
+      "sha256": "45b82cd1eb3a6f6551d8fa38eaa74817622481d5b84b005ccb413bfaa008e1d4"
+    },
+    {
+      "path": "docs/model-audit/renders/trapalace-hyperion-galleria-maple-public/mecenatpolis-fallback.json",
+      "sha256": "04c2c51e0237dcd423eb247e299b2f53015861aee06789c1110c1f76b59fdf4d"
+    },
+    {
+      "path": "docs/model-audit/renders/trapalace-hyperion-galleria-maple-public/mecenatpolis-fallback.png",
+      "sha256": "18b71022256db67767aa657a1671f758e836b9dded5cccf3a840ad0bb578f39c"
+    },
+    {
+      "path": "docs/model-audit/renders/trapalace-hyperion-galleria-maple-public/mecenatpolis-normal.json",
+      "sha256": "d02e030df19b6d76361981d78b3d6d3a829d702bb7bee2b037fa21becc5730a5"
+    },
+    {
+      "path": "docs/model-audit/renders/trapalace-hyperion-galleria-maple-public/mecenatpolis-normal.png",
+      "sha256": "4cc17583867d040b157ab24a73b32997ab1478a82ff43e4cfead05eeace9cc2f"
+    },
+    {
+      "path": "docs/model-audit/renders/trapalace-hyperion-galleria-maple-public/mokdong-hyperion-2-fallback.json",
+      "sha256": "40475c15b928acb38c29bbfab8096c993d9b32941707de5448b148d4cbe33445"
+    },
+    {
+      "path": "docs/model-audit/renders/trapalace-hyperion-galleria-maple-public/mokdong-hyperion-2-fallback.png",
+      "sha256": "156bcdb4055bc5abf9579adc1fa08642afaf393e3cb4779aee968c8015e780f2"
+    },
+    {
+      "path": "docs/model-audit/renders/trapalace-hyperion-galleria-maple-public/mokdong-hyperion-2-normal.json",
+      "sha256": "9f61685e8e033445e3e03ae3cb8e0520e565b5ebea480d96fbf4abc7122e087d"
+    },
+    {
+      "path": "docs/model-audit/renders/trapalace-hyperion-galleria-maple-public/mokdong-hyperion-2-normal.png",
+      "sha256": "4ee0d396758db61923515ad41db9321a420cf158a0802f97610ae696a36efc6d"
+    },
+    {
+      "path": "docs/model-audit/renders/trapalace-hyperion-galleria-maple-public/mokdong-trapalace-fallback.json",
+      "sha256": "8d7b3f9052addbf0fb05412158bff1b48a0e5be4f8dd04bd3d9f0a6513a482e5"
+    },
+    {
+      "path": "docs/model-audit/renders/trapalace-hyperion-galleria-maple-public/mokdong-trapalace-fallback.png",
+      "sha256": "3702a0b927234b7876a17e4c5cabd17abfe0d693c899a6773492daa949d90104"
+    },
+    {
+      "path": "docs/model-audit/renders/trapalace-hyperion-galleria-maple-public/mokdong-trapalace-normal.json",
+      "sha256": "071f214b165fd371df85d387726b7f9c4f8f6ba257abe5adc5286e80a12abe63"
+    },
+    {
+      "path": "docs/model-audit/renders/trapalace-hyperion-galleria-maple-public/mokdong-trapalace-normal.png",
+      "sha256": "ca57999030b78c77c8af720074be9da7fdeb7af4aad378f4be093de05889458b"
+    },
+    {
+      "path": "docs/model-audit/renders/trapalace-hyperion-galleria-maple-public/raemian-caelitus-fallback.json",
+      "sha256": "30b99af4b98307afe28aa2ed21a740e2350f41b02b4b88f6477b0af32becc41e"
+    },
+    {
+      "path": "docs/model-audit/renders/trapalace-hyperion-galleria-maple-public/raemian-caelitus-fallback.png",
+      "sha256": "b9149a8c7c93ff541f94b8cf5fdda914b11f3557977238dcd03984678a9e1b16"
+    },
+    {
+      "path": "docs/model-audit/renders/trapalace-hyperion-galleria-maple-public/raemian-caelitus-normal.json",
+      "sha256": "b9ef0bd626e80f8ae64401e3896811786b1f950e0388526c8e82190b489e008a"
+    },
+    {
+      "path": "docs/model-audit/renders/trapalace-hyperion-galleria-maple-public/raemian-caelitus-normal.png",
+      "sha256": "ec45793dcbb49a6e27c801445e49399a42b5e250255391fc3d5049f56b4292af"
+    },
+    {
+      "path": "docs/model-audit/renders/trapalace-hyperion-galleria-maple-public/trimage-fallback.json",
+      "sha256": "069ae0db5acd1897c0dfc364652dea061d88ec06b7584a8ae6149fd9518e46a0"
+    },
+    {
+      "path": "docs/model-audit/renders/trapalace-hyperion-galleria-maple-public/trimage-fallback.png",
+      "sha256": "4bac0d81941989b6373586be06506db8f66cce5e3597c7452d485d7a9727dd4c"
+    },
+    {
+      "path": "docs/model-audit/renders/trapalace-hyperion-galleria-maple-public/trimage-normal.json",
+      "sha256": "d8570f22d56426d32e6fa7a32f7c7cc80a74390383a6a8c32a2d61e2acf79c2e"
+    },
+    {
+      "path": "docs/model-audit/renders/trapalace-hyperion-galleria-maple-public/trimage-normal.png",
+      "sha256": "d83063404ce3cdd35fe0b4c663e93affae2209131323e10e4d659ce108bd0c0f"
+    }
+  ]
+}

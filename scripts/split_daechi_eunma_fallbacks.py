@@ -1,0 +1,115 @@
+#!/usr/bin/env python3
+"""Partition archived 대치은마 compounds while retaining unrelated and standalone buildings."""
+import argparse
+import json
+from collections import Counter
+
+from split_caelitus_fallback import ROOT, decode, sha
+from split_banpo_fallbacks import partition
+from split_prestige_fallbacks import canonical_sha, replay, triangle_signatures
+from publish_bespoke_models import replace_batch
+
+STAGE = ROOT / 'data/model-source/bespoke/daechi-eunma-fallback-review'
+CONFIGS = [('apt-a13583507', 'cd0f4f2ef578a162e97f14f40e56442857a54501af3761ed5006c5fce5520893', [2, 3, 5, 6, 7, 8, 9, 10, 15, 17, 18, 19, 20, 21, 22, 23, 25, 26, 27, 28, 29, 30, 31], ['203dd03b-003b-422b-bafa-9a6089748051', 'b458b1f3-8973-462a-8d5c-b1cde5997bb8', '4c81e608-49d9-483c-8f44-76a421905c62'], 'docs/LANDMARK_EXPANSION_PROVENANCE.json'), ('apt-a10024799', 'd49b1045597681fd0827f148fa3a768966eafbe7fe3dde1d9e15af76dc37aeff', [12, 13], ['9a8c711f-d5ea-4a45-98dc-69a7604196e2', 'bd79bebf-2771-46d5-b596-8c620a886304'], 'docs/APARTMENT_100_PROVENANCE.json')]
+SINGLETONS = [(1, 'residential-aa0f77a4-0953-4c98-a47c-e527a315ea2f', '93db840122c1ae3bc63a5c2620dc433a1b7f6057dad9f19e521d57ee1b510d40'), (11, 'residential-db74931d-ed56-4c67-bb20-c54f42f5a204', '918768b02df1249e3d0fde7f8f9a5d802b41757dadf5c624ad02bf61b4aaf2dd'), (16, 'residential-e4cb8934-7024-4bfe-8424-c99d03cb3e56', '94d60f9e672df6c1e11dbe652b97d06157a81187007772847f7b69fef75756be')]
+
+
+def encoded(value):
+    return (json.dumps(value, ensure_ascii=False, indent=2) + '\n').encode()
+
+
+def prepare():
+    folder = ROOT / 'public/models'
+    base = json.loads((folder / 'manifest.json').read_text())
+    matches = json.loads((folder / 'footprint-matches.json').read_text())
+    current = json.loads((folder / 'generic-corrections.json').read_text())
+    identity = json.loads((ROOT / 'docs/model-audit/daechi-eunma-source-identity.json').read_text())
+    assert identity['sourceSha256'] == 'adb91ac09077b60f67cb2dca2188edda64ea8e4cc6296f231dc13938dc972a37'
+    towers = {row['number']: row['sourceId'] for row in identity['towers']}
+    assert sorted(towers) == [1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 21, 22, 23, 25, 26, 27, 28, 29, 30, 31] and len(set(towers.values())) == 28
+    added, documents, proofs, bindings = [], {}, [], []
+    for source_id, source_sha, numbers, neighbors, provenance in CONFIGS:
+        source = next(a for a in base['assets'] if a['id'] == source_id)
+        original = (folder / source['model']).read_bytes()
+        assert sha(original) == source['sha256'] == source_sha
+        assert set(matches[source_id]) == {towers[n] for n in numbers} | set(neighbors)
+        owners, authoring = replay(source, original, matches[source_id], provenance)
+        cfg = {'site': 'daechi-eunma-' + str(numbers[0]), 'source': source_id, 'sha': source_sha,
+            'count': len(matches[source_id]), 'removeApartmentCode': True,
+            'remainingName': '대치은마 주변 및 미확정 건물 (기존 추정 모형)',
+            'parts': [(f'fallback-daechi-eunma-{n}', f'대치은마 {n}동', towers[n]) for n in numbers],
+            'limits': ['Only original indexed triangles, attributes, materials and shared terrain anchor are partitioned; no photo-completion credit.',
+                'All unrelated and withheld source buildings remain in original compound residuals. Registeredheight0/sourceheightnull remain missing; no measuredheight claim. Standalone residential assets remain byte-for-byte unchanged.',
+                'Only independently verified source identities receive numbered fallback labels; every archived GLB remains unchanged.',
+                'Original concave-footprint convex-hull approximations are retained and explicitly counted.']}
+        correction, files, proof = partition(cfg, folder, base, matches)
+        gltf, primitives = decode(original)
+        signatures = {fid: Counter() for fid in matches[source_id]}
+        for primitive, attributes, indices in primitives:
+            tagged = owners[primitive['material']]
+            assert len(tagged) == len(indices)
+            material = json.dumps(gltf['materials'][primitive['material']], sort_keys=True, separators=(',', ':')).encode()
+            for fid, index in zip(tagged, indices):
+                signatures[fid][sha(material + b''.join(k.encode() + attributes[k][index].tobytes() for k in sorted(attributes)))] += 1
+        for asset in correction['assets']:
+            expected = sum((signatures[fid] for fid in asset['footprintIds']), Counter())
+            assert triangle_signatures(files[folder / asset['model']]) == expected, 'Per-source triangle emission ownership differs'
+            assert asset['coordinate'] == source['coordinate'] and 'apartmentCode' not in asset and 'householdCount' not in asset
+        assert sum(a['triangles'] for a in correction['assets']) == source['triangles']
+        proof['sourceAuthoringReplay'] = authoring
+        proof['ownershipMethod'] += ' Independently regenerated byte-exact archived GLB and checked per-source triangle-signature multiplicity against every output.'
+        files[ROOT / f"docs/model-audit/{cfg['site']}-generic-split.json"] = encoded(proof)
+        documents.update(files)
+        for n in numbers:
+            asset = next(a for a in correction['assets'] if a['id'] == f'fallback-daechi-eunma-{n}')
+            assert asset['footprintIds'] == [towers[n]]
+            bindings.append({'number': n, 'sourceFootprintId': towers[n], 'fallbackAssetId': asset['id'],
+                'supersedes': [asset['id']], 'fallbackModel': asset['model'], 'fallbackSha256': asset['sha256']})
+        added.append(correction)
+        proofs.append(proof)
+    singleton_records = []
+    for number, asset_id, asset_sha in SINGLETONS:
+        asset = next(a for a in base['assets'] if a['id'] == asset_id)
+        assert matches[asset_id] == [towers[number]]
+        assert sha((folder / asset['model']).read_bytes()) == asset['sha256'] == asset_sha
+        singleton_records.append({'number': number, 'assetId': asset_id, 'sha256': asset_sha, 'sourceFootprintId': towers[number]})
+        bindings.append({'number': number, 'sourceFootprintId': towers[number], 'fallbackAssetId': asset_id, 'supersedes': [asset_id], 'fallbackModel': asset['model'], 'fallbackSha256': asset_sha})
+    assert sorted(b['number'] for b in bindings) == sorted(towers)
+    source_ids = {c['sourceId'] for c in added}
+    prior = [c for c in current['corrections'] if c['sourceId'] not in source_ids]
+    binding = {'version': 1, 'complex': '대치은마', 'sourceIdentity': 'docs/model-audit/daechi-eunma-source-identity.json',
+        'bindings': sorted(bindings,key=lambda b:b['number']), 'preservedResidualSourceIds': sorted(fid for cfg in CONFIGS for fid in cfg[3]), 'unchangedSingletons':singleton_records}
+    audit = {'version': 1, 'sources': proofs, 'preservedPriorCorrectionIds': [c['sourceId'] for c in prior],
+        'preservedPriorCorrectionsCanonicalSha256': canonical_sha(prior), 'sourceTriangles': sum(p['sourceTriangles'] for p in proofs),
+        'hullApproximationTriangles': sum(p['trianglesAssignedWithinUniqueSourceConvexHull'] for p in proofs)}
+    documents[ROOT / 'docs/model-audit/daechi-eunma-generic-split.json'] = encoded(audit)
+    documents[ROOT / 'docs/model-audit/daechi-eunma-fallback-bindings.json'] = encoded(binding)
+    current['corrections'] = [*prior, *added]
+    documents[folder / 'generic-corrections.json'] = encoded(current)
+    return documents, audit, binding
+
+
+def main(stage_only):
+    documents, audit, binding = prepare()
+    STAGE.mkdir(parents=True, exist_ok=True)
+    for path, data in documents.items():
+        dest = STAGE / path.relative_to(ROOT)
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        dest.write_bytes(data)
+    (STAGE / 'published-model-binding-map.json').write_bytes(encoded(binding))
+    if not stage_only:
+        path = ROOT / 'public/data/deployment-assets.json'
+        deployment = json.loads(path.read_text())
+        for file, data in documents.items():
+            if file.is_relative_to(ROOT / 'public/models'):
+                deployment['files'][str(file.relative_to(ROOT))] = sha(data)
+        documents[path] = encoded(deployment)
+        replace_batch([], documents)
+    print(json.dumps({'stageOnly': stage_only, 'sourceTriangles': audit['sourceTriangles'], 'outputs': len(binding['bindings']),
+        'hullApproximationTriangles': audit['hullApproximationTriangles'], 'priorCorrections': len(audit['preservedPriorCorrectionIds'])}))
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--stage-only', action='store_true')
+    main(parser.parse_args().stage_only)

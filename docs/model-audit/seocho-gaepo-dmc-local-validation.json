@@ -1,0 +1,46 @@
+{
+  "checkedOn": "2026-09-22",
+  "baselineCommit": "ab4d1ddaea4a7874f483f130f80a520c66ba23e4",
+  "newPhysicalBuildings": 111,
+  "newRepresentatives": 4,
+  "newSharedCopies": 107,
+  "bespokeAssetRecords": 838,
+  "currentSharedCopies": 397,
+  "node": {
+    "passed": 13869,
+    "failed": 0
+  },
+  "python": {
+    "passed": 57,
+    "failed": 0
+  },
+  "browser": {
+    "passed": 15,
+    "scope": "Five families:normal/shared GLB404/shared and one fallback404; Honor Hills three scenarios repeated after placement adjustment."
+  },
+  "build": "passed",
+  "buildWarning": "generic-corrections chunk2699.75KB uncompressed and204.45KB gzip exceeds1800KB threshold",
+  "preservation": {
+    "baseline": "ab4d1ddaea4a7874f483f130f80a520c66ba23e4",
+    "public/models/manifest.json": 13607,
+    "public/models/reference-manifest.json": 125,
+    "public/models/bespoke-manifest.json": 727,
+    "priorCorrections": 38,
+    "unchangedPriorGLBAndBlendFiles": 114599
+  },
+  "placements": "shared-instance-placement-check.json",
+  "placementAdjustment": "dh-honor-hills-placement-adjustment.json",
+  "sourcePartitions": {
+    "trianglesPreserved": 79487,
+    "residualSourcesPreserved": 42,
+    "bindingSources": 111
+  },
+  "limitations": [
+    "Seocho9/9,Gaepo27/31,Blesstige21/23,Honor21/23,DMC39/61; only identified sources receive models.",
+    "Seocho109is visible in photo; other new representative numbers and compass faces are not established.",
+    "Shared copies repeat representative geometry and facade/floor patterns; target concavity is not reconstructed.",
+    "Body plan overlap checks cover same-complex identified originals and all current copies across identity snapshots, not every neighbor or ornament projection.",
+    "Honor322/323 horizontal dimensions reduced8percent before first publication; coordinates and height preserved."
+  ],
+  "publication": "Local report before PR upload; no merge or deployment"
+}

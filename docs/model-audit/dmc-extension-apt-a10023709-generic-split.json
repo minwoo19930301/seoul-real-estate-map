@@ -1,0 +1,283 @@
+{
+  "version": 1,
+  "sourceId": "apt-a10023709",
+  "sourceSha256": "af320030f3018cabd22901cc045c2ce600309b1a07c8d8e12de389b69c8b23bd",
+  "sourceTriangles": 3443,
+  "sourceCoordinate": {
+    "lon": 126.91633905,
+    "lat": 37.570824307234666,
+    "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+    "confidence": "source_footprint_unsurveyed"
+  },
+  "groupFootprints": {
+    "apt-a10023709": [
+      "56932faf-aab5-4111-b52b-29d5c29d05d6",
+      "ffd7259b-4a96-4ac0-a8b9-486e20a57dd9",
+      "310be332-5f86-4d76-aa19-92415151cc90",
+      "4804c0eb-713d-43d9-bd34-0fcbbab5d54c",
+      "46444ab5-55e4-4ea7-a390-6f32931d51e1"
+    ],
+    "fallback-dmc-parkview-xi-extension-116": [
+      "202bac90-00dc-4998-891e-b7f2b0bbb046"
+    ],
+    "fallback-dmc-parkview-xi-extension-117": [
+      "5c0985c3-a274-4cb0-a223-3871baab2d7b"
+    ],
+    "fallback-dmc-parkview-xi-extension-122": [
+      "86262ec0-a046-4ac5-ac33-45b170e82f53"
+    ]
+  },
+  "ownershipMethod": "Original source-emission indices from byte-exact authoring replay; overlapping historical plans cannot change ownership. Byte-exact archived authoring replay and per-source triangle-signature multiplicity independently checked.",
+  "legacyTrianglesOutsideSourcePolygonInsideItsHull": 0,
+  "legacyTrianglesOutsideSourceConvexHull": 0,
+  "limits": [
+    "Only archived indexed triangles, material attributes and terrain anchors are partitioned; no photo-modeling credit.",
+    "One joint partition for shared historical compounds spanning 33additional DMC Parkview Xi targets; six published DMC buildings remain unchanged; unmatched and unrelated sources remain unchanged.",
+    "All unnamed, unmatched and unrelated source buildings remain in unchanged-shape residuals. Original convex-hull approximations remain archived."
+  ],
+  "outputs": [
+    {
+      "id": "apt-a10023709",
+      "model": "generic-corrections/apt-a10023709.glb",
+      "sha256": "bf016da8ed054d85ca87d49596b3ae0843a5422cd1e067fbd94f751f563faaeb",
+      "bytes": 159284,
+      "triangles": 2525,
+      "bounds": {
+        "min": [
+          -107.5943832397461,
+          0.0,
+          -99.95361328125
+        ],
+        "max": [
+          14.553851127624512,
+          90.8499984741211,
+          115.56082153320312
+        ]
+      },
+      "footprintIds": [
+        "56932faf-aab5-4111-b52b-29d5c29d05d6",
+        "ffd7259b-4a96-4ac0-a8b9-486e20a57dd9",
+        "310be332-5f86-4d76-aa19-92415151cc90",
+        "4804c0eb-713d-43d9-bd34-0fcbbab5d54c",
+        "46444ab5-55e4-4ea7-a390-6f32931d51e1"
+      ]
+    },
+    {
+      "id": "fallback-dmc-parkview-xi-extension-116",
+      "model": "generic-corrections/fallback-dmc-parkview-xi-extension-116.glb",
+      "sha256": "4ffc9e9e232d7b74ad6e7683186d5507a3e2a85be430228d11df08b37f80adcc",
+      "bytes": 21476,
+      "triangles": 296,
+      "bounds": {
+        "min": [
+          -0.6926203966140747,
+          0.0,
+          -115.56082153320312
+        ],
+        "max": [
+          24.97403907775879,
+          69.0,
+          -90.61380004882812
+        ]
+      },
+      "footprintIds": [
+        "202bac90-00dc-4998-891e-b7f2b0bbb046"
+      ]
+    },
+    {
+      "id": "fallback-dmc-parkview-xi-extension-117",
+      "model": "generic-corrections/fallback-dmc-parkview-xi-extension-117.glb",
+      "sha256": "e520d8740675aab572f8f51470af446b0957d491542fcecad225fdc9c6b02824",
+      "bytes": 30360,
+      "triangles": 458,
+      "bounds": {
+        "min": [
+          45.990875244140625,
+          0.0,
+          -100.45455932617188
+        ],
+        "max": [
+          91.96851348876953,
+          74.0,
+          -58.95938491821289
+        ]
+      },
+      "footprintIds": [
+        "5c0985c3-a274-4cb0-a223-3871baab2d7b"
+      ]
+    },
+    {
+      "id": "fallback-dmc-parkview-xi-extension-122",
+      "model": "generic-corrections/fallback-dmc-parkview-xi-extension-122.glb",
+      "sha256": "7f721c1a8568cccfe2fceed1201ebb4376a2963cb74163dc3f9a6faeac862347",
+      "bytes": 13280,
+      "triangles": 164,
+      "bounds": {
+        "min": [
+          81.92772674560547,
+          0.0,
+          -52.63124084472656
+        ],
+        "max": [
+          107.5943832397461,
+          74.0,
+          -27.69554328918457
+        ]
+      },
+      "footprintIds": [
+        "86262ec0-a046-4ac5-ac33-45b170e82f53"
+      ]
+    }
+  ],
+  "sourceAuthoringReplay": {
+    "byteExact": true,
+    "sha256": "af320030f3018cabd22901cc045c2ce600309b1a07c8d8e12de389b69c8b23bd",
+    "provenancePath": "docs/APARTMENT_400_PROVENANCE.json",
+    "frozenAssetProvenanceSha256": "95599401fda3843f5ee71f7eb85803a536d575be028ab0aa1ca172374e513abc",
+    "authoringAnchor": [
+      126.916165,
+      37.570789
+    ],
+    "generator": "scripts/build_district_landmarks.py",
+    "generatorSha256": "35dce09a4a4c71a871d4d2e03a8d2ae32e68a5fd0701ce1a0be643ef7d0e4712",
+    "triangleRangesBySource": [
+      {
+        "sourceId": "202bac90-00dc-4998-891e-b7f2b0bbb046",
+        "triangleRangesByMaterial": [
+          [
+            0,
+            16
+          ],
+          [
+            0,
+            276
+          ],
+          [
+            0,
+            4
+          ]
+        ]
+      },
+      {
+        "sourceId": "310be332-5f86-4d76-aa19-92415151cc90",
+        "triangleRangesByMaterial": [
+          [
+            16,
+            32
+          ],
+          [
+            276,
+            500
+          ],
+          [
+            4,
+            8
+          ]
+        ]
+      },
+      {
+        "sourceId": "46444ab5-55e4-4ea7-a390-6f32931d51e1",
+        "triangleRangesByMaterial": [
+          [
+            32,
+            48
+          ],
+          [
+            500,
+            724
+          ],
+          [
+            8,
+            12
+          ]
+        ]
+      },
+      {
+        "sourceId": "4804c0eb-713d-43d9-bd34-0fcbbab5d54c",
+        "triangleRangesByMaterial": [
+          [
+            48,
+            64
+          ],
+          [
+            724,
+            1116
+          ],
+          [
+            12,
+            16
+          ]
+        ]
+      },
+      {
+        "sourceId": "56932faf-aab5-4111-b52b-29d5c29d05d6",
+        "triangleRangesByMaterial": [
+          [
+            64,
+            80
+          ],
+          [
+            1116,
+            1452
+          ],
+          [
+            16,
+            20
+          ]
+        ]
+      },
+      {
+        "sourceId": "5c0985c3-a274-4cb0-a223-3871baab2d7b",
+        "triangleRangesByMaterial": [
+          [
+            80,
+            180
+          ],
+          [
+            1452,
+            1764
+          ],
+          [
+            20,
+            66
+          ]
+        ]
+      },
+      {
+        "sourceId": "86262ec0-a046-4ac5-ac33-45b170e82f53",
+        "triangleRangesByMaterial": [
+          [
+            180,
+            196
+          ],
+          [
+            1764,
+            1908
+          ],
+          [
+            66,
+            70
+          ]
+        ]
+      },
+      {
+        "sourceId": "ffd7259b-4a96-4ac0-a8b9-486e20a57dd9",
+        "triangleRangesByMaterial": [
+          [
+            196,
+            242
+          ],
+          [
+            1908,
+            3112
+          ],
+          [
+            70,
+            89
+          ]
+        ]
+      }
+    ],
+    "rangeConvention": "Half-open [start,end) original indexed triangle ranges, one range per material; original vertex packing retains emission order."
+  }
+}

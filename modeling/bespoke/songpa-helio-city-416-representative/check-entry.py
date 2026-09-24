@@ -1,0 +1,6 @@
+import pathlib,json,sys,numpy as np
+R=pathlib.Path.cwd();P=pathlib.Path(__file__).parent;sys.path.insert(0,str(R/'scripts/bespoke'));from validate_height_regions import read_triangles
+D=json.loads((P/'source-data.json').read_text());e=D['entry'];tri=read_triangles(P/'songpa-helio-city-416.glb');tri=tri[:,:,[0,2,1]]*np.array([1,-1,1]);cx,cy=e['center_m'];nx,ny=e['outward_normal'];direction=np.array([-nx,-ny,0]);a=tri[:,0];edge1=tri[:,1]-a;edge2=tri[:,2]-a;pvec=np.cross(np.broadcast_to(direction,edge2.shape),edge2);det=np.einsum('ij,ij->i',edge1,pvec);valid=np.abs(det)>1e-10;inv=np.zeros_like(det);inv[valid]=1/det[valid]
+def ray(z):
+ origin=np.array([cx+nx,cy+ny,z]);tv=origin-a;u=np.einsum('ij,ij->i',tv,pvec)*inv;q=np.cross(tv,edge1);v=np.einsum('j,ij->i',direction,q)*inv;t=np.einsum('ij,ij->i',edge2,q)*inv;ok=valid&(u>=-1e-7)&(v>=-1e-7)&(u+v<=1+1e-7)&(t>0);return float(t[ok].min())
+mid=ray((e['bottom_m']+e['top_m'])/2);low=ray(.05);high=ray(e['top_m']+.1);assert 1.65<mid<1.9 and abs(low-1)<1e-4 and abs(high-1)<1e-4;out={'actual_glb_ray_entry_mid_first_hit_m_from1m_outside':mid,'entry_inward_clear_depth_m':mid-1,'full_grade_slab_ray_m':low,'full_upper_mass_ray_m':high,'entry_not_decal':True,'source_grade_and_upper_mass_preserved':True};(P/'entry-recess-proof.json').write_text(json.dumps(out,indent=2));print(json.dumps(out))

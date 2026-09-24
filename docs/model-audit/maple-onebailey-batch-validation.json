@@ -1,0 +1,141 @@
+{
+  "date": "2026-09-22",
+  "scope": "Maple16additionalfamilymodels, threefloor/heightcorrections, OneBaileyfirst5",
+  "baseCommit": "f38c2c5ad9975e4be0f03181be2bb47781488470",
+  "newBespokeAssets": 24,
+  "totalBespokeRecordsIncludingHistorical": 102,
+  "preservedRecords": {
+    "bespoke": 78,
+    "reference": 125,
+    "generic": 13607
+  },
+  "checks": {
+    "node": 13751,
+    "python": 24,
+    "mapleAll29NormalAnd16Failures": 2,
+    "mapleCorrectionFallbackGenerations": 6,
+    "onebaileyNormalAndIndependentBridgeOwnerFailures": 3,
+    "build": "passed"
+  },
+  "browserSynchronization": "Wait for model draws and asynchronous MapLibre solid-filter update before checking overlap; both normal/fallback first5 cases pass. No runtime change required.",
+  "browserRecords": {
+    "docs/model-audit/renders/maple-family-batch/map/all-29-normal.json": "96091c73afb379797168ea2756a8c66c8364d49fed7d8c755f62e63dcb7dd026",
+    "docs/model-audit/renders/maple-family-batch/map/sixteen-failures.png": "665d664d341d53d69a1c3235aa81c6a67f15742e01bc6fb7d4b4dbd6f1063a82",
+    "docs/model-audit/renders/maple-family-batch/map/sixteen-failures.json": "107a2041477c018f6506199f42c600969212e65c077de89959da52a9d1225e4e",
+    "docs/model-audit/renders/maple-family-batch/map/all-29-normal.png": "3a43640639c32a86b528f4c0ff3b25b178a2e5223737315c7b178f5ea728361c",
+    "docs/model-audit/renders/maple-height-corrected/map/212-2-failures.png": "a2b00692ee81d2dbbe5a59caa3744944544699a0faa85449dbdefc51923e9d28",
+    "docs/model-audit/renders/maple-height-corrected/map/208-2-failures.json": "14874f38874154bca1d9eaf3b255363c172d8eb89d584bb0f32788a56405d859",
+    "docs/model-audit/renders/maple-height-corrected/map/208-2-failures.png": "13f83f426f8ef38507cfb2217dda2120338d435f006f76b1be9900eb4cb5fbe1",
+    "docs/model-audit/renders/maple-height-corrected/map/209-2-failures.png": "8ca747e7b7052e729dd271188c3ccb86816b6f342bd81af13cab85154d57a7c6",
+    "docs/model-audit/renders/maple-height-corrected/map/208-1-failures.json": "9563df6a5bd53acb4be0a00c39e35726e84917f859763636d72c387ef7e98131",
+    "docs/model-audit/renders/maple-height-corrected/map/209-1-failures.json": "051ca77b7385a5da68917da45ce5cf528bc3e87b57a1223101cda89d9ff18184",
+    "docs/model-audit/renders/maple-height-corrected/map/209-2-failures.json": "c821764407164ebb8de35997941d907fe7a8578773564155cfe00b5d5a8563a3",
+    "docs/model-audit/renders/maple-height-corrected/map/212-1-failures.json": "ec4ce24bab916740ce3a5528bc54487c155fd92ad3515808340208e6193e34a9",
+    "docs/model-audit/renders/maple-height-corrected/map/212-2-failures.json": "03ad510803063e6013e876f63c12428b5ec3311aff805b124d70d9b2cbad1c64",
+    "docs/model-audit/renders/maple-height-corrected/map/212-1-failures.png": "f4597e1e14fa757b40e1422740791115d58d841116444a66edb99c577bb3b4bc",
+    "docs/model-audit/renders/maple-height-corrected/map/208-1-failures.png": "b3bb1026d081b6992aff00e8fcbcf41403003122bb5618e45c410a5b0aa6e527",
+    "docs/model-audit/renders/maple-height-corrected/map/209-1-failures.png": "27521212a18d4a5da18e43d60ee87dc2d0141a1bc31bd06649b531ebc2c4bf84",
+    "docs/model-audit/renders/raemian-onebailey-family/map/normal.json": "cbf5a3eea7580bd99c967321afcc39bed669a30198c2fd3756299c1e7d86cfb0",
+    "docs/model-audit/renders/raemian-onebailey-family/map/missing-101.json": "5c50e56176689e078d67431d71302ae8f6a39414266fe89b130972444787c6d7",
+    "docs/model-audit/renders/raemian-onebailey-family/map/missing-101.png": "80e3414be01e8e00c1ce377709f02b8dc0c02ce16a301a6f2f25e68ec6d8e048",
+    "docs/model-audit/renders/raemian-onebailey-family/map/missing-123.json": "5c652f3f792a367521efbfc21b81b2e3f39dcf88463541b2ffb3d270ea8b0b11",
+    "docs/model-audit/renders/raemian-onebailey-family/map/missing-123.png": "4080f355c331cd98185ff09daf942a29b5054f85a27aa7ec8649c95e630592c9",
+    "docs/model-audit/renders/raemian-onebailey-family/map/normal.png": "0bf181a27e771b53484e6891e265b08031cbd346fc08f622a90b041b4998070f"
+  },
+  "logs": {
+    "node": {
+      "sha256": "047e40191e8a1ac777d0197bd63b3ca61a0352f022082f49a87322ae4b10d387",
+      "tail": [
+        "✔ street-level horizon requests remain inside a 600 metre local square (0.130084ms)",
+        "✔ eye-level requests include nearby tall buildings beyond the small ground-plane extent (0.073291ms)",
+        "✔ transient disjoint or invalid horizon bounds still produce a valid nearby cap (0.082084ms)",
+        "✔ flight queries use a bounded aircraft focus despite remote, invalid or changing camera bounds (0.109625ms)",
+        "✔ flight focus is map-specific, copied, snapped to 100m and removable (0.1205ms)",
+        "✔ flight model work coalesces at 1Hz, tracks aircraft rather than target, and cancels on exit/dispose (1.585459ms)",
+        "ℹ tests 13751",
+        "ℹ suites 0",
+        "ℹ pass 13751",
+        "ℹ fail 0",
+        "ℹ cancelled 0",
+        "ℹ skipped 0",
+        "ℹ todo 0",
+        "ℹ duration_ms 33783.4505"
+      ]
+    },
+    "python": {
+      "sha256": "93be9586d26ef3807402f3a82788414ba0fca670e1b0143c733c0575e31a6eea",
+      "tail": [
+        ".......",
+        "----------------------------------------------------------------------",
+        "Ran 7 tests in 0.005s",
+        "",
+        "OK",
+        ".................",
+        "----------------------------------------------------------------------",
+        "Ran 17 tests in 1.223s",
+        "",
+        "OK"
+      ]
+    },
+    "build": {
+      "sha256": "d3827f6d9d660b9cbb26af610f6f8c83e6088c3b6feb9de5ed552e6866d8b119",
+      "tail": [
+        "dist/assets/generic-corrections-C8hp-7xn.js      1.63 kB │ gzip:   0.72 kB",
+        "dist/assets/reference-models-CjKOile1.js         2.52 kB │ gzip:   1.04 kB",
+        "dist/assets/generic-corrections-spnAVjh8.js     70.15 kB │ gzip:   7.87 kB",
+        "dist/assets/city-models-D7N8VNeR.js            626.64 kB │ gzip: 159.69 kB",
+        "dist/assets/index-D_sA-d1T.js                1,147.43 kB │ gzip: 310.74 kB",
+        "",
+        "✓ built in 47.47s",
+        "\u001b[33m[PLUGIN_TIMINGS] \u001b[0mPlugin hooks ran for 120.3s. The build took 47.5s. Hooks such as `closeBundle` run after the build ends, so hook time can be more than build time.",
+        "The slowest hooks, timed inside each callback (the wait before a callback starts is excluded, the time it awaits is included):",
+        "  - local-precompressed-assets closeBundle (100%, 73.0s, 1 call)",
+        "  - vite:prepare-out-dir renderStart (99%, 47.1s, 1 call)",
+        "Additional hook time came from hooks under 1s.",
+        "See https://rolldown.rs/reference/InputOptions.checks#plugintimings for more details.",
+        ""
+      ]
+    },
+    "maple-correction-and-onebailey-fallback": {
+      "sha256": "5ce452b191adecb2e60ebb128aa388f0ebdd09e27f3334df14016d8a8665f003",
+      "tail": [
+        "",
+        "(node:94802) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.",
+        "(Use `node --trace-warnings ...` to show where the warning was created)",
+        "  ✓  1 tests/maple-individual.spec.ts:24:4 › Maple208 1 failed generations preserve all29 towers (11.7s)",
+        "  ✓  2 tests/maple-individual.spec.ts:24:4 › Maple208 2 failed generations preserve all29 towers (9.5s)",
+        "  ✓  3 tests/maple-individual.spec.ts:24:4 › Maple209 1 failed generations preserve all29 towers (9.9s)",
+        "  ✓  4 tests/maple-individual.spec.ts:24:4 › Maple209 2 failed generations preserve all29 towers (9.8s)",
+        "  ✓  5 tests/maple-individual.spec.ts:24:4 › Maple212 1 failed generations preserve all29 towers (8.7s)",
+        "  ✓  6 tests/maple-individual.spec.ts:24:4 › Maple212 2 failed generations preserve all29 towers (15.5s)",
+        "  ✓  7 tests/onebailey-first5.spec.ts:10:3 › OneBailey first five: all models draw (14.5s)",
+        "  ✓  8 tests/onebailey-first5.spec.ts:10:3 › OneBailey first five: bridge owner 101 unavailable (16.2s)",
+        "  ✓  9 tests/onebailey-first5.spec.ts:10:3 › OneBailey first five: bridge owner 123 unavailable (11.0s)",
+        "",
+        "  9 passed (1.9m)"
+      ]
+    },
+    "onebailey-river-camera": {
+      "sha256": "5c2cd4c2db4e45c8f1fdeda6186cc6348cbe206a650768f8f8bd9b6320becfdf",
+      "tail": [
+        "",
+        "Running 3 tests using 1 worker",
+        "",
+        "(node:95159) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.",
+        "(Use `node --trace-warnings ...` to show where the warning was created)",
+        "  ✓  1 tests/onebailey-first5.spec.ts:10:3 › OneBailey first five: all models draw (8.0s)",
+        "  ✓  2 tests/onebailey-first5.spec.ts:10:3 › OneBailey first five: bridge owner 101 unavailable (8.5s)",
+        "  ✓  3 tests/onebailey-first5.spec.ts:10:3 › OneBailey first five: bridge owner 123 unavailable (8.3s)",
+        "",
+        "  3 passed (25.7s)"
+      ]
+    }
+  },
+  "visualReview": "Root opened Maple all29normal,16failures,and212doublefailure map images; all three final river-side OneBailey map images; all16familyfour-view sheets; corrected3tower12viewcontact+enlargements; allsevenfinalOneBaileyBlender views against officialphotos. Representative inference and hidden-face limits are recorded in each review.",
+  "coverage": {
+    "maple": "29/29,18representativeinferred",
+    "onepentas": "6/6,4representativeinferred",
+    "onebailey": "5/23,4representativeinferred"
+  },
+  "publicationState": "Local source/build/browser proof. PR publication and production deployment require separate verification."
+}

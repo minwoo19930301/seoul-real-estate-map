@@ -1,0 +1,108 @@
+{
+  "date": "2026-09-22",
+  "scope": "Maple205/206 and OnePentas101–104 representative facade inference",
+  "baseCommit": "2189bbdf88c8732a16e5143be25735ee5a663f6e",
+  "preservedRecords": {
+    "bespoke-manifest.json": 72,
+    "reference-manifest.json": 125
+  },
+  "unchangedManifests": [
+    "public/models/manifest.json",
+    "public/models/generic-corrections.json"
+  ],
+  "checks": {
+    "python": 24,
+    "node": 13751,
+    "mapleBrowser": 4,
+    "onepentasBrowser": 3,
+    "productionBuild": "passed"
+  },
+  "logs": {
+    "publisher-tests": {
+      "sha256": "c0c92a2187d887f5c9f6613789bdc2dd4270e6bae119e265ce5ab3e58fac2f9d",
+      "tail": [
+        "test_empty_evidence_and_failed_or_unrelated_calls_are_rejected (test_bespoke_publisher.McpEvidenceTest.test_empty_evidence_and_failed_or_unrelated_calls_are_rejected) ... ok",
+        "test_evidence_cannot_escape_the_committed_audit_directory (test_bespoke_publisher.McpEvidenceTest.test_evidence_cannot_escape_the_committed_audit_directory) ... ok",
+        "test_modified_proof_is_rejected_even_when_the_call_succeeded (test_bespoke_publisher.McpEvidenceTest.test_modified_proof_is_rejected_even_when_the_call_succeeded) ... ok",
+        "test_successful_execution_is_accepted (test_bespoke_publisher.McpEvidenceTest.test_successful_execution_is_accepted) ... ok",
+        "test_representative_bytes_and_estimated_scope_survive_publication (test_bespoke_publisher.RepresentativeInferenceTest.test_representative_bytes_and_estimated_scope_survive_publication) ... ok",
+        "test_unknown_source_and_unacknowledged_inference_are_rejected (test_bespoke_publisher.RepresentativeInferenceTest.test_unknown_source_and_unacknowledged_inference_are_rejected) ... ok",
+        "test_linked_workspace_is_accepted_but_outside_bundle_is_rejected (test_bespoke_publisher.StagingPathTest.test_linked_workspace_is_accepted_but_outside_bundle_is_rejected) ... ok",
+        "",
+        "----------------------------------------------------------------------",
+        "Ran 7 tests in 0.014s",
+        "",
+        "OK"
+      ]
+    },
+    "queue-tests": {
+      "sha256": "a057ac6483fbae35b0deee1cad0bde71063a39e951437722a1bf3a66f1c7ebaa",
+      "tail": [
+        "test_repeated_kapt_addresses_preserve_rows_but_not_duplicate_target_or_households (test_apartment_bespoke_queue.QueueRulesTests.test_repeated_kapt_addresses_preserve_rows_but_not_duplicate_target_or_households) ... ok",
+        "test_representative_inference_is_counted_separately_and_source_changes_revoke_credit (test_apartment_bespoke_queue.QueueRulesTests.test_representative_inference_is_counted_separately_and_source_changes_revoke_credit) ... ok",
+        "test_same_address_does_not_merge_distinct_codes_or_assign_site_identity (test_apartment_bespoke_queue.QueueRulesTests.test_same_address_does_not_merge_distinct_codes_or_assign_site_identity) ... ok",
+        "test_sha_bound_mcp_must_contain_successful_execution_and_blend_must_be_reviewed (test_apartment_bespoke_queue.QueueRulesTests.test_sha_bound_mcp_must_contain_successful_execution_and_blend_must_be_reviewed) ... ok",
+        "test_source_filename_may_differ_from_published_asset_filename (test_apartment_bespoke_queue.QueueRulesTests.test_source_filename_may_differ_from_published_asset_filename) ... ok",
+        "test_threshold_uses_any_credible_source_without_summing_or_erasing_zero (test_apartment_bespoke_queue.QueueRulesTests.test_threshold_uses_any_credible_source_without_summing_or_erasing_zero) ... ok",
+        "test_unknown_class_is_reviewed_and_explicit_non_apartment_is_retained_excluded (test_apartment_bespoke_queue.QueueRulesTests.test_unknown_class_is_reviewed_and_explicit_non_apartment_is_retained_excluded) ... ok",
+        "",
+        "----------------------------------------------------------------------",
+        "Ran 17 tests in 3.770s",
+        "",
+        "OK"
+      ]
+    },
+    "node-tests": {
+      "sha256": "0e522f80d9245c435407e765768b89f584871bf815fb6a764990f6df07e32d74",
+      "tail": [
+        "✔ transient disjoint or invalid horizon bounds still produce a valid nearby cap (0.186084ms)",
+        "✔ flight queries use a bounded aircraft focus despite remote, invalid or changing camera bounds (0.2495ms)",
+        "✔ flight focus is map-specific, copied, snapped to 100m and removable (0.289375ms)",
+        "✔ flight model work coalesces at 1Hz, tracks aircraft rather than target, and cancels on exit/dispose (9.878917ms)",
+        "ℹ tests 13751",
+        "ℹ suites 0",
+        "ℹ pass 13751",
+        "ℹ fail 0",
+        "ℹ cancelled 0",
+        "ℹ skipped 0",
+        "ℹ todo 0",
+        "ℹ duration_ms 34553.861625"
+      ]
+    },
+    "build": {
+      "sha256": "7b979c5465b6243eeb151b1e7f38065dc2788b6fab64bb5a90d092f3fe98d94a",
+      "tail": [
+        "computing gzip size...",
+        "dist/index.html                                  0.70 kB │ gzip:   0.48 kB",
+        "dist/assets/greenery.worker-B6foKVrS.js          3.71 kB",
+        "dist/assets/maplibre-gl-worker-CobTyBCT.js     486.83 kB",
+        "dist/assets/index-DGr3fR5B.css                 102.49 kB │ gzip:  15.76 kB",
+        "dist/assets/generic-corrections-C8hp-7xn.js      1.63 kB │ gzip:   0.72 kB",
+        "dist/assets/reference-models-CjKOile1.js         2.52 kB │ gzip:   1.04 kB",
+        "dist/assets/generic-corrections-spnAVjh8.js     70.15 kB │ gzip:   7.87 kB",
+        "dist/assets/city-models-D7N8VNeR.js            626.64 kB │ gzip: 159.69 kB",
+        "dist/assets/index-D_sA-d1T.js                1,147.43 kB │ gzip: 310.74 kB",
+        "",
+        "✓ built in 48.20s"
+      ]
+    }
+  },
+  "browserRecords": {
+    "docs/model-audit/renders/maple-205-206/map/205-0-failures.json": "15cdfb75033d19ed3683c6159f131cd0e1504e63ae2c3c434166713ca1dbcda8",
+    "docs/model-audit/renders/maple-205-206/map/206-1-failures.json": "2de4b9d3142ff7b69a445a689506377deae3d4163df2cf031f80d73d5805dbe0",
+    "docs/model-audit/renders/maple-205-206/map/205-0-failures.png": "14f4ccabde7bc1e1cffbaa75b382a09c36aa1460abac281ffb7a323b6ab32414",
+    "docs/model-audit/renders/maple-205-206/map/206-0-failures.json": "3cf03ee678a70b77c0aa210a5d90d512f86de2966cc52cc30dcf752a94c21a80",
+    "docs/model-audit/renders/maple-205-206/map/205-1-failures.png": "0ce7e4599083bbeb83134af937c03f3842f56155d1d5284894ababa36fd51999",
+    "docs/model-audit/renders/maple-205-206/map/206-0-failures.png": "33ce0d9dd7c4f182b28e8235684c4aa5550fe6047eca9656308418ee756c033a",
+    "docs/model-audit/renders/maple-205-206/map/205-1-failures.json": "23a48db450243aa04d49748f54f41bbdb2e9b2d7318b485c167a21833662fb4b",
+    "docs/model-audit/renders/maple-205-206/map/206-1-failures.png": "8bfc1b62d99f0f232c8ff9d5f7d56e9442901cdcba1e20188149a55d4d613136",
+    "docs/model-audit/renders/raemian-onepentas-remaining/map/onepentas-six-missing-105.png": "fcf7eb43a4861eb273d49384635306a844cdd43eb7499748e242e983e519a0a4",
+    "docs/model-audit/renders/raemian-onepentas-remaining/map/onepentas-six-missing-105.json": "fe0506dc29fca2e25e903092151d2b9091478045127c35a001c7fef6e6debc66",
+    "docs/model-audit/renders/raemian-onepentas-remaining/map/onepentas-six-missing-101.png": "563c7ff93d78ceb83dbd014914360608363f4e93f30ad4bea7812678bb8d24d0",
+    "docs/model-audit/renders/raemian-onepentas-remaining/map/onepentas-six-normal.json": "1f1fd5e8c513629a409da05ec7b3beaa73c79cda82ac7a9e63a7002bebf5ad13",
+    "docs/model-audit/renders/raemian-onepentas-remaining/map/onepentas-six-normal.png": "33ed14f8f825335ac8cd2cc85c94ce810ef3752b563f3b1368b03b23ccd8a210",
+    "docs/model-audit/renders/raemian-onepentas-remaining/map/onepentas-six-missing-101.json": "12ecc6945f81d4e0ab2f1da9aba95c74382cec237d9cdf27d3a8e50b93539a97"
+  },
+  "visualReview": "Root opened all six final OnePentas Blender views, original completedphoto00, and all seven new normal/failure map captures. Maple stage8of12views independently inspected before publication.",
+  "status": "Local source and browser validation; this is not deployment proof."
+}

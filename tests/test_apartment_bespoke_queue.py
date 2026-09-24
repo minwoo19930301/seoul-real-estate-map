@@ -168,6 +168,50 @@ class QueueRulesTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, 'Duplicate building'):
                 run_build([record()], coverage, [asset], proof, root)
 
+    def test_representative_inference_is_counted_separately_and_source_changes_revoke_credit(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp); asset, proof, coverage = make_proof(root)
+            source_record = asset['sourceRecord']
+            source_record.update(modelingBasis='representative-photo-inference',
+                          inferenceScope='Facade reused, distinct numbered footprint.',
+                          inferredFrom=[{'id': 'bespoke-source', 'siteId': 'representative', 'sha256': 'c' * 64}])
+            proof['sites']['test']['review']['inferenceApprovedAssets'] = [asset['id']]
+            proof['sites']['representative'] = {'assets': [{'id': 'bespoke-source', 'sha256': 'c' * 64}]}
+            queue, summary = run_build([record()], coverage, [asset], proof, root)
+            self.assertEqual(queue[0]['modelStatus'], 'complete_residential_buildings')
+            self.assertEqual(queue[0]['representativeInferredBuildingCount'], 1)
+            self.assertEqual(summary['representativeInferredBuildingCount'], 1)
+            proof['sites']['representative']['assets'][0]['sha256'] = 'd' * 64
+            self.assertIn('representative_source_proof_mismatch', verify_asset(root, asset, proof))
+            del proof['sites']['test']['review']['inferenceApprovedAssets']
+            self.assertIn('representative_inference_review_missing', verify_asset(root, asset, proof))
+
+
+    def test_complex_photo_inference_is_distinct_and_requires_unchanged_source_and_review(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp); asset, proof, coverage = make_proof(root)
+            photo = {'url': 'https://example.org/complex/photo.jpg', 'sha256': 'c' * 64, 'scope': 'complex'}
+            asset['sourceRecord'].update(modelingBasis='complex-photo-inference',
+                inferredFromPhotos=[photo], inferenceScope='Own numbered footprint; photo tower and orientation unresolved.')
+            site = proof['sites']['test']; site['sources'].append(copy.deepcopy(photo))
+            site['review'].update(inferenceApprovedAssets=[asset['id']], reviewedSourcePhotos=[copy.deepcopy(photo)])
+            queue, summary = run_build([record()], coverage, [asset], proof, root)
+            self.assertEqual(queue[0]['modelStatus'], 'complete_residential_buildings')
+            self.assertEqual(queue[0]['representativeInferredBuildingCount'], 1)
+            self.assertEqual(queue[0]['buildings'][0]['modelingBasis'], 'complex-photo-inference')
+            for target in ['source', 'review', 'asset']:
+                changed_asset, changed_proof = copy.deepcopy((asset, proof))
+                p = changed_proof['sites']['test']
+                reference = p['sources'][-1] if target == 'source' else p['review']['reviewedSourcePhotos'][0] if target == 'review' else changed_asset['sourceRecord']['inferredFromPhotos'][0]
+                reference['sha256'] = 'd' * 64
+                self.assertIn('complex_photo_inference_proof_mismatch', verify_asset(root, changed_asset, changed_proof))
+                rows, _ = run_build([record()], coverage, [changed_asset], changed_proof, root)
+                self.assertEqual(rows[0]['verifiedBespokeBuildingCount'], 0)
+            asset['sourceRecord']['modelingBasis'] = 'individual-photo-review'
+            self.assertIn('undeclared_photo_inference', verify_asset(root, asset, proof))
+            asset['sourceRecord']['modelingBasis'] = 'invented-reviewed-basis'
+            self.assertIn('unknown_modeling_basis', verify_asset(root, asset, proof))
+
 
 class FrozenPublicInventoryTests(unittest.TestCase):
     @classmethod
@@ -193,9 +237,22 @@ class FrozenPublicInventoryTests(unittest.TestCase):
         self.assertEqual(rows['A13527017']['householdValues'], [0, 1297])
         self.assertEqual(rows['A10023043']['householdValues'], [2990])
         self.assertEqual(rows['A10023188']['householdValues'], [1152])
-        self.assertEqual(rows['A10020557']['modelStatus'], 'partial')
+        self.assertEqual(rows['A10020557']['modelStatus'], 'complete_residential_buildings')
         self.assertEqual(rows['A10020557']['expectedResidentialBuildingCount'], 29)
-        self.assertEqual(rows['A10020557']['verifiedBespokeBuildingCount'], 10)
+        self.assertEqual(rows['A10020557']['verifiedBespokeBuildingCount'], 29)
+        self.assertEqual(rows['A10020557']['representativeInferredBuildingCount'], 18)
+        self.assertEqual(rows['A10022556']['modelStatus'], 'complete_residential_buildings')
+        self.assertEqual(rows['A10022556']['expectedResidentialBuildingCount'], 6)
+        self.assertEqual(rows['A10022556']['verifiedBespokeBuildingCount'], 6)
+        self.assertEqual(rows['A10023043']['modelStatus'], 'complete_residential_buildings')
+        self.assertEqual(rows['A10023043']['verifiedBespokeBuildingCount'], 23)
+        self.assertEqual(rows['A10023043']['representativeInferredBuildingCount'], 22)
+        self.assertEqual(rows['A10027205']['modelStatus'], 'complete_residential_buildings')
+        self.assertEqual(rows['A10027205']['verifiedBespokeBuildingCount'], 15)
+        self.assertEqual(rows['A10027205']['representativeInferredBuildingCount'], 15)
+        acro100 = next(b for b in rows['A10027205']['buildings'] if b['label'] == '100')
+        self.assertEqual(acro100['assetId'], 'bespoke-acro-riverpark-100-corrected')
+        self.assertEqual(acro100['verificationErrors'], [])
         maple213 = next(b for b in rows['A10020557']['buildings'] if b['label'] == '213')
         self.assertEqual(maple213['assetId'], 'bespoke-maple-xi-213-corrected')
         self.assertEqual(maple213['verificationErrors'], [])

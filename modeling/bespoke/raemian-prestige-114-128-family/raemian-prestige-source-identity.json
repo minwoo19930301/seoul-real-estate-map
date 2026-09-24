@@ -1,0 +1,2347 @@
+{
+  "version": 1,
+  "complex": "래미안퍼스티지",
+  "managementCode": "A13776509",
+  "residentialTowerCount": 28,
+  "households": 2444,
+  "identityMethod": "Unique numbered OSM polygon fully covered by named complex residential boundary, joined by numbered official residential register row and exact parcel/road address.",
+  "limitations": [
+    "The OSM named boundary is not a surveyed cadastral boundary.",
+    "No photographed tower number or facade orientation was verified.",
+    "No child heights or internal roof-region source geometries were present; uniform tower-height envelope remains an assumption.",
+    "Official recorded maximum height does not measure every facade detail or floor spacing."
+  ],
+  "sources": {
+    "register": "Downloaded building-register snapshot; rows independently re-queried read-only",
+    "modelingSourceSha256": "1e6caa0c948f07d8fdd673fc0a9db38d39d0ed3d3799194d5981a39337e91738",
+    "boundary": {
+      "url": "https://api.openstreetmap.org/api/0.6/map?bbox=126.992,37.499,126.998,37.505",
+      "sha256": "92bd57b4807960f86f2ca48cef56d5005c033cc844e0c6e34a7b2d866d1968c8",
+      "way": "305066918",
+      "name": "래미안 퍼스티지 아파트",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              126.9940291,
+              37.5027572
+            ],
+            [
+              126.9950682,
+              37.5029833
+            ],
+            [
+              126.9951757,
+              37.5027425
+            ],
+            [
+              126.9961981,
+              37.5030798
+            ],
+            [
+              126.9960874,
+              37.5032791
+            ],
+            [
+              127.0001205,
+              37.504461
+            ],
+            [
+              127.0002626,
+              37.504155
+            ],
+            [
+              127.0007575,
+              37.5043042
+            ],
+            [
+              127.0010823,
+              37.5038538
+            ],
+            [
+              127.0015242,
+              37.5040917
+            ],
+            [
+              127.002816,
+              37.5024842
+            ],
+            [
+              126.999388,
+              37.5012114
+            ],
+            [
+              126.9990269,
+              37.5010719
+            ],
+            [
+              126.9984304,
+              37.5022591
+            ],
+            [
+              126.997941,
+              37.5021303
+            ],
+            [
+              126.997924,
+              37.5021687
+            ],
+            [
+              126.9976882,
+              37.5021077
+            ],
+            [
+              126.9975109,
+              37.5024904
+            ],
+            [
+              126.9951736,
+              37.501864
+            ],
+            [
+              126.9948484,
+              37.5016188
+            ],
+            [
+              126.9948032,
+              37.5015889
+            ],
+            [
+              126.9945337,
+              37.5015056
+            ],
+            [
+              126.9940291,
+              37.5027572
+            ]
+          ]
+        ]
+      }
+    },
+    "photosPage": {
+      "url": "https://kbland.kr/se/c/21363",
+      "sha256": "ed64a557dafc3b15e9bcf1ecb889c3a9e468351d8d12ca929129a0b4f58dfd1c",
+      "scope": "complex",
+      "description": "Completed-complex photographs, third-party KB gallery; number and camera orientation unverified."
+    }
+  },
+  "towers": [
+    {
+      "number": 101,
+      "sourceId": "2541ff4f-21d3-4ea5-8250-7d0950910d90",
+      "sourceName": "101동",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              126.9958472,
+              37.5024306
+            ],
+            [
+              126.9957925,
+              37.5023689
+            ],
+            [
+              126.9960143,
+              37.5022451
+            ],
+            [
+              126.9961766,
+              37.5024282
+            ],
+            [
+              126.9960809,
+              37.5024816
+            ],
+            [
+              126.9960149,
+              37.5024072
+            ],
+            [
+              126.9959559,
+              37.5024401
+            ],
+            [
+              126.9959144,
+              37.5023932
+            ],
+            [
+              126.9958472,
+              37.5024306
+            ]
+          ]
+        ]
+      },
+      "osmRecords": [
+        "w412953651@4"
+      ],
+      "osmHeightM": 79.0,
+      "osmFloors": 28,
+      "sourceChildIds": [],
+      "register": {
+        "id": "10231100193025",
+        "row_number": 69098,
+        "parcel_key": "서초구|반포동|land|18|1",
+        "road_key": "서초구|반포대로|275|0|지상",
+        "building_dong": "101동",
+        "floors": "28",
+        "height": "79.3",
+        "households": "79",
+        "source_hash": "c6736157d8d93f43fde26dd5d42977d5715d78ee5d163d45fdf23273908f8d6b"
+      },
+      "membershipEvidence": {
+        "boundary_way": "305066918",
+        "strict_covers": true,
+        "area_ratio": 0.9999999999999999,
+        "outside_area_m2": 5.684341886080802e-14,
+        "max_distance_outside_m": 0
+      }
+    },
+    {
+      "number": 102,
+      "sourceId": "eef0c80b-2e4b-4820-b6cb-fbce636fb4ea",
+      "sourceName": "102동",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              126.9963771,
+              37.5025588
+            ],
+            [
+              126.9963223,
+              37.5024971
+            ],
+            [
+              126.9965441,
+              37.5023733
+            ],
+            [
+              126.9967065,
+              37.5025564
+            ],
+            [
+              126.9966108,
+              37.5026098
+            ],
+            [
+              126.9965447,
+              37.5025354
+            ],
+            [
+              126.9964858,
+              37.5025683
+            ],
+            [
+              126.9964442,
+              37.5025214
+            ],
+            [
+              126.9963771,
+              37.5025588
+            ]
+          ]
+        ]
+      },
+      "osmRecords": [
+        "w412953652@4"
+      ],
+      "osmHeightM": 88.0,
+      "osmFloors": 31,
+      "sourceChildIds": [],
+      "register": {
+        "id": "10231100193105",
+        "row_number": 50386,
+        "parcel_key": "서초구|반포동|land|18|1",
+        "road_key": "서초구|반포대로|275|0|지상",
+        "building_dong": "102동",
+        "floors": "31",
+        "height": "87.7",
+        "households": "85",
+        "source_hash": "845fc4f7b5d6e83d9e2c9502ca2c2dc541c2f214e6143fae56f4109e63fbd731"
+      },
+      "membershipEvidence": {
+        "boundary_way": "305066918",
+        "strict_covers": true,
+        "area_ratio": 1.0000000000000002,
+        "outside_area_m2": 0,
+        "max_distance_outside_m": 0
+      }
+    },
+    {
+      "number": 103,
+      "sourceId": "02fc7e0f-5c24-41ce-9707-1c697a10762d",
+      "sourceName": "103동",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              126.9964346,
+              37.5031734
+            ],
+            [
+              126.9963224,
+              37.5032152
+            ],
+            [
+              126.9962753,
+              37.5031357
+            ],
+            [
+              126.9963649,
+              37.5031023
+            ],
+            [
+              126.9963243,
+              37.5030336
+            ],
+            [
+              126.9964418,
+              37.5029898
+            ],
+            [
+              126.9964891,
+              37.5030697
+            ],
+            [
+              126.9965801,
+              37.5030358
+            ],
+            [
+              126.9966308,
+              37.5031215
+            ],
+            [
+              126.9965797,
+              37.5031405
+            ],
+            [
+              126.9966268,
+              37.5032199
+            ],
+            [
+              126.9964919,
+              37.5032702
+            ],
+            [
+              126.9964346,
+              37.5031734
+            ]
+          ]
+        ]
+      },
+      "osmRecords": [
+        "w412970131@4"
+      ],
+      "osmHeightM": 74.0,
+      "osmFloors": 26,
+      "sourceChildIds": [],
+      "register": {
+        "id": "10231100193191",
+        "row_number": 373512,
+        "parcel_key": "서초구|반포동|land|18|1",
+        "road_key": "서초구|반포대로|275|0|지상",
+        "building_dong": "103동",
+        "floors": "26",
+        "height": "73.7",
+        "households": "102",
+        "source_hash": "14b458e6170723d5b9b46eafbcd77eaa369e0690df7c12b7f532704b9d6ee215"
+      },
+      "membershipEvidence": {
+        "boundary_way": "305066918",
+        "strict_covers": true,
+        "area_ratio": 1.0000000000000002,
+        "outside_area_m2": 0,
+        "max_distance_outside_m": 0
+      }
+    },
+    {
+      "number": 104,
+      "sourceId": "7220e8e0-ce7f-490b-92ba-57f09aa09d8c",
+      "sourceName": "104동",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              126.9971608,
+              37.503311
+            ],
+            [
+              126.9970486,
+              37.5033528
+            ],
+            [
+              126.9970015,
+              37.5032733
+            ],
+            [
+              126.9970912,
+              37.5032398
+            ],
+            [
+              126.9970505,
+              37.5031712
+            ],
+            [
+              126.997168,
+              37.5031274
+            ],
+            [
+              126.9972153,
+              37.5032072
+            ],
+            [
+              126.9973063,
+              37.5031733
+            ],
+            [
+              126.9973571,
+              37.503259
+            ],
+            [
+              126.997306,
+              37.5032781
+            ],
+            [
+              126.997353,
+              37.5033575
+            ],
+            [
+              126.9972182,
+              37.5034077
+            ],
+            [
+              126.9971608,
+              37.503311
+            ]
+          ]
+        ]
+      },
+      "osmRecords": [
+        "w412970133@4"
+      ],
+      "osmHeightM": 85.0,
+      "osmFloors": 30,
+      "sourceChildIds": [],
+      "register": {
+        "id": "10231100192580",
+        "row_number": 547548,
+        "parcel_key": "서초구|반포동|land|18|1",
+        "road_key": "서초구|반포대로|275|0|지상",
+        "building_dong": "104동",
+        "floors": "30",
+        "height": "84.9",
+        "households": "118",
+        "source_hash": "678dd87aa3e53b33e6aeb747d70b247caee33d8da5adb7f3a49940b636cf7b4a"
+      },
+      "membershipEvidence": {
+        "boundary_way": "305066918",
+        "strict_covers": true,
+        "area_ratio": 1.0000000000000002,
+        "outside_area_m2": 0,
+        "max_distance_outside_m": 0
+      }
+    },
+    {
+      "number": 105,
+      "sourceId": "8d6ab8b4-1c90-44ea-894d-85f51054c107",
+      "sourceName": "105동",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              126.9977231,
+              37.503483
+            ],
+            [
+              126.9976109,
+              37.5035248
+            ],
+            [
+              126.9975638,
+              37.5034453
+            ],
+            [
+              126.9976535,
+              37.5034118
+            ],
+            [
+              126.9976128,
+              37.5033432
+            ],
+            [
+              126.9977303,
+              37.5032994
+            ],
+            [
+              126.9977776,
+              37.5033792
+            ],
+            [
+              126.9978686,
+              37.5033453
+            ],
+            [
+              126.9979194,
+              37.503431
+            ],
+            [
+              126.9978683,
+              37.5034501
+            ],
+            [
+              126.9979153,
+              37.5035295
+            ],
+            [
+              126.9977804,
+              37.5035797
+            ],
+            [
+              126.9977231,
+              37.503483
+            ]
+          ]
+        ]
+      },
+      "osmRecords": [
+        "w412970135@4"
+      ],
+      "osmHeightM": 85.0,
+      "osmFloors": 30,
+      "sourceChildIds": [],
+      "register": {
+        "id": "10231100192699",
+        "row_number": 382991,
+        "parcel_key": "서초구|반포동|land|18|1",
+        "road_key": "서초구|반포대로|275|0|지상",
+        "building_dong": "105동",
+        "floors": "30",
+        "height": "84.9",
+        "households": "118",
+        "source_hash": "66a6ab49639c99d79398f1f303337535734402be5b51965b48134e4e5f119c5b"
+      },
+      "membershipEvidence": {
+        "boundary_way": "305066918",
+        "strict_covers": true,
+        "area_ratio": 1.0,
+        "outside_area_m2": 0,
+        "max_distance_outside_m": 0
+      }
+    },
+    {
+      "number": 106,
+      "sourceId": "cd628397-c01c-4bd0-b67f-b29dc7c88923",
+      "sourceName": "106동",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              126.9981749,
+              37.5036271
+            ],
+            [
+              126.9980626,
+              37.5036689
+            ],
+            [
+              126.9980155,
+              37.5035893
+            ],
+            [
+              126.9981052,
+              37.5035559
+            ],
+            [
+              126.9980646,
+              37.5034873
+            ],
+            [
+              126.9981821,
+              37.5034435
+            ],
+            [
+              126.9982293,
+              37.5035233
+            ],
+            [
+              126.9983203,
+              37.5034894
+            ],
+            [
+              126.9983711,
+              37.5035751
+            ],
+            [
+              126.99832,
+              37.5035942
+            ],
+            [
+              126.998367,
+              37.5036736
+            ],
+            [
+              126.9982322,
+              37.5037238
+            ],
+            [
+              126.9981749,
+              37.5036271
+            ]
+          ]
+        ]
+      },
+      "osmRecords": [
+        "w412970137@4"
+      ],
+      "osmHeightM": 85.0,
+      "osmFloors": 30,
+      "sourceChildIds": [],
+      "register": {
+        "id": "10231100192906",
+        "row_number": 314315,
+        "parcel_key": "서초구|반포동|land|18|1",
+        "road_key": "서초구|반포대로|275|0|지상",
+        "building_dong": "106동",
+        "floors": "30",
+        "height": "84.9",
+        "households": "118",
+        "source_hash": "d7a79cbce0604774ee5a0800c2b8707e6328f2991f44276a3e1dd930e33732e3"
+      },
+      "membershipEvidence": {
+        "boundary_way": "305066918",
+        "strict_covers": true,
+        "area_ratio": 1.0000000000000002,
+        "outside_area_m2": 0,
+        "max_distance_outside_m": 0
+      }
+    },
+    {
+      "number": 107,
+      "sourceId": "48c7ac76-ad32-45db-af1d-51dcc23ad52c",
+      "sourceName": "107동",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              126.9986267,
+              37.5037834
+            ],
+            [
+              126.9985719,
+              37.5037217
+            ],
+            [
+              126.9987937,
+              37.5035979
+            ],
+            [
+              126.9989561,
+              37.503781
+            ],
+            [
+              126.9988604,
+              37.5038344
+            ],
+            [
+              126.9987943,
+              37.50376
+            ],
+            [
+              126.9987354,
+              37.5037929
+            ],
+            [
+              126.9986938,
+              37.503746
+            ],
+            [
+              126.9986267,
+              37.5037834
+            ]
+          ]
+        ]
+      },
+      "osmRecords": [
+        "w412970139@4"
+      ],
+      "osmHeightM": 85.0,
+      "osmFloors": 30,
+      "sourceChildIds": [],
+      "register": {
+        "id": "10231100192818",
+        "row_number": 16016,
+        "parcel_key": "서초구|반포동|land|18|1",
+        "road_key": "서초구|반포대로|275|0|지상",
+        "building_dong": "107동",
+        "floors": "30",
+        "height": "84.9",
+        "households": "87",
+        "source_hash": "825318e81679249edb0e6b6854519f154f4a093e347423bed576fbe0100c7291"
+      },
+      "membershipEvidence": {
+        "boundary_way": "305066918",
+        "strict_covers": true,
+        "area_ratio": 1.0,
+        "outside_area_m2": 0,
+        "max_distance_outside_m": 0
+      }
+    },
+    {
+      "number": 108,
+      "sourceId": "45ef175c-213d-48cc-8d7d-cfff01202638",
+      "sourceName": "108동",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              126.9991634,
+              37.5039253
+            ],
+            [
+              126.9991086,
+              37.5038636
+            ],
+            [
+              126.9993304,
+              37.5037398
+            ],
+            [
+              126.9994928,
+              37.5039229
+            ],
+            [
+              126.9993971,
+              37.5039763
+            ],
+            [
+              126.999331,
+              37.5039019
+            ],
+            [
+              126.9992721,
+              37.5039348
+            ],
+            [
+              126.9992305,
+              37.5038879
+            ],
+            [
+              126.9991634,
+              37.5039253
+            ]
+          ]
+        ]
+      },
+      "osmRecords": [
+        "w412970141@4"
+      ],
+      "osmHeightM": 88.0,
+      "osmFloors": 31,
+      "sourceChildIds": [],
+      "register": {
+        "id": "10231100193845",
+        "row_number": 288545,
+        "parcel_key": "서초구|반포동|land|18|1",
+        "road_key": "서초구|반포대로|275|0|지상",
+        "building_dong": "108동",
+        "floors": "31",
+        "height": "87.7",
+        "households": "91",
+        "source_hash": "2d4e8ebc9e13b909d361977e090f7f9602545744f5eb2ec9a35a933dc186981c"
+      },
+      "membershipEvidence": {
+        "boundary_way": "305066918",
+        "strict_covers": true,
+        "area_ratio": 1.0000000000000002,
+        "outside_area_m2": 0,
+        "max_distance_outside_m": 0
+      }
+    },
+    {
+      "number": 109,
+      "sourceId": "d7b8c3be-2a27-4e31-ae90-f805747aa664",
+      "sourceName": "109동",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              126.9997081,
+              37.5040769
+            ],
+            [
+              126.9996533,
+              37.5040152
+            ],
+            [
+              126.9998751,
+              37.5038914
+            ],
+            [
+              127.0000375,
+              37.5040745
+            ],
+            [
+              126.9999418,
+              37.5041279
+            ],
+            [
+              126.9998757,
+              37.5040535
+            ],
+            [
+              126.9998168,
+              37.5040864
+            ],
+            [
+              126.9997752,
+              37.5040395
+            ],
+            [
+              126.9997081,
+              37.5040769
+            ]
+          ]
+        ]
+      },
+      "osmRecords": [
+        "w412970143@4"
+      ],
+      "osmHeightM": 88.0,
+      "osmFloors": 31,
+      "sourceChildIds": [],
+      "register": {
+        "id": "10231100194026",
+        "row_number": 145996,
+        "parcel_key": "서초구|반포동|land|18|1",
+        "road_key": "서초구|반포대로|275|0|지상",
+        "building_dong": "109동",
+        "floors": "31",
+        "height": "87.7",
+        "households": "91",
+        "source_hash": "4ebf00d82c4ee57bde87e45294346c83055e3df725df1d68f7b984740f0c2a0c"
+      },
+      "membershipEvidence": {
+        "boundary_way": "305066918",
+        "strict_covers": true,
+        "area_ratio": 0.9999999999999998,
+        "outside_area_m2": 1.1368683772161603e-13,
+        "max_distance_outside_m": 0
+      }
+    },
+    {
+      "number": 110,
+      "sourceId": "5c068973-bfc6-4148-b5a4-be1a8e87eb94",
+      "sourceName": "110동",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              126.9971096,
+              37.5025165
+            ],
+            [
+              126.9972153,
+              37.5024465
+            ],
+            [
+              126.9974726,
+              37.502691
+            ],
+            [
+              126.9973619,
+              37.5027643
+            ],
+            [
+              126.9972671,
+              37.5026742
+            ],
+            [
+              126.9971358,
+              37.5027613
+            ],
+            [
+              126.9970545,
+              37.5026839
+            ],
+            [
+              126.9971908,
+              37.5025937
+            ],
+            [
+              126.9971096,
+              37.5025165
+            ]
+          ]
+        ]
+      },
+      "osmRecords": [
+        "w412970149@4"
+      ],
+      "osmHeightM": 79.0,
+      "osmFloors": 28,
+      "sourceChildIds": [],
+      "register": {
+        "id": "10231100194302",
+        "row_number": 479808,
+        "parcel_key": "서초구|반포동|land|18|1",
+        "road_key": "서초구|반포대로|275|0|지상",
+        "building_dong": "110동",
+        "floors": "28",
+        "height": "79.3",
+        "households": "79",
+        "source_hash": "50b553223fbeb7aaa3e853c8583cd225d36a6e9cd5fbb38eb2d378ce0e932801"
+      },
+      "membershipEvidence": {
+        "boundary_way": "305066918",
+        "strict_covers": true,
+        "area_ratio": 1.0,
+        "outside_area_m2": 0,
+        "max_distance_outside_m": 0
+      }
+    },
+    {
+      "number": 111,
+      "sourceId": "5bc96bb1-8a13-4115-b4db-f5ad97d1e2bf",
+      "sourceName": "111동",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              126.9975981,
+              37.5027674
+            ],
+            [
+              126.9975433,
+              37.5027057
+            ],
+            [
+              126.9977651,
+              37.5025819
+            ],
+            [
+              126.9979275,
+              37.502765
+            ],
+            [
+              126.9978318,
+              37.5028184
+            ],
+            [
+              126.9977657,
+              37.502744
+            ],
+            [
+              126.9977068,
+              37.5027769
+            ],
+            [
+              126.9976652,
+              37.50273
+            ],
+            [
+              126.9975981,
+              37.5027674
+            ]
+          ]
+        ]
+      },
+      "osmRecords": [
+        "w412970148@4"
+      ],
+      "osmHeightM": 90.0,
+      "osmFloors": 32,
+      "sourceChildIds": [],
+      "register": {
+        "id": "10231100194543",
+        "row_number": 148093,
+        "parcel_key": "서초구|반포동|land|18|1",
+        "road_key": "서초구|반포대로|275|0|지상",
+        "building_dong": "111동",
+        "floors": "32",
+        "height": "90.5",
+        "households": "94",
+        "source_hash": "76b32487ab8e1ba43f04478aaa6e2b520495c6238bc143c9e6e4c7797f33b452"
+      },
+      "membershipEvidence": {
+        "boundary_way": "305066918",
+        "strict_covers": true,
+        "area_ratio": 0.9999999999999999,
+        "outside_area_m2": 5.684341886080802e-14,
+        "max_distance_outside_m": 0
+      }
+    },
+    {
+      "number": 112,
+      "sourceId": "697147a0-de7d-4fa2-ab82-758800796ded",
+      "sourceName": "112동",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              126.9981984,
+              37.502962
+            ],
+            [
+              126.9981183,
+              37.5028625
+            ],
+            [
+              126.9984063,
+              37.5027166
+            ],
+            [
+              126.9984895,
+              37.50282
+            ],
+            [
+              126.9983912,
+              37.5028699
+            ],
+            [
+              126.9984817,
+              37.5029824
+            ],
+            [
+              126.9984009,
+              37.5030233
+            ],
+            [
+              126.9983072,
+              37.5029069
+            ],
+            [
+              126.9981984,
+              37.502962
+            ]
+          ]
+        ]
+      },
+      "osmRecords": [
+        "w412953644@4"
+      ],
+      "osmHeightM": 88.0,
+      "osmFloors": 31,
+      "sourceChildIds": [],
+      "register": {
+        "id": "10231100194806",
+        "row_number": 446,
+        "parcel_key": "서초구|반포동|land|18|1",
+        "road_key": "서초구|반포대로|275|0|지상",
+        "building_dong": "112동",
+        "floors": "31",
+        "height": "87.7",
+        "households": "88",
+        "source_hash": "66966f7a68e19d53c52e792d4fc58b7c24823248cdf7b2a43bcc12ec0ad17dde"
+      },
+      "membershipEvidence": {
+        "boundary_way": "305066918",
+        "strict_covers": true,
+        "area_ratio": 1.0,
+        "outside_area_m2": 0,
+        "max_distance_outside_m": 0
+      }
+    },
+    {
+      "number": 113,
+      "sourceId": "ae891078-f1d8-463f-b7ae-ecb6387c3e48",
+      "sourceName": "113동",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              126.9989724,
+              37.5031574
+            ],
+            [
+              126.9988939,
+              37.503046
+            ],
+            [
+              126.9992872,
+              37.5028716
+            ],
+            [
+              126.9993706,
+              37.50299
+            ],
+            [
+              126.9992247,
+              37.5030547
+            ],
+            [
+              126.9993389,
+              37.5032168
+            ],
+            [
+              126.9992285,
+              37.5032658
+            ],
+            [
+              126.9991093,
+              37.5030967
+            ],
+            [
+              126.9989724,
+              37.5031574
+            ]
+          ]
+        ]
+      },
+      "osmRecords": [
+        "w278615335@4"
+      ],
+      "osmHeightM": 88.0,
+      "osmFloors": 31,
+      "sourceChildIds": [],
+      "register": {
+        "id": "10231100193485",
+        "row_number": 493410,
+        "parcel_key": "서초구|반포동|land|18|1",
+        "road_key": "서초구|반포대로|275|0|지상",
+        "building_dong": "113동",
+        "floors": "31",
+        "height": "87.7",
+        "households": "90",
+        "source_hash": "423b0e11e45036c67fca228ffb0c48bbe5c20c27a1050b6529fc2272e0133960"
+      },
+      "membershipEvidence": {
+        "boundary_way": "305066918",
+        "strict_covers": true,
+        "area_ratio": 0.9999999999999999,
+        "outside_area_m2": 1.1368683772161603e-13,
+        "max_distance_outside_m": 0
+      }
+    },
+    {
+      "number": 114,
+      "sourceId": "97eb6fd0-2c0b-45cc-81d2-a66441aecb85",
+      "sourceName": "114동",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              126.9997813,
+              37.5034305
+            ],
+            [
+              126.9997206,
+              37.5033044
+            ],
+            [
+              127.0001039,
+              37.5031882
+            ],
+            [
+              127.0001611,
+              37.5033069
+            ],
+            [
+              127.000042,
+              37.503343
+            ],
+            [
+              127.0000947,
+              37.5034524
+            ],
+            [
+              126.9999719,
+              37.5034896
+            ],
+            [
+              126.9999228,
+              37.5033876
+            ],
+            [
+              126.9997813,
+              37.5034305
+            ]
+          ]
+        ]
+      },
+      "osmRecords": [
+        "w278615326@4"
+      ],
+      "osmHeightM": 88.0,
+      "osmFloors": 31,
+      "sourceChildIds": [],
+      "register": {
+        "id": "10231100194118",
+        "row_number": 22632,
+        "parcel_key": "서초구|반포동|land|18|1",
+        "road_key": "서초구|반포대로|275|0|지상",
+        "building_dong": "114동",
+        "floors": "31",
+        "height": "87.7",
+        "households": "90",
+        "source_hash": "56b95bcb2b08a2f9c7bc9978ccaebeccfb4e133a166ea2ef7814c3a20b04205b"
+      },
+      "membershipEvidence": {
+        "boundary_way": "305066918",
+        "strict_covers": true,
+        "area_ratio": 0.9999999999999998,
+        "outside_area_m2": 1.1368683772161603e-13,
+        "max_distance_outside_m": 0
+      }
+    },
+    {
+      "number": 115,
+      "sourceId": "76147cfe-8510-4d14-9736-6dfaee75bb1b",
+      "sourceName": "115동",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              127.0005905,
+              37.5036613
+            ],
+            [
+              127.0005298,
+              37.5035352
+            ],
+            [
+              127.0009131,
+              37.503419
+            ],
+            [
+              127.0009703,
+              37.5035377
+            ],
+            [
+              127.0008512,
+              37.5035738
+            ],
+            [
+              127.0009039,
+              37.5036832
+            ],
+            [
+              127.0007811,
+              37.5037204
+            ],
+            [
+              127.000732,
+              37.5036184
+            ],
+            [
+              127.0005905,
+              37.5036613
+            ]
+          ]
+        ]
+      },
+      "osmRecords": [
+        "w412953650@4"
+      ],
+      "osmHeightM": 82.0,
+      "osmFloors": 29,
+      "sourceChildIds": [],
+      "register": {
+        "id": "10231100194382",
+        "row_number": 148092,
+        "parcel_key": "서초구|반포동|land|18|1",
+        "road_key": "서초구|반포대로|275|0|지상",
+        "building_dong": "115동",
+        "floors": "29",
+        "height": "82.1",
+        "households": "83",
+        "source_hash": "2591114997f91c2f8edc5ef7d8f4f779168afd93f88b32e9c316c473206051d7"
+      },
+      "membershipEvidence": {
+        "boundary_way": "305066918",
+        "strict_covers": true,
+        "area_ratio": 1.0000000000000002,
+        "outside_area_m2": 0,
+        "max_distance_outside_m": 0
+      }
+    },
+    {
+      "number": 116,
+      "sourceId": "0f40242b-1f64-427c-b5dd-fafdd2ba2ecd",
+      "sourceName": "116동",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              127.0014156,
+              37.5035544
+            ],
+            [
+              127.0013608,
+              37.5034927
+            ],
+            [
+              127.0015826,
+              37.5033689
+            ],
+            [
+              127.001745,
+              37.503552
+            ],
+            [
+              127.0016493,
+              37.5036054
+            ],
+            [
+              127.0015832,
+              37.503531
+            ],
+            [
+              127.0015243,
+              37.5035639
+            ],
+            [
+              127.0014827,
+              37.503517
+            ],
+            [
+              127.0014156,
+              37.5035544
+            ]
+          ]
+        ]
+      },
+      "osmRecords": [
+        "w412970145@4"
+      ],
+      "osmHeightM": 88.0,
+      "osmFloors": 31,
+      "sourceChildIds": [],
+      "register": {
+        "id": "10231100194638",
+        "row_number": 237264,
+        "parcel_key": "서초구|반포동|land|18|1",
+        "road_key": "서초구|반포대로|275|0|지상",
+        "building_dong": "116동",
+        "floors": "31",
+        "height": "87.7",
+        "households": "90",
+        "source_hash": "c86b064a420905dcd31a62adbb1e288957de97b3217f8c1f84b0d0828311d8c4"
+      },
+      "membershipEvidence": {
+        "boundary_way": "305066918",
+        "strict_covers": true,
+        "area_ratio": 1.0000000000000002,
+        "outside_area_m2": 0,
+        "max_distance_outside_m": 0
+      }
+    },
+    {
+      "number": 117,
+      "sourceId": "f8b46fce-7de9-4fed-9ab2-43cb981bd3bb",
+      "sourceName": "117동",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              126.9995203,
+              37.5023894
+            ],
+            [
+              126.9993545,
+              37.5024517
+            ],
+            [
+              126.9994901,
+              37.5026773
+            ],
+            [
+              126.9993784,
+              37.5027195
+            ],
+            [
+              126.9992416,
+              37.5024919
+            ],
+            [
+              126.9990578,
+              37.5025596
+            ],
+            [
+              126.9990243,
+              37.5025023
+            ],
+            [
+              126.9990367,
+              37.5024978
+            ],
+            [
+              126.9990079,
+              37.5024485
+            ],
+            [
+              126.9994439,
+              37.502288
+            ],
+            [
+              126.9994732,
+              37.5023381
+            ],
+            [
+              126.9994873,
+              37.5023329
+            ],
+            [
+              126.9995203,
+              37.5023894
+            ]
+          ]
+        ]
+      },
+      "osmRecords": [
+        "r19611739@1"
+      ],
+      "osmHeightM": 79.0,
+      "osmFloors": 28,
+      "sourceChildIds": [],
+      "register": {
+        "id": "10231100194895",
+        "row_number": 417283,
+        "parcel_key": "서초구|반포동|land|18|1",
+        "road_key": "서초구|반포대로|275|0|지상",
+        "building_dong": "117동",
+        "floors": "28",
+        "height": "79.3",
+        "households": "76",
+        "source_hash": "8572489a7f1b432451928954c6feec2e9eae012515f393a992158fa383beabb4"
+      },
+      "membershipEvidence": {
+        "boundary_way": "305066918",
+        "strict_covers": true,
+        "area_ratio": 1.0,
+        "outside_area_m2": 0,
+        "max_distance_outside_m": 0
+      }
+    },
+    {
+      "number": 118,
+      "sourceId": "7dca6e17-aa57-4e45-8cba-d79383ec82bf",
+      "sourceName": "118동",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              127.0002937,
+              37.502607
+            ],
+            [
+              127.0001279,
+              37.5026694
+            ],
+            [
+              127.0002635,
+              37.502895
+            ],
+            [
+              127.0001517,
+              37.5029372
+            ],
+            [
+              127.000015,
+              37.5027096
+            ],
+            [
+              126.9998312,
+              37.5027773
+            ],
+            [
+              126.9997977,
+              37.50272
+            ],
+            [
+              126.9998101,
+              37.5027155
+            ],
+            [
+              126.9997813,
+              37.5026662
+            ],
+            [
+              127.0002172,
+              37.5025057
+            ],
+            [
+              127.0002466,
+              37.5025558
+            ],
+            [
+              127.0002607,
+              37.5025506
+            ],
+            [
+              127.0002937,
+              37.502607
+            ]
+          ]
+        ]
+      },
+      "osmRecords": [
+        "r19611741@1"
+      ],
+      "osmHeightM": 82.0,
+      "osmFloors": 29,
+      "sourceChildIds": [],
+      "register": {
+        "id": "10231100194972",
+        "row_number": 248416,
+        "parcel_key": "서초구|반포동|land|18|1",
+        "road_key": "서초구|반포대로|275|0|지상",
+        "building_dong": "118동",
+        "floors": "29",
+        "height": "82.1",
+        "households": "79",
+        "source_hash": "cc6409435b428311948178cf1a580205604d6db515b1c64c31f71be63df098cd"
+      },
+      "membershipEvidence": {
+        "boundary_way": "305066918",
+        "strict_covers": true,
+        "area_ratio": 0.9999999999999999,
+        "outside_area_m2": 1.1368683772161603e-13,
+        "max_distance_outside_m": 0
+      }
+    },
+    {
+      "number": 119,
+      "sourceId": "b85eaa33-701e-4c04-9394-7aead423be08",
+      "sourceName": "119동",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              127.0006362,
+              37.5029872
+            ],
+            [
+              127.000577,
+              37.5028841
+            ],
+            [
+              127.000981,
+              37.5027381
+            ],
+            [
+              127.0010379,
+              37.5028372
+            ],
+            [
+              127.0009086,
+              37.5028839
+            ],
+            [
+              127.001027,
+              37.5030901
+            ],
+            [
+              127.0008868,
+              37.5031408
+            ],
+            [
+              127.0007708,
+              37.5029386
+            ],
+            [
+              127.0006362,
+              37.5029872
+            ]
+          ]
+        ]
+      },
+      "osmRecords": [
+        "w412953649@4"
+      ],
+      "osmHeightM": 85.0,
+      "osmFloors": 30,
+      "sourceChildIds": [],
+      "register": {
+        "id": "10231100193937",
+        "row_number": 417284,
+        "parcel_key": "서초구|반포동|land|18|1",
+        "road_key": "서초구|반포대로|275|0|지상",
+        "building_dong": "119동",
+        "floors": "30",
+        "height": "84.9",
+        "households": "88",
+        "source_hash": "89a9670947b63a2adfa76a833f270a9bc1acc99b2144049435939ae4f66c9316"
+      },
+      "membershipEvidence": {
+        "boundary_way": "305066918",
+        "strict_covers": true,
+        "area_ratio": 1.0000000000000002,
+        "outside_area_m2": 0,
+        "max_distance_outside_m": 0
+      }
+    },
+    {
+      "number": 120,
+      "sourceId": "94e5374f-559d-4fb3-ac52-5d8258334774",
+      "sourceName": "120동",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              127.0017205,
+              37.5031867
+            ],
+            [
+              127.0016657,
+              37.503125
+            ],
+            [
+              127.0018875,
+              37.5030012
+            ],
+            [
+              127.0020499,
+              37.5031843
+            ],
+            [
+              127.0019542,
+              37.5032377
+            ],
+            [
+              127.0018881,
+              37.5031633
+            ],
+            [
+              127.0018292,
+              37.5031962
+            ],
+            [
+              127.0017876,
+              37.5031493
+            ],
+            [
+              127.0017205,
+              37.5031867
+            ]
+          ]
+        ]
+      },
+      "osmRecords": [
+        "w412970146@4"
+      ],
+      "osmHeightM": 90.0,
+      "osmFloors": 32,
+      "sourceChildIds": [],
+      "register": {
+        "id": "10231100194209",
+        "row_number": 182344,
+        "parcel_key": "서초구|반포동|land|18|1",
+        "road_key": "서초구|반포대로|275|0|지상",
+        "building_dong": "120동",
+        "floors": "32",
+        "height": "90.5",
+        "households": "92",
+        "source_hash": "c0dcbe3671f52aa8c4bb99f2d0cc3b269e4655f6ace5db437f416a99d38b8094"
+      },
+      "membershipEvidence": {
+        "boundary_way": "305066918",
+        "strict_covers": true,
+        "area_ratio": 0.9999999999999999,
+        "outside_area_m2": 5.684341886080802e-14,
+        "max_distance_outside_m": 0
+      }
+    },
+    {
+      "number": 121,
+      "sourceId": "867da145-5d02-42d1-9d26-ef381dd0b7d6",
+      "sourceName": "121동",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              126.9992678,
+              37.5017424
+            ],
+            [
+              126.9992372,
+              37.5016932
+            ],
+            [
+              126.9996896,
+              37.5015157
+            ],
+            [
+              126.9997191,
+              37.501563
+            ],
+            [
+              126.9997321,
+              37.5015579
+            ],
+            [
+              126.9997655,
+              37.5016113
+            ],
+            [
+              126.9995967,
+              37.5016776
+            ],
+            [
+              126.9997306,
+              37.5018923
+            ],
+            [
+              126.9996785,
+              37.5019128
+            ],
+            [
+              126.9996871,
+              37.5019265
+            ],
+            [
+              126.9996073,
+              37.5019578
+            ],
+            [
+              126.9994657,
+              37.5017308
+            ],
+            [
+              126.9992888,
+              37.5018002
+            ],
+            [
+              126.9992557,
+              37.5017471
+            ],
+            [
+              126.9992678,
+              37.5017424
+            ]
+          ]
+        ]
+      },
+      "osmRecords": [
+        "w499492014@5"
+      ],
+      "osmHeightM": 74.0,
+      "osmFloors": 26,
+      "sourceChildIds": [],
+      "register": {
+        "id": "10231100194466",
+        "row_number": 289618,
+        "parcel_key": "서초구|반포동|land|18|1",
+        "road_key": "서초구|반포대로|275|0|지상",
+        "building_dong": "121동",
+        "floors": "26",
+        "height": "73.7",
+        "households": "76",
+        "source_hash": "490acdd7ddde5c0e2bc2fa7c9a83c157dd062b5b90bc8cd7542c22fff4b07a3d"
+      },
+      "membershipEvidence": {
+        "boundary_way": "305066918",
+        "strict_covers": true,
+        "area_ratio": 1.0000000000000002,
+        "outside_area_m2": 0,
+        "max_distance_outside_m": 0
+      }
+    },
+    {
+      "number": 122,
+      "sourceId": "6ab4af87-98a4-423b-95b9-9534220c15da",
+      "sourceName": "122동",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              127.0000772,
+              37.5020415
+            ],
+            [
+              127.0000469,
+              37.5019925
+            ],
+            [
+              127.0005024,
+              37.5018156
+            ],
+            [
+              127.0005317,
+              37.5018631
+            ],
+            [
+              127.0005447,
+              37.5018581
+            ],
+            [
+              127.0005775,
+              37.5019112
+            ],
+            [
+              127.0004077,
+              37.5019772
+            ],
+            [
+              127.0005399,
+              37.5021915
+            ],
+            [
+              127.0004875,
+              37.5022118
+            ],
+            [
+              127.000496,
+              37.5022255
+            ],
+            [
+              127.0004214,
+              37.5022545
+            ],
+            [
+              127.0002825,
+              37.5020294
+            ],
+            [
+              127.0000987,
+              37.5021008
+            ],
+            [
+              127.000065,
+              37.5020462
+            ],
+            [
+              127.0000772,
+              37.5020415
+            ]
+          ]
+        ]
+      },
+      "osmRecords": [
+        "w499492013@3"
+      ],
+      "osmHeightM": 74.0,
+      "osmFloors": 26,
+      "sourceChildIds": [],
+      "register": {
+        "id": "10231100194729",
+        "row_number": 476973,
+        "parcel_key": "서초구|반포동|land|18|1",
+        "road_key": "서초구|반포대로|275|0|지상",
+        "building_dong": "122동",
+        "floors": "26",
+        "height": "73.7",
+        "households": "76",
+        "source_hash": "5654bd56546d5db316fa4ec9c08d6dceaa2bd12abcd2540cf6d004a399463989"
+      },
+      "membershipEvidence": {
+        "boundary_way": "305066918",
+        "strict_covers": true,
+        "area_ratio": 0.9999999999999999,
+        "outside_area_m2": 1.1368683772161603e-13,
+        "max_distance_outside_m": 0
+      }
+    },
+    {
+      "number": 123,
+      "sourceId": "862e6d08-7acc-4e9b-bd17-56745a737e83",
+      "sourceName": "123동",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              127.0008548,
+              37.5023328
+            ],
+            [
+              127.0008245,
+              37.5022837
+            ],
+            [
+              127.0012798,
+              37.5021069
+            ],
+            [
+              127.0013092,
+              37.5021544
+            ],
+            [
+              127.0013222,
+              37.5021494
+            ],
+            [
+              127.0013549,
+              37.5022024
+            ],
+            [
+              127.001185,
+              37.5022684
+            ],
+            [
+              127.0013173,
+              37.5024827
+            ],
+            [
+              127.0012649,
+              37.502503
+            ],
+            [
+              127.0012733,
+              37.5025167
+            ],
+            [
+              127.0011989,
+              37.5025456
+            ],
+            [
+              127.0010616,
+              37.5023231
+            ],
+            [
+              127.0008778,
+              37.5023945
+            ],
+            [
+              127.0008426,
+              37.5023375
+            ],
+            [
+              127.0008548,
+              37.5023328
+            ]
+          ]
+        ]
+      },
+      "osmRecords": [
+        "w499492012@3"
+      ],
+      "osmHeightM": 74.0,
+      "osmFloors": 26,
+      "sourceChildIds": [],
+      "register": {
+        "id": "10231100193768",
+        "row_number": 548561,
+        "parcel_key": "서초구|반포동|land|18|1",
+        "road_key": "서초구|반포대로|275|0|지상",
+        "building_dong": "123동",
+        "floors": "26",
+        "height": "73.7",
+        "households": "76",
+        "source_hash": "2a92c35c1b2efb65ece4d00e4f92fba27df336d80c8b359a013099601017bf72"
+      },
+      "membershipEvidence": {
+        "boundary_way": "305066918",
+        "strict_covers": true,
+        "area_ratio": 1.0,
+        "outside_area_m2": 0,
+        "max_distance_outside_m": 0
+      }
+    },
+    {
+      "number": 124,
+      "sourceId": "f1290d9e-8fb3-4d06-9cde-654603528257",
+      "sourceName": "124동",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              127.0017467,
+              37.5026983
+            ],
+            [
+              127.0017151,
+              37.5026454
+            ],
+            [
+              127.0017273,
+              37.5026408
+            ],
+            [
+              127.0016978,
+              37.5025913
+            ],
+            [
+              127.0021321,
+              37.5024282
+            ],
+            [
+              127.0021616,
+              37.5024778
+            ],
+            [
+              127.0021758,
+              37.5024725
+            ],
+            [
+              127.0022078,
+              37.5025261
+            ],
+            [
+              127.0020438,
+              37.5025877
+            ],
+            [
+              127.0021926,
+              37.5028343
+            ],
+            [
+              127.0020624,
+              37.5028838
+            ],
+            [
+              127.0019127,
+              37.5026359
+            ],
+            [
+              127.0017467,
+              37.5026983
+            ]
+          ]
+        ]
+      },
+      "osmRecords": [
+        "r19611740@1"
+      ],
+      "osmHeightM": 79.0,
+      "osmFloors": 28,
+      "sourceChildIds": [],
+      "register": {
+        "id": "10231100193576",
+        "row_number": 552636,
+        "parcel_key": "서초구|반포동|land|18|1",
+        "road_key": "서초구|반포대로|275|0|지상",
+        "building_dong": "124동",
+        "floors": "28",
+        "height": "79.3",
+        "households": "76",
+        "source_hash": "2bee4d64d836fd3181654389035ba0cff560f0f037427d4e6fe160efeb829dec"
+      },
+      "membershipEvidence": {
+        "boundary_way": "305066918",
+        "strict_covers": true,
+        "area_ratio": 1.0000000000000002,
+        "outside_area_m2": 0,
+        "max_distance_outside_m": 0
+      }
+    },
+    {
+      "number": 125,
+      "sourceId": "e5b827c0-047d-47e7-8bd9-9f2613e45148",
+      "sourceName": "125동",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              126.9948317,
+              37.5027478
+            ],
+            [
+              126.9947637,
+              37.5026941
+            ],
+            [
+              126.99481,
+              37.5026572
+            ],
+            [
+              126.9947703,
+              37.5026259
+            ],
+            [
+              126.9948456,
+              37.5025659
+            ],
+            [
+              126.9949074,
+              37.5026148
+            ],
+            [
+              126.9949579,
+              37.5025745
+            ],
+            [
+              126.9950146,
+              37.5026193
+            ],
+            [
+              126.9949715,
+              37.5026536
+            ],
+            [
+              126.9950541,
+              37.5027188
+            ],
+            [
+              126.9949721,
+              37.5027841
+            ],
+            [
+              126.9948788,
+              37.5027104
+            ],
+            [
+              126.9948317,
+              37.5027478
+            ]
+          ]
+        ]
+      },
+      "osmRecords": [
+        "w412953593@4"
+      ],
+      "osmHeightM": 82.0,
+      "osmFloors": 29,
+      "sourceChildIds": [],
+      "register": {
+        "id": "10231100193653",
+        "row_number": 288561,
+        "parcel_key": "서초구|반포동|land|18|1",
+        "road_key": "서초구|반포대로|275|0|지상",
+        "building_dong": "125동",
+        "floors": "29",
+        "height": "82.1",
+        "households": "114",
+        "source_hash": "33163a1aad13c723c3b82668c8fdd1e9b8c6e4f24bd3c2f201a202dbfd0bfc4e"
+      },
+      "membershipEvidence": {
+        "boundary_way": "305066918",
+        "strict_covers": true,
+        "area_ratio": 1.0,
+        "outside_area_m2": 0,
+        "max_distance_outside_m": 0
+      }
+    },
+    {
+      "number": 126,
+      "sourceId": "b21842a2-9832-4a21-bcc5-1c571f309556",
+      "sourceName": "126동",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              126.994305,
+              37.5026117
+            ],
+            [
+              126.9943413,
+              37.5025143
+            ],
+            [
+              126.994623,
+              37.5025805
+            ],
+            [
+              126.9945876,
+              37.5026754
+            ],
+            [
+              126.9944794,
+              37.50265
+            ],
+            [
+              126.994465,
+              37.5026887
+            ],
+            [
+              126.9943864,
+              37.5026702
+            ],
+            [
+              126.9943999,
+              37.502634
+            ],
+            [
+              126.994305,
+              37.5026117
+            ]
+          ]
+        ]
+      },
+      "osmRecords": [
+        "w412953591@4"
+      ],
+      "osmHeightM": 65.0,
+      "osmFloors": 23,
+      "sourceChildIds": [],
+      "register": {
+        "id": "10231100193383",
+        "row_number": 5564,
+        "parcel_key": "서초구|반포동|land|18|1",
+        "road_key": "서초구|반포대로|275|0|지상",
+        "building_dong": "126동",
+        "floors": "23",
+        "height": "65.3",
+        "households": "44",
+        "source_hash": "3b0e6f15201de87fec94fd3332bf90e59142092777968760cfe501bb2f942406"
+      },
+      "membershipEvidence": {
+        "boundary_way": "305066918",
+        "strict_covers": true,
+        "area_ratio": 1.0000000000000002,
+        "outside_area_m2": 0,
+        "max_distance_outside_m": 0
+      }
+    },
+    {
+      "number": 127,
+      "sourceId": "2e9c2654-8b83-481c-b454-540c5dea2a68",
+      "sourceName": "127동",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              126.9945902,
+              37.5019474
+            ],
+            [
+              126.9946265,
+              37.50185
+            ],
+            [
+              126.9949082,
+              37.5019162
+            ],
+            [
+              126.9948728,
+              37.5020111
+            ],
+            [
+              126.9947646,
+              37.5019857
+            ],
+            [
+              126.9947502,
+              37.5020244
+            ],
+            [
+              126.9946716,
+              37.5020059
+            ],
+            [
+              126.9946851,
+              37.5019698
+            ],
+            [
+              126.9945902,
+              37.5019474
+            ]
+          ]
+        ]
+      },
+      "osmRecords": [
+        "w412953590@4"
+      ],
+      "osmHeightM": 79.0,
+      "osmFloors": 29,
+      "sourceChildIds": [],
+      "register": {
+        "id": "10231100193428",
+        "row_number": 2499,
+        "parcel_key": "서초구|반포동|land|18|1",
+        "road_key": "서초구|반포대로|275|0|지상",
+        "building_dong": "127동",
+        "floors": "29",
+        "height": "79.3",
+        "households": "56",
+        "source_hash": "603d5c0526e3c0aad98444765c3b608eca4d2fadf1fbd3e97962cefe1d7c7fba"
+      },
+      "membershipEvidence": {
+        "boundary_way": "305066918",
+        "strict_covers": true,
+        "area_ratio": 0.9999999999999998,
+        "outside_area_m2": 5.684341886080802e-14,
+        "max_distance_outside_m": 0
+      }
+    },
+    {
+      "number": 128,
+      "sourceId": "6ffdd952-2910-46e0-8ac1-6994a4dba839",
+      "sourceName": "128동",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              126.9950509,
+              37.502084
+            ],
+            [
+              126.9949922,
+              37.5020221
+            ],
+            [
+              126.9951904,
+              37.5019038
+            ],
+            [
+              126.9953605,
+              37.5020833
+            ],
+            [
+              126.9952866,
+              37.5021274
+            ],
+            [
+              126.9952103,
+              37.5020468
+            ],
+            [
+              126.9951539,
+              37.5020805
+            ],
+            [
+              126.9951189,
+              37.5020435
+            ],
+            [
+              126.9950509,
+              37.502084
+            ]
+          ]
+        ]
+      },
+      "osmRecords": [
+        "w412953592@4"
+      ],
+      "osmHeightM": 88.0,
+      "osmFloors": 31,
+      "sourceChildIds": [],
+      "register": {
+        "id": "10231100193294",
+        "row_number": 432990,
+        "parcel_key": "서초구|반포동|land|18|1",
+        "road_key": "서초구|반포대로|275|0|지상",
+        "building_dong": "128동",
+        "floors": "31",
+        "height": "87.7",
+        "households": "88",
+        "source_hash": "d4fb1848cb7b2e85fe5b34c8cc5bc1331d94a5c3b6062c6154647d8f20d94795"
+      },
+      "membershipEvidence": {
+        "boundary_way": "305066918",
+        "strict_covers": true,
+        "area_ratio": 1.0000000000000002,
+        "outside_area_m2": 0,
+        "max_distance_outside_m": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "stage": "v3",
+  "status": "READY_FOR_PARENT_VISUAL_REVIEW",
+  "recipeAndAnchorsRetained": true,
+  "wholeBuildingMoved": false,
+  "camera101Unchanged": true,
+  "bridgeOwners": [
+    101,
+    123
+  ],
+  "corrections": [
+    "Use actual courtyard profile edges instead of full-wing bounding minima",
+    "Gallery glazing replaces residential facade overlays in the corresponding bay",
+    "Wide 102 attached gallery and narrower 101 gallery below one unbroken pale header",
+    "Shorter lower gallery glass with dark solid lower supports",
+    "Recessed central glazing behind discrete pergola beams",
+    "Roof brand mesh corrected to registered maximum height"
+  ],
+  "estimatedDimensions": {
+    "101Gallery": [
+      -31.25,
+      -21.55,
+      15.25,
+      16,
+      27.9,
+      34
+    ],
+    "102Gallery": [
+      6.7,
+      23.2,
+      7.1,
+      16.4,
+      27.9,
+      34
+    ],
+    "interpretation": "x0,x1,frontY,glassBottom,bridgeFloor,bridgeTop in building-local meters"
+  },
+  "uncertainties": [
+    "Photo supports morphology and proportions, not surveyed dimensions",
+    "Sibling 122/123 geometry is explicitly representative inference",
+    "Hidden faces and exact gallery structural interiors remain estimated"
+  ],
+  "validation": {
+    "allFiveFinite": true,
+    "unitNormals": true,
+    "bakedNodeTransforms": true,
+    "uniqueSourceOwnership": true,
+    "heightCeilingsPassed": true,
+    "totalTriangles": 557312,
+    "totalBytes": 35793008
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "date": "2026-09-22",
+  "scope": "OneBailey103–108; distinct exact footprint partitions and representative facade inference",
+  "baseCommit": "87d6ed2193f1c20b45f204329aeb1db72f522d4e",
+  "newBespokeAssets": 6,
+  "totalBespokeRecordsIncludingHistorical": 108,
+  "preserved": {
+    "bespoke-manifest.json": {
+      "preserved": 102,
+      "current": 108
+    },
+    "reference-manifest.json": {
+      "preserved": 125,
+      "current": 125
+    },
+    "manifest.json": {
+      "preserved": 13607,
+      "current": 13607
+    }
+  },
+  "checks": {
+    "node": 13751,
+    "python": 24,
+    "browserNormalAndIndependentOrSixSimultaneousFailures": 5,
+    "build": "passed"
+  },
+  "logs": {
+    "node": {
+      "sha256": "04d12b1718a55a59820500cd775aaf3cb3646b128382c01554568b99af589434",
+      "tail": [
+        "✔ street-level horizon requests remain inside a 600 metre local square (0.122917ms)",
+        "✔ eye-level requests include nearby tall buildings beyond the small ground-plane extent (0.068584ms)",
+        "✔ transient disjoint or invalid horizon bounds still produce a valid nearby cap (0.0775ms)",
+        "✔ flight queries use a bounded aircraft focus despite remote, invalid or changing camera bounds (0.098667ms)",
+        "✔ flight focus is map-specific, copied, snapped to 100m and removable (0.119666ms)",
+        "✔ flight model work coalesces at 1Hz, tracks aircraft rather than target, and cancels on exit/dispose (2.496417ms)",
+        "ℹ tests 13751",
+        "ℹ suites 0",
+        "ℹ pass 13751",
+        "ℹ fail 0",
+        "ℹ cancelled 0",
+        "ℹ skipped 0",
+        "ℹ todo 0",
+        "ℹ duration_ms 23792.728834"
+      ]
+    },
+    "python": {
+      "sha256": "cc8e288f47b2b0a49111b7effe40746712c0bf80d0a9d3ff60f9146077d8273c",
+      "tail": [
+        ".......",
+        "----------------------------------------------------------------------",
+        "Ran 7 tests in 0.005s",
+        "",
+        "OK",
+        ".................",
+        "----------------------------------------------------------------------",
+        "Ran 17 tests in 1.582s",
+        "",
+        "OK"
+      ]
+    },
+    "build": {
+      "sha256": "7d4be0d98a3ac61d94421b718541200afee719a0b9bce0a1a083eacdd5b25ae6",
+      "tail": [
+        "dist/assets/generic-corrections-C8hp-7xn.js      1.63 kB │ gzip:   0.72 kB",
+        "dist/assets/reference-models-CjKOile1.js         2.52 kB │ gzip:   1.04 kB",
+        "dist/assets/generic-corrections-C-Nqk46H.js     94.37 kB │ gzip:   9.59 kB",
+        "dist/assets/city-models-umT6JtuW.js            626.64 kB │ gzip: 159.70 kB",
+        "dist/assets/index-C_FFxce6.js                1,147.43 kB │ gzip: 310.74 kB",
+        "",
+        "✓ built in 42.12s",
+        "\u001b[33m[PLUGIN_TIMINGS] \u001b[0mPlugin hooks ran for 100.9s. The build took 42.1s. Hooks such as `closeBundle` run after the build ends, so hook time can be more than build time.",
+        "The slowest hooks, timed inside each callback (the wait before a callback starts is excluded, the time it awaits is included):",
+        "  - local-precompressed-assets closeBundle (100%, 58.9s, 1 call)",
+        "  - vite:prepare-out-dir renderStart (99%, 41.8s, 1 call)",
+        "Additional hook time came from hooks under 1s.",
+        "See https://rolldown.rs/reference/InputOptions.checks#plugintimings for more details.",
+        ""
+      ]
+    },
+    "browser": {
+      "sha256": "742d2c489a000a00d3f008b49613632785bbbd1329d15d5af06db6600f7502f2",
+      "tail": [
+        "",
+        "Running 5 tests using 1 worker",
+        "",
+        "(node:97091) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.",
+        "(Use `node --trace-warnings ...` to show where the warning was created)",
+        "  ✓  1 tests/onebailey-family.spec.ts:10:3 › OneBailey eleven towers: all models draw (8.9s)",
+        "  ✓  2 tests/onebailey-family.spec.ts:10:3 › OneBailey eleven towers: models 101 unavailable (8.1s)",
+        "  ✓  3 tests/onebailey-family.spec.ts:10:3 › OneBailey eleven towers: models 123 unavailable (8.8s)",
+        "  ✓  4 tests/onebailey-family.spec.ts:10:3 › OneBailey eleven towers: models 105 unavailable (8.0s)",
+        "  ✓  5 tests/onebailey-family.spec.ts:10:3 › OneBailey eleven towers: models 103,104,105,106,107,108 unavailable (8.7s)",
+        "",
+        "  5 passed (47.9s)"
+      ]
+    }
+  },
+  "browserRecords": {
+    "docs/model-audit/renders/raemian-onebailey-103-108-family/map/normal.json": "fee549a639fc72e6e598b7c5f1345df8ead539eb7ee11d0136862cbcc8177430",
+    "docs/model-audit/renders/raemian-onebailey-103-108-family/map/missing-101.json": "2cb4142026cad51c66ae90ded419559afc23f80c8ea0aaaba9bb2350ef98d792",
+    "docs/model-audit/renders/raemian-onebailey-103-108-family/map/missing-105.png": "ef9a2063d4eb0049c9803a90056d7c7e0a27b6fe096a5925b3890be32b50ea00",
+    "docs/model-audit/renders/raemian-onebailey-103-108-family/map/missing-101.png": "b84a85741dfe23b1acbf61107ff6bee9673353154592f3e891e177c1ad7f7f21",
+    "docs/model-audit/renders/raemian-onebailey-103-108-family/map/missing-103-104-105-106-107-108.png": "dd94320d1a363a4005c936796a057044fb6655af481087f00c3e3e13c4d8c6f9",
+    "docs/model-audit/renders/raemian-onebailey-103-108-family/map/missing-123.json": "fd95a36fe3618f537ea823d0323e418add876133576cbad22cd8a990249be8e0",
+    "docs/model-audit/renders/raemian-onebailey-103-108-family/map/missing-123.png": "368dacd04d8ea064bda1c95709788ee986620a7396154b567073af069d985f3a",
+    "docs/model-audit/renders/raemian-onebailey-103-108-family/map/normal.png": "d864262518cde2605fd631482d20f1ef8366b22b5e60e5a76a38c330bfebfc3e",
+    "docs/model-audit/renders/raemian-onebailey-103-108-family/map/missing-105.json": "ea52773cd32ddea33a0e6925fdd6322f80ed3bc4b378e429fa3d38dda25a0747",
+    "docs/model-audit/renders/raemian-onebailey-103-108-family/map/missing-103-104-105-106-107-108.json": "5ba5cf9c0e5b6934f2f8ae8b84a8188ab36b0e58da1353fdccd1b8bb5e516c95"
+  },
+  "visualReview": "Root independently reviewed authored renders and final normal/six-simultaneous-failure map images. Model authoring/review details and final106correspondence are bound in the published source record. Representative inference does not verify all facades of each numbered building.",
+  "coverage": {
+    "maple": "29/29,18representativeinferred",
+    "onepentas": "6/6,4representativeinferred",
+    "onebailey": "11/23,10representativeinferred"
+  },
+  "fallbackPreservation": "All19 original OneBailey footprints and19839triangles retain originalattributes/materials/anchor exactly once. Original102bespokerecords,125reference and13607genericrecords preserved byte-for-byte; prior individualfallbacks unchanged. Remaining8fallbackfootprints stay in originalgroup.",
+  "publicationState": "Local proof; PR anddeployment tracked separately."
+}

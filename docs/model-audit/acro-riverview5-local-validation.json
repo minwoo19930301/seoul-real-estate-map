@@ -1,0 +1,188 @@
+{
+  "status": "passed",
+  "node": {
+    "passed": 13791,
+    "failed": 0
+  },
+  "python": {
+    "heightGeometryTests": 12,
+    "publisherTests": 11,
+    "coverageQueueTests": 18
+  },
+  "browser": {
+    "passed": 5,
+    "scenarios": [
+      {
+        "name": "normal",
+        "wanted": [
+          "bespoke-acro-riverview-101",
+          "bespoke-acro-riverview-102",
+          "bespoke-acro-riverview-103",
+          "bespoke-acro-riverview-104",
+          "bespoke-acro-riverview-105",
+          "apt-a10026227"
+        ],
+        "failedIds": [],
+        "ownedSourceIds": [
+          "37049115-89b7-4d85-b3b2-eb165dba6629",
+          "83d9f9ef-e053-405c-a8d3-5692794e2858",
+          "0da01762-879b-4abc-9b48-aeb581ee90f4",
+          "de5ade0e-4f29-4960-af89-2f0a776eb570",
+          "baceb874-9846-4feb-a8c2-5b769041852e",
+          "77c66b26-e411-42e1-bac0-339e92925576",
+          "28668f28-4296-4b97-898b-b61b7cadf0eb"
+        ],
+        "rawSourceIds": [],
+        "pageErrors": [],
+        "neighborResidual112And113Active": true
+      },
+      {
+        "name": "representative-fallback",
+        "wanted": [
+          "fallback-acro-riverview-101",
+          "bespoke-acro-riverview-102",
+          "bespoke-acro-riverview-103",
+          "bespoke-acro-riverview-104",
+          "bespoke-acro-riverview-105",
+          "apt-a10026227"
+        ],
+        "failedIds": [
+          "bespoke-acro-riverview-101"
+        ],
+        "ownedSourceIds": [
+          "37049115-89b7-4d85-b3b2-eb165dba6629",
+          "83d9f9ef-e053-405c-a8d3-5692794e2858",
+          "0da01762-879b-4abc-9b48-aeb581ee90f4",
+          "de5ade0e-4f29-4960-af89-2f0a776eb570",
+          "baceb874-9846-4feb-a8c2-5b769041852e",
+          "77c66b26-e411-42e1-bac0-339e92925576",
+          "28668f28-4296-4b97-898b-b61b7cadf0eb"
+        ],
+        "rawSourceIds": [],
+        "pageErrors": [],
+        "neighborResidual112And113Active": true
+      },
+      {
+        "name": "two-archive-mixed-fallbacks",
+        "wanted": [
+          "bespoke-acro-riverview-101",
+          "fallback-acro-riverview-102",
+          "bespoke-acro-riverview-103",
+          "fallback-acro-riverview-104",
+          "bespoke-acro-riverview-105",
+          "apt-a10026227"
+        ],
+        "failedIds": [
+          "bespoke-acro-riverview-102",
+          "bespoke-acro-riverview-104"
+        ],
+        "ownedSourceIds": [
+          "37049115-89b7-4d85-b3b2-eb165dba6629",
+          "83d9f9ef-e053-405c-a8d3-5692794e2858",
+          "0da01762-879b-4abc-9b48-aeb581ee90f4",
+          "de5ade0e-4f29-4960-af89-2f0a776eb570",
+          "baceb874-9846-4feb-a8c2-5b769041852e",
+          "77c66b26-e411-42e1-bac0-339e92925576",
+          "28668f28-4296-4b97-898b-b61b7cadf0eb"
+        ],
+        "rawSourceIds": [],
+        "pageErrors": [],
+        "neighborResidual112And113Active": true
+      },
+      {
+        "name": "104-raw-restoration",
+        "wanted": [
+          "bespoke-acro-riverview-101",
+          "bespoke-acro-riverview-102",
+          "bespoke-acro-riverview-103",
+          "bespoke-acro-riverview-105",
+          "apt-a10026227"
+        ],
+        "failedIds": [
+          "bespoke-acro-riverview-104",
+          "fallback-acro-riverview-104"
+        ],
+        "ownedSourceIds": [
+          "37049115-89b7-4d85-b3b2-eb165dba6629",
+          "83d9f9ef-e053-405c-a8d3-5692794e2858",
+          "0da01762-879b-4abc-9b48-aeb581ee90f4",
+          "baceb874-9846-4feb-a8c2-5b769041852e",
+          "77c66b26-e411-42e1-bac0-339e92925576",
+          "28668f28-4296-4b97-898b-b61b7cadf0eb"
+        ],
+        "rawSourceIds": [
+          "de5ade0e-4f29-4960-af89-2f0a776eb570"
+        ],
+        "pageErrors": [],
+        "neighborResidual112And113Active": true
+      },
+      {
+        "name": "all5-fallbacks",
+        "wanted": [
+          "fallback-acro-riverview-101",
+          "fallback-acro-riverview-102",
+          "fallback-acro-riverview-103",
+          "fallback-acro-riverview-104",
+          "fallback-acro-riverview-105",
+          "apt-a10026227"
+        ],
+        "failedIds": [
+          "bespoke-acro-riverview-101",
+          "bespoke-acro-riverview-102",
+          "bespoke-acro-riverview-103",
+          "bespoke-acro-riverview-104",
+          "bespoke-acro-riverview-105"
+        ],
+        "ownedSourceIds": [
+          "37049115-89b7-4d85-b3b2-eb165dba6629",
+          "83d9f9ef-e053-405c-a8d3-5692794e2858",
+          "0da01762-879b-4abc-9b48-aeb581ee90f4",
+          "de5ade0e-4f29-4960-af89-2f0a776eb570",
+          "baceb874-9846-4feb-a8c2-5b769041852e",
+          "77c66b26-e411-42e1-bac0-339e92925576",
+          "28668f28-4296-4b97-898b-b61b7cadf0eb"
+        ],
+        "rawSourceIds": [],
+        "pageErrors": [],
+        "neighborResidual112And113Active": true
+      }
+    ]
+  },
+  "build": "passed",
+  "renderReview": {
+    "models": 5,
+    "actualMCPViews": 20,
+    "sourcePhoto": "https://img.kr.gcp-karroter.net/realty/realty/articles/1cc205df-e746-4d30-9418-aafc37c7bfec.jpeg"
+  },
+  "geometry": "Full own footprint at grade and roof deck, registered height/floors, all projections below0.281m, raised cap contained. Uniform maximum-height assumption: no childparts.",
+  "preservation": {
+    "baseline": "9f441f2de4fc0c751142335bd5e5dd5a7f9d54df",
+    "public/models/manifest.json": 13607,
+    "public/models/reference-manifest.json": 125,
+    "public/models/bespoke-manifest.json": 215,
+    "priorCorrections": 13,
+    "unchangedPriorGLBAndBlendFiles": 113723
+  },
+  "fallback": {
+    "originalTriangles": 4004,
+    "byteExactAuthoringReplay": true,
+    "perSourceSignatureMultiplicityExact": true,
+    "hullApproximationTriangles": 0,
+    "preservedNeighborSourceIds": [
+      "77c66b26-e411-42e1-bac0-339e92925576",
+      "28668f28-4296-4b97-898b-b61b7cadf0eb"
+    ]
+  },
+  "coverage": {
+    "eligibleManagementCodes": 1417,
+    "completeManagementCodes": 20,
+    "representativeInferredBuildingCount": 142
+  },
+  "limitations": [
+    "Listing-card photo; not proven resident review.",
+    "Image-of-screen moire; uncalibrated color and foreground roof cropped.",
+    "Numbered tower/orientation and hidden elevations unconfirmed.",
+    "Roof/window details unmeasured, uniform maximum height assumed.",
+    "Existing Blender MCP session only; source photographs remain local."
+  ]
+}
