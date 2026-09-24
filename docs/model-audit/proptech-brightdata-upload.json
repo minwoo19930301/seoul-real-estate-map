@@ -1,9 +1,21 @@
 {
-  "checkedAt": "2026-09-24",
+  "checkedAt": "2026-09-24T00:15:43.867778+00:00",
   "database": "seoul-service",
   "transport": "brightdata-web-unlocker-api",
+  "columns": [
+    "snapshotId",
+    "provider",
+    "providerComplexId",
+    "url",
+    "rawSha256",
+    "factCount",
+    "observedCount",
+    "notObservedCount"
+  ],
   "snapshots": [
     [
+      "2ba95a21750d022a66e6b4cddae335376875c4668e62f08279e8a68e49a5cc77",
+      "kbland",
       "13886",
       "https://kbland.kr/se/c/13886",
       "0b9d9fbd31e266625d9e05e7ee84bb4f828c535f1bc0e5bef98f29106befcfb8",
@@ -12,6 +24,8 @@
       "4"
     ],
     [
+      "61d3cbf1c26e0faa2a19f5a1ef56905cd1adc4b4fd7c16595192b222eddfdec4",
+      "kbland",
       "1985",
       "https://kbland.kr/se/c/1985",
       "615bc8ec55bc59ac0a038f3dfc2703cd9f897dd195202756f19aa4d52803e037",
@@ -20,6 +34,8 @@
       "5"
     ],
     [
+      "101aeb679ca0da3b16c1735603de9a06f679ea5bda8123dcb969a148115c5bc2",
+      "kbland",
       "2000",
       "https://kbland.kr/se/c/2000",
       "c1887863f6c09024ada928626dba7bf004b2f030933fb3de40c4a3828380b27a",
@@ -28,6 +44,8 @@
       "1"
     ],
     [
+      "e15b86510c55cbf79624b5e1822e72bd65fa0718feafd6d91fd48546cf6727c1",
+      "kbland",
       "22859",
       "https://kbland.kr/se/c/22859",
       "5d8d3a772662223098faeade7d06a47c9f18bbffa9aaf0e70c8eb10615a3d693",
@@ -36,17 +54,29 @@
       "2"
     ],
     [
+      "fd66ea4345b127e44464cc9742d79effbf9ec32df72712891a3c629dd3da3f9b",
+      "kbland",
       "34391",
       "https://kbland.kr/se/c/34391",
       "88677f0bfff9e5148997b013cc0b7e03d01021d58f4778534828ccc56dbc3858",
       "261",
       "258",
       "3"
+    ],
+    [
+      "36da3b0ebb39b75990c6e8a3c66d8b95924e509c71c936907db7fb983bd06574",
+      "naver-gallery",
+      "101160",
+      "https://land.naver.com/info/groundPlanGallery.naver?rletNo=101160&ptpId=1&newComplex=Y",
+      "0b1c9a55870f73d8c7cdc3c2fca545845e4015104d225e52ed9886aefefc51c5",
+      "157",
+      "157",
+      "0"
     ]
   ],
-  "totalFacts": 832,
-  "observedFacts": 817,
+  "totalFacts": 989,
+  "observedFacts": 974,
   "notObserved": 15,
-  "verification": "Independent read-only Turso connection; counts and stored original hashes checked",
-  "scope": "Five KB complex snapshots only, not all requested platforms or live owner-verified listing data"
+  "verification": "Independent read-only Turso query of EVERY field value, unit, observation state and source pointer matched against re-extracted original BD payloads, plus raw SHA256",
+  "scope": "Five KB complex snapshots plus Naver gallery building metadata for DMC (51buildings), not all requested platforms or live owner-verified listing data"
 }

@@ -161,6 +161,61 @@ def extract_kb(raw, receipt):
             'facts': facts, 'limits': LIMITS}
 
 
+def extract_naver_gallery(raw, receipt):
+    if (receipt.get('transport') != TRANSPORT or receipt.get('httpStatus') != 200
+            or hashlib.sha256(raw).hexdigest() != receipt.get('sha256')):
+        raise ValueError('Verified successful Bright Data snapshot required')
+    url = urllib.parse.urlsplit(receipt['url'])
+    params = urllib.parse.parse_qs(url.query)
+    ids = params.get('rletNo', [])
+    if (url.scheme != 'https' or url.hostname != 'land.naver.com'
+            or url.path != '/info/groundPlanGallery.naver' or len(ids) != 1 or not ids[0].isdigit()):
+        raise ValueError('Unsupported public gallery URL')
+    parser = Scripts()
+    parser.feed(raw.decode('utf-8'))
+    script = '\n'.join(parser.scripts)
+    def payload(name):
+        matches = re.findall(name + r"\s*:\s*'([^'\n]*)'", script)
+        if len(matches) != 1:
+            raise ValueError('Missing or ambiguous embedded gallery data')
+        return json.loads(matches[0])
+    identity = payload('complexDongHo')
+    buildings = payload('complexDongList')
+    if str(identity.get('hscpNo')) != ids[0] or not identity.get('hscpNm'):
+        raise ValueError('Gallery complex mismatch')
+    rows = buildings.get('bildList', [])
+    if buildings.get('bildCount') != len(rows) or not rows:
+        raise ValueError('Incomplete building list')
+    facts = []
+    def add(scope, key, value, unit, pointer):
+        facts.append({'scope': scope, 'field': key, 'value': value, 'unit': unit,
+                      'status': 'not_observed' if value is None else 'observed', 'sourcePointer': pointer})
+    for key, unit in [('hscpNm', None), ('highFlr', 'floors'), ('lowFlr', 'floors')]:
+        add('complex', key, identity.get(key), unit, '/jsonPageData/complexDongHo/' + key)
+    add('complex', 'bildCount', len(rows), 'buildings', '/jsonPageData/complexDongList/bildCount')
+    seen = set()
+    for i, row in enumerate(rows):
+        number = row.get('dongNo')
+        if number is None or number in seen or not row.get('bildNm'):
+            raise ValueError('Ambiguous building identity')
+        seen.add(number)
+        for key, unit in [('bildNm', None), ('highFlr', 'floors'), ('lowFlr', 'floors')]:
+            add('building:' + str(number), key, row.get(key), unit,
+                f'/jsonPageData/complexDongList/bildList/{i}/' + key)
+    return {'provider': 'naver-gallery', 'providerComplexId': ids[0], 'name': identity['hscpNm'],
+            'facts': facts, 'limits': '공개 갤러리 단지·동별 층수 자료. 호가·집주인확인·급매·실시간 매물 자료가 아님. '
+            'lowFlr는 원천 최저층 표기이며 지하층수로 해석하지 않음. 세대 호수·소유주 정보는 적재하지 않음.'}
+
+
+def extract(raw, receipt):
+    host = urllib.parse.urlsplit(receipt['url']).hostname
+    if host == 'kbland.kr':
+        return extract_kb(raw, receipt)
+    if host == 'land.naver.com':
+        return extract_naver_gallery(raw, receipt)
+    raise ValueError('No reviewed parser for this provider; nothing uploaded')
+
+
 def sql(hostname, token, statements):
     endpoint = 'https://' + hostname + '/v2/pipeline'
     def send(items, baton=None, close=False):
@@ -247,7 +302,7 @@ def main():
     else:
         receipt = json.loads(args.receipt.read_text())
         path = args.receipt.with_name(args.receipt.name.replace('.receipt.json', '.html'))
-    document = extract_kb(path.read_bytes(), receipt)
+    document = extract(path.read_bytes(), receipt)
     output = path.with_suffix('.facts.json')
     output.write_text(encoded(document))
     result = {'providerComplexId': document['providerComplexId'], 'name': document['name'],

@@ -59,5 +59,32 @@ class Transactions(unittest.TestCase):
             sql('test.turso.io', 'secret', [('BEGIN', []), ('COMMIT', [])])
             self.assertEqual(request.call_args.args[2]['requests'][0]['stmt']['sql'], 'COMMIT')
 
+
+class NaverGallery(unittest.TestCase):
+    def fixture(self, duplicated=False):
+        rows = [{'dongNo': 1, 'bildNm': '101', 'highFlr': 10, 'lowFlr': 2}]
+        if duplicated:
+            rows *= 2
+        raw = ("<script>var jsonPageData={complexDongHo:'" + json.dumps(
+            {'hscpNo': 101160, 'hscpNm': 'DMC', 'highFlr': 35, 'lowFlr': 1,
+             'hoList': [{'privateContact': 'DO_NOT_STORE'}]}) + "',complexDongList:'" + json.dumps(
+            {'bildCount': len(rows), 'bildList': rows}) + "'};</script>").encode()
+        return raw, {'url': 'https://land.naver.com/info/groundPlanGallery.naver?rletNo=101160',
+            'transport': TRANSPORT, 'httpStatus': 200, 'sha256': hashlib.sha256(raw).hexdigest()}
+    def test_public_building_floors_only(self):
+        from scripts.collect_proptech_brightdata import extract
+        data = extract(*self.fixture())
+        self.assertEqual(len(data['facts']), 7)
+        self.assertNotIn('DO_NOT_STORE', json.dumps(data))
+        self.assertEqual(data['provider'], 'naver-gallery')
+    def test_duplicates_and_wrong_identity_rejected(self):
+        from scripts.collect_proptech_brightdata import extract
+        with self.assertRaises(ValueError):
+            extract(*self.fixture(True))
+        raw, receipt = self.fixture()
+        receipt['url'] = receipt['url'].replace('101160', '999')
+        with self.assertRaises(ValueError):
+            extract(raw, receipt)
+
 if __name__ == '__main__':
     unittest.main()

@@ -23,9 +23,9 @@ python3 scripts/collect_proptech_brightdata.py \
 - `proptech_bd_snapshots`: 공급자 단지 ID, URL, 수집 시각, 원문 SHA256, Bright Data 전달 경로, 수집 한계.
 - `proptech_bd_facts`: snapshot별 단지·평형 항목, 원문 필드명, JSON 값, 단위, 관측 여부, 원문 데이터 경로.
 
-현재 KB Next.js 응답의 실제 단지 상세·평형 자료만 추출한다. 주차, 난방, 현관구조, 지상 최저·최고층수, 연면적, 방·욕실, 면적, 평면도 열람 URL, 계절별·연평균 총관리비를 화이트리스트로 가져온다. 커뮤니티 게시자·연락처·대출 추천·소유자 프로필은 추출하지 않는다.
+KB Next.js 응답의 실제 단지 상세·평형 자료와 네이버 공개 갤러리의 단지·동별 층수를 추출한다. 주차, 난방, 현관구조, 지상 최저·최고층수, 연면적, 방·욕실, 면적, 평면도 열람 URL, 계절별·연평균 총관리비를 화이트리스트로 가져온다. 커뮤니티 게시자·연락처·대출 추천·소유자 프로필은 추출하지 않는다.
 
-`not_observed`와 실제 0을 구분한다. 관리비는 총관리비이며 공용관리비나 연간 합계로 바꾸지 않는다. 평면도 URL 수집이 이미지 다운로드·베이 판독을 의미하지 않는다. 단지 ID는 KB의 ID다. 관리코드와의 병합에는 별도의 주소·단지 대조가 필요하다.
+`not_observed`와 실제 0을 구분한다. 관리비는 총관리비이며 공용관리비나 연간 합계로 바꾸지 않는다. 평면도 URL 수집이 이미지 다운로드·베이 판독을 의미하지 않는다. 단지 ID는 각 공급자의 ID다. KB 22859와 네이버 101160은 서로 다른 공급자에서 같은 단지를 가리킨다. 관리코드와의 병합에는 별도의 주소·단지 대조가 필요하다.
 
 ## 아직 수집하지 않은 항목
 
@@ -36,3 +36,5 @@ python3 scripts/collect_proptech_brightdata.py \
 첫 Bright Data 응답에서 밸류맵·닥집은 앱 화면만, 네이버 첫 화면은 검색 UI만 내려왔다. `jaegaebal.com`은 도메인 안내, 클린업 첫 URL은 빈 응답이었다. HTTP 200만으로 해당 플랫폼 수치가 확보됐다고 보지 않는다. 상세 URL·공개 응답 또는 권한 있는 연결이 확인되어야 다음 파서를 추가한다.
 
 [Bright Data REST 요청](https://docs.brightdata.com/products/web-unlocker/send-your-first-request) · [Turso SQL HTTP](https://docs.turso.tech/sdk/http/reference)
+
+네이버는 실제 KB 평면도 링크에서 확인한 갤러리 URL을 Bright Data로 조회했다. DMC 단지 51개 동의 이름·최고층·최저층을 별도 snapshot으로 적재했다. 갤러리의 세대 호수·중개사 정보는 제외한다. 동별 층수가 확보돼도 동별 호가·프리미엄이 확보된 것은 아니다.
