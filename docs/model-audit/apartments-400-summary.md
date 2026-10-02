@@ -45,6 +45,7 @@ K-apt 서울 자료의 123코드에는 복수 주소 등에 따른 추가 147행
 | A12174601 | 메세나폴리스 | complete_residential_buildings | 3 / 3 | 0 |
 | A12175203 | 마포래미안푸르지오 | partial | 44 / 51 | 44 |
 | A13375907 | 래미안옥수리버젠 | complete_residential_buildings | 15 / 15 | 15 |
+| A13485302 | 강동롯데캐슬퍼스트아파트 | partial | 36 / 40 | 35 |
 | A13527017 | 타워팰리스1차 | complete_residential_buildings | 4 / 4 | 0 |
 | A13583507 | 은마 | complete_residential_buildings | 28 / 28 | 28 |
 | A13585402 | 타워팰리스2차 | complete_residential_buildings | 2 / 2 | 0 |

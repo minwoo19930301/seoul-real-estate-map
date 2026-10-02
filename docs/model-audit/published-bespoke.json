@@ -100599,6 +100599,1990 @@
         "reason": "Remove inherited representative body-plan intersection with newly identified source327; smallest uniform horizontal reduction to .2001m clearance along bisection path. Ornament clearance not certified.",
         "beforeOverlapM2": 0.08122629453728006
       }
+    },
+    "gangdong-lotte-castle-first-representative": {
+      "sources": [
+        {
+          "url": "https://file.kbland.kr/image/kbstar/land/img/revw/userseq/23753/20210311/Y2ZmMThlOGQ2ZGJjMWJiMjMx.jpg",
+          "sha256": "15812b689dd58c5c05ccd32b7255d8c2777a25138c4b9acf93d792fe940b4d1a",
+          "scope": "individual",
+          "observedTowerNumber": 110,
+          "observations": "Root directly compared original1920x1312 photo and final V2 four views;110 is visible on right foreground. Cream endwalls, gold window surrounds, grouped balcony windows, pink/brown low stone and dark open roof frames."
+        },
+        {
+          "dataset": "Existing source polygons and exact numbered register row",
+          "snapshot": "docs/model-audit/gangdong-lotte-castle-first-source-identity.json",
+          "sha256": "5f470106d89ea7f39270e1462473faea5da8b29153889f72b0cd93304c74e4b2",
+          "observations": "110 source82da4523-06e5-4688-a338-55b97fb49e00; register10261100176596 30F83.4m60HH, OSM83m recorded separately."
+        }
+      ],
+      "review": {
+        "siteId": "gangdong-lotte-castle-first-representative",
+        "status": "visually-reviewed",
+        "reviewScope": "Root directly reviewed actual photo and final V2 four rendered views; approved stylized representative, hidden faces and relief limitations explicit",
+        "reviewedSourcePhotos": [
+          {
+            "url": "https://file.kbland.kr/image/kbstar/land/img/revw/userseq/23753/20210311/Y2ZmMThlOGQ2ZGJjMWJiMjMx.jpg",
+            "sha256": "15812b689dd58c5c05ccd32b7255d8c2777a25138c4b9acf93d792fe940b4d1a",
+            "scope": "individual",
+            "observedTowerNumber": 110,
+            "observations": "Root directly compared original1920x1312 photo and final V2 four views;110 is visible on right foreground. Cream endwalls, gold window surrounds, grouped balcony windows, pink/brown low stone and dark open roof frames."
+          }
+        ],
+        "comparisons": [
+          "Confirmed actual110photo, not adjacent105/106.",
+          "V2 separates household glazing groups with broad cream service pier and narrow service columns; intermittent balcony rail bands break uniform office-like grid.",
+          "Gold restricted to upper/lower group surrounds; stone base reduced to two floors and arch is shallow relief.",
+          "Open dark roof perimeter and raised end frame preserved; own source plan,83.4m max,fullcaps and projection0.30250041m pass."
+        ],
+        "limits": [
+          "Stylized reconstruction; compass, hidden faces and facade dimensions inferred.",
+          "Dark balcony recesses are visual facade relief over opaque source body, not measured apartment voids.",
+          "Own8vertex footprint/registered30F83.4m retained with uniform height assumption; roof datum unmeasured.",
+          "No photo textures, number/logo, neighboring buildings, gate or landscaping."
+        ],
+        "reviewedInputs": {
+          "gangdong-lotte-castle-first-110.glb": "1b6327a92f2f754105301a090788858f26a3f189bb8d16550c3c6594b66d4f7b",
+          "gangdong-lotte-castle-first-110-authored.blend": "8a9565b193191e7f375d85cbb9615c73121eb96b3c05c1ac211b5fea4e957e96",
+          "front.png": "50f558f115677346da840fafb3143dba95561a1bfb367ac755ac7e2bcda37c89",
+          "opposite.png": "727a9110719dbd868278994588c5a9486025ce632247b8b9e6b57fa5b9420936",
+          "side.png": "856f9e60c633ffc743cf59784eafd3c64e51a6a7ee26b74240f2ddf0e1337f16",
+          "roof.png": "f525a9e09abe266da5214afd6e33e420701e23d9c8048457c78011de32056ad0"
+        },
+        "inferenceApprovedAssets": [
+          "bespoke-gangdong-lotte-castle-first-110"
+        ],
+        "renders": [
+          "docs/model-audit/renders/gangdong-lotte-castle-first/front.png",
+          "docs/model-audit/renders/gangdong-lotte-castle-first/opposite.png",
+          "docs/model-audit/renders/gangdong-lotte-castle-first/side.png",
+          "docs/model-audit/renders/gangdong-lotte-castle-first/roof.png"
+        ]
+      },
+      "assets": [
+        {
+          "id": "bespoke-gangdong-lotte-castle-first-110",
+          "sourceSha256": "1b6327a92f2f754105301a090788858f26a3f189bb8d16550c3c6594b66d4f7b",
+          "sha256": "92d55ee087370738fe47742b86239e092b742efdc09c106ce393e4061c216025",
+          "bytes": 1639072,
+          "dimensions": [
+            25.964961051940918,
+            83.4000015258789,
+            16.934302806854248
+          ],
+          "min": [
+            -12.98656177520752,
+            0,
+            -6.3012566566467285
+          ],
+          "max": [
+            12.978399276733398,
+            83.4000015258789,
+            10.63304615020752
+          ],
+          "triangles": 30152,
+          "components": [
+            {
+              "name": "Lotte110_editable_Lotte110_light_grey_solid_wall",
+              "triangles": 748
+            },
+            {
+              "name": "Lotte110_editable_Lotte110_broad_white_facade_frames",
+              "triangles": 10984
+            },
+            {
+              "name": "Lotte110_editable_Lotte110_warm_cream_panels",
+              "triangles": 612
+            },
+            {
+              "name": "Lotte110_editable_Lotte110_arched_shadow_recess",
+              "triangles": 5088
+            },
+            {
+              "name": "Lotte110_editable_Lotte110_turquoise_balcony_glazing",
+              "triangles": 8736
+            },
+            {
+              "name": "Lotte110_editable_Lotte110_dark_horizontal_spandrels_and_mullio",
+              "triangles": 1848
+            },
+            {
+              "name": "Lotte110_editable_Lotte110_muted_yellow_gold_window_accents",
+              "triangles": 1476
+            },
+            {
+              "name": "Lotte110_editable_Lotte110_pink_brown_stone_base",
+              "triangles": 96
+            },
+            {
+              "name": "Lotte110_editable_Lotte110_buff_endwall_panels",
+              "triangles": 144
+            },
+            {
+              "name": "Lotte110_editable_Lotte110_dark_open_roof_structure",
+              "triangles": 420
+            }
+          ]
+        }
+      ],
+      "mcpEvidence": [
+        {
+          "path": "docs/model-audit/mcp/gangdong-lotte-castle-first-110-headless.json",
+          "sha256": "46fd2c5f7171c4b5af9e53be9546719c8166341dc5e0c306d59423ad14cdb0a4",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender upstream addon headless main-thread adapter"
+        }
+      ],
+      "recipeInputs": [
+        {
+          "path": "modeling/bespoke/gangdong-lotte-castle-first-representative/build-safe.py",
+          "sha256": "e3ddbee0298695a4983f2b2abb6827580af59b0780fb5867d18cb635a6ad2ec3"
+        },
+        {
+          "path": "modeling/bespoke/gangdong-lotte-castle-first-representative/check-standalone-safe.py",
+          "sha256": "b463129dc58d50ef670438b33fd5ed0539fb5d159e12228bcaa3a236e120b46d"
+        },
+        {
+          "path": "modeling/bespoke/gangdong-lotte-castle-first-representative/source-data.json",
+          "sha256": "30deaa6151d20dcdd7389a79cbbee27072fcd63dc192f359984ac34f8625eede"
+        },
+        {
+          "path": "modeling/bespoke/gangdong-lotte-castle-first-representative/regions.json",
+          "sha256": "f9ff39e27081ab9da20fdc52bd8e344d87f2c87ba6a4972056ad3ae3ef4ee60c"
+        },
+        {
+          "path": "modeling/bespoke/gangdong-lotte-castle-first-representative/register-raw.json",
+          "sha256": "70ecf759546009d8444106ac6697f36bee7cdc5b5c55749fd92159ba967bddca"
+        },
+        {
+          "path": "modeling/bespoke/gangdong-lotte-castle-first-representative/geometry-proof.json",
+          "sha256": "da4d3fa5cbb0fc079b6bcf232dae5cbfd9040c461fb1ae7ac644f29ccd093712"
+        },
+        {
+          "path": "modeling/bespoke/gangdong-lotte-castle-first-representative/standalone-validation.json",
+          "sha256": "5d4fbc468fa49de5eb71212d7a70b679632c004e13e0f51bad7845d44dd20673"
+        },
+        {
+          "path": "modeling/bespoke/gangdong-lotte-castle-first-representative/scene-preservation.json",
+          "sha256": "52390aca404aab4471b9346e20420bd573f4c2a208407552015d1fbe75e429b2"
+        },
+        {
+          "path": "modeling/bespoke/gangdong-lotte-castle-first-representative/facade-regions.json",
+          "sha256": "2278e80da886bbf8e2df2888920685c8a4065740fbc40144863cf9bbcb075862"
+        },
+        {
+          "path": "modeling/bespoke/gangdong-lotte-castle-first-representative/open-roof-proof.json",
+          "sha256": "4e965e344b86c9ef516f9ae47992ff038a04234abb775473dae87acb269faecf"
+        },
+        {
+          "path": "modeling/bespoke/gangdong-lotte-castle-first-representative/optimization-proof.json",
+          "sha256": "f79e1fbb0c58d524652ad3458611bc20c5231bbe34f658a58298d85d412b17b9"
+        },
+        {
+          "path": "modeling/bespoke/gangdong-lotte-castle-first-representative/validation.json",
+          "sha256": "159d3e6e85ed64d6fc3260825bbe427210c3c94feed207c48c4d9e884f8ab89a"
+        }
+      ]
+    },
+    "gangdong-lotte-castle-first-shared": {
+      "sources": [
+        {
+          "url": "https://file.kbland.kr/image/kbstar/land/img/revw/userseq/23753/20210311/Y2ZmMThlOGQ2ZGJjMWJiMjMx.jpg",
+          "sha256": "15812b689dd58c5c05ccd32b7255d8c2777a25138c4b9acf93d792fe940b4d1a",
+          "scope": "individual",
+          "observedTowerNumber": 110,
+          "observations": "Root directly compared original1920x1312 photo and final V2 four views;110 is visible on right foreground. Cream endwalls, gold window surrounds, grouped balcony windows, pink/brown low stone and dark open roof frames."
+        },
+        {
+          "dataset": "Existing source polygons and exact numbered register row",
+          "snapshot": "docs/model-audit/gangdong-lotte-castle-first-source-identity.json",
+          "sha256": "5f470106d89ea7f39270e1462473faea5da8b29153889f72b0cd93304c74e4b2",
+          "observations": "110 source82da4523-06e5-4688-a338-55b97fb49e00; register10261100176596 30F83.4m60HH, OSM83m recorded separately."
+        }
+      ],
+      "review": {
+        "siteId": "gangdong-lotte-castle-first-shared",
+        "status": "visually-reviewed",
+        "reviewScope": "One representative visually reviewed; batch placement checks and sample map review for shared copies",
+        "reviewedSourcePhotos": [
+          {
+            "url": "https://file.kbland.kr/image/kbstar/land/img/revw/userseq/23753/20210311/Y2ZmMThlOGQ2ZGJjMWJiMjMx.jpg",
+            "sha256": "15812b689dd58c5c05ccd32b7255d8c2777a25138c4b9acf93d792fe940b4d1a",
+            "scope": "individual",
+            "observedTowerNumber": 110,
+            "observations": "Root directly compared original1920x1312 photo and final V2 four views;110 is visible on right foreground. Cream endwalls, gold window surrounds, grouped balcony windows, pink/brown low stone and dark open roof frames."
+          }
+        ],
+        "comparisons": [
+          "Confirmed actual110photo, not adjacent105/106.",
+          "V2 separates household glazing groups with broad cream service pier and narrow service columns; intermittent balcony rail bands break uniform office-like grid.",
+          "Gold restricted to upper/lower group surrounds; stone base reduced to two floors and arch is shallow relief.",
+          "Open dark roof perimeter and raised end frame preserved; own source plan,83.4m max,fullcaps and projection0.30250041m pass.",
+          "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+          "All copy transforms, bounds, source identities and independent fallback bindings checked automatically."
+        ],
+        "limits": [
+          "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+          "Representative has no number label; no node needs hiding.",
+          "Existing authored assets remain unchanged."
+        ],
+        "reviewedInputs": {
+          "gangdong-lotte-castle-first-110.glb": "1b6327a92f2f754105301a090788858f26a3f189bb8d16550c3c6594b66d4f7b",
+          "gangdong-lotte-castle-first-110-authored.blend": "8a9565b193191e7f375d85cbb9615c73121eb96b3c05c1ac211b5fea4e957e96",
+          "front.png": "50f558f115677346da840fafb3143dba95561a1bfb367ac755ac7e2bcda37c89",
+          "opposite.png": "727a9110719dbd868278994588c5a9486025ce632247b8b9e6b57fa5b9420936",
+          "side.png": "856f9e60c633ffc743cf59784eafd3c64e51a6a7ee26b74240f2ddf0e1337f16",
+          "roof.png": "f525a9e09abe266da5214afd6e33e420701e23d9c8048457c78011de32056ad0"
+        },
+        "inferenceApprovedAssets": [
+          "bespoke-gangdong-lotte-castle-first-101",
+          "bespoke-gangdong-lotte-castle-first-102",
+          "bespoke-gangdong-lotte-castle-first-103",
+          "bespoke-gangdong-lotte-castle-first-104",
+          "bespoke-gangdong-lotte-castle-first-105",
+          "bespoke-gangdong-lotte-castle-first-106",
+          "bespoke-gangdong-lotte-castle-first-107",
+          "bespoke-gangdong-lotte-castle-first-108",
+          "bespoke-gangdong-lotte-castle-first-109",
+          "bespoke-gangdong-lotte-castle-first-111",
+          "bespoke-gangdong-lotte-castle-first-112",
+          "bespoke-gangdong-lotte-castle-first-113",
+          "bespoke-gangdong-lotte-castle-first-114",
+          "bespoke-gangdong-lotte-castle-first-115",
+          "bespoke-gangdong-lotte-castle-first-116",
+          "bespoke-gangdong-lotte-castle-first-117",
+          "bespoke-gangdong-lotte-castle-first-118",
+          "bespoke-gangdong-lotte-castle-first-119",
+          "bespoke-gangdong-lotte-castle-first-120",
+          "bespoke-gangdong-lotte-castle-first-121",
+          "bespoke-gangdong-lotte-castle-first-122",
+          "bespoke-gangdong-lotte-castle-first-123",
+          "bespoke-gangdong-lotte-castle-first-124",
+          "bespoke-gangdong-lotte-castle-first-125",
+          "bespoke-gangdong-lotte-castle-first-126",
+          "bespoke-gangdong-lotte-castle-first-127",
+          "bespoke-gangdong-lotte-castle-first-128",
+          "bespoke-gangdong-lotte-castle-first-129",
+          "bespoke-gangdong-lotte-castle-first-130",
+          "bespoke-gangdong-lotte-castle-first-131",
+          "bespoke-gangdong-lotte-castle-first-132",
+          "bespoke-gangdong-lotte-castle-first-133",
+          "bespoke-gangdong-lotte-castle-first-134",
+          "bespoke-gangdong-lotte-castle-first-135",
+          "bespoke-gangdong-lotte-castle-first-136"
+        ],
+        "renders": [
+          "docs/model-audit/renders/gangdong-lotte-castle-first/front.png",
+          "docs/model-audit/renders/gangdong-lotte-castle-first/opposite.png",
+          "docs/model-audit/renders/gangdong-lotte-castle-first/side.png",
+          "docs/model-audit/renders/gangdong-lotte-castle-first/roof.png"
+        ]
+      },
+      "assets": [
+        {
+          "id": "bespoke-gangdong-lotte-castle-first-101",
+          "dimensions": [
+            50.264783019379394,
+            71.8,
+            47.947731309646976
+          ],
+          "min": [
+            -24.05568937836188,
+            0,
+            -23.286561806661254
+          ],
+          "max": [
+            26.209093641017514,
+            71.8,
+            24.66116950298572
+          ],
+          "sha256": "92d55ee087370738fe47742b86239e092b742efdc09c106ce393e4061c216025",
+          "sourceSha256": "1b6327a92f2f754105301a090788858f26a3f189bb8d16550c3c6594b66d4f7b",
+          "sharedModel": "bespoke/gangdong-lotte-castle-first-representative/bespoke-gangdong-lotte-castle-first-110.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gangdong-lotte-castle-first-110",
+            "sourceDimensions": [
+              25.964961051940918,
+              83.4000015258789,
+              16.934302806854248
+            ],
+            "matrix": [
+              1.297316524875522,
+              0.0,
+              -0.8608322179003125,
+              0.0,
+              0.0,
+              0.8609112552320585,
+              0.0,
+              0.0,
+              1.3235875454777983,
+              0.0,
+              2.0188827841652177,
+              0.0,
+              -4.246775194236288,
+              0.0,
+              -7.2777714489811975,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gangdong-lotte-castle-first-102",
+          "dimensions": [
+            36.08193289746103,
+            80.35,
+            37.25193160513862
+          ],
+          "min": [
+            -16.648783497375675,
+            0,
+            -19.54474048977708
+          ],
+          "max": [
+            19.433149400085355,
+            80.35,
+            17.707191115361546
+          ],
+          "sha256": "92d55ee087370738fe47742b86239e092b742efdc09c106ce393e4061c216025",
+          "sourceSha256": "1b6327a92f2f754105301a090788858f26a3f189bb8d16550c3c6594b66d4f7b",
+          "sharedModel": "bespoke/gangdong-lotte-castle-first-representative/bespoke-gangdong-lotte-castle-first-110.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gangdong-lotte-castle-first-110",
+            "sourceDimensions": [
+              25.964961051940918,
+              83.4000015258789,
+              16.934302806854248
+            ],
+            "matrix": [
+              0.6503705182614855,
+              0.0,
+              -0.9704028379209049,
+              0.0,
+              0.0,
+              0.9634292389679093,
+              0.0,
+              0.0,
+              1.4969061160255148,
+              0.0,
+              1.0152485814462473,
+              0.0,
+              -4.612833430664529,
+              0.0,
+              -5.215555229632792,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gangdong-lotte-castle-first-103",
+          "dimensions": [
+            47.77633903727461,
+            80.35,
+            50.25903757517375
+          ],
+          "min": [
+            -29.376864191748275,
+            0,
+            -25.29365954559315
+          ],
+          "max": [
+            18.399474845526335,
+            80.35,
+            24.9653780295806
+          ],
+          "sha256": "92d55ee087370738fe47742b86239e092b742efdc09c106ce393e4061c216025",
+          "sourceSha256": "1b6327a92f2f754105301a090788858f26a3f189bb8d16550c3c6594b66d4f7b",
+          "sharedModel": "bespoke/gangdong-lotte-castle-first-representative/bespoke-gangdong-lotte-castle-first-110.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gangdong-lotte-castle-first-110",
+            "sourceDimensions": [
+              25.964961051940918,
+              83.4000015258789,
+              16.934302806854248
+            ],
+            "matrix": [
+              0.9467231850522528,
+              0.0,
+              1.2223901002018867,
+              0.0,
+              0.0,
+              0.9634292389679093,
+              0.0,
+              0.0,
+              -1.9190211426207748,
+              0.0,
+              1.4689999407250687,
+              0.0,
+              2.6222071719591433,
+              0.0,
+              -6.068328148181115,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gangdong-lotte-castle-first-104",
+          "dimensions": [
+            39.29057087009899,
+            91.75,
+            40.787031231366925
+          ],
+          "min": [
+            -22.05754202992425,
+            0,
+            -21.653214229758355
+          ],
+          "max": [
+            17.233028840174743,
+            91.75,
+            19.13381700160857
+          ],
+          "sha256": "92d55ee087370738fe47742b86239e092b742efdc09c106ce393e4061c216025",
+          "sourceSha256": "1b6327a92f2f754105301a090788858f26a3f189bb8d16550c3c6594b66d4f7b",
+          "sharedModel": "bespoke/gangdong-lotte-castle-first-representative/bespoke-gangdong-lotte-castle-first-110.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gangdong-lotte-castle-first-110",
+            "sourceDimensions": [
+              25.964961051940918,
+              83.4000015258789,
+              16.934302806854248
+            ],
+            "matrix": [
+              0.9003975154148913,
+              0.0,
+              0.9885457233354664,
+              0.0,
+              0.0,
+              1.100119883949044,
+              0.0,
+              0.0,
+              -1.325823205483507,
+              0.0,
+              1.1988978658575762,
+              0.0,
+              3.1944605580532865,
+              0.0,
+              -6.078121939267586,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gangdong-lotte-castle-first-105",
+          "dimensions": [
+            41.0825789148271,
+            94.60000000000001,
+            42.24064338717993
+          ],
+          "min": [
+            -23.885471585447615,
+            0,
+            -18.76834298184716
+          ],
+          "max": [
+            17.197107329379488,
+            94.60000000000001,
+            23.47230040533277
+          ],
+          "sha256": "92d55ee087370738fe47742b86239e092b742efdc09c106ce393e4061c216025",
+          "sourceSha256": "1b6327a92f2f754105301a090788858f26a3f189bb8d16550c3c6594b66d4f7b",
+          "sharedModel": "bespoke/gangdong-lotte-castle-first-representative/bespoke-gangdong-lotte-castle-first-110.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gangdong-lotte-castle-first-110",
+            "sourceDimensions": [
+              25.964961051940918,
+              83.4000015258789,
+              16.934302806854248
+            ],
+            "matrix": [
+              1.0649852175493715,
+              0.0,
+              1.0990400145826205,
+              0.0,
+              0.0,
+              1.1342925451943278,
+              0.0,
+              0.0,
+              -1.130429057193772,
+              0.0,
+              1.0946559703058008,
+              0.0,
+              1.4398805030990611,
+              0.0,
+              -2.050333080726965,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gangdong-lotte-castle-first-106",
+          "dimensions": [
+            39.29023444177551,
+            94.60000000000001,
+            40.7867925126901
+          ],
+          "min": [
+            -22.05728543603479,
+            0,
+            -21.653028255648863
+          ],
+          "max": [
+            17.23294900574072,
+            94.60000000000001,
+            19.133764257041236
+          ],
+          "sha256": "92d55ee087370738fe47742b86239e092b742efdc09c106ce393e4061c216025",
+          "sourceSha256": "1b6327a92f2f754105301a090788858f26a3f189bb8d16550c3c6594b66d4f7b",
+          "sharedModel": "bespoke/gangdong-lotte-castle-first-representative/bespoke-gangdong-lotte-castle-first-110.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gangdong-lotte-castle-first-110",
+            "sourceDimensions": [
+              25.964961051940918,
+              83.4000015258789,
+              16.934302806854248
+            ],
+            "matrix": [
+              0.9003852249196891,
+              0.0,
+              0.9885453840948001,
+              0.0,
+              0.0,
+              1.1342925451943278,
+              0.0,
+              0.0,
+              -1.3258213417084106,
+              0.0,
+              1.1988802466855932,
+              0.0,
+              3.1945409211734344,
+              0.0,
+              -6.07798478236603,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gangdong-lotte-castle-first-107",
+          "dimensions": [
+            49.791241768501486,
+            94.60000000000001,
+            41.363585793881995
+          ],
+          "min": [
+            -22.22088774230535,
+            0,
+            -18.890969678086798
+          ],
+          "max": [
+            27.570354026196135,
+            94.60000000000001,
+            22.4726161157952
+          ],
+          "sha256": "92d55ee087370738fe47742b86239e092b742efdc09c106ce393e4061c216025",
+          "sourceSha256": "1b6327a92f2f754105301a090788858f26a3f189bb8d16550c3c6594b66d4f7b",
+          "sharedModel": "bespoke/gangdong-lotte-castle-first-representative/bespoke-gangdong-lotte-castle-first-110.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gangdong-lotte-castle-first-110",
+            "sourceDimensions": [
+              25.964961051940918,
+              83.4000015258789,
+              16.934302806854248
+            ],
+            "matrix": [
+              1.7130028620167383,
+              0.0,
+              -0.3589266687816844,
+              0.0,
+              0.0,
+              1.1342925451943278,
+              0.0,
+              0.0,
+              0.440712524743688,
+              0.0,
+              2.1318753125112395,
+              0.0,
+              0.8785181583679518,
+              0.0,
+              -4.2319656816815225,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gangdong-lotte-castle-first-108",
+          "dimensions": [
+            29.134922800904206,
+            83.4,
+            17.25082869476575
+          ],
+          "min": [
+            -14.58070202813308,
+            0,
+            -8.620579063988428
+          ],
+          "max": [
+            14.554220772771128,
+            83.4,
+            8.630249630777323
+          ],
+          "sha256": "92d55ee087370738fe47742b86239e092b742efdc09c106ce393e4061c216025",
+          "sourceSha256": "1b6327a92f2f754105301a090788858f26a3f189bb8d16550c3c6594b66d4f7b",
+          "sharedModel": "bespoke/gangdong-lotte-castle-first-representative/bespoke-gangdong-lotte-castle-first-110.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gangdong-lotte-castle-first-110",
+            "sourceDimensions": [
+              25.964961051940918,
+              83.4000015258789,
+              16.934302806854248
+            ],
+            "matrix": [
+              1.1219116490410552,
+              0.0,
+              -0.006245546457799278,
+              0.0,
+              0.0,
+              0.9999999817040902,
+              0.0,
+              0.0,
+              0.006858145951024772,
+              0.0,
+              1.021697609772376,
+              0.0,
+              -0.04849421618550657,
+              0.0,
+              -2.1667469677050106,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gangdong-lotte-castle-first-109",
+          "dimensions": [
+            29.115265894692005,
+            83.4,
+            17.60440582712018
+          ],
+          "min": [
+            -14.597020101765773,
+            0,
+            -8.791495688965197
+          ],
+          "max": [
+            14.518245792926232,
+            83.4,
+            8.812910138154981
+          ],
+          "sha256": "92d55ee087370738fe47742b86239e092b742efdc09c106ce393e4061c216025",
+          "sourceSha256": "1b6327a92f2f754105301a090788858f26a3f189bb8d16550c3c6594b66d4f7b",
+          "sharedModel": "bespoke/gangdong-lotte-castle-first-representative/bespoke-gangdong-lotte-castle-first-110.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gangdong-lotte-castle-first-110",
+            "sourceDimensions": [
+              25.964961051940918,
+              83.4000015258789,
+              16.934302806854248
+            ],
+            "matrix": [
+              1.1184776642051912,
+              0.0,
+              0.01675065909475382,
+              0.0,
+              0.0,
+              0.9999999817040902,
+              0.0,
+              0.0,
+              -0.0142950667903881,
+              0.0,
+              1.0265235099658323,
+              0.0,
+              0.0373382693730924,
+              0.0,
+              -2.281217198638989,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gangdong-lotte-castle-first-111",
+          "dimensions": [
+            28.44721950020017,
+            80.55,
+            18.03466437352423
+          ],
+          "min": [
+            -14.2492842383489,
+            0,
+            -9.006907592056123
+          ],
+          "max": [
+            14.197935261851272,
+            80.55,
+            9.027756781468105
+          ],
+          "sha256": "92d55ee087370738fe47742b86239e092b742efdc09c106ce393e4061c216025",
+          "sourceSha256": "1b6327a92f2f754105301a090788858f26a3f189bb8d16550c3c6594b66d4f7b",
+          "sharedModel": "bespoke/gangdong-lotte-castle-first-representative/bespoke-gangdong-lotte-castle-first-110.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gangdong-lotte-castle-first-110",
+            "sourceDimensions": [
+              25.964961051940918,
+              83.4000015258789,
+              16.934302806854248
+            ],
+            "matrix": [
+              1.0951571010014467,
+              0.0,
+              0.0040039941963997865,
+              0.0,
+              0.0,
+              0.9658273204588065,
+              0.0,
+              0.0,
+              -0.003481316686743126,
+              0.0,
+              1.0618595153913628,
+              0.0,
+              -0.006892593426654641,
+              0.0,
+              -2.305844981911474,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gangdong-lotte-castle-first-112",
+          "dimensions": [
+            36.865991636266415,
+            83.4,
+            17.552347287218936
+          ],
+          "min": [
+            -18.45353479345117,
+            0,
+            -8.70529688644772
+          ],
+          "max": [
+            18.41245684281525,
+            83.4,
+            8.847050400771218
+          ],
+          "sha256": "92d55ee087370738fe47742b86239e092b742efdc09c106ce393e4061c216025",
+          "sourceSha256": "1b6327a92f2f754105301a090788858f26a3f189bb8d16550c3c6594b66d4f7b",
+          "sharedModel": "bespoke/gangdong-lotte-castle-first-representative/bespoke-gangdong-lotte-castle-first-110.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gangdong-lotte-castle-first-110",
+            "sourceDimensions": [
+              25.964961051940918,
+              83.4000015258789,
+              16.934302806854248
+            ],
+            "matrix": [
+              1.4129772032056134,
+              0.0,
+              0.042055162418763385,
+              0.0,
+              0.0,
+              0.9999999817040902,
+              0.0,
+              0.0,
+              -0.02559110745795598,
+              0.0,
+              1.00373945978608,
+              0.0,
+              0.11082997483716299,
+              0.0,
+              -2.275304525899738,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gangdong-lotte-castle-first-113",
+          "dimensions": [
+            36.96795927022387,
+            83.4,
+            16.014995007449635
+          ],
+          "min": [
+            -18.49183273896734,
+            0,
+            -8.000711200795315
+          ],
+          "max": [
+            18.476126531256536,
+            83.4,
+            8.01428380665432
+          ],
+          "sha256": "92d55ee087370738fe47742b86239e092b742efdc09c106ce393e4061c216025",
+          "sourceSha256": "1b6327a92f2f754105301a090788858f26a3f189bb8d16550c3c6594b66d4f7b",
+          "sharedModel": "bespoke/gangdong-lotte-castle-first-representative/bespoke-gangdong-lotte-castle-first-110.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gangdong-lotte-castle-first-110",
+            "sourceDimensions": [
+              25.964961051940918,
+              83.4000015258789,
+              16.934302806854248
+            ],
+            "matrix": [
+              1.422975440764081,
+              0.0,
+              -0.011240143958858343,
+              0.0,
+              0.0,
+              0.9999999817040902,
+              0.0,
+              0.0,
+              0.01232704590267067,
+              0.0,
+              0.9442082368408165,
+              0.0,
+              -0.06748454001241096,
+              0.0,
+              -2.022481615885689,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gangdong-lotte-castle-first-114",
+          "dimensions": [
+            45.064117384485,
+            83.4,
+            19.04763752494373
+          ],
+          "min": [
+            -22.55118630831281,
+            0,
+            -9.497708287613424
+          ],
+          "max": [
+            22.51293107617219,
+            83.4,
+            9.549929237330309
+          ],
+          "sha256": "92d55ee087370738fe47742b86239e092b742efdc09c106ce393e4061c216025",
+          "sourceSha256": "1b6327a92f2f754105301a090788858f26a3f189bb8d16550c3c6594b66d4f7b",
+          "sharedModel": "bespoke/gangdong-lotte-castle-first-representative/bespoke-gangdong-lotte-castle-first-110.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gangdong-lotte-castle-first-110",
+            "sourceDimensions": [
+              25.964961051940918,
+              83.4000015258789,
+              16.934302806854248
+            ],
+            "matrix": [
+              1.7354918913835409,
+              0.0,
+              0.0006879273731718215,
+              0.0,
+              0.0,
+              0.9999999817040902,
+              0.0,
+              0.0,
+              0.005711340013031491,
+              0.0,
+              1.124260253754592,
+              0.0,
+              -0.04603379763496698,
+              0.0,
+              -2.4117354970315628,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gangdong-lotte-castle-first-115",
+          "dimensions": [
+            28.389041128094284,
+            80.55,
+            17.941786416381127
+          ],
+          "min": [
+            -14.219798115761877,
+            0,
+            -8.952674931723479
+          ],
+          "max": [
+            14.169243012332409,
+            80.55,
+            8.98911148465765
+          ],
+          "sha256": "92d55ee087370738fe47742b86239e092b742efdc09c106ce393e4061c216025",
+          "sourceSha256": "1b6327a92f2f754105301a090788858f26a3f189bb8d16550c3c6594b66d4f7b",
+          "sharedModel": "bespoke/gangdong-lotte-castle-first-representative/bespoke-gangdong-lotte-castle-first-110.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gangdong-lotte-castle-first-110",
+            "sourceDimensions": [
+              25.964961051940918,
+              83.4000015258789,
+              16.934302806854248
+            ],
+            "matrix": [
+              1.0933491143766416,
+              0.0,
+              0.0005111233102334864,
+              0.0,
+              0.0,
+              0.9658273204588065,
+              0.0,
+              0.0,
+              -8.287533001191182e-05,
+              0.0,
+              1.059095538904089,
+              0.0,
+              -0.020474606881168075,
+              0.0,
+              -2.2777638895789387,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gangdong-lotte-castle-first-116",
+          "dimensions": [
+            36.46739371909881,
+            83.2,
+            16.29802435595185
+          ],
+          "min": [
+            -18.260298060321954,
+            0,
+            -8.169254825131159
+          ],
+          "max": [
+            18.207095658776858,
+            83.2,
+            8.12876953082069
+          ],
+          "sha256": "92d55ee087370738fe47742b86239e092b742efdc09c106ce393e4061c216025",
+          "sourceSha256": "1b6327a92f2f754105301a090788858f26a3f189bb8d16550c3c6594b66d4f7b",
+          "sharedModel": "bespoke/gangdong-lotte-castle-first-representative/bespoke-gangdong-lotte-castle-first-110.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gangdong-lotte-castle-first-110",
+            "sourceDimensions": [
+              25.964961051940918,
+              83.4000015258789,
+              16.934302806854248
+            ],
+            "matrix": [
+              1.403418239384287,
+              0.0,
+              -0.013812603796808993,
+              0.0,
+              0.0,
+              0.9976019002131932,
+              0.0,
+              0.0,
+              0.014011855065025927,
+              0.0,
+              0.9590211264078803,
+              0.0,
+              -0.09303618134077936,
+              0.0,
+              -2.0911556800912594,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gangdong-lotte-castle-first-117",
+          "dimensions": [
+            36.93000208449671,
+            80.55,
+            16.617196583078126
+          ],
+          "min": [
+            -18.484427183229492,
+            0,
+            -8.323570721547718
+          ],
+          "max": [
+            18.44557490126721,
+            80.55,
+            8.293625861530408
+          ],
+          "sha256": "92d55ee087370738fe47742b86239e092b742efdc09c106ce393e4061c216025",
+          "sourceSha256": "1b6327a92f2f754105301a090788858f26a3f189bb8d16550c3c6594b66d4f7b",
+          "sharedModel": "bespoke/gangdong-lotte-castle-first-representative/bespoke-gangdong-lotte-castle-first-110.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gangdong-lotte-castle-first-110",
+            "sourceDimensions": [
+              25.964961051940918,
+              83.4000015258789,
+              16.934302806854248
+            ],
+            "matrix": [
+              1.422296134033168,
+              0.0,
+              0.006156847914296224,
+              0.0,
+              0.0,
+              0.9658273204588065,
+              0.0,
+              0.0,
+              0.0003696043356803362,
+              0.0,
+              0.9764787029274224,
+              0.0,
+              -0.015820974279781526,
+              0.0,
+              -2.1551306237990433,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gangdong-lotte-castle-first-118",
+          "dimensions": [
+            39.650526206614785,
+            77.7,
+            16.8934489058962
+          ],
+          "min": [
+            -19.853583392704948,
+            0,
+            -8.444463091442534
+          ],
+          "max": [
+            19.796942813909837,
+            77.7,
+            8.448985814453666
+          ],
+          "sha256": "92d55ee087370738fe47742b86239e092b742efdc09c106ce393e4061c216025",
+          "sourceSha256": "1b6327a92f2f754105301a090788858f26a3f189bb8d16550c3c6594b66d4f7b",
+          "sharedModel": "bespoke/gangdong-lotte-castle-first-representative/bespoke-gangdong-lotte-castle-first-110.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gangdong-lotte-castle-first-110",
+            "sourceDimensions": [
+              25.964961051940918,
+              83.4000015258789,
+              16.934302806854248
+            ],
+            "matrix": [
+              1.5269767220534969,
+              0.0,
+              -0.0025971331567296615,
+              0.0,
+              0.0,
+              0.9316546592135229,
+              0.0,
+              0.0,
+              0.007039181590000926,
+              0.0,
+              0.998837606528811,
+              0.0,
+              -0.06397968456919279,
+              0.0,
+              -2.1439386043308413,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gangdong-lotte-castle-first-119",
+          "dimensions": [
+            32.88166985965363,
+            74.65,
+            34.181470163511136
+          ],
+          "min": [
+            -18.91888360879972,
+            0,
+            -18.346354318450263
+          ],
+          "max": [
+            13.962786250853902,
+            74.65,
+            15.83511584506087
+          ],
+          "sha256": "92d55ee087370738fe47742b86239e092b742efdc09c106ce393e4061c216025",
+          "sourceSha256": "1b6327a92f2f754105301a090788858f26a3f189bb8d16550c3c6594b66d4f7b",
+          "sharedModel": "bespoke/gangdong-lotte-castle-first-representative/bespoke-gangdong-lotte-castle-first-110.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gangdong-lotte-castle-first-110",
+            "sourceDimensions": [
+              25.964961051940918,
+              83.4000015258789,
+              16.934302806854248
+            ],
+            "matrix": [
+              0.6974760478412178,
+              0.0,
+              0.804404387410508,
+              0.0,
+              0.0,
+              0.8950839164773422,
+              0.0,
+              0.0,
+              -1.225669138844862,
+              0.0,
+              1.0515374133295567,
+              0.0,
+              2.703479673534045,
+              0.0,
+              -5.480602056730851,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gangdong-lotte-castle-first-120",
+          "dimensions": [
+            32.79946672245299,
+            86.05,
+            30.996832180945518
+          ],
+          "min": [
+            -13.82347565784065,
+            0,
+            -15.047615779922445
+          ],
+          "max": [
+            18.975991064612337,
+            86.05,
+            15.949216401023072
+          ],
+          "sha256": "92d55ee087370738fe47742b86239e092b742efdc09c106ce393e4061c216025",
+          "sourceSha256": "1b6327a92f2f754105301a090788858f26a3f189bb8d16550c3c6594b66d4f7b",
+          "sharedModel": "bespoke/gangdong-lotte-castle-first-representative/bespoke-gangdong-lotte-castle-first-110.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gangdong-lotte-castle-first-110",
+            "sourceDimensions": [
+              25.964961051940918,
+              83.4000015258789,
+              16.934302806854248
+            ],
+            "matrix": [
+              0.8525009479246932,
+              0.0,
+              -0.567636715988131,
+              0.0,
+              0.0,
+              1.0317745614584768,
+              0.0,
+              0.0,
+              0.8518082264736931,
+              0.0,
+              1.2938269896055923,
+              0.0,
+              -0.8493569987075069,
+              0.0,
+              -4.723013277428024,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gangdong-lotte-castle-first-121",
+          "dimensions": [
+            46.88449840115812,
+            97.45,
+            38.63629147577995
+          ],
+          "min": [
+            -21.82116071889294,
+            0,
+            -17.962596472813225
+          ],
+          "max": [
+            25.06333768226518,
+            97.45,
+            20.673695002966724
+          ],
+          "sha256": "92d55ee087370738fe47742b86239e092b742efdc09c106ce393e4061c216025",
+          "sourceSha256": "1b6327a92f2f754105301a090788858f26a3f189bb8d16550c3c6594b66d4f7b",
+          "sharedModel": "bespoke/gangdong-lotte-castle-first-representative/bespoke-gangdong-lotte-castle-first-110.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gangdong-lotte-castle-first-110",
+            "sourceDimensions": [
+              25.964961051940918,
+              83.4000015258789,
+              16.934302806854248
+            ],
+            "matrix": [
+              1.6715213024059992,
+              0.0,
+              -0.24170425526841266,
+              0.0,
+              0.0,
+              1.1684652064396115,
+              0.0,
+              0.0,
+              0.29589545003518086,
+              0.0,
+              2.0864590549107933,
+              0.0,
+              0.4053266982957382,
+              0.0,
+              -4.063232525750744,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gangdong-lotte-castle-first-122",
+          "dimensions": [
+            49.69748602865741,
+            97.45,
+            50.42468475156923
+          ],
+          "min": [
+            -28.691364883859837,
+            0,
+            -26.32384161775528
+          ],
+          "max": [
+            21.006121144797575,
+            97.45,
+            24.10084313381395
+          ],
+          "sha256": "92d55ee087370738fe47742b86239e092b742efdc09c106ce393e4061c216025",
+          "sourceSha256": "1b6327a92f2f754105301a090788858f26a3f189bb8d16550c3c6594b66d4f7b",
+          "sharedModel": "bespoke/gangdong-lotte-castle-first-representative/bespoke-gangdong-lotte-castle-first-110.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gangdong-lotte-castle-first-110",
+            "sourceDimensions": [
+              25.964961051940918,
+              83.4000015258789,
+              16.934302806854248
+            ],
+            "matrix": [
+              1.1242910143715399,
+              0.0,
+              1.0849537401401361,
+              0.0,
+              0.0,
+              1.1684652064396115,
+              0.0,
+              0.0,
+              -1.7072275953030187,
+              0.0,
+              1.749218792709417,
+              0.0,
+              3.3765699874549737,
+              0.0,
+              -8.134883865176494,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gangdong-lotte-castle-first-123",
+          "dimensions": [
+            33.359859604122626,
+            88.9,
+            31.56322727448812
+          ],
+          "min": [
+            -14.229908893810371,
+            0,
+            -15.688896986537623
+          ],
+          "max": [
+            19.129950710312254,
+            88.9,
+            15.874330287950498
+          ],
+          "sha256": "92d55ee087370738fe47742b86239e092b742efdc09c106ce393e4061c216025",
+          "sourceSha256": "1b6327a92f2f754105301a090788858f26a3f189bb8d16550c3c6594b66d4f7b",
+          "sharedModel": "bespoke/gangdong-lotte-castle-first-representative/bespoke-gangdong-lotte-castle-first-110.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gangdong-lotte-castle-first-110",
+            "sourceDimensions": [
+              25.964961051940918,
+              83.4000015258789,
+              16.934302806854248
+            ],
+            "matrix": [
+              0.8557014604341758,
+              0.0,
+              -0.5886971218001692,
+              0.0,
+              0.0,
+              1.0659472227037605,
+              0.0,
+              0.0,
+              0.8887684927482977,
+              0.0,
+              1.3065986875130753,
+              0.0,
+              -1.1243178251909955,
+              0.0,
+              -5.19927276259112,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gangdong-lotte-castle-first-124",
+          "dimensions": [
+            33.62402608347076,
+            88.9,
+            32.031742265678275
+          ],
+          "min": [
+            -14.538182716380865,
+            0,
+            -16.066374217557986
+          ],
+          "max": [
+            19.085843367089893,
+            88.9,
+            15.96536804812029
+          ],
+          "sha256": "92d55ee087370738fe47742b86239e092b742efdc09c106ce393e4061c216025",
+          "sourceSha256": "1b6327a92f2f754105301a090788858f26a3f189bb8d16550c3c6594b66d4f7b",
+          "sharedModel": "bespoke/gangdong-lotte-castle-first-representative/bespoke-gangdong-lotte-castle-first-110.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gangdong-lotte-castle-first-110",
+            "sourceDimensions": [
+              25.964961051940918,
+              83.4000015258789,
+              16.934302806854248
+            ],
+            "matrix": [
+              0.8449063389002867,
+              0.0,
+              -0.6015903642273103,
+              0.0,
+              0.0,
+              1.0659472227037605,
+              0.0,
+              0.0,
+              0.9300105273127212,
+              0.0,
+              1.3217679633208497,
+              0.0,
+              -1.4654091154542197,
+              0.0,
+              -5.430233345049885,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gangdong-lotte-castle-first-125",
+          "dimensions": [
+            34.536203439574656,
+            71.8,
+            34.811969390905716
+          ],
+          "min": [
+            -17.06903860718421,
+            0,
+            -18.00892004922253
+          ],
+          "max": [
+            17.467164832390445,
+            71.8,
+            16.80304934168318
+          ],
+          "sha256": "92d55ee087370738fe47742b86239e092b742efdc09c106ce393e4061c216025",
+          "sourceSha256": "1b6327a92f2f754105301a090788858f26a3f189bb8d16550c3c6594b66d4f7b",
+          "sharedModel": "bespoke/gangdong-lotte-castle-first-representative/bespoke-gangdong-lotte-castle-first-110.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gangdong-lotte-castle-first-110",
+            "sourceDimensions": [
+              25.964961051940918,
+              83.4000015258789,
+              16.934302806854248
+            ],
+            "matrix": [
+              0.7167757795422246,
+              0.0,
+              -0.8532122280783322,
+              0.0,
+              0.0,
+              0.8609112552320585,
+              0.0,
+              0.0,
+              1.2492791155451566,
+              0.0,
+              1.0598412603738565,
+              0.0,
+              -4.8158803831074355,
+              0.0,
+              -5.086486542307693,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gangdong-lotte-castle-first-126",
+          "dimensions": [
+            32.74572667821224,
+            86.05,
+            31.44433759343135
+          ],
+          "min": [
+            -19.320018136766652,
+            0,
+            -16.314754648240207
+          ],
+          "max": [
+            13.42570854144559,
+            86.05,
+            15.129582945191142
+          ],
+          "sha256": "92d55ee087370738fe47742b86239e092b742efdc09c106ce393e4061c216025",
+          "sourceSha256": "1b6327a92f2f754105301a090788858f26a3f189bb8d16550c3c6594b66d4f7b",
+          "sharedModel": "bespoke/gangdong-lotte-castle-first-representative/bespoke-gangdong-lotte-castle-first-110.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gangdong-lotte-castle-first-110",
+            "sourceDimensions": [
+              25.964961051940918,
+              83.4000015258789,
+              16.934302806854248
+            ],
+            "matrix": [
+              0.8651953950713915,
+              0.0,
+              0.5866259326328183,
+              0.0,
+              0.0,
+              1.0317745614584768,
+              0.0,
+              0.0,
+              -0.8672127124470864,
+              0.0,
+              1.265874596567261,
+              0.0,
+              0.7235459719437951,
+              0.0,
+              -5.671489258295867,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gangdong-lotte-castle-first-127",
+          "dimensions": [
+            45.26991224604578,
+            97.45,
+            47.668664623724226
+          ],
+          "min": [
+            -27.240391393672525,
+            0,
+            -23.67353622257871
+          ],
+          "max": [
+            18.029520852373256,
+            97.45,
+            23.995128401145514
+          ],
+          "sha256": "92d55ee087370738fe47742b86239e092b742efdc09c106ce393e4061c216025",
+          "sourceSha256": "1b6327a92f2f754105301a090788858f26a3f189bb8d16550c3c6594b66d4f7b",
+          "sharedModel": "bespoke/gangdong-lotte-castle-first-representative/bespoke-gangdong-lotte-castle-first-110.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gangdong-lotte-castle-first-110",
+            "sourceDimensions": [
+              25.964961051940918,
+              83.4000015258789,
+              16.934302806854248
+            ],
+            "matrix": [
+              0.8898611387777461,
+              0.0,
+              1.1682014269562937,
+              0.0,
+              0.0,
+              1.1684652064396115,
+              0.0,
+              0.0,
+              -1.8277138177940384,
+              0.0,
+              1.3761299265652336,
+              0.0,
+              3.0853157770086366,
+              0.0,
+              -5.370568786783478,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gangdong-lotte-castle-first-128",
+          "dimensions": [
+            49.6974794619473,
+            97.45,
+            50.4246763139719
+          ],
+          "min": [
+            -28.6913627706702,
+            0,
+            -26.32383510952362
+          ],
+          "max": [
+            21.006116691277104,
+            97.45,
+            24.10084120444828
+          ],
+          "sha256": "92d55ee087370738fe47742b86239e092b742efdc09c106ce393e4061c216025",
+          "sourceSha256": "1b6327a92f2f754105301a090788858f26a3f189bb8d16550c3c6594b66d4f7b",
+          "sharedModel": "bespoke/gangdong-lotte-castle-first-representative/bespoke-gangdong-lotte-castle-first-110.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gangdong-lotte-castle-first-110",
+            "sourceDimensions": [
+              25.964961051940918,
+              83.4000015258789,
+              16.934302806854248
+            ],
+            "matrix": [
+              1.1242910061185076,
+              0.0,
+              1.084953426472067,
+              0.0,
+              0.0,
+              1.1684652064396115,
+              0.0,
+              0.0,
+              -1.7072270790940312,
+              0.0,
+              1.749218757201132,
+              0.0,
+              3.3765666385061586,
+              0.0,
+              -8.134881427620405,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gangdong-lotte-castle-first-129",
+          "dimensions": [
+            33.19099219190129,
+            88.9,
+            32.155832427451195
+          ],
+          "min": [
+            -19.882148435040413,
+            0,
+            -16.03562408065283
+          ],
+          "max": [
+            13.308843756860874,
+            88.9,
+            16.120208346798364
+          ],
+          "sha256": "92d55ee087370738fe47742b86239e092b742efdc09c106ce393e4061c216025",
+          "sourceSha256": "1b6327a92f2f754105301a090788858f26a3f189bb8d16550c3c6594b66d4f7b",
+          "sharedModel": "bespoke/gangdong-lotte-castle-first-representative/bespoke-gangdong-lotte-castle-first-110.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gangdong-lotte-castle-first-110",
+            "sourceDimensions": [
+              25.964961051940918,
+              83.4000015258789,
+              16.934302806854248
+            ],
+            "matrix": [
+              0.8604510291533378,
+              0.0,
+              0.6076112508377162,
+              0.0,
+              0.0,
+              1.0659472227037605,
+              0.0,
+              0.0,
+              -0.9132017505584905,
+              0.0,
+              1.279506114433268,
+              0.0,
+              0.5780890735627522,
+              0.0,
+              -5.091582462804249,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gangdong-lotte-castle-first-130",
+          "dimensions": [
+            33.359756138452916,
+            80.35,
+            31.56315481791172
+          ],
+          "min": [
+            -14.229862947452357,
+            0,
+            -15.688868247705603
+          ],
+          "max": [
+            19.12989319100056,
+            80.35,
+            15.874286570206117
+          ],
+          "sha256": "92d55ee087370738fe47742b86239e092b742efdc09c106ce393e4061c216025",
+          "sourceSha256": "1b6327a92f2f754105301a090788858f26a3f189bb8d16550c3c6594b66d4f7b",
+          "sharedModel": "bespoke/gangdong-lotte-castle-first-representative/bespoke-gangdong-lotte-castle-first-110.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gangdong-lotte-castle-first-110",
+            "sourceDimensions": [
+              25.964961051940918,
+              83.4000015258789,
+              16.934302806854248
+            ],
+            "matrix": [
+              0.8556998147125267,
+              0.0,
+              -0.5886929787761775,
+              0.0,
+              0.0,
+              0.9634292389679093,
+              0.0,
+              0.0,
+              0.8887637735871755,
+              0.0,
+              1.3065985271833336,
+              0.0,
+              -1.1243046878963159,
+              0.0,
+              -5.199261930228083,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gangdong-lotte-castle-first-131",
+          "dimensions": [
+            29.83886857354431,
+            80.35,
+            18.24009930704368
+          ],
+          "min": [
+            -14.933504548173191,
+            0,
+            -9.236668914478448
+          ],
+          "max": [
+            14.905364025371119,
+            80.35,
+            9.003430392565228
+          ],
+          "sha256": "92d55ee087370738fe47742b86239e092b742efdc09c106ce393e4061c216025",
+          "sourceSha256": "1b6327a92f2f754105301a090788858f26a3f189bb8d16550c3c6594b66d4f7b",
+          "sharedModel": "bespoke/gangdong-lotte-castle-first-representative/bespoke-gangdong-lotte-castle-first-110.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gangdong-lotte-castle-first-110",
+            "sourceDimensions": [
+              25.964961051940918,
+              83.4000015258789,
+              16.934302806854248
+            ],
+            "matrix": [
+              1.138333326738257,
+              0.0,
+              -0.0385035807783042,
+              0.0,
+              0.0,
+              0.9634292389679093,
+              0.0,
+              0.0,
+              0.0366695692220047,
+              0.0,
+              1.0551064770843688,
+              0.0,
+              -0.1822004320217791,
+              0.0,
+              -2.490437570313848,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gangdong-lotte-castle-first-132",
+          "dimensions": [
+            36.6375873869964,
+            74.65,
+            13.03889813774853
+          ],
+          "min": [
+            -18.34289447263393,
+            0,
+            -6.361029642691508
+          ],
+          "max": [
+            18.29469291436247,
+            74.65,
+            6.677868495057022
+          ],
+          "sha256": "92d55ee087370738fe47742b86239e092b742efdc09c106ce393e4061c216025",
+          "sourceSha256": "1b6327a92f2f754105301a090788858f26a3f189bb8d16550c3c6594b66d4f7b",
+          "sharedModel": "bespoke/gangdong-lotte-castle-first-representative/bespoke-gangdong-lotte-castle-first-110.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gangdong-lotte-castle-first-110",
+            "sourceDimensions": [
+              25.964961051940918,
+              83.4000015258789,
+              16.934302806854248
+            ],
+            "matrix": [
+              1.411001654952625,
+              0.0,
+              0.006383204904664746,
+              0.0,
+              0.0,
+              0.8950839164773422,
+              0.0,
+              0.0,
+              0.0026295759897737767,
+              0.0,
+              0.7649976518272759,
+              0.0,
+              -0.03399118399290098,
+              0.0,
+              -1.5246198477634598,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gangdong-lotte-castle-first-133",
+          "dimensions": [
+            28.721244501408975,
+            66.3,
+            18.086457715954204
+          ],
+          "min": [
+            -14.371205855371066,
+            0,
+            -9.082446716176399
+          ],
+          "max": [
+            14.350038646037909,
+            66.3,
+            9.004010999777803
+          ],
+          "sha256": "92d55ee087370738fe47742b86239e092b742efdc09c106ce393e4061c216025",
+          "sourceSha256": "1b6327a92f2f754105301a090788858f26a3f189bb8d16550c3c6594b66d4f7b",
+          "sharedModel": "bespoke/gangdong-lotte-castle-first-representative/bespoke-gangdong-lotte-castle-first-110.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gangdong-lotte-castle-first-110",
+            "sourceDimensions": [
+              25.964961051940918,
+              83.4000015258789,
+              16.934302806854248
+            ],
+            "matrix": [
+              1.1039439593572715,
+              0.0,
+              -0.017569039939644808,
+              0.0,
+              0.0,
+              0.7949640142323882,
+              0.0,
+              0.0,
+              0.017406646535839457,
+              0.0,
+              1.0624886901878594,
+              0.0,
+              -0.09394747060896577,
+              0.0,
+              -2.3428368373938464,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gangdong-lotte-castle-first-134",
+          "dimensions": [
+            39.41578535185594,
+            69.15,
+            17.966916694373765
+          ],
+          "min": [
+            -19.704787857551207,
+            0,
+            -9.006373645199417
+          ],
+          "max": [
+            19.71099749430473,
+            69.15,
+            8.960543049174348
+          ],
+          "sha256": "92d55ee087370738fe47742b86239e092b742efdc09c106ce393e4061c216025",
+          "sourceSha256": "1b6327a92f2f754105301a090788858f26a3f189bb8d16550c3c6594b66d4f7b",
+          "sharedModel": "bespoke/gangdong-lotte-castle-first-representative/bespoke-gangdong-lotte-castle-first-110.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gangdong-lotte-castle-first-110",
+            "sourceDimensions": [
+              25.964961051940918,
+              83.4000015258789,
+              16.934302806854248
+            ],
+            "matrix": [
+              1.5167043156724385,
+              0.0,
+              -0.016547918455539018,
+              0.0,
+              0.0,
+              0.829136675477672,
+              0.0,
+              0.0,
+              0.01629911869591714,
+              0.0,
+              1.0561806607715196,
+              0.0,
+              -0.07344628583725418,
+              0.0,
+              -2.309104217761246,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gangdong-lotte-castle-first-135",
+          "dimensions": [
+            36.31709597717352,
+            83.12,
+            16.183489414418993
+          ],
+          "min": [
+            -18.174940078556688,
+            0,
+            -8.116258938281874
+          ],
+          "max": [
+            18.142155898616835,
+            83.12,
+            8.067230476137121
+          ],
+          "sha256": "92d55ee087370738fe47742b86239e092b742efdc09c106ce393e4061c216025",
+          "sourceSha256": "1b6327a92f2f754105301a090788858f26a3f189bb8d16550c3c6594b66d4f7b",
+          "sharedModel": "bespoke/gangdong-lotte-castle-first-representative/bespoke-gangdong-lotte-castle-first-110.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gangdong-lotte-castle-first-110",
+            "sourceDimensions": [
+              25.964961051940918,
+              83.4000015258789,
+              16.934302806854248
+            ],
+            "matrix": [
+              1.3986754231247756,
+              0.0,
+              0.007019397909687951,
+              0.0,
+              0.0,
+              0.9966426676168343,
+              0.0,
+              0.0,
+              -0.00016429169599844467,
+              0.0,
+              0.9501956932849295,
+              0.0,
+              -0.010008315826605878,
+              0.0,
+              -2.111277747376611,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gangdong-lotte-castle-first-136",
+          "dimensions": [
+            39.9491585232146,
+            83.4,
+            17.473602954445887
+          ],
+          "min": [
+            -20.11258427484599,
+            0,
+            -8.714501780624737
+          ],
+          "max": [
+            19.83657424836861,
+            83.4,
+            8.759101173821152
+          ],
+          "sha256": "92d55ee087370738fe47742b86239e092b742efdc09c106ce393e4061c216025",
+          "sourceSha256": "1b6327a92f2f754105301a090788858f26a3f189bb8d16550c3c6594b66d4f7b",
+          "sharedModel": "bespoke/gangdong-lotte-castle-first-representative/bespoke-gangdong-lotte-castle-first-110.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gangdong-lotte-castle-first-110",
+            "sourceDimensions": [
+              25.964961051940918,
+              83.4000015258789,
+              16.934302806854248
+            ],
+            "matrix": [
+              1.5380723395169569,
+              0.0,
+              0.013925587529135298,
+              0.0,
+              0.0,
+              0.9999999817040902,
+              0.0,
+              0.0,
+              -0.003984123654213622,
+              0.0,
+              1.020999846493974,
+              0.0,
+              -0.11534834587003184,
+              0.0,
+              -2.2460943081176943,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        }
+      ],
+      "mcpEvidence": [
+        {
+          "path": "docs/model-audit/mcp/gangdong-lotte-castle-first-110-headless.json",
+          "sha256": "46fd2c5f7171c4b5af9e53be9546719c8166341dc5e0c306d59423ad14cdb0a4",
+          "tool": "execute_blender_code",
+          "server": "mcp-for-blender upstream addon headless main-thread adapter"
+        }
+      ],
+      "recipeInputs": [],
+      "sharedRepresentative": "bespoke-gangdong-lotte-castle-first-110",
+      "newGlbFiles": 0,
+      "newBlendFiles": 0,
+      "placementInputs": [
+        {
+          "path": "docs/model-audit/gangdong-lotte-castle-first-source-identity.json",
+          "sha256": "5f470106d89ea7f39270e1462473faea5da8b29153889f72b0cd93304c74e4b2"
+        },
+        {
+          "path": "docs/model-audit/gangdong-lotte-castle-first-fallback-bindings.json",
+          "sha256": "310a0ed8f04d7faebfd0b6b4166af05a42ce44849f2901de840d1d073f0263d3"
+        }
+      ],
+      "placementMethod": "Long-axis oriented rectangle mapping with positive plan scales and explicit per-target height basis; actual concave target shapes are not reconstructed."
     }
   }
 }

@@ -4,6 +4,7 @@ import { readFileSync, mkdirSync, writeFileSync } from 'node:fs';
 const read = (p: string) => JSON.parse(readFileSync(p, 'utf8'));
 const assets = read('public/models/bespoke-manifest.json').assets;
 const families = [
+  {site: 'gangdong-lotte-castle-first', number: 111, count: 35, label: null},
   {site: 'godeok-raemian-hillstate-completion', assetSite: 'godeok-raemian-hillstate', number: 123, count: 18, label: null},
   {site: 'mapo-raemian-prugio-completion', assetSite: 'mapo-raemian-prugio', number: 101, count: 10, label: null},
   {site: 'gaepo-raemian-forest-completion', assetSite: 'gaepo-raemian-forest', number: 128, count: 3, label: null},

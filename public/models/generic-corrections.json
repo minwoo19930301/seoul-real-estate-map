@@ -72086,6 +72086,3398 @@
           }
         }
       ]
+    },
+    {
+      "sourceId": "apt-a13485302",
+      "sourceSha256": "5c55ae8c0f2d5096e5cfe73a56c4997d5159a18e06e3c070e2236b92b46ef6f5",
+      "sourceFootprintIds": [
+        "f08a8c78-7f9a-4812-bb26-cd8b16377198",
+        "0629e6e2-e723-46e9-bc39-0464ae83a013",
+        "45e0d08d-fe89-4b60-992e-7664eec98223",
+        "1810bcf9-20ad-4162-bcef-651b75fb25f8",
+        "8639637d-128a-4b5b-9268-fd5c953416d9",
+        "971942e4-5174-4691-849e-8da62bef3aac",
+        "8fde6a8e-a128-4115-8bcd-c314199ace25",
+        "68bc0971-9749-4c02-8cb0-30009b243879",
+        "b159833a-64a1-4f82-adb3-dd8d40303a84",
+        "fdd96bc3-c619-4c8e-a7b5-e00633190691",
+        "4b57cc02-02fd-458e-b254-5a37580037cf",
+        "063be25b-70a4-48c8-9f7a-c06dadcc1620",
+        "4bd4f5c2-c864-43f5-9ba5-ead9cf5840f7",
+        "2ca32242-81aa-484a-b6f7-9d33e8af3531",
+        "78d14b1a-a1fb-4231-b2ff-dfd65b4a836a",
+        "ba9135b0-6e0b-4a92-ad80-ab585fcb299b",
+        "3821c329-c407-4c8d-b3b7-a789c59df404",
+        "24a612a3-b37f-46d7-9ffd-f0cf1df338d6",
+        "7725db34-6cca-4c07-90a3-8334b7da849f",
+        "f4f66659-1a19-425e-8d64-a819933b1e1a",
+        "bb929895-cb2a-4703-9b09-d74ccee09d15",
+        "7cd4c531-e809-4d72-a5c2-621b68cb0d38",
+        "3dc70dfe-c07e-49b6-8b2c-df0941b8d9eb",
+        "5ac827bd-a596-4dd6-8367-6e9dde0eba70",
+        "82da4523-06e5-4688-a338-55b97fb49e00",
+        "840e73d8-8607-4e21-8dec-f138ee8f09fa",
+        "3c4fc4fa-706a-465f-a067-e58013a18bd7",
+        "8a6cb065-e995-462b-b2ba-f6ceeda748bf",
+        "4bfdfa5f-4920-4c48-9513-b31fba1ab964",
+        "a6abaf6b-cbf1-45a8-ab30-400efbd47f45",
+        "a17614a4-10b1-4d11-b416-0875562fd269",
+        "1aaeaffa-a7af-429b-916d-1af89d4c8880",
+        "0a935537-54a5-4634-a196-87add44792cc",
+        "d4bfd126-e9f3-4b7a-9282-ca787d8f1f62",
+        "0ebfb631-3c11-4a3a-8096-2d395ee170ee",
+        "0c5c22ee-fccf-4c0f-885e-febc6e8dbec3"
+      ],
+      "assets": [
+        {
+          "id": "fallback-gangdong-lotte-castle-first-101",
+          "model": "generic-corrections/fallback-gangdong-lotte-castle-first-101.glb",
+          "name": "강동롯데캐슬퍼스트 101동",
+          "nameKo": "강동롯데캐슬퍼스트 101동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            44.99800109863281,
+            72.0,
+            38.64936828613281
+          ],
+          "measuredGlbDimensions": [
+            44.99800109863281,
+            72.0,
+            38.64936828613281
+          ],
+          "bounds": {
+            "min": [
+              132.71060180664062,
+              0.0,
+              140.22439575195312
+            ],
+            "max": [
+              177.70860290527344,
+              72.0,
+              178.87376403808594
+            ]
+          },
+          "triangles": 926,
+          "drawCalls": 3,
+          "bytes": 55696,
+          "sha256": "337b88244ee9c5029f9646fd528381a94b3b1e094d50be5ccbd82a68cc4b2b67",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.14213097459483,
+            "lat": 37.55661156795792,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "0c5c22ee-fccf-4c0f-885e-febc6e8dbec3"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.14363479978817,
+            37.555004700271624,
+            127.1441446997267,
+            37.555351900132
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13485302",
+            "sourceSha256": "5c55ae8c0f2d5096e5cfe73a56c4997d5159a18e06e3c070e2236b92b46ef6f5",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-gangdong-lotte-castle-first-102",
+          "model": "generic-corrections/fallback-gangdong-lotte-castle-first-102.glb",
+          "name": "강동롯데캐슬퍼스트 102동",
+          "nameKo": "강동롯데캐슬퍼스트 102동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            35.51127624511719,
+            80.0,
+            30.8350830078125
+          ],
+          "measuredGlbDimensions": [
+            35.51127624511719,
+            80.0,
+            30.8350830078125
+          ],
+          "bounds": {
+            "min": [
+              147.64227294921875,
+              0.0,
+              95.39667510986328
+            ],
+            "max": [
+              183.15354919433594,
+              80.0,
+              126.23175811767578
+            ]
+          },
+          "triangles": 492,
+          "drawCalls": 3,
+          "bytes": 31848,
+          "sha256": "4cc1ca58e810df6601cea2a1df63170876e6a23565d562741d99c729401d62ee",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.14213097459483,
+            "lat": 37.55661156795792,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "0a935537-54a5-4634-a196-87add44792cc"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.14380399970844,
+            37.555477600153374,
+            127.14420639975137,
+            37.55575460011725
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13485302",
+            "sourceSha256": "5c55ae8c0f2d5096e5cfe73a56c4997d5159a18e06e3c070e2236b92b46ef6f5",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-gangdong-lotte-castle-first-103",
+          "model": "generic-corrections/fallback-gangdong-lotte-castle-first-103.glb",
+          "name": "강동롯데캐슬퍼스트 103동",
+          "nameKo": "강동롯데캐슬퍼스트 103동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            45.209808349609375,
+            80.0,
+            37.63687515258789
+          ],
+          "measuredGlbDimensions": [
+            45.209808349609375,
+            80.0,
+            37.63687515258789
+          ],
+          "bounds": {
+            "min": [
+              145.55960083007812,
+              0.0,
+              34.10464859008789
+            ],
+            "max": [
+              190.7694091796875,
+              80.0,
+              71.74152374267578
+            ]
+          },
+          "triangles": 1249,
+          "drawCalls": 3,
+          "bytes": 74352,
+          "sha256": "dff5fdd52d7c2250e2750ccd4726b43875cf2456b3812b276dc2b3a07e8ae90d",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.14213097459483,
+            "lat": 37.55661156795792,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "1aaeaffa-a7af-429b-916d-1af89d4c8880"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.14378039967377,
+            37.55596710009822,
+            127.14429269973012,
+            37.556305200057245
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13485302",
+            "sourceSha256": "5c55ae8c0f2d5096e5cfe73a56c4997d5159a18e06e3c070e2236b92b46ef6f5",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-gangdong-lotte-castle-first-104",
+          "model": "generic-corrections/fallback-gangdong-lotte-castle-first-104.glb",
+          "name": "강동롯데캐슬퍼스트 104동",
+          "nameKo": "강동롯데캐슬퍼스트 104동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            37.912200927734375,
+            92.0,
+            31.12491798400879
+          ],
+          "measuredGlbDimensions": [
+            37.912200927734375,
+            92.0,
+            31.12491798400879
+          ],
+          "bounds": {
+            "min": [
+              151.4364013671875,
+              0.0,
+              -13.784929275512695
+            ],
+            "max": [
+              189.34860229492188,
+              92.0,
+              17.339988708496094
+            ]
+          },
+          "triangles": 599,
+          "drawCalls": 3,
+          "bytes": 38464,
+          "sha256": "47ec2069dd27e4121578cdcc2bb229e4b38bf46f0f9a932389f452a2f3bb4818",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.14213097459483,
+            "lat": 37.55661156795792,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "a17614a4-10b1-4d11-b416-0875562fd269"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.14384699330371,
+            37.55645580002628,
+            127.14427659969621,
+            37.55673539998162
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13485302",
+            "sourceSha256": "5c55ae8c0f2d5096e5cfe73a56c4997d5159a18e06e3c070e2236b92b46ef6f5",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-gangdong-lotte-castle-first-105",
+          "model": "generic-corrections/fallback-gangdong-lotte-castle-first-105.glb",
+          "name": "강동롯데캐슬퍼스트 105동",
+          "nameKo": "강동롯데캐슬퍼스트 105동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            38.202850341796875,
+            95.0,
+            35.054744720458984
+          ],
+          "measuredGlbDimensions": [
+            38.202850341796875,
+            95.0,
+            35.054744720458984
+          ],
+          "bounds": {
+            "min": [
+              143.90936279296875,
+              0.0,
+              -74.97756958007812
+            ],
+            "max": [
+              182.11221313476562,
+              95.0,
+              -39.92282485961914
+            ]
+          },
+          "triangles": 907,
+          "drawCalls": 3,
+          "bytes": 54992,
+          "sha256": "33170e8fce075b751b4222d0d8138334b13ed2a501e33243cd9f1c433a540701",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.14213097459483,
+            "lat": 37.55661156795792,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "a6abaf6b-cbf1-45a8-ab30-400efbd47f45"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.14376169981483,
+            37.55697019993247,
+            127.14419459973405,
+            37.55728509988118
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13485302",
+            "sourceSha256": "5c55ae8c0f2d5096e5cfe73a56c4997d5159a18e06e3c070e2236b92b46ef6f5",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-gangdong-lotte-castle-first-106",
+          "model": "generic-corrections/fallback-gangdong-lotte-castle-first-106.glb",
+          "name": "강동롯데캐슬퍼스트 106동",
+          "nameKo": "강동롯데캐슬퍼스트 106동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            37.912200927734375,
+            95.0,
+            31.125335693359375
+          ],
+          "measuredGlbDimensions": [
+            37.912200927734375,
+            95.0,
+            31.125335693359375
+          ],
+          "bounds": {
+            "min": [
+              153.07781982421875,
+              0.0,
+              -124.21476745605469
+            ],
+            "max": [
+              190.99002075195312,
+              95.0,
+              -93.08943176269531
+            ]
+          },
+          "triangles": 599,
+          "drawCalls": 3,
+          "bytes": 38464,
+          "sha256": "59fc574e9122f5f41b7c037eac6b8bfbdd3b3412ce23457e288ec839d5ded787",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.14213097459483,
+            "lat": 37.55661156795792,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "d4bfd126-e9f3-4b7a-9282-ca787d8f1f62"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.14386559322259,
+            37.55744779985916,
+            127.1442951996151,
+            37.55772739984457
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13485302",
+            "sourceSha256": "5c55ae8c0f2d5096e5cfe73a56c4997d5159a18e06e3c070e2236b92b46ef6f5",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-gangdong-lotte-castle-first-107",
+          "model": "generic-corrections/fallback-gangdong-lotte-castle-first-107.glb",
+          "name": "강동롯데캐슬퍼스트 107동",
+          "nameKo": "강동롯데캐슬퍼스트 107동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            43.91254425048828,
+            95.0,
+            39.32994079589844
+          ],
+          "measuredGlbDimensions": [
+            43.91254425048828,
+            95.0,
+            39.32994079589844
+          ],
+          "bounds": {
+            "min": [
+              122.76497650146484,
+              0.0,
+              -182.11309814453125
+            ],
+            "max": [
+              166.67752075195312,
+              95.0,
+              -142.7831573486328
+            ]
+          },
+          "triangles": 1142,
+          "drawCalls": 3,
+          "bytes": 68872,
+          "sha256": "53f32fbfedac649d2824d4eb59bf3a1fe245f2d095fc52dbe9ced9ccd13780dc",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.14213097459483,
+            "lat": 37.55661156795792,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "0ebfb631-3c11-4a3a-8096-2d395ee170ee"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.14352209981023,
+            37.557894199844554,
+            127.14401969977172,
+            37.55824749979492
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13485302",
+            "sourceSha256": "5c55ae8c0f2d5096e5cfe73a56c4997d5159a18e06e3c070e2236b92b46ef6f5",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-gangdong-lotte-castle-first-108",
+          "model": "generic-corrections/fallback-gangdong-lotte-castle-first-108.glb",
+          "name": "강동롯데캐슬퍼스트 108동",
+          "nameKo": "강동롯데캐슬퍼스트 108동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            28.664154052734375,
+            83.0,
+            16.732025146484375
+          ],
+          "measuredGlbDimensions": [
+            28.664154052734375,
+            83.0,
+            16.732025146484375
+          ],
+          "bounds": {
+            "min": [
+              106.69401550292969,
+              0.0,
+              110.9250717163086
+            ],
+            "max": [
+              135.35816955566406,
+              83.0,
+              127.65709686279297
+            ]
+          },
+          "triangles": 440,
+          "drawCalls": 3,
+          "bytes": 29208,
+          "sha256": "04b55e12e51326c9d4a1a1b586f88d1f17c90ef3d72f5a5c4df048bb2eed96f9",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.14213097459483,
+            "lat": 37.55661156795792,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "8a6cb065-e995-462b-b2ba-f6ceeda748bf"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.14333998989812,
+            37.5554647959216,
+            127.14366480100156,
+            37.555615104422365
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13485302",
+            "sourceSha256": "5c55ae8c0f2d5096e5cfe73a56c4997d5159a18e06e3c070e2236b92b46ef6f5",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-gangdong-lotte-castle-first-109",
+          "model": "generic-corrections/fallback-gangdong-lotte-castle-first-109.glb",
+          "name": "강동롯데캐슬퍼스트 109동",
+          "nameKo": "강동롯데캐슬퍼스트 109동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            28.328887939453125,
+            83.0,
+            17.127912521362305
+          ],
+          "measuredGlbDimensions": [
+            28.328887939453125,
+            83.0,
+            17.127912521362305
+          ],
+          "bounds": {
+            "min": [
+              107.4356689453125,
+              0.0,
+              9.635320663452148
+            ],
+            "max": [
+              135.76455688476562,
+              83.0,
+              26.763233184814453
+            ]
+          },
+          "triangles": 410,
+          "drawCalls": 3,
+          "bytes": 27392,
+          "sha256": "496972d50024f388265c0b7640a99c353136550690b0c7e17a0689b392d294a7",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.14213097459483,
+            "lat": 37.55661156795792,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "7cd4c531-e809-4d72-a5c2-621b68cb0d38"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.14334839402798,
+            37.556371149355854,
+            127.14366940602554,
+            37.55652501234946
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13485302",
+            "sourceSha256": "5c55ae8c0f2d5096e5cfe73a56c4997d5159a18e06e3c070e2236b92b46ef6f5",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-gangdong-lotte-castle-first-110",
+          "model": "generic-corrections/fallback-gangdong-lotte-castle-first-110.glb",
+          "name": "강동롯데캐슬퍼스트 110동",
+          "nameKo": "강동롯데캐슬퍼스트 110동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            25.580360412597656,
+            83.0,
+            16.426795959472656
+          ],
+          "measuredGlbDimensions": [
+            25.580360412597656,
+            83.0,
+            16.426795959472656
+          ],
+          "bounds": {
+            "min": [
+              109.3196792602539,
+              0.0,
+              -94.33670043945312
+            ],
+            "max": [
+              134.90003967285156,
+              83.0,
+              -77.90990447998047
+            ]
+          },
+          "triangles": 437,
+          "drawCalls": 3,
+          "bytes": 29080,
+          "sha256": "bc522bd400f724864ea9f15ba1abf28c80f421a8df0beec22f7dd504c5c21584",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.14213097459483,
+            "lat": 37.55661156795792,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "82da4523-06e5-4688-a338-55b97fb49e00"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.14336974290394,
+            37.557311441251,
+            127.14365960965098,
+            37.55745900413773
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13485302",
+            "sourceSha256": "5c55ae8c0f2d5096e5cfe73a56c4997d5159a18e06e3c070e2236b92b46ef6f5",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-gangdong-lotte-castle-first-111",
+          "model": "generic-corrections/fallback-gangdong-lotte-castle-first-111.glb",
+          "name": "강동롯데캐슬퍼스트 111동",
+          "nameKo": "강동롯데캐슬퍼스트 111동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            28.122093200683594,
+            81.0,
+            17.525390625
+          ],
+          "measuredGlbDimensions": [
+            28.122093200683594,
+            81.0,
+            17.525390625
+          ],
+          "bounds": {
+            "min": [
+              79.85113525390625,
+              0.0,
+              147.27040100097656
+            ],
+            "max": [
+              107.97322845458984,
+              81.0,
+              164.79579162597656
+            ]
+          },
+          "triangles": 417,
+          "drawCalls": 3,
+          "bytes": 27900,
+          "sha256": "d3d31625724b6ac6b30acac199e13d60ded21d11f4af99b826d5740a69588ff1",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.14213097459483,
+            "lat": 37.55661156795792,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "4bfdfa5f-4920-4c48-9513-b31fba1ab964"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.14303581676477,
+            37.55513116746919,
+            127.14335448544436,
+            37.55528860369309
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13485302",
+            "sourceSha256": "5c55ae8c0f2d5096e5cfe73a56c4997d5159a18e06e3c070e2236b92b46ef6f5",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-gangdong-lotte-castle-first-112",
+          "model": "generic-corrections/fallback-gangdong-lotte-castle-first-112.glb",
+          "name": "강동롯데캐슬퍼스트 112동",
+          "nameKo": "강동롯데캐슬퍼스트 112동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            36.069091796875,
+            83.0,
+            16.483856201171875
+          ],
+          "measuredGlbDimensions": [
+            36.069091796875,
+            83.0,
+            16.483856201171875
+          ],
+          "bounds": {
+            "min": [
+              73.39080810546875,
+              0.0,
+              51.06432342529297
+            ],
+            "max": [
+              109.45989990234375,
+              83.0,
+              67.54817962646484
+            ]
+          },
+          "triangles": 662,
+          "drawCalls": 3,
+          "bytes": 41216,
+          "sha256": "88ea373f0c114bc3909d81ff31dbaab72067d839b6225ebfca0505a2b37067ca",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.14213097459483,
+            "lat": 37.55661156795792,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "f4f66659-1a19-425e-8d64-a819933b1e1a"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.14296261083706,
+            37.55600476986561,
+            127.14337133183,
+            37.55615284792395
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13485302",
+            "sourceSha256": "5c55ae8c0f2d5096e5cfe73a56c4997d5159a18e06e3c070e2236b92b46ef6f5",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-gangdong-lotte-castle-first-113",
+          "model": "generic-corrections/fallback-gangdong-lotte-castle-first-113.glb",
+          "name": "강동롯데캐슬퍼스트 113동",
+          "nameKo": "강동롯데캐슬퍼스트 113동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            36.30846405029297,
+            83.0,
+            15.526988983154297
+          ],
+          "measuredGlbDimensions": [
+            36.30846405029297,
+            83.0,
+            15.526988983154297
+          ],
+          "bounds": {
+            "min": [
+              73.85033416748047,
+              0.0,
+              -54.47291564941406
+            ],
+            "max": [
+              110.15879821777344,
+              83.0,
+              -38.945926666259766
+            ]
+          },
+          "triangles": 590,
+          "drawCalls": 3,
+          "bytes": 37372,
+          "sha256": "2ecbb6e1ea416d0de392aaf886af403197c11acea4523a3e47db3cc679dfdcb4",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.14213097459483,
+            "lat": 37.55661156795792,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "7725db34-6cca-4c07-90a3-8334b7da849f"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.1429678180086,
+            37.55696142434841,
+            127.14337925147531,
+            37.557100904878205
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13485302",
+            "sourceSha256": "5c55ae8c0f2d5096e5cfe73a56c4997d5159a18e06e3c070e2236b92b46ef6f5",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-gangdong-lotte-castle-first-114",
+          "model": "generic-corrections/fallback-gangdong-lotte-castle-first-114.glb",
+          "name": "강동롯데캐슬퍼스트 114동",
+          "nameKo": "강동롯데캐슬퍼스트 114동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            44.33997344970703,
+            83.0,
+            18.472640991210938
+          ],
+          "measuredGlbDimensions": [
+            44.33997344970703,
+            83.0,
+            18.472640991210938
+          ],
+          "bounds": {
+            "min": [
+              66.52113342285156,
+              0.0,
+              -160.8470458984375
+            ],
+            "max": [
+              110.8611068725586,
+              83.0,
+              -142.37440490722656
+            ]
+          },
+          "triangles": 869,
+          "drawCalls": 3,
+          "bytes": 53788,
+          "sha256": "c9311815ac21cf01d65a33fa6f7ee8c0fb06f51675e047422ceb9ba9ea7dbf87",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.14213097459483,
+            "lat": 37.55661156795792,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "3c4fc4fa-706a-465f-a067-e58013a18bd7"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.14288476634145,
+            37.55789052802201,
+            127.14338720976525,
+            37.55805646754645
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13485302",
+            "sourceSha256": "5c55ae8c0f2d5096e5cfe73a56c4997d5159a18e06e3c070e2236b92b46ef6f5",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-gangdong-lotte-castle-first-115",
+          "model": "generic-corrections/fallback-gangdong-lotte-castle-first-115.glb",
+          "name": "강동롯데캐슬퍼스트 115동",
+          "nameKo": "강동롯데캐슬퍼스트 115동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            28.044811248779297,
+            81.0,
+            17.440887451171875
+          ],
+          "measuredGlbDimensions": [
+            28.044811248779297,
+            81.0,
+            17.440887451171875
+          ],
+          "bounds": {
+            "min": [
+              46.44353103637695,
+              0.0,
+              146.8232421875
+            ],
+            "max": [
+              74.48834228515625,
+              81.0,
+              164.26412963867188
+            ]
+          },
+          "triangles": 420,
+          "drawCalls": 3,
+          "bytes": 28056,
+          "sha256": "04cc2d225a332f91064c5ee239779caa2768fc08e7124385f9d1b668b6b859e7",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.14213097459483,
+            "lat": 37.55661156795792,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "840e73d8-8607-4e21-8dec-f138ee8f09fa"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.14265725471932,
+            37.55513594356481,
+            127.14297504766974,
+            37.555292620660275
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13485302",
+            "sourceSha256": "5c55ae8c0f2d5096e5cfe73a56c4997d5159a18e06e3c070e2236b92b46ef6f5",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-gangdong-lotte-castle-first-116",
+          "model": "generic-corrections/fallback-gangdong-lotte-castle-first-116.glb",
+          "name": "강동롯데캐슬퍼스트 116동",
+          "nameKo": "강동롯데캐슬퍼스트 116동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            35.83988571166992,
+            83.0,
+            15.748786926269531
+          ],
+          "measuredGlbDimensions": [
+            35.83988571166992,
+            83.0,
+            15.748786926269531
+          ],
+          "bounds": {
+            "min": [
+              32.4941520690918,
+              0.0,
+              50.478240966796875
+            ],
+            "max": [
+              68.33403778076172,
+              83.0,
+              66.2270278930664
+            ]
+          },
+          "triangles": 559,
+          "drawCalls": 3,
+          "bytes": 35624,
+          "sha256": "ef2180f47f8f62c5a7785601c246e4ac7c45bc12be58d1658ef0497e7946cd26",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.14213097459483,
+            "lat": 37.55661156795792,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "4b57cc02-02fd-458e-b254-5a37580037cf"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.14249918575395,
+            37.556016638069245,
+            127.14290530947223,
+            37.556158112824484
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13485302",
+            "sourceSha256": "5c55ae8c0f2d5096e5cfe73a56c4997d5159a18e06e3c070e2236b92b46ef6f5",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-gangdong-lotte-castle-first-117",
+          "model": "generic-corrections/fallback-gangdong-lotte-castle-first-117.glb",
+          "name": "강동롯데캐슬퍼스트 117동",
+          "nameKo": "강동롯데캐슬퍼스트 117동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            36.304969787597656,
+            81.0,
+            16.079620361328125
+          ],
+          "measuredGlbDimensions": [
+            36.304969787597656,
+            81.0,
+            16.079620361328125
+          ],
+          "bounds": {
+            "min": [
+              33.29460906982422,
+              0.0,
+              -54.628684997558594
+            ],
+            "max": [
+              69.59957885742188,
+              81.0,
+              -38.54906463623047
+            ]
+          },
+          "triangles": 562,
+          "drawCalls": 3,
+          "bytes": 35728,
+          "sha256": "33e56449c7dfe203d3e25ebd84e2b5aa8c93663d1714beed8e55c0e1303c5cb6",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.14213097459483,
+            "lat": 37.55661156795792,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "68bc0971-9749-4c02-8cb0-30009b243879"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.14250825622298,
+            37.55695785929281,
+            127.14291965009406,
+            37.55710230416888
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13485302",
+            "sourceSha256": "5c55ae8c0f2d5096e5cfe73a56c4997d5159a18e06e3c070e2236b92b46ef6f5",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-gangdong-lotte-castle-first-118",
+          "model": "generic-corrections/fallback-gangdong-lotte-castle-first-118.glb",
+          "name": "강동롯데캐슬퍼스트 118동",
+          "nameKo": "강동롯데캐슬퍼스트 118동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            39.02992248535156,
+            78.0,
+            16.372314453125
+          ],
+          "measuredGlbDimensions": [
+            39.02992248535156,
+            78.0,
+            16.372314453125
+          ],
+          "bounds": {
+            "min": [
+              22.0247745513916,
+              0.0,
+              -151.97666931152344
+            ],
+            "max": [
+              61.05469512939453,
+              78.0,
+              -135.60435485839844
+            ]
+          },
+          "triangles": 739,
+          "drawCalls": 3,
+          "bytes": 45856,
+          "sha256": "112d8b95476009d11db5bbdf24ab6463a40f78192b8a560faffac9f187500260",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.14213097459483,
+            "lat": 37.55661156795792,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "bb929895-cb2a-4703-9b09-d74ccee09d15"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.14238055081857,
+            37.55782971264668,
+            127.1428228227777,
+            37.55797678510032
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13485302",
+            "sourceSha256": "5c55ae8c0f2d5096e5cfe73a56c4997d5159a18e06e3c070e2236b92b46ef6f5",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-gangdong-lotte-castle-first-119",
+          "model": "generic-corrections/fallback-gangdong-lotte-castle-first-119.glb",
+          "name": "강동롯데캐슬퍼스트 119동",
+          "nameKo": "강동롯데캐슬퍼스트 119동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            31.32828140258789,
+            75.0,
+            27.662338256835938
+          ],
+          "measuredGlbDimensions": [
+            31.32828140258789,
+            75.0,
+            27.662338256835938
+          ],
+          "bounds": {
+            "min": [
+              -20.48910140991211,
+              0.0,
+              150.78842163085938
+            ],
+            "max": [
+              10.839179039001465,
+              75.0,
+              178.4507598876953
+            ]
+          },
+          "triangles": 694,
+          "drawCalls": 3,
+          "bytes": 42980,
+          "sha256": "9742ccc88dbd3ce6688b58bd138fc677424ee9584c3748d33692a0eead8e66ce",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.14213097459483,
+            "lat": 37.55661156795792,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "5ac827bd-a596-4dd6-8367-6e9dde0eba70"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.14189880002499,
+            37.55500850026442,
+            127.14225379997798,
+            37.555257000208314
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13485302",
+            "sourceSha256": "5c55ae8c0f2d5096e5cfe73a56c4997d5159a18e06e3c070e2236b92b46ef6f5",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-gangdong-lotte-castle-first-120",
+          "model": "generic-corrections/fallback-gangdong-lotte-castle-first-120.glb",
+          "name": "강동롯데캐슬퍼스트 120동",
+          "nameKo": "강동롯데캐슬퍼스트 120동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            31.090007781982422,
+            86.0,
+            26.760826110839844
+          ],
+          "measuredGlbDimensions": [
+            31.090007781982422,
+            86.0,
+            26.760826110839844
+          ],
+          "bounds": {
+            "min": [
+              -16.13844108581543,
+              0.0,
+              102.99970245361328
+            ],
+            "max": [
+              14.951567649841309,
+              86.0,
+              129.76052856445312
+            ]
+          },
+          "triangles": 458,
+          "drawCalls": 3,
+          "bytes": 29972,
+          "sha256": "e979e573efcb1c61fd4c630a15ce18e3ac2f45aadaef6411e51207dd9bd1602d",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.14213097459483,
+            "lat": 37.55661156795792,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "ba9135b0-6e0b-4a92-ad80-ab585fcb299b"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.14194810002448,
+            37.55544590017996,
+            127.14230039997462,
+            37.555686300143776
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13485302",
+            "sourceSha256": "5c55ae8c0f2d5096e5cfe73a56c4997d5159a18e06e3c070e2236b92b46ef6f5",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-gangdong-lotte-castle-first-121",
+          "model": "generic-corrections/fallback-gangdong-lotte-castle-first-121.glb",
+          "name": "강동롯데캐슬퍼스트 121동",
+          "nameKo": "강동롯데캐슬퍼스트 121동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            42.747657775878906,
+            97.0,
+            36.79078674316406
+          ],
+          "measuredGlbDimensions": [
+            42.747657775878906,
+            97.0,
+            36.79078674316406
+          ],
+          "bounds": {
+            "min": [
+              -18.13286018371582,
+              0.0,
+              49.35533905029297
+            ],
+            "max": [
+              24.614797592163086,
+              97.0,
+              86.14612579345703
+            ]
+          },
+          "triangles": 1208,
+          "drawCalls": 3,
+          "bytes": 72672,
+          "sha256": "c76012cc84e97d7e7c539ba093a3e1bf2abbc0808bdcefa6125740550acdc9c7",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.14213097459483,
+            "lat": 37.55661156795792,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "8fde6a8e-a128-4115-8bcd-c314199ace25"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.14192550003892,
+            37.555837700124926,
+            127.14240989995757,
+            37.55616820008472
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13485302",
+            "sourceSha256": "5c55ae8c0f2d5096e5cfe73a56c4997d5159a18e06e3c070e2236b92b46ef6f5",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-gangdong-lotte-castle-first-122",
+          "model": "generic-corrections/fallback-gangdong-lotte-castle-first-122.glb",
+          "name": "강동롯데캐슬퍼스트 122동",
+          "nameKo": "강동롯데캐슬퍼스트 122동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            46.13640594482422,
+            97.0,
+            36.089847564697266
+          ],
+          "measuredGlbDimensions": [
+            46.13640594482422,
+            97.0,
+            36.089847564697266
+          ],
+          "bounds": {
+            "min": [
+              -13.137986183166504,
+              0.0,
+              -34.7464485168457
+            ],
+            "max": [
+              32.99842071533203,
+              97.0,
+              1.3433985710144043
+            ]
+          },
+          "triangles": 1236,
+          "drawCalls": 3,
+          "bytes": 74472,
+          "sha256": "96cca33a5da2217981b679fc1c5df92045fc91105ca6e5be68061433efef288e",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.14213097459483,
+            "lat": 37.55661156795792,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "0629e6e2-e723-46e9-bc39-0464ae83a013"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.14198210001855,
+            37.55659950000224,
+            127.14250489993114,
+            37.55692369996189
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13485302",
+            "sourceSha256": "5c55ae8c0f2d5096e5cfe73a56c4997d5159a18e06e3c070e2236b92b46ef6f5",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-gangdong-lotte-castle-first-123",
+          "model": "generic-corrections/fallback-gangdong-lotte-castle-first-123.glb",
+          "name": "강동롯데캐슬퍼스트 123동",
+          "nameKo": "강동롯데캐슬퍼스트 123동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            31.946020126342773,
+            89.0,
+            26.616710662841797
+          ],
+          "measuredGlbDimensions": [
+            31.946020126342773,
+            89.0,
+            26.616710662841797
+          ],
+          "bounds": {
+            "min": [
+              -15.520700454711914,
+              0.0,
+              -82.70321655273438
+            ],
+            "max": [
+              16.42531967163086,
+              89.0,
+              -56.08650588989258
+            ]
+          },
+          "triangles": 476,
+          "drawCalls": 3,
+          "bytes": 31184,
+          "sha256": "c24dde59bf3b98f2f042bb8834420aa891a43ed3353153cb1f863ad412d28518",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.14213097459483,
+            "lat": 37.55661156795792,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "8639637d-128a-4b5b-9268-fd5c953416d9"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.14195510002232,
+            37.55711539990938,
+            127.14231709996233,
+            37.5573544998891
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13485302",
+            "sourceSha256": "5c55ae8c0f2d5096e5cfe73a56c4997d5159a18e06e3c070e2236b92b46ef6f5",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-gangdong-lotte-castle-first-124",
+          "model": "generic-corrections/fallback-gangdong-lotte-castle-first-124.glb",
+          "name": "강동롯데캐슬퍼스트 124동",
+          "nameKo": "강동롯데캐슬퍼스트 124동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            32.140167236328125,
+            89.0,
+            26.049148559570312
+          ],
+          "measuredGlbDimensions": [
+            32.140167236328125,
+            89.0,
+            26.049148559570312
+          ],
+          "bounds": {
+            "min": [
+              -13.049736976623535,
+              0.0,
+              -134.4229278564453
+            ],
+            "max": [
+              19.090431213378906,
+              89.0,
+              -108.373779296875
+            ]
+          },
+          "triangles": 518,
+          "drawCalls": 3,
+          "bytes": 33664,
+          "sha256": "1ccf3e03d324613e2dd6754fe7f4b7e7e0a52529dda1054481ec755a1477d024",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.14213097459483,
+            "lat": 37.55661156795792,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "2ca32242-81aa-484a-b6f7-9d33e8af3531"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.14198310002442,
+            37.557585099821836,
+            127.14234729997517,
+            37.557819099880085
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13485302",
+            "sourceSha256": "5c55ae8c0f2d5096e5cfe73a56c4997d5159a18e06e3c070e2236b92b46ef6f5",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-gangdong-lotte-castle-first-125",
+          "model": "generic-corrections/fallback-gangdong-lotte-castle-first-125.glb",
+          "name": "강동롯데캐슬퍼스트 125동",
+          "nameKo": "강동롯데캐슬퍼스트 125동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            31.21355438232422,
+            72.0,
+            31.781082153320312
+          ],
+          "measuredGlbDimensions": [
+            31.21355438232422,
+            72.0,
+            31.781082153320312
+          ],
+          "bounds": {
+            "min": [
+              -82.44849395751953,
+              0.0,
+              150.33201599121094
+            ],
+            "max": [
+              -51.23493957519531,
+              72.0,
+              182.11309814453125
+            ]
+          },
+          "triangles": 521,
+          "drawCalls": 3,
+          "bytes": 33004,
+          "sha256": "729b66c0295834b41fc3febb60b86ab5857fdbb49ef375d49505f6b73451074c",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.14213097459483,
+            "lat": 37.55661156795792,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "3dc70dfe-c07e-49b6-8b2c-df0941b8d9eb"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.141196700161,
+            37.554975600205076,
+            127.1415504000826,
+            37.55526110024436
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13485302",
+            "sourceSha256": "5c55ae8c0f2d5096e5cfe73a56c4997d5159a18e06e3c070e2236b92b46ef6f5",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-gangdong-lotte-castle-first-126",
+          "model": "generic-corrections/fallback-gangdong-lotte-castle-first-126.glb",
+          "name": "강동롯데캐슬퍼스트 126동",
+          "nameKo": "강동롯데캐슬퍼스트 126동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            31.098834991455078,
+            86.0,
+            26.86101531982422
+          ],
+          "measuredGlbDimensions": [
+            31.098834991455078,
+            86.0,
+            26.86101531982422
+          ],
+          "bounds": {
+            "min": [
+              -85.30775451660156,
+              0.0,
+              103.23346710205078
+            ],
+            "max": [
+              -54.208919525146484,
+              86.0,
+              130.094482421875
+            ]
+          },
+          "triangles": 608,
+          "drawCalls": 3,
+          "bytes": 38404,
+          "sha256": "0ff8eeff5389f8e67249d8cc8e3c363a156ff52ceb7d5ff39ff9595319a5e952",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.14213097459483,
+            "lat": 37.55661156795792,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "4bd4f5c2-c864-43f5-9ba5-ead9cf5840f7"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.1411643001266,
+            37.55544290017443,
+            127.14151670009245,
+            37.55568420017413
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13485302",
+            "sourceSha256": "5c55ae8c0f2d5096e5cfe73a56c4997d5159a18e06e3c070e2236b92b46ef6f5",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-gangdong-lotte-castle-first-127",
+          "model": "generic-corrections/fallback-gangdong-lotte-castle-first-127.glb",
+          "name": "강동롯데캐슬퍼스트 127동",
+          "nameKo": "강동롯데캐슬퍼스트 127동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            42.88885498046875,
+            97.0,
+            36.22306442260742
+          ],
+          "measuredGlbDimensions": [
+            42.88885498046875,
+            97.0,
+            36.22306442260742
+          ],
+          "bounds": {
+            "min": [
+              -94.89155578613281,
+              0.0,
+              48.53158187866211
+            ],
+            "max": [
+              -52.00270080566406,
+              97.0,
+              84.75464630126953
+            ]
+          },
+          "triangles": 1172,
+          "drawCalls": 3,
+          "bytes": 70776,
+          "sha256": "aa7ae2346bbe912fe21acc7d917c88eb1949a3876ff14ac5ae826158d2d6313f",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.14213097459483,
+            "lat": 37.55661156795792,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "1810bcf9-20ad-4162-bcef-651b75fb25f8"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.14105570019863,
+            37.55585020012664,
+            127.14154170010939,
+            37.55617560006497
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13485302",
+            "sourceSha256": "5c55ae8c0f2d5096e5cfe73a56c4997d5159a18e06e3c070e2236b92b46ef6f5",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-gangdong-lotte-castle-first-128",
+          "model": "generic-corrections/fallback-gangdong-lotte-castle-first-128.glb",
+          "name": "강동롯데캐슬퍼스트 128동",
+          "nameKo": "강동롯데캐슬퍼스트 128동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            46.136409759521484,
+            97.0,
+            36.08985900878906
+          ],
+          "measuredGlbDimensions": [
+            46.136409759521484,
+            97.0,
+            36.08985900878906
+          ],
+          "bounds": {
+            "min": [
+              -98.8186264038086,
+              0.0,
+              -37.08416748046875
+            ],
+            "max": [
+              -52.68221664428711,
+              97.0,
+              -0.9943102598190308
+            ]
+          },
+          "triangles": 1236,
+          "drawCalls": 3,
+          "bytes": 74476,
+          "sha256": "df901eaec4bff8b57010335723b26e07bd537a3d1b3ad26e129d62672fb24d5a",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.14213097459483,
+            "lat": 37.55661156795792,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "f08a8c78-7f9a-4812-bb26-cd8b16377198"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.1410112001538,
+            37.55662049999844,
+            127.1415340000988,
+            37.55694469995773
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13485302",
+            "sourceSha256": "5c55ae8c0f2d5096e5cfe73a56c4997d5159a18e06e3c070e2236b92b46ef6f5",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-gangdong-lotte-castle-first-129",
+          "model": "generic-corrections/fallback-gangdong-lotte-castle-first-129.glb",
+          "name": "강동롯데캐슬퍼스트 129동",
+          "nameKo": "강동롯데캐슬퍼스트 129동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            31.884246826171875,
+            89.0,
+            26.950668334960938
+          ],
+          "measuredGlbDimensions": [
+            31.884246826171875,
+            89.0,
+            26.950668334960938
+          ],
+          "bounds": {
+            "min": [
+              -84.69883728027344,
+              0.0,
+              -83.52698516845703
+            ],
+            "max": [
+              -52.81459045410156,
+              89.0,
+              -56.576316833496094
+            ]
+          },
+          "triangles": 494,
+          "drawCalls": 3,
+          "bytes": 32152,
+          "sha256": "318ee8dc79f16f9a0cd07242dc4bb2c743394682d6e122724a53b5ffdbe8748d",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.14213097459483,
+            "lat": 37.55661156795792,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "45e0d08d-fe89-4b60-992e-7664eec98223"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.14117120014113,
+            37.557119799926056,
+            127.14153250009001,
+            37.55736189985434
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13485302",
+            "sourceSha256": "5c55ae8c0f2d5096e5cfe73a56c4997d5159a18e06e3c070e2236b92b46ef6f5",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-gangdong-lotte-castle-first-130",
+          "model": "generic-corrections/fallback-gangdong-lotte-castle-first-130.glb",
+          "name": "강동롯데캐슬퍼스트 130동",
+          "nameKo": "강동롯데캐슬퍼스트 130동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            31.946022033691406,
+            80.0,
+            26.616851806640625
+          ],
+          "measuredGlbDimensions": [
+            31.946022033691406,
+            80.0,
+            26.616851806640625
+          ],
+          "bounds": {
+            "min": [
+              -75.41507720947266,
+              0.0,
+              -125.7398681640625
+            ],
+            "max": [
+              -43.46905517578125,
+              80.0,
+              -99.12301635742188
+            ]
+          },
+          "triangles": 456,
+          "drawCalls": 3,
+          "bytes": 29944,
+          "sha256": "6eb1341693f2ce71b7f9112dad79aac3e19411f778bf1be2504446f6fd20face",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.14213097459483,
+            "lat": 37.55661156795792,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "b159833a-64a1-4f82-adb3-dd8d40303a84"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.14127640011833,
+            37.557501999843794,
+            127.14163840007996,
+            37.55774109985095
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13485302",
+            "sourceSha256": "5c55ae8c0f2d5096e5cfe73a56c4997d5159a18e06e3c070e2236b92b46ef6f5",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-gangdong-lotte-castle-first-131",
+          "model": "generic-corrections/fallback-gangdong-lotte-castle-first-131.glb",
+          "name": "강동롯데캐슬퍼스트 131동",
+          "nameKo": "강동롯데캐슬퍼스트 131동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            28.764671325683594,
+            80.0,
+            17.565780639648438
+          ],
+          "measuredGlbDimensions": [
+            28.764671325683594,
+            80.0,
+            17.565780639648438
+          ],
+          "bounds": {
+            "min": [
+              -124.33219146728516,
+              0.0,
+              113.47425842285156
+            ],
+            "max": [
+              -95.56752014160156,
+              80.0,
+              131.0400390625
+            ]
+          },
+          "triangles": 417,
+          "drawCalls": 3,
+          "bytes": 27848,
+          "sha256": "c3e9a73776ba1fbc46be920e2b1e3b5addbddf1851eadb9e8bcc3b5edef8d7bb",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.14213097459483,
+            "lat": 37.55661156795792,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "24a612a3-b37f-46d7-9ffd-f0cf1df338d6"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.14072209030581,
+            37.5554344059609,
+            127.1410480404321,
+            37.55559220437881
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13485302",
+            "sourceSha256": "5c55ae8c0f2d5096e5cfe73a56c4997d5159a18e06e3c070e2236b92b46ef6f5",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-gangdong-lotte-castle-first-132",
+          "model": "generic-corrections/fallback-gangdong-lotte-castle-first-132.glb",
+          "name": "강동롯데캐슬퍼스트 132동",
+          "nameKo": "강동롯데캐슬퍼스트 132동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            36.06248474121094,
+            75.0,
+            12.625846862792969
+          ],
+          "measuredGlbDimensions": [
+            36.06248474121094,
+            75.0,
+            12.625846862792969
+          ],
+          "bounds": {
+            "min": [
+              -157.8513641357422,
+              0.0,
+              66.9289321899414
+            ],
+            "max": [
+              -121.78887939453125,
+              75.0,
+              79.55477905273438
+            ]
+          },
+          "triangles": 420,
+          "drawCalls": 3,
+          "bytes": 28072,
+          "sha256": "fbb6f95cc5e223d07b12a3b8ffe2ee47d7b344ac1b71bdf82fa4a56d53e47679",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.14213097459483,
+            "lat": 37.55661156795792,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "063be25b-70a4-48c8-9f7a-c06dadcc1620"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.14034226400985,
+            37.55589691179151,
+            127.1407509101342,
+            37.55601033270506
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13485302",
+            "sourceSha256": "5c55ae8c0f2d5096e5cfe73a56c4997d5159a18e06e3c070e2236b92b46ef6f5",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-gangdong-lotte-castle-first-133",
+          "model": "generic-corrections/fallback-gangdong-lotte-castle-first-133.glb",
+          "name": "강동롯데캐슬퍼스트 133동",
+          "nameKo": "강동롯데캐슬퍼스트 133동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            28.09918212890625,
+            66.0,
+            17.492069244384766
+          ],
+          "measuredGlbDimensions": [
+            28.09918212890625,
+            66.0,
+            17.492069244384766
+          ],
+          "bounds": {
+            "min": [
+              -145.291259765625,
+              0.0,
+              -23.125125885009766
+            ],
+            "max": [
+              -117.19207763671875,
+              66.0,
+              -5.633057117462158
+            ]
+          },
+          "triangles": 594,
+          "drawCalls": 3,
+          "bytes": 38860,
+          "sha256": "987e6d7b7d3b74fc9c6c410df7a364bd4a1bcc02f06d919b564db8a05919d3bc",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.14213097459483,
+            "lat": 37.55661156795792,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "971942e4-5174-4691-849e-8da62bef3aac"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.14048459025301,
+            37.55666217055379,
+            127.1408029993132,
+            37.55681930420865
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13485302",
+            "sourceSha256": "5c55ae8c0f2d5096e5cfe73a56c4997d5159a18e06e3c070e2236b92b46ef6f5",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-gangdong-lotte-castle-first-134",
+          "model": "generic-corrections/fallback-gangdong-lotte-castle-first-134.glb",
+          "name": "강동롯데캐슬퍼스트 134동",
+          "nameKo": "강동롯데캐슬퍼스트 134동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            38.67486572265625,
+            69.0,
+            17.372596740722656
+          ],
+          "measuredGlbDimensions": [
+            38.67486572265625,
+            69.0,
+            17.372596740722656
+          ],
+          "bounds": {
+            "min": [
+              -136.8042755126953,
+              0.0,
+              -106.2480239868164
+            ],
+            "max": [
+              -98.12940979003906,
+              69.0,
+              -88.87542724609375
+            ]
+          },
+          "triangles": 719,
+          "drawCalls": 3,
+          "bytes": 44468,
+          "sha256": "750d43d37218185adfcee6669ef1dedde16f5630ab55293ed54a4a5fe68eab6a",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.14213097459483,
+            "lat": 37.55661156795792,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "fdd96bc3-c619-4c8e-a7b5-e00633190691"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.14058076147491,
+            37.55740994522771,
+            127.1410190100898,
+            37.55756600408401
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13485302",
+            "sourceSha256": "5c55ae8c0f2d5096e5cfe73a56c4997d5159a18e06e3c070e2236b92b46ef6f5",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-gangdong-lotte-castle-first-135",
+          "model": "generic-corrections/fallback-gangdong-lotte-castle-first-135.glb",
+          "name": "강동롯데캐슬퍼스트 135동",
+          "nameKo": "강동롯데캐슬퍼스트 135동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            35.746063232421875,
+            83.0,
+            15.655936241149902
+          ],
+          "measuredGlbDimensions": [
+            35.746063232421875,
+            83.0,
+            15.655936241149902
+          ],
+          "bounds": {
+            "min": [
+              -190.99002075195312,
+              0.0,
+              15.513880729675293
+            ],
+            "max": [
+              -155.24395751953125,
+              83.0,
+              31.169816970825195
+            ]
+          },
+          "triangles": 559,
+          "drawCalls": 3,
+          "bytes": 35552,
+          "sha256": "6ab35ef43f2670f0371c35caa33b37e19b8783312ed78a13e4a84e1696991d97",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.14213097459483,
+            "lat": 37.55661156795792,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "78d14b1a-a1fb-4231-b2ff-dfd65b4a836a"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.13996674957457,
+            37.55633156420198,
+            127.1403718101328,
+            37.55647220426586
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13485302",
+            "sourceSha256": "5c55ae8c0f2d5096e5cfe73a56c4997d5159a18e06e3c070e2236b92b46ef6f5",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        },
+        {
+          "id": "fallback-gangdong-lotte-castle-first-136",
+          "model": "generic-corrections/fallback-gangdong-lotte-castle-first-136.glb",
+          "name": "강동롯데캐슬퍼스트 136동",
+          "nameKo": "강동롯데캐슬퍼스트 136동",
+          "district": "강동구",
+          "category": "major-apartment-complex",
+          "minZoom": 14.5,
+          "units": "metres",
+          "dimensions": [
+            39.267974853515625,
+            83.0,
+            16.987747192382812
+          ],
+          "measuredGlbDimensions": [
+            39.267974853515625,
+            83.0,
+            16.987747192382812
+          ],
+          "bounds": {
+            "min": [
+              -182.11924743652344,
+              0.0,
+              -82.19066619873047
+            ],
+            "max": [
+              -142.8512725830078,
+              83.0,
+              -65.20291900634766
+            ]
+          },
+          "triangles": 773,
+          "drawCalls": 3,
+          "bytes": 47872,
+          "sha256": "22d45160dbba65ce0b62bad269c8374cc191b1c245510cba81c6af12a35c0fce",
+          "rootTransform": "identity",
+          "coordinate": {
+            "lon": 127.14213097459483,
+            "lat": 37.55661156795792,
+            "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+            "confidence": "source_footprint_unsurveyed"
+          },
+          "yawDegFromEast": 0,
+          "heightDatum": "Source heights where available; otherwise storeys x 3.05 m estimate. Roof plant stays inside known source-height envelopes; special silhouette dimensions are documented separately. All building bases at local floor zero.",
+          "referenceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+          "sources": [
+            {
+              "url": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+              "supports": [
+                "identity and source provenance; no texture rights asserted"
+              ]
+            }
+          ],
+          "geometryProvenance": "Retained real building footprint polygons from data/buildings.sqlite; no modification to database",
+          "heightEstimated": true,
+          "sourceHeightAvailableForEveryBuilding": true,
+          "modelingEstimates": {
+            "facade": "Procedural window ribbons, piers and mineral colours; not photo-measured",
+            "roof": "Setback rooftop plant from inset footprint; estimated",
+            "storeyHeightM": 3.05,
+            "specialSilhouette": null,
+            "specialSilhouetteProportions": "Dome, arch, eaves and structural colour accents are source-informed visual estimates; see linked dimension sources where available",
+            "storeyFallback": 15,
+            "groundDatum": "shared floor plane, local terrain queried at model anchor"
+          },
+          "buildingCount": 1,
+          "footprintIds": [
+            "3821c329-c407-4c8d-b3b7-a789c59df404"
+          ],
+          "estimatedDetails": [
+            "Footprint shape and placement follow the retained source geometry.",
+            "Window arrangement, materials, roof details and missing heights are estimates; not surveyed architecture.",
+            "Source building records and matching evidence are in docs/LANDMARK_EXPANSION_PROVENANCE.json."
+          ],
+          "validation": {
+            "finitePositions": true,
+            "unitNormals": true,
+            "noExternalResources": true
+          },
+          "searchable": false,
+          "residentialCompletionCredit": false,
+          "geoBounds": [
+            127.14006726974564,
+            37.557197293443025,
+            127.14051223924372,
+            37.557349895616696
+          ],
+          "genericCorrection": {
+            "sourceId": "apt-a13485302",
+            "sourceSha256": "5c55ae8c0f2d5096e5cfe73a56c4997d5159a18e06e3c070e2236b92b46ef6f5",
+            "operation": "Exact original source-emission partition; unchanged vertex attributes, materials and terrain anchor."
+          }
+        }
+      ]
     }
   ]
 }
