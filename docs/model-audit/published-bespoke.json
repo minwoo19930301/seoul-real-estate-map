@@ -102583,6 +102583,2878 @@
         }
       ],
       "placementMethod": "Long-axis oriented rectangle mapping with positive plan scales and explicit per-target height basis; actual concave target shapes are not reconstructed."
+    },
+    "godeok-ipark-representative": {
+      "sources": [
+        {
+          "url": "https://file.kbland.kr/image/kbstar/land/img/alian/kms/complex/photo/objctidnfr/17882/Mjc4ODIxMDAxODA3MDcy.jpg",
+          "sha256": "8616400ab273fe203109825626a0518c185d0f3b953c64145a910f55cc8f3dad",
+          "scope": "individual",
+          "observedTowerNumber": 103,
+          "observations": "Author directly viewed photo103: huge warm-grey seamed blank end, white grid with pale bluegreen glazing, black raised flat roof cap over open slots."
+        },
+        {
+          "dataset": "Root verified source identity",
+          "snapshot": "docs/model-audit/godeok-ipark-source-identity.json",
+          "sha256": "cca5ba54bc3282b44663ac3a7909b44a23572773d9850645d9f78a6ab43d6477",
+          "observations": "강동구;1142HH14official buildings,7identified.103 exact live source and register20F58.3m112HH."
+        }
+      ],
+      "review": {
+        "siteId": "godeok-ipark-representative",
+        "status": "visually-reviewed",
+        "reviewedSourcePhotos": [
+          {
+            "url": "https://file.kbland.kr/image/kbstar/land/img/alian/kms/complex/photo/objctidnfr/17882/Mjc4ODIxMDAxODA3MDcy.jpg",
+            "sha256": "8616400ab273fe203109825626a0518c185d0f3b953c64145a910f55cc8f3dad",
+            "scope": "individual",
+            "observedTowerNumber": 103,
+            "observations": "Author directly viewed photo103: huge warm-grey seamed blank end, white grid with pale bluegreen glazing, black raised flat roof cap over open slots."
+          }
+        ],
+        "reviewedInputs": {
+          "godeok-ipark-103.glb": "a1f631ba05f0b6b264f22e92d023db2d364c4ccdd639867df8c036d953dad807",
+          "godeok-ipark-103-authored.blend": "a8788d974b23304397aef1164cc8cfff6a85e6260d9bf6c03992e312c0e1873c",
+          "front.png": "81fedb006465939ed1bea87c48130f24e52582b33c28c49a8016a391aff5e458",
+          "opposite.png": "f5e61588ee4c7809584774aa56b8c8f5fba902e2273b6a90a42559f7506eed4c",
+          "side.png": "c1efb8a2237155dea750f28cf542f33dbdcbd3f03305be488a56800af7e010ab",
+          "roof.png": "02170761cc78826d6481dfe04b0df319425e59863e5928b77897193b44fdc2fc"
+        },
+        "comparisons": [
+          "Author reviewed original103photo and4V3views:largeblankwall/whitegrid/two-pane glazing/threeopenroofslots under black slab.",
+          "Source/register/fullcaps/roofcontainment/wholeprojection checked."
+        ],
+        "limits": [
+          "Photo103 identified; compass, hidden faces, window dimensions and roof proportions inferred.",
+          "Uniform own source envelope20F58.3m; legal roof datum unmeasured.",
+          "Photographed endwall roof mechanism inferred at one ownsource end: body/deck55.1m and uppercap58.3m; compass and dimensions unmeasured.",
+          "No number/logo,neighbors,gate,landscaping or photo textures."
+        ],
+        "reviewScope": "Root directly compared actual103photo and finalV3 four views; approved stylized shape/facade/roof mechanism with explicit compass/hiddenface/dimension inference",
+        "renders": [
+          "docs/model-audit/renders/godeok-ipark/front.png",
+          "docs/model-audit/renders/godeok-ipark/opposite.png",
+          "docs/model-audit/renders/godeok-ipark/side.png",
+          "docs/model-audit/renders/godeok-ipark/roof.png"
+        ]
+      },
+      "assets": [
+        {
+          "id": "bespoke-godeok-ipark-103",
+          "sourceSha256": "a1f631ba05f0b6b264f22e92d023db2d364c4ccdd639867df8c036d953dad807",
+          "sha256": "956ee9513135d02692cd982359de66037f4e6b9d7940ffab4aba8ac209c107cb",
+          "bytes": 1417008,
+          "dimensions": [
+            62.23395538330078,
+            58.29999923706055,
+            37.97904586791992
+          ],
+          "min": [
+            -37.34416198730469,
+            0,
+            -17.964336395263672
+          ],
+          "max": [
+            24.889793395996094,
+            58.29999923706055,
+            20.01470947265625
+          ],
+          "triangles": 26104,
+          "components": [
+            {
+              "name": "godeok-ipark103_editable_godeok-ipark103_light_grey_solid_wall",
+              "triangles": 32
+            },
+            {
+              "name": "godeok-ipark103_editable_godeok-ipark103_broad_white_facade_fra",
+              "triangles": 15320
+            },
+            {
+              "name": "godeok-ipark103_editable_godeok-ipark103_pale_cream_piers",
+              "triangles": 108
+            },
+            {
+              "name": "godeok-ipark103_editable_godeok-ipark103_warm_grey_blank_panels",
+              "triangles": 72
+            },
+            {
+              "name": "godeok-ipark103_editable_godeok-ipark103_turquoise_balcony_glaz",
+              "triangles": 10560
+            },
+            {
+              "name": "godeok-ipark103_editable_godeok-ipark103_dark_openings_and_roof",
+              "triangles": 12
+            }
+          ]
+        }
+      ],
+      "mcpEvidence": [
+        {
+          "path": "docs/model-audit/mcp/godeok-ipark-103-headless.json",
+          "sha256": "b724b5043e441af53dc00c14d5b634978fb3c6280cfb36361f3a6226c32d995d",
+          "tool": "execute_blender_code",
+          "server": "upstream addon headless adapter"
+        }
+      ],
+      "recipeInputs": [
+        {
+          "path": "modeling/bespoke/godeok-ipark-representative/build-safe.py",
+          "sha256": "166c6054dcd2d0938d2951ed46397b0961414f911c4dcf0e37c62a769aad4d0d"
+        },
+        {
+          "path": "modeling/bespoke/godeok-ipark-representative/check-standalone-safe.py",
+          "sha256": "8c82988272eba025b826555f805c8f41d6ced7f8843b036ea333bb0c62b52f82"
+        },
+        {
+          "path": "modeling/bespoke/godeok-ipark-representative/source-data.json",
+          "sha256": "6d451a731a5c6ae9e9adf9f336cc909365de8b5bb70322dd7fdd0bed0e3f97c3"
+        },
+        {
+          "path": "modeling/bespoke/godeok-ipark-representative/regions.json",
+          "sha256": "e3edd5dc469631a8790fa303c91236c64685f4768a2b91f3ec78e1827c744283"
+        },
+        {
+          "path": "modeling/bespoke/godeok-ipark-representative/register-raw.json",
+          "sha256": "4dbc47a97b7dcb315b9533930c8f7b363a0b9735e07619483792c08d8f41b2fa"
+        },
+        {
+          "path": "modeling/bespoke/godeok-ipark-representative/geometry-proof.json",
+          "sha256": "e891faaf88acb5c69eaf8f3f60927d26a84b4f649129642e480e2c4ab016ffa5"
+        },
+        {
+          "path": "modeling/bespoke/godeok-ipark-representative/standalone-validation.json",
+          "sha256": "b7a4610ae194ec3ce5a4713d1ad05466a4cce7ddef24e551b1eee1043bde380c"
+        },
+        {
+          "path": "modeling/bespoke/godeok-ipark-representative/scene-preservation.json",
+          "sha256": "52390aca404aab4471b9346e20420bd573f4c2a208407552015d1fbe75e429b2"
+        },
+        {
+          "path": "modeling/bespoke/godeok-ipark-representative/facade-regions.json",
+          "sha256": "c68c9b1477aed48c5a6f4810eca699de21bf0b2e92a376dff4bb8039230f0059"
+        },
+        {
+          "path": "modeling/bespoke/godeok-ipark-representative/optimization-proof.json",
+          "sha256": "4c4eeae98b49660b98ca8d4f7c8b19b33896ad6012da75448275b2d744b3dd8f"
+        },
+        {
+          "path": "modeling/bespoke/godeok-ipark-representative/validation.json",
+          "sha256": "168167bbd4beb841625ac1bee92556ea874e5b3e64554b8954b22d76ee9c6f16"
+        }
+      ]
+    },
+    "godeok-ipark-shared": {
+      "sources": [
+        {
+          "url": "https://file.kbland.kr/image/kbstar/land/img/alian/kms/complex/photo/objctidnfr/17882/Mjc4ODIxMDAxODA3MDcy.jpg",
+          "sha256": "8616400ab273fe203109825626a0518c185d0f3b953c64145a910f55cc8f3dad",
+          "scope": "individual",
+          "observedTowerNumber": 103,
+          "observations": "Author directly viewed photo103: huge warm-grey seamed blank end, white grid with pale bluegreen glazing, black raised flat roof cap over open slots."
+        },
+        {
+          "dataset": "Root verified source identity",
+          "snapshot": "docs/model-audit/godeok-ipark-source-identity.json",
+          "sha256": "cca5ba54bc3282b44663ac3a7909b44a23572773d9850645d9f78a6ab43d6477",
+          "observations": "강동구;1142HH14official buildings,7identified.103 exact live source and register20F58.3m112HH."
+        }
+      ],
+      "review": {
+        "siteId": "godeok-ipark-shared",
+        "status": "visually-reviewed",
+        "reviewedSourcePhotos": [
+          {
+            "url": "https://file.kbland.kr/image/kbstar/land/img/alian/kms/complex/photo/objctidnfr/17882/Mjc4ODIxMDAxODA3MDcy.jpg",
+            "sha256": "8616400ab273fe203109825626a0518c185d0f3b953c64145a910f55cc8f3dad",
+            "scope": "individual",
+            "observedTowerNumber": 103,
+            "observations": "Author directly viewed photo103: huge warm-grey seamed blank end, white grid with pale bluegreen glazing, black raised flat roof cap over open slots."
+          }
+        ],
+        "reviewedInputs": {
+          "godeok-ipark-103.glb": "a1f631ba05f0b6b264f22e92d023db2d364c4ccdd639867df8c036d953dad807",
+          "godeok-ipark-103-authored.blend": "a8788d974b23304397aef1164cc8cfff6a85e6260d9bf6c03992e312c0e1873c",
+          "front.png": "81fedb006465939ed1bea87c48130f24e52582b33c28c49a8016a391aff5e458",
+          "opposite.png": "f5e61588ee4c7809584774aa56b8c8f5fba902e2273b6a90a42559f7506eed4c",
+          "side.png": "c1efb8a2237155dea750f28cf542f33dbdcbd3f03305be488a56800af7e010ab",
+          "roof.png": "02170761cc78826d6481dfe04b0df319425e59863e5928b77897193b44fdc2fc"
+        },
+        "comparisons": [
+          "Author reviewed original103photo and4V3views:largeblankwall/whitegrid/two-pane glazing/threeopenroofslots under black slab.",
+          "Source/register/fullcaps/roofcontainment/wholeprojection checked.",
+          "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+          "All copy transforms, bounds, source identities and independent fallback bindings checked automatically."
+        ],
+        "limits": [
+          "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+          "Representative has no number label; no node needs hiding.",
+          "Existing authored assets remain unchanged."
+        ],
+        "reviewScope": "One representative visually reviewed; batch placement checks and sample map review for shared copies",
+        "renders": [
+          "docs/model-audit/renders/godeok-ipark/front.png",
+          "docs/model-audit/renders/godeok-ipark/opposite.png",
+          "docs/model-audit/renders/godeok-ipark/side.png",
+          "docs/model-audit/renders/godeok-ipark/roof.png"
+        ],
+        "inferenceApprovedAssets": [
+          "bespoke-godeok-ipark-101",
+          "bespoke-godeok-ipark-102",
+          "bespoke-godeok-ipark-104",
+          "bespoke-godeok-ipark-107",
+          "bespoke-godeok-ipark-108",
+          "bespoke-godeok-ipark-109"
+        ]
+      },
+      "assets": [
+        {
+          "id": "bespoke-godeok-ipark-101",
+          "dimensions": [
+            62.23331073004563,
+            58.3,
+            37.97893981024242
+          ],
+          "min": [
+            -31.08764951561475,
+            0,
+            -18.941453935711223
+          ],
+          "max": [
+            31.14566121443088,
+            58.3,
+            19.0374858745312
+          ],
+          "sha256": "956ee9513135d02692cd982359de66037f4e6b9d7940ffab4aba8ac209c107cb",
+          "sourceSha256": "a1f631ba05f0b6b264f22e92d023db2d364c4ccdd639867df8c036d953dad807",
+          "sharedModel": "bespoke/godeok-ipark-representative/bespoke-godeok-ipark-103.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-godeok-ipark-103",
+            "sourceDimensions": [
+              62.23395538330078,
+              58.29999923706055,
+              37.97904586791992
+            ],
+            "matrix": [
+              0.9999881928202525,
+              0.0,
+              -1.263889934208029e-06,
+              0.0,
+              0.0,
+              1.0000000130864402,
+              0.0,
+              0.0,
+              8.072090610423947e-06,
+              0.0,
+              0.9999973212980708,
+              0.0,
+              6.256101766120841,
+              0.0,
+              -0.9771589261944751,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-godeok-ipark-102",
+          "dimensions": [
+            62.23541585471697,
+            58.3,
+            37.989793614131074
+          ],
+          "min": [
+            -31.08358427964561,
+            0,
+            -18.947174350479237
+          ],
+          "max": [
+            31.15183157507136,
+            58.3,
+            19.042619263651833
+          ],
+          "sha256": "956ee9513135d02692cd982359de66037f4e6b9d7940ffab4aba8ac209c107cb",
+          "sourceSha256": "a1f631ba05f0b6b264f22e92d023db2d364c4ccdd639867df8c036d953dad807",
+          "sharedModel": "bespoke/godeok-ipark-representative/bespoke-godeok-ipark-103.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-godeok-ipark-103",
+            "sourceDimensions": [
+              62.23395538330078,
+              58.29999923706055,
+              37.97904586791992
+            ],
+            "matrix": [
+              1.000017326600181,
+              0.0,
+              0.000153578935861908,
+              0.0,
+              0.0,
+              1.0000000130864402,
+              0.0,
+              0.0,
+              3.421801468995111e-05,
+              0.0,
+              1.000269159727538,
+              0.0,
+              6.261352874716937,
+              0.0,
+              -0.9788211119468357,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-godeok-ipark-104",
+          "dimensions": [
+            62.23701737614434,
+            58.3,
+            37.98919302442794
+          ],
+          "min": [
+            -31.080273519860615,
+            0,
+            -18.94970123900295
+          ],
+          "max": [
+            31.15674385628372,
+            58.3,
+            19.039491785424993
+          ],
+          "sha256": "956ee9513135d02692cd982359de66037f4e6b9d7940ffab4aba8ac209c107cb",
+          "sourceSha256": "a1f631ba05f0b6b264f22e92d023db2d364c4ccdd639867df8c036d953dad807",
+          "sharedModel": "bespoke/godeok-ipark-representative/bespoke-godeok-ipark-103.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-godeok-ipark-103",
+            "sourceDimensions": [
+              62.23395538330078,
+              58.29999923706055,
+              37.97904586791992
+            ],
+            "matrix": [
+              1.0000345952364116,
+              0.0,
+              8.627866920669196e-05,
+              0.0,
+              0.0,
+              1.0000000130864402,
+              0.0,
+              0.0,
+              8.138813346878709e-05,
+              0.0,
+              1.0002594072650917,
+              0.0,
+              6.2654851324411664,
+              0.0,
+              -0.9811645492768104,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-godeok-ipark-107",
+          "dimensions": [
+            42.19233283512909,
+            56.9,
+            38.58871896050545
+          ],
+          "min": [
+            -20.84542683197992,
+            0,
+            -19.47727025585489
+          ],
+          "max": [
+            21.346906003149176,
+            56.9,
+            19.111448704650563
+          ],
+          "sha256": "956ee9513135d02692cd982359de66037f4e6b9d7940ffab4aba8ac209c107cb",
+          "sourceSha256": "a1f631ba05f0b6b264f22e92d023db2d364c4ccdd639867df8c036d953dad807",
+          "sharedModel": "bespoke/godeok-ipark-representative/bespoke-godeok-ipark-103.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-godeok-ipark-103",
+            "sourceDimensions": [
+              62.23395538330078,
+              58.29999923706055,
+              37.97904586791992
+            ],
+            "matrix": [
+              0.6764657747897417,
+              0.0,
+              0.29791644272292905,
+              0.0,
+              0.0,
+              0.9759862906452563,
+              0.0,
+              0.0,
+              -0.17961694459957928,
+              0.0,
+              0.9892216945638757,
+              0.0,
+              5.843363986480388,
+              0.0,
+              -3.2941760015917625,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-godeok-ipark-108",
+          "dimensions": [
+            42.19145900546965,
+            56.9,
+            38.60139686446683
+          ],
+          "min": [
+            -20.83849999382584,
+            0,
+            -19.477279748108526
+          ],
+          "max": [
+            21.352959011643815,
+            56.9,
+            19.124117116358303
+          ],
+          "sha256": "956ee9513135d02692cd982359de66037f4e6b9d7940ffab4aba8ac209c107cb",
+          "sourceSha256": "a1f631ba05f0b6b264f22e92d023db2d364c4ccdd639867df8c036d953dad807",
+          "sharedModel": "bespoke/godeok-ipark-representative/bespoke-godeok-ipark-103.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-godeok-ipark-103",
+            "sourceDimensions": [
+              62.23395538330078,
+              58.29999923706055,
+              37.97904586791992
+            ],
+            "matrix": [
+              0.676469597115579,
+              0.0,
+              0.2976805831918162,
+              0.0,
+              0.0,
+              0.9759862906452563,
+              0.0,
+              0.0,
+              -0.17907294311632146,
+              0.0,
+              0.9895767498557524,
+              0.0,
+              5.845282963425847,
+              0.0,
+              -3.2865502496200856,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-godeok-ipark-109",
+          "dimensions": [
+            42.192237182731844,
+            56.9,
+            38.60140072229057
+          ],
+          "min": [
+            -20.839130052860792,
+            0,
+            -19.47727637748369
+          ],
+          "max": [
+            21.35310712987105,
+            56.9,
+            19.12412434480688
+          ],
+          "sha256": "956ee9513135d02692cd982359de66037f4e6b9d7940ffab4aba8ac209c107cb",
+          "sourceSha256": "a1f631ba05f0b6b264f22e92d023db2d364c4ccdd639867df8c036d953dad807",
+          "sharedModel": "bespoke/godeok-ipark-representative/bespoke-godeok-ipark-103.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-godeok-ipark-103",
+            "sourceDimensions": [
+              62.23395538330078,
+              58.29999923706055,
+              37.97904586791992
+            ],
+            "matrix": [
+              0.6764820349528167,
+              0.0,
+              0.2976802857332975,
+              0.0,
+              0.0,
+              0.9759862906452563,
+              0.0,
+              0.0,
+              -0.17907742559964515,
+              0.0,
+              0.9895768782233864,
+              0.0,
+              5.8451547862858275,
+              0.0,
+              -3.2865429877791614,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        }
+      ],
+      "mcpEvidence": [
+        {
+          "path": "docs/model-audit/mcp/godeok-ipark-103-headless.json",
+          "sha256": "b724b5043e441af53dc00c14d5b634978fb3c6280cfb36361f3a6226c32d995d",
+          "tool": "execute_blender_code",
+          "server": "upstream addon headless adapter"
+        }
+      ],
+      "recipeInputs": [],
+      "sharedRepresentative": "bespoke-godeok-ipark-103",
+      "newGlbFiles": 0,
+      "newBlendFiles": 0,
+      "placementInputs": [
+        {
+          "path": "docs/model-audit/godeok-ipark-source-identity.json",
+          "sha256": "cca5ba54bc3282b44663ac3a7909b44a23572773d9850645d9f78a6ab43d6477"
+        },
+        {
+          "path": "docs/model-audit/godeok-ipark-fallback-bindings.json",
+          "sha256": "3b9e6ab1a535be5fa96d8cb32c3af3411951f7a4ecf2e560a0589ce1651e9d10"
+        }
+      ],
+      "placementMethod": "Long-axis oriented rectangle mapping with positive plan scales and explicit per-target height basis; actual concave target shapes are not reconstructed."
+    },
+    "godeok-ipark-extension-shared": {
+      "sources": [
+        {
+          "url": "https://file.kbland.kr/image/kbstar/land/img/alian/kms/complex/photo/objctidnfr/17882/Mjc4ODIxMDAxODA3MDcy.jpg",
+          "sha256": "8616400ab273fe203109825626a0518c185d0f3b953c64145a910f55cc8f3dad",
+          "scope": "individual",
+          "observedTowerNumber": 103,
+          "observations": "Author directly viewed photo103: huge warm-grey seamed blank end, white grid with pale bluegreen glazing, black raised flat roof cap over open slots."
+        },
+        {
+          "dataset": "Root verified source identity",
+          "snapshot": "docs/model-audit/godeok-ipark-source-identity.json",
+          "sha256": "cca5ba54bc3282b44663ac3a7909b44a23572773d9850645d9f78a6ab43d6477",
+          "observations": "강동구;1142HH14official buildings,7identified.103 exact live source and register20F58.3m112HH."
+        }
+      ],
+      "review": {
+        "siteId": "godeok-ipark-extension-shared",
+        "status": "visually-reviewed",
+        "reviewedSourcePhotos": [
+          {
+            "url": "https://file.kbland.kr/image/kbstar/land/img/alian/kms/complex/photo/objctidnfr/17882/Mjc4ODIxMDAxODA3MDcy.jpg",
+            "sha256": "8616400ab273fe203109825626a0518c185d0f3b953c64145a910f55cc8f3dad",
+            "scope": "individual",
+            "observedTowerNumber": 103,
+            "observations": "Author directly viewed photo103: huge warm-grey seamed blank end, white grid with pale bluegreen glazing, black raised flat roof cap over open slots."
+          }
+        ],
+        "reviewedInputs": {
+          "godeok-ipark-103.glb": "a1f631ba05f0b6b264f22e92d023db2d364c4ccdd639867df8c036d953dad807",
+          "godeok-ipark-103-authored.blend": "a8788d974b23304397aef1164cc8cfff6a85e6260d9bf6c03992e312c0e1873c",
+          "front.png": "81fedb006465939ed1bea87c48130f24e52582b33c28c49a8016a391aff5e458",
+          "opposite.png": "f5e61588ee4c7809584774aa56b8c8f5fba902e2273b6a90a42559f7506eed4c",
+          "side.png": "c1efb8a2237155dea750f28cf542f33dbdcbd3f03305be488a56800af7e010ab",
+          "roof.png": "02170761cc78826d6481dfe04b0df319425e59863e5928b77897193b44fdc2fc"
+        },
+        "comparisons": [
+          "Author reviewed original103photo and4V3views:largeblankwall/whitegrid/two-pane glazing/threeopenroofslots under black slab.",
+          "Source/register/fullcaps/roofcontainment/wholeprojection checked.",
+          "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+          "All copy transforms, bounds, source identities and independent fallback bindings checked automatically."
+        ],
+        "limits": [
+          "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+          "Representative has no number label; no node needs hiding.",
+          "Existing authored assets remain unchanged."
+        ],
+        "reviewScope": "One representative visually reviewed; batch placement checks and sample map review for shared copies",
+        "renders": [
+          "docs/model-audit/renders/godeok-ipark/front.png",
+          "docs/model-audit/renders/godeok-ipark/opposite.png",
+          "docs/model-audit/renders/godeok-ipark/side.png",
+          "docs/model-audit/renders/godeok-ipark/roof.png"
+        ],
+        "inferenceApprovedAssets": [
+          "bespoke-godeok-ipark-105",
+          "bespoke-godeok-ipark-106",
+          "bespoke-godeok-ipark-110",
+          "bespoke-godeok-ipark-111",
+          "bespoke-godeok-ipark-112",
+          "bespoke-godeok-ipark-113",
+          "bespoke-godeok-ipark-114"
+        ]
+      },
+      "assets": [
+        {
+          "id": "bespoke-godeok-ipark-105",
+          "dimensions": [
+            62.24466114697202,
+            52.7,
+            37.989622679763364
+          ],
+          "min": [
+            -31.08789424599046,
+            0,
+            -18.949214046440765
+          ],
+          "max": [
+            31.156766900981566,
+            52.7,
+            19.0404086333226
+          ],
+          "sha256": "956ee9513135d02692cd982359de66037f4e6b9d7940ffab4aba8ac209c107cb",
+          "sourceSha256": "a1f631ba05f0b6b264f22e92d023db2d364c4ccdd639867df8c036d953dad807",
+          "sharedModel": "bespoke/godeok-ipark-representative/bespoke-godeok-ipark-103.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-godeok-ipark-103",
+            "sourceDimensions": [
+              62.23395538330078,
+              58.29999923706055,
+              37.97904586791992
+            ],
+            "matrix": [
+              1.0001655426526033,
+              0.0,
+              4.509053620634872e-05,
+              0.0,
+              0.0,
+              0.903945123321705,
+              0.0,
+              0.0,
+              3.6118073154257366e-05,
+              0.0,
+              1.0002744297408772,
+              0.0,
+              6.262585026875269,
+              0.0,
+              -0.9801879935370037,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-godeok-ipark-106",
+          "dimensions": [
+            34.180534347417435,
+            47.1,
+            22.03576695323664
+          ],
+          "min": [
+            -16.850299389967105,
+            0,
+            -13.422685359624875
+          ],
+          "max": [
+            17.33023495745033,
+            47.1,
+            8.613081593611764
+          ],
+          "sha256": "956ee9513135d02692cd982359de66037f4e6b9d7940ffab4aba8ac209c107cb",
+          "sourceSha256": "a1f631ba05f0b6b264f22e92d023db2d364c4ccdd639867df8c036d953dad807",
+          "sharedModel": "bespoke/godeok-ipark-representative/bespoke-godeok-ipark-103.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-godeok-ipark-103",
+            "sourceDimensions": [
+              62.23395538330078,
+              58.29999923706055,
+              37.97904586791992
+            ],
+            "matrix": [
+              0.5507566031109886,
+              0.0,
+              -0.23562175337023672,
+              0.0,
+              0.0,
+              0.8078902335569698,
+              0.0,
+              0.0,
+              -0.008526333648737639,
+              0.0,
+              0.35190186165562787,
+              0.0,
+              3.685319963384648,
+              0.0,
+              -3.484597894437791,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-godeok-ipark-110",
+          "dimensions": [
+            45.42181485558338,
+            48.5,
+            29.910668833933265
+          ],
+          "min": [
+            -22.467922811166083,
+            0,
+            -17.41103877458208
+          ],
+          "max": [
+            22.953892044417298,
+            48.5,
+            12.499630059351182
+          ],
+          "sha256": "956ee9513135d02692cd982359de66037f4e6b9d7940ffab4aba8ac209c107cb",
+          "sourceSha256": "a1f631ba05f0b6b264f22e92d023db2d364c4ccdd639867df8c036d953dad807",
+          "sharedModel": "bespoke/godeok-ipark-representative/bespoke-godeok-ipark-103.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-godeok-ipark-103",
+            "sourceDimensions": [
+              62.23395538330078,
+              58.29999923706055,
+              37.97904586791992
+            ],
+            "matrix": [
+              0.7326164862189916,
+              0.0,
+              -0.35743391634827965,
+              0.0,
+              0.0,
+              0.8319039559981535,
+              0.0,
+              0.0,
+              -0.06088115175406186,
+              0.0,
+              0.3987298806315134,
+              0.0,
+              5.1712262102296735,
+              0.0,
+              -4.542812705544337,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-godeok-ipark-111",
+          "dimensions": [
+            34.18237497750626,
+            34.5,
+            22.027164364683085
+          ],
+          "min": [
+            -16.847697118539294,
+            0,
+            -13.42071557639537
+          ],
+          "max": [
+            17.334677858966963,
+            34.5,
+            8.606448788287715
+          ],
+          "sha256": "956ee9513135d02692cd982359de66037f4e6b9d7940ffab4aba8ac209c107cb",
+          "sourceSha256": "a1f631ba05f0b6b264f22e92d023db2d364c4ccdd639867df8c036d953dad807",
+          "sharedModel": "bespoke/godeok-ipark-representative/bespoke-godeok-ipark-103.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-godeok-ipark-103",
+            "sourceDimensions": [
+              62.23395538330078,
+              58.29999923706055,
+              37.97904586791992
+            ],
+            "matrix": [
+              0.550801614263568,
+              0.0,
+              -0.23546661156382262,
+              0.0,
+              0.0,
+              0.5917667315863154,
+              0.0,
+              0.0,
+              -0.00861234164159938,
+              0.0,
+              0.35189688779815514,
+              0.0,
+              3.689281105942062,
+              0.0,
+              -3.4854628637035203,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-godeok-ipark-112",
+          "dimensions": [
+            56.899517311346365,
+            34.5,
+            36.77192039075454
+          ],
+          "min": [
+            -28.961213744545944,
+            0,
+            -22.563962111052632
+          ],
+          "max": [
+            27.93830356680042,
+            34.5,
+            14.207958279701906
+          ],
+          "sha256": "956ee9513135d02692cd982359de66037f4e6b9d7940ffab4aba8ac209c107cb",
+          "sourceSha256": "a1f631ba05f0b6b264f22e92d023db2d364c4ccdd639867df8c036d953dad807",
+          "sharedModel": "bespoke/godeok-ipark-representative/bespoke-godeok-ipark-103.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-godeok-ipark-103",
+            "sourceDimensions": [
+              62.23395538330078,
+              58.29999923706055,
+              37.97904586791992
+            ],
+            "matrix": [
+              0.9172044511040516,
+              0.0,
+              -0.4442495296587954,
+              0.0,
+              0.0,
+              0.5917667315863154,
+              0.0,
+              0.0,
+              -0.09256334888113037,
+              0.0,
+              0.48007058692764965,
+              0.0,
+              5.796503312104063,
+              0.0,
+              -6.823559901626489,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-godeok-ipark-113",
+          "dimensions": [
+            56.89601060878806,
+            34.5,
+            36.769470887311996
+          ],
+          "min": [
+            -28.961389366783408,
+            0,
+            -22.567075311279865
+          ],
+          "max": [
+            27.934621242004656,
+            34.5,
+            14.202395576032133
+          ],
+          "sha256": "956ee9513135d02692cd982359de66037f4e6b9d7940ffab4aba8ac209c107cb",
+          "sourceSha256": "a1f631ba05f0b6b264f22e92d023db2d364c4ccdd639867df8c036d953dad807",
+          "sharedModel": "bespoke/godeok-ipark-representative/bespoke-godeok-ipark-103.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-godeok-ipark-103",
+            "sourceDimensions": [
+              62.23395538330078,
+              58.29999923706055,
+              37.97904586791992
+            ],
+            "matrix": [
+              0.917148332953217,
+              0.0,
+              -0.4442103558008668,
+              0.0,
+              0.0,
+              0.5917667315863154,
+              0.0,
+              0.0,
+              -0.0925452547618227,
+              0.0,
+              0.48005871873131706,
+              0.0,
+              5.794083418175121,
+              0.0,
+              -6.8275633410379815,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-godeok-ipark-114",
+          "dimensions": [
+            64.04634211068715,
+            34.5,
+            13.971117943523202
+          ],
+          "min": [
+            -32.071206072906776,
+            0,
+            -7.175004146491183
+          ],
+          "max": [
+            31.975136037780373,
+            34.5,
+            6.796113797032019
+          ],
+          "sha256": "956ee9513135d02692cd982359de66037f4e6b9d7940ffab4aba8ac209c107cb",
+          "sourceSha256": "a1f631ba05f0b6b264f22e92d023db2d364c4ccdd639867df8c036d953dad807",
+          "sharedModel": "bespoke/godeok-ipark-representative/bespoke-godeok-ipark-103.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-godeok-ipark-103",
+            "sourceDimensions": [
+              62.23395538330078,
+              58.29999923706055,
+              37.97904586791992
+            ],
+            "matrix": [
+              1.013061672042738,
+              0.0,
+              0.1096064128466475,
+              0.0,
+              0.0,
+              0.5917667315863154,
+              0.0,
+              0.0,
+              -0.33295071139862314,
+              0.0,
+              0.3579923882747271,
+              0.0,
+              8.50471363921384,
+              0.0,
+              -1.3280085040324985,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        }
+      ],
+      "mcpEvidence": [
+        {
+          "path": "docs/model-audit/mcp/godeok-ipark-103-headless.json",
+          "sha256": "b724b5043e441af53dc00c14d5b634978fb3c6280cfb36361f3a6226c32d995d",
+          "tool": "execute_blender_code",
+          "server": "upstream addon headless adapter"
+        }
+      ],
+      "recipeInputs": [],
+      "sharedRepresentative": "bespoke-godeok-ipark-103",
+      "newGlbFiles": 0,
+      "newBlendFiles": 0,
+      "placementInputs": [
+        {
+          "path": "docs/model-audit/godeok-ipark-complete-source-identity.json",
+          "sha256": "af0354529b0da740954051bcd32236f7a55ccfe60f9a3ae337057cb68206c96a"
+        },
+        {
+          "path": "docs/model-audit/godeok-ipark-extension-fallback-bindings.json",
+          "sha256": "d7f03712c00c4fd8e91f5db12c5eba7f84b43acbdcbc483373a0268ecd67d8d4"
+        }
+      ],
+      "placementMethod": "Long-axis oriented rectangle mapping with positive plan scales and explicit per-target height basis; actual concave target shapes are not reconstructed."
+    },
+    "gaepo-xi-presidence-representative": {
+      "sources": [
+        {
+          "url": "https://www.metroseoul.co.kr/article/20231129500391",
+          "sha256": "5663a5a6330a4d11133316030ad6dfd0ab8f489f3ce44ba84b9b923c60c53716",
+          "scope": "individual",
+          "observedTowerNumber": 405,
+          "observations": "Author directly viewed photo103: broad cream blankend, grey grid with dark bluegrey large windows and thin horizontal bands; modest roofedge. Shared curved canopy excluded."
+        },
+        {
+          "dataset": "Root verified source identity",
+          "snapshot": "docs/model-audit/gaepo-xi-presidence-source-identity.json",
+          "sha256": "27238463cc30969b4bab8986785b012fa2ac116293a2305690fc72b692ea184f",
+          "observations": "강남구;3375HH35official buildings,35identified.405 exact live source and register15F46.7m43HH."
+        }
+      ],
+      "review": {
+        "siteId": "gaepo-xi-presidence-representative",
+        "status": "visually-reviewed",
+        "reviewedSourcePhotos": [
+          {
+            "url": "https://www.metroseoul.co.kr/article/20231129500391",
+            "sha256": "5663a5a6330a4d11133316030ad6dfd0ab8f489f3ce44ba84b9b923c60c53716",
+            "scope": "individual",
+            "observedTowerNumber": 405,
+            "observations": "Author directly viewed photo103: broad cream blankend, grey grid with dark bluegrey large windows and thin horizontal bands; modest roofedge. Shared curved canopy excluded."
+          }
+        ],
+        "reviewedInputs": {
+          "gaepo-xi-presidence-405.glb": "3e43430ca2517ebb2c283fe6c04cf2e816d54237c0c0029f1acf0e77e883b8bb",
+          "gaepo-xi-presidence-405-authored.blend": "0f8517ae5b4feb6e8eb776ff6dfc1d1ca9bf25791de0882793c4410a137f0feb",
+          "front.png": "2c8d955cea167a73780613faf32f32e5ff0bd0caba22b574d97a6ac2ed7bb6a0",
+          "opposite.png": "ae1011b0c4e96113b58e2541c68af71c4fbcb7c4823c7972e70a595abdea1611",
+          "side.png": "c479362159fbe1638d25ae02c0f42588d88179c704c1e50356b718d69813095d",
+          "roof.png": "142ec971523c7ac0ac2a365e19679068794602f7f1f448d0bda3c34697e5ce23"
+        },
+        "comparisons": [
+          "Actual405number on left photograph; right cropped tower and shared curved canopy excluded.",
+          "FinalV3 neutralgrey piers/spandrels contrast with preserved cream ends and bluegrey glazing; root approved all4views.",
+          "V3 only material changes versusV2: every triangle position preserved. Ownsource,registered15F46.7m,fullcaps and projection.306105m validated."
+        ],
+        "limits": [
+          "Representative405 uses registered15F46.7m. Future7–35F siblings reuse this exact geometry/materials with placement/scale only; window/floor count and shape do not reconstruct individual towers.",
+          "Photo405 visible; compass, hidden faces and facade dimensions inferred.",
+          "Photograph shows low roof edge but not roof surface: parapet/service block placement and dimensions are conservative inference.",
+          "Shared entrance canopy, cropped neighboring highrise,419pool,number/logo and landscaping excluded."
+        ],
+        "reviewScope": "Root directly compared original405photograph and finalV3 fourviews; approved greygrid/creamendwall contrast, lowroof and scoped reconstruction",
+        "renders": [
+          "docs/model-audit/renders/gaepo-xi-presidence/front.png",
+          "docs/model-audit/renders/gaepo-xi-presidence/opposite.png",
+          "docs/model-audit/renders/gaepo-xi-presidence/side.png",
+          "docs/model-audit/renders/gaepo-xi-presidence/roof.png"
+        ]
+      },
+      "assets": [
+        {
+          "id": "bespoke-gaepo-xi-presidence-405",
+          "sourceSha256": "3e43430ca2517ebb2c283fe6c04cf2e816d54237c0c0029f1acf0e77e883b8bb",
+          "sha256": "1be25621831e85947d91f6d02485b43f81fe74be580d2136ac7be55cd428bc22",
+          "bytes": 513720,
+          "dimensions": [
+            33.355835914611816,
+            46.70000076293945,
+            32.05540657043457
+          ],
+          "min": [
+            -19.361482620239258,
+            0,
+            -16.043771743774414
+          ],
+          "max": [
+            13.994353294372559,
+            46.70000076293945,
+            16.011634826660156
+          ],
+          "triangles": 9396,
+          "components": [
+            {
+              "name": "Presidence405_editable_Presidence405_light_grey_solid_wall",
+              "triangles": 156
+            },
+            {
+              "name": "Presidence405_editable_Presidence405_broad_white_facade_frames",
+              "triangles": 1116
+            },
+            {
+              "name": "Presidence405_editable_Presidence405_cream_endwalls",
+              "triangles": 780
+            },
+            {
+              "name": "Presidence405_editable_Presidence405_grey_facade_grid",
+              "triangles": 1224
+            },
+            {
+              "name": "Presidence405_editable_Presidence405_blue_grey_rectangular_wind",
+              "triangles": 6120
+            }
+          ]
+        }
+      ],
+      "mcpEvidence": [
+        {
+          "path": "docs/model-audit/mcp/gaepo-xi-presidence-405-headless.json",
+          "sha256": "a0ead80b52e94749884e84097309108f9f9abbcdd133d7ec82e3f62b7bfff9d8",
+          "tool": "execute_blender_code",
+          "server": "upstream addon headless adapter"
+        }
+      ],
+      "recipeInputs": [
+        {
+          "path": "modeling/bespoke/gaepo-xi-presidence-representative/build-safe.py",
+          "sha256": "5619c0dd7a0f2b28058adc5637e8efc1e6ece483acf5e8e63fcfa6ae008cdcbe"
+        },
+        {
+          "path": "modeling/bespoke/gaepo-xi-presidence-representative/check-standalone-safe.py",
+          "sha256": "d559f4e54ff015fc00e13c33c5ea659f548e3f6e62648a37d93463d5ee19b881"
+        },
+        {
+          "path": "modeling/bespoke/gaepo-xi-presidence-representative/source-data.json",
+          "sha256": "aa2047d64d2a0724460a132a5f0edc5a4bde45451706625cb41393780634ffb4"
+        },
+        {
+          "path": "modeling/bespoke/gaepo-xi-presidence-representative/regions.json",
+          "sha256": "ebbe746bf734645684697da3806ca6e89c2fd15cff2f049ca6e1edf2224ba99b"
+        },
+        {
+          "path": "modeling/bespoke/gaepo-xi-presidence-representative/register-raw.json",
+          "sha256": "19993767f00990ad323354106eaa028d00550d9bc768b17a06bfa9c3fb582a8c"
+        },
+        {
+          "path": "modeling/bespoke/gaepo-xi-presidence-representative/geometry-proof.json",
+          "sha256": "f1ffbbdd716254e553a40c9d2994cbefefa3565327873cad1e34a62d0deaae4d"
+        },
+        {
+          "path": "modeling/bespoke/gaepo-xi-presidence-representative/standalone-validation.json",
+          "sha256": "2daaa95cad938f4ec6137dfaa032a5003f5661aa89ca582d8d939a815b56d59d"
+        },
+        {
+          "path": "modeling/bespoke/gaepo-xi-presidence-representative/scene-preservation.json",
+          "sha256": "52390aca404aab4471b9346e20420bd573f4c2a208407552015d1fbe75e429b2"
+        },
+        {
+          "path": "modeling/bespoke/gaepo-xi-presidence-representative/facade-regions.json",
+          "sha256": "eea0be3df85b747bd4276a3ae301556c2f0c315ba018b37ba07f2358749e6fdd"
+        },
+        {
+          "path": "modeling/bespoke/gaepo-xi-presidence-representative/optimization-proof.json",
+          "sha256": "87f03736d54866131d349859a4836e171cb5114a9d06bda0a03f78ec99d9ae86"
+        },
+        {
+          "path": "modeling/bespoke/gaepo-xi-presidence-representative/validation.json",
+          "sha256": "c777cee2e10e8ef1fd89ccaa184d917477811b47c850aedd2a828ba6b2444c4b"
+        },
+        {
+          "path": "modeling/bespoke/gaepo-xi-presidence-representative/v3-material-only-proof.json",
+          "sha256": "9d0b65ff447607261814b273c10713eb08d48132f81cc77d8e54b7970235d8ed"
+        }
+      ]
+    },
+    "gaepo-xi-presidence-shared": {
+      "sources": [
+        {
+          "url": "https://www.metroseoul.co.kr/article/20231129500391",
+          "sha256": "5663a5a6330a4d11133316030ad6dfd0ab8f489f3ce44ba84b9b923c60c53716",
+          "scope": "individual",
+          "observedTowerNumber": 405,
+          "observations": "Author directly viewed photo103: broad cream blankend, grey grid with dark bluegrey large windows and thin horizontal bands; modest roofedge. Shared curved canopy excluded."
+        },
+        {
+          "dataset": "Root verified source identity",
+          "snapshot": "docs/model-audit/gaepo-xi-presidence-source-identity.json",
+          "sha256": "27238463cc30969b4bab8986785b012fa2ac116293a2305690fc72b692ea184f",
+          "observations": "강남구;3375HH35official buildings,35identified.405 exact live source and register15F46.7m43HH."
+        }
+      ],
+      "review": {
+        "siteId": "gaepo-xi-presidence-shared",
+        "status": "visually-reviewed",
+        "reviewedSourcePhotos": [
+          {
+            "url": "https://www.metroseoul.co.kr/article/20231129500391",
+            "sha256": "5663a5a6330a4d11133316030ad6dfd0ab8f489f3ce44ba84b9b923c60c53716",
+            "scope": "individual",
+            "observedTowerNumber": 405,
+            "observations": "Author directly viewed photo103: broad cream blankend, grey grid with dark bluegrey large windows and thin horizontal bands; modest roofedge. Shared curved canopy excluded."
+          }
+        ],
+        "reviewedInputs": {
+          "gaepo-xi-presidence-405.glb": "3e43430ca2517ebb2c283fe6c04cf2e816d54237c0c0029f1acf0e77e883b8bb",
+          "gaepo-xi-presidence-405-authored.blend": "0f8517ae5b4feb6e8eb776ff6dfc1d1ca9bf25791de0882793c4410a137f0feb",
+          "front.png": "2c8d955cea167a73780613faf32f32e5ff0bd0caba22b574d97a6ac2ed7bb6a0",
+          "opposite.png": "ae1011b0c4e96113b58e2541c68af71c4fbcb7c4823c7972e70a595abdea1611",
+          "side.png": "c479362159fbe1638d25ae02c0f42588d88179c704c1e50356b718d69813095d",
+          "roof.png": "142ec971523c7ac0ac2a365e19679068794602f7f1f448d0bda3c34697e5ce23"
+        },
+        "comparisons": [
+          "Actual405number on left photograph; right cropped tower and shared curved canopy excluded.",
+          "FinalV3 neutralgrey piers/spandrels contrast with preserved cream ends and bluegrey glazing; root approved all4views.",
+          "V3 only material changes versusV2: every triangle position preserved. Ownsource,registered15F46.7m,fullcaps and projection.306105m validated.",
+          "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+          "All copy transforms, bounds, source identities and independent fallback bindings checked automatically."
+        ],
+        "limits": [
+          "Shared copy of one representative: only placement, horizontal dimensions and overall height change. The representative shape, window/floor pattern, roof and hidden facades repeat; these are not individual photo reconstructions and do not reproduce every target footprint or floor layout.",
+          "Representative has no number label; no node needs hiding.",
+          "Existing authored assets remain unchanged."
+        ],
+        "reviewScope": "One representative visually reviewed; batch placement checks and sample map review for shared copies",
+        "renders": [
+          "docs/model-audit/renders/gaepo-xi-presidence/front.png",
+          "docs/model-audit/renders/gaepo-xi-presidence/opposite.png",
+          "docs/model-audit/renders/gaepo-xi-presidence/side.png",
+          "docs/model-audit/renders/gaepo-xi-presidence/roof.png"
+        ],
+        "inferenceApprovedAssets": [
+          "bespoke-gaepo-xi-presidence-401",
+          "bespoke-gaepo-xi-presidence-402",
+          "bespoke-gaepo-xi-presidence-403",
+          "bespoke-gaepo-xi-presidence-404",
+          "bespoke-gaepo-xi-presidence-406",
+          "bespoke-gaepo-xi-presidence-407",
+          "bespoke-gaepo-xi-presidence-408",
+          "bespoke-gaepo-xi-presidence-409",
+          "bespoke-gaepo-xi-presidence-410",
+          "bespoke-gaepo-xi-presidence-411",
+          "bespoke-gaepo-xi-presidence-412",
+          "bespoke-gaepo-xi-presidence-413",
+          "bespoke-gaepo-xi-presidence-414",
+          "bespoke-gaepo-xi-presidence-415",
+          "bespoke-gaepo-xi-presidence-416",
+          "bespoke-gaepo-xi-presidence-417",
+          "bespoke-gaepo-xi-presidence-418",
+          "bespoke-gaepo-xi-presidence-419",
+          "bespoke-gaepo-xi-presidence-420",
+          "bespoke-gaepo-xi-presidence-421",
+          "bespoke-gaepo-xi-presidence-422",
+          "bespoke-gaepo-xi-presidence-423",
+          "bespoke-gaepo-xi-presidence-424",
+          "bespoke-gaepo-xi-presidence-425",
+          "bespoke-gaepo-xi-presidence-426",
+          "bespoke-gaepo-xi-presidence-427",
+          "bespoke-gaepo-xi-presidence-428",
+          "bespoke-gaepo-xi-presidence-429",
+          "bespoke-gaepo-xi-presidence-430",
+          "bespoke-gaepo-xi-presidence-431",
+          "bespoke-gaepo-xi-presidence-432",
+          "bespoke-gaepo-xi-presidence-433",
+          "bespoke-gaepo-xi-presidence-434",
+          "bespoke-gaepo-xi-presidence-435"
+        ]
+      },
+      "assets": [
+        {
+          "id": "bespoke-gaepo-xi-presidence-401",
+          "dimensions": [
+            77.83261426502025,
+            23.1,
+            35.294223983427464
+          ],
+          "min": [
+            -36.566031886822984,
+            0,
+            -12.698376866124239
+          ],
+          "max": [
+            41.26658237819727,
+            23.1,
+            22.595847117303226
+          ],
+          "sha256": "1be25621831e85947d91f6d02485b43f81fe74be580d2136ac7be55cd428bc22",
+          "sourceSha256": "3e43430ca2517ebb2c283fe6c04cf2e816d54237c0c0029f1acf0e77e883b8bb",
+          "sharedModel": "bespoke/gaepo-xi-presidence-representative/bespoke-gaepo-xi-presidence-405.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gaepo-xi-presidence-405",
+            "sourceDimensions": [
+              33.355835914611816,
+              46.70000076293945,
+              32.05540657043457
+            ],
+            "matrix": [
+              1.7001231244382378,
+              0.0,
+              -1.1063433473742064,
+              0.0,
+              0.0,
+              0.494646672861125,
+              0.0,
+              0.0,
+              2.145245572105513,
+              0.0,
+              -0.5252617225858423,
+              0.0,
+              7.906577911385,
+              0.0,
+              -1.2094248279854403,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gaepo-xi-presidence-402",
+          "dimensions": [
+            42.67666893790842,
+            58.49999999999999,
+            42.194856817510214
+          ],
+          "min": [
+            -24.1735247210908,
+            0,
+            -20.970116616837455
+          ],
+          "max": [
+            18.503144216817617,
+            58.49999999999999,
+            21.224740200672763
+          ],
+          "sha256": "1be25621831e85947d91f6d02485b43f81fe74be580d2136ac7be55cd428bc22",
+          "sourceSha256": "3e43430ca2517ebb2c283fe6c04cf2e816d54237c0c0029f1acf0e77e883b8bb",
+          "sharedModel": "bespoke/gaepo-xi-presidence-representative/bespoke-gaepo-xi-presidence-405.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gaepo-xi-presidence-405",
+            "sourceDimensions": [
+              33.355835914611816,
+              46.70000076293945,
+              32.05540657043457
+            ],
+            "matrix": [
+              1.3114352339357762,
+              0.0,
+              0.3544513718856061,
+              0.0,
+              0.0,
+              1.252676639063888,
+              0.0,
+              0.0,
+              0.34788002743790003,
+              0.0,
+              1.3765815485414554,
+              0.0,
+              2.797271319498913,
+              0.0,
+              -0.6104126320875913,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gaepo-xi-presidence-403",
+          "dimensions": [
+            35.09551579935689,
+            38,
+            39.46407260226448
+          ],
+          "min": [
+            -20.31199310033161,
+            0,
+            -17.682827491742813
+          ],
+          "max": [
+            14.783522699025276,
+            38,
+            21.781245110521663
+          ],
+          "sha256": "1be25621831e85947d91f6d02485b43f81fe74be580d2136ac7be55cd428bc22",
+          "sourceSha256": "3e43430ca2517ebb2c283fe6c04cf2e816d54237c0c0029f1acf0e77e883b8bb",
+          "sharedModel": "bespoke/gaepo-xi-presidence-representative/bespoke-gaepo-xi-presidence-405.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gaepo-xi-presidence-405",
+            "sourceDimensions": [
+              33.355835914611816,
+              46.70000076293945,
+              32.05540657043457
+            ],
+            "matrix": [
+              1.082982212405781,
+              0.0,
+              0.5789359100565379,
+              0.0,
+              0.0,
+              0.8137044834944913,
+              0.0,
+              0.0,
+              0.5625837828646334,
+              0.0,
+              1.1943212345240866,
+              0.0,
+              3.210424469839384,
+              0.0,
+              2.994950308547108,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gaepo-xi-presidence-404",
+          "dimensions": [
+            46.51939162470798,
+            58.49999999999999,
+            45.34847663069385
+          ],
+          "min": [
+            -25.083348140287022,
+            0,
+            -23.0444086309213
+          ],
+          "max": [
+            21.43604348442096,
+            58.49999999999999,
+            22.304067999772553
+          ],
+          "sha256": "1be25621831e85947d91f6d02485b43f81fe74be580d2136ac7be55cd428bc22",
+          "sourceSha256": "3e43430ca2517ebb2c283fe6c04cf2e816d54237c0c0029f1acf0e77e883b8bb",
+          "sharedModel": "bespoke/gaepo-xi-presidence-representative/bespoke-gaepo-xi-presidence-405.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gaepo-xi-presidence-405",
+            "sourceDimensions": [
+              33.355835914611816,
+              46.70000076293945,
+              32.05540657043457
+            ],
+            "matrix": [
+              1.4229402734299899,
+              0.0,
+              0.3278625149770625,
+              0.0,
+              0.0,
+              1.252676639063888,
+              0.0,
+              0.0,
+              0.3073913409107915,
+              0.0,
+              1.4848103106711459,
+              0.0,
+              3.862521646508888,
+              0.0,
+              -1.2794697779291804,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gaepo-xi-presidence-406",
+          "dimensions": [
+            61.63320970126003,
+            58.79999999999999,
+            63.68501501181356
+          ],
+          "min": [
+            -27.50091265066018,
+            0,
+            -38.71837220329431
+          ],
+          "max": [
+            34.13229705059985,
+            58.79999999999999,
+            24.966642808519254
+          ],
+          "sha256": "1be25621831e85947d91f6d02485b43f81fe74be580d2136ac7be55cd428bc22",
+          "sourceSha256": "3e43430ca2517ebb2c283fe6c04cf2e816d54237c0c0029f1acf0e77e883b8bb",
+          "sharedModel": "bespoke/gaepo-xi-presidence-representative/bespoke-gaepo-xi-presidence-405.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gaepo-xi-presidence-405",
+            "sourceDimensions": [
+              33.355835914611816,
+              46.70000076293945,
+              32.05540657043457
+            ],
+            "matrix": [
+              0.2248564702497569,
+              0.0,
+              -1.9302521110815747,
+              0.0,
+              0.0,
+              1.259100621828318,
+              0.0,
+              0.0,
+              1.9707987263565607,
+              0.0,
+              -0.22707937339766682,
+              0.0,
+              2.7073763026422086,
+              0.0,
+              -13.436899143686212,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gaepo-xi-presidence-407",
+          "dimensions": [
+            38.38728011654183,
+            55.7,
+            37.168183045662985
+          ],
+          "min": [
+            -24.965280152402407,
+            0,
+            -17.464603859965468
+          ],
+          "max": [
+            13.421999964139422,
+            55.7,
+            19.703579185697514
+          ],
+          "sha256": "1be25621831e85947d91f6d02485b43f81fe74be580d2136ac7be55cd428bc22",
+          "sourceSha256": "3e43430ca2517ebb2c283fe6c04cf2e816d54237c0c0029f1acf0e77e883b8bb",
+          "sharedModel": "bespoke/gaepo-xi-presidence-representative/bespoke-gaepo-xi-presidence-405.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gaepo-xi-presidence-405",
+            "sourceDimensions": [
+              33.355835914611816,
+              46.70000076293945,
+              32.05540657043457
+            ],
+            "matrix": [
+              1.1643423796623222,
+              0.0,
+              0.13720061042371068,
+              0.0,
+              0.0,
+              1.192719466595873,
+              0.0,
+              0.0,
+              0.14613574440976695,
+              0.0,
+              1.1888411675904804,
+              0.0,
+              -1.7583912229901575,
+              0.0,
+              0.7480918942904853,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gaepo-xi-presidence-408",
+          "dimensions": [
+            65.09637366564047,
+            64.7,
+            67.74801009222756
+          ],
+          "min": [
+            -23.255356706610343,
+            0,
+            -41.03586145910084
+          ],
+          "max": [
+            41.84101695903012,
+            64.7,
+            26.71214863312671
+          ],
+          "sha256": "1be25621831e85947d91f6d02485b43f81fe74be580d2136ac7be55cd428bc22",
+          "sourceSha256": "3e43430ca2517ebb2c283fe6c04cf2e816d54237c0c0029f1acf0e77e883b8bb",
+          "sharedModel": "bespoke/gaepo-xi-presidence-representative/bespoke-gaepo-xi-presidence-405.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gaepo-xi-presidence-405",
+            "sourceDimensions": [
+              33.355835914611816,
+              46.70000076293945,
+              32.05540657043457
+            ],
+            "matrix": [
+              0.07034578152087241,
+              0.0,
+              -2.0349219369579705,
+              0.0,
+              0.0,
+              1.3854389495287787,
+              0.0,
+              0.0,
+              2.0457903698345232,
+              0.0,
+              -0.0411002278059697,
+              0.0,
+              9.125485564948377,
+              0.0,
+              -12.873562776874905,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gaepo-xi-presidence-409",
+          "dimensions": [
+            65.10192957714754,
+            64.7,
+            67.75377345668517
+          ],
+          "min": [
+            -23.258174964792588,
+            0,
+            -41.04060528932572
+          ],
+          "max": [
+            41.84375461235496,
+            64.7,
+            26.713168167359452
+          ],
+          "sha256": "1be25621831e85947d91f6d02485b43f81fe74be580d2136ac7be55cd428bc22",
+          "sourceSha256": "3e43430ca2517ebb2c283fe6c04cf2e816d54237c0c0029f1acf0e77e883b8bb",
+          "sharedModel": "bespoke/gaepo-xi-presidence-representative/bespoke-gaepo-xi-presidence-405.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gaepo-xi-presidence-405",
+            "sourceDimensions": [
+              33.355835914611816,
+              46.70000076293945,
+              32.05540657043457
+            ],
+            "matrix": [
+              0.07038482333741279,
+              0.0,
+              -2.0350970544193805,
+              0.0,
+              0.0,
+              1.3854389495287787,
+              0.0,
+              0.0,
+              2.0459720418349283,
+              0.0,
+              -0.041125117432764875,
+              0.0,
+              9.125337061392344,
+              0.0,
+              -12.87604678168881,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gaepo-xi-presidence-410",
+          "dimensions": [
+            60.870908596939074,
+            61.7,
+            62.86406942900223
+          ],
+          "min": [
+            -26.929714507487017,
+            0,
+            -38.20343127858103
+          ],
+          "max": [
+            33.941194089452054,
+            61.7,
+            24.6606381504212
+          ],
+          "sha256": "1be25621831e85947d91f6d02485b43f81fe74be580d2136ac7be55cd428bc22",
+          "sourceSha256": "3e43430ca2517ebb2c283fe6c04cf2e816d54237c0c0029f1acf0e77e883b8bb",
+          "sharedModel": "bespoke/gaepo-xi-presidence-representative/bespoke-gaepo-xi-presidence-405.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gaepo-xi-presidence-405",
+            "sourceDimensions": [
+              33.355835914611816,
+              46.70000076293945,
+              32.05540657043457
+            ],
+            "matrix": [
+              0.20799438267686315,
+              0.0,
+              -1.9066467071453708,
+              0.0,
+              0.0,
+              1.3211991218844767,
+              0.0,
+              0.0,
+              1.9434117008944405,
+              0.0,
+              -0.23808804006635778,
+              0.0,
+              2.9449764832509544,
+              0.0,
+              -13.335850385627316,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gaepo-xi-presidence-411",
+          "dimensions": [
+            43.755431841084075,
+            88,
+            42.476132297048714
+          ],
+          "min": [
+            -29.30732769008732,
+            0,
+            -19.51943496544388
+          ],
+          "max": [
+            14.448104150996752,
+            88,
+            22.956697331604833
+          ],
+          "sha256": "1be25621831e85947d91f6d02485b43f81fe74be580d2136ac7be55cd428bc22",
+          "sourceSha256": "3e43430ca2517ebb2c283fe6c04cf2e816d54237c0c0029f1acf0e77e883b8bb",
+          "sharedModel": "bespoke/gaepo-xi-presidence-representative/bespoke-gaepo-xi-presidence-405.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gaepo-xi-presidence-405",
+            "sourceDimensions": [
+              33.355835914611816,
+              46.70000076293945,
+              32.05540657043457
+            ],
+            "matrix": [
+              1.3340400636379584,
+              0.0,
+              0.2230843174900742,
+              0.0,
+              0.0,
+              1.8843682775661905,
+              0.0,
+              0.0,
+              0.24158917595959573,
+              0.0,
+              1.3727958066271675,
+              0.0,
+              -2.38145666552676,
+              0.0,
+              1.1057501790228663,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gaepo-xi-presidence-412",
+          "dimensions": [
+            26.169311192293527,
+            79.45,
+            25.567339408202802
+          ],
+          "min": [
+            -11.492062630405897,
+            0,
+            -11.604842884908615
+          ],
+          "max": [
+            14.677248561887628,
+            79.45,
+            13.962496523294186
+          ],
+          "sha256": "1be25621831e85947d91f6d02485b43f81fe74be580d2136ac7be55cd428bc22",
+          "sourceSha256": "3e43430ca2517ebb2c283fe6c04cf2e816d54237c0c0029f1acf0e77e883b8bb",
+          "sharedModel": "bespoke/gaepo-xi-presidence-representative/bespoke-gaepo-xi-presidence-405.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gaepo-xi-presidence-405",
+            "sourceDimensions": [
+              33.355835914611816,
+              46.70000076293945,
+              32.05540657043457
+            ],
+            "matrix": [
+              0.26017300616741634,
+              0.0,
+              -0.7896235681241168,
+              0.0,
+              0.0,
+              1.70128476877993,
+              0.0,
+              0.0,
+              0.8385667542863267,
+              0.0,
+              -0.25152682436814644,
+              0.0,
+              1.4017547114417181,
+              0.0,
+              -2.4677834864194725,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gaepo-xi-presidence-413",
+          "dimensions": [
+            41.02776990900762,
+            65.1,
+            42.681599659868425
+          ],
+          "min": [
+            -16.469708702191422,
+            0,
+            -24.91768863127312
+          ],
+          "max": [
+            24.558061206816195,
+            65.1,
+            17.76391102859531
+          ],
+          "sha256": "1be25621831e85947d91f6d02485b43f81fe74be580d2136ac7be55cd428bc22",
+          "sourceSha256": "3e43430ca2517ebb2c283fe6c04cf2e816d54237c0c0029f1acf0e77e883b8bb",
+          "sharedModel": "bespoke/gaepo-xi-presidence-representative/bespoke-gaepo-xi-presidence-405.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gaepo-xi-presidence-405",
+            "sourceDimensions": [
+              33.355835914611816,
+              46.70000076293945,
+              32.05540657043457
+            ],
+            "matrix": [
+              -0.014053312730379786,
+              0.0,
+              -1.2788344837601768,
+              0.0,
+              0.0,
+              1.3940042598813522,
+              0.0,
+              0.0,
+              1.276896137883535,
+              0.0,
+              0.007997463405110147,
+              0.0,
+              4.104692363016825,
+              0.0,
+              -6.959910044798556,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gaepo-xi-presidence-414",
+          "dimensions": [
+            43.26791885441786,
+            61.449999999999996,
+            42.426186356105006
+          ],
+          "min": [
+            -25.44011952115267,
+            0,
+            -20.649835734198437
+          ],
+          "max": [
+            17.82779933326519,
+            61.449999999999996,
+            21.77635062190657
+          ],
+          "sha256": "1be25621831e85947d91f6d02485b43f81fe74be580d2136ac7be55cd428bc22",
+          "sourceSha256": "3e43430ca2517ebb2c283fe6c04cf2e816d54237c0c0029f1acf0e77e883b8bb",
+          "sharedModel": "bespoke/gaepo-xi-presidence-representative/bespoke-gaepo-xi-presidence-405.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gaepo-xi-presidence-405",
+            "sourceDimensions": [
+              33.355835914611816,
+              46.70000076293945,
+              32.05540657043457
+            ],
+            "matrix": [
+              1.3248809861367012,
+              0.0,
+              0.33759844753055224,
+              0.0,
+              0.0,
+              1.3158458029141182,
+              0.0,
+              0.0,
+              0.3011537834669615,
+              0.0,
+              1.3912064307863137,
+              0.0,
+              1.5788569503853938,
+              0.0,
+              -0.3027730638459376,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gaepo-xi-presidence-415",
+          "dimensions": [
+            38.392708324727785,
+            29.150000000000002,
+            37.173738367422914
+          ],
+          "min": [
+            -24.967448388833574,
+            0,
+            -17.45949780400714
+          ],
+          "max": [
+            13.425259935894212,
+            29.150000000000002,
+            19.71424056341578
+          ],
+          "sha256": "1be25621831e85947d91f6d02485b43f81fe74be580d2136ac7be55cd428bc22",
+          "sourceSha256": "3e43430ca2517ebb2c283fe6c04cf2e816d54237c0c0029f1acf0e77e883b8bb",
+          "sharedModel": "bespoke/gaepo-xi-presidence-representative/bespoke-gaepo-xi-presidence-405.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gaepo-xi-presidence-405",
+            "sourceDimensions": [
+              33.355835914611816,
+              46.70000076293945,
+              32.05540657043457
+            ],
+            "matrix": [
+              1.1645185005826078,
+              0.0,
+              0.1368580800329647,
+              0.0,
+              0.0,
+              0.6241969919438006,
+              0.0,
+              0.0,
+              0.1462816467269762,
+              0.0,
+              1.1889412144229725,
+              0.0,
+              -1.7564870629226135,
+              0.0,
+              0.756952124321912,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gaepo-xi-presidence-416",
+          "dimensions": [
+            38.38589378573909,
+            32.1,
+            37.16691881412733
+          ],
+          "min": [
+            -24.964067454301077,
+            0,
+            -17.464511630655032
+          ],
+          "max": [
+            13.421826331438014,
+            32.1,
+            19.702407183472296
+          ],
+          "sha256": "1be25621831e85947d91f6d02485b43f81fe74be580d2136ac7be55cd428bc22",
+          "sourceSha256": "3e43430ca2517ebb2c283fe6c04cf2e816d54237c0c0029f1acf0e77e883b8bb",
+          "sharedModel": "bespoke/gaepo-xi-presidence-representative/bespoke-gaepo-xi-presidence-405.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gaepo-xi-presidence-405",
+            "sourceDimensions": [
+              33.355835914611816,
+              46.70000076293945,
+              32.05540657043457
+            ],
+            "matrix": [
+              1.1643045624285164,
+              0.0,
+              0.1372273322260266,
+              0.0,
+              0.0,
+              0.6873661557940309,
+              0.0,
+              0.0,
+              0.1461766552985254,
+              0.0,
+              1.1888074436281817,
+              0.0,
+              -1.7577249765582388,
+              0.0,
+              0.7474754106907726,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gaepo-xi-presidence-417",
+          "dimensions": [
+            43.26078388742816,
+            96.84999999999998,
+            42.41171552443808
+          ],
+          "min": [
+            -25.438482458739454,
+            0,
+            -20.63655326070086
+          ],
+          "max": [
+            17.822301428688707,
+            96.84999999999998,
+            21.775162263737215
+          ],
+          "sha256": "1be25621831e85947d91f6d02485b43f81fe74be580d2136ac7be55cd428bc22",
+          "sourceSha256": "3e43430ca2517ebb2c283fe6c04cf2e816d54237c0c0029f1acf0e77e883b8bb",
+          "sharedModel": "bespoke/gaepo-xi-presidence-representative/bespoke-gaepo-xi-presidence-405.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gaepo-xi-presidence-405",
+            "sourceDimensions": [
+              33.355835914611816,
+              46.70000076293945,
+              32.05540657043457
+            ],
+            "matrix": [
+              1.324720021408408,
+              0.0,
+              0.3372069078373205,
+              0.0,
+              0.0,
+              2.073875769116881,
+              0.0,
+              0.0,
+              0.30173177068577767,
+              0.0,
+              1.390835992404858,
+              0.0,
+              1.5800017088902127,
+              0.0,
+              -0.29825783874584477,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gaepo-xi-presidence-418",
+          "dimensions": [
+            41.02675053283481,
+            103.45,
+            42.680792665264995
+          ],
+          "min": [
+            -16.472614170857902,
+            0,
+            -24.919122641570198
+          ],
+          "max": [
+            24.55413636197691,
+            103.45,
+            17.761670023694798
+          ],
+          "sha256": "1be25621831e85947d91f6d02485b43f81fe74be580d2136ac7be55cd428bc22",
+          "sourceSha256": "3e43430ca2517ebb2c283fe6c04cf2e816d54237c0c0029f1acf0e77e883b8bb",
+          "sharedModel": "bespoke/gaepo-xi-presidence-representative/bespoke-gaepo-xi-presidence-405.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gaepo-xi-presidence-405",
+            "sourceDimensions": [
+              33.355835914611816,
+              46.70000076293945,
+              32.05540657043457
+            ],
+            "matrix": [
+              -0.014195533934417491,
+              0.0,
+              -1.2787971107432654,
+              0.0,
+              0.0,
+              2.2152033899343455,
+              0.0,
+              0.0,
+              1.2768339206192751,
+              0.0,
+              0.0081380588410033,
+              0.0,
+              4.1016809946910175,
+              0.0,
+              -6.960789112937704,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gaepo-xi-presidence-419",
+          "dimensions": [
+            45.43477760203061,
+            111.97,
+            43.48438646191383
+          ],
+          "min": [
+            -26.593914751736182,
+            0,
+            -25.48076554634507
+          ],
+          "max": [
+            18.840862850294425,
+            111.97,
+            18.00362091556876
+          ],
+          "sha256": "1be25621831e85947d91f6d02485b43f81fe74be580d2136ac7be55cd428bc22",
+          "sourceSha256": "3e43430ca2517ebb2c283fe6c04cf2e816d54237c0c0029f1acf0e77e883b8bb",
+          "sharedModel": "bespoke/gaepo-xi-presidence-representative/bespoke-gaepo-xi-presidence-405.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gaepo-xi-presidence-405",
+            "sourceDimensions": [
+              33.355835914611816,
+              46.70000076293945,
+              32.05540657043457
+            ],
+            "matrix": [
+              1.3586391947089997,
+              0.0,
+              -0.013749999310160192,
+              0.0,
+              0.0,
+              2.397644500444163,
+              0.0,
+              0.0,
+              -0.037172702792750284,
+              0.0,
+              1.3535975819361465,
+              0.0,
+              -0.4574193080404072,
+              0.0,
+              -3.677687017466077,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gaepo-xi-presidence-420",
+          "dimensions": [
+            40.10816283776093,
+            105.7,
+            35.51958209969736
+          ],
+          "min": [
+            -18.30057073780665,
+            0,
+            -15.101843196902855
+          ],
+          "max": [
+            21.80759209995428,
+            105.7,
+            20.417738902794508
+          ],
+          "sha256": "1be25621831e85947d91f6d02485b43f81fe74be580d2136ac7be55cd428bc22",
+          "sourceSha256": "3e43430ca2517ebb2c283fe6c04cf2e816d54237c0c0029f1acf0e77e883b8bb",
+          "sharedModel": "bespoke/gaepo-xi-presidence-representative/bespoke-gaepo-xi-presidence-405.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gaepo-xi-presidence-405",
+            "sourceDimensions": [
+              33.355835914611816,
+              46.70000076293945,
+              32.05540657043457
+            ],
+            "matrix": [
+              0.5602478633855938,
+              0.0,
+              -1.1141257955935697,
+              0.0,
+              0.0,
+              2.263383260667572,
+              0.0,
+              0.0,
+              1.2244088787270375,
+              0.0,
+              -0.5364548547676226,
+              0.0,
+              2.5286749399700454,
+              0.0,
+              -3.589032501606507,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gaepo-xi-presidence-421",
+          "dimensions": [
+            46.014128725409016,
+            91.25,
+            44.820522913945354
+          ],
+          "min": [
+            -25.065647539837748,
+            0,
+            -22.902874834181386
+          ],
+          "max": [
+            20.948481185571268,
+            91.25,
+            21.917648079763964
+          ],
+          "sha256": "1be25621831e85947d91f6d02485b43f81fe74be580d2136ac7be55cd428bc22",
+          "sourceSha256": "3e43430ca2517ebb2c283fe6c04cf2e816d54237c0c0029f1acf0e77e883b8bb",
+          "sharedModel": "bespoke/gaepo-xi-presidence-representative/bespoke-gaepo-xi-presidence-405.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gaepo-xi-presidence-405",
+            "sourceDimensions": [
+              33.355835914611816,
+              46.70000076293945,
+              32.05540657043457
+            ],
+            "matrix": [
+              1.4064680106042422,
+              0.0,
+              0.3099856631787321,
+              0.0,
+              0.0,
+              1.953961424180851,
+              0.0,
+              0.0,
+              0.29295110017458686,
+              0.0,
+              1.4645169555061854,
+              0.0,
+              3.495732378359934,
+              0.0,
+              -1.3513580567271113,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gaepo-xi-presidence-422",
+          "dimensions": [
+            44.778120747973304,
+            79.45,
+            46.0205577733041
+          ],
+          "min": [
+            -19.255454664984306,
+            0,
+            -25.371242923729472
+          ],
+          "max": [
+            25.522666082988998,
+            79.45,
+            20.649314849574626
+          ],
+          "sha256": "1be25621831e85947d91f6d02485b43f81fe74be580d2136ac7be55cd428bc22",
+          "sourceSha256": "3e43430ca2517ebb2c283fe6c04cf2e816d54237c0c0029f1acf0e77e883b8bb",
+          "sharedModel": "bespoke/gaepo-xi-presidence-representative/bespoke-gaepo-xi-presidence-405.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gaepo-xi-presidence-405",
+            "sourceDimensions": [
+              33.355835914611816,
+              46.70000076293945,
+              32.05540657043457
+            ],
+            "matrix": [
+              0.2899277150682224,
+              0.0,
+              -1.4055996259303272,
+              0.0,
+              0.0,
+              1.70128476877993,
+              0.0,
+              0.0,
+              1.4589043888768825,
+              0.0,
+              -0.281370229370523,
+              0.0,
+              2.331859518247203,
+              0.0,
+              -7.8426716967715935,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gaepo-xi-presidence-423",
+          "dimensions": [
+            40.10769049590357,
+            43.75,
+            35.519434738344444
+          ],
+          "min": [
+            -18.300275000366906,
+            0,
+            -15.101800867923911
+          ],
+          "max": [
+            21.807415495536663,
+            43.75,
+            20.41763387042053
+          ],
+          "sha256": "1be25621831e85947d91f6d02485b43f81fe74be580d2136ac7be55cd428bc22",
+          "sourceSha256": "3e43430ca2517ebb2c283fe6c04cf2e816d54237c0c0029f1acf0e77e883b8bb",
+          "sharedModel": "bespoke/gaepo-xi-presidence-representative/bespoke-gaepo-xi-presidence-405.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gaepo-xi-presidence-405",
+            "sourceDimensions": [
+              33.355835914611816,
+              46.70000076293945,
+              32.05540657043457
+            ],
+            "matrix": [
+              0.5602357537019338,
+              0.0,
+              -1.1141217195020543,
+              0.0,
+              0.0,
+              0.9368308198127367,
+              0.0,
+              0.0,
+              1.2243965347600998,
+              0.0,
+              -0.5364585892943984,
+              0.0,
+              2.5286889389914875,
+              0.0,
+              -3.5890755705255994,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gaepo-xi-presidence-424",
+          "dimensions": [
+            47.87431580819694,
+            79.15,
+            49.56476361919504
+          ],
+          "min": [
+            -20.235216198859035,
+            0,
+            -30.330264800642635
+          ],
+          "max": [
+            27.6390996093379,
+            79.15,
+            19.234498818552407
+          ],
+          "sha256": "1be25621831e85947d91f6d02485b43f81fe74be580d2136ac7be55cd428bc22",
+          "sourceSha256": "3e43430ca2517ebb2c283fe6c04cf2e816d54237c0c0029f1acf0e77e883b8bb",
+          "sharedModel": "bespoke/gaepo-xi-presidence-representative/bespoke-gaepo-xi-presidence-405.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gaepo-xi-presidence-405",
+            "sourceDimensions": [
+              33.355835914611816,
+              46.70000076293945,
+              32.05540657043457
+            ],
+            "matrix": [
+              0.1687611642276876,
+              0.0,
+              -1.4987371505839862,
+              0.0,
+              0.0,
+              1.6948607860154998,
+              0.0,
+              0.0,
+              1.5295793796967303,
+              0.0,
+              -0.1381064054297492,
+              0.0,
+              3.246193831993211,
+              0.0,
+              -10.410313374889718,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gaepo-xi-presidence-425",
+          "dimensions": [
+            33.19599220052868,
+            102.74999999999999,
+            34.592779865369884
+          ],
+          "min": [
+            -16.36472709115232,
+            0,
+            -18.37986595892025
+          ],
+          "max": [
+            16.831265109376357,
+            102.74999999999999,
+            16.212913906449636
+          ],
+          "sha256": "1be25621831e85947d91f6d02485b43f81fe74be580d2136ac7be55cd428bc22",
+          "sourceSha256": "3e43430ca2517ebb2c283fe6c04cf2e816d54237c0c0029f1acf0e77e883b8bb",
+          "sharedModel": "bespoke/gaepo-xi-presidence-representative/bespoke-gaepo-xi-presidence-405.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gaepo-xi-presidence-405",
+            "sourceDimensions": [
+              33.355835914611816,
+              46.70000076293945,
+              32.05540657043457
+            ],
+            "matrix": [
+              0.052874221206117226,
+              0.0,
+              -1.039067996876378,
+              0.0,
+              0.0,
+              2.2002140968173416,
+              0.0,
+              0.0,
+              1.0468898917371718,
+              0.0,
+              -0.02117237161768712,
+              0.0,
+              0.09960098727802702,
+              0.0,
+              -4.001111114756609,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gaepo-xi-presidence-426",
+          "dimensions": [
+            44.985838579262094,
+            103.04999999999998,
+            46.201043316510905
+          ],
+          "min": [
+            -19.489078083591348,
+            0,
+            -25.449832664144395
+          ],
+          "max": [
+            25.496760495670742,
+            103.04999999999998,
+            20.751210652366506
+          ],
+          "sha256": "1be25621831e85947d91f6d02485b43f81fe74be580d2136ac7be55cd428bc22",
+          "sourceSha256": "3e43430ca2517ebb2c283fe6c04cf2e816d54237c0c0029f1acf0e77e883b8bb",
+          "sharedModel": "bespoke/gaepo-xi-presidence-representative/bespoke-gaepo-xi-presidence-405.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gaepo-xi-presidence-405",
+            "sourceDimensions": [
+              33.355835914611816,
+              46.70000076293945,
+              32.05540657043457
+            ],
+            "matrix": [
+              0.3047887790405337,
+              0.0,
+              -1.4119029276276036,
+              0.0,
+              0.0,
+              2.2066380795817717,
+              0.0,
+              0.0,
+              1.468562684060724,
+              0.0,
+              -0.29110369166927036,
+              0.0,
+              2.1599528399685988,
+              0.0,
+              -7.9070096035610815,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gaepo-xi-presidence-427",
+          "dimensions": [
+            47.87447328656323,
+            82.1,
+            49.56494086092987
+          ],
+          "min": [
+            -20.23518945815998,
+            0,
+            -30.33041927317813
+          ],
+          "max": [
+            27.63928382840325,
+            82.1,
+            19.234521587751743
+          ],
+          "sha256": "1be25621831e85947d91f6d02485b43f81fe74be580d2136ac7be55cd428bc22",
+          "sourceSha256": "3e43430ca2517ebb2c283fe6c04cf2e816d54237c0c0029f1acf0e77e883b8bb",
+          "sharedModel": "bespoke/gaepo-xi-presidence-representative/bespoke-gaepo-xi-presidence-405.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gaepo-xi-presidence-405",
+            "sourceDimensions": [
+              33.355835914611816,
+              46.70000076293945,
+              32.05540657043457
+            ],
+            "matrix": [
+              0.16876787322441236,
+              0.0,
+              -1.4987421424631788,
+              0.0,
+              0.0,
+              1.75802994986573,
+              0.0,
+              0.0,
+              1.5295857272413302,
+              0.0,
+              -0.13810288802693704,
+              0.0,
+              3.24628031881044,
+              0.0,
+              -10.410371285951564,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gaepo-xi-presidence-428",
+          "dimensions": [
+            33.1912814765368,
+            88,
+            34.58627988848282
+          ],
+          "min": [
+            -16.359642331792486,
+            0,
+            -18.37339911633471
+          ],
+          "max": [
+            16.831639144744315,
+            88,
+            16.21288077214811
+          ],
+          "sha256": "1be25621831e85947d91f6d02485b43f81fe74be580d2136ac7be55cd428bc22",
+          "sourceSha256": "3e43430ca2517ebb2c283fe6c04cf2e816d54237c0c0029f1acf0e77e883b8bb",
+          "sharedModel": "bespoke/gaepo-xi-presidence-representative/bespoke-gaepo-xi-presidence-405.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gaepo-xi-presidence-405",
+            "sourceDimensions": [
+              33.355835914611816,
+              46.70000076293945,
+              32.05540657043457
+            ],
+            "matrix": [
+              0.052636206295612546,
+              0.0,
+              -1.0388906050072777,
+              0.0,
+              0.0,
+              1.8843682775661905,
+              0.0,
+              0.0,
+              1.046692031859238,
+              0.0,
+              -0.02135879961570799,
+              0.0,
+              0.10300464031715784,
+              0.0,
+              -3.9985561109307874,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gaepo-xi-presidence-429",
+          "dimensions": [
+            50.9054262164487,
+            79.45,
+            48.61793700993131
+          ],
+          "min": [
+            -23.377531939085735,
+            0,
+            -25.21985231107915
+          ],
+          "max": [
+            27.527894277362968,
+            79.45,
+            23.398084698852163
+          ],
+          "sha256": "1be25621831e85947d91f6d02485b43f81fe74be580d2136ac7be55cd428bc22",
+          "sourceSha256": "3e43430ca2517ebb2c283fe6c04cf2e816d54237c0c0029f1acf0e77e883b8bb",
+          "sharedModel": "bespoke/gaepo-xi-presidence-representative/bespoke-gaepo-xi-presidence-405.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gaepo-xi-presidence-405",
+            "sourceDimensions": [
+              33.355835914611816,
+              46.70000076293945,
+              32.05540657043457
+            ],
+            "matrix": [
+              0.5581962367335765,
+              0.0,
+              -1.5078240161930243,
+              0.0,
+              0.0,
+              1.70128476877993,
+              0.0,
+              0.0,
+              1.6115899129319202,
+              0.0,
+              -0.5470947965012406,
+              0.0,
+              2.0483824480295545,
+              0.0,
+              -8.279576056363705,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gaepo-xi-presidence-430",
+          "dimensions": [
+            47.38253640502393,
+            76.5,
+            46.1966139316075
+          ],
+          "min": [
+            -31.27746083585987,
+            0,
+            -21.463380696123778
+          ],
+          "max": [
+            16.10507556916406,
+            76.5,
+            24.733233235483727
+          ],
+          "sha256": "1be25621831e85947d91f6d02485b43f81fe74be580d2136ac7be55cd428bc22",
+          "sourceSha256": "3e43430ca2517ebb2c283fe6c04cf2e816d54237c0c0029f1acf0e77e883b8bb",
+          "sharedModel": "bespoke/gaepo-xi-presidence-representative/bespoke-gaepo-xi-presidence-405.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gaepo-xi-presidence-405",
+            "sourceDimensions": [
+              33.355835914611816,
+              46.70000076293945,
+              32.05540657043457
+            ],
+            "matrix": [
+              1.44968646214968,
+              0.0,
+              0.3371286284606155,
+              0.0,
+              0.0,
+              1.6381156049296997,
+              0.0,
+              0.0,
+              0.3168515184609161,
+              0.0,
+              1.5132505314517146,
+              0.0,
+              -1.770793521328837,
+              0.0,
+              0.6997107047576074,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gaepo-xi-presidence-431",
+          "dimensions": [
+            47.87548857163498,
+            76.2,
+            49.565850311055854
+          ],
+          "min": [
+            -20.233745634617847,
+            0,
+            -30.325391480252282
+          ],
+          "max": [
+            27.641742937017135,
+            76.2,
+            19.24045883080357
+          ],
+          "sha256": "1be25621831e85947d91f6d02485b43f81fe74be580d2136ac7be55cd428bc22",
+          "sourceSha256": "3e43430ca2517ebb2c283fe6c04cf2e816d54237c0c0029f1acf0e77e883b8bb",
+          "sharedModel": "bespoke/gaepo-xi-presidence-representative/bespoke-gaepo-xi-presidence-405.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gaepo-xi-presidence-405",
+            "sourceDimensions": [
+              33.355835914611816,
+              46.70000076293945,
+              32.05540657043457
+            ],
+            "matrix": [
+              0.16924639479445966,
+              0.0,
+              -1.498779392548787,
+              0.0,
+              0.0,
+              1.6316916221652695,
+              0.0,
+              0.0,
+              1.5297197413703678,
+              0.0,
+              -0.138211831255344,
+              0.0,
+              3.246871976347884,
+              0.0,
+              -10.405649890297465,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gaepo-xi-presidence-432",
+          "dimensions": [
+            44.315813386259435,
+            37.85,
+            42.55464132012536
+          ],
+          "min": [
+            -14.709144977390341,
+            0,
+            -19.44796491995684
+          ],
+          "max": [
+            29.60666840886909,
+            37.85,
+            23.106676400168524
+          ],
+          "sha256": "1be25621831e85947d91f6d02485b43f81fe74be580d2136ac7be55cd428bc22",
+          "sourceSha256": "3e43430ca2517ebb2c283fe6c04cf2e816d54237c0c0029f1acf0e77e883b8bb",
+          "sharedModel": "bespoke/gaepo-xi-presidence-representative/bespoke-gaepo-xi-presidence-405.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gaepo-xi-presidence-405",
+            "sourceDimensions": [
+              33.355835914611816,
+              46.70000076293945,
+              32.05540657043457
+            ],
+            "matrix": [
+              0.47788789825306643,
+              0.0,
+              -1.3196803557419456,
+              0.0,
+              0.0,
+              0.8104924921122763,
+              0.0,
+              0.0,
+              1.4060042343825143,
+              0.0,
+              -0.4777932870275558,
+              0.0,
+              7.372207684475342,
+              0.0,
+              -4.613597315977751,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gaepo-xi-presidence-433",
+          "dimensions": [
+            34.78670580125996,
+            23.1,
+            30.88134114677647
+          ],
+          "min": [
+            -14.180025699754099,
+            0,
+            -11.70555874108623
+          ],
+          "max": [
+            20.606680101505866,
+            23.1,
+            19.17578240569024
+          ],
+          "sha256": "1be25621831e85947d91f6d02485b43f81fe74be580d2136ac7be55cd428bc22",
+          "sourceSha256": "3e43430ca2517ebb2c283fe6c04cf2e816d54237c0c0029f1acf0e77e883b8bb",
+          "sharedModel": "bespoke/gaepo-xi-presidence-representative/bespoke-gaepo-xi-presidence-405.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gaepo-xi-presidence-405",
+            "sourceDimensions": [
+              33.355835914611816,
+              46.70000076293945,
+              32.05540657043457
+            ],
+            "matrix": [
+              0.5831093046059835,
+              0.0,
+              -0.9103725128833619,
+              0.0,
+              0.0,
+              0.494646672861125,
+              0.0,
+              0.0,
+              1.025357823898226,
+              0.0,
+              -0.5640325185973133,
+              0.0,
+              4.528193203213844,
+              0.0,
+              -1.011233103065018,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gaepo-xi-presidence-434",
+          "dimensions": [
+            24.974111248873363,
+            52.6,
+            27.42362389728802
+          ],
+          "min": [
+            -16.412282453893717,
+            0,
+            -10.151895763822527
+          ],
+          "max": [
+            8.561828794979649,
+            52.6,
+            17.271728133465494
+          ],
+          "sha256": "1be25621831e85947d91f6d02485b43f81fe74be580d2136ac7be55cd428bc22",
+          "sourceSha256": "3e43430ca2517ebb2c283fe6c04cf2e816d54237c0c0029f1acf0e77e883b8bb",
+          "sharedModel": "bespoke/gaepo-xi-presidence-representative/bespoke-gaepo-xi-presidence-405.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gaepo-xi-presidence-405",
+            "sourceDimensions": [
+              33.355835914611816,
+              46.70000076293945,
+              32.05540657043457
+            ],
+            "matrix": [
+              0.7801924162252141,
+              0.0,
+              0.35416815705855753,
+              0.0,
+              0.0,
+              1.1263383113634275,
+              0.0,
+              0.0,
+              0.3427139897146014,
+              0.0,
+              0.8480607697824392,
+              0.0,
+              0.24940985333215027,
+              0.0,
+              3.898892275321038,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        },
+        {
+          "id": "bespoke-gaepo-xi-presidence-435",
+          "dimensions": [
+            49.552882963714595,
+            76.2,
+            47.86046444355544
+          ],
+          "min": [
+            -27.443542679726878,
+            0,
+            -27.221206432345884
+          ],
+          "max": [
+            22.10934028398772,
+            76.2,
+            20.63925801120956
+          ],
+          "sha256": "1be25621831e85947d91f6d02485b43f81fe74be580d2136ac7be55cd428bc22",
+          "sourceSha256": "3e43430ca2517ebb2c283fe6c04cf2e816d54237c0c0029f1acf0e77e883b8bb",
+          "sharedModel": "bespoke/gaepo-xi-presidence-representative/bespoke-gaepo-xi-presidence-405.glb",
+          "modelInstance": {
+            "sourceAssetId": "bespoke-gaepo-xi-presidence-405",
+            "sourceDimensions": [
+              33.355835914611816,
+              46.70000076293945,
+              32.05540657043457
+            ],
+            "matrix": [
+              1.4983073154962852,
+              0.0,
+              0.1691630203695709,
+              0.0,
+              0.0,
+              1.6316916221652695,
+              0.0,
+              0.0,
+              0.1373029307781072,
+              0.0,
+              1.5292332176167263,
+              0.0,
+              2.1892992858264932,
+              0.0,
+              -3.7478714038903957,
+              1.0
+            ],
+            "hiddenNodes": []
+          }
+        }
+      ],
+      "mcpEvidence": [
+        {
+          "path": "docs/model-audit/mcp/gaepo-xi-presidence-405-headless.json",
+          "sha256": "a0ead80b52e94749884e84097309108f9f9abbcdd133d7ec82e3f62b7bfff9d8",
+          "tool": "execute_blender_code",
+          "server": "upstream addon headless adapter"
+        }
+      ],
+      "recipeInputs": [],
+      "sharedRepresentative": "bespoke-gaepo-xi-presidence-405",
+      "newGlbFiles": 0,
+      "newBlendFiles": 0,
+      "placementInputs": [
+        {
+          "path": "docs/model-audit/gaepo-xi-presidence-source-identity.json",
+          "sha256": "27238463cc30969b4bab8986785b012fa2ac116293a2305690fc72b692ea184f"
+        },
+        {
+          "path": "docs/model-audit/gaepo-xi-presidence-fallback-bindings.json",
+          "sha256": "ce9a0e7d8415bc0ec81dc7291f7fe678f7dd0596d90b4a09b4bb9933ce109eff"
+        }
+      ],
+      "placementMethod": "Long-axis oriented rectangle mapping with positive plan scales and explicit per-target height basis; actual concave target shapes are not reconstructed."
     }
   }
 }
