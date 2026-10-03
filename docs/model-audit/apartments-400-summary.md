@@ -43,18 +43,21 @@ K-apt 서울 자료의 123코드에는 복수 주소 등에 따른 추가 147행
 | A10027207 | 래미안힐스테이트 고덕 | partial | 46 / 51 | 46 |
 | A10027817 | DMC파크뷰자이아파트 | complete_residential_buildings | 61 / 61 | 61 |
 | A10027908 | 래미안첼리투스 | complete_residential_buildings | 3 / 3 | 0 |
+| A12013003 | DMC래미안e편한세상 | partial | 50 / 51 | 49 |
 | A12174601 | 메세나폴리스 | complete_residential_buildings | 3 / 3 | 0 |
 | A12175203 | 마포래미안푸르지오 | partial | 44 / 51 | 44 |
 | A13375907 | 래미안옥수리버젠 | complete_residential_buildings | 15 / 15 | 15 |
 | A13408003 | 고덕아이파크아파트 | complete_residential_buildings | 14 / 14 | 13 |
 | A13485302 | 강동롯데캐슬퍼스트아파트 | partial | 36 / 40 | 35 |
 | A13527017 | 타워팰리스1차 | complete_residential_buildings | 4 / 4 | 0 |
+| A13527203 | 도곡렉슬 | partial | 25 / 34 | 25 |
 | A13583507 | 은마 | complete_residential_buildings | 28 / 28 | 28 |
 | A13585402 | 타워팰리스2차 | complete_residential_buildings | 2 / 2 | 0 |
 | A13585403 | 타워팰리스G동 | complete_residential_buildings | 1 / 1 | 0 |
 | A13704104 | 반포자이 | complete_residential_buildings | 44 / 44 | 44 |
 | A13776301 | 반포리체 | complete_residential_buildings | 9 / 9 | 9 |
 | A13776509 | 래미안퍼스티지 | complete_residential_buildings | 28 / 28 | 28 |
+| A13822001 | 잠실레이크팰리스 | partial | 29 / 35 | 29 |
 | A13822002 | 잠실동트리지움 | partial | 45 / 46 | 45 |
 | A13822003 | 잠실리센츠 | partial | 63 / 65 | 63 |
 | A13822004 | 잠실엘스아파트 | complete_residential_buildings | 72 / 72 | 72 |
@@ -62,6 +65,7 @@ K-apt 서울 자료의 123코드에는 복수 주소 등에 따른 추가 147행
 | A13824006 | 잠실파크리오 | partial | 60 / 66 | 60 |
 | A15088614 | 롯데캐슬엠파이어 | complete_residential_buildings | 2 / 2 | 0 |
 | A15088915 | 롯데캐슬아이비 | complete_residential_buildings | 2 / 2 | 0 |
+| A15180705 | 관악드림타운 | partial | 31 / 44 | 30 |
 | A15805111 | 목동현대하이페리온2차 | complete_residential_buildings | 4 / 4 | 0 |
 | A15805114 | 목동현대하이페리온 | coverage_review_needed | 2 / 2 | 0 |
 | A15870101 | 목동트라팰리스 | complete_residential_buildings | 4 / 4 | 0 |

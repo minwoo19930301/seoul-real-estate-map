@@ -1,0 +1,222 @@
+{
+  "version": 1,
+  "sourceId": "apt-a12013202",
+  "sourceSha256": "bb9702832fbda88c96b6e4e920c202dbf44f388855d2a263672413ce17d297c8",
+  "sourceTriangles": 4012,
+  "sourceCoordinate": {
+    "lon": 126.91279420273767,
+    "lat": 37.57626514350265,
+    "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+    "confidence": "source_footprint_unsurveyed"
+  },
+  "groupFootprints": {
+    "apt-a12013202": [
+      "509fe119-4e59-40b0-a923-7f6c6034e146",
+      "17b7bcb3-9d24-4265-a1d2-e49ac3488f14",
+      "7a028084-ce71-4564-8a6a-f8e029728422",
+      "e5bf2ce7-7337-41f3-8418-aaaed2b1ac82"
+    ],
+    "fallback-dmc-raemian-e-pyeonhansesang-201": [
+      "368ec6bc-eb11-4c7b-8c2c-af718c8f6963"
+    ],
+    "fallback-dmc-raemian-e-pyeonhansesang-202": [
+      "56e1f18a-d376-4f17-87fe-30c39573891e"
+    ]
+  },
+  "ownershipMethod": "Original source-emission indices from byte-exact authoring replay; overlapping historical plans cannot change ownership. Byte-exact archived authoring replay and per-source triangle-signature multiplicity independently checked.",
+  "legacyTrianglesOutsideSourcePolygonInsideItsHull": 22,
+  "legacyTrianglesOutsideSourceConvexHull": 0,
+  "limits": [
+    "Only archived indexed triangles, material attributes and terrain anchors are partitioned; no photo-modeling credit.",
+    "One photographed representative plus shared copies. Preserve unrelated source triangles and previous models.",
+    "All unnamed, unmatched and unrelated source buildings remain in unchanged-shape residuals. Original convex-hull approximations remain archived."
+  ],
+  "outputs": [
+    {
+      "id": "apt-a12013202",
+      "model": "generic-corrections/apt-a12013202.glb",
+      "sha256": "0de8215f9a45315ed6b1ff1c6117fd20e971dac893c9f03db952c16cd64ca096",
+      "bytes": 218908,
+      "triangles": 3551,
+      "bounds": {
+        "min": [
+          -33.26995086669922,
+          0.0,
+          -88.87035369873047
+        ],
+        "max": [
+          106.39082336425781,
+          49.0,
+          38.94170379638672
+        ]
+      },
+      "footprintIds": [
+        "509fe119-4e59-40b0-a923-7f6c6034e146",
+        "17b7bcb3-9d24-4265-a1d2-e49ac3488f14",
+        "7a028084-ce71-4564-8a6a-f8e029728422",
+        "e5bf2ce7-7337-41f3-8418-aaaed2b1ac82"
+      ]
+    },
+    {
+      "id": "fallback-dmc-raemian-e-pyeonhansesang-201",
+      "model": "generic-corrections/fallback-dmc-raemian-e-pyeonhansesang-201.glb",
+      "sha256": "99b2c80240743ecb8726114a7e96fd2827a21f36dac7e2cf6181c9d49c647a9c",
+      "bytes": 11044,
+      "triangles": 128,
+      "bounds": {
+        "min": [
+          -73.80931854248047,
+          0.0,
+          62.54364013671875
+        ],
+        "max": [
+          -47.96820068359375,
+          30.0,
+          88.87035369873047
+        ]
+      },
+      "footprintIds": [
+        "368ec6bc-eb11-4c7b-8c2c-af718c8f6963"
+      ]
+    },
+    {
+      "id": "fallback-dmc-raemian-e-pyeonhansesang-202",
+      "model": "generic-corrections/fallback-dmc-raemian-e-pyeonhansesang-202.glb",
+      "sha256": "23e5882dc59b13159250a6c4812971e2cd02515453857a6f90459b704765ed11",
+      "bytes": 23172,
+      "triangles": 333,
+      "bounds": {
+        "min": [
+          -106.39082336425781,
+          0.0,
+          33.2335090637207
+        ],
+        "max": [
+          -70.44793701171875,
+          30.0,
+          83.84991455078125
+        ]
+      },
+      "footprintIds": [
+        "56e1f18a-d376-4f17-87fe-30c39573891e"
+      ]
+    }
+  ],
+  "sourceAuthoringReplay": {
+    "byteExact": true,
+    "sha256": "bb9702832fbda88c96b6e4e920c202dbf44f388855d2a263672413ce17d297c8",
+    "provenancePath": "docs/APARTMENT_400_PROVENANCE.json",
+    "frozenAssetProvenanceSha256": "e0897ad1bb4f61f95097de083d613512cccfb0eacd56c3b9a71626e79dc39107",
+    "authoringAnchor": [
+      126.9131574,
+      37.5765711
+    ],
+    "generator": "scripts/build_district_landmarks.py",
+    "generatorSha256": "35dce09a4a4c71a871d4d2e03a8d2ae32e68a5fd0701ce1a0be643ef7d0e4712",
+    "triangleRangesBySource": [
+      {
+        "sourceId": "17b7bcb3-9d24-4265-a1d2-e49ac3488f14",
+        "triangleRangesByMaterial": [
+          [
+            0,
+            170
+          ],
+          [
+            0,
+            884
+          ],
+          [
+            0,
+            81
+          ]
+        ]
+      },
+      {
+        "sourceId": "368ec6bc-eb11-4c7b-8c2c-af718c8f6963",
+        "triangleRangesByMaterial": [
+          [
+            170,
+            186
+          ],
+          [
+            884,
+            992
+          ],
+          [
+            81,
+            85
+          ]
+        ]
+      },
+      {
+        "sourceId": "509fe119-4e59-40b0-a923-7f6c6034e146",
+        "triangleRangesByMaterial": [
+          [
+            186,
+            202
+          ],
+          [
+            992,
+            1568
+          ],
+          [
+            85,
+            89
+          ]
+        ]
+      },
+      {
+        "sourceId": "56e1f18a-d376-4f17-87fe-30c39573891e",
+        "triangleRangesByMaterial": [
+          [
+            202,
+            258
+          ],
+          [
+            1568,
+            1820
+          ],
+          [
+            89,
+            114
+          ]
+        ]
+      },
+      {
+        "sourceId": "7a028084-ce71-4564-8a6a-f8e029728422",
+        "triangleRangesByMaterial": [
+          [
+            258,
+            418
+          ],
+          [
+            1820,
+            2840
+          ],
+          [
+            114,
+            188
+          ]
+        ]
+      },
+      {
+        "sourceId": "e5bf2ce7-7337-41f3-8418-aaaed2b1ac82",
+        "triangleRangesByMaterial": [
+          [
+            418,
+            458
+          ],
+          [
+            2840,
+            3350
+          ],
+          [
+            188,
+            204
+          ]
+        ]
+      }
+    ],
+    "rangeConvention": "Half-open [start,end) original indexed triangle ranges, one range per material; original vertex packing retains emission order."
+  }
+}
