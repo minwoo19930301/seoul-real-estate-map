@@ -1,0 +1,56 @@
+{
+  "sources": [
+    {
+      "url": "https://www.raemian.co.kr/sales/sub/s/onepentas?menuSeq=10051",
+      "observations": "Official numberedplan3:101east,102southeast,103southwest,104west; source rings matched by labels,relativepositions,and distinctarm shapes."
+    },
+    {
+      "url": "https://www.raemian.co.kr/sales/sub/s/onepentas?menuSeq=10072",
+      "observations": "Official unitfloorchart10116/29/32,10228/29,10328/30/31,10416/28/29/30. Penthouse merges do not prove fullringextra floor."
+    },
+    {
+      "url": "https://www.raemian.co.kr/community/times/style/view.do?seq=101",
+      "observations": "Completedphoto00 supports bridge diagonaltruss/bronzerails/landingcores; approved105/106 façade language used as representativeinference."
+    }
+  ],
+  "basis": "representative-photo-inference",
+  "inferredFromAssetIds": [
+    "bespoke-raemian-onepentas-105",
+    "bespoke-raemian-onepentas-106"
+  ],
+  "identity": {
+    "managementCode": "A10022556",
+    "households": 641,
+    "residentialBuildings": 6
+  },
+  "sourceImages": [
+    {
+      "file": "../raemian-onepentas/official-plan-3.jpg",
+      "sha256": "2e12f643ae043634c1c225c2f68b3841f167b3e00dab856edb3d14f26800df04"
+    },
+    {
+      "file": "../raemian-onepentas/official-unit-floors-1.jpg",
+      "sha256": "fb8fb25b4f8eb66a5ca92d51db6aaea124df873a103064cd8383b0906eb1cd6e"
+    },
+    {
+      "file": "../raemian-onepentas/official-photo-00.jpg",
+      "sha256": "ccb9b9408b359f201c1facca8e9d41da47dcbf413f93e56e88faa353693a3cbc"
+    },
+    {
+      "file": "../raemian-onepentas/source-106-face-map.png",
+      "sha256": "3333ab24bdb48b384e31dea070b4c463d3f23cc7b30737b054a477f574c1e5e7"
+    },
+    {
+      "file": "../raemian-onepentas/source-105-numbered-end-photo53.png",
+      "sha256": "2eafd9a989878b63eefc0f1e7a41cce8c193fde0d5e9907eb55263c27d9a802a"
+    }
+  ],
+  "uncertainties": [
+    "Façades use representative-photo-inference from reviewed105/106; these four towers are not independently matched face by face. Hidden façades and all nominal window/member dimensions uncertain.",
+    "Registered height datum not independently tied to roof or machinery. Internal unit-arm cuts and setback outlines are estimated within actual retained source polygons.",
+    "Skycommunity existence confirmed official numberedplan and completedphoto00. Lower datum96.55m and plan width/landing positions estimated;4.75m componentheight is registered, not proof of lower datum.",
+    "Bridge geometry owned only by101,102landing core owned by102. Bridge claims no extrafootprint. Shared legacyapt-a10022556 must be suppressed only when allfourreplacement assets load; individualfailure retains fallback.",
+    "No105/106 or neighboringFirstige126 ownership claimed."
+  ],
+  "noSourcePhotoTextures": true
+}

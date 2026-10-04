@@ -1,0 +1,330 @@
+{
+  "version": 1,
+  "sourceId": "apt-a13776508",
+  "sourceSha256": "25ce92589d5735e5ed311c96d2a805ac1ae71198510ec2cffead33cc8fadbb0c",
+  "sourceTriangles": 1732,
+  "sourceCoordinate": {
+    "lon": 126.99646845000001,
+    "lat": 37.50359995249322,
+    "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+    "confidence": "source_footprint_unsurveyed"
+  },
+  "sourceFootprints": [
+    {
+      "id": "e3069b86-ce0d-40bc-bae0-ce992d17b840",
+      "sourceName": "102",
+      "sourceHeightM": 34.0,
+      "localFootprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -30.84276756267696,
+              -17.01492403996984
+            ],
+            [
+              -28.122775462355023,
+              -9.400658771736534
+            ],
+            [
+              47.61310846271741,
+              -36.462501649673385
+            ],
+            [
+              44.893116362395475,
+              -44.06565970459118
+            ],
+            [
+              -30.84276756267696,
+              -17.01492403996984
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "02fc7e0f-5c24-41ce-9707-1c697a10762d",
+      "sourceName": "103동",
+      "sourceHeightM": 74.0,
+      "localFootprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.989341967682461,
+              47.483470698212884
+            ],
+            [
+              -12.897884617689904,
+              42.830341266101904
+            ],
+            [
+              -17.05735305648039,
+              51.68019046559224
+            ],
+            [
+              -9.144648764977015,
+              55.39823750678984
+            ],
+            [
+              -12.730092897162528,
+              63.045832029608526
+            ],
+            [
+              -2.3534996587118746,
+              67.92158731026026
+            ],
+            [
+              1.8236310666480715,
+              59.02722792552505
+            ],
+            [
+              9.859971361627688,
+              62.800931003606514
+            ],
+            [
+              14.33736095490347,
+              53.26091725488901
+            ],
+            [
+              9.824646788488774,
+              51.145860215551394
+            ],
+            [
+              13.984115227279261,
+              42.307142338935414
+            ],
+            [
+              2.070903074855534,
+              36.70779856836104
+            ],
+            [
+              -2.989341967682461,
+              47.483470698212884
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "02ce4ed4-d5a5-4972-8cbb-65493c52d1af",
+      "sourceName": "103",
+      "sourceHeightM": 34.0,
+      "localFootprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              55.4639947506002,
+              -47.51658293362488
+            ],
+            [
+              58.007363986482545,
+              -40.514549880688584
+            ],
+            [
+              114.15577233568806,
+              -60.930669089772394
+            ],
+            [
+              111.61240309855074,
+              -67.92158730801323
+            ],
+            [
+              55.4639947506002,
+              -47.51658293362488
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "9f08c45e-b1cc-40ae-b963-05e5968996ea",
+      "sourceName": "101",
+      "sourceHeightM": 34.0,
+      "localFootprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -114.15577233694306,
+              12.09513141870931
+            ],
+            [
+              -111.47993595241725,
+              19.83182116692307
+            ],
+            [
+              -57.12424967055948,
+              1.0967744556557542
+            ],
+            [
+              -59.79125491117305,
+              -6.651064693388309
+            ],
+            [
+              -114.15577233694306,
+              12.09513141870931
+            ]
+          ]
+        ]
+      }
+    }
+  ],
+  "triangleCountsByGroup": {
+    "apt-a13776508": 1160,
+    "fallback-prestige-103": 572
+  },
+  "groupFootprints": {
+    "apt-a13776508": [
+      "e3069b86-ce0d-40bc-bae0-ce992d17b840",
+      "02ce4ed4-d5a5-4972-8cbb-65493c52d1af",
+      "9f08c45e-b1cc-40ae-b963-05e5968996ea"
+    ],
+    "fallback-prestige-103": [
+      "02fc7e0f-5c24-41ce-9707-1c697a10762d"
+    ]
+  },
+  "vertexConnectedComponents": 714,
+  "crossGroupComponents": 0,
+  "ownershipToleranceM": 0.15,
+  "ownershipMethod": "Full source polygon first; otherwise a uniquely covering union of individual source convex hulls. Legacy roofplant shrinking about an interior point can leave concave footprint bounds; original geometry is preserved, not repaired. Vertex-connected components cannot cross groups. Byte-exact original authoring replay independently verifies the original source feature of every output triangle.",
+  "trianglesAssignedWithinUniqueSourceConvexHull": 0,
+  "maximumVertexDistanceOutsideSourceFootprintM": 0.04545705733339205,
+  "outputs": [
+    {
+      "id": "apt-a13776508",
+      "model": "generic-corrections/apt-a13776508.glb",
+      "sha256": "fcad7e4865ac555a9e2e4025b423444ec798e26fa5f64b7321510287c843b4bd",
+      "bytes": 75032,
+      "triangles": 1160,
+      "bounds": {
+        "min": [
+          -114.1550064086914,
+          0.0,
+          -67.92113494873047
+        ],
+        "max": [
+          114.1550064086914,
+          34.0,
+          19.831687927246094
+        ]
+      },
+      "footprintIds": [
+        "e3069b86-ce0d-40bc-bae0-ce992d17b840",
+        "02ce4ed4-d5a5-4972-8cbb-65493c52d1af",
+        "9f08c45e-b1cc-40ae-b963-05e5968996ea"
+      ]
+    },
+    {
+      "id": "fallback-prestige-103",
+      "model": "generic-corrections/fallback-prestige-103.glb",
+      "sha256": "818dbf51002859ffcc0fb9fccf21b65e0e722ff1c74abd7461b2b741ce459c1f",
+      "bytes": 36348,
+      "triangles": 572,
+      "bounds": {
+        "min": [
+          -17.057239532470703,
+          0.0,
+          36.70755386352539
+        ],
+        "max": [
+          14.337265014648438,
+          74.0,
+          67.92113494873047
+        ]
+      },
+      "footprintIds": [
+        "02fc7e0f-5c24-41ce-9707-1c697a10762d"
+      ]
+    }
+  ],
+  "limits": [
+    "Exact archived geometry partition only; all source heights and estimates remain unchanged. No residential or photo-completion credit.",
+    "Main compound contains21 residential towers and2 shopping buildings. The103 archive includes3 unrelated Banpo Prugio towers. Every non-Prestige source remains in a residual.",
+    "The original main-compound geometry has242 triangles requiring uniquely covering source convex hulls, up to12.293m outside concave boundaries. This inherited approximation is preserved, not repaired."
+  ],
+  "sourceAuthoringReplay": {
+    "byteExact": true,
+    "sha256": "25ce92589d5735e5ed311c96d2a805ac1ae71198510ec2cffead33cc8fadbb0c",
+    "provenancePath": "docs/APARTMENT_100_PROVENANCE.json",
+    "frozenAssetProvenanceSha256": "d0e72c181ad624aef6d9c6f2d67355d48804c8d28737bb38a4352936827e5583",
+    "authoringAnchor": [
+      126.9971987,
+      37.5040994
+    ],
+    "generator": "scripts/build_district_landmarks.py",
+    "generatorSha256": "35dce09a4a4c71a871d4d2e03a8d2ae32e68a5fd0701ce1a0be643ef7d0e4712",
+    "triangleRangesBySource": [
+      {
+        "sourceId": "02ce4ed4-d5a5-4972-8cbb-65493c52d1af",
+        "triangleRangesByMaterial": [
+          [
+            0,
+            16
+          ],
+          [
+            0,
+            352
+          ],
+          [
+            0,
+            4
+          ]
+        ]
+      },
+      {
+        "sourceId": "02fc7e0f-5c24-41ce-9707-1c697a10762d",
+        "triangleRangesByMaterial": [
+          [
+            16,
+            192
+          ],
+          [
+            352,
+            664
+          ],
+          [
+            4,
+            88
+          ]
+        ]
+      },
+      {
+        "sourceId": "9f08c45e-b1cc-40ae-b963-05e5968996ea",
+        "triangleRangesByMaterial": [
+          [
+            192,
+            208
+          ],
+          [
+            664,
+            1016
+          ],
+          [
+            88,
+            92
+          ]
+        ]
+      },
+      {
+        "sourceId": "e3069b86-ce0d-40bc-bae0-ce992d17b840",
+        "triangleRangesByMaterial": [
+          [
+            208,
+            224
+          ],
+          [
+            1016,
+            1412
+          ],
+          [
+            92,
+            96
+          ]
+        ]
+      }
+    ],
+    "rangeConvention": "Half-open [start,end) original indexed triangle ranges, one range per material; original vertex packing retains emission order."
+  }
+}
