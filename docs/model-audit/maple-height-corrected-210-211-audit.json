@@ -1,0 +1,34 @@
+{
+  "status": "metadata-only recommendation; existing geometry untouched",
+  "assets": [
+    {
+      "id": "bespoke-maple-xi-210",
+      "buildingFacts": {
+        "floors": 28,
+        "sourceHeightM": 89.75
+      },
+      "ClubCloudFacilityLevel": 29,
+      "geometryChanged": false
+    },
+    {
+      "id": "bespoke-maple-xi-211",
+      "buildingFacts": {
+        "floors": 28,
+        "sourceHeightM": 89.45
+      },
+      "ClubCloudFacilityLevel": 29,
+      "geometryChanged": false
+    }
+  ],
+  "conclusion": "Recipe intentionally places both separate rounded ClubCloud lounges at the same shared connector elevation, with distinct tower footprints, facade programs, canopy rings, and plant counts. Metadata-only correction of legal buildingFacts is justified; equal visual bounds are not evidence of equal legal heights. No metric geometry lowering justified by register alone. Lounge29F is distinct from 28F legal residential count.",
+  "evidence": {
+    "bodyTopM": 85.56,
+    "loungeBaseM": 85.56,
+    "loungeGlassTopM": 89.71,
+    "canopyReferenceM": 90.16,
+    "existingExportHeightM": 93.88,
+    "residentialFacadeRows": 26,
+    "baseFloorsInferred": 2,
+    "recipe": "scripts/bespoke/maple_club_cloud_blender.py"
+  }
+}

@@ -3,6 +3,13 @@ import { readFileSync, mkdirSync, writeFileSync } from 'node:fs';
 const manifest=JSON.parse(readFileSync('public/models/bespoke-manifest.json','utf8'));
 const numbers=[...Array.from({length:14},(_,i)=>101+i),...Array.from({length:15},(_,i)=>201+i)];
 for(const scenario of [
+  ...[208,209,212].flatMap(number=>[
+    {number,failed:[`bespoke-maple-xi-${number}-corrected`],wanted:`bespoke-maple-xi-${number}`},
+    {number,failed:[`bespoke-maple-xi-${number}-corrected`,`bespoke-maple-xi-${number}`],wanted:`maple-xi-${number}`},
+  ]),
+  ...[205,206].flatMap(number=>[{number,failed:[],wanted:`bespoke-maple-xi-${number}`},{number,failed:[`bespoke-maple-xi-${number}`],wanted:`maple-xi-${number}`}]),
+  {number:203,failed:[],wanted:'bespoke-maple-xi-203'},
+  {number:203,failed:['bespoke-maple-xi-203'],wanted:'maple-xi-203'},
   {number:214,failed:[],wanted:'bespoke-maple-xi-214'},
   {number:214,failed:['bespoke-maple-xi-214'],wanted:'maple-xi-214'},
   {number:215,failed:[],wanted:'bespoke-maple-xi-215'},
@@ -31,7 +38,7 @@ for(const scenario of [
   expect(towers).toHaveLength(29);
   for(const n of numbers)expect(towers.filter((m:any)=>new RegExp(`maple-xi-${n}(?:-corrected)?$`).test(m.id)),`exactly one visible${n}`).toHaveLength(1);
   expect(towers.some((m:any)=>m.id===wanted)).toBe(true);
-  for(const n of [208,209,210,211,212])expect(towers.some((m:any)=>m.id===`bespoke-maple-xi-${n}`)).toBe(true);
+  for(const n of [208,209,210,211,212])if(n!==scenario.number)expect(towers.some((m:any)=>m.id===`bespoke-maple-xi-${n}${[208,209,212].includes(n)?'-corrected':''}`)).toBe(true);
   for(const id of scenario.failed)expect(s.models.find((m:any)=>m.id===id)?.error).toBeTruthy();
   expect(s.models.filter((m:any)=>m.error&&!scenario.failed.includes(m.id))).toEqual([]);
   expect(s.models.filter((m:any)=>m.active).length).toBeLessThanOrEqual(32);

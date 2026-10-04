@@ -1,0 +1,51 @@
+{
+  "checkedOn": "2026-09-22",
+  "scope": "Local checks before PR upload; not merged or deployed",
+  "baselineCommit": "c32c39b9ee636716d5a101a8c815ac5c9a87d618",
+  "newPhysicalBuildings": 73,
+  "newRepresentatives": 2,
+  "newSharedCopies": 71,
+  "placementRevisionAssets": 4,
+  "bespokeAssetRecords": 592,
+  "node": {
+    "passed": 13827,
+    "failed": 0
+  },
+  "python": {
+    "validatedTests": 52,
+    "initialQueueRaceFailure": 1,
+    "queueRetestPassed": 18,
+    "queueRetestFailed": 0
+  },
+  "browser": {
+    "passedScenarios": 8,
+    "scenarios": [
+      "Trizium normal",
+      "Trizium shared GLB failure",
+      "Trizium shared and fallback failure",
+      "Eunma normal",
+      "Eunma shared GLB failure",
+      "Eunma shared and fallback failure to original heightless 2D footprint",
+      "Ricenz preserved residual neighbors",
+      "Parkrio201-204 new placements without old copies"
+    ],
+    "eunmaRawFallbackRetest": "Passed after asserting the actual heightless source primitive instead of expecting unsupported 3D"
+  },
+  "build": "passed",
+  "preservation": {
+    "baseline": "c32c39b9ee636716d5a101a8c815ac5c9a87d618",
+    "public/models/manifest.json": 13607,
+    "public/models/reference-manifest.json": 125,
+    "public/models/bespoke-manifest.json": 515,
+    "priorCorrections": 23,
+    "unchangedPriorGLBAndBlendFiles": 114394
+  },
+  "placementChecks": "shared-instance-placement-check.json",
+  "limitations": [
+    "Clones repeat representative body and facade patterns, not target concavity or per-floor details",
+    "Eunma42.7m is14 floors times3.05m estimated storey height",
+    "Body-plan placement checks do not certify ornamental projections",
+    "Trizium304 not mapped",
+    "Not all Seoul apartments completed"
+  ]
+}
