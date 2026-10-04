@@ -19,6 +19,7 @@ K-apt 서울 자료의 123코드에는 복수 주소 등에 따른 추가 147행
 | 관리코드 | 단지 | 상태 | 검증된 bespoke / 확인된 주거동 | 대표 외관 추정 동 |
 |---|---|---|---:|---:|
 | A10020557 | 메이플자이 | complete_residential_buildings | 29 / 29 | 18 |
+| A10021122 | 올림픽파크포레온 | partial | 82 / 85 | 82 |
 | A10022556 | 래미안 원펜타스 | complete_residential_buildings | 6 / 6 | 4 |
 | A10023043 | 래미안원베일리 | complete_residential_buildings | 23 / 23 | 22 |
 | A10023083 | 청량리역 롯데캐슬 SKY-L65 | complete_residential_buildings | 4 / 4 | 0 |
@@ -63,6 +64,7 @@ K-apt 서울 자료의 123코드에는 복수 주소 등에 따른 추가 147행
 | A13822004 | 잠실엘스아파트 | complete_residential_buildings | 72 / 72 | 72 |
 | A13822301 | 갤러리아팰리스 | complete_residential_buildings | 3 / 3 | 0 |
 | A13824006 | 잠실파크리오 | partial | 60 / 66 | 60 |
+| A14272304 | SK북한산시티아파트 | partial | 45 / 47 | 45 |
 | A15088614 | 롯데캐슬엠파이어 | complete_residential_buildings | 2 / 2 | 0 |
 | A15088915 | 롯데캐슬아이비 | complete_residential_buildings | 2 / 2 | 0 |
 | A15180705 | 관악드림타운 | partial | 31 / 44 | 30 |
