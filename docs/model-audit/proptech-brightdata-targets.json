@@ -1,0 +1,219 @@
+{
+  "createdAt": "2026-09-24",
+  "status": "target_plan_with_initial_five_kb_snapshots_delivered",
+  "collectionRoute": {
+    "provider": "Bright Data",
+    "product": "Web Unlocker REST API",
+    "serverSideEndpoint": "https://api.brightdata.com/request",
+    "inputSchema": {
+      "zone": "web_unlocker1",
+      "url": "<verified target URL>",
+      "format": "raw"
+    },
+    "auth": "Server-only active credential loaded on demand",
+    "execution": "No MCP installation or automatic scheduling. No direct target fetch fallback."
+  },
+  "excludedFields": [
+    "owner_personal_age",
+    "owner_personal_debt",
+    "owner_financial_pressure",
+    "negotiation_index",
+    "private_contact_data"
+  ],
+  "allowedFields": [
+    "complex_name",
+    "complex_code",
+    "listing_url",
+    "listing_title",
+    "listing_status",
+    "sale_price",
+    "jeonse_deposit",
+    "monthly_rent",
+    "address",
+    "dong",
+    "floor",
+    "area",
+    "rooms",
+    "bathrooms",
+    "heating",
+    "parking",
+    "management_fee",
+    "maintenance_fee_period",
+    "urgent_sale_label",
+    "owner_verified_label",
+    "listing_confirmed_at",
+    "source_observed_at"
+  ],
+  "targets": [
+    {
+      "complexName": "북가좌동 DMC래미안이편한세상",
+      "complexCode": "A12013003",
+      "priority": 1,
+      "site": "kbland.kr",
+      "verifiedLocalURL": "https://kbland.kr/c/22859",
+      "urlStatus": "verified against local raw HTML data/proptech-brightdata/kb-dmc.html: title DMC래미안이편한세상, KB URL c/22859",
+      "purpose": [
+        "aggregate complex facts",
+        "management fee",
+        "parking",
+        "heating",
+        "listing price spread",
+        "floor/dong premium"
+      ],
+      "sourceEvidence": "Local raw HTML contains title/address identity and og:url https://kbland.kr/c/22859. Official address is 수색로100.",
+      "fieldCaveat": "owner_verified_label, urgent_sale_label, and confirmed_at are requested only if visibly present in the public listing response; otherwise null/not_observed.",
+      "collectionURL": "https://kbland.kr/se/c/22859"
+    },
+    {
+      "complexName": "문정동 올림픽훼밀리타운",
+      "complexCode": "A13820201",
+      "priority": 2,
+      "site": "kbland.kr",
+      "verifiedLocalURL": "https://kbland.kr/c/1985",
+      "urlStatus": "verified against local raw HTML data/model-source/bespoke/olympic-family-town-minimal-research/kb-1985-raw.html",
+      "purpose": [
+        "aggregate complex facts",
+        "management fee",
+        "parking",
+        "heating",
+        "listing price spread",
+        "floor/dong premium"
+      ],
+      "sourceEvidence": "Local raw HTML title is 문정동 올림픽훼밀리타운 and og:url is https://kbland.kr/c/1985; address is 중대로24 / 문정동150.",
+      "fieldCaveat": "Do not merge Olympic Family Town with Olympic Athletes Village. Confirm page title/address before accepting records.",
+      "collectionURL": "https://kbland.kr/se/c/1985"
+    },
+    {
+      "complexName": "잠실동 잠실주공(5단지)",
+      "complexCode": "A13879102",
+      "priority": 3,
+      "site": "kbland.kr",
+      "verifiedLocalURL": "https://kbland.kr/c/2000",
+      "urlStatus": "verified against local raw HTML data/model-source/bespoke/jamsil-jugong5-research/kb-2000-raw.html",
+      "purpose": [
+        "aggregate complex facts",
+        "management fee",
+        "parking",
+        "heating",
+        "listing price spread",
+        "floor/dong premium"
+      ],
+      "sourceEvidence": "Local HTML title and og:url match 잠실동 잠실주공(5단지).",
+      "fieldCaveat": "Do not reuse this URL for Olympic Family Town.",
+      "collectionURL": "https://kbland.kr/se/c/2000"
+    },
+    {
+      "complexName": "Value Map target pages",
+      "complexCode": null,
+      "priority": 4,
+      "site": "valueupmap.com",
+      "verifiedLocalURL": null,
+      "urlStatus": "no complex-specific URL found in local evidence; discovery required by root before any call",
+      "purpose": [
+        "public aggregate transaction/listing context",
+        "redevelopment/public project figures when explicitly displayed"
+      ],
+      "fieldCaveat": "No owner-personal data. Do not fabricate a Value Map URL or dataset ID."
+    },
+    {
+      "complexName": "Doczip target pages",
+      "complexCode": null,
+      "priority": 5,
+      "site": "doczip.kr",
+      "verifiedLocalURL": null,
+      "urlStatus": "no complex-specific URL found in local evidence; discovery required by root before any call",
+      "purpose": [
+        "public property/building document aggregate fields only"
+      ],
+      "fieldCaveat": "Collect only publicly displayed complex/building facts; exclude private owner information."
+    },
+    {
+      "complexName": "Jaegaebal target pages",
+      "complexCode": null,
+      "priority": 6,
+      "site": "jaegaebal.com",
+      "verifiedLocalURL": null,
+      "urlStatus": "no complex-specific URL found in local evidence; discovery required by root before any call",
+      "purpose": [
+        "public redevelopment project status and aggregate figures"
+      ],
+      "fieldCaveat": "Treat project claims as source-specific; preserve observed date and page URL."
+    },
+    {
+      "complexName": "서울시 정비사업 pages",
+      "complexCode": null,
+      "priority": 7,
+      "site": "cleanup.seoul.go.kr",
+      "verifiedLocalURL": null,
+      "urlStatus": "no complex-specific URL found in local evidence; discovery required by root before any call",
+      "purpose": [
+        "official public redevelopment status, project phase, public aggregate figures"
+      ],
+      "fieldCaveat": "Prefer official project identifiers and observed status/date; no owner inference."
+    },
+    {
+      "complexName": "Naver Real Estate target pages",
+      "complexCode": null,
+      "priority": 8,
+      "site": "m.land.naver.com",
+      "verifiedLocalURL": null,
+      "urlStatus": "no complex-specific URL found in local evidence; root must provide verified listing/complex URLs",
+      "purpose": [
+        "listing price, dong/floor, area, rooms/bathrooms, heating, parking, public labels and observed confirmation date"
+      ],
+      "fieldCaveat": "Bright Data product documentation does not guarantee fixed fields named owner_verified, urgent_sale, or confirmed_at; record null/not_observed when absent."
+    },
+    {
+      "complexName": "고덕그라시움",
+      "complexCode": "A10025263",
+      "priority": 9,
+      "site": "kbland.kr",
+      "verifiedLocalURL": "https://kbland.kr/c/34391",
+      "urlStatus": "verified against local raw HTML data/model-source/bespoke/godeok-gracium-research/kb-34391-raw.html",
+      "purpose": [
+        "aggregate complex facts",
+        "management fee",
+        "parking",
+        "heating",
+        "listing price spread",
+        "floor/dong premium"
+      ],
+      "sourceEvidence": "Local raw HTML title and og:url match the complex page.",
+      "fieldCaveat": "Use only public aggregate/listing fields; owner-personal data excluded.",
+      "collectionURL": "https://kbland.kr/se/c/34391"
+    },
+    {
+      "complexName": "도곡렉슬",
+      "complexCode": "A13527203",
+      "priority": 10,
+      "site": "kbland.kr",
+      "verifiedLocalURL": "https://kbland.kr/c/13886",
+      "urlStatus": "verified against local raw HTML data/model-source/bespoke/dogok-rexls-research/kb-13886-raw.html",
+      "purpose": [
+        "aggregate complex facts",
+        "management fee",
+        "parking",
+        "heating",
+        "listing price spread",
+        "floor/dong premium"
+      ],
+      "sourceEvidence": "Local raw HTML title and og:url match the complex page.",
+      "fieldCaveat": "Use only public aggregate/listing fields; owner-personal data excluded.",
+      "collectionURL": "https://kbland.kr/se/c/13886"
+    }
+  ],
+  "verificationRules": [
+    "Before collection, verify page title, complex name, address, and complex code against an existing primary research record.",
+    "Keep page URL, listing URL, image URL, and photo object ID separate.",
+    "Do not treat Bright Data generic SERP or Unlocker output as structured Naver listing data without a custom extraction schema.",
+    "Store source-observed timestamp and raw field text for labels such as 집주인확인, 급매, and 확인일.",
+    "This is a target plan, not a claim that any target data has been collected or is complete."
+  ],
+  "officialDocs": [
+    "https://brightdata.com/products/web-scraper/naver-real-estate",
+    "https://docs.brightdata.com/datasets/scraper-studio/faqs",
+    "https://docs.brightdata.com/cn/api-reference/web-scraper-api/synchronous-requests",
+    "https://docs.brightdata.com/api-reference/web-scraper-api/management-apis/monitor-progress"
+  ],
+  "uploadReport": "proptech-brightdata-upload.json"
+}

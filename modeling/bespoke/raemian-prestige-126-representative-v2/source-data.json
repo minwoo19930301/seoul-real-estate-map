@@ -1,0 +1,357 @@
+{
+  "assetId": "bespoke-raemian-prestige-126",
+  "tower": "126동",
+  "anchor_lonlat": [
+    126.99444845000001,
+    37.5026281
+  ],
+  "footprint_id": "b21842a2-9832-4a21-bcc5-1c571f309556",
+  "source_row": {
+    "rowid": 217636,
+    "id": "b21842a2-9832-4a21-bcc5-1c571f309556",
+    "name": "126동",
+    "height_m": 65.0,
+    "min_height_m": null,
+    "num_floors": 23,
+    "footprint_area_m2": 320.3460372589395,
+    "is_apartment": 1,
+    "kind": "building",
+    "parent_id": null,
+    "has_parts": 0,
+    "extrude": 1,
+    "geometry_source": "OpenStreetMap",
+    "height_source": "OpenStreetMap",
+    "district_id": "5056ad90-b154-46b1-a3b1-88140d162432",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            126.994305,
+            37.5026117
+          ],
+          [
+            126.9943413,
+            37.5025143
+          ],
+          [
+            126.994623,
+            37.5025805
+          ],
+          [
+            126.9945876,
+            37.5026754
+          ],
+          [
+            126.9944794,
+            37.50265
+          ],
+          [
+            126.994465,
+            37.5026887
+          ],
+          [
+            126.9943864,
+            37.5026702
+          ],
+          [
+            126.9943999,
+            37.502634
+          ],
+          [
+            126.994305,
+            37.5026117
+          ]
+        ]
+      ]
+    },
+    "source_properties": {
+      "names": {
+        "primary": "126동",
+        "common": [
+          [
+            "ko",
+            "126동"
+          ]
+        ]
+      },
+      "sources": [
+        {
+          "property": "",
+          "dataset": "OpenStreetMap",
+          "license": "ODbL-1.0",
+          "record_id": "w412953591@4",
+          "update_time": "2025-09-17T10:37:00.000Z",
+          "provider": "osm",
+          "resource": "planet",
+          "version": "2026-08-02T00:00:00.000Z"
+        }
+      ],
+      "height": 65.0,
+      "is_underground": false,
+      "num_floors": 23,
+      "subtype": "residential",
+      "class": "apartments",
+      "has_parts": false,
+      "version": 2,
+      "bbox": {
+        "xmin": 126.99429321289062,
+        "xmax": 126.99463653564453,
+        "ymin": 37.50251388549805,
+        "ymax": 37.502689361572266
+      },
+      "min_height": null,
+      "feature_type": "building",
+      "_seoul": {
+        "district_id": "5056ad90-b154-46b1-a3b1-88140d162432",
+        "height_status": "source-reported-unverified",
+        "height_source_indices": [
+          0
+        ],
+        "boundary_crossing": false,
+        "original_geometry_valid": true
+      }
+    }
+  },
+  "register_row": {
+    "db": "data/model-source/residential-survey/register.sqlite",
+    "table": "reg",
+    "columns": [
+      "building_dong",
+      "id",
+      "district",
+      "dong",
+      "parcel_key",
+      "road_key",
+      "main_aux",
+      "main_use",
+      "other_use",
+      "floors",
+      "height",
+      "households",
+      "approval_year",
+      "roof",
+      "structure"
+    ],
+    "values": [
+      "126동",
+      "10231100193383",
+      "서초구",
+      "반포동",
+      "서초구|반포동|land|18|1",
+      "서초구|반포대로|275|0|지상",
+      "주건축물",
+      "공동주택",
+      "아파트",
+      23,
+      65.3,
+      44,
+      2009,
+      "(철근)콘크리트",
+      "철근콘크리트구조"
+    ]
+  },
+  "register_id": "10231100193383",
+  "official_height_m": 65.3,
+  "osm_height_m": 65,
+  "floors": 23,
+  "households": 44,
+  "geometry_m": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -12.668497746361265,
+          -1.8256479999783437
+        ],
+        [
+          -9.462736378473247,
+          -12.668216000129462
+        ],
+        [
+          15.415031588936186,
+          -5.2988320002265255
+        ],
+        [
+          12.288751908145725,
+          5.2654359998362565
+        ],
+        [
+          2.7332868955619984,
+          2.437908000014488
+        ],
+        [
+          1.4615799070211333,
+          6.745991999736702
+        ],
+        [
+          -5.479820740646927,
+          4.686571999399405
+        ],
+        [
+          -4.287595437948613,
+          0.6567879997655268
+        ],
+        [
+          -12.668497746361265,
+          -1.8256479999783437
+        ]
+      ]
+    ]
+  },
+  "rings_m": [
+    [
+      [
+        -12.668497746361265,
+        -1.8256479999783437
+      ],
+      [
+        -9.462736378473247,
+        -12.668216000129462
+      ],
+      [
+        15.415031588936186,
+        -5.2988320002265255
+      ],
+      [
+        12.288751908145725,
+        5.2654359998362565
+      ],
+      [
+        2.7332868955619984,
+        2.437908000014488
+      ],
+      [
+        1.4615799070211333,
+        6.745991999736702
+      ],
+      [
+        -5.479820740646927,
+        4.686571999399405
+      ],
+      [
+        -4.287595437948613,
+        0.6567879997655268
+      ]
+    ]
+  ],
+  "triangles_m": [
+    [
+      [
+        -4.287595437948613,
+        0.6567879997655268
+      ],
+      [
+        -5.479820740646927,
+        4.686571999399405
+      ],
+      [
+        1.4615799070211333,
+        6.745991999736702
+      ]
+    ],
+    [
+      [
+        2.7332868955619984,
+        2.437908000014488
+      ],
+      [
+        12.288751908145725,
+        5.2654359998362565
+      ],
+      [
+        15.415031588936186,
+        -5.2988320002265255
+      ]
+    ],
+    [
+      [
+        -4.287595437948613,
+        0.6567879997655268
+      ],
+      [
+        -9.462736378473247,
+        -12.668216000129462
+      ],
+      [
+        -12.668497746361265,
+        -1.8256479999783437
+      ]
+    ],
+    [
+      [
+        -4.287595437948613,
+        0.6567879997655268
+      ],
+      [
+        1.4615799070211333,
+        6.745991999736702
+      ],
+      [
+        2.7332868955619984,
+        2.437908000014488
+      ]
+    ],
+    [
+      [
+        -9.462736378473247,
+        -12.668216000129462
+      ],
+      [
+        2.7332868955619984,
+        2.437908000014488
+      ],
+      [
+        15.415031588936186,
+        -5.2988320002265255
+      ]
+    ],
+    [
+      [
+        -9.462736378473247,
+        -12.668216000129462
+      ],
+      [
+        -4.287595437948613,
+        0.6567879997655268
+      ],
+      [
+        2.7332868955619984,
+        2.437908000014488
+      ]
+    ]
+  ],
+  "roof_center": [
+    1.373036643293423,
+    -3.5622400001024346
+  ],
+  "roof_size": [
+    5,
+    3.5
+  ],
+  "membership_review": {
+    "reviewer": "root independent XML node reconstruction and local database polygon comparison",
+    "osmNamedBoundaryWay": 305066918,
+    "osmResponseSha256": "92bd57b4807960f86f2ca48cef56d5005c033cc844e0c6e34a7b2d866d1968c8",
+    "sourceId": "b21842a2-9832-4a21-bcc5-1c571f309556",
+    "fullFootprintCovered": true,
+    "intersectionAreaRatio": 1.0000000000000002,
+    "cadastralParcelConfirmation": false
+  },
+  "photos": [
+    {
+      "file": "images/kb-complex-25648-01.jpg",
+      "url": "https://file.kbland.kr/image/kbstar/land/img/alian/kms/complex/photo/objctidnfr/25648/MjU2NDgxMDAyMDAwMTcy.jpg",
+      "sha256": "e9488eb7df934b194c6ec766b80829078caa5f60572b461cca2148749c9847a0",
+      "evidence": "completed exterior; complex-level facade family; tower/orientation/photographer unknown"
+    },
+    {
+      "file": "images/kb-complex-25648-02.jpg",
+      "url": "https://file.kbland.kr/image/kbstar/land/img/alian/kms/complex/photo/objctidnfr/25648/MjU2NDgxMDAyMDAwMjcy.jpg",
+      "sha256": "44ee93afdaaccf041fa26e839dc0ad20d16a63972e6d65e9899f4adddadfe7d0",
+      "evidence": "completed exterior; complex-level facade family; tower/orientation/photographer unknown"
+    }
+  ],
+  "reference_scope": "Complex-photo-inference: KB photos identify complex but not126 or orientation. No facade ancestry copied from Acro.",
+  "height_policy": "Envelope65.3m from numbered register; OSM65m retained separately. Floor placement, crown and equipment proportions inferred."
+}

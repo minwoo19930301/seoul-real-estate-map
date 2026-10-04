@@ -1,0 +1,7 @@
+import bpy,pathlib,json,hashlib
+P=pathlib.Path(__file__).parent;D=json.loads((P/'source-data.json').read_text());old=bpy.context.scene;before={s.name:sorted(o.name for o in s.objects) for s in bpy.data.scenes};glb=P/'shinbanpo-xi-101.glb';sha=hashlib.sha256(glb.read_bytes()).hexdigest();assert sha=='5560473e7db4ea7d9834fbf4a3ae07df952f638e3064dce85eb0ae2a17f63c38';file=P/'shinbanpo-xi-101-authored.blend'
+with bpy.data.libraries.load(str(file),link=False) as (a,b):b.scenes=a.scenes
+s=b.scenes[0];assert s['source_id']==D['id'];s['supersedesAssetIds']=json.dumps(D['supersedesAssetIds']);s['binding_status']=D['binding_status'];s['current_owner_asset_ids']=json.dumps(D['current_owner_asset_ids']);bpy.data.libraries.write(str(file),{s},fake_user=True,compress=True);bpy.data.batch_remove(ids=list(s.objects));bpy.data.scenes.remove(s)
+with bpy.data.libraries.load(str(file),link=False) as (a,b):b.scenes=a.scenes
+s=b.scenes[0];assert json.loads(s['supersedesAssetIds'])==['fallback-shinbanpo-xi-101'];bpy.data.batch_remove(ids=list(s.objects));bpy.data.scenes.remove(s);assert before=={s.name:sorted(o.name for o in s.objects) for s in bpy.data.scenes} and bpy.context.scene==old and hashlib.sha256(glb.read_bytes()).hexdigest()==sha
+exec(compile((P/'check-standalone.py').read_text(),str(P/'check-standalone.py'),'exec'),{'__file__':str(P/'check-standalone.py')});print('Final singleton binding verified; GLB unchanged '+sha)
