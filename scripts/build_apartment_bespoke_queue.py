@@ -20,6 +20,11 @@ import sys
 import tempfile
 import os
 
+if __package__:
+    from .publish_bespoke_models import complex_photo_inference
+else:
+    from publish_bespoke_models import complex_photo_inference
+
 ROOT = Path(__file__).resolve().parents[1]
 AUDIT = Path('docs/model-audit')
 CLASSES = {'아파트', '주상복합', '도시형 생활주택(아파트)', '도시형 생활주택(주상복합)'}
@@ -182,8 +187,27 @@ def verify_asset(root, asset, published, building_identity=None):
     site = published.get('sites', {}).get(record.get('siteId'), {})
     review = site.get('review', {})
     errors = []
+    basis = record.get('modelingBasis', 'individual-photo-review')
+    if basis not in {'individual-photo-review', 'representative-photo-inference', 'complex-photo-inference'}:
+        errors.append('unknown_modeling_basis')
+    if basis == 'individual-photo-review' and (record.get('inferredFromPhotos') or record.get('inferredFrom')):
+        errors.append('undeclared_photo_inference')
     if review.get('status') != 'visually-reviewed' or not site.get('sources') or not review.get('comparisons'):
         errors.append('photo_comparison_review_missing')
+    if record.get('modelingBasis') == 'representative-photo-inference':
+        references = record.get('inferredFrom', [])
+        if not references or not record.get('inferenceScope') or asset['id'] not in review.get('inferenceApprovedAssets', []):
+            errors.append('representative_inference_review_missing')
+        for reference in references:
+            source_site = published.get('sites', {}).get(reference.get('siteId'), {})
+            if not any(p['id'] == reference.get('id') and p.get('sha256') == reference.get('sha256')
+                       for p in source_site.get('assets', [])):
+                errors.append('representative_source_proof_mismatch')
+    if basis == 'complex-photo-inference':
+        try:
+            complex_photo_inference({**record, 'id': asset['id']}, review, site.get('sources'))
+        except ValueError:
+            errors.append('complex_photo_inference_proof_mismatch')
     source_hash = record.get('sourceGlbSha256')
     # Publisher may rename the raw GLB to the public asset ID. Bind the source
     # hash through the explicit asset proof rather than assuming equal filenames.
@@ -264,8 +288,10 @@ def build(snapshot, coverage, bespoke, published, legacy, root):
             if a and c.get('photoReviewSiteId') != a.get('sourceRecord', {}).get('siteId'):
                 errors.append('building_photo_review_site_mismatch')
             buildings.append({**c, 'evidenceVerified': not errors, 'verificationErrors': errors,
+                              'modelingBasis': a.get('sourceRecord', {}).get('modelingBasis', 'individual-photo-review') if a else None,
                               'publishedSha256': a.get('sha256') if a else None})
         verified = sum(c['evidenceVerified'] for c in buildings)
+        inferred = sum(c['evidenceVerified'] and c['modelingBasis'] in {'representative-photo-inference', 'complex-photo-inference'} for c in buildings)
         expected = d.get('expectedResidentialBuildingCount')
         evidence_full = bool(expected and len(buildings) == expected and verified == expected)
         if eligibility != 'eligible':
@@ -285,7 +311,7 @@ def build(snapshot, coverage, bespoke, published, legacy, root):
             'physicalSiteId': d.get('physicalSiteId'), 'physicalSiteMappingStatus': 'reviewed_explicit' if d.get('physicalSiteId') else 'unresolved',
             'sameAddressManagementCodes': same_address, 'sameAddressMeaning': 'Review candidates only; never merged or summed automatically.',
             'modelStatus': status, 'expectedResidentialBuildingCount': expected,
-            'verifiedBespokeBuildingCount': verified, 'buildings': buildings,
+            'verifiedBespokeBuildingCount': verified, 'representativeInferredBuildingCount': inferred, 'buildings': buildings,
             'coverageBasis': {k: d[k] for k in ['photoCoverageBasis', 'buildingIdentitySource', 'limits', 'reviewReason'] if k in d},
             'legacyAssetIds': ['apt-' + code.lower()] if 'apt-' + code.lower() in legacy_ids else [],
             'legacyMeaning': 'Fallback/template inventory only; no visual completion credit.'})
@@ -297,6 +323,7 @@ def build(snapshot, coverage, bespoke, published, legacy, root):
         'eligibilityReviewManagementCodes': sum(r['eligibility'] == 'eligibility_review' for r in queue),
         'explicitNonApartmentExcludedCodes': sum(r['eligibility'] == 'scope_excluded' for r in queue),
         'completedManagementCodes': disposition['complete_residential_buildings'],
+        'representativeInferredBuildingCount': sum(r['representativeInferredBuildingCount'] for r in queue),
         'remainingEligibleManagementCodes': sum(r['eligibility'] == 'eligible' and r['modelStatus'] != 'complete_residential_buildings' for r in queue),
         'modelStatusCounts': dict(sorted(disposition.items())),
         'sourceEligibleUniqueCodes': {s: len({r['code'] for r in snapshot['records'] if r['sourceId'] == s and r['classification'] in CLASSES and (r['households'] or 0) >= 400}) for s in snapshot['sources']},
@@ -304,25 +331,26 @@ def build(snapshot, coverage, bespoke, published, legacy, root):
         'kaptExtraAddressRows': sum(v - 1 for v in kapt_counts.values()),
         'unknownUniquePhysicalSiteCount': None, 'sameAddressCandidateCodes': sum(bool(r['sameAddressManagementCodes']) for r in queue),
         'coordinatesUnresolvedEligible': sum(not r['location'].get('coordinate') for r in queue if r['eligibility'] == 'eligible'),
-        'scope': 'Official management-code scheduling inventory; completion means all explicitly identified residential buildings have verified individual Blender MCP/photo-review evidence. Shared podiums, landscape and unseen facades are not thereby certified. Not proof that all real Seoul complexes are registered.'}
+        'scope': 'Official management-code scheduling inventory; completion means all identified residential buildings have a published model, including shared copies whose representative has verified Blender MCP and visual-review evidence. Representative-photo inference is explicitly counted separately from individual photo review. Shared podiums, landscape and unseen facades are not thereby certified. Not proof that all real Seoul complexes are registered.'}
     return queue, summary
 
 
 def markdown(summary, queue):
     s = summary
     examples = [r for r in queue if r['buildings'] or r['code'] in {'A10023043', 'A10023188'}]
-    lines = ['# 서울 400세대 이상 아파트 개별 모델링 현황', '',
-        f"공식 자료 확인일: {s['checkedOn']}. `scripts/build_apartment_bespoke_queue.py`로 생성합니다. **대상 {s['eligibleManagementCodes']:,} 관리코드, 주거동 전체 검토 완료 {s['completedManagementCodes']:,}, 미완료 {s['remainingEligibleManagementCodes']:,}**입니다. 분류 보강 검토 {s['eligibilityReviewManagementCodes']}건과 명시적 비아파트 제외 {s['explicitNonApartmentExcludedCodes']}건은 큐에 별도로 남깁니다.", '',
+    lines = ['# 서울 400세대 이상 아파트 모델 적용 현황', '',
+        f"공식 자료 확인일: {s['checkedOn']}. `scripts/build_apartment_bespoke_queue.py`로 생성합니다. **대상 {s['eligibleManagementCodes']:,} 관리코드, 주거동 전체 적용 완료 {s['completedManagementCodes']:,}, 미완료 {s['remainingEligibleManagementCodes']:,}**입니다. 분류 보강 검토 {s['eligibilityReviewManagementCodes']}건과 명시적 비아파트 제외 {s['explicitNonApartmentExcludedCodes']}건은 큐에 별도로 남깁니다.", '',
         '## 모수와 중복', '',
         f"[서울시 OA-15818]({OA_URL}) 최신 전체 CSV {s['sources']['oa-15818']['rows']:,}행을 독립 Sheet totalCount와 대조했습니다. 400세대 이상 아파트 분류는 {s['sourceEligibleUniqueCodes']['oa-15818']:,}코드입니다. [국토교통부·K-apt 주간자료]({KAPT_URL}) {s['sources']['kapt-weekly']['extractDate']} 추출본은 전국 {s['sources']['kapt-weekly']['nationalRows']:,}행, 서울 {s['sources']['kapt-weekly']['rows']:,}행·고유 {s['kaptSeoulUniqueCodes']:,}코드이고 이 중 대상은 {s['sourceEligibleUniqueCodes']['kapt-weekly']:,}코드입니다. 두 자료의 관리코드 합집합이 대상 모수입니다.", '',
         f"K-apt 서울 자료의 {s['kaptRepeatedCodes']}코드에는 복수 주소 등에 따른 추가 {s['kaptExtraAddressRows']}행이 있습니다. 원본 행 번호와 값은 보존하지만 세대수를 합산하지 않습니다. 서로 다른 관리코드의 동일 주소도 자동으로 같은 단지로 합치지 않습니다. 동일 주소 검토 후보가 있는 큐 기록은 {s['sameAddressCandidateCodes']}개입니다. 실제 고유 단지 수는 아직 확정하지 않았습니다.", '',
         '어느 한 공식 아파트 분류 자료에서 400세대 이상이면 포함합니다. 출처 간 값이 다르거나 서울시 원본이 0이어도 덮어쓰지 않습니다. 메이플자이의 서울시 0/K-apt 3,307, 타워팰리스1차의 0/1,297은 각각 같은 관리코드의 두 근거로 남습니다. 원베일리는 이미 A10023043·2,990세대·23동으로 포함되어 있어 별도 신규 단지로 중복 추가하지 않습니다. 미분류 기록은 이름만으로 아파트로 확정하지 않습니다.', '',
         '## 완료 기준', '',
         '관리코드별 명시적인 주거동 목록, 동별 bespoke ID, 실제 사진·배치도 대조 기록, 검토된 원본 GLB SHA, 게시 GLB SHA, 편집 .blend SHA, 실제 MCP 실행 기록 SHA가 모두 일치해야 완료로 계산합니다. 기존 generic/reference 모델, 동일색·높은 삼각형 수, 파일 생성만으로 완료 처리하지 않습니다. 해시 불일치나 사라진 파일은 완료를 자동 해제합니다.', '',
-        '| 관리코드 | 단지 | 상태 | 검증된 bespoke / 확인된 주거동 |', '|---|---|---|---:|']
+        '2026-09-22 사용자 지시에 따라 대표 동의 사진 검토된 외관을 같은 단지의 다른 동에 적용할 수 있습니다. 단지별 대표 한 동만 제작·검토하고 나머지는 같은 메시·재질을 공유해 복제합니다. 기존 위치·방향과 전체 크기만 변환하며, 대표 동의 창문·층 패턴과 윤곽이 반복되어 실제 각 동과 다를 수 있습니다. 대표 모델 ID·해시와 추정 범위를 기록하고, 동별 사진 재현으로 집계하지 않습니다.', '',
+        '| 관리코드 | 단지 | 상태 | 검증된 bespoke / 확인된 주거동 | 대표 외관 추정 동 |', '|---|---|---|---:|---:|']
     for r in examples:
-        lines.append(f"| {r['code']} | {r['nameKo']} | {r['modelStatus']} | {r['verifiedBespokeBuildingCount']} / {r['expectedResidentialBuildingCount'] or '미확정'} |")
-    lines += ['', '타워팰리스·SKY-L65의 완료는 명시된 주거타워에 한정합니다. 공용 저층부·스포츠센터·조경까지 완공 모델이라는 뜻이 아닙니다. 메이플은 일부 사진 대조 개선만 되어 전체 29동 완료가 아닙니다. 하이페리온은 구조설계자의 배치도로 A/C가 아파트, B가 오피스텔임을 확인했습니다. 아파트 수는 A/C 두 동만 계산하며, 기존 높이와 2004년 구조자료의 최고높이 기준 대조가 남아 완료를 보류합니다.', '',
+        lines.append(f"| {r['code']} | {r['nameKo']} | {r['modelStatus']} | {r['verifiedBespokeBuildingCount']} / {r['expectedResidentialBuildingCount'] or '미확정'} | {r['representativeInferredBuildingCount']} |")
+    lines += ['', '타워팰리스·SKY-L65의 완료는 명시된 주거타워에 한정합니다. 공용 저층부·스포츠센터·조경까지 완공 모델이라는 뜻이 아닙니다. 메이플 주거29동에는 대표 외관 추정18동이 포함되며, 등록 높이와 장식·설비를 포함한 모델 높이는 별도로 기록합니다. 원베일리는 주거23동 중 검증된 동만 집계합니다. 하이페리온은 구조설계자의 배치도로 A/C가 아파트, B가 오피스텔임을 확인했습니다. 아파트 수는 A/C 두 동만 계산하며, 기존 높이와 2004년 구조자료의 최고높이 기준 대조가 남아 완료를 보류합니다.', '',
         '## 위치·자료 한계와 재현', '',
         f"대상 중 {s['coordinatesUnresolvedEligible']}코드는 이전 위치 감사의 해결 좌표가 없습니다. 해결된 좌표도 2026-09-10 당시 관리코드별 대표점이며 건물별 위치·현재 서울 경계 검증을 대신하지 않습니다. 제작 단계에서 원본 건물 윤곽·공식 배치도·동 번호를 별도 확인해야 합니다. 코드와 실제 단지의 대응은 검토된 경우에만 `physicalSiteId`에 기록합니다.", '',
         'K-apt는 주간 참고 추출물이며 실시간 자료가 아닙니다. 갱신일은 개별 행의 최신성이나 서울 모든 실제 단지의 수록을 보장하지 않습니다. 큐는 대상 확정과 완료 추적을 위한 것으로 도시 전체 모델링 완료 보고가 아닙니다.', '',

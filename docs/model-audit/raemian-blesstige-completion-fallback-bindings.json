@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "sourceIdentity": "docs/model-audit/raemian-blesstige-completion-new-source-identity.json",
+  "bindings": [
+    {
+      "number": 201,
+      "sourceFootprintId": "2acd0fd6-44dc-42c4-a6b1-f6a3c3fca58b",
+      "fallbackAssetId": "fallback-raemian-blesstige-completion-201",
+      "supersedes": [
+        "fallback-raemian-blesstige-completion-201"
+      ],
+      "fallbackModel": "generic-corrections/fallback-raemian-blesstige-completion-201.glb",
+      "fallbackSha256": "554b228728d262c23599fd1131894e2b401066effe2b97864493be327400e8d2"
+    },
+    {
+      "number": 219,
+      "sourceFootprintId": "0e5c65ff-d5da-4c7a-bffd-fa6b92e5403a",
+      "fallbackAssetId": "fallback-raemian-blesstige-completion-219",
+      "supersedes": [
+        "fallback-raemian-blesstige-completion-219"
+      ],
+      "fallbackModel": "generic-corrections/fallback-raemian-blesstige-completion-219.glb",
+      "fallbackSha256": "30d5f8dd3c240bed83e9e3d007ba345903d008ba06e6a85f74f8c6032618ae35"
+    }
+  ],
+  "limits": [
+    "Independent existing fallbacks only; model completion and photo review are separate."
+  ],
+  "jointSplitAudit": "docs/model-audit/five-boundary-completion-generic-split.json"
+}

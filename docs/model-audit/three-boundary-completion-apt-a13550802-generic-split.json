@@ -1,0 +1,123 @@
+{
+  "version": 1,
+  "sourceId": "apt-a13550802",
+  "sourceSha256": "6a67f19b2203687b9b209cc1e010af071d9173e19254b120e53ef68e0807dd11",
+  "sourceTriangles": 1545,
+  "sourceCoordinate": {
+    "lon": 127.0496063,
+    "lat": 37.518042900577974,
+    "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+    "confidence": "source_footprint_unsurveyed"
+  },
+  "groupFootprints": {
+    "fallback-raemian-la-classy-completion-103": [
+      "01a1be7e-8f72-4a0a-bc2b-76edd8ebe5b5"
+    ],
+    "fallback-raemian-la-classy-completion-107": [
+      "e795d69c-2b8e-4aa3-acb7-fc1e65c6f888"
+    ]
+  },
+  "ownershipMethod": "Original source-emission indices from byte-exact authoring replay; overlapping historical plans cannot change ownership. Byte-exact archived authoring replay and per-source triangle-signature multiplicity independently checked.",
+  "legacyTrianglesOutsideSourcePolygonInsideItsHull": 0,
+  "legacyTrianglesOutsideSourceConvexHull": 0,
+  "limits": [
+    "Only archived indexed triangles, material attributes and terrain anchors are partitioned; no photo-modeling credit.",
+    "Add19 identified buildings acrossthreecomplexes using their published single representative. All priorpublishedmodels retained; residual fallback files repartitioned only with independent triangle provenance.",
+    "All unnamed, unmatched and unrelated source buildings remain in unchanged-shape residuals. Original convex-hull approximations remain archived."
+  ],
+  "outputs": [
+    {
+      "id": "fallback-raemian-la-classy-completion-103",
+      "model": "generic-corrections/fallback-raemian-la-classy-completion-103.glb",
+      "sha256": "1c32a8a843d1479b6dc8632b9d055cbf3338304e8d407e131a7cc3b48d90b86d",
+      "bytes": 44696,
+      "triangles": 712,
+      "bounds": {
+        "min": [
+          14.965980529785156,
+          0.0,
+          -1.6252100467681885
+        ],
+        "max": [
+          46.91989517211914,
+          105.0,
+          32.69472885131836
+        ]
+      },
+      "footprintIds": [
+        "01a1be7e-8f72-4a0a-bc2b-76edd8ebe5b5"
+      ]
+    },
+    {
+      "id": "fallback-raemian-la-classy-completion-107",
+      "model": "generic-corrections/fallback-raemian-la-classy-completion-107.glb",
+      "sha256": "f08e0586a8375445bb147616523b3e678f5f25e02f50ea36a7f5972e48b732a3",
+      "bytes": 51444,
+      "triangles": 833,
+      "bounds": {
+        "min": [
+          -46.91989517211914,
+          0.0,
+          -32.69472885131836
+        ],
+        "max": [
+          1.465694785118103,
+          86.0,
+          -3.194824695587158
+        ]
+      },
+      "footprintIds": [
+        "e795d69c-2b8e-4aa3-acb7-fc1e65c6f888"
+      ]
+    }
+  ],
+  "sourceAuthoringReplay": {
+    "byteExact": true,
+    "sha256": "6a67f19b2203687b9b209cc1e010af071d9173e19254b120e53ef68e0807dd11",
+    "provenancePath": "docs/APARTMENT_100_PROVENANCE.json",
+    "frozenAssetProvenanceSha256": "2fa9769e5b5fcbb43e114aaf4a72eb4164be9f4f00b7fdb36c914382e24d3c08",
+    "authoringAnchor": [
+      127.0500484,
+      37.5175999
+    ],
+    "generator": "scripts/build_district_landmarks.py",
+    "generatorSha256": "35dce09a4a4c71a871d4d2e03a8d2ae32e68a5fd0701ce1a0be643ef7d0e4712",
+    "triangleRangesBySource": [
+      {
+        "sourceId": "01a1be7e-8f72-4a0a-bc2b-76edd8ebe5b5",
+        "triangleRangesByMaterial": [
+          [
+            0,
+            206
+          ],
+          [
+            0,
+            408
+          ],
+          [
+            0,
+            98
+          ]
+        ]
+      },
+      {
+        "sourceId": "e795d69c-2b8e-4aa3-acb7-fc1e65c6f888",
+        "triangleRangesByMaterial": [
+          [
+            206,
+            466
+          ],
+          [
+            408,
+            856
+          ],
+          [
+            98,
+            223
+          ]
+        ]
+      }
+    ],
+    "rangeConvention": "Half-open [start,end) original indexed triangle ranges, one range per material; original vertex packing retains emission order."
+  }
+}
