@@ -1,0 +1,46 @@
+{
+  "checkedOn": "2026-09-22",
+  "baselineCommit": "2e90d55b02e2e4edba726da7ccdf9b18d780803e",
+  "newPhysicalBuildings": 49,
+  "newRepresentatives": 2,
+  "newSharedCopies": 47,
+  "bespokeAssetRecords": 887,
+  "currentSharedCopies": 444,
+  "node": {
+    "passed": 13875,
+    "failed": 0
+  },
+  "python": {
+    "passed": 57,
+    "failed": 0
+  },
+  "browser": {
+    "passed": 6,
+    "scope": "Both complexes: normal, shared GLB404, shared GLB and one fallback404. Geometry/material reuse, one file fetch and source fallback recovery verified."
+  },
+  "build": "passed",
+  "buildWarning": "generic-corrections chunk2910.64KB uncompressed and219.46KB gzip exceeds1800KB threshold",
+  "preservation": {
+    "baseline": "2e90d55b02e2e4edba726da7ccdf9b18d780803e",
+    "public/models/manifest.json": 13607,
+    "public/models/reference-manifest.json": 125,
+    "public/models/bespoke-manifest.json": 838,
+    "priorCorrections": 46,
+    "unchangedPriorGLBAndBlendFiles": 114702
+  },
+  "placements": "shared-instance-placement-check.json",
+  "placementAdjustment": "mapo-grang-xi-placement-adjustment.json",
+  "sourcePartitions": {
+    "trianglesPreserved": 61489,
+    "residualSourcesPreserved": 8,
+    "bindingSources": 49
+  },
+  "limitations": [
+    "Mapo Raemian Prugio34/51 and Mapo Grang Xi15/18 are partial.",
+    "404number visible in original Prugio photo; Grang110number not established. Compass faces and hidden facades inferred.",
+    "Shared copies repeat representative shape and floor pattern, with placement/size transforms.",
+    "Grang101/102 horizontal transforms reduced2.5percent to remove body intersections before initial publication.",
+    "Placement scope covers current same-complex source body plans and copied body plans, not every neighbor or ornament projection."
+  ],
+  "publication": "PR upload only; no merge or deployment"
+}

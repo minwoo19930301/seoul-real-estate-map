@@ -1,0 +1,127 @@
+{
+  "file": "/Users/hyemini/Documents/Codex/2026-09-21/seoul-real-estate-map/data/model-source/bespoke/acro-source-parts-100-104-109-corrected/109/bespoke-acro-riverpark-109-corrected.glb",
+  "sha256": "02a998b794f77a1389c83d4a8677b133238db1313fcc6387f9d5e7c6fdaa0f49",
+  "triangleCount": 95836,
+  "boundaryToleranceM": 0.6,
+  "heightToleranceM": 0.02,
+  "roofBandM": 2.5,
+  "regions": [
+    {
+      "id": "region-0",
+      "heightM": 128.52631578947367,
+      "areaM2": 118.70523779279202,
+      "interiorAreaM2": 91.51361909606199,
+      "overHeightTriangles": 0,
+      "exampleTriangleIndices": [],
+      "uncoveredNearRoofAreaM2": 1.1836174837849828e-15,
+      "roofCoverageRatio": 1.0
+    },
+    {
+      "id": "region-1",
+      "heightM": 128.52631578947367,
+      "areaM2": 34.18234421473652,
+      "interiorAreaM2": 18.390644894054173,
+      "overHeightTriangles": 0,
+      "exampleTriangleIndices": [],
+      "uncoveredNearRoofAreaM2": 0.0,
+      "roofCoverageRatio": 1.0
+    },
+    {
+      "id": "region-2",
+      "heightM": 128.52631578947367,
+      "areaM2": 14.460717464144285,
+      "interiorAreaM2": 3.9973311437947077,
+      "overHeightTriangles": 0,
+      "exampleTriangleIndices": [],
+      "uncoveredNearRoofAreaM2": 0.0,
+      "roofCoverageRatio": 1.0
+    },
+    {
+      "id": "region-3",
+      "heightM": 128.52631578947367,
+      "areaM2": 46.360018159250544,
+      "interiorAreaM2": 31.204931118772357,
+      "overHeightTriangles": 0,
+      "exampleTriangleIndices": [],
+      "uncoveredNearRoofAreaM2": 0.0,
+      "roofCoverageRatio": 1.0
+    },
+    {
+      "id": "region-4",
+      "heightM": 132.0,
+      "areaM2": 684.4777611472729,
+      "interiorAreaM2": 611.7595523313787,
+      "overHeightTriangles": 0,
+      "exampleTriangleIndices": [],
+      "uncoveredNearRoofAreaM2": 0.0,
+      "roofCoverageRatio": 1.0
+    }
+  ],
+  "passed": true,
+  "boundaryAllowanceBasis": "Maximum facade sill projection .53m plus .065m half thickness = .595m; .005m numeric margin. Higher adjacent facade details can occupy this boundary strip; the region interior must have no over-height triangles. Roof cap coverage checked separately at .03m inset.",
+  "strictRoofCoverage": [
+    {
+      "id": "region-0",
+      "roofCoverageRatio": 1.0,
+      "uncoveredAreaM2": 2.682580331702269e-15
+    },
+    {
+      "id": "region-1",
+      "roofCoverageRatio": 1.0,
+      "uncoveredAreaM2": 0.0
+    },
+    {
+      "id": "region-2",
+      "roofCoverageRatio": 1.0,
+      "uncoveredAreaM2": 2.4172586105895726e-16
+    },
+    {
+      "id": "region-3",
+      "roofCoverageRatio": 1.0,
+      "uncoveredAreaM2": 0.0
+    },
+    {
+      "id": "region-4",
+      "roofCoverageRatio": 1.0,
+      "uncoveredAreaM2": 0.0
+    }
+  ],
+  "tower": "109",
+  "sourceChecks": [
+    {
+      "sourceId": "30613063-6262-3030-B637-633765333061",
+      "sourceGeometryDifferenceM2": 3.709117884863897e-14,
+      "floors": 37,
+      "heightMEstimate": 128.52631578947367
+    },
+    {
+      "sourceId": "35623639-3332-3563-B631-313335333762",
+      "sourceGeometryDifferenceM2": 5.172193340492481e-15,
+      "floors": 37,
+      "heightMEstimate": 128.52631578947367
+    },
+    {
+      "sourceId": "39666165-6538-3334-B536-323331383530",
+      "sourceGeometryDifferenceM2": 0.0,
+      "floors": 37,
+      "heightMEstimate": 128.52631578947367
+    },
+    {
+      "sourceId": "66306163-6539-3437-B664-383335393837",
+      "sourceGeometryDifferenceM2": 0.0,
+      "floors": 37,
+      "heightMEstimate": 128.52631578947367
+    },
+    {
+      "sourceId": "parent-remainder",
+      "sourceGeometryDifferenceM2": 2.3259666192863835e-14,
+      "floors": 38,
+      "heightMEstimate": 132.0
+    }
+  ],
+  "gradeUnionDifferenceM2": 3.702700416634918e-05,
+  "referenceParentHeightM": 132.0,
+  "referenceParentHeightBasis": "Unverified OSM estimate; child metres derived proportionally from source floor counts; no independent measured child metre height",
+  "officialFloors": 38,
+  "osmParentFloors": 38
+}
