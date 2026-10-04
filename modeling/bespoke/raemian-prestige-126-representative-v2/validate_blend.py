@@ -1,0 +1,5 @@
+import bpy,json,pathlib
+P=pathlib.Path(__file__).parent;d=json.loads((P/'source-data.json').read_text());old=bpy.context.scene
+with bpy.data.libraries.load(str(P/(d['assetId']+'-authored.blend')),link=False) as (a,b):
+ assert len(a.scenes)==1;b.scenes=a.scenes
+s=b.scenes[0];meshes=[o for o in s.objects if o.type=='MESH'];vs=[v.co for o in meshes for v in o.data.vertices];images=sum(1 for o in meshes for m in o.data.materials for nd in m.node_tree.nodes if nd.type=='TEX_IMAGE');r={'scenes_in_blend':1,'objects':len(s.objects),'mesh_objects':len(meshes),'image_nodes':images,'min_z':min(v.z for v in vs),'max_z':max(v.z for v in vs),'anchor_lonlat':list(s['anchor_lonlat']),'footprint_id':s['footprint_id'],'register_id':s['register_id'],'prior_scene':old.name,'original_scene_active':bpy.context.scene==old};assert len(meshes)==8 and images==0 and r['min_z']==0 and abs(r['max_z']-65.3)<1e-4 and r['original_scene_active'];r['passed']=True;(P/'standalone-validation.json').write_text(json.dumps(r,indent=2));bpy.data.scenes.remove(s);print(json.dumps(r))

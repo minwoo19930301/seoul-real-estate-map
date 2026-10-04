@@ -1,0 +1,47 @@
+{
+  "checkedOn": "2026-09-22",
+  "baselineCommit": "d1be189779045b17e84cc91819fb6184ea2b69cc",
+  "newPhysicalBuildings": 23,
+  "newRepresentatives": 0,
+  "newSharedCopies": 23,
+  "bespokeAssetRecords": 910,
+  "currentSharedCopies": 467,
+  "node": {
+    "passed": 13886,
+    "failed": 0
+  },
+  "python": {
+    "passed": 68,
+    "failed": 0
+  },
+  "browser": {
+    "passed": 6,
+    "scope": "Both complexes after residual-priority fix: normal, shared GLB404, shared GLB and one fallback404. Same geometry/material and one file fetch verified; Banpo single copy directly compared to representative UUIDs."
+  },
+  "build": "passed",
+  "buildWarning": "generic-corrections chunk2969.56KB uncompressed and225.61KB gzip exceeds1800KB threshold",
+  "preservation": {
+    "baseline": "d1be189779045b17e84cc91819fb6184ea2b69cc",
+    "public/models/manifest.json": 13607,
+    "public/models/reference-manifest.json": 125,
+    "public/models/bespoke-manifest.json": 887,
+    "priorCorrections": 48,
+    "unchangedPriorGLBAndBlendFiles": 114757
+  },
+  "placements": "shared-instance-placement-check.json",
+  "sourcePartitions": {
+    "trianglesPreserved": 24214,
+    "residualSourcesPreserved": 47,
+    "bindingSources": 22,
+    "previousResidualRepartitioned": true
+  },
+  "limitations": [
+    "Banpo103 has unresolved registered57.7m/27floor conflict. Existing visible fallback measured82.35m is explicitly preserved as an estimate, not certified height.",
+    "DMC61 and Banpo44 positions are covered; other complexes and Seoul overall remain incomplete.",
+    "Copies repeat representative geometry, materials and floor patterns; only transforms differ.",
+    "Named OSM boundary is community mapping, not cadastral survey; prior DMC302 remains slightly across the boundary.",
+    "Current same-complex body plans checked; ornaments and all external neighbors are not certified."
+  ],
+  "runtimeFix": "Retain searchable residual priority after repeated renamed repartition using runtime-only ancestry; preserve public correction documents. Regression covers48resident budget and representative failure.",
+  "publication": "PR only; no merge or deployment"
+}

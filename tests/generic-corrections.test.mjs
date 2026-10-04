@@ -88,6 +88,62 @@ test('invalid source hashes, overlap, omitted neighbors, unsafe paths and refere
   }
   assert.equal(JSON.stringify({base,matches}),before);
 });
+function completePartition() {
+  const document={version:1,corrections:[structuredClone(correction.corrections.find(c=>c.sourceId===source.id))]};
+  const residual=document.corrections[0].assets.find(a=>a.id===source.id);
+  residual.id='fallback-caelitus-retained-neighbors';
+  residual.model='generic-corrections/fallback-caelitus-retained-neighbors.glb';
+  return document;
+}
+test('complete valid partition removes the original effective asset and ownership only after exact coverage',()=>{
+  const document=completePartition(),before=structuredClone({base,matches,document});
+  const result=applyGenericCorrections(base.assets,matches,document);
+  assert.equal(result.assets.some(a=>a.id===source.id),false);
+  assert.equal(Object.hasOwn(result.matches,source.id),false);
+  assert.equal(result.assets.length,base.assets.length+document.corrections[0].assets.length-1);
+  for(const part of document.corrections[0].assets){
+    assert.equal(result.assets.find(a=>a.id===part.id),part);
+    assert.deepEqual(result.matches[part.id],part.footprintIds);
+  }
+  for(const id of matches[source.id])assert.equal(Object.values(result.matches).filter(ids=>ids.includes(id)).length,1);
+  assert.deepEqual({base,matches,document},before,'Archived catalog, matches and correction inputs remain untouched');
+});
+test('complete partition with missing or duplicate ownership fails closed without removing source inputs',()=>{
+  for(const corrupt of [
+    c=>c.assets[0].footprintIds.pop(),
+    c=>c.assets[0].footprintIds.push(c.assets[1].footprintIds[0]),
+    c=>c.assets[0].footprintIds.splice(0,1,c.assets[1].footprintIds[0]),
+    c=>c.assets[1].id=c.assets[0].id,
+  ]){
+    const document=completePartition();corrupt(document.corrections[0]);
+    const before=structuredClone({base,matches,document});
+    assert.throws(()=>applyGenericCorrections(base.assets,matches,document),/exactly partition original ownership/);
+    assert.deepEqual({base,matches,document},before);
+    assert.equal(base.assets.find(a=>a.id===source.id),source);
+    assert.equal(matches[source.id].length,7);
+  }
+});
+test('explicit second partition uses current hash/ownership and new IDs while preserving prior records',()=>{
+  const first=structuredClone(correction.corrections.find(c=>c.sourceId===source.id));
+  const residual=first.assets.find(a=>a.id===source.id);
+  const second={kind:'repartition',sourceId:residual.id,sourceSha256:residual.sha256,sourceFootprintIds:[...residual.footprintIds],assets:[
+    {...structuredClone(residual),id:'next-first',model:'generic-corrections/next-first.glb',footprintIds:residual.footprintIds.slice(0,1)},
+    {...structuredClone(residual),id:'next-rest',model:'generic-corrections/next-rest.glb',footprintIds:residual.footprintIds.slice(1)},
+  ]};
+  const document={version:1,corrections:[first,second]},before=structuredClone({base,matches,document});
+  const result=applyGenericCorrections(base.assets,matches,document);
+  assert.ok(!result.assets.some(a=>a.id===source.id));assert.ok(!Object.hasOwn(result.matches,source.id));
+  for(const fid of matches[source.id])assert.equal(Object.values(result.matches).filter(ids=>ids.includes(fid)).length,1);
+  assert.deepEqual({base,matches,document},before);
+  for(const corrupt of [
+    d=>delete d.corrections[1].kind,
+    d=>d.corrections[1].sourceSha256=source.sha256,
+    d=>d.corrections[1].sourceFootprintIds=[...matches[source.id]],
+    d=>d.corrections[1].assets[0].id=source.id,
+    d=>d.corrections[1].assets[0].footprintIds.push(fp),
+    d=>d.corrections.reverse(),
+  ]){const bad=structuredClone(document);corrupt(bad);assert.throws(()=>applyGenericCorrections(base.assets,matches,bad));}
+});
 const frame={defaultProjectionData:{mainMatrix:new THREE.Matrix4().elements},shaderData:{variantName:'mercator'}};
 function harness(state,neighborFailed=false) {
   const replacement={...parts[1],id:'bespoke-raemian-caelitus-101',quality:'reference',supersedes:['fallback-caelitus-101']};

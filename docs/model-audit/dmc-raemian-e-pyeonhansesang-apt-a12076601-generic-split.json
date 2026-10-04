@@ -1,0 +1,123 @@
+{
+  "version": 1,
+  "sourceId": "apt-a12076601",
+  "sourceSha256": "fe8f41faaf48169f1ae260df07c660a34311ebd0ff1a586cc6b7e57bdeda4857",
+  "sourceTriangles": 1131,
+  "sourceCoordinate": {
+    "lon": 126.91176715144196,
+    "lat": 37.576469393267814,
+    "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+    "confidence": "source_footprint_unsurveyed"
+  },
+  "groupFootprints": {
+    "apt-a12076601": [
+      "b4ab82a2-43a9-43dc-959f-4c259acc1946"
+    ],
+    "fallback-dmc-raemian-e-pyeonhansesang-203": [
+      "34764250-d925-4b33-8990-6aa7c925aee5"
+    ]
+  },
+  "ownershipMethod": "Original source-emission indices from byte-exact authoring replay; overlapping historical plans cannot change ownership. Byte-exact archived authoring replay and per-source triangle-signature multiplicity independently checked.",
+  "legacyTrianglesOutsideSourcePolygonInsideItsHull": 18,
+  "legacyTrianglesOutsideSourceConvexHull": 0,
+  "limits": [
+    "Only archived indexed triangles, material attributes and terrain anchors are partitioned; no photo-modeling credit.",
+    "One photographed representative plus shared copies. Preserve unrelated source triangles and previous models.",
+    "All unnamed, unmatched and unrelated source buildings remain in unchanged-shape residuals. Original convex-hull approximations remain archived."
+  ],
+  "outputs": [
+    {
+      "id": "apt-a12076601",
+      "model": "generic-corrections/apt-a12076601.glb",
+      "sha256": "7eea6fb087b05c8bae818c66cd588b281444c5c9f2859e591dd0887482287cb8",
+      "bytes": 52688,
+      "triangles": 835,
+      "bounds": {
+        "min": [
+          7.556230068206787,
+          0.0,
+          -58.641868591308594
+        ],
+        "max": [
+          53.30110549926758,
+          49.0,
+          -19.462194442749023
+        ]
+      },
+      "footprintIds": [
+        "b4ab82a2-43a9-43dc-959f-4c259acc1946"
+      ]
+    },
+    {
+      "id": "fallback-dmc-raemian-e-pyeonhansesang-203",
+      "model": "generic-corrections/fallback-dmc-raemian-e-pyeonhansesang-203.glb",
+      "sha256": "6509b8e7db84cd25d86fe35b89e45ffe466b0f65c143a5c1468fd8a868cc0979",
+      "bytes": 20940,
+      "triangles": 296,
+      "bounds": {
+        "min": [
+          -53.30110549926758,
+          0.0,
+          23.854867935180664
+        ],
+        "max": [
+          -11.050276756286621,
+          30.0,
+          58.641868591308594
+        ]
+      },
+      "footprintIds": [
+        "34764250-d925-4b33-8990-6aa7c925aee5"
+      ]
+    }
+  ],
+  "sourceAuthoringReplay": {
+    "byteExact": true,
+    "sha256": "fe8f41faaf48169f1ae260df07c660a34311ebd0ff1a586cc6b7e57bdeda4857",
+    "provenancePath": "docs/APARTMENT_100_PROVENANCE.json",
+    "frozenAssetProvenanceSha256": "80339efc73290660033b2f522fb8954edc4af4811fb5738e56abc423995f1ef8",
+    "authoringAnchor": [
+      126.9121106,
+      37.5768267
+    ],
+    "generator": "scripts/build_district_landmarks.py",
+    "generatorSha256": "35dce09a4a4c71a871d4d2e03a8d2ae32e68a5fd0701ce1a0be643ef7d0e4712",
+    "triangleRangesBySource": [
+      {
+        "sourceId": "34764250-d925-4b33-8990-6aa7c925aee5",
+        "triangleRangesByMaterial": [
+          [
+            0,
+            56
+          ],
+          [
+            0,
+            216
+          ],
+          [
+            0,
+            24
+          ]
+        ]
+      },
+      {
+        "sourceId": "b4ab82a2-43a9-43dc-959f-4c259acc1946",
+        "triangleRangesByMaterial": [
+          [
+            56,
+            230
+          ],
+          [
+            216,
+            794
+          ],
+          [
+            24,
+            107
+          ]
+        ]
+      }
+    ],
+    "rangeConvention": "Half-open [start,end) original indexed triangle ranges, one range per material; original vertex packing retains emission order."
+  }
+}

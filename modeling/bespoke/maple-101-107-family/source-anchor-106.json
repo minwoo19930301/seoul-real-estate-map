@@ -1,0 +1,170 @@
+{
+  "id": "maple-xi-106",
+  "nameKo": "메이플자이 106동",
+  "model": "maple-xi/maple-xi-106.glb",
+  "coordinate": {
+    "lon": 127.01287823540348,
+    "lat": 37.51195951145115
+  },
+  "dimensions": [
+    69.5281982421875,
+    113.04000091552734,
+    40.20705032348633
+  ],
+  "yawDegFromEast": 0,
+  "heightDatum": "metres; independent terrain anchor",
+  "sha256": "6ccfb1aa3b7fc422589aa4548e70274eec2db3d68c35e4f12d0a386a1bbdd54b",
+  "quality": "reference",
+  "minZoom": 16,
+  "geoBounds": [
+    127.01248453787517,
+    37.51177891841198,
+    127.01327193293179,
+    37.51214010449033
+  ],
+  "footprintIds": [],
+  "supersedes": [],
+  "referenceUrl": "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+  "district": "서초구",
+  "category": "apartment",
+  "searchable": false,
+  "sourceRecord": {
+    "provider": "GS Xi official plan and completed-building photographs",
+    "sources": [
+      {
+        "url": "https://www.xi.co.kr/Files/cmsPage/20240205_132346_189001.jpg",
+        "kind": "developer illustrative numbered plan",
+        "date": "2024-02-05 filename; pre-completion"
+      },
+      {
+        "url": "https://www.xi.co.kr/Files/cmsPage/20240126_101604_789001.pdf",
+        "kind": "official sales notice",
+        "date": "2024-01-26"
+      },
+      {
+        "url": "https://www.xi.co.kr/Files/aptProcRateImg/20250403_170535_099001.JPG",
+        "kind": "developer actual aerial construction photo",
+        "date": "2025-03 photo label; uploaded2025-04-03"
+      },
+      {
+        "url": "https://beyondapartment.kr/focus/dosim-sok-jayeongwa-sarameul-itneun-jaieui-cheolhak-meipeulja",
+        "kind": "developer magazine completed-building photographs",
+        "date": "2025-11-26 publication; capture dates unspecified"
+      },
+      {
+        "url": "https://www.xi.co.kr/maple/aptconst?aptSeq=2527&type=9",
+        "kind": "developer construction page",
+        "moveInYearMonth": "2025-06"
+      },
+      {
+        "url": "https://overpass.kumi.systems/api/interpreter",
+        "kind": "OpenStreetMap public road geometries",
+        "osmBaseTimestamp": "2026-06-01T08:52:28Z",
+        "license": "ODbL; ©OpenStreetMap contributors"
+      }
+    ],
+    "recipe": {
+      "dong": 106,
+      "floorsEstimate": 35,
+      "floorCountVerified": false,
+      "floorBasis": "Unverified individual floor count; approximate aerial silhouette constrained by official35F complex maximum",
+      "storeyHeightEstimateM": 3.08,
+      "mainRoofHeightEstimateM": 108.64,
+      "groundFootprintPixelTrace": [
+        [
+          542,
+          412
+        ],
+        [
+          561,
+          390
+        ],
+        [
+          615,
+          433
+        ],
+        [
+          641,
+          411
+        ],
+        [
+          661,
+          428
+        ],
+        [
+          617,
+          459
+        ]
+      ],
+      "features": [
+        "individually traced numbered plan",
+        "7m pilotis portal",
+        "recessed stone lobby",
+        "broad gray paired-window stacks and projecting white perimeter frames",
+        "unequal center/corner window widths by elevation",
+        "gray stone lower sleeve",
+        "raised window mullions",
+        "plan-shaped crown",
+        "rooftop service enclosure"
+      ]
+    },
+    "georeference": {
+      "controls": [
+        {
+          "pixel": [
+            110,
+            386
+          ],
+          "coordinate": [
+            127.0096393,
+            37.5120376
+          ],
+          "osmNode": 436816900,
+          "intersection": "신반포로33길 / 잠원로4길"
+        },
+        {
+          "pixel": [
+            669,
+            84
+          ],
+          "coordinate": [
+            127.0133484,
+            37.5138164
+          ],
+          "osmNode": 436816903,
+          "intersection": "나루터로4길 / 잠원로4길"
+        },
+        {
+          "pixel": [
+            377,
+            985
+          ],
+          "coordinate": [
+            127.0113552,
+            37.5088814
+          ],
+          "osmNode": 571450682,
+          "intersection": "나루터로4길 / 신반포로33길"
+        }
+      ],
+      "pixelToLonLatAffine": [
+        [
+          6.594747457737152e-06,
+          2.703623563538801e-07
+        ],
+        [
+          -7.495420903148482e-08,
+          -5.3896272940608815e-06
+        ],
+        [
+          127.00894281010433,
+          37.5140882562763
+        ]
+      ],
+      "method": "3 road intersection centers; visual cross-check against all nearby road polylines",
+      "accuracy": "illustrative-plan trace, not surveying; control selection/changed road width and plan roof overhang introduce error"
+    },
+    "accuracy": "Plan-traced and photo-referenced; individual heights and fine details are estimates"
+  },
+  "groundOffsetM": 0
+}
