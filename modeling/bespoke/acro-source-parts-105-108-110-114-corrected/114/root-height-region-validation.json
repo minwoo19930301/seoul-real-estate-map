@@ -1,0 +1,130 @@
+{
+  "file": "/Users/hyemini/Documents/Codex/2026-09-21/seoul-real-estate-map/data/model-source/bespoke/acro-source-parts-105-108-110-114-corrected/114/bespoke-acro-riverpark-114.glb",
+  "sha256": "38f43d3e989932aa0edd419eb0a3de73a4777f80ade5b8a051dc51bb55ffb0ac",
+  "triangleCount": 102752,
+  "boundaryToleranceM": 0.6,
+  "heightToleranceM": 0.02,
+  "roofBandM": 2.5,
+  "regions": [
+    {
+      "id": "region-0",
+      "heightM": 128.52631578947367,
+      "areaM2": 14.431606988693373,
+      "interiorAreaM2": 3.9701663547820205,
+      "overHeightTriangles": 0,
+      "exampleTriangleIndices": [],
+      "uncoveredNearRoofAreaM2": 0.0,
+      "roofCoverageRatio": 1.0
+    },
+    {
+      "id": "region-1",
+      "heightM": 128.52631578947367,
+      "areaM2": 118.61536405303403,
+      "interiorAreaM2": 91.43302631241718,
+      "overHeightTriangles": 0,
+      "exampleTriangleIndices": [],
+      "uncoveredNearRoofAreaM2": 0.0,
+      "roofCoverageRatio": 1.0
+    },
+    {
+      "id": "region-2",
+      "heightM": 128.52631578947367,
+      "areaM2": 46.35966351056926,
+      "interiorAreaM2": 31.204645509747106,
+      "overHeightTriangles": 0,
+      "exampleTriangleIndices": [],
+      "uncoveredNearRoofAreaM2": 0.0,
+      "roofCoverageRatio": 1.0
+    },
+    {
+      "id": "region-3",
+      "heightM": 128.52631578947367,
+      "areaM2": 34.18409797233143,
+      "interiorAreaM2": 18.390741713075116,
+      "overHeightTriangles": 0,
+      "exampleTriangleIndices": [],
+      "uncoveredNearRoofAreaM2": 0.0,
+      "roofCoverageRatio": 1.0
+    },
+    {
+      "id": "region-4",
+      "heightM": 132.0,
+      "areaM2": 684.7081611056881,
+      "interiorAreaM2": 611.9812419456073,
+      "overHeightTriangles": 0,
+      "exampleTriangleIndices": [],
+      "uncoveredNearRoofAreaM2": 0.0,
+      "roofCoverageRatio": 1.0
+    }
+  ],
+  "passed": true,
+  "boundaryAllowanceBasis": "Maximum facade sill projection .53m plus .065m half thickness = .595m; .005m numeric margin. Higher adjacent facade details can occupy this boundary strip; the region interior must have no over-height triangles. Roof cap coverage checked separately at .03m inset.",
+  "strictRoofCoverage": [
+    {
+      "id": "region-0",
+      "roofCoverageRatio": 1.0,
+      "uncoveredAreaM2": 4.878526932896408e-16
+    },
+    {
+      "id": "region-1",
+      "roofCoverageRatio": 1.0,
+      "uncoveredAreaM2": 0.0
+    },
+    {
+      "id": "region-2",
+      "roofCoverageRatio": 1.0,
+      "uncoveredAreaM2": 0.0
+    },
+    {
+      "id": "region-3",
+      "roofCoverageRatio": 0.9999999999999999,
+      "uncoveredAreaM2": 3.1327761466973316e-15
+    },
+    {
+      "id": "region-4",
+      "roofCoverageRatio": 1.0,
+      "uncoveredAreaM2": 0.0
+    }
+  ],
+  "tower": "114",
+  "sourceChecks": [
+    {
+      "sourceId": "30303639-6637-3232-A461-653539333238",
+      "sourceGeometryDifferenceM2": 0.0,
+      "floors": 37,
+      "heightMEstimate": 128.52631578947367
+    },
+    {
+      "sourceId": "35626235-6135-3032-A638-323938653966",
+      "sourceGeometryDifferenceM2": 0.0,
+      "floors": 37,
+      "heightMEstimate": 128.52631578947367
+    },
+    {
+      "sourceId": "36346637-6464-3662-A438-663162616563",
+      "sourceGeometryDifferenceM2": 0.0,
+      "floors": 37,
+      "heightMEstimate": 128.52631578947367
+    },
+    {
+      "sourceId": "39323466-6664-3964-B036-623433386638",
+      "sourceGeometryDifferenceM2": 0.0,
+      "floors": 37,
+      "heightMEstimate": 128.52631578947367
+    },
+    {
+      "sourceId": "parent-remainder",
+      "sourceGeometryDifferenceM2": 0.0,
+      "floors": 38,
+      "heightMEstimate": 132.0
+    }
+  ],
+  "gradeUnionDifferenceM2": 34.2746586087557,
+  "gradeMissingSourceAreaM2": 1.2900600596817622e-05,
+  "gradeBeyondFacadeBandM2": 0.0,
+  "gradeFacadeBandM": 0.6,
+  "referenceParentHeightM": 132.0,
+  "referenceParentHeightBasis": "Unverified OSM estimate; child metres derived proportionally from source floor counts; no independent measured child metre height",
+  "officialFloors": 38,
+  "osmParentFloors": 38
+}

@@ -1,0 +1,24 @@
+[
+  {
+    "tool": "execute_blender_code",
+    "port": 9878,
+    "isError": false,
+    "content": [
+      {
+        "type": "text",
+        "text": "Code executed successfully: Info: Saved as \"headless-initial.blend\"\nARTIFACT:facade-regions.json:[\n  {\n    \"edge\": 0,\n    \"length_m\": 47.765362228027655,\n    \"role\": \"large glazed balconies and central dark service stacks\",\n    \"basis\": \"ownlong/shortedge complex inference\"\n  },\n  {\n    \"edge\": 1,\n    \"length_m\": 11.330702799261012,\n    \"role\": \"plain blank endwall with narrow edge windows\",\n    \"basis\": \"ownlong/shortedge complex inference\"\n  },\n  {\n    \"edge\": 2,\n    \"length_m\": 47.769934600838255,\n    \"role\": \"large glazed balconies and central dark service stacks\",\n    \"basis\": \"ownlong/shortedge complex inference\"\n  },\n  {\n    \"edge\": 3,\n    \"length_m\": 11.320554390015879,\n    \"role\": \"plain blank endwall with narrow edge windows\",\n    \"basis\": \"ownlong/shortedge complex inference\"\n  }\n]\nARTIFACT:roof-proof.json:{\n  \"source_inset_m\": 0.4,\n  \"parapet_height_m\": 1,\n  \"parapet_width_m\": 0.25,\n  \"photo_inferred\": true\n}\nARTIFACT:optimization-proof.json:{\n  \"mesh_count\": 7,\n  \"no_decimation\": true,\n  \"material_batched\": true\n}\n15:01:06 | INFO: Starting glTF 2.0 export\n15:01:06 | INFO: Extracting primitive: Rexle209 editable Rexle209 light grey solid wall\n15:01:06 | INFO: Primitives created: 1\n15:01:06 | INFO: Extracting primitive: Rexle209 editable Rexle209 broad white facade frames\n15:01:06 | INFO: Primitives created: 1\n15:01:06 | INFO: Extracting primitive: Rexle209 editable Rexle209 cream pale piers\n15:01:06 | INFO: Primitives created: 1\n15:01:06 | INFO: Extracting primitive: Rexle209 editable Rexle209 deep service balcony shadow\n15:01:06 | INFO: Primitives created: 1\n15:01:06 | INFO: Extracting primitive: Rexle209 editable Rexle209 grey AC grille\n15:01:06 | INFO: Primitives created: 1\n15:01:06 | INFO: Extracting primitive: Rexle209 editable Rexle209 pale turquoise balcony glass\n15:01:06 | INFO: Primitives created: 1\n15:01:06 | INFO: Extracting primitive: Rexle209 editable Rexle209 turquoise balcony glazing\n15:01:06 | INFO: Primitives created: 1\n15:01:06 | INFO: Finished glTF 2.0 export in 0.017505884170532227 s\n\nARTIFACT:validation.json:{\n  \"source_id\": \"6d9c64c6-ee97-4850-9669-c1c5fae1dafd\",\n  \"floors\": 20,\n  \"register_height_m\": 53.9,\n  \"osm_height_m\": 54.0,\n  \"height_status\": \"registered53.9m; roof datum unmeasured\",\n  \"uniform_height_assumption\": true,\n  \"bounds_xyz\": [\n    [\n      -24.14219093322754,\n      -15.079998970031738,\n      0.0\n    ],\n    [\n      24.142183303833008,\n      15.074512481689453,\n      53.900001525878906\n    ]\n  ],\n  \"mesh_count\": 7,\n  \"image_nodes\": 0,\n  \"finite\": true\n}\nInfo: Saved as \"dogok-rexls-209-authored.blend\"\nARTIFACT:scene-preservation.json:{\"equal\": true, \"before\": {\"Codex MCP Workspace\": []}, \"after\": {\"Codex MCP Workspace\": []}}\n"
+      }
+    ]
+  },
+  {
+    "tool": "execute_blender_code",
+    "port": 9878,
+    "isError": false,
+    "content": [
+      {
+        "type": "text",
+        "text": "Code executed successfully: ARTIFACT:standalone-validation.json:{\"scenes\": 1, \"source_id\": \"6d9c64c6-ee97-4850-9669-c1c5fae1dafd\", \"register_id\": \"10241521\", \"floors\": 20, \"height\": 53.9, \"mesh_count\": 7, \"camera_count\": 4, \"image_nodes\": 0, \"bounds_xyz\": [[-24.14219093322754, -15.079998970031738, 0.0], [24.142183303833008, 15.074512481689453, 53.900001525878906]]}\nInitial scene restored\n"
+      }
+    ]
+  }
+]

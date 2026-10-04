@@ -369,7 +369,13 @@ async function loadCityModels() {
   let bespoke: import('./reference-models').ReferenceManifest = { version: 1, assets: [], places: [] };
   try { bespoke = referenceManifest(await request<unknown>('/models/bespoke-manifest.json'), [...manifest.assets, ...references.assets]); }
   catch (error) { console.warn('재제작 모델을 불러오지 못해 이전 모델을 표시합니다.', error); }
-  const assets = [...manifest.assets, ...references.assets, ...bespoke.assets];
+  let representative: import('./reference-models').ReferenceManifest = { version: 1, assets: [], places: [] };
+  try {
+    const { representativeManifest } = await import('./reference-models');
+    representative = representativeManifest(await request<unknown>('/models/representative-manifest.json'),
+      [...manifest.assets, ...references.assets, ...bespoke.assets], [...references.assets, ...bespoke.assets]);
+  } catch (error) { console.warn('대표형 모델을 불러오지 못해 기존 건물을 표시합니다.', error); }
+  const assets = [...manifest.assets, ...references.assets, ...bespoke.assets, ...representative.assets];
   const places = [...bespoke.places, ...references.places];
   const replaced = new Set([...references.assets, ...bespoke.assets].flatMap(asset => asset.supersedes ?? []));
   cityModels = new CityModels(map, {
