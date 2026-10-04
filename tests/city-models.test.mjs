@@ -164,11 +164,11 @@ test('dense district catalog limits concurrent loads and evicts old GPU scenes a
   };
   try {
     h.models.setMode(true); await h.models.loadNearby();
-    assert.equal(requests, 32); assert.ok(maxActive <= 4);
+    assert.equal(requests, 1, 'identical GLB/hash is fetched once'); assert.ok(maxActive <= 4);
     h.models.render(h.args);
     assert.equal(h.models.getState().models.filter(m => m.active).length, 32);
     h.setCenter([127.152679, 37.5125537]); await h.models.loadNearby();
-    assert.equal(requests, 64);
+    assert.equal(requests, 1, 'resident clones retain the shared resource while navigating');
     assert.equal(h.models.getState().models.filter(m => m.loaded).length, 48);
     assert.ok(h.models.entries.slice(0, 40).some(e => !e.scene));
     h.models.render(h.args);

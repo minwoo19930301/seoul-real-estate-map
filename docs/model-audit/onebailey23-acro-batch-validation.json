@@ -1,0 +1,195 @@
+{
+  "date": "2026-09-22",
+  "scope": "OneBailey109–120 and Acro River Park100/109; independent retained partitions and explicit photographed facade inference",
+  "baseCommit": "4fa8f778bf562927bf1be158c8bb2f09fe3893d7",
+  "newBespokeAssets": 14,
+  "totalBespokeRecordsIncludingHistorical": 122,
+  "preserved": {
+    "bespoke-manifest.json": {
+      "preserved": 108,
+      "current": 122
+    },
+    "reference-manifest.json": {
+      "preserved": 125,
+      "current": 125
+    },
+    "manifest.json": {
+      "preserved": 13607,
+      "current": 13607
+    }
+  },
+  "checks": {
+    "node": 13764,
+    "python": 27,
+    "browserOneBaileyAcro": 12,
+    "browserMapleRegression": 25,
+    "build": "passed"
+  },
+  "logs": {
+    "node": {
+      "sha256": "8f54491a4dd5b3f1cba9c0ecc87cec70cacdafce4cb4acd03c9dc25c6e0259fb",
+      "tail": [
+        "✔ height provenance covers every new model and explicit parts, and estimates are disclosed (11.835417ms)",
+        "✔ residential survey preserves the exact 13607-model manifest and footprint-match bytes (80.284166ms)",
+        "✔ all 131618 acquired official records have one audited disposition (7.114375ms)",
+        "✔ streamed catalog verifies all 99516 new and 13607 legacy GLBs with exclusive source ownership (24570.410333ms)",
+        "✔ register heights are corroborated per building and no register ID is reused for height transfer (0.529375ms)",
+        "✔ normal overview, zoomed overhead and pre-threshold views keep the exact original bounds (0.817125ms)",
+        "✔ street-level horizon requests remain inside a 600 metre local square (0.134292ms)",
+        "✔ eye-level requests include nearby tall buildings beyond the small ground-plane extent (0.073125ms)",
+        "✔ transient disjoint or invalid horizon bounds still produce a valid nearby cap (0.077875ms)",
+        "✔ flight queries use a bounded aircraft focus despite remote, invalid or changing camera bounds (0.1075ms)",
+        "✔ flight focus is map-specific, copied, snapped to 100m and removable (0.126208ms)",
+        "✔ flight model work coalesces at 1Hz, tracks aircraft rather than target, and cancels on exit/dispose (3.067167ms)",
+        "ℹ tests 13764",
+        "ℹ suites 0",
+        "ℹ pass 13764",
+        "ℹ fail 0",
+        "ℹ cancelled 0",
+        "ℹ skipped 0",
+        "ℹ todo 0",
+        "ℹ duration_ms 25156.994083"
+      ]
+    },
+    "python": {
+      "sha256": "4225d11f25a2fadb0e53986e5c69b908fb6ff3b30672659831ea55b03a6a21dc",
+      "tail": [
+        ".........",
+        "----------------------------------------------------------------------",
+        "Ran 9 tests in 0.007s",
+        "",
+        "OK",
+        "..................",
+        "----------------------------------------------------------------------",
+        "Ran 18 tests in 1.463s",
+        "",
+        "OK"
+      ]
+    },
+    "build": {
+      "sha256": "1cc6bb551f857653c1f80d04bc795dec47da04b230ded472a146d16df66281cf",
+      "tail": [
+        "✓ 35 modules transformed.",
+        "rendering chunks...",
+        "computing gzip size...",
+        "dist/index.html                                  0.70 kB │ gzip:   0.48 kB",
+        "dist/assets/greenery.worker-B6foKVrS.js          3.71 kB",
+        "dist/assets/maplibre-gl-worker-CobTyBCT.js     486.83 kB",
+        "dist/assets/index-DGr3fR5B.css                 102.49 kB │ gzip:  15.76 kB",
+        "dist/assets/generic-corrections-BfGBChZh.js      1.67 kB │ gzip:   0.74 kB",
+        "dist/assets/reference-models-CjKOile1.js         2.52 kB │ gzip:   1.04 kB",
+        "dist/assets/generic-corrections-DZ6krjC0.js    157.42 kB │ gzip:  14.64 kB",
+        "dist/assets/city-models-6khlXvVm.js            627.29 kB │ gzip: 159.88 kB",
+        "dist/assets/index-B42qqoI3.js                1,147.43 kB │ gzip: 310.74 kB",
+        "",
+        "✓ built in 45.22s",
+        "\u001b[33m[PLUGIN_TIMINGS] \u001b[0mPlugin hooks ran for 114.9s. The build took 45.2s. Hooks such as `closeBundle` run after the build ends, so hook time can be more than build time.",
+        "The slowest hooks, timed inside each callback (the wait before a callback starts is excluded, the time it awaits is included):",
+        "  - local-precompressed-assets closeBundle (100%, 69.7s, 1 call)",
+        "  - vite:prepare-out-dir renderStart (99%, 44.9s, 1 call)",
+        "See https://rolldown.rs/reference/InputOptions.checks#plugintimings for more details.",
+        ""
+      ]
+    },
+    "families": {
+      "sha256": "2546eecd7623cf371c2ea67334e1844416a9b51dda779015b94ff8cc864d5fc0",
+      "tail": [
+        "",
+        "Running 12 tests using 1 worker",
+        "",
+        "(node:1732) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.",
+        "(Use `node --trace-warnings ...` to show where the warning was created)",
+        "  ✓   1 tests/acro-family.spec.ts:9:3 › Acro first two: normal (7.7s)",
+        "  ✓   2 tests/acro-family.spec.ts:9:3 › Acro first two: missing 100 (8.9s)",
+        "  ✓   3 tests/acro-family.spec.ts:9:3 › Acro first two: missing 109 (8.3s)",
+        "  ✓   4 tests/acro-family.spec.ts:9:3 › Acro first two: missing 100,109 (9.7s)",
+        "  ✓   5 tests/onebailey-family.spec.ts:13:3 › OneBailey all23 towers: all models draw (7.5s)",
+        "  ✓   6 tests/onebailey-family.spec.ts:13:3 › OneBailey all23 towers: models 101 unavailable (8.7s)",
+        "  ✓   7 tests/onebailey-family.spec.ts:13:3 › OneBailey all23 towers: models 123 unavailable (9.9s)",
+        "  ✓   8 tests/onebailey-family.spec.ts:13:3 › OneBailey all23 towers: models 110 unavailable (8.9s)",
+        "  ✓   9 tests/onebailey-family.spec.ts:13:3 › OneBailey all23 towers: models 114 unavailable (8.9s)",
+        "  ✓  10 tests/onebailey-family.spec.ts:13:3 › OneBailey all23 towers: models 113,114,115,116 unavailable (8.9s)",
+        "  ✓  11 tests/onebailey-family.spec.ts:13:3 › OneBailey all23 towers: models 109,110,111,112,113,114,115,116,117,118,119,120 unavailable (8.4s)",
+        "  ✓  12 tests/onebailey-family.spec.ts:13:3 › OneBailey all23 towers: models 115 and fallbacks 115 unavailable (8.7s)",
+        "",
+        "  12 passed (1.8m)"
+      ]
+    },
+    "mapleRegression": {
+      "sha256": "988d6258522bd4cce687e6c229588a84764d5ebc9035ecf5c7ac3bffb3f1e8b7",
+      "tail": [
+        "",
+        "Running 25 tests using 1 worker",
+        "",
+        "(node:2152) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.",
+        "(Use `node --trace-warnings ...` to show where the warning was created)",
+        "  ✓   1 tests/maple-family-batch.spec.ts:10:3 › Maple all 29 towers: all current models draw (8.7s)",
+        "  ✓   2 tests/maple-family-batch.spec.ts:10:3 › Maple all 29 towers: sixteen family models unavailable (8.6s)",
+        "  ✓   3 tests/maple-individual.spec.ts:24:4 › Maple208 1 failed generations preserve all29 towers (8.8s)",
+        "  ✓   4 tests/maple-individual.spec.ts:24:4 › Maple208 2 failed generations preserve all29 towers (9.1s)",
+        "  ✓   5 tests/maple-individual.spec.ts:24:4 › Maple209 1 failed generations preserve all29 towers (8.6s)",
+        "  ✓   6 tests/maple-individual.spec.ts:24:4 › Maple209 2 failed generations preserve all29 towers (9.3s)",
+        "  ✓   7 tests/maple-individual.spec.ts:24:4 › Maple212 1 failed generations preserve all29 towers (8.7s)",
+        "  ✓   8 tests/maple-individual.spec.ts:24:4 › Maple212 2 failed generations preserve all29 towers (9.0s)",
+        "  ✓   9 tests/maple-individual.spec.ts:24:4 › Maple205 0 failed generations preserve all29 towers (7.5s)",
+        "  ✓  10 tests/maple-individual.spec.ts:24:4 › Maple205 1 failed generations preserve all29 towers (8.6s)",
+        "  ✓  11 tests/maple-individual.spec.ts:24:4 › Maple206 0 failed generations preserve all29 towers (8.3s)",
+        "  ✓  12 tests/maple-individual.spec.ts:24:4 › Maple206 1 failed generations preserve all29 towers (8.9s)",
+        "  ✓  13 tests/maple-individual.spec.ts:24:4 › Maple203 0 failed generations preserve all29 towers (8.2s)",
+        "  ✓  14 tests/maple-individual.spec.ts:24:4 › Maple203 1 failed generations preserve all29 towers (8.4s)",
+        "  ✓  15 tests/maple-individual.spec.ts:24:4 › Maple214 0 failed generations preserve all29 towers (7.6s)",
+        "  ✓  16 tests/maple-individual.spec.ts:24:4 › Maple214 1 failed generations preserve all29 towers (8.3s)",
+        "  ✓  17 tests/maple-individual.spec.ts:24:4 › Maple215 0 failed generations preserve all29 towers (8.1s)",
+        "  ✓  18 tests/maple-individual.spec.ts:24:4 › Maple215 1 failed generations preserve all29 towers (8.7s)",
+        "  ✓  19 tests/maple-individual.spec.ts:24:4 › Maple204 0 failed generations preserve all29 towers (8.2s)",
+        "  ✓  20 tests/maple-individual.spec.ts:24:4 › Maple204 1 failed generations preserve all29 towers (9.7s)",
+        "  ✓  21 tests/maple-individual.spec.ts:24:4 › Maple207 0 failed generations preserve all29 towers (7.5s)",
+        "  ✓  22 tests/maple-individual.spec.ts:24:4 › Maple207 1 failed generations preserve all29 towers (8.6s)",
+        "  ✓  23 tests/maple-individual.spec.ts:24:4 › Maple213 0 failed generations preserve all29 towers (6.8s)",
+        "  ✓  24 tests/maple-individual.spec.ts:24:4 › Maple213 1 failed generations preserve all29 towers (8.4s)",
+        "  ✓  25 tests/maple-individual.spec.ts:24:4 › Maple213 2 failed generations preserve all29 towers (9.1s)",
+        "",
+        "  25 passed (3.5m)"
+      ]
+    }
+  },
+  "browserRecords": {
+    "docs/model-audit/renders/onebailey-all23/map/missing-101.json": "e14c3f6b0eb7bda0549e12105bf0d4fc13a75f349942b5abf0c89773fa2083cb",
+    "docs/model-audit/renders/onebailey-all23/map/missing-101.png": "88a298f56628a1b31793cbbe079117e2c7964472af2c471b2756007aca600aca",
+    "docs/model-audit/renders/onebailey-all23/map/missing-109-110-111-112-113-114-115-116-117-118-119-120.json": "87fa73fa6da31a926bf950c0a6eb17816fa6d01350b9994fe7783dd815e628e5",
+    "docs/model-audit/renders/onebailey-all23/map/missing-109-110-111-112-113-114-115-116-117-118-119-120.png": "4ae8e56060e512086823375ad4f185374a3f93659b1cf16832e90d769eb4c519",
+    "docs/model-audit/renders/onebailey-all23/map/missing-110.json": "f69601e336f77c2552936b2904de47f7104c974d82de8c877a10f1e04b579533",
+    "docs/model-audit/renders/onebailey-all23/map/missing-110.png": "0fc83e4d05fbb6f2ae7b2a0048239402a6aec9d1a4b51866270d86c9bf5e1472",
+    "docs/model-audit/renders/onebailey-all23/map/missing-113-114-115-116.json": "c8cb6ead2fbc30284dfbcc44da600c9b4b2b17a48407d6367cc29f08b2f4aac7",
+    "docs/model-audit/renders/onebailey-all23/map/missing-113-114-115-116.png": "a8ba7447bc5c1c5360b655d7926174e43a262ef8533b015c7c21ce96931dd34a",
+    "docs/model-audit/renders/onebailey-all23/map/missing-114.json": "3649213a7c3f99bd77c11f1c64230f653479f3ad52d82590c87f0e221b860918",
+    "docs/model-audit/renders/onebailey-all23/map/missing-114.png": "d124554094b09d9272f163325b136da0508ff3f1bd07b3828a1078a0e393fbc1",
+    "docs/model-audit/renders/onebailey-all23/map/missing-115-and-fallback-115.json": "d389c06da8ac66e744c1a7012346206e4baeab24704bc4325d1a8e7e4d9f5ecb",
+    "docs/model-audit/renders/onebailey-all23/map/missing-115-and-fallback-115.png": "bc70387b30fa491c7d9041157f30c82443e94f5be998f1f8fe6497110083d89c",
+    "docs/model-audit/renders/onebailey-all23/map/missing-123.json": "a4dc83c96f305449fa7fa4c47391aa79159a465b666195863e63563c90d1a2d5",
+    "docs/model-audit/renders/onebailey-all23/map/missing-123.png": "ae0e99756d79bb4c6910ccc306d654ee73eefc07bde599f1d23f9b764154bc11",
+    "docs/model-audit/renders/onebailey-all23/map/normal.json": "884988988228acfa2fd5dac957e286c473f5275d305a455ac95a98157221ed07",
+    "docs/model-audit/renders/onebailey-all23/map/normal.png": "8236c4336af0917193bbf028b81502be389814407fc552ed94d907ca190f3b20",
+    "docs/model-audit/renders/acro-riverpark-109-100/map/missing-100-109.json": "f7d8ff49fa4c1b56487cabce1ca3dc395f97aa30446a33330bf3c76069956248",
+    "docs/model-audit/renders/acro-riverpark-109-100/map/missing-100-109.png": "35d0c2b9c2c4831ae8406659a95b92a9bcc2d512b2de228a998db8fa09f67781",
+    "docs/model-audit/renders/acro-riverpark-109-100/map/missing-100.json": "72fa9ce8a2752261b2f55d6b34fb16814b72bf7f0c75901931c4207a66d15a70",
+    "docs/model-audit/renders/acro-riverpark-109-100/map/missing-100.png": "b8e93aa8cfe8df0acb2e4225faa87f79584e3449cb571cf794acdccb5cc693e3",
+    "docs/model-audit/renders/acro-riverpark-109-100/map/missing-109.json": "97301dcb52d8ab96c9a0b95eca777defb3cd981b2cc1fec1ffa197c4129820d8",
+    "docs/model-audit/renders/acro-riverpark-109-100/map/missing-109.png": "3cb453fb5173e38e0127d67b78e40bb9c2617ed0eb3b37cf0f8be2c14f2ffa9e",
+    "docs/model-audit/renders/acro-riverpark-109-100/map/normal.json": "bb7cda0b433849c4f45207ac9c196961c011dbf1273e2b3c0012a293aa7b5c9a",
+    "docs/model-audit/renders/acro-riverpark-109-100/map/normal.png": "01f788e0d1aeae691d831fc32d37a9b08d974b9f755c11d905277d332bd8fa71"
+  },
+  "visualReview": "Root independently inspected authored views and photographs before publication, then reviewed normal OneBailey23 and Acro2 map images, Acro simultaneous failure and OneBailey115 double-generation failure. Per-site reviews bind final MCP records, blends and source GLBs.",
+  "coverage": {
+    "maple": "29/29,18representativeinferred",
+    "onepentas": "6/6,4representativeinferred",
+    "onebailey": "23/23,22representativeinferred",
+    "acroRiverPark": "2/15,2complexphotoinferred",
+    "eligibleManagementCodes": 1417,
+    "completedManagementCodes": 16
+  },
+  "inferenceLimits": "Representative facade reuse does not verify each numbered facade or hidden face. Acro source photograph does not resolve tower identity/orientation; numbered21/38 storeys agree with REB,74/132metres remain OSM estimates. Source photos are local, not redistributed or embedded.",
+  "fallbackPreservation": "OneBailey primary19footprints/19839triangles fully partitioned; secondary mislabeled5footprints/4363triangles separates113–116 and preserves Jamwon Weve. Acro17footprints/22153triangles separates100/109 and preserves13 other towers plus2neighbors. Original vertex attributes/materials/anchor conserved exactly once.",
+  "runtimeFix": "Complete partitions omit an empty residual only after exact source ownership validation. Visible failed landmarks transfer loading rank to retained fallbacks. Authored split towers retain selection of the original-group remainder, keeping the existing32primary/48resident budgets and suppression behavior.",
+  "publicationState": "Local proof. PR merge and production deployment are separate."
+}
