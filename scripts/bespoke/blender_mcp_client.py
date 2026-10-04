@@ -22,7 +22,7 @@ async def run(args):
             elif args.action == 'execute':
                 if not args.script: raise SystemExit('--script is required')
                 script = Path(args.script).resolve()
-                code = '__file__ = ' + repr(str(script)) + '\n' + script.read_text()
+                code = script.read_text() if args.raw_code else '__file__ = ' + repr(str(script)) + '\n' + script.read_text()
                 calls = [('execute_blender_code', {'code': code, 'user_prompt': prompt})]
             elif args.action == 'screenshot':
                 if not args.output: raise SystemExit('--output is required')
@@ -40,7 +40,10 @@ async def run(args):
                 record = {'tool': name, 'port': args.port, 'isError': result.isError, 'content': content}
                 results.append(record)
                 print(json.dumps(record, ensure_ascii=False))
-                if result.isError or any(i.get('text', '').startswith(('Error executing code:', 'Rejected by safe mode')) for i in content):
+                if args.record:
+                    out = Path(args.record); out.parent.mkdir(parents=True, exist_ok=True)
+                    out.write_text(json.dumps(results, ensure_ascii=False, indent=2)+'\n')
+                if result.isError or any(i.get('text', '').startswith(('Error ', 'Rejected by safe mode')) for i in content):
                     raise SystemExit(1)
             if args.record:
                 out = Path(args.record); out.parent.mkdir(parents=True, exist_ok=True)
@@ -52,4 +55,5 @@ if __name__ == '__main__':
     p.add_argument('--port', type=int, required=True)
     p.add_argument('--server', default='/tmp/seoul-blender-mcp-env/bin/mcp-for-blender')
     p.add_argument('--script'); p.add_argument('--output'); p.add_argument('--record'); p.add_argument('--prompt-file')
+    p.add_argument('--raw-code', action='store_true', help='Send self-contained code without injecting __file__; compatible with MCP safe mode')
     asyncio.run(run(p.parse_args()))
