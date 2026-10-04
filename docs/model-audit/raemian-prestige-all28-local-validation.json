@@ -1,0 +1,84 @@
+{
+  "date": "2026-09-22",
+  "baseline": "4621b03c40d8fa7c178adca7ca3a2fd587763336",
+  "publication": "Local PR branch validation; remote CI and push recorded separately",
+  "currentPrestigeTowers": 28,
+  "bespokeManifestTotal": 165,
+  "officialEligibleManagementCodes": 1417,
+  "reviewedCompleteManagementCodes": 18,
+  "representativeInferredBuildingCount": 87,
+  "modeling": "Existing Blender MCP9876/9878, no new process;126 reviewed against complex photos,27siblings use representative-photo-inference",
+  "sourceIdentity": "28 unique full source polygons inside named OSM complex boundary, exact parcel/road/numbered residential register rows,2444households",
+  "heightBasis": "Official registered maximum; separate original OSM values retained. Uniform-height envelope assumption because no child source parts. Roof datum and actual facade floor spacing not surveyed.",
+  "checks": {
+    "node": {
+      "passed": 13777,
+      "failed": 0
+    },
+    "python": {
+      "height_regions": 9,
+      "publisher": 11,
+      "queue": 18,
+      "passed": 38,
+      "failed": 0
+    },
+    "browser": {
+      "prestige126": 3,
+      "prestige28": 5,
+      "previousAcro": 2,
+      "previousOneBailey": 2,
+      "passed": 12,
+      "failed": 0
+    },
+    "build": "passed",
+    "directReviewedViews": 112,
+    "realSourcePhotosReviewed": 2,
+    "gradeFootprintAreaToleranceM2": 0.001,
+    "nearRoofCoverageMinimum": 0.999999,
+    "heightToleranceM": 0.0001
+  },
+  "preservation": {
+    "public/models/manifest.json": 13607,
+    "public/models/reference-manifest.json": 125,
+    "public/models/bespoke-manifest.json": 137,
+    "priorCorrections": 7,
+    "unchangedPriorGLBAndBlendFiles": 113506
+  },
+  "fallbacks": {
+    "mainTriangles": 12957,
+    "mainTowerTriangles": 11703,
+    "retainedShopTriangles": 1254,
+    "mixed103Triangles": 1732,
+    "tower103Triangles": 572,
+    "retainedPrugioTriangles": 1160,
+    "metadataOnly125GeometryUnchanged": true,
+    "originalConvexHullApproximationTrianglesRetained": 242
+  },
+  "logs": {
+    "node": {
+      "localPath": "/tmp/prestige-final-node-tests.log",
+      "sha256": "2294c4483b636c3b0c25f22397ce8902753f41dcbc584ff31460d4a61c4bb564"
+    },
+    "publisher": {
+      "localPath": "/tmp/prestige-publisher-tests.log",
+      "sha256": "85ca96fb207a9acf727b042ed3fd6fdb6890b8cc0d45810393b27db424a95d19"
+    },
+    "queue": {
+      "localPath": "/tmp/prestige-final-queue-tests.log",
+      "sha256": "72f18b3987d2909ce294e0a1f555cb7978d9edbe4311bc3f06662bcb0055eb35"
+    },
+    "browser_existing": {
+      "localPath": "/tmp/prestige-existing-browser-regressions.log",
+      "sha256": "e36fc8cde08e1d43b27ad255c86236a201cef68f1237945705d79f2df960a4da"
+    },
+    "build": {
+      "localPath": "/tmp/prestige-final-build.log",
+      "sha256": "59bb157edef1938251fba3e3245489077991b55e9297a448bea9f7bc56493f48"
+    }
+  },
+  "sourceIdentitySha256": "b0104638587502764dd7f1347d8f22de765c1c7a0621048e60bdfb0edd0a707b",
+  "screenshots": [
+    "docs/model-audit/renders/prestige28-west-normal.png",
+    "docs/model-audit/renders/prestige28-east-normal.png"
+  ]
+}
