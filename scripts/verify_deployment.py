@@ -7,6 +7,7 @@ import time
 from urllib.parse import urlencode
 import urllib.request
 import urllib.error
+from deployment_model_checks import AssetVerifier
 
 base, expected_sha = sys.argv[1:]
 
@@ -55,14 +56,15 @@ meta, _ = json_response('/api/meta')
 assert meta['contours'] == 8570 and meta['spots'] == 45870, 'Source terrain data is missing'
 assert read('/data/terrain/14/13970/6344.png').startswith(b'\x89PNG'), 'Terrain tile unavailable'
 manifest = json.loads(read('/data/deployment-assets.json'))
-model = next(path.removeprefix('public') for path in manifest['files'] if path.endswith('.glb'))
-assert read(model).startswith(b'glTF'), '3D model unavailable'
+verifier = AssetVerifier(read)
+model = next(path for path in manifest['files'] if path.endswith('.glb'))
+verifier.verify(model.removeprefix('public'), manifest['files'][model], '3D model stale or corrupted', require_glb=True)
 assert b'<html' in read('/').lower(), 'Frontend unavailable'
 references = json.loads(read('/models/reference-manifest.json'))
 assert len(references['assets']) >= 125, 'Current reference models are missing'
 for model_id in ['reference-flight-seoul-city-hall', 'reference-flight-ddp', 'maple-xi-210']:
     asset = next(a for a in references['assets'] if a['id'] == model_id)
-    assert hashlib.sha256(read('/models/' + asset['model'])).hexdigest() == asset['sha256'], 'Reference model stale or corrupted: ' + model_id
+    verifier.verify('/models/' + asset['model'], asset['sha256'], 'Reference model stale or corrupted: ' + model_id)
 assert any(p['name'] == '메이플자이' for p in references['places']), 'Maple Xi search location missing'
 bespoke_bytes = read('/models/bespoke-manifest.json')
 assert hashlib.sha256(bespoke_bytes).hexdigest() == manifest['files']['public/models/bespoke-manifest.json'], 'Bespoke manifest is stale'
@@ -83,9 +85,8 @@ assert trapalace <= {a['id'] for a in bespoke['assets']}, 'Reviewed Mokdong Trap
 current_batch = {'bespoke-maple-xi-214', 'bespoke-maple-xi-215'} | {f'bespoke-mokdong-hyperion-2-{n}' for n in ['201','202','203','204']} | {f'bespoke-galleria-palace-{n}' for n in ['a','b','c','common']}
 assert current_batch <= {a['id'] for a in bespoke['assets']}, 'Reviewed Hyperion II, Galleria or Maple models missing'
 for path in ['public/models/generic-corrections/apt-a15805111.glb', 'public/models/generic-corrections/fallback-hyperion-ii-officetels.glb', 'public/models/generic-corrections/apt-a15088614.glb', 'public/models/generic-corrections/fallback-miseong-a.glb', 'public/models/generic-corrections.json', 'public/models/generic-corrections/apt-a14003002.glb', 'public/models/generic-corrections/fallback-caelitus-101.glb']:
-    assert hashlib.sha256(read(path.removeprefix('public'))).hexdigest() == manifest['files'][path], 'Apartment ownership partition stale: ' + path
-for asset in bespoke['assets']:
-    assert hashlib.sha256(read('/models/' + asset['model'])).hexdigest() == asset['sha256'], 'Bespoke model stale or corrupted: ' + asset['id']
+    verifier.verify(path.removeprefix('public'), manifest['files'][path], 'Apartment ownership partition stale: ' + path)
+verifier.verify_models(bespoke['assets'], 'Bespoke model stale or corrupted: ')
 
 # Exercise the same calls used by the initial map view instead of accepting a
 # deployment that only serves health metadata.  Keep this bbox small enough to

@@ -4,6 +4,7 @@ import { readFileSync, mkdirSync, writeFileSync } from 'node:fs';
 const read = (p: string) => JSON.parse(readFileSync(p, 'utf8'));
 const assets = read('public/models/bespoke-manifest.json').assets;
 const families = [
+  {site: 'olympic-athletes-village', number: 229, count: 52, label: null},
   {site: 'olympic-family-town', number: 108, count: 8, label: null},
   {site: 'sk-bukhansan-city', number: 102, count: 44, label: null},
   {site: 'olympic-park-foreon', number: 307, count: 81, label: null},
