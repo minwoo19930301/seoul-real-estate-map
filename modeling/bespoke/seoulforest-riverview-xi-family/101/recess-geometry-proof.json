@@ -1,0 +1,65 @@
+{
+  "method": "Independent GLB triangles vertical-ray barycentric intersection through both box columns",
+  "results": [
+    {
+      "station": 0.415,
+      "inward_depth_m": 0.6,
+      "actual_vertical_ray_intersections_m": [
+        0.0,
+        1.0,
+        8.4265,
+        8.6265,
+        16.6529,
+        16.8529,
+        56.1765,
+        56.3765,
+        67.2118,
+        67.4118,
+        95.25,
+        95.5,
+        95.75
+      ],
+      "expected_supported_box_bands_floors": [
+        [
+          3,
+          6
+        ],
+        [
+          20,
+          24
+        ]
+      ],
+      "no_full_height_solid_occluding_recess": true
+    },
+    {
+      "station": 0.585,
+      "inward_depth_m": 0.6,
+      "actual_vertical_ray_intersections_m": [
+        0.0,
+        1.0,
+        30.8971,
+        31.0971,
+        41.9324,
+        42.1324,
+        81.4559,
+        81.6559,
+        89.6824,
+        89.8824,
+        95.25,
+        95.5,
+        95.75
+      ],
+      "expected_supported_box_bands_floors": [
+        [
+          11,
+          15
+        ],
+        [
+          29,
+          32
+        ]
+      ],
+      "no_full_height_solid_occluding_recess": true
+    }
+  ]
+}

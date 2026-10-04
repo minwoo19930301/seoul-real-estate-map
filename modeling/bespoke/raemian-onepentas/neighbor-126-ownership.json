@@ -1,0 +1,197 @@
+{
+  "footprint": {
+    "rowid": 217636,
+    "id": "b21842a2-9832-4a21-bcc5-1c571f309556",
+    "name": "126동",
+    "height_m": 65.0,
+    "min_height_m": null,
+    "num_floors": 23,
+    "footprint_area_m2": 320.3460372589395,
+    "is_apartment": 1,
+    "kind": "building",
+    "parent_id": null,
+    "has_parts": 0,
+    "extrude": 1,
+    "geometry_source": "OpenStreetMap",
+    "height_source": "OpenStreetMap",
+    "district_id": "5056ad90-b154-46b1-a3b1-88140d162432",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            126.994305,
+            37.5026117
+          ],
+          [
+            126.9943413,
+            37.5025143
+          ],
+          [
+            126.994623,
+            37.5025805
+          ],
+          [
+            126.9945876,
+            37.5026754
+          ],
+          [
+            126.9944794,
+            37.50265
+          ],
+          [
+            126.994465,
+            37.5026887
+          ],
+          [
+            126.9943864,
+            37.5026702
+          ],
+          [
+            126.9943999,
+            37.502634
+          ],
+          [
+            126.994305,
+            37.5026117
+          ]
+        ]
+      ]
+    },
+    "source_properties": {
+      "names": {
+        "primary": "126동",
+        "common": [
+          [
+            "ko",
+            "126동"
+          ]
+        ]
+      },
+      "sources": [
+        {
+          "property": "",
+          "dataset": "OpenStreetMap",
+          "license": "ODbL-1.0",
+          "record_id": "w412953591@4",
+          "update_time": "2025-09-17T10:37:00.000Z",
+          "provider": "osm",
+          "resource": "planet",
+          "version": "2026-08-02T00:00:00.000Z"
+        }
+      ],
+      "height": 65.0,
+      "is_underground": false,
+      "num_floors": 23,
+      "subtype": "residential",
+      "class": "apartments",
+      "has_parts": false,
+      "version": 2,
+      "bbox": {
+        "xmin": 126.99429321289062,
+        "xmax": 126.99463653564453,
+        "ymin": 37.50251388549805,
+        "ymax": 37.502689361572266
+      },
+      "min_height": null,
+      "feature_type": "building",
+      "_seoul": {
+        "district_id": "5056ad90-b154-46b1-a3b1-88140d162432",
+        "height_status": "source-reported-unverified",
+        "height_source_indices": [
+          0
+        ],
+        "boundary_crossing": false,
+        "original_geometry_valid": true
+      }
+    }
+  },
+  "register": {
+    "id": "10231100193383",
+    "parcel_key": "서초구|반포동|land|18|1",
+    "road_key": "서초구|반포대로|275|0|지상",
+    "building_dong": "126동",
+    "height": "65.3",
+    "floors": "23",
+    "households": "44",
+    "main_use": "공동주택",
+    "other_use": "아파트",
+    "source_hash": "3b0e6f15201de87fec94fd3332bf90e59142092777968760cfe501bb2f942406"
+  },
+  "identity": "래미안퍼스티지126동",
+  "basis": "Exact district/road address in official apartment queue; unique Seocho 126동 residential 23F65.3m row, footprint source23F65m located south ofOnePentasacrossSinbanporo. OneBailey126is1Famenityandnotthisshape.",
+  "queueRecords": [
+    {
+      "addresses": [
+        "서울특별시 서초구 반포대로 275"
+      ],
+      "buildings": [],
+      "code": "A13776509",
+      "coverageBasis": {},
+      "district": "서초구",
+      "eligibility": "eligible",
+      "eligibilityBasis": "At least one official apartment-class record has >=400 households; values are never summed.",
+      "expectedResidentialBuildingCount": null,
+      "householdDisagreement": false,
+      "householdEvidence": [
+        {
+          "address": "서울특별시 서초구 반포대로 275",
+          "buildingCount": 28,
+          "classification": "아파트",
+          "code": "A13776509",
+          "district": "서초구",
+          "households": 2444,
+          "nameKo": "래미안퍼스티지",
+          "sourceCoordinate": [
+            126.9997222,
+            37.502999
+          ],
+          "sourceId": "oa-15818",
+          "sourceRow": 1869
+        },
+        {
+          "address": "서울특별시 서초구 반포대로 275",
+          "buildingCount": 28,
+          "classification": "아파트",
+          "code": "A13776509",
+          "district": "서초구",
+          "households": 2444,
+          "nameKo": "래미안퍼스티지",
+          "sourceCoordinate": null,
+          "sourceId": "kapt-weekly",
+          "sourceRow": 2722
+        }
+      ],
+      "householdValues": [
+        2444
+      ],
+      "legacyAssetIds": [
+        "apt-a13776509"
+      ],
+      "legacyMeaning": "Fallback/template inventory only; no visual completion credit.",
+      "location": {
+        "coordinate": [
+          126.9997222,
+          37.502999
+        ],
+        "issues": [],
+        "method": "official_reported_coordinate",
+        "note": "Previously audited display location by exact management code; not a fresh site-boundary or per-building survey.",
+        "sourceUrl": "https://data.seoul.go.kr/dataList/OA-15818/S/1/datasetView.do",
+        "status": "official_reported",
+        "validationDate": "2026-09-10"
+      },
+      "modelStatus": "not_started",
+      "nameKo": "래미안퍼스티지",
+      "officialBuildingCountValues": [
+        28
+      ],
+      "physicalSiteId": null,
+      "physicalSiteMappingStatus": "unresolved",
+      "sameAddressManagementCodes": [],
+      "sameAddressMeaning": "Review candidates only; never merged or summed automatically.",
+      "verifiedBespokeBuildingCount": 0
+    }
+  ],
+  "ownership": "ExcludedfromallOnePentasnewassetclaims; parentownscompoundpartition"
+}
