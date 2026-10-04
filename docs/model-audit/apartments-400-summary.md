@@ -58,6 +58,7 @@ K-apt 서울 자료의 123코드에는 복수 주소 등에 따른 추가 147행
 | A13704104 | 반포자이 | complete_residential_buildings | 44 / 44 | 44 |
 | A13776301 | 반포리체 | complete_residential_buildings | 9 / 9 | 9 |
 | A13776509 | 래미안퍼스티지 | complete_residential_buildings | 28 / 28 | 28 |
+| A13805002 | 올림픽선수기자촌아파트 | partial | 53 / 122 | 53 |
 | A13820201 | 올림픽훼밀리타운 | partial | 9 / 56 | 9 |
 | A13822001 | 잠실레이크팰리스 | partial | 29 / 35 | 29 |
 | A13822002 | 잠실동트리지움 | partial | 45 / 46 | 45 |
