@@ -1,0 +1,24 @@
+[
+  {
+    "tool": "execute_blender_code",
+    "port": 9878,
+    "isError": false,
+    "content": [
+      {
+        "type": "text",
+        "text": "Code executed successfully: Info: Saved as \"headless-initial.blend\"\nARTIFACT:facade-regions.json:[\n  {\n    \"edge\": 0,\n    \"length_m\": 9.870624592659928,\n    \"role\": \"broad pale endwall\",\n    \"basis\": \"own L-plan edge length inference; aerial does not identify306\"\n  },\n  {\n    \"edge\": 1,\n    \"length_m\": 35.4631734304405,\n    \"role\": \"long charcoal window facade with slender pale mullions\",\n    \"basis\": \"own L-plan edge length inference; aerial does not identify306\"\n  },\n  {\n    \"edge\": 2,\n    \"length_m\": 48.28259029711704,\n    \"role\": \"long charcoal window facade with slender pale mullions\",\n    \"basis\": \"own L-plan edge length inference; aerial does not identify306\"\n  },\n  {\n    \"edge\": 3,\n    \"length_m\": 12.701432661195167,\n    \"role\": \"broad pale endwall\",\n    \"basis\": \"own L-plan edge length inference; aerial does not identify306\"\n  },\n  {\n    \"edge\": 4,\n    \"length_m\": 58.14799266179988,\n    \"role\": \"long charcoal window facade with slender pale mullions\",\n    \"basis\": \"own L-plan edge length inference; aerial does not identify306\"\n  },\n  {\n    \"edge\": 5,\n    \"length_m\": 48.17781930340403,\n    \"role\": \"long charcoal window facade with slender pale mullions\",\n    \"basis\": \"own L-plan edge length inference; aerial does not identify306\"\n  }\n]\nARTIFACT:optimization-proof.json:{\n  \"mesh_count\": 6,\n  \"no_decimation\": true,\n  \"material_batched\": true\n}\n10:26:34 | INFO: Starting glTF 2.0 export\n10:26:34 | INFO: Extracting primitive: Foreon306 editable Foreon306 light grey solid wall\n10:26:34 | INFO: Primitives created: 1\n10:26:34 | INFO: Extracting primitive: Foreon306 editable Foreon306 broad white facade frames\n10:26:34 | INFO: Primitives created: 1\n10:26:34 | INFO: Extracting primitive: Foreon306 editable Foreon306 broad white end walls\n10:26:34 | INFO: Primitives created: 1\n10:26:34 | INFO: Extracting primitive: Foreon306 editable Foreon306 muted ground wall\n10:26:34 | INFO: Primitives created: 1\n10:26:34 | INFO: Extracting primitive: Foreon306 editable Foreon306 charcoal window bank\n10:26:34 | INFO: Primitives created: 1\n10:26:34 | INFO: Extracting primitive: Foreon306 editable Foreon306 turquoise balcony glazing\n10:26:34 | INFO: Primitives created: 1\n10:26:34 | INFO: Finished glTF 2.0 export in 0.0164029598236084 s\n\nARTIFACT:validation.json:{\n  \"source_id\": \"9f15403b-f462-46b0-9320-4df70f516f0b\",\n  \"floors\": 35,\n  \"register_height_m\": 104.3,\n  \"osm_height_m\": null,\n  \"height_status\": \"Registered104.3m; source height missing\",\n  \"uniform_height_assumption\": true,\n  \"bounds_xyz\": [\n    [\n      -39.905582427978516,\n      -26.23325538635254,\n      0.0\n    ],\n    [\n      30.015827178955078,\n      23.041879653930664,\n      104.30000305175781\n    ]\n  ],\n  \"mesh_count\": 6,\n  \"image_nodes\": 0,\n  \"finite\": true\n}\nInfo: Saved as \"olympic-park-foreon-306-authored.blend\"\nARTIFACT:scene-preservation.json:{\"equal\": true, \"before\": {\"Codex MCP Workspace\": []}, \"after\": {\"Codex MCP Workspace\": []}}\n"
+      }
+    ]
+  },
+  {
+    "tool": "execute_blender_code",
+    "port": 9878,
+    "isError": false,
+    "content": [
+      {
+        "type": "text",
+        "text": "Code executed successfully: ARTIFACT:standalone-validation.json:{\"scenes\": 1, \"source_id\": \"9f15403b-f462-46b0-9320-4df70f516f0b\", \"register_id\": \"1000000000000007276793\", \"floors\": 35, \"height\": 104.3, \"mesh_count\": 6, \"camera_count\": 4, \"image_nodes\": 0, \"bounds_xyz\": [[-39.905582427978516, -26.23325538635254, 0.0], [30.015827178955078, 23.041879653930664, 104.30000305175781]]}\nInitial scene restored\n"
+      }
+    ]
+  }
+]

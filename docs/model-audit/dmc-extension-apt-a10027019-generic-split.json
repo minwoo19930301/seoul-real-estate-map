@@ -1,0 +1,142 @@
+{
+  "version": 1,
+  "sourceId": "apt-a10027019",
+  "sourceSha256": "9bd4d8bf7d23096aa1f711c1a8677ec934f969c7677c401201d67fc6dcb872be",
+  "sourceTriangles": 2021,
+  "sourceCoordinate": {
+    "lon": 126.9177524,
+    "lat": 37.56998390411787,
+    "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+    "confidence": "source_footprint_unsurveyed"
+  },
+  "groupFootprints": {
+    "apt-a10027019": [
+      "a156934d-0884-420e-ab58-ae4e1d2a0546",
+      "359eebe9-3d0f-4f4e-9bd5-c5925aaec127"
+    ],
+    "fallback-dmc-parkview-xi-extension-130": [
+      "a4d2ec3e-5ad1-4789-8654-8ac9276c9f1a"
+    ]
+  },
+  "ownershipMethod": "Original source-emission indices from byte-exact authoring replay; overlapping historical plans cannot change ownership. Byte-exact archived authoring replay and per-source triangle-signature multiplicity independently checked.",
+  "legacyTrianglesOutsideSourcePolygonInsideItsHull": 8,
+  "legacyTrianglesOutsideSourceConvexHull": 0,
+  "limits": [
+    "Only archived indexed triangles, material attributes and terrain anchors are partitioned; no photo-modeling credit.",
+    "One joint partition for shared historical compounds spanning 33additional DMC Parkview Xi targets; six published DMC buildings remain unchanged; unmatched and unrelated sources remain unchanged.",
+    "All unnamed, unmatched and unrelated source buildings remain in unchanged-shape residuals. Original convex-hull approximations remain archived."
+  ],
+  "outputs": [
+    {
+      "id": "apt-a10027019",
+      "model": "generic-corrections/apt-a10027019.glb",
+      "sha256": "5271544c36aaa4c08dbbdc12b08d7180ca0c930f2cab3c523189fd2e42d427f4",
+      "bytes": 86724,
+      "triangles": 1357,
+      "bounds": {
+        "min": [
+          -79.37437438964844,
+          0.0,
+          -10.708497047424316
+        ],
+        "max": [
+          32.76089859008789,
+          60.0,
+          87.18553161621094
+        ]
+      },
+      "footprintIds": [
+        "a156934d-0884-420e-ab58-ae4e1d2a0546",
+        "359eebe9-3d0f-4f4e-9bd5-c5925aaec127"
+      ]
+    },
+    {
+      "id": "fallback-dmc-parkview-xi-extension-130",
+      "model": "generic-corrections/fallback-dmc-parkview-xi-extension-130.glb",
+      "sha256": "352dbe856946eee5d8ae9f139af44bacf38011f9a1eb520eb2302f5958f15c4b",
+      "bytes": 44292,
+      "triangles": 664,
+      "bounds": {
+        "min": [
+          36.007869720458984,
+          0.0,
+          -87.18553161621094
+        ],
+        "max": [
+          79.37437438964844,
+          69.0,
+          -43.53676223754883
+        ]
+      },
+      "footprintIds": [
+        "a4d2ec3e-5ad1-4789-8654-8ac9276c9f1a"
+      ]
+    }
+  ],
+  "sourceAuthoringReplay": {
+    "byteExact": true,
+    "sha256": "9bd4d8bf7d23096aa1f711c1a8677ec934f969c7677c401201d67fc6dcb872be",
+    "provenancePath": "docs/APARTMENT_100_PROVENANCE.json",
+    "frozenAssetProvenanceSha256": "ca588dafd7f6867729f363f08043cca5dbb4379f57b613785e2c711260fd2195",
+    "authoringAnchor": [
+      126.917815537,
+      37.569890023
+    ],
+    "generator": "scripts/build_district_landmarks.py",
+    "generatorSha256": "35dce09a4a4c71a871d4d2e03a8d2ae32e68a5fd0701ce1a0be643ef7d0e4712",
+    "triangleRangesBySource": [
+      {
+        "sourceId": "359eebe9-3d0f-4f4e-9bd5-c5925aaec127",
+        "triangleRangesByMaterial": [
+          [
+            0,
+            16
+          ],
+          [
+            0,
+            756
+          ],
+          [
+            0,
+            4
+          ]
+        ]
+      },
+      {
+        "sourceId": "a156934d-0884-420e-ab58-ae4e1d2a0546",
+        "triangleRangesByMaterial": [
+          [
+            16,
+            70
+          ],
+          [
+            756,
+            1260
+          ],
+          [
+            4,
+            27
+          ]
+        ]
+      },
+      {
+        "sourceId": "a4d2ec3e-5ad1-4789-8654-8ac9276c9f1a",
+        "triangleRangesByMaterial": [
+          [
+            70,
+            86
+          ],
+          [
+            1260,
+            1904
+          ],
+          [
+            27,
+            31
+          ]
+        ]
+      }
+    ],
+    "rangeConvention": "Half-open [start,end) original indexed triangle ranges, one range per material; original vertex packing retains emission order."
+  }
+}

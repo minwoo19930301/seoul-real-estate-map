@@ -1,4 +1,5 @@
 import type { CityModelAsset } from './city-models.ts';
+import { validModelInstance } from './shared-models.ts';
 
 export interface ReferencePlace {
   id: string; name: string; subtitle: string;
@@ -9,6 +10,7 @@ export interface ReferencePlace {
 export interface ReferenceManifest {
   version: 1; assets: CityModelAsset[]; places: ReferencePlace[];
   preservedLandmarkFootprints?: Record<string, string[]>;
+  excludedRepresentatives?: { assetId: string; protectedFootprintIds: string[] }[];
 }
 
 export function referenceManifest(value: unknown, preserved: CityModelAsset[]): ReferenceManifest {
@@ -33,11 +35,19 @@ export function referenceManifest(value: unknown, preserved: CityModelAsset[]): 
       || !asset.coordinate || !Number.isFinite(asset.coordinate.lon) || !Number.isFinite(asset.coordinate.lat)
       || Math.abs(asset.coordinate.lon) > 180 || Math.abs(asset.coordinate.lat) > 90 || !Number.isFinite(asset.yawDegFromEast)
       || asset.groundOffsetM !== undefined && (!Number.isFinite(asset.groundOffsetM) || Math.abs(asset.groundOffsetM) > 100)
+      || !validModelInstance(asset.modelInstance)
       || !Array.isArray(asset.footprintIds) || asset.footprintIds.some(id => typeof id !== 'string' || !id)
       || !Array.isArray(asset.supersedes) || asset.supersedes.some(id => typeof id !== 'string' || !id || id === asset.id)) {
       throw Error('개별 건물 모델의 위치 또는 출처가 올바르지 않습니다.');
     }
     ids.add(asset.id);
+  }
+  const available = new Map([...preserved, ...data.assets].map(asset => [asset.id, asset]));
+  for (const asset of data.assets) if (asset.modelInstance) {
+    const source = available.get(asset.modelInstance.sourceAssetId);
+    if (!source || source.id === asset.id || source.modelInstance || source.model !== asset.model
+      || source.sha256 !== asset.sha256 || source.dimensions.some((n, i) => n !== asset.modelInstance!.sourceDimensions[i])
+      || asset.yawDegFromEast !== 0) throw Error('복제 모델의 대표 원본 연결이 올바르지 않습니다.');
   }
   const generations = new Map(data.assets.map(asset => [asset.id, asset]));
   const incoming = new Map(data.assets.map(asset => [asset.id, 0]));
@@ -70,16 +80,24 @@ export function referenceManifest(value: unknown, preserved: CityModelAsset[]): 
 /** Coarse models never take ownership from existing authored reconstructions. */
 export function representativeManifest(value: unknown, preserved: CityModelAsset[], protectedModels: CityModelAsset[]): ReferenceManifest {
   const manifest = referenceManifest(value, preserved);
-  const footprints = new Set(protectedModels.flatMap(asset => asset.footprintIds ?? []));
+  const protectedFootprints = new Set(protectedModels.flatMap(asset => asset.footprintIds ?? []));
+  const footprints = new Set<string>();
+  const assets: CityModelAsset[] = [];
+  const excludedRepresentatives: NonNullable<ReferenceManifest['excludedRepresentatives']> = [];
   if (manifest.places.length) throw Error('Representative models cannot replace search places.');
   for (const asset of manifest.assets) {
     const record = (asset as CityModelAsset & { sourceRecord?: { method?: string; completionCredit?: boolean } }).sourceRecord;
     if (record?.method !== 'representative-photo-informed' || record.completionCredit !== false
       || asset.supersedes?.length || !asset.footprintIds?.length) throw Error('Invalid representative provenance.');
     for (const id of asset.footprintIds) {
-      if (footprints.has(id)) throw Error('Representative footprint ownership overlaps a preserved model.');
+      if (footprints.has(id)) throw Error('Representative footprint ownership overlaps another representative.');
       footprints.add(id);
     }
+    const protectedFootprintIds = asset.footprintIds.filter(id => protectedFootprints.has(id));
+    // Compound GLBs cannot relinquish individual buildings without retaining their visible geometry.
+    if (protectedFootprintIds.length) excludedRepresentatives.push({ assetId: asset.id, protectedFootprintIds });
+    else assets.push(asset);
   }
-  return manifest;
+  if (excludedRepresentatives.length) console.warn('Authored models take precedence over overlapping representative compounds.', excludedRepresentatives);
+  return { ...manifest, assets, excludedRepresentatives };
 }
