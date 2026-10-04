@@ -1,0 +1,191 @@
+{
+  "status": "passed",
+  "node": {
+    "passed": 13797,
+    "failed": 0
+  },
+  "python": {
+    "heightGeometryTests": 14,
+    "publisherTests": 11,
+    "coverageQueueTests": 18
+  },
+  "browser": {
+    "passed": 5,
+    "scenarios": [
+      {
+        "name": "103-raw-restoration",
+        "wanted": [
+          "bespoke-seoulforest-riverview-xi-101",
+          "bespoke-seoulforest-riverview-xi-102",
+          "bespoke-seoulforest-riverview-xi-104",
+          "bespoke-seoulforest-riverview-xi-105",
+          "bespoke-seoulforest-riverview-xi-106",
+          "bespoke-seoulforest-riverview-xi-107"
+        ],
+        "failedIds": [
+          "bespoke-seoulforest-riverview-xi-103",
+          "fallback-seoulforest-riverview-xi-103"
+        ],
+        "owned": [
+          "5ba4e7cc-86ba-43c7-ab34-7d4148cca4c9",
+          "1ee5f9ec-4214-4bd7-801e-b61d23800da5",
+          "2af14837-dd2d-4068-8276-74d113de5300",
+          "37b58195-d459-4e87-9c35-5ecac8af5ea7",
+          "163abb07-dfb6-4a06-aef2-472dc5d9b6c3",
+          "ab038c15-50fa-4d38-bf11-ea288737dbb2"
+        ],
+        "raw": [
+          "1d3196a7-aab7-45d5-a974-0956a2fe372c"
+        ],
+        "errors": []
+      },
+      {
+        "name": "all7-fallbacks",
+        "wanted": [
+          "fallback-seoulforest-riverview-xi-101",
+          "fallback-seoulforest-riverview-xi-102",
+          "fallback-seoulforest-riverview-xi-103",
+          "fallback-seoulforest-riverview-xi-104",
+          "fallback-seoulforest-riverview-xi-105",
+          "fallback-seoulforest-riverview-xi-106",
+          "fallback-seoulforest-riverview-xi-107"
+        ],
+        "failedIds": [
+          "bespoke-seoulforest-riverview-xi-101",
+          "bespoke-seoulforest-riverview-xi-102",
+          "bespoke-seoulforest-riverview-xi-103",
+          "bespoke-seoulforest-riverview-xi-104",
+          "bespoke-seoulforest-riverview-xi-105",
+          "bespoke-seoulforest-riverview-xi-106",
+          "bespoke-seoulforest-riverview-xi-107"
+        ],
+        "owned": [
+          "5ba4e7cc-86ba-43c7-ab34-7d4148cca4c9",
+          "1ee5f9ec-4214-4bd7-801e-b61d23800da5",
+          "1d3196a7-aab7-45d5-a974-0956a2fe372c",
+          "2af14837-dd2d-4068-8276-74d113de5300",
+          "37b58195-d459-4e87-9c35-5ecac8af5ea7",
+          "163abb07-dfb6-4a06-aef2-472dc5d9b6c3",
+          "ab038c15-50fa-4d38-bf11-ea288737dbb2"
+        ],
+        "raw": [],
+        "errors": []
+      },
+      {
+        "name": "mixed-independent-fallbacks",
+        "wanted": [
+          "bespoke-seoulforest-riverview-xi-101",
+          "fallback-seoulforest-riverview-xi-102",
+          "bespoke-seoulforest-riverview-xi-103",
+          "bespoke-seoulforest-riverview-xi-104",
+          "bespoke-seoulforest-riverview-xi-105",
+          "fallback-seoulforest-riverview-xi-106",
+          "bespoke-seoulforest-riverview-xi-107"
+        ],
+        "failedIds": [
+          "bespoke-seoulforest-riverview-xi-102",
+          "bespoke-seoulforest-riverview-xi-106"
+        ],
+        "owned": [
+          "5ba4e7cc-86ba-43c7-ab34-7d4148cca4c9",
+          "1ee5f9ec-4214-4bd7-801e-b61d23800da5",
+          "1d3196a7-aab7-45d5-a974-0956a2fe372c",
+          "2af14837-dd2d-4068-8276-74d113de5300",
+          "37b58195-d459-4e87-9c35-5ecac8af5ea7",
+          "163abb07-dfb6-4a06-aef2-472dc5d9b6c3",
+          "ab038c15-50fa-4d38-bf11-ea288737dbb2"
+        ],
+        "raw": [],
+        "errors": []
+      },
+      {
+        "name": "normal",
+        "wanted": [
+          "bespoke-seoulforest-riverview-xi-101",
+          "bespoke-seoulforest-riverview-xi-102",
+          "bespoke-seoulforest-riverview-xi-103",
+          "bespoke-seoulforest-riverview-xi-104",
+          "bespoke-seoulforest-riverview-xi-105",
+          "bespoke-seoulforest-riverview-xi-106",
+          "bespoke-seoulforest-riverview-xi-107"
+        ],
+        "failedIds": [],
+        "owned": [
+          "5ba4e7cc-86ba-43c7-ab34-7d4148cca4c9",
+          "1ee5f9ec-4214-4bd7-801e-b61d23800da5",
+          "1d3196a7-aab7-45d5-a974-0956a2fe372c",
+          "2af14837-dd2d-4068-8276-74d113de5300",
+          "37b58195-d459-4e87-9c35-5ecac8af5ea7",
+          "163abb07-dfb6-4a06-aef2-472dc5d9b6c3",
+          "ab038c15-50fa-4d38-bf11-ea288737dbb2"
+        ],
+        "raw": [],
+        "errors": []
+      },
+      {
+        "name": "representative-fallback",
+        "wanted": [
+          "bespoke-seoulforest-riverview-xi-101",
+          "bespoke-seoulforest-riverview-xi-102",
+          "bespoke-seoulforest-riverview-xi-103",
+          "fallback-seoulforest-riverview-xi-104",
+          "bespoke-seoulforest-riverview-xi-105",
+          "bespoke-seoulforest-riverview-xi-106",
+          "bespoke-seoulforest-riverview-xi-107"
+        ],
+        "failedIds": [
+          "bespoke-seoulforest-riverview-xi-104"
+        ],
+        "owned": [
+          "5ba4e7cc-86ba-43c7-ab34-7d4148cca4c9",
+          "1ee5f9ec-4214-4bd7-801e-b61d23800da5",
+          "1d3196a7-aab7-45d5-a974-0956a2fe372c",
+          "2af14837-dd2d-4068-8276-74d113de5300",
+          "37b58195-d459-4e87-9c35-5ecac8af5ea7",
+          "163abb07-dfb6-4a06-aef2-472dc5d9b6c3",
+          "ab038c15-50fa-4d38-bf11-ea288737dbb2"
+        ],
+        "raw": [],
+        "errors": []
+      }
+    ]
+  },
+  "build": "passed",
+  "renderReview": {
+    "models": 7,
+    "actualMCPViews": 28,
+    "numberedPhoto": 104
+  },
+  "geometry": {
+    "fullOwnGradeAndRoofDeck": true,
+    "registeredMaximumHeightAndFloors": true,
+    "maximumProjectionM": 0.24000154927526976,
+    "raisedRoofProjectionM": 0,
+    "centralRecess": "Actual inward mesh recess with independently ray-checked staggered boxbands."
+  },
+  "preservation": {
+    "baseline": "ed3a96c7867492ac57b16550ef5bb4e13ce50601",
+    "public/models/manifest.json": 13607,
+    "public/models/reference-manifest.json": 125,
+    "public/models/bespoke-manifest.json": 229,
+    "priorCorrections": 16,
+    "unchangedPriorGLBAndBlendFiles": 113765
+  },
+  "fallback": {
+    "sourceTriangles": 8017,
+    "byteExactReplay": true,
+    "perSourceTriangleSignaturesConserved": true,
+    "inheritedHullTriangles": 10,
+    "maximumInheritedProjectionM": 1.4969785139157485
+  },
+  "coverage": {
+    "eligibleManagementCodes": 1417,
+    "completeManagementCodes": 22,
+    "representativeInferredBuildingCount": 158
+  },
+  "limitations": [
+    "Photo identifies104 only; sibling facades, compassorientation and hiddenfaces inferred.",
+    "Uniform registered maximumheight assumed because no source childparts exist.",
+    "Roofdatum,colors,windowspacing,recess and boxband dimensions unmeasured."
+  ]
+}

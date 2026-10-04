@@ -5,21 +5,26 @@ import crypto from 'node:crypto';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { referenceManifest } from '../src/reference-models.ts';
+import { applyModelInstance } from '../src/shared-models.ts';
 const json=p=>JSON.parse(fs.readFileSync(p,'utf8'));
 const sha=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
 const legacy=[...json('public/models/manifest.json').assets,...json('public/models/reference-manifest.json').assets];
 const manifest=referenceManifest(json('public/models/bespoke-manifest.json'),legacy);
 const evidence=json('docs/model-audit/published-bespoke.json');
 const cache=new Map();
+const templates=new Map();
 async function scene(id) {
   if(cache.has(id))return cache.get(id);
   const a=manifest.assets.find(a=>a.id===id);assert.ok(a,id+' published');
-  const b=fs.readFileSync('public/models/'+a.model);
-  const g=await new GLTFLoader().parseAsync(b.buffer.slice(b.byteOffset,b.byteOffset+b.byteLength),'');
-  cache.set(id,g.scene);return g.scene;
+  if(!templates.has(a.model)){
+    const b=fs.readFileSync('public/models/'+a.model);
+    templates.set(a.model,(await new GLTFLoader().parseAsync(b.buffer.slice(b.byteOffset,b.byteOffset+b.byteLength),'')).scene);
+  }
+  const model=templates.get(a.model).clone(true);applyModelInstance(model,a.modelInstance);
+  cache.set(id,model);return model;
 }
 function meshes(s,pattern) {const r=[];s.traverse(o=>{if(o.isMesh&&pattern.test(o.name))r.push(o);});return r;}
-function bounds(objects) {const b=new THREE.Box3();for(const o of objects)b.union(new THREE.Box3().setFromObject(o));return b;}
+function bounds(objects) {const b=new THREE.Box3();for(const o of objects)b.union(new THREE.Box3().setFromObject(o,true));return b;}
 
 test('reviewed Blender exports retain geographic anchors, source evidence, editable scenes and valid geometry',async()=>{
   const deployment=json('public/data/deployment-assets.json').files;
@@ -37,7 +42,7 @@ test('reviewed Blender exports retain geographic anchors, source evidence, edita
     const sx=111319.49079327358*Math.cos(a.coordinate.lat*Math.PI/180),sy=111319.49079327358;
     [a.coordinate.lon+b.min.x/sx,a.coordinate.lat-b.max.z/sy,a.coordinate.lon+b.max.x/sx,a.coordinate.lat-b.min.z/sy].forEach((v,i)=>assert.ok(Math.abs(v-a.geoBounds[i])<1e-8,a.id+' anchored geographic bounds'));
     for(const m of meshes(s,/.*/)){
-      assert.ok(m.matrixWorld.equals(new THREE.Matrix4()),a.id+' baked transform');
+      assert.ok(m.matrixWorld.equals(a.modelInstance ? new THREE.Matrix4().fromArray(a.modelInstance.matrix) : new THREE.Matrix4()),a.id+' source or instance transform');
       const p=m.geometry.attributes.position,n=m.geometry.attributes.normal;assert.equal(p.count,n.count);
       for(let i=0;i<p.count;i++){assert.ok([p.getX(i),p.getY(i),p.getZ(i)].every(Number.isFinite));assert.ok(Math.abs(Math.hypot(n.getX(i),n.getY(i),n.getZ(i))-1)<.01);}
     }
