@@ -6,4 +6,4 @@ The reference photograph identifies228–231 and227, not109. Pale blue endwall s
 
 Registered height0 and source heightnull remain unknown.45m is an explicit15floor x3m estimate; prior fallback model height45.75m remains archived and is not treated as a measurement. Shared instances use the same explicit storey estimate.
 
-Actual Blender MCP authoring, four-view review, independent saved-file reload and scene restore are recorded. Validation results are updated after integration with historical PRs.
+Actual Blender MCP authoring, four-view review, independent saved-file reload and scene restore are recorded. Standalone three browser cases and integrated three cases passed, including restoration of the original2D footprint when both shared GLB and fallback fail. Full integration validation is recorded in2026-10-04-pr-integration.md.
