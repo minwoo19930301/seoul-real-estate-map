@@ -1,0 +1,24 @@
+[
+  {
+    "tool": "execute_blender_code",
+    "port": 9878,
+    "isError": false,
+    "content": [
+      {
+        "type": "text",
+        "text": "Code executed successfully: Info: Saved as \"headless-initial.blend\"\nARTIFACT:facade-regions.json:[\n  {\n    \"edge\": 0,\n    \"role\": \"narrow balcony slots with shallow service core\",\n    \"basis\": \"own rectangle axis inference,101not identified in2018photo\"\n  },\n  {\n    \"edge\": 1,\n    \"role\": \"broad endwall and sparse small apertures\",\n    \"basis\": \"own rectangle axis inference,101not identified in2018photo\"\n  },\n  {\n    \"edge\": 2,\n    \"role\": \"narrow balcony slots with shallow service core\",\n    \"basis\": \"own rectangle axis inference,101not identified in2018photo\"\n  },\n  {\n    \"edge\": 3,\n    \"role\": \"broad endwall and sparse small apertures\",\n    \"basis\": \"own rectangle axis inference,101not identified in2018photo\"\n  }\n]\nARTIFACT:optimization-proof.json:{\n  \"mesh_count\": 6,\n  \"no_decimation\": true,\n  \"material_batched\": true\n}\n10:25:12 | INFO: Starting glTF 2.0 export\n10:25:12 | INFO: Extracting primitive: SK101 editable SK101 light grey solid wall\n10:25:12 | INFO: Primitives created: 1\n10:25:12 | INFO: Extracting primitive: SK101 editable SK101 broad white facade frames\n10:25:12 | INFO: Primitives created: 1\n10:25:12 | INFO: Extracting primitive: SK101 editable SK101 off white walls\n10:25:12 | INFO: Primitives created: 1\n10:25:12 | INFO: Extracting primitive: SK101 editable SK101 muted beige lower walls\n10:25:12 | INFO: Primitives created: 1\n10:25:12 | INFO: Extracting primitive: SK101 editable SK101 narrow charcoal balcony slots\n10:25:12 | INFO: Primitives created: 1\n10:25:12 | INFO: Extracting primitive: SK101 editable SK101 turquoise balcony glazing\n10:25:12 | INFO: Primitives created: 1\n10:25:12 | INFO: Finished glTF 2.0 export in 0.013839006423950195 s\n\nARTIFACT:validation.json:{\n  \"source_id\": \"b2e3f6f9-3ee5-4bc1-a714-6bc5c350cefe\",\n  \"floors\": 25,\n  \"register_height_m\": 67.9,\n  \"osm_height_m\": 68.0,\n  \"height_status\": \"Registered67.9m; OSM68m retained separately\",\n  \"uniform_height_assumption\": true,\n  \"bounds_xyz\": [\n    [\n      -11.470930099487305,\n      -10.118915557861328,\n      0.0\n    ],\n    [\n      11.470930099487305,\n      10.118915557861328,\n      67.9000015258789\n    ]\n  ],\n  \"mesh_count\": 6,\n  \"image_nodes\": 0,\n  \"finite\": true\n}\nInfo: Saved as \"sk-bukhansan-city-101-authored.blend\"\nARTIFACT:scene-preservation.json:{\"equal\": true, \"before\": {\"Codex MCP Workspace\": []}, \"after\": {\"Codex MCP Workspace\": []}}\n"
+      }
+    ]
+  },
+  {
+    "tool": "execute_blender_code",
+    "port": 9878,
+    "isError": false,
+    "content": [
+      {
+        "type": "text",
+        "text": "Code executed successfully: ARTIFACT:standalone-validation.json:{\"scenes\": 1, \"source_id\": \"b2e3f6f9-3ee5-4bc1-a714-6bc5c350cefe\", \"register_id\": \"1010114402\", \"floors\": 25, \"height\": 67.9, \"mesh_count\": 6, \"camera_count\": 4, \"image_nodes\": 0, \"bounds_xyz\": [[-11.470930099487305, -10.118915557861328, 0.0], [11.470930099487305, 10.118915557861328, 67.9000015258789]]}\nInitial scene restored\n"
+      }
+    ]
+  }
+]

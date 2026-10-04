@@ -1,0 +1,109 @@
+{
+  "checkedOn": "2026-09-22",
+  "baselineCommit": "e9671a393adaac1639309adf895a1e9c6288dbba",
+  "newPhysicalBuildings": 54,
+  "newRepresentatives": 0,
+  "newSharedCopies": 54,
+  "placementRevisions": 1,
+  "bespokeAssetRecords": 965,
+  "currentSharedCopies": 521,
+  "representativeInferredBuildingCount": 882,
+  "completeManagementCodes": 34,
+  "eligibleManagementCodes": 1417,
+  "node": {
+    "passed": 13910,
+    "failed": 0
+  },
+  "python": {
+    "passed": 74,
+    "failed": 0
+  },
+  "browser": {
+    "passed": 25,
+    "scope": "Eight complex extensions normal/shared404/shared+fallback404; Arteon326 revision draws with archived copy hidden. Revision scenario repeated at1xterrain for published screenshot."
+  },
+  "build": "passed",
+  "buildWarning": "generic-corrections chunk3155.32KB uncompressed and242.27KB gzip exceeds1800KB threshold",
+  "preservation": {
+    "baseline": "e9671a393adaac1639309adf895a1e9c6288dbba",
+    "public/models/manifest.json": 13607,
+    "public/models/reference-manifest.json": 125,
+    "public/models/bespoke-manifest.json": 910,
+    "priorCorrections": 52,
+    "unchangedPriorGLBAndBlendFiles": 114770
+  },
+  "placements": "shared-instance-placement-check.json",
+  "placementRevision": "godeok-arteon-placement-v2.json",
+  "sourcePartitions": {
+    "trianglesPreserved": 100311,
+    "residualSourcesPreserved": 108,
+    "bindingSources": 54,
+    "priorCorrectionRecordsPreserved": 52
+  },
+  "complexes": [
+    {
+      "site": "godeok-raemian-hillstate",
+      "name": "고덕래미안힐스테이트",
+      "added": 18,
+      "identified": 46,
+      "official": 51
+    },
+    {
+      "site": "mapo-raemian-prugio",
+      "name": "마포래미안푸르지오",
+      "added": 10,
+      "identified": 44,
+      "official": 51
+    },
+    {
+      "site": "gaepo-raemian-forest",
+      "name": "개포래미안포레스트",
+      "added": 3,
+      "identified": 30,
+      "official": 31
+    },
+    {
+      "site": "raemian-blesstige",
+      "name": "래미안블레스티지",
+      "added": 2,
+      "identified": 23,
+      "official": 23
+    },
+    {
+      "site": "dh-honor-hills",
+      "name": "디에이치아너힐즈",
+      "added": 2,
+      "identified": 23,
+      "official": 23
+    },
+    {
+      "site": "godeok-arteon",
+      "name": "고덕아르테온",
+      "added": 16,
+      "identified": 41,
+      "official": 41
+    },
+    {
+      "site": "godeok-central-ipark",
+      "name": "고덕센트럴아이파크",
+      "added": 1,
+      "identified": 19,
+      "official": 19
+    },
+    {
+      "site": "raemian-la-classy",
+      "name": "래미안라클래시",
+      "added": 2,
+      "identified": 7,
+      "official": 7
+    }
+  ],
+  "limitations": [
+    "One already-reviewed representativepercomplex isshared; individual floor/facade patterns are repeated and not individually reconstructed.",
+    "Blesstige201 source17F/51m differs from registered8F/25.2m;Honor314 source10F differs from registered20F/64.45m. Rawfacts retained and newcopy overallheights use register.",
+    "Named OSM boundaries are not cadastral survey. Duplicate/unmatchedsources not filled byguess.",
+    "Hillstate46/51,Mapo44/51,Forest30/31 remainpartial.",
+    "Geometrychecker includesall MultiPolygonparts/holes; exacttargetshapeand ornaments/externalsite neighbors notcertified."
+  ],
+  "publication": "PRonly; no merge or deployment"
+}

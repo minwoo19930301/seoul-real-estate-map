@@ -1,0 +1,67 @@
+{
+  "file": "/Users/hyemini/Documents/Codex/2026-09-21/seoul-real-estate-map/data/model-source/bespoke/acro-source-parts-105-108-110-114-corrected/113/bespoke-acro-riverpark-113.glb",
+  "sha256": "ea5ce44fa1f2e2c0c27f5efec73ec24e84f6ecb60e0cbf0e8c618144e8fed5f5",
+  "triangleCount": 41976,
+  "boundaryToleranceM": 0.6,
+  "heightToleranceM": 0.02,
+  "roofBandM": 2.5,
+  "regions": [
+    {
+      "id": "region-0",
+      "heightM": 46.526315789473685,
+      "areaM2": 368.7693191713484,
+      "interiorAreaM2": 308.092517222175,
+      "overHeightTriangles": 0,
+      "exampleTriangleIndices": [],
+      "uncoveredNearRoofAreaM2": 1.0241117021136452e-14,
+      "roofCoverageRatio": 1.0
+    },
+    {
+      "id": "region-1",
+      "heightM": 68.0,
+      "areaM2": 239.27351649530158,
+      "interiorAreaM2": 195.82070498971606,
+      "overHeightTriangles": 0,
+      "exampleTriangleIndices": [],
+      "uncoveredNearRoofAreaM2": 3.552684368672987e-15,
+      "roofCoverageRatio": 1.0
+    }
+  ],
+  "passed": true,
+  "boundaryAllowanceBasis": "Maximum facade sill projection .53m plus .065m half thickness = .595m; .005m numeric margin. Higher adjacent facade details can occupy this boundary strip; the region interior must have no over-height triangles. Roof cap coverage checked separately at .03m inset.",
+  "strictRoofCoverage": [
+    {
+      "id": "region-0",
+      "roofCoverageRatio": 1.0,
+      "uncoveredAreaM2": 1.9822945862070937e-15
+    },
+    {
+      "id": "region-1",
+      "roofCoverageRatio": 1.0,
+      "uncoveredAreaM2": 1.3322676295501878e-15
+    }
+  ],
+  "tower": "113",
+  "sourceChecks": [
+    {
+      "sourceId": "34623131-3735-3237-A136-666132316462",
+      "sourceGeometryDifferenceM2": 0.0,
+      "floors": 13,
+      "heightMEstimate": 46.526315789473685
+    },
+    {
+      "sourceId": "66383366-6164-3237-B365-663865306161",
+      "sourceGeometryDifferenceM2": 0.0,
+      "floors": 19,
+      "heightMEstimate": 68.0
+    }
+  ],
+  "gradeUnionDifferenceM2": 33.19005522303568,
+  "gradeMissingSourceAreaM2": 1.7957454028916037e-05,
+  "gradeBeyondFacadeBandM2": 0.0,
+  "gradeFacadeBandM": 0.6,
+  "referenceParentHeightM": 68.0,
+  "referenceParentHeightBasis": "Unverified OSM estimate; child metres derived proportionally from source floor counts; no independent measured child metre height",
+  "officialFloors": 19,
+  "osmParentFloors": 19
+}

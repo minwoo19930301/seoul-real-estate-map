@@ -1,0 +1,218 @@
+{
+  "version": 1,
+  "sourceId": "apt-a13410012",
+  "sourceSha256": "b56a5d881463970a57599e304057817e46162e47471a32ebd57c6ab04c328cd5",
+  "sourceTriangles": 5712,
+  "sourceCoordinate": {
+    "lon": 127.1718028,
+    "lat": 37.56126560663475,
+    "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+    "confidence": "source_footprint_unsurveyed"
+  },
+  "groupFootprints": {
+    "apt-a13410012": [
+      "3390aa3c-1a53-46c3-8762-cb179168bb0a",
+      "b1676779-9916-404b-8008-8c7fd7fbc0b4",
+      "1414541a-8403-41f2-b003-8dd6809e6741",
+      "918400d8-96c8-4b03-be51-1ca0b4fc4399",
+      "74076869-dd04-470a-a970-4e56d8f844fb",
+      "3d0caa33-7c6d-45fc-a31b-eda67f4a06a0"
+    ],
+    "fallback-godeok-gracium-107": [
+      "fd6fbc63-2dfa-4b9b-9db2-89a1ae960a52"
+    ]
+  },
+  "ownershipMethod": "Original source-emission indices from byte-exact authoring replay; overlapping historical plans cannot change ownership. Byte-exact archived authoring replay and per-source triangle-signature multiplicity independently checked.",
+  "legacyTrianglesOutsideSourcePolygonInsideItsHull": 188,
+  "legacyTrianglesOutsideSourceConvexHull": 0,
+  "limits": [
+    "Only archived indexed triangles, material attributes and terrain anchors are partitioned; no photo-modeling credit.",
+    "Gracium and Arteon residential sources mixed in one historical asset are separated jointly using independently confirmed addresses and numbered register records.",
+    "All unnamed, unmatched and unrelated source buildings remain in unchanged-shape residuals. Original convex-hull approximations remain archived."
+  ],
+  "outputs": [
+    {
+      "id": "apt-a13410012",
+      "model": "generic-corrections/apt-a13410012.glb",
+      "sha256": "99528ce465e2d0ef0e6a906a1ab417eb373b5d99628482a823311ec0c4959279",
+      "bytes": 297180,
+      "triangles": 5005,
+      "bounds": {
+        "min": [
+          -76.03873443603516,
+          0.0,
+          -110.68436431884766
+        ],
+        "max": [
+          76.03873443603516,
+          47.0,
+          48.034698486328125
+        ]
+      },
+      "footprintIds": [
+        "3390aa3c-1a53-46c3-8762-cb179168bb0a",
+        "b1676779-9916-404b-8008-8c7fd7fbc0b4",
+        "1414541a-8403-41f2-b003-8dd6809e6741",
+        "918400d8-96c8-4b03-be51-1ca0b4fc4399",
+        "74076869-dd04-470a-a970-4e56d8f844fb",
+        "3d0caa33-7c6d-45fc-a31b-eda67f4a06a0"
+      ]
+    },
+    {
+      "id": "fallback-godeok-gracium-107",
+      "model": "generic-corrections/fallback-godeok-gracium-107.glb",
+      "sha256": "e923e47cfa6abd308c30906710dee651d42626f4b7dc077da10e509d8cd1f361",
+      "bytes": 46044,
+      "triangles": 707,
+      "bounds": {
+        "min": [
+          -37.15017318725586,
+          0.0,
+          58.95500946044922
+        ],
+        "max": [
+          8.259516716003418,
+          47.0,
+          110.68436431884766
+        ]
+      },
+      "footprintIds": [
+        "fd6fbc63-2dfa-4b9b-9db2-89a1ae960a52"
+      ]
+    }
+  ],
+  "sourceAuthoringReplay": {
+    "byteExact": true,
+    "sha256": "b56a5d881463970a57599e304057817e46162e47471a32ebd57c6ab04c328cd5",
+    "provenancePath": "docs/APARTMENT_400_PROVENANCE.json",
+    "frozenAssetProvenanceSha256": "7d8dcfed936b8933048919c90f42f80ec4a9937d0538bd06e89a630697887f3a",
+    "authoringAnchor": [
+      127.1714936,
+      37.5616716
+    ],
+    "generator": "scripts/build_district_landmarks.py",
+    "generatorSha256": "35dce09a4a4c71a871d4d2e03a8d2ae32e68a5fd0701ce1a0be643ef7d0e4712",
+    "triangleRangesBySource": [
+      {
+        "sourceId": "1414541a-8403-41f2-b003-8dd6809e6741",
+        "triangleRangesByMaterial": [
+          [
+            0,
+            374
+          ],
+          [
+            0,
+            504
+          ],
+          [
+            0,
+            183
+          ]
+        ]
+      },
+      {
+        "sourceId": "3390aa3c-1a53-46c3-8762-cb179168bb0a",
+        "triangleRangesByMaterial": [
+          [
+            374,
+            544
+          ],
+          [
+            504,
+            1176
+          ],
+          [
+            183,
+            262
+          ]
+        ]
+      },
+      {
+        "sourceId": "3d0caa33-7c6d-45fc-a31b-eda67f4a06a0",
+        "triangleRangesByMaterial": [
+          [
+            544,
+            640
+          ],
+          [
+            1176,
+            1512
+          ],
+          [
+            262,
+            306
+          ]
+        ]
+      },
+      {
+        "sourceId": "74076869-dd04-470a-a970-4e56d8f844fb",
+        "triangleRangesByMaterial": [
+          [
+            640,
+            734
+          ],
+          [
+            1512,
+            1820
+          ],
+          [
+            306,
+            349
+          ]
+        ]
+      },
+      {
+        "sourceId": "918400d8-96c8-4b03-be51-1ca0b4fc4399",
+        "triangleRangesByMaterial": [
+          [
+            734,
+            890
+          ],
+          [
+            1820,
+            2632
+          ],
+          [
+            349,
+            422
+          ]
+        ]
+      },
+      {
+        "sourceId": "b1676779-9916-404b-8008-8c7fd7fbc0b4",
+        "triangleRangesByMaterial": [
+          [
+            890,
+            1264
+          ],
+          [
+            2632,
+            3136
+          ],
+          [
+            422,
+            605
+          ]
+        ]
+      },
+      {
+        "sourceId": "fd6fbc63-2dfa-4b9b-9db2-89a1ae960a52",
+        "triangleRangesByMaterial": [
+          [
+            1264,
+            1346
+          ],
+          [
+            3136,
+            3724
+          ],
+          [
+            605,
+            642
+          ]
+        ]
+      }
+    ],
+    "rangeConvention": "Half-open [start,end) original indexed triangle ranges, one range per material; original vertex packing retains emission order."
+  }
+}

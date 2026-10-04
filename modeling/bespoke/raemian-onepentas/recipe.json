@@ -1,0 +1,59 @@
+{
+  "siteId": "raemian-onepentas",
+  "status": "v8 root independently approved observed facets; partial2of6; hiddenfacades/heightdatum remain estimates",
+  "geometryInput": "authored-input.json",
+  "buildScript": "build.py",
+  "coordinate": {
+    "lon": 126.9937662,
+    "lat": 37.5042453
+  },
+  "officialSite": {
+    "managementCode": "A10022556",
+    "households": 641,
+    "residentialBuildingCount": 6
+  },
+  "phaseCoverage": {
+    "authoredTowers": [
+      "105",
+      "106"
+    ],
+    "wholeComplexComplete": false
+  },
+  "specificMorphology": {
+    "105": "ActualLring;western3ho26F;main1/2ho34Fandcombined3501setback35F;photo-visiblehighservicehead;unconfirmedlowroofboxomitted.",
+    "106": "ActualLring;northeastern1ho29F;central2/western3ho34Fandcombined3502setback35F;specificedge4-5punchedwallflankedbyvisionrecesses+darkcore;edge6-7paleportal/unequalglassbanks;edge7-8opaquenumberedcurves.",
+    "facade": "Bronzefloorribbonswithupturnedcurvesondarkendpanels;opaquefacadepairedsmallhorizontalwindowsbesidebroadglazing;narrowstone/servicewindowsanddeepjoints;numbered106darkstoneendplinth+broadpiloti piers;105occludedbaseconservativelyinterpreted."
+  },
+  "heightDatum": "Exact public register105/106 height112.85m. Adopted as highest residential roof datum; lowarms fromofficialfloorchart withestimated3.2mstorey module/4.05mpiloti. Rooftopservices +5.8m photoestimated, not registered additionalheight.",
+  "uncertainties": [
+    "Official112.85m register height has not been tied to a roof/eaves/mechanical reference drawing. Model uses it as highest residential roof datum and adds photo-estimated servicehead to118.75m; do not label118.75mofficial.",
+    "Lowarm floors confirmed byofficial unit chart; armcut and setback distances estimated within retained footprint, not measuredCAD.",
+    "105/106 north-west and concealed faces are not independently photo-identified; nominal smallservice-window patterns are illustrative inference, explicitly mapped in face-evidence-map.json.",
+    "Unconfirmedserviceboxesonthe26F/29Flowroofsareomitted. Colors and metal/member thicknesses visuallyestimated from2024Junephotos.",
+    "Firstphase only105/106of6;101–104andtheirbridge notmodeledhere;neighborFirstige126unclaimed."
+  ],
+  "withdrawn": [
+    {
+      "claim": "1053ho16F",
+      "reason": "Initialcontactsheetmisread;fullresolutionchartclearly2603=26F."
+    },
+    {
+      "claim": "neighbor126probablyOneBailey",
+      "reason": "Exact23F65.3mpublicregisterandaddressconfirmRaemianFirstige126;OneBailey126is1Famenity."
+    },
+    {
+      "claim": "All105/106groundcornerssplayedmetalbracesfromphoto07",
+      "reason": "Photo07doesnotsecurelyidentify105/106. Removedbracesandusednumbered106photo04plinth;105photo53limitedvisibleevidence."
+    },
+    {
+      "claim": "v5threevisionbankson105/106numberedcurvedendface",
+      "reason": "Expandednumberedphotosandretainedringfaceprojectionshowvisionbanksbelongadjacentedge6-7;numberededge7-8isopaque. V7correctsexactplanes."
+    },
+    {
+      "claim": "Photoestimatedserviceboxeson10526Fand10629Flowroofs",
+      "reason": "Numberedcompletedphotosdonotsecurelyidentifytheselowroofboxes. Omittedinv8ratherthaninventingtheirplacement. Confirmedhighrooftopheadsretainedwithdimensionuncertainty."
+    }
+  ],
+  "noSourcePhotoTextures": true,
+  "frozenPreviousModels": "GalleriaPalace/Empireunchanged"
+}
