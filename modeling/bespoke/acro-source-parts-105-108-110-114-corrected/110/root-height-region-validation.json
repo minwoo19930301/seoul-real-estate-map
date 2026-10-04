@@ -1,0 +1,88 @@
+{
+  "file": "/Users/hyemini/Documents/Codex/2026-09-21/seoul-real-estate-map/data/model-source/bespoke/acro-source-parts-105-108-110-114-corrected/110/bespoke-acro-riverpark-110.glb",
+  "sha256": "53f8551514fd903cff8bd554b472222f4fcc1e55e1b0e02d9a352575b2e5a543",
+  "triangleCount": 58191,
+  "boundaryToleranceM": 0.6,
+  "heightToleranceM": 0.02,
+  "roofBandM": 2.5,
+  "regions": [
+    {
+      "id": "region-0",
+      "heightM": 105.0,
+      "areaM2": 350.85714883379,
+      "interiorAreaM2": 301.18880040310916,
+      "overHeightTriangles": 0,
+      "exampleTriangleIndices": [],
+      "uncoveredNearRoofAreaM2": 0.0,
+      "roofCoverageRatio": 1.0
+    },
+    {
+      "id": "region-1",
+      "heightM": 10.5,
+      "areaM2": 232.14795602812083,
+      "interiorAreaM2": 190.6312928792212,
+      "overHeightTriangles": 0,
+      "exampleTriangleIndices": [],
+      "uncoveredNearRoofAreaM2": 1.5207150358336628e-14,
+      "roofCoverageRatio": 0.9999999999999999
+    },
+    {
+      "id": "region-2",
+      "heightM": 70.0,
+      "areaM2": 350.92330752103396,
+      "interiorAreaM2": 301.25280583630297,
+      "overHeightTriangles": 0,
+      "exampleTriangleIndices": [],
+      "uncoveredNearRoofAreaM2": 0.0,
+      "roofCoverageRatio": 1.0
+    }
+  ],
+  "passed": true,
+  "boundaryAllowanceBasis": "Maximum facade sill projection .53m plus .065m half thickness = .595m; .005m numeric margin. Higher adjacent facade details can occupy this boundary strip; the region interior must have no over-height triangles. Roof cap coverage checked separately at .03m inset.",
+  "strictRoofCoverage": [
+    {
+      "id": "region-0",
+      "roofCoverageRatio": 1.0,
+      "uncoveredAreaM2": 0.0
+    },
+    {
+      "id": "region-1",
+      "roofCoverageRatio": 0.9999999999999999,
+      "uncoveredAreaM2": 2.9058446034730195e-14
+    },
+    {
+      "id": "region-2",
+      "roofCoverageRatio": 1.0,
+      "uncoveredAreaM2": 0.0
+    }
+  ],
+  "tower": "110",
+  "sourceChecks": [
+    {
+      "sourceId": "65333161-3937-3437-A561-386135636131",
+      "sourceGeometryDifferenceM2": 0.0,
+      "floors": 30,
+      "heightMEstimate": 105.0
+    },
+    {
+      "sourceId": "66363238-3231-3662-B832-343165616365",
+      "sourceGeometryDifferenceM2": 0.0,
+      "floors": 3,
+      "heightMEstimate": 10.5
+    },
+    {
+      "sourceId": "historical-way-543323180",
+      "sourceGeometryDifferenceM2": 0.0,
+      "floors": 20,
+      "heightMEstimate": 70.0
+    }
+  ],
+  "gradeUnionDifferenceM2": 40.30556553192107,
+  "gradeMissingSourceAreaM2": 4.564416802948788e-05,
+  "gradeBeyondFacadeBandM2": 0.0,
+  "gradeFacadeBandM": 0.6,
+  "referenceParentHeightM": 105.0,
+  "referenceParentHeightBasis": "Unverified OSM estimate; child metres derived proportionally from source floor counts; no independent measured child metre height",
+  "officialFloors": 30,
+  "osmParentFloors": 31
+}
