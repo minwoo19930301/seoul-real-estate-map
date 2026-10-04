@@ -1,0 +1,192 @@
+{
+  "status": "passed",
+  "localOnlyUntilRemoteCI": "PRpublicationandCItrackedseparately",
+  "node": {
+    "passed": 13787,
+    "failed": 0
+  },
+  "python": {
+    "heightGeometryTests": 11,
+    "publisherTests": 11,
+    "coverageQueueTests": 18
+  },
+  "browser": {
+    "passed": 5,
+    "scenarios": [
+      {
+        "name": "normal",
+        "wanted": [
+          "bespoke-shinbanpo-xi-101",
+          "bespoke-shinbanpo-xi-102",
+          "bespoke-shinbanpo-xi-103",
+          "bespoke-shinbanpo-xi-104",
+          "bespoke-shinbanpo-xi-105",
+          "bespoke-shinbanpo-xi-106",
+          "bespoke-shinbanpo-xi-107"
+        ],
+        "failedIds": [],
+        "ownedSourceIds": [
+          "de4db818-94c3-4061-80d4-53ccd184e9b9",
+          "0efef9ea-4a20-4fe1-b288-6b4c3be8cc93",
+          "73b55cd4-761f-449f-891f-43e41e356652",
+          "e4898d94-59a0-4bfd-9b3d-c3b1f75fdd9e",
+          "02d8a677-37c5-4a31-9083-4e9ccffb21fc",
+          "9a30cdcd-ea97-4bb0-8a9a-bb6765012140",
+          "e5f46109-405e-4bcc-874a-4b303fd14446"
+        ],
+        "rawSourceIds": [],
+        "pageErrors": [],
+        "sevenIndependentOwners": true,
+        "neighborGroupsPresentAsModelsOrOriginalMap": 6
+      },
+      {
+        "name": "representative-fallback",
+        "wanted": [
+          "fallback-shinbanpo-xi-101",
+          "bespoke-shinbanpo-xi-102",
+          "bespoke-shinbanpo-xi-103",
+          "bespoke-shinbanpo-xi-104",
+          "bespoke-shinbanpo-xi-105",
+          "bespoke-shinbanpo-xi-106",
+          "bespoke-shinbanpo-xi-107"
+        ],
+        "failedIds": [
+          "bespoke-shinbanpo-xi-101"
+        ],
+        "ownedSourceIds": [
+          "de4db818-94c3-4061-80d4-53ccd184e9b9",
+          "0efef9ea-4a20-4fe1-b288-6b4c3be8cc93",
+          "73b55cd4-761f-449f-891f-43e41e356652",
+          "e4898d94-59a0-4bfd-9b3d-c3b1f75fdd9e",
+          "02d8a677-37c5-4a31-9083-4e9ccffb21fc",
+          "9a30cdcd-ea97-4bb0-8a9a-bb6765012140",
+          "e5f46109-405e-4bcc-874a-4b303fd14446"
+        ],
+        "rawSourceIds": [],
+        "pageErrors": [],
+        "sevenIndependentOwners": true,
+        "neighborGroupsPresentAsModelsOrOriginalMap": 6
+      },
+      {
+        "name": "mixed-independent-fallbacks",
+        "wanted": [
+          "bespoke-shinbanpo-xi-101",
+          "fallback-shinbanpo-xi-102",
+          "bespoke-shinbanpo-xi-103",
+          "bespoke-shinbanpo-xi-104",
+          "fallback-shinbanpo-xi-105",
+          "bespoke-shinbanpo-xi-106",
+          "bespoke-shinbanpo-xi-107"
+        ],
+        "failedIds": [
+          "bespoke-shinbanpo-xi-102",
+          "bespoke-shinbanpo-xi-105"
+        ],
+        "ownedSourceIds": [
+          "de4db818-94c3-4061-80d4-53ccd184e9b9",
+          "0efef9ea-4a20-4fe1-b288-6b4c3be8cc93",
+          "73b55cd4-761f-449f-891f-43e41e356652",
+          "e4898d94-59a0-4bfd-9b3d-c3b1f75fdd9e",
+          "02d8a677-37c5-4a31-9083-4e9ccffb21fc",
+          "9a30cdcd-ea97-4bb0-8a9a-bb6765012140",
+          "e5f46109-405e-4bcc-874a-4b303fd14446"
+        ],
+        "rawSourceIds": [],
+        "pageErrors": [],
+        "sevenIndependentOwners": true,
+        "neighborGroupsPresentAsModelsOrOriginalMap": 6
+      },
+      {
+        "name": "106-raw-restoration",
+        "wanted": [
+          "bespoke-shinbanpo-xi-101",
+          "bespoke-shinbanpo-xi-102",
+          "bespoke-shinbanpo-xi-103",
+          "bespoke-shinbanpo-xi-104",
+          "bespoke-shinbanpo-xi-105",
+          "bespoke-shinbanpo-xi-107"
+        ],
+        "failedIds": [
+          "bespoke-shinbanpo-xi-106",
+          "fallback-shinbanpo-xi-106"
+        ],
+        "ownedSourceIds": [
+          "de4db818-94c3-4061-80d4-53ccd184e9b9",
+          "0efef9ea-4a20-4fe1-b288-6b4c3be8cc93",
+          "73b55cd4-761f-449f-891f-43e41e356652",
+          "e4898d94-59a0-4bfd-9b3d-c3b1f75fdd9e",
+          "02d8a677-37c5-4a31-9083-4e9ccffb21fc",
+          "e5f46109-405e-4bcc-874a-4b303fd14446"
+        ],
+        "rawSourceIds": [
+          "9a30cdcd-ea97-4bb0-8a9a-bb6765012140"
+        ],
+        "pageErrors": [],
+        "sevenIndependentOwners": true,
+        "neighborGroupsPresentAsModelsOrOriginalMap": 6
+      },
+      {
+        "name": "all7-fallbacks",
+        "wanted": [
+          "fallback-shinbanpo-xi-101",
+          "fallback-shinbanpo-xi-102",
+          "fallback-shinbanpo-xi-103",
+          "fallback-shinbanpo-xi-104",
+          "fallback-shinbanpo-xi-105",
+          "fallback-shinbanpo-xi-106",
+          "fallback-shinbanpo-xi-107"
+        ],
+        "failedIds": [
+          "bespoke-shinbanpo-xi-101",
+          "bespoke-shinbanpo-xi-102",
+          "bespoke-shinbanpo-xi-103",
+          "bespoke-shinbanpo-xi-104",
+          "bespoke-shinbanpo-xi-105",
+          "bespoke-shinbanpo-xi-106",
+          "bespoke-shinbanpo-xi-107"
+        ],
+        "ownedSourceIds": [
+          "de4db818-94c3-4061-80d4-53ccd184e9b9",
+          "0efef9ea-4a20-4fe1-b288-6b4c3be8cc93",
+          "73b55cd4-761f-449f-891f-43e41e356652",
+          "e4898d94-59a0-4bfd-9b3d-c3b1f75fdd9e",
+          "02d8a677-37c5-4a31-9083-4e9ccffb21fc",
+          "9a30cdcd-ea97-4bb0-8a9a-bb6765012140",
+          "e5f46109-405e-4bcc-874a-4b303fd14446"
+        ],
+        "rawSourceIds": [],
+        "pageErrors": [],
+        "sevenIndependentOwners": true,
+        "neighborGroupsPresentAsModelsOrOriginalMap": 6
+      }
+    ]
+  },
+  "build": "passed",
+  "renderReview": {
+    "models": 7,
+    "actualMCPViews": 28,
+    "sourcePhoto": "https://t1.daumcdn.net/news/201807/05/mk/20180705173601332dodb.jpg"
+  },
+  "geometry": "Full ownfootprint atgrade androofdeck,registeredheightandfloors,allprojectionsbelow.5m,raisedroofcontained. Uniformmaximumheightassumption:nochildparts.",
+  "preservation": {
+    "baseline": "470626b63d79023606f44ef149d389671d2b15ce",
+    "public/models/manifest.json": 13607,
+    "public/models/reference-manifest.json": 125,
+    "public/models/bespoke-manifest.json": 208,
+    "priorCorrections": 12,
+    "unchangedPriorGLBAndBlendFiles": 113702
+  },
+  "fallback": "3861originaltriangles split by ownsourceidentity;byteexactgeneratorreplay;101inheritedconvexhullapproximationtriangles retained explicitly.",
+  "coverage": {
+    "eligibleManagementCodes": 1417,
+    "completeManagementCodes": 19,
+    "representativeInferredBuildingCount": 137
+  },
+  "limitations": [
+    "No numbered photograph or surveyed orientation.",
+    "Roadside metalpanel treatment applied as complex inference; individual3roadside tower IDsunconfirmed.",
+    "Windowandhiddenfacade/roofdetailsunmeasured.",
+    "No newBlenderprocess;existingMCPsession.",
+    "Source photographs excluded from publicassets."
+  ]
+}

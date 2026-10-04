@@ -1,0 +1,304 @@
+{
+  "version": 1,
+  "sourceId": "apt-a10024562",
+  "sourceSha256": "c1cb0ac36b27eec054c64101873bf81965e606b2276ac2e78109c369180d1378",
+  "sourceTriangles": 3979,
+  "sourceCoordinate": {
+    "lon": 127.17009548033376,
+    "lat": 37.5573276038239,
+    "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+    "confidence": "source_footprint_unsurveyed"
+  },
+  "groupFootprints": {
+    "residual-three-completion-apt-a10024562": [
+      "a3e917e7-0d44-4c8a-84fe-b266ede5143a"
+    ],
+    "fallback-godeok-arteon-completion-329": [
+      "7c748296-4ae2-4664-80cb-28696a4069ae"
+    ],
+    "fallback-godeok-arteon-completion-330": [
+      "a5c6ede6-8ac6-4a92-be05-3bc7043bb8e7"
+    ]
+  },
+  "ownershipMethod": "Original source-emission indices from byte-exact authoring replay; overlapping historical plans cannot change ownership. Byte-exact archived authoring replay and per-source triangle-signature multiplicity independently checked.",
+  "legacyTrianglesOutsideSourcePolygonInsideItsHull": 5,
+  "legacyTrianglesOutsideSourceConvexHull": 0,
+  "limits": [
+    "Only archived indexed triangles, material attributes and terrain anchors are partitioned; no photo-modeling credit.",
+    "Add19 identified buildings acrossthreecomplexes using their published single representative. All priorpublishedmodels retained; residual fallback files repartitioned only with independent triangle provenance.",
+    "All unnamed, unmatched and unrelated source buildings remain in unchanged-shape residuals. Original convex-hull approximations remain archived."
+  ],
+  "outputs": [
+    {
+      "id": "residual-three-completion-apt-a10024562",
+      "model": "generic-corrections/residual-three-completion-apt-a10024562.glb",
+      "sha256": "4cf6391d7b748db9f603b505d9a094301d60072bfbb6298a0555b7627f521621",
+      "bytes": 54768,
+      "triangles": 856,
+      "bounds": {
+        "min": [
+          -83.84646606445312,
+          0.0,
+          -80.08352661132812
+        ],
+        "max": [
+          -17.146203994750977,
+          111.0,
+          -38.46035385131836
+        ]
+      },
+      "footprintIds": [
+        "a3e917e7-0d44-4c8a-84fe-b266ede5143a"
+      ]
+    },
+    {
+      "id": "fallback-godeok-arteon-completion-329",
+      "model": "generic-corrections/fallback-godeok-arteon-completion-329.glb",
+      "sha256": "0104d49118bf9b0ba46d838d1c569ab1a29f9483b523a79f17d7449d1e7ed241",
+      "bytes": 114184,
+      "triangles": 1918,
+      "bounds": {
+        "min": [
+          29.124645233154297,
+          0.0,
+          47.4031867980957
+        ],
+        "max": [
+          83.84646606445312,
+          66.0,
+          75.36637115478516
+        ]
+      },
+      "footprintIds": [
+        "7c748296-4ae2-4664-80cb-28696a4069ae"
+      ]
+    },
+    {
+      "id": "fallback-godeok-arteon-completion-330",
+      "model": "generic-corrections/fallback-godeok-arteon-completion-330.glb",
+      "sha256": "dd8a051348e677f81300357ce99728595d059ffa3417a90df82be6881afe9fe5",
+      "bytes": 73860,
+      "triangles": 1205,
+      "bounds": {
+        "min": [
+          -20.49813461303711,
+          0.0,
+          47.36649703979492
+        ],
+        "max": [
+          25.575830459594727,
+          66.0,
+          84.03466033935547
+        ]
+      },
+      "footprintIds": [
+        "a5c6ede6-8ac6-4a92-be05-3bc7043bb8e7"
+      ]
+    }
+  ],
+  "sourceAuthoringReplay": {
+    "byteExact": true,
+    "sha256": "c1cb0ac36b27eec054c64101873bf81965e606b2276ac2e78109c369180d1378",
+    "currentResidualReplay": {
+      "byteExact": true,
+      "sourceId": "apt-a10024562",
+      "sha256": "c1cb0ac36b27eec054c64101873bf81965e606b2276ac2e78109c369180d1378",
+      "footprintIds": [
+        "a3e917e7-0d44-4c8a-84fe-b266ede5143a",
+        "a5c6ede6-8ac6-4a92-be05-3bc7043bb8e7",
+        "7c748296-4ae2-4664-80cb-28696a4069ae"
+      ],
+      "triangles": 3979
+    },
+    "triangleRangesBySource": [
+      {
+        "sourceId": "a3e917e7-0d44-4c8a-84fe-b266ede5143a",
+        "triangleRangesByMaterial": {
+          "0": [
+            582,
+            702
+          ],
+          "1": [
+            1050,
+            1730
+          ],
+          "2": [
+            286,
+            342
+          ]
+        }
+      },
+      {
+        "sourceId": "a5c6ede6-8ac6-4a92-be05-3bc7043bb8e7",
+        "triangleRangesByMaterial": {
+          "0": [
+            702,
+            1004
+          ],
+          "1": [
+            1730,
+            2486
+          ],
+          "2": [
+            342,
+            489
+          ]
+        }
+      },
+      {
+        "sourceId": "7c748296-4ae2-4664-80cb-28696a4069ae",
+        "triangleRangesByMaterial": {
+          "0": [
+            0,
+            582
+          ],
+          "1": [
+            0,
+            1050
+          ],
+          "2": [
+            0,
+            286
+          ]
+        }
+      }
+    ],
+    "rangeConvention": "Half-open [start,end) current residual indexed triangle ranges per material after filtering original owners.",
+    "ancestorAssetId": "apt-a10024562",
+    "ancestorSha256": "cd259a7fd61d76a6fba771f8db651a20937fd8714f6c2546e676a5c426cf74c6",
+    "ancestorAuthoringReplay": {
+      "byteExact": true,
+      "sha256": "cd259a7fd61d76a6fba771f8db651a20937fd8714f6c2546e676a5c426cf74c6",
+      "provenancePath": "docs/APARTMENT_400_PROVENANCE.json",
+      "frozenAssetProvenanceSha256": "fb3b939c2fb715f98dbcbe7268109fe1584a9ab99c0ad7dd19f1597b5e1e3490",
+      "authoringAnchor": [
+        127.17017,
+        37.557703
+      ],
+      "generator": "scripts/build_district_landmarks.py",
+      "generatorSha256": "35dce09a4a4c71a871d4d2e03a8d2ae32e68a5fd0701ce1a0be643ef7d0e4712",
+      "triangleRangesBySource": [
+        {
+          "sourceId": "176727e8-c2b9-4511-b23a-838f35b57c25",
+          "triangleRangesByMaterial": [
+            [
+              0,
+              94
+            ],
+            [
+              0,
+              340
+            ],
+            [
+              0,
+              43
+            ]
+          ]
+        },
+        {
+          "sourceId": "7c748296-4ae2-4664-80cb-28696a4069ae",
+          "triangleRangesByMaterial": [
+            [
+              94,
+              676
+            ],
+            [
+              340,
+              1390
+            ],
+            [
+              43,
+              329
+            ]
+          ]
+        },
+        {
+          "sourceId": "99985476-ff00-4a3f-80f7-14d1942d9d3b",
+          "triangleRangesByMaterial": [
+            [
+              676,
+              770
+            ],
+            [
+              1390,
+              1730
+            ],
+            [
+              329,
+              372
+            ]
+          ]
+        },
+        {
+          "sourceId": "a3e917e7-0d44-4c8a-84fe-b266ede5143a",
+          "triangleRangesByMaterial": [
+            [
+              770,
+              890
+            ],
+            [
+              1730,
+              2410
+            ],
+            [
+              372,
+              428
+            ]
+          ]
+        },
+        {
+          "sourceId": "a5c6ede6-8ac6-4a92-be05-3bc7043bb8e7",
+          "triangleRangesByMaterial": [
+            [
+              890,
+              1192
+            ],
+            [
+              2410,
+              3166
+            ],
+            [
+              428,
+              575
+            ]
+          ]
+        },
+        {
+          "sourceId": "d30f731a-2757-4b40-affc-735a23e4baf5",
+          "triangleRangesByMaterial": [
+            [
+              1192,
+              1286
+            ],
+            [
+              3166,
+              3526
+            ],
+            [
+              575,
+              618
+            ]
+          ]
+        },
+        {
+          "sourceId": "d63dbdd6-f9d9-4eba-a40f-1c1ce43c7b01",
+          "triangleRangesByMaterial": [
+            [
+              1286,
+              1380
+            ],
+            [
+              3526,
+              3886
+            ],
+            [
+              618,
+              661
+            ]
+          ]
+        }
+      ],
+      "rangeConvention": "Half-open [start,end) original indexed triangle ranges, one range per material; original vertex packing retains emission order."
+    }
+  }
+}

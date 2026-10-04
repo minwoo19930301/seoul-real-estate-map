@@ -2394,6 +2394,95 @@
         "representative-a13778209",
         "representative-a11087602"
       ]
+    },
+    "representative-batch17": {
+      "constructionMethod": "representative-photo-informed",
+      "completionCredit": false,
+      "review": {
+        "siteId": "representative-batch17",
+        "status": "coarse-visually-reviewed",
+        "comparisons": [
+          {
+            "sourceId": "A13379001-source-1",
+            "observation": "Directly inspected geumho.jpg and both final elevated renders. Photo shows gray-white faces, green-tinted paired glazing, brown blank/core panels and projecting dark rooftop frames. Renders use these choices on all six retained source polygons; reduced mullion width and moved dark roof frames onto long elevations after initial review. Photo has stepped tower cores, balcony rails and a sloped podium absent from the uniform source extrusions. No per-tower identity or exact rear facade is established."
+          },
+          {
+            "sourceId": "A13610202-source-1",
+            "observation": "Directly inspected jeongneung.jpg and both final elevated renders. Photo shows cream-white slabs, largely blank numbered end walls with olive lower panels, regular enclosed balcony glazing and olive service boxes. Renders reproduce that palette, lower end-wall panels and flat service-box roofs on all seven source polygons. Visible photo setbacks and pitched/parapet transitions are simplified; source slab heights are retained rather than inferred from perspective. Window rhythm is representative, not an exact count."
+          }
+        ],
+        "views": [
+          {
+            "file": "docs/model-audit/renders/representative/representative-batch17/A13379001-overview.png",
+            "description": "Southeast elevated overview",
+            "sha256": "44d50b279a5c2a72cd3f97a55048e0d94d1d92d1e62eb3706ec7c537f50839ca"
+          },
+          {
+            "file": "docs/model-audit/renders/representative/representative-batch17/A13379001-reverse.png",
+            "description": "Northwest reverse elevated overview",
+            "sha256": "800e8f38efbf3c5f372a5aead1133a2b884d3f4ce0a758d650516a930d764cda"
+          },
+          {
+            "file": "docs/model-audit/renders/representative/representative-batch17/A13610202-overview.png",
+            "description": "Southeast elevated overview",
+            "sha256": "1d1fbabf945a9326292b8eadebc8fe1dd875c710a3b773ce3e8883b5ab6e81b1"
+          },
+          {
+            "file": "docs/model-audit/renders/representative/representative-batch17/A13610202-reverse.png",
+            "description": "Northwest reverse elevated overview",
+            "sha256": "ee04875629fb28bbc63d7ecbbafb05177b1f0d226528abbe4a12ce524ea48072"
+          }
+        ],
+        "limitations": [
+          "Coarse representative profile repeated across retained source footprints; no per-tower identity established.",
+          "Source heights and floors retained without survey; roof details add approximate height above source shell.",
+          "Terrain, podium, exact window counts, signage, unseen rear walls and detailed balcony rails are not reconstructed.",
+          "Image shows two towers and street frontage; other four buildings and blank rear elevations not visible.",
+          "Only the road-facing group is visible; rear elevations and exact balcony types elsewhere are unknown."
+        ],
+        "reviewedInputs": {
+          "outputs/A13379001.glb": "b41b0e8aacf7b4de5a1f823323b77197926d392f699505cae3a82b2556fd320e",
+          "outputs/representative-batch17.blend": "bb7f13fdb53b50f3a1c6231eb5daaa55b4cee424bb3b574a9ed524140a8886f2",
+          "selected-input.json": "afc2bcf6214c7535bb442b29624ac52fdbf61140fc534d67b352e2c882ab0b99",
+          "design-recipes.json": "0884332ed0bb021e1d18282f63879eb0ee5c568b8bd9726cf04c9d969d7270f3",
+          "build.py": "d31caf30a896178e83891e858725ca30088bce0c127baa53ed56f0a1050e3ad9",
+          "export-compact.py": "9819e048f509c3136db7eed89fee5f4e619ae0619ae793cd4e258cc2ece872c5",
+          "validate-scene.py": "32e9116b650ca517863a0332e38a30fdaf1a2209aa5345d900569ee6bf998693",
+          "scene-validation.json": "be540e5fa89ca2f056e7c02d3fa9db9e1412d4141401be40d7c2aa9692d93f87",
+          "references/A13379001/geumho.jpg": "42b6afc4d1a15c141975a029e85304e4265ab837433ac6aa55b971e01854e136",
+          "outputs/A13610202.glb": "ba4df08804e19751815ef670a4987575da2ea6de908701801c1a40be4e81d24b",
+          "references/A13610202/jeongneung.jpg": "62d0b27b927b88f956bfe19bf092b956d70010480782d15e52522aa8e30ee8cd"
+        },
+        "completionCredit": false
+      },
+      "sources": [
+        {
+          "id": "A13379001-source-1",
+          "url": "https://hogangnono.com/apt/93ca",
+          "inputFile": "references/A13379001/geumho.jpg",
+          "sha256": "42b6afc4d1a15c141975a029e85304e4265ab837433ac6aa55b971e01854e136"
+        },
+        {
+          "id": "A13610202-source-1",
+          "url": "https://m.r114.com/?ComplexCd=A01171361000055&CortarNo=&_a=detail&_c=memul&_m=complex&mmCode=A01011",
+          "inputFile": "references/A13610202/jeongneung.jpg",
+          "sha256": "62d0b27b927b88f956bfe19bf092b956d70010480782d15e52522aa8e30ee8cd"
+        }
+      ],
+      "mcpEvidence": [
+        {
+          "path": "docs/model-audit/mcp/representative-batch17-mcp-build-evidence.json",
+          "sha256": "cc51771a77ca04841f70c1b6ef274673840e9fc5b1bcdcdc8c6866fa48472ccf"
+        },
+        {
+          "path": "docs/model-audit/mcp/representative-batch17-mcp-validation-evidence.json",
+          "sha256": "ed2418c686cd08d498b753fc83b6ae6e665d2215fbefefce213e491427a2c094"
+        }
+      ],
+      "assets": [
+        "representative-a13379001",
+        "representative-a13610202"
+      ]
     }
   }
 }
