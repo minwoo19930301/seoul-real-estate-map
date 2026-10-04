@@ -1,0 +1,275 @@
+{
+  "version": 1,
+  "sourceId": "apt-a15192201",
+  "sourceSha256": "aa0359b05dbdb0242068ec8d9714d1c874d32840a8cc89683d9196c81b3e0df6",
+  "sourceTriangles": 4286,
+  "sourceCoordinate": {
+    "lon": 126.9507242,
+    "lat": 37.48724820213132,
+    "basis": "centre of retained source footprint bounds, Mercator metres; candidate matching documented separately",
+    "confidence": "source_footprint_unsurveyed"
+  },
+  "groupFootprints": {
+    "apt-a15192201": [
+      "969ffa4a-4ec8-415b-beee-966107ef5964",
+      "14507e8f-9683-4ec4-a62c-9aa56085a2e4",
+      "f370afe6-4910-46d2-8294-b4eca7db3c70",
+      "701e350a-37f0-4a90-8944-9dc1fc1d6a52",
+      "3f185043-8a83-4588-be47-0fc9515a4f7d",
+      "9202eea6-0172-4624-8c00-139133ddbe55",
+      "6843e431-e779-4d4b-90a8-39041178201c",
+      "fe15883f-ff90-43d6-89d6-1f89c831a5dc",
+      "be04f0b0-0ca5-4184-85c7-9a17aba09cfb"
+    ],
+    "fallback-gwanak-dream-town-101": [
+      "02638a8e-825a-449a-bd1a-fd781ad4cc34"
+    ]
+  },
+  "ownershipMethod": "Original source-emission indices from byte-exact authoring replay; overlapping historical plans cannot change ownership. Byte-exact archived authoring replay and per-source triangle-signature multiplicity independently checked.",
+  "legacyTrianglesOutsideSourcePolygonInsideItsHull": 21,
+  "legacyTrianglesOutsideSourceConvexHull": 0,
+  "limits": [
+    "Only archived indexed triangles, material attributes and terrain anchors are partitioned; no photo-modeling credit.",
+    "One photographed representative plus shared copies. Preserve unrelated source triangles and previous models.",
+    "All unnamed, unmatched and unrelated source buildings remain in unchanged-shape residuals. Original convex-hull approximations remain archived."
+  ],
+  "outputs": [
+    {
+      "id": "apt-a15192201",
+      "model": "generic-corrections/apt-a15192201.glb",
+      "sha256": "ab3d6740aadf18d4aecbb377e927aaf28865265aa06ab369f3e2166f4dfb146c",
+      "bytes": 240444,
+      "triangles": 3882,
+      "bounds": {
+        "min": [
+          -103.93891143798828,
+          0.0,
+          -43.62602615356445
+        ],
+        "max": [
+          105.44937133789062,
+          54.0,
+          62.81764602661133
+        ]
+      },
+      "footprintIds": [
+        "969ffa4a-4ec8-415b-beee-966107ef5964",
+        "14507e8f-9683-4ec4-a62c-9aa56085a2e4",
+        "f370afe6-4910-46d2-8294-b4eca7db3c70",
+        "701e350a-37f0-4a90-8944-9dc1fc1d6a52",
+        "3f185043-8a83-4588-be47-0fc9515a4f7d",
+        "9202eea6-0172-4624-8c00-139133ddbe55",
+        "6843e431-e779-4d4b-90a8-39041178201c",
+        "fe15883f-ff90-43d6-89d6-1f89c831a5dc",
+        "be04f0b0-0ca5-4184-85c7-9a17aba09cfb"
+      ]
+    },
+    {
+      "id": "fallback-gwanak-dream-town-101",
+      "model": "generic-corrections/fallback-gwanak-dream-town-101.glb",
+      "sha256": "e62987613b6964a03e1333cd31c3ea7e80269b975561d86c6e64f329dd495922",
+      "bytes": 27068,
+      "triangles": 404,
+      "bounds": {
+        "min": [
+          -105.44937133789062,
+          0.0,
+          -62.81764602661133
+        ],
+        "max": [
+          -68.58007049560547,
+          33.0,
+          -28.920642852783203
+        ]
+      },
+      "footprintIds": [
+        "02638a8e-825a-449a-bd1a-fd781ad4cc34"
+      ]
+    }
+  ],
+  "sourceAuthoringReplay": {
+    "byteExact": true,
+    "sha256": "aa0359b05dbdb0242068ec8d9714d1c874d32840a8cc89683d9196c81b3e0df6",
+    "provenancePath": "docs/DISTRICT_LANDMARK_PROVENANCE.json",
+    "frozenAssetProvenanceSha256": "9e8a867d55553b238989b3f5b6bb9345cafe2e2102d1cd5c1dc9a59c78948c42",
+    "authoringAnchor": [
+      126.951485,
+      37.4871792
+    ],
+    "generator": "scripts/build_district_landmarks.py",
+    "generatorSha256": "35dce09a4a4c71a871d4d2e03a8d2ae32e68a5fd0701ce1a0be643ef7d0e4712",
+    "triangleRangesBySource": [
+      {
+        "sourceId": "02638a8e-825a-449a-bd1a-fd781ad4cc34",
+        "triangleRangesByMaterial": [
+          [
+            0,
+            96
+          ],
+          [
+            0,
+            264
+          ],
+          [
+            0,
+            44
+          ]
+        ]
+      },
+      {
+        "sourceId": "14507e8f-9683-4ec4-a62c-9aa56085a2e4",
+        "triangleRangesByMaterial": [
+          [
+            96,
+            192
+          ],
+          [
+            264,
+            682
+          ],
+          [
+            44,
+            88
+          ]
+        ]
+      },
+      {
+        "sourceId": "3f185043-8a83-4588-be47-0fc9515a4f7d",
+        "triangleRangesByMaterial": [
+          [
+            192,
+            230
+          ],
+          [
+            682,
+            1034
+          ],
+          [
+            88,
+            103
+          ]
+        ]
+      },
+      {
+        "sourceId": "6843e431-e779-4d4b-90a8-39041178201c",
+        "triangleRangesByMaterial": [
+          [
+            230,
+            326
+          ],
+          [
+            1034,
+            1490
+          ],
+          [
+            103,
+            140
+          ]
+        ]
+      },
+      {
+        "sourceId": "701e350a-37f0-4a90-8944-9dc1fc1d6a52",
+        "triangleRangesByMaterial": [
+          [
+            326,
+            342
+          ],
+          [
+            1490,
+            1922
+          ],
+          [
+            140,
+            144
+          ]
+        ]
+      },
+      {
+        "sourceId": "9202eea6-0172-4624-8c00-139133ddbe55",
+        "triangleRangesByMaterial": [
+          [
+            342,
+            358
+          ],
+          [
+            1922,
+            2378
+          ],
+          [
+            144,
+            148
+          ]
+        ]
+      },
+      {
+        "sourceId": "969ffa4a-4ec8-415b-beee-966107ef5964",
+        "triangleRangesByMaterial": [
+          [
+            358,
+            374
+          ],
+          [
+            2378,
+            2490
+          ],
+          [
+            148,
+            152
+          ]
+        ]
+      },
+      {
+        "sourceId": "be04f0b0-0ca5-4184-85c7-9a17aba09cfb",
+        "triangleRangesByMaterial": [
+          [
+            374,
+            430
+          ],
+          [
+            2490,
+            2730
+          ],
+          [
+            152,
+            176
+          ]
+        ]
+      },
+      {
+        "sourceId": "f370afe6-4910-46d2-8294-b4eca7db3c70",
+        "triangleRangesByMaterial": [
+          [
+            430,
+            446
+          ],
+          [
+            2730,
+            3002
+          ],
+          [
+            176,
+            180
+          ]
+        ]
+      },
+      {
+        "sourceId": "fe15883f-ff90-43d6-89d6-1f89c831a5dc",
+        "triangleRangesByMaterial": [
+          [
+            446,
+            504
+          ],
+          [
+            3002,
+            3578
+          ],
+          [
+            180,
+            204
+          ]
+        ]
+      }
+    ],
+    "rangeConvention": "Half-open [start,end) original indexed triangle ranges, one range per material; original vertex packing retains emission order."
+  }
+}

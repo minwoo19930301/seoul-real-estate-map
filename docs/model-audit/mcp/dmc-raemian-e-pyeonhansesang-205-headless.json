@@ -1,0 +1,24 @@
+[
+  {
+    "tool": "execute_blender_code",
+    "port": 9878,
+    "isError": false,
+    "content": [
+      {
+        "type": "text",
+        "text": "Code executed successfully: Info: Saved as \"headless-initial.blend\"\nARTIFACT:facade-regions.json:[\n  {\n    \"edge\": 0,\n    \"length_m\": 51.88150106066052,\n    \"role\": \"white framed grey-green window banks\",\n    \"basis\": \"205 photo visible; orientation and hidden faces inferred\"\n  },\n  {\n    \"edge\": 1,\n    \"length_m\": 11.304221887152508,\n    \"role\": \"cream seamed blank end with orange lower groups\",\n    \"basis\": \"205 photo visible; orientation and hidden faces inferred\"\n  },\n  {\n    \"edge\": 2,\n    \"length_m\": 51.88985049869628,\n    \"role\": \"white framed grey-green window banks\",\n    \"basis\": \"205 photo visible; orientation and hidden faces inferred\"\n  },\n  {\n    \"edge\": 3,\n    \"length_m\": 11.301374214383365,\n    \"role\": \"cream seamed blank end with orange lower groups\",\n    \"basis\": \"205 photo visible; orientation and hidden faces inferred\"\n  }\n]\nARTIFACT:optimization-proof.json:{\n  \"mesh_count\": 7,\n  \"no_decimation\": true,\n  \"material_batched\": true\n}\n14:32:14 | INFO: Starting glTF 2.0 export\n14:32:14 | INFO: Extracting primitive: DMCre205 editable DMCre205 light grey solid wall\n14:32:14 | INFO: Primitives created: 1\n14:32:14 | INFO: Extracting primitive: DMCre205 editable DMCre205 broad white facade frames\n14:32:14 | INFO: Primitives created: 1\n14:32:14 | INFO: Extracting primitive: DMCre205 editable DMCre205 warm cream wall\n14:32:14 | INFO: Primitives created: 1\n14:32:14 | INFO: Extracting primitive: DMCre205 editable DMCre205 turquoise balcony glazing\n14:32:14 | INFO: Primitives created: 1\n14:32:14 | INFO: Extracting primitive: DMCre205 editable DMCre205 narrow charcoal service strips\n14:32:14 | INFO: Primitives created: 1\n14:32:14 | INFO: Extracting primitive: DMCre205 editable DMCre205 dark brown stone base\n14:32:14 | INFO: Primitives created: 1\n14:32:14 | INFO: Extracting primitive: DMCre205 editable DMCre205 muted orange lower accents\n14:32:14 | INFO: Primitives created: 1\n14:32:14 | INFO: Finished glTF 2.0 export in 0.01596212387084961 s\n\nARTIFACT:validation.json:{\n  \"source_id\": \"557366f1-060d-410e-99d3-d4274c43b4ed\",\n  \"floors\": 15,\n  \"register_height_m\": 45.8,\n  \"osm_height_m\": 46.0,\n  \"height_status\": \"Registered45.8m; OSM46m\",\n  \"uniform_height_assumption\": true,\n  \"bounds_xyz\": [\n    [\n      -26.46310806274414,\n      -13.896933555603027,\n      0.0\n    ],\n    [\n      26.467496871948242,\n      13.896936416625977,\n      45.79999923706055\n    ]\n  ],\n  \"mesh_count\": 7,\n  \"image_nodes\": 0,\n  \"finite\": true\n}\nInfo: Saved as \"dmc-raemian-e-pyeonhansesang-205-authored.blend\"\nARTIFACT:scene-preservation.json:{\"equal\": true, \"before\": {\"Codex MCP Workspace\": []}, \"after\": {\"Codex MCP Workspace\": []}}\n"
+      }
+    ]
+  },
+  {
+    "tool": "execute_blender_code",
+    "port": 9878,
+    "isError": false,
+    "content": [
+      {
+        "type": "text",
+        "text": "Code executed successfully: ARTIFACT:standalone-validation.json:{\"scenes\": 1, \"source_id\": \"557366f1-060d-410e-99d3-d4274c43b4ed\", \"register_id\": \"10141100204055\", \"floors\": 15, \"height\": 45.8, \"mesh_count\": 7, \"camera_count\": 4, \"image_nodes\": 0, \"bounds_xyz\": [[-26.46310806274414, -13.896933555603027, 0.0], [26.467496871948242, 13.896936416625977, 45.79999923706055]]}\nInitial scene restored\n"
+      }
+    ]
+  }
+]

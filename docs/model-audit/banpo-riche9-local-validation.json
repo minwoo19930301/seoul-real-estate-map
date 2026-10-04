@@ -1,0 +1,241 @@
+{
+  "status": "passed",
+  "node": {
+    "passed": 13794,
+    "failed": 0
+  },
+  "python": {
+    "heightGeometryTests": 13,
+    "publisherTests": 11,
+    "coverageQueueTests": 18
+  },
+  "browser": {
+    "passed": 6,
+    "scenarios": [
+      {
+        "name": "normal",
+        "wanted": [
+          "bespoke-banpo-riche-101",
+          "bespoke-banpo-riche-102",
+          "bespoke-banpo-riche-103",
+          "bespoke-banpo-riche-104",
+          "bespoke-banpo-riche-105",
+          "bespoke-banpo-riche-106",
+          "bespoke-banpo-riche-107",
+          "bespoke-banpo-riche-108",
+          "bespoke-banpo-riche-109"
+        ],
+        "failedIds": [],
+        "ownedSourceIds": [
+          "d7d97a03-077e-406a-8aae-51a4359eb244",
+          "ae4df89f-ee6b-4b00-91f8-d3144990dd17",
+          "018bbe18-e1ce-4903-8465-17cc3cc41b3b",
+          "d003c890-dda4-4909-91f8-6a65a5d6faa7",
+          "fc02de0a-1851-451b-a2b7-48c90414d14e",
+          "025a7bbd-1c33-4f47-90fd-1f874b5ba0d8",
+          "709df3c3-d68b-4d8f-ba89-a02dec110823",
+          "bbc7ff1d-a8a2-4129-943f-4e1036a06d87",
+          "081dce9e-b21e-405a-ba85-1f3b933446d9"
+        ],
+        "rawSourceIds": [],
+        "pageErrors": []
+      },
+      {
+        "name": "representative-fallback",
+        "wanted": [
+          "fallback-banpo-riche-101",
+          "bespoke-banpo-riche-102",
+          "bespoke-banpo-riche-103",
+          "bespoke-banpo-riche-104",
+          "bespoke-banpo-riche-105",
+          "bespoke-banpo-riche-106",
+          "bespoke-banpo-riche-107",
+          "bespoke-banpo-riche-108",
+          "bespoke-banpo-riche-109"
+        ],
+        "failedIds": [
+          "bespoke-banpo-riche-101"
+        ],
+        "ownedSourceIds": [
+          "d7d97a03-077e-406a-8aae-51a4359eb244",
+          "ae4df89f-ee6b-4b00-91f8-d3144990dd17",
+          "018bbe18-e1ce-4903-8465-17cc3cc41b3b",
+          "d003c890-dda4-4909-91f8-6a65a5d6faa7",
+          "fc02de0a-1851-451b-a2b7-48c90414d14e",
+          "025a7bbd-1c33-4f47-90fd-1f874b5ba0d8",
+          "709df3c3-d68b-4d8f-ba89-a02dec110823",
+          "bbc7ff1d-a8a2-4129-943f-4e1036a06d87",
+          "081dce9e-b21e-405a-ba85-1f3b933446d9"
+        ],
+        "rawSourceIds": [],
+        "pageErrors": []
+      },
+      {
+        "name": "mixed-independent-fallbacks",
+        "wanted": [
+          "bespoke-banpo-riche-101",
+          "fallback-banpo-riche-102",
+          "bespoke-banpo-riche-103",
+          "bespoke-banpo-riche-104",
+          "bespoke-banpo-riche-105",
+          "residential-025a7bbd-1c33-4f47-90fd-1f874b5ba0d8",
+          "bespoke-banpo-riche-107",
+          "bespoke-banpo-riche-108",
+          "bespoke-banpo-riche-109"
+        ],
+        "failedIds": [
+          "bespoke-banpo-riche-102",
+          "bespoke-banpo-riche-106"
+        ],
+        "ownedSourceIds": [
+          "d7d97a03-077e-406a-8aae-51a4359eb244",
+          "ae4df89f-ee6b-4b00-91f8-d3144990dd17",
+          "018bbe18-e1ce-4903-8465-17cc3cc41b3b",
+          "d003c890-dda4-4909-91f8-6a65a5d6faa7",
+          "fc02de0a-1851-451b-a2b7-48c90414d14e",
+          "025a7bbd-1c33-4f47-90fd-1f874b5ba0d8",
+          "709df3c3-d68b-4d8f-ba89-a02dec110823",
+          "bbc7ff1d-a8a2-4129-943f-4e1036a06d87",
+          "081dce9e-b21e-405a-ba85-1f3b933446d9"
+        ],
+        "rawSourceIds": [],
+        "pageErrors": []
+      },
+      {
+        "name": "106-raw-restoration",
+        "wanted": [
+          "bespoke-banpo-riche-101",
+          "bespoke-banpo-riche-102",
+          "bespoke-banpo-riche-103",
+          "bespoke-banpo-riche-104",
+          "bespoke-banpo-riche-105",
+          "bespoke-banpo-riche-107",
+          "bespoke-banpo-riche-108",
+          "bespoke-banpo-riche-109"
+        ],
+        "failedIds": [
+          "bespoke-banpo-riche-106",
+          "residential-025a7bbd-1c33-4f47-90fd-1f874b5ba0d8"
+        ],
+        "ownedSourceIds": [
+          "d7d97a03-077e-406a-8aae-51a4359eb244",
+          "ae4df89f-ee6b-4b00-91f8-d3144990dd17",
+          "018bbe18-e1ce-4903-8465-17cc3cc41b3b",
+          "d003c890-dda4-4909-91f8-6a65a5d6faa7",
+          "fc02de0a-1851-451b-a2b7-48c90414d14e",
+          "709df3c3-d68b-4d8f-ba89-a02dec110823",
+          "bbc7ff1d-a8a2-4129-943f-4e1036a06d87",
+          "081dce9e-b21e-405a-ba85-1f3b933446d9"
+        ],
+        "rawSourceIds": [
+          "025a7bbd-1c33-4f47-90fd-1f874b5ba0d8"
+        ],
+        "pageErrors": []
+      },
+      {
+        "name": "103-raw-restoration",
+        "wanted": [
+          "bespoke-banpo-riche-101",
+          "bespoke-banpo-riche-102",
+          "bespoke-banpo-riche-104",
+          "bespoke-banpo-riche-105",
+          "bespoke-banpo-riche-106",
+          "bespoke-banpo-riche-107",
+          "bespoke-banpo-riche-108",
+          "bespoke-banpo-riche-109"
+        ],
+        "failedIds": [
+          "bespoke-banpo-riche-103",
+          "fallback-banpo-riche-103"
+        ],
+        "ownedSourceIds": [
+          "d7d97a03-077e-406a-8aae-51a4359eb244",
+          "ae4df89f-ee6b-4b00-91f8-d3144990dd17",
+          "d003c890-dda4-4909-91f8-6a65a5d6faa7",
+          "fc02de0a-1851-451b-a2b7-48c90414d14e",
+          "025a7bbd-1c33-4f47-90fd-1f874b5ba0d8",
+          "709df3c3-d68b-4d8f-ba89-a02dec110823",
+          "bbc7ff1d-a8a2-4129-943f-4e1036a06d87",
+          "081dce9e-b21e-405a-ba85-1f3b933446d9"
+        ],
+        "rawSourceIds": [
+          "018bbe18-e1ce-4903-8465-17cc3cc41b3b"
+        ],
+        "pageErrors": []
+      },
+      {
+        "name": "all9-fallbacks",
+        "wanted": [
+          "fallback-banpo-riche-101",
+          "fallback-banpo-riche-102",
+          "fallback-banpo-riche-103",
+          "fallback-banpo-riche-104",
+          "fallback-banpo-riche-105",
+          "residential-025a7bbd-1c33-4f47-90fd-1f874b5ba0d8",
+          "fallback-banpo-riche-107",
+          "fallback-banpo-riche-108",
+          "fallback-banpo-riche-109"
+        ],
+        "failedIds": [
+          "bespoke-banpo-riche-101",
+          "bespoke-banpo-riche-102",
+          "bespoke-banpo-riche-103",
+          "bespoke-banpo-riche-104",
+          "bespoke-banpo-riche-105",
+          "bespoke-banpo-riche-106",
+          "bespoke-banpo-riche-107",
+          "bespoke-banpo-riche-108",
+          "bespoke-banpo-riche-109"
+        ],
+        "ownedSourceIds": [
+          "d7d97a03-077e-406a-8aae-51a4359eb244",
+          "ae4df89f-ee6b-4b00-91f8-d3144990dd17",
+          "018bbe18-e1ce-4903-8465-17cc3cc41b3b",
+          "d003c890-dda4-4909-91f8-6a65a5d6faa7",
+          "fc02de0a-1851-451b-a2b7-48c90414d14e",
+          "025a7bbd-1c33-4f47-90fd-1f874b5ba0d8",
+          "709df3c3-d68b-4d8f-ba89-a02dec110823",
+          "bbc7ff1d-a8a2-4129-943f-4e1036a06d87",
+          "081dce9e-b21e-405a-ba85-1f3b933446d9"
+        ],
+        "rawSourceIds": [],
+        "pageErrors": []
+      }
+    ]
+  },
+  "build": "passed",
+  "renderReview": {
+    "models": 9,
+    "actualMCPViews": 36,
+    "sourcePhoto": "https://file.kbland.kr/image/kbstar/land/img/alian/kms/complex/photo/objctidnfr/28215/MjgyMTUxMDAzNzk1MDMx.jpg"
+  },
+  "geometry": "Full own grade/roofdeck, registered maximumheight/floors, allprojectionbelow0.275m, raisedroofcontained. No childparts;uniformmaximumheightassumption.",
+  "preservation": {
+    "baseline": "eb4710defb30b93386e55b462dae6605ed354850",
+    "public/models/manifest.json": 13607,
+    "public/models/reference-manifest.json": 125,
+    "public/models/bespoke-manifest.json": 220,
+    "priorCorrections": 15,
+    "unchangedPriorGLBAndBlendFiles": 113739
+  },
+  "fallback": {
+    "originalCompoundTriangles": 7529,
+    "byteExactAuthoringReplay": true,
+    "perSourceSignatureMultiplicityExact": true,
+    "inheritedHullApproximationTriangles": 35,
+    "maximumInheritedProjectionM": 2.0676307892533528,
+    "unchanged106Id": "residential-025a7bbd-1c33-4f47-90fd-1f874b5ba0d8",
+    "unchanged106Sha256": "cd663fd2aa110228d11a4e131b54a8cef07cd164d9c81a48189c88abb3282e8f"
+  },
+  "coverage": {
+    "eligibleManagementCodes": 1417,
+    "completeManagementCodes": 21,
+    "representativeInferredBuildingCount": 151
+  },
+  "limitations": [
+    "Numbered photographedtower/orientation unconfirmed.",
+    "Own edgeorientation/length/concavity classifiesblankwalls andwindows; placement remains representative inference.",
+    "Roofgrille/window/hiddenface/material details unmeasured.",
+    "ExistingBlenderMCP only; sourcephotos localonly."
+  ]
+}
